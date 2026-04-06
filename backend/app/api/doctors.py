@@ -1,0 +1,113 @@
+"""의료진/교수 관리 API"""
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
+from sqlalchemy.orm import selectinload
+from app.models.connection import get_db
+from app.models.database import Doctor, Hospital, DoctorSchedule, VisitLog
+from app.schemas.schemas import (
+    DoctorBase, DoctorResponse, DoctorWithSchedule,
+    VisitLogCreate, VisitLogResponse,
+)
+
+router = APIRouter(prefix="/api/doctors", tags=["의료진 관리"])
+
+
+@router.get("/", summary="의료진 목록", response_model=list[DoctorResponse])
+async def list_doctors(
+    hospital_id: int = None,
+    department: str = None,
+    visit_grade: str = None,
+    my_only: bool = False,
+    db: AsyncSession = Depends(get_db),
+):
+    """등록된 의료진 목록을 조회합니다.
+    my_only=true: 내 교수만 (visit_grade A/B)"""
+    query = select(Doctor).where(Doctor.is_active == True)
+    if my_only:
+        query = query.where(Doctor.visit_grade.in_(["A", "B"]))
+    if hospital_id:
+        query = query.where(Doctor.hospital_id == hospital_id)
+    if department:
+        query = query.where(Doctor.department == department)
+    if visit_grade:
+        query = query.where(Doctor.visit_grade == visit_grade)
+
+    result = await db.execute(query)
+    return result.scalars().all()
+
+
+@router.get("/{doctor_id}", summary="의료진 상세 (일정 포함)")
+async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
+    """의료진 상세 정보와 진료일정을 조회합니다."""
+    query = (
+        select(Doctor)
+        .options(selectinload(Doctor.schedules), selectinload(Doctor.hospital))
+        .where(Doctor.id == doctor_id)
+    )
+    result = await db.execute(query)
+    doctor = result.scalar_one_or_none()
+    if not doctor:
+        raise HTTPException(status_code=404, detail="의료진을 찾을 수 없습니다.")
+
+    return {
+        **DoctorResponse.model_validate(doctor).model_dump(),
+        "schedules": [s.__dict__ for s in doctor.schedules if s.is_active],
+        "hospital_name": doctor.hospital.name if doctor.hospital else None,
+    }
+
+
+@router.post("/", summary="의료진 등록", response_model=DoctorResponse)
+async def create_doctor(data: DoctorBase, db: AsyncSession = Depends(get_db)):
+    """담당 의료진을 등록합니다."""
+    doctor = Doctor(**data.model_dump())
+    db.add(doctor)
+    await db.commit()
+    await db.refresh(doctor)
+    return doctor
+
+
+@router.patch("/{doctor_id}", summary="의료진 정보 수정")
+async def update_doctor(
+    doctor_id: int, data: dict, db: AsyncSession = Depends(get_db)
+):
+    """의료진 정보를 수정합니다 (방문등급, 메모 등)."""
+    query = select(Doctor).where(Doctor.id == doctor_id)
+    result = await db.execute(query)
+    doctor = result.scalar_one_or_none()
+    if not doctor:
+        raise HTTPException(status_code=404, detail="의료진을 찾을 수 없습니다.")
+
+    allowed_fields = {"visit_grade", "memo", "is_active", "department", "position"}
+    for key, value in data.items():
+        if key in allowed_fields:
+            setattr(doctor, key, value)
+
+    await db.commit()
+    await db.refresh(doctor)
+    return DoctorResponse.model_validate(doctor)
+
+
+# --- 방문 기록 ---
+@router.post("/{doctor_id}/visits", summary="방문 기록 등록")
+async def create_visit_log(
+    doctor_id: int, data: VisitLogCreate, db: AsyncSession = Depends(get_db)
+):
+    """방문 기록을 등록합니다."""
+    visit = VisitLog(doctor_id=doctor_id, **data.model_dump(exclude={"doctor_id"}))
+    db.add(visit)
+    await db.commit()
+    await db.refresh(visit)
+    return VisitLogResponse.model_validate(visit)
+
+
+@router.get("/{doctor_id}/visits", summary="방문 기록 조회")
+async def list_visit_logs(doctor_id: int, db: AsyncSession = Depends(get_db)):
+    """특정 의료진의 방문 기록을 조회합니다."""
+    query = (
+        select(VisitLog)
+        .where(VisitLog.doctor_id == doctor_id)
+        .order_by(VisitLog.visit_date.desc())
+    )
+    result = await db.execute(query)
+    return [VisitLogResponse.model_validate(v) for v in result.scalars().all()]
