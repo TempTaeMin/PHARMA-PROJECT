@@ -55,9 +55,25 @@ class ScheduleResponse(BaseModel):
         from_attributes = True
 
 
+# --- Date Schedule ---
+class DateScheduleResponse(BaseModel):
+    id: int
+    doctor_id: int
+    schedule_date: str
+    time_slot: Optional[str] = None
+    start_time: Optional[str] = None
+    end_time: Optional[str] = None
+    location: Optional[str] = None
+    status: Optional[str] = "진료"
+    crawled_at: Optional[datetime] = None
+    class Config:
+        from_attributes = True
+
+
 # --- Doctor with Schedule ---
 class DoctorWithSchedule(DoctorResponse):
     schedules: list[ScheduleResponse] = []
+    date_schedules: list[DateScheduleResponse] = []
     hospital_name: Optional[str] = None
 
 
@@ -72,6 +88,7 @@ class CrawledDoctor(BaseModel):
     external_id: Optional[str] = None
     notes: Optional[str] = None  # 특이사항 (여러 병원 진료, 복수 소속 등)
     schedules: list[dict] = []  # [{day_of_week, time_slot, start_time, end_time, location}]
+    date_schedules: list[dict] = []  # [{schedule_date, time_slot, start_time, end_time, location, status}]
 
 
 class CrawlResult(BaseModel):

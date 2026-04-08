@@ -94,20 +94,6 @@ HOSPITAL_CONFIGS = {
             "CS": "흉부외과",
         },
     ),
-    "SMC": HospitalConfig(
-        code="SMC", name="삼성서울병원",
-        doctor_list_url="https://www.samsunghospital.com/home/reservation/deptDetailInfo.do?DP_CODE={dept_code}",
-        doctor_detail_url="https://www.samsunghospital.com/home/reservation/doctorProfile.do?DR_NO={staff_id}",
-        doctor_schedule_url="https://www.samsunghospital.com/home/reservation/DoctorSchedule.do?DR_NO={staff_id}",
-        staff_id_pattern=r"DR_NO[='\"](\w+)",
-        departments={
-            "IM1": "소화기내과", "IM2": "순환기내과", "IM3": "호흡기내과",
-            "IM4": "혈액종양내과", "IM5": "내분비대사내과",
-            "GS": "외과", "CS": "흉부외과", "NS": "신경외과", "OS": "정형외과",
-            "OG": "산부인과", "PD": "소아청소년과", "NR": "신경과",
-            "DM": "피부과", "UR": "비뇨의학과", "EY": "안과", "EN": "이비인후과",
-        },
-    ),
     "SEVERANCE": HospitalConfig(
         code="SEVERANCE", name="세브란스병원",
         doctor_list_url="https://sev.severance.healthcare/sev/doctor/doctor.do?deptCd={dept_code}",

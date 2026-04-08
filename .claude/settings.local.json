@@ -4,7 +4,9 @@
       "Bash(python -c \":*)",
       "Bash(python -c \"from playwright.async_api import async_playwright; print\\(''playwright OK''\\)\")",
       "Bash(/c/Users/ParkNam/AppData/Local/Programs/Python/Python312/python.exe:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "WebFetch(domain:sev.severance.healthcare)",
+      "Bash(python -c ':*)"
     ]
   }
 }

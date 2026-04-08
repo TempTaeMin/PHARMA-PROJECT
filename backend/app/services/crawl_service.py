@@ -11,10 +11,21 @@ import logging
 from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from app.models.database import Hospital, Doctor, DoctorSchedule, ScheduleChange, CrawlLog
+from app.models.database import Hospital, Doctor, DoctorSchedule, DoctorDateSchedule, ScheduleChange, CrawlLog
 from app.schemas.schemas import CrawlResult, CrawledDoctor
 
 logger = logging.getLogger(__name__)
+
+# 진료과명 정리용 패턴: "가정의학과일반" → "가정의학과"
+import re
+_DEPT_CLEAN_RE = re.compile(r"일반$")
+
+
+def _clean_department(name: str) -> str:
+    """진료과명에서 불필요한 '일반' 접미사를 제거합니다."""
+    if not name:
+        return name
+    return _DEPT_CLEAN_RE.sub("", name).strip()
 
 
 async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict:
@@ -31,6 +42,9 @@ async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict
     changes_detected = 0
 
     for crawled_doc in crawl_result.doctors:
+        # 진료과명 정리
+        crawled_doc.department = _clean_department(crawled_doc.department)
+
         # 기존 교수 찾기 (external_id 또는 이름+진료과)
         existing = await _find_doctor(db, hospital.id, crawled_doc)
 
@@ -40,6 +54,8 @@ async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict
 
             # 일정 변경 감지 + 업데이트
             ch = await _sync_schedules(db, existing.id, crawled_doc.schedules)
+            if crawled_doc.date_schedules:
+                await _sync_date_schedules(db, existing.id, crawled_doc.date_schedules)
             changes_detected += ch
             updated += 1
         else:
@@ -71,6 +87,18 @@ async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict
                     location=s.get("location", ""),
                 )
                 db.add(schedule)
+            # 날짜별 일정 저장
+            for ds in crawled_doc.date_schedules:
+                date_sched = DoctorDateSchedule(
+                    doctor_id=new_doc.id,
+                    schedule_date=ds["schedule_date"],
+                    time_slot=ds.get("time_slot", ""),
+                    start_time=ds.get("start_time", ""),
+                    end_time=ds.get("end_time", ""),
+                    location=ds.get("location", ""),
+                    status=ds.get("status", "진료"),
+                )
+                db.add(date_sched)
             saved += 1
 
     # 크롤링 로그 저장
@@ -150,6 +178,8 @@ async def crawl_my_doctors(db: AsyncSession) -> dict:
 
             # 일정 동기화
             ch = await _sync_schedules(db, doc.id, detail.get("schedules", []))
+            if detail.get("date_schedules"):
+                await _sync_date_schedules(db, doc.id, detail["date_schedules"])
             changes += ch
             crawled += 1
 
@@ -297,3 +327,39 @@ async def _sync_schedules(db: AsyncSession, doctor_id: int, new_schedules: list[
                 s.crawled_at = datetime.utcnow()
 
     return changes
+
+
+async def _sync_date_schedules(db: AsyncSession, doctor_id: int, new_date_schedules: list[dict]):
+    """날짜별 진료 일정을 동기화합니다. 기존 데이터를 삭제하고 새로 저장."""
+    if not new_date_schedules:
+        return
+
+    # 새 데이터의 날짜 범위
+    dates = [ds["schedule_date"] for ds in new_date_schedules]
+    min_date = min(dates)
+    max_date = max(dates)
+
+    # 해당 범위의 기존 데이터 삭제
+    result = await db.execute(
+        select(DoctorDateSchedule).where(
+            DoctorDateSchedule.doctor_id == doctor_id,
+            DoctorDateSchedule.schedule_date >= min_date,
+            DoctorDateSchedule.schedule_date <= max_date,
+        )
+    )
+    for old in result.scalars().all():
+        await db.delete(old)
+
+    # 새 데이터 저장
+    for ds in new_date_schedules:
+        date_sched = DoctorDateSchedule(
+            doctor_id=doctor_id,
+            schedule_date=ds["schedule_date"],
+            time_slot=ds.get("time_slot", ""),
+            start_time=ds.get("start_time", ""),
+            end_time=ds.get("end_time", ""),
+            location=ds.get("location", ""),
+            status=ds.get("status", "진료"),
+            crawled_at=datetime.utcnow(),
+        )
+        db.add(date_sched)

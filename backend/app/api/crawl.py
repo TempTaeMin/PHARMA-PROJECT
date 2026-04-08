@@ -1,12 +1,17 @@
 """크롤링 관련 API 엔드포인트"""
+import re
 from datetime import datetime, timedelta
 from fastapi import APIRouter, HTTPException, Query, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
 from app.crawlers.factory import get_crawler, list_supported_hospitals
 from app.models.connection import get_db
-from app.models.database import Hospital, Doctor, DoctorSchedule, CrawlLog
+from app.models.database import Hospital, Doctor, DoctorSchedule, DoctorDateSchedule, CrawlLog
 from app.services.crawl_service import crawl_my_doctors
+
+_DEPT_CLEAN_RE = re.compile(r"일반$")
+def _clean_dept(name: str) -> str:
+    return _DEPT_CLEAN_RE.sub("", name).strip() if name else name
 
 router = APIRouter(prefix="/api/crawl", tags=["크롤링"])
 
@@ -114,6 +119,9 @@ async def sync_hospital(
     for d in doc_list:
         ext_id = d.get("external_id") or d.get("staff_id", "")
         name = d.get("name", "")
+        # 진료과명 정리
+        if d.get("department"):
+            d["department"] = _clean_dept(d["department"])
 
         # 기존 교수 찾기 (external_id 또는 이름+진료과)
         existing = None
@@ -222,6 +230,26 @@ async def register_doctor(
 
     external_id = data.get("external_id", "")
     name = data.get("name", "")
+    # 진료과명 정리
+    if data.get("department"):
+        data["department"] = _clean_dept(data["department"])
+
+    # 스케줄이 없으면 자동으로 크롤링해서 가져오기
+    schedules = data.get("schedules", [])
+    date_schedules = data.get("date_schedules", [])
+    if not schedules and external_id:
+        try:
+            crawler = get_crawler(hospital_code)
+            crawled = await crawler.crawl_doctor_schedule(external_id)
+            schedules = crawled.get("schedules", [])
+            date_schedules = crawled.get("date_schedules", [])
+            # 크롤링에서 추가 정보도 반영
+            if not data.get("specialty") and crawled.get("specialty"):
+                data["specialty"] = crawled["specialty"]
+            if not data.get("position") and crawled.get("position"):
+                data["position"] = crawled["position"]
+        except Exception:
+            pass
 
     # 이미 등록된 교수인지 확인
     existing = None
@@ -256,10 +284,11 @@ async def register_doctor(
             existing.profile_url = data["profile_url"]
 
         # 일정 동기화
-        schedules = data.get("schedules", [])
         if schedules:
-            from app.services.crawl_service import _sync_schedules
+            from app.services.crawl_service import _sync_schedules, _sync_date_schedules
             await _sync_schedules(db, existing.id, schedules)
+            if date_schedules:
+                await _sync_date_schedules(db, existing.id, date_schedules)
 
         await db.commit()
         await db.refresh(existing)
@@ -286,7 +315,7 @@ async def register_doctor(
     await db.flush()
 
     # 일정 저장
-    for s in data.get("schedules", []):
+    for s in schedules:
         time_ranges = {"morning": ("09:00", "12:00"), "afternoon": ("13:00", "17:00"), "evening": ("18:00", "21:00")}
         slot = s.get("time_slot", "")
         start, end = time_ranges.get(slot, (s.get("start_time", ""), s.get("end_time", "")))
@@ -300,6 +329,20 @@ async def register_doctor(
             crawled_at=datetime.utcnow(),
         )
         db.add(schedule)
+
+    # 날짜별 일정 저장
+    for ds in date_schedules:
+        date_sched = DoctorDateSchedule(
+            doctor_id=new_doc.id,
+            schedule_date=ds["schedule_date"],
+            time_slot=ds.get("time_slot", ""),
+            start_time=ds.get("start_time", ""),
+            end_time=ds.get("end_time", ""),
+            location=ds.get("location", ""),
+            status=ds.get("status", "진료"),
+            crawled_at=datetime.utcnow(),
+        )
+        db.add(date_sched)
 
     await db.commit()
     return {

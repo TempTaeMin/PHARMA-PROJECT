@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 from app.models.connection import get_db
-from app.models.database import Doctor, Hospital, DoctorSchedule, VisitLog
+from app.models.database import Doctor, Hospital, DoctorSchedule, DoctorDateSchedule, VisitLog
 from app.schemas.schemas import (
     DoctorBase, DoctorResponse, DoctorWithSchedule,
     VisitLogCreate, VisitLogResponse,
@@ -13,7 +13,7 @@ from app.schemas.schemas import (
 router = APIRouter(prefix="/api/doctors", tags=["의료진 관리"])
 
 
-@router.get("/", summary="의료진 목록", response_model=list[DoctorResponse])
+@router.get("/", summary="의료진 목록")
 async def list_doctors(
     hospital_id: int = None,
     department: str = None,
@@ -23,7 +23,7 @@ async def list_doctors(
 ):
     """등록된 의료진 목록을 조회합니다.
     my_only=true: 내 교수만 (visit_grade A/B)"""
-    query = select(Doctor).where(Doctor.is_active == True)
+    query = select(Doctor).options(selectinload(Doctor.hospital)).where(Doctor.is_active == True)
     if my_only:
         query = query.where(Doctor.visit_grade.in_(["A", "B"]))
     if hospital_id:
@@ -34,7 +34,14 @@ async def list_doctors(
         query = query.where(Doctor.visit_grade == visit_grade)
 
     result = await db.execute(query)
-    return result.scalars().all()
+    doctors = result.scalars().all()
+    return [
+        {
+            **DoctorResponse.model_validate(d).model_dump(),
+            "hospital_name": d.hospital.name if d.hospital else None,
+        }
+        for d in doctors
+    ]
 
 
 @router.get("/{doctor_id}", summary="의료진 상세 (일정 포함)")
@@ -42,7 +49,11 @@ async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
     """의료진 상세 정보와 진료일정을 조회합니다."""
     query = (
         select(Doctor)
-        .options(selectinload(Doctor.schedules), selectinload(Doctor.hospital))
+        .options(
+            selectinload(Doctor.schedules),
+            selectinload(Doctor.date_schedules),
+            selectinload(Doctor.hospital),
+        )
         .where(Doctor.id == doctor_id)
     )
     result = await db.execute(query)
@@ -50,9 +61,22 @@ async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
     if not doctor:
         raise HTTPException(status_code=404, detail="의료진을 찾을 수 없습니다.")
 
+    # 날짜별 스케줄: 오늘 이후만
+    from datetime import datetime
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    date_scheds = [
+        {"id": ds.id, "schedule_date": ds.schedule_date, "time_slot": ds.time_slot,
+         "start_time": ds.start_time, "end_time": ds.end_time,
+         "location": ds.location, "status": ds.status}
+        for ds in doctor.date_schedules
+        if ds.schedule_date >= today_str
+    ]
+    date_scheds.sort(key=lambda x: (x["schedule_date"], x["time_slot"]))
+
     return {
         **DoctorResponse.model_validate(doctor).model_dump(),
         "schedules": [s.__dict__ for s in doctor.schedules if s.is_active],
+        "date_schedules": date_scheds,
         "hospital_name": doctor.hospital.name if doctor.hospital else None,
     }
 

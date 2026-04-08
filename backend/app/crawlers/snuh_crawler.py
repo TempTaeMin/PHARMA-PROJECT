@@ -240,20 +240,123 @@ class SnuhCrawler:
         ]
 
     async def crawl_doctor_schedule(self, staff_id: str) -> dict:
-        """개별 교수 진료시간 조회 (캐시된 데이터에서)"""
-        data = await self._fetch_all()
-        # 정확한 ID 매칭
-        for d in data:
-            if d["staff_id"] == staff_id or d["external_id"] == staff_id:
-                return self._doctor_schedule_dict(d)
-        # 폴백: SNUH-...-이름 형식에서 이름 추출하여 매칭
-        if staff_id.startswith("SNUH-"):
-            name = staff_id.split("-")[-1]
-            for d in data:
-                if d["name"] == name:
+        """개별 교수 진료시간 조회 (개별 검색, 전체 크롤링 안 함)"""
+        empty = {"staff_id": staff_id, "name": "", "department": "", "position": "",
+                 "specialty": "", "profile_url": "", "notes": "", "schedules": []}
+
+        # 캐시가 이미 있으면 캐시에서 조회
+        if self._cached_data is not None:
+            for d in self._cached_data:
+                if d["staff_id"] == staff_id or d["external_id"] == staff_id:
                     return self._doctor_schedule_dict(d)
-        return {"staff_id": staff_id, "name": "", "department": "", "position": "",
-                "specialty": "", "profile_url": "", "notes": "", "schedules": []}
+            if staff_id.startswith("SNUH-"):
+                name = staff_id.split("-", 1)[-1]
+                for d in self._cached_data:
+                    if d["name"] == name:
+                        return self._doctor_schedule_dict(d)
+            return empty
+
+        # 개별 조회: 이름으로 각 병원 페이지 검색 (최대 3회 요청)
+        target_name = staff_id.split("-", 1)[-1] if staff_id.startswith("SNUH-") else staff_id
+        merged = {}
+
+        async with httpx.AsyncClient(headers=self.headers, timeout=30, follow_redirects=True) as client:
+            for hsp_cd, hsp_name in HSP_CODES.items():
+                try:
+                    resp = await client.get(f"{SCHEDULE_BASE}?hsp_cd={hsp_cd}")
+                    resp.raise_for_status()
+                    soup = BeautifulSoup(resp.text, "html.parser")
+
+                    for row in soup.select("table tr")[1:]:
+                        cells = row.select("td")
+                        if len(cells) < 10:
+                            continue
+
+                        has_colspan = cells[0].get("colspan") is not None
+                        if has_colspan:
+                            dept_idx, name_idx, day_start, spec_idx = 0, 1, 2, 8
+                        else:
+                            dept_idx, name_idx, day_start, spec_idx = 1, 2, 3, 9
+
+                        doc_raw = cells[name_idx].get_text(strip=True)
+                        name = re.sub(r"의사명을?\s*클릭.*$", "", doc_raw).strip()
+                        doc_links = cells[name_idx].select("a")
+                        for a in doc_links:
+                            a_text = a.get_text(strip=True)
+                            if a_text and len(a_text) <= 10:
+                                name = a_text
+                                break
+
+                        if name != target_name:
+                            continue
+
+                        # 찾음! 스케줄 파싱
+                        dept_raw = cells[dept_idx].get_text(strip=True)
+                        department = DEPT_SUFFIX.sub("", dept_raw).strip()
+                        specialty = cells[spec_idx].get_text(strip=True) if len(cells) > spec_idx else ""
+
+                        day_names_list = ["월", "화", "수", "목", "금", "토"]
+                        schedules = []
+                        for i, day_name in enumerate(day_names_list):
+                            cell_idx = day_start + i
+                            if cell_idx >= len(cells):
+                                break
+                            text = cells[cell_idx].get_text(strip=True)
+                            slots = _parse_day_cell(text)
+                            dow = DAY_MAP[day_name]
+                            for slot in slots:
+                                start, end = TIME_RANGES.get(slot, ("", ""))
+                                schedules.append({
+                                    "day_of_week": dow, "time_slot": slot,
+                                    "start_time": start, "end_time": end,
+                                    "location": hsp_name,
+                                })
+
+                        if name not in merged:
+                            merged[name] = {
+                                "department": department, "specialty": specialty,
+                                "locations": [hsp_name], "schedules": schedules,
+                            }
+                        else:
+                            existing = merged[name]
+                            existing_keys = {(s["day_of_week"], s["time_slot"], s["location"]) for s in existing["schedules"]}
+                            for s in schedules:
+                                if (s["day_of_week"], s["time_slot"], s["location"]) not in existing_keys:
+                                    existing["schedules"].append(s)
+                            if hsp_name not in existing["locations"]:
+                                existing["locations"].append(hsp_name)
+                            if specialty and specialty not in existing["specialty"]:
+                                existing["specialty"] = f"{existing['specialty']}, {specialty}" if existing["specialty"] else specialty
+
+                except Exception as e:
+                    logger.error(f"[SNUH] {hsp_name} 개별 조회 실패: {e}")
+
+        if not merged:
+            return empty
+
+        doc = merged[target_name]
+        # 여러 장소에서 진료하는 경우 특이사항 생성
+        notes = ""
+        if len(doc["locations"]) > 1:
+            day_names_list = ["월", "화", "수", "목", "금", "토"]
+            lines = []
+            for loc in doc["locations"]:
+                loc_scheds = [s for s in doc["schedules"] if s["location"] == loc]
+                if loc_scheds:
+                    day_slots = [f"{day_names_list[s['day_of_week']]} {'오전' if s['time_slot'] == 'morning' else '오후'}" for s in loc_scheds]
+                    lines.append(f"{loc}: {', '.join(day_slots)}")
+            notes = "\n".join(lines)
+
+        return {
+            "staff_id": f"SNUH-{target_name}",
+            "name": target_name,
+            "department": doc["department"],
+            "position": "",
+            "specialty": doc["specialty"],
+            "profile_url": "",
+            "notes": notes,
+            "schedules": doc["schedules"],
+        }
 
     @staticmethod
     def _doctor_schedule_dict(d: dict) -> dict:

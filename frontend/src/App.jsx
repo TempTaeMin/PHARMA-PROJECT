@@ -1,17 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
-import { LayoutDashboard, Star, Building2, Activity, Settings, Bell, Menu } from 'lucide-react';
+import { LayoutDashboard, Star, Building2, Settings, Bell, Menu } from 'lucide-react';
 import { notificationApi } from './api/client';
 import Dashboard from './pages/Dashboard';
 import MyDoctors from './pages/MyDoctors';
 import BrowseDoctors from './pages/BrowseDoctors';
-import CrawlStatus from './pages/CrawlStatus';
 import NotificationPanel from './components/NotificationPanel';
 
 const NAV = [
   { id: 'dashboard', label: '대시보드', icon: LayoutDashboard },
   { id: 'my-doctors', label: '내 교수', icon: Star },
   { id: 'browse', label: '교수 탐색', icon: Building2 },
-  { id: 'crawl', label: '크롤링', icon: Activity },
 ];
 
 export default function App() {
@@ -73,7 +71,6 @@ export default function App() {
           {page === 'dashboard' && <Dashboard onNavigate={navTo} />}
           {page === 'my-doctors' && <MyDoctors />}
           {page === 'browse' && <BrowseDoctors onNavigate={navTo} />}
-          {page === 'crawl' && <CrawlStatus />}
         </div>
       </main>
 

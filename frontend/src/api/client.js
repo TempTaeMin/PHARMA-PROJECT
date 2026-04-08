@@ -51,7 +51,7 @@ export const crawlApi = {
   },
   sync: (code, dept) => request(`/api/crawl/sync/${code}${dept ? '?department=' + encodeURIComponent(dept) : ''}`, { method: 'POST' }),
   runMyDoctors: () => request('/api/crawl/my-doctors', { method: 'POST' }),
-  doctor: (code, staffId) => request(`/api/crawl/doctor/${code}/${staffId}`),
+  doctor: (code, staffId) => request(`/api/crawl/doctor/${code}/${encodeURIComponent(staffId)}`),
   registerDoctor: (data) => request('/api/crawl/register-doctor', { method: 'POST', body: JSON.stringify(data) }),
 };
 

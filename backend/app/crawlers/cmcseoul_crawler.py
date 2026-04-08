@@ -91,22 +91,28 @@ class CmcseoulCrawler:
 
                     for day_idx in range(6):
                         if day_idx < len(hours_am) and hours_am[day_idx] is not None:
+                            h = hours_am[day_idx]
+                            type_c = h.get("nuDeptCdTypeC", "-") if isinstance(h, dict) else "-"
+                            loc = "센터" if (type_c and type_c != "-") else "과진료"
                             start, end = TIME_RANGES["morning"]
                             schedules.append({
                                 "day_of_week": day_idx,
                                 "time_slot": "morning",
                                 "start_time": start,
                                 "end_time": end,
-                                "location": "",
+                                "location": loc,
                             })
                         if day_idx < len(hours_pm) and hours_pm[day_idx] is not None:
+                            h = hours_pm[day_idx]
+                            type_c = h.get("nuDeptCdTypeC", "-") if isinstance(h, dict) else "-"
+                            loc = "센터" if (type_c and type_c != "-") else "과진료"
                             start, end = TIME_RANGES["afternoon"]
                             schedules.append({
                                 "day_of_week": day_idx,
                                 "time_slot": "afternoon",
                                 "start_time": start,
                                 "end_time": end,
-                                "location": "",
+                                "location": loc,
                             })
 
                     # 전문분야
@@ -171,36 +177,94 @@ class CmcseoulCrawler:
         ]
 
     async def crawl_doctor_schedule(self, staff_id: str) -> dict:
-        """개별 교수 진료시간 조회"""
-        data = await self._fetch_all()
-        for d in data:
-            if d["staff_id"] == staff_id or d["external_id"] == staff_id:
-                return {
-                    "staff_id": d["staff_id"],
-                    "name": d["name"],
-                    "department": d["department"],
-                    "position": d["position"],
-                    "specialty": d["specialty"],
-                    "profile_url": d["profile_url"],
-                    "notes": d.get("notes", ""),
-                    "schedules": d["schedules"],
-                }
-        # 폴백: drNo로 매칭
+        """개별 교수 진료시간 조회 (개별 API 호출, 전체 크롤링 안 함)"""
+        empty = {"staff_id": staff_id, "name": "", "department": "", "position": "",
+                 "specialty": "", "profile_url": "", "notes": "", "schedules": []}
+
+        # 캐시가 이미 있으면 캐시에서 조회
+        if self._cached_data is not None:
+            for d in self._cached_data:
+                if d["staff_id"] == staff_id or d["external_id"] == staff_id:
+                    return self._to_schedule_dict(d)
+            return empty
+
+        # 개별 API 호출
         dr_no = staff_id.replace("CMC-", "") if staff_id.startswith("CMC-") else staff_id
-        for d in data:
-            if d["staff_id"] == f"CMC-{dr_no}" or dr_no in d["staff_id"]:
-                return {
-                    "staff_id": d["staff_id"],
-                    "name": d["name"],
-                    "department": d["department"],
-                    "position": d["position"],
-                    "specialty": d["specialty"],
-                    "profile_url": d["profile_url"],
-                    "notes": d.get("notes", ""),
-                    "schedules": d["schedules"],
-                }
-        return {"staff_id": staff_id, "name": "", "department": "", "position": "",
-                "specialty": "", "profile_url": "", "notes": "", "schedules": []}
+        async with httpx.AsyncClient(
+            headers=self.headers, cookies=self.cookies,
+            timeout=30, follow_redirects=True,
+        ) as client:
+            try:
+                resp = await client.get(f"{BASE_URL}/api/doctor", params={"drNo": dr_no})
+                resp.raise_for_status()
+                docs = resp.json()
+            except Exception as e:
+                logger.error(f"[CMCSEOUL] 개별 조회 실패 ({staff_id}): {e}")
+                return empty
+
+            if not docs:
+                return empty
+
+            doc = docs[0]
+            return self._parse_single_doctor(doc, staff_id)
+
+    def _parse_single_doctor(self, doc: dict, staff_id: str) -> dict:
+        """API 응답 단일 의사 데이터를 스케줄 dict로 변환"""
+        dr_no = doc.get("drNo", "")
+        dr_name = doc.get("drName", "")
+        treatment = doc.get("doctorTreatment") or {}
+        hours_am = treatment.get("hoursAm") or [None] * 6
+        hours_pm = treatment.get("hoursPm") or [None] * 6
+        schedules = []
+
+        for day_idx in range(6):
+            if day_idx < len(hours_am) and hours_am[day_idx] is not None:
+                h = hours_am[day_idx]
+                type_c = h.get("nuDeptCdTypeC", "-") if isinstance(h, dict) else "-"
+                loc = "센터" if (type_c and type_c != "-") else "과진료"
+                start, end = TIME_RANGES["morning"]
+                schedules.append({
+                    "day_of_week": day_idx, "time_slot": "morning",
+                    "start_time": start, "end_time": end, "location": loc,
+                })
+            if day_idx < len(hours_pm) and hours_pm[day_idx] is not None:
+                h = hours_pm[day_idx]
+                type_c = h.get("nuDeptCdTypeC", "-") if isinstance(h, dict) else "-"
+                loc = "센터" if (type_c and type_c != "-") else "과진료"
+                start, end = TIME_RANGES["afternoon"]
+                schedules.append({
+                    "day_of_week": day_idx, "time_slot": "afternoon",
+                    "start_time": start, "end_time": end, "location": loc,
+                })
+
+        doc_dept = doc.get("doctorDept") or {}
+        specialty = doc_dept.get("nuSpecial") or treatment.get("special") or ""
+        position = doc.get("nuHptlJobTitle", "")
+        dept_nm = doc_dept.get("deptNm", "")
+
+        return {
+            "staff_id": f"CMC-{dr_no}" if dr_no else staff_id,
+            "name": dr_name,
+            "department": dept_nm,
+            "position": position,
+            "specialty": specialty,
+            "profile_url": "",
+            "notes": "",
+            "schedules": schedules,
+        }
+
+    @staticmethod
+    def _to_schedule_dict(d: dict) -> dict:
+        return {
+            "staff_id": d["staff_id"],
+            "name": d["name"],
+            "department": d["department"],
+            "position": d["position"],
+            "specialty": d["specialty"],
+            "profile_url": d["profile_url"],
+            "notes": d.get("notes", ""),
+            "schedules": d["schedules"],
+        }
 
     async def crawl_doctors(self, department: str = None):
         """전체 크롤링 (CrawlResult 반환)"""

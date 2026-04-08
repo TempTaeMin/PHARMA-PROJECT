@@ -51,6 +51,7 @@ class Doctor(Base):
 
     hospital = relationship("Hospital", back_populates="doctors")
     schedules = relationship("DoctorSchedule", back_populates="doctor")
+    date_schedules = relationship("DoctorDateSchedule", back_populates="doctor")
     visit_logs = relationship("VisitLog", back_populates="doctor")
 
 
@@ -71,6 +72,24 @@ class DoctorSchedule(Base):
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     doctor = relationship("Doctor", back_populates="schedules")
+
+
+class DoctorDateSchedule(Base):
+    """날짜별 진료 일정 (특정 날짜 데이터를 제공하는 병원용)"""
+    __tablename__ = "doctor_date_schedules"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=False)
+    schedule_date = Column(String(10), nullable=False)  # "2026-04-08"
+    time_slot = Column(String(20))  # "morning", "afternoon"
+    start_time = Column(String(10))
+    end_time = Column(String(10))
+    location = Column(String(200))
+    status = Column(String(20), default="진료")  # "진료", "휴진", "대진"
+    crawled_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    doctor = relationship("Doctor", back_populates="date_schedules")
 
 
 class ScheduleChange(Base):
