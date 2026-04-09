@@ -60,6 +60,7 @@ class HallymCrawler:
                     params={"left_menu": "left_ireserve", "screen": "ptm211"},
                 )
                 resp.raise_for_status()
+                resp.encoding = "euc-kr"
                 soup = BeautifulSoup(resp.text, "html.parser")
 
                 depts = []
@@ -143,6 +144,7 @@ class HallymCrawler:
                 },
             )
             resp.raise_for_status()
+            resp.encoding = "euc-kr"
             soup = BeautifulSoup(resp.text, "html.parser")
         except Exception as e:
             logger.error(f"[HALLYM] {dept_name} 의사 목록 실패: {e}")
@@ -163,7 +165,9 @@ class HallymCrawler:
                 continue
 
             # 링크 텍스트 또는 주변에서 이름 추출
-            name = a_tag.get_text(strip=True)
+            raw_name = a_tag.get_text(strip=True)
+            # "백유진 교수상세보기" → "백유진" 으로 정리
+            name = re.sub(r'\s*(교수|전문의|과장|원장|의사)?\s*상세\s*보기.*$', '', raw_name).strip()
             # "상세보기" 같은 텍스트인 경우 이름이 아님
             if not name or name in ("상세보기", "자세히보기", "상세정보") or len(name) > 15:
                 # 부모 또는 형제 요소에서 이름 찾기
@@ -231,6 +235,7 @@ class HallymCrawler:
                 params={"Doctor_Id": dr_id},
             )
             resp.raise_for_status()
+            resp.encoding = "euc-kr"
             soup = BeautifulSoup(resp.text, "html.parser")
         except Exception as e:
             logger.error(f"[HALLYM] 프로필 조회 실패 (Doctor_Id={dr_id}): {e}")

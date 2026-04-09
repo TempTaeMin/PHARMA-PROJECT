@@ -202,38 +202,48 @@ class AjoumcCrawler:
                     })
 
         # 의사 카드에서 이름, 전문분야 추출
-        # 카드 구조: <a href="javascript: openDoctorView(...)">이미지+이름</a>
-        cards = soup.select("a[href*='openDoctorView']")
-        for card in cards:
-            onclick = card.get("href", "")
+        # <a> 태그 안에는 "자세히 보기" 텍스트만 있으므로, 부모 컨테이너에서 이름 추출
+        for link in soup.select("a[href*='openDoctorView']"):
+            onclick = link.get("href", "")
             m = view_pattern.search(onclick)
             if not m:
                 continue
             prof_emp_cd = m.group(2)
 
-            # 이름 추출
-            name = ""
-            strong = card.select_one("strong")
-            if strong:
-                name = strong.get_text(strip=True)
-            if not name:
-                # 카드 텍스트에서 진료과명 제거
-                full_text = card.get_text(strip=True)
-                if dept_name in full_text:
-                    name = full_text.replace(dept_name, "").strip()
-                elif full_text and len(full_text) <= 20:
-                    name = full_text
+            # 부모 컨테이너 (li 또는 div) 찾기
+            card = link.find_parent("li") or link.find_parent("div")
+            if not card:
+                card = link.parent
 
-            # 전문분야: 카드 주변의 p 태그
+            # 이름 추출: 컨테이너 내 strong, h4, h3, p.name 등
+            name = ""
+            if card:
+                for sel in ("strong", "h4", "h3", "span.name", "p.name", ".doctor-name"):
+                    name_el = card.select_one(sel)
+                    if name_el:
+                        candidate = name_el.get_text(strip=True)
+                        if candidate and candidate not in ("자세히 보기", "자세히보기", "상세보기", "진료예약") and len(candidate) <= 10:
+                            name = candidate
+                            break
+
+            # 이름 폴백: img alt 속성
+            if not name and card:
+                img = card.select_one("img")
+                if img:
+                    alt = img.get("alt", "").strip()
+                    alt_name = re.sub(r'\s*(교수|전문의|과장|원장|의사)\s*$', '', alt).strip()
+                    if alt_name and len(alt_name) <= 10 and re.search(r'[가-힣]', alt_name):
+                        name = alt_name
+
+            # 전문분야: 카드 내 p 태그
             specialty = ""
-            parent = card.parent
-            if parent:
-                for p in parent.select("p"):
+            if card:
+                for p in card.select("p, dd"):
                     t = p.get_text(strip=True)
                     if "전문분야" in t:
                         specialty = t.replace("전문분야:", "").replace("전문분야", "").strip()
                         break
-                    elif len(t) > 5 and t != name:
+                    elif len(t) > 5 and t != name and t not in ("자세히 보기", "자세히보기", "진료예약"):
                         specialty = t
 
             # 해당 의사 데이터 업데이트

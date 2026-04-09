@@ -7,7 +7,7 @@ from sqlalchemy import select, func
 from app.crawlers.factory import get_crawler, list_supported_hospitals
 from app.models.connection import get_db
 from app.models.database import Hospital, Doctor, DoctorSchedule, DoctorDateSchedule, CrawlLog
-from app.services.crawl_service import crawl_my_doctors
+from app.services.crawl_service import crawl_my_doctors, _sync_schedules, _sync_date_schedules
 
 _DEPT_CLEAN_RE = re.compile(r"일반$")
 def _clean_dept(name: str) -> str:
@@ -110,15 +110,25 @@ async def sync_hospital(
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
 
-    # 크롤링
-    doc_list = await crawler.crawl_doctor_list(department=department or None)
+    # 크롤링 (스케줄 포함)
+    # _fetch_all()은 스케줄 데이터를 포함하므로 이를 사용
+    if hasattr(crawler, '_fetch_all'):
+        raw_list = await crawler._fetch_all()
+        if department:
+            raw_list = [d for d in raw_list if d.get("department") == department]
+    else:
+        raw_list = await crawler.crawl_doctor_list(department=department or None)
 
     created = 0
     updated = 0
+    schedules_saved = 0
 
-    for d in doc_list:
+    for d in raw_list:
         ext_id = d.get("external_id") or d.get("staff_id", "")
         name = d.get("name", "")
+        schedules = d.get("schedules", [])
+        date_schedules = d.get("date_schedules", [])
+
         # 진료과명 정리
         if d.get("department"):
             d["department"] = _clean_dept(d["department"])
@@ -146,6 +156,12 @@ async def sync_hospital(
 
         if existing:
             # 업데이트 (visit_grade는 건드리지 않음 - 내 교수 등급 보존)
+            if name:
+                existing.name = name
+            if d.get("department"):
+                existing.department = d["department"]
+            if d.get("position"):
+                existing.position = d["position"]
             if d.get("specialty"):
                 existing.specialty = d["specialty"]
             if d.get("profile_url"):
@@ -154,8 +170,16 @@ async def sync_hospital(
                 existing.external_id = ext_id
             if d.get("notes"):
                 existing.notes = d["notes"]
+            existing.is_active = True
             existing.updated_at = datetime.utcnow()
             updated += 1
+
+            # 스케줄 동기화
+            if schedules:
+                await _sync_schedules(db, existing.id, schedules)
+                schedules_saved += len(schedules)
+            if date_schedules:
+                await _sync_date_schedules(db, existing.id, date_schedules)
         else:
             # 신규 추가 (visit_grade=None → 탐색용)
             new_doc = Doctor(
@@ -170,13 +194,21 @@ async def sync_hospital(
                 notes=d.get("notes", ""),
             )
             db.add(new_doc)
+            await db.flush()
             created += 1
+
+            # 스케줄 저장
+            if schedules:
+                await _sync_schedules(db, new_doc.id, schedules)
+                schedules_saved += len(schedules)
+            if date_schedules:
+                await _sync_date_schedules(db, new_doc.id, date_schedules)
 
     # 크롤링 로그
     log = CrawlLog(
         hospital_code=hospital_code,
         status="success",
-        doctors_crawled=len(doc_list),
+        doctors_crawled=len(raw_list),
         started_at=datetime.utcnow(),
         finished_at=datetime.utcnow(),
     )
@@ -187,9 +219,10 @@ async def sync_hospital(
     return {
         "status": "success",
         "hospital_code": hospital_code,
-        "total_crawled": len(doc_list),
+        "total_crawled": len(raw_list),
         "created": created,
         "updated": updated,
+        "schedules_saved": schedules_saved,
     }
 
 

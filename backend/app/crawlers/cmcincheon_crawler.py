@@ -129,85 +129,94 @@ class CmcincheonCrawler:
         return doctors, total_pages
 
     def _parse_doctor_cards(self, soup: BeautifulSoup) -> list[dict]:
-        """HTML에서 의사 카드 파싱"""
+        """HTML에서 의사 카드 파싱
+
+        실제 HTML 구조 (div.team_dv):
+          <div class="team_dv">
+            <a class="btn_open img" id="btn_open_599"><img.../></a>
+            <div class="right_view">
+              <p class="p_h">
+                <a class="btn_open" id="btn_open_599">황선욱</a>
+                <span class="ok">과장</span>
+                [소속:가정의학과]
+              </p>
+              <p class="job"><b>전문분야</b> 만성질환, ...</p>
+              <a class="btn_open btn01" id="btn_open_599">자세히 보기</a>
+            </div>
+          </div>
+        """
         doctors = []
+        seen_seqs = set()
 
-        # btn_open_{seq} 패턴으로 의사 항목 찾기
-        for btn in soup.select("a[id^='btn_open_']"):
-            seq = btn.get("id", "").replace("btn_open_", "")
-            if not seq:
+        # div.team_dv 카드 파싱
+        cards = soup.select("div.team_dv")
+        if not cards:
+            # 폴백: right_view 직접 탐색
+            cards = soup.select("div.right_view")
+
+        for card in cards:
+            # seq 추출: btn_open_{seq} ID에서
+            seq = ""
+            for a_tag in card.select("a[id^='btn_open_']"):
+                seq = a_tag.get("id", "").replace("btn_open_", "")
+                if seq:
+                    break
+            if not seq or seq in seen_seqs:
                 continue
+            seen_seqs.add(seq)
 
-            # 이름 추출
+            # 이름 추출: p.p_h 내 a.btn_open 텍스트 (이미지가 아닌 텍스트 링크)
             name = ""
-            name_el = btn.select_one("strong, span.name, b")
-            if name_el:
-                name = name_el.get_text(strip=True)
-            if not name:
-                # 이미지 다음의 텍스트에서 이름 추출
-                texts = [t.strip() for t in btn.stripped_strings]
-                for t in texts:
-                    # 이름은 보통 2~4자 한글
-                    if re.match(r'^[가-힣]{2,4}$', t):
-                        name = t
-                        break
-                if not name and texts:
-                    name = texts[-1] if len(texts[-1]) <= 10 else texts[0]
+            p_h = card.select_one("p.p_h")
+            if p_h:
+                for a_tag in p_h.select("a.btn_open"):
+                    txt = a_tag.get_text(strip=True)
+                    if txt and txt != "자세히 보기" and not a_tag.select_one("img"):
+                        if re.search(r'[가-힣]{2,}', txt):
+                            name = txt
+                            break
 
+            # 폴백: img alt
             if not name:
+                img = card.select_one("img[alt]")
+                if img:
+                    alt = img.get("alt", "").strip()
+                    alt_clean = re.sub(r'\s*(이미지|교수|전문의|과장|원장|프로필)\s*$', '', alt).strip()
+                    if alt_clean and re.fullmatch(r'[가-힣]{2,5}', alt_clean):
+                        name = alt_clean
+
+            if not name or len(name) < 2:
                 continue
 
-            # 이미지 URL에서 고유 ID 추출
-            img = btn.select_one("img")
-            img_src = img.get("src", "") if img else ""
-
-            # 부모/형제 요소에서 진료과, 직위, 전문분야 추출
-            parent = btn.parent
-            if parent is None:
-                parent = btn
-
-            # 모달 팝업에서 상세 정보 추출
-            modal = soup.select_one(f"#layer_pop_{seq}")
-
-            department = ""
+            # 직위: span.ok
             position = ""
+            pos_el = card.select_one("span.ok, span.position")
+            if pos_el:
+                position = pos_el.get_text(strip=True)
+
+            # 진료과: [소속:XXX] 텍스트
+            department = ""
+            if p_h:
+                p_h_text = p_h.get_text(strip=True)
+                m = re.search(r'\[소속\s*:\s*([^\]]+)\]', p_h_text)
+                if m:
+                    department = m.group(1).strip()
+
+            # 전문분야: p.job 텍스트에서 "전문분야" 제거
             specialty = ""
+            job_el = card.select_one("p.job")
+            if job_el:
+                job_text = job_el.get_text(strip=True)
+                specialty = re.sub(r'^전문분야\s*:?\s*', '', job_text).strip()
+
+            # 스케줄: 모달(layer_pop_{seq})에서 파싱
             schedules = []
-
+            modal = soup.select_one(f"#layer_pop_{seq}")
             if modal:
-                # 모달 내 텍스트에서 정보 추출
-                modal_text = modal.get_text("\n", strip=True)
-
-                # 진료과 추출: 보통 직위 다음에 나옴
-                info_items = modal.select("li, p, span, div.info span")
-                for item in info_items:
-                    text = item.get_text(strip=True)
-                    if not text:
-                        continue
-                    # 직위 패턴
-                    if any(kw in text for kw in ("교수", "전문의", "과장", "센터장", "부장")):
-                        if not position:
-                            position = text
-                    # 전문분야 패턴
-                    if "전문분야" in text:
-                        specialty = text.replace("전문분야", "").replace(":", "").strip()
-
-                # 스케줄 파싱 (모달 내 테이블)
                 schedules = self._parse_schedule_table(modal)
-
-            # 모달 밖 정보에서도 추출 시도
-            if not department or not position or not specialty:
-                # btn 주변 형제 요소에서 추출
-                container = btn.find_parent("div") or btn.find_parent("li") or parent
-                if container:
-                    for el in container.select("span, p, div"):
-                        text = el.get_text(strip=True)
-                        if not text or text == name:
-                            continue
-                        if any(kw in text for kw in ("교수", "전문의", "과장", "센터장", "부장")) and not position:
-                            position = text
-                        if "전문분야" in text and not specialty:
-                            specialty = text.replace("전문분야", "").replace(":", "").strip()
+                # 스케줄 테이블이 비어있으면 ul.day_icon 텍스트에서 파싱
+                if not schedules:
+                    schedules = self._parse_schedule_from_text(modal)
 
             ext_id = f"CMCIC-{seq}"
             doctors.append({
@@ -223,45 +232,35 @@ class CmcincheonCrawler:
                 "_seq": seq,
             })
 
-        # 폴백: btn_open 패턴이 없는 경우 일반 카드 파싱
-        if not doctors:
-            cards = soup.select(
-                "div.doctor-card, li.doctor-item, div.doc-info, "
-                "div.list-item, div.professor"
-            )
-            for idx, card in enumerate(cards):
-                name = ""
-                name_el = card.select_one("strong, span.name, h3, a strong")
-                if name_el:
-                    name = name_el.get_text(strip=True)
-                if not name:
-                    continue
-
-                position = ""
-                pos_el = card.select_one("span.position, span.title, p.position")
-                if pos_el:
-                    position = pos_el.get_text(strip=True)
-
-                specialty = ""
-                spec_el = card.select_one("span.specialty, p.specialty, dd")
-                if spec_el:
-                    specialty = spec_el.get_text(strip=True)
-
-                ext_id = f"CMCIC-{idx}"
-                doctors.append({
-                    "staff_id": ext_id,
-                    "external_id": ext_id,
-                    "name": name,
-                    "department": "",
-                    "position": position,
-                    "specialty": specialty,
-                    "profile_url": f"{BASE_URL}/treatment/doctor_list",
-                    "notes": "",
-                    "schedules": [],
-                    "_seq": str(idx),
-                })
-
         return doctors
+
+    def _parse_schedule_from_text(self, container) -> list[dict]:
+        """ul.day_icon 등 텍스트에서 스케줄 파싱
+
+        예: "수(오후) 자문형호스피스 진료", "월(오전) 가정의학과"
+        """
+        schedules = []
+        seen = set()
+        text_els = container.select("ul.day_icon li, p, span")
+        for el in text_els:
+            text = el.get_text(strip=True)
+            for day_char, dow in DAY_MAP.items():
+                # "월(오전)", "수(오후)" 패턴
+                m = re.search(rf'{day_char}\s*\(\s*(오전|오후)\s*\)', text)
+                if m:
+                    slot = "morning" if m.group(1) == "오전" else "afternoon"
+                    key = (dow, slot)
+                    if key not in seen:
+                        seen.add(key)
+                        start, end = TIME_RANGES[slot]
+                        schedules.append({
+                            "day_of_week": dow,
+                            "time_slot": slot,
+                            "start_time": start,
+                            "end_time": end,
+                            "location": "",
+                        })
+        return schedules
 
     def _parse_schedule_table(self, container) -> list[dict]:
         """컨테이너(모달 등) 내 스케줄 테이블 파싱"""
@@ -336,57 +335,34 @@ class CmcincheonCrawler:
     # ─── 전체 크롤링 ───
 
     async def _fetch_all(self) -> list[dict]:
-        """전체 의료진 크롤링 (페이지네이션 순회) 후 캐시"""
+        """전체 의료진 크롤링 (전체 목록 페이지네이션) 후 캐시
+
+        진료과별 검색(`schType=dprtmnt`)은 서버가 빈 결과를 반환하므로,
+        전체 목록을 페이지네이션으로 순회합니다. 각 카드에 [소속:진료과] 정보가 포함됨.
+        302 rate limiting 방지를 위해 요청 간 딜레이 추가.
+        """
         if self._cached_data is not None:
             return self._cached_data
 
+        import asyncio
         all_doctors = {}  # ext_id → doctor dict
 
         async with httpx.AsyncClient(
             headers=self.headers, timeout=60, follow_redirects=True,
         ) as client:
-            # 진료과 목록 조회
-            depts = await self._fetch_departments()
-
-            if depts:
-                # 진료과별 의료진 조회
-                for dept in depts:
-                    page = 1
-                    while True:
-                        doctors, total_pages = await self._fetch_all_doctors_page(
-                            client, page=page,
-                            sch_type="dprtmnt", keyword=dept["code"],
-                        )
-                        for doc in doctors:
-                            doc["department"] = dept["name"]
-                            ext_id = doc["external_id"]
-                            if ext_id not in all_doctors:
-                                all_doctors[ext_id] = doc
-                            else:
-                                # 전문분야 병합
-                                existing = all_doctors[ext_id]
-                                if doc["specialty"] and doc["specialty"] not in existing.get("specialty", ""):
-                                    existing["specialty"] = (
-                                        f"{existing['specialty']}, {doc['specialty']}"
-                                        if existing.get("specialty") else doc["specialty"]
-                                    )
-                        if page >= total_pages or not doctors:
-                            break
-                        page += 1
-            else:
-                # 진료과 없으면 전체 순회
-                page = 1
-                while True:
-                    doctors, total_pages = await self._fetch_all_doctors_page(
-                        client, page=page,
-                    )
-                    for doc in doctors:
-                        ext_id = doc["external_id"]
-                        if ext_id not in all_doctors:
-                            all_doctors[ext_id] = doc
-                    if page >= total_pages or not doctors:
-                        break
-                    page += 1
+            page = 1
+            while True:
+                doctors, total_pages = await self._fetch_all_doctors_page(
+                    client, page=page,
+                )
+                for doc in doctors:
+                    ext_id = doc["external_id"]
+                    if ext_id not in all_doctors:
+                        all_doctors[ext_id] = doc
+                if page >= total_pages or not doctors:
+                    break
+                page += 1
+                await asyncio.sleep(1)  # rate limiting 방지
 
         result = list(all_doctors.values())
         logger.info(f"[CMCIC] 총 {len(result)}명")

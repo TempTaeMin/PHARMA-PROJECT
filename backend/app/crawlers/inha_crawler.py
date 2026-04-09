@@ -157,7 +157,7 @@ class InhaCrawler:
 
             # 이름 추출
             if not name:
-                name_el = card.select_one("h3, strong, span.name, h4")
+                name_el = card.select_one("p.name, h3, strong, span.name, h4")
                 if name_el:
                     name = name_el.get_text(strip=True)
 

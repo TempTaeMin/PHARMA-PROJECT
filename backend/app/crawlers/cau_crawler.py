@@ -109,9 +109,24 @@ class CauCrawler:
     async def _fetch_prof_list_page(self, client: httpx.AsyncClient, dept_code: str = None, page: int = 1) -> tuple[list[dict], int]:
         """profList.do 페이지에서 의사 카드 파싱. (doctors, total_pages) 반환"""
         try:
-            form_data = {"pageNo": str(page)}
-            if dept_code:
-                form_data["deptNo"] = dept_code
+            form_data = {
+                "sitePath": "home",
+                "page": str(page),
+                "list_show_cnt": "10",
+                "sortOrder": "HAN",
+                "searchYn": "Y",
+                "cate1": "",
+                "deptNo": dept_code or "",
+                "deptNm": "",
+                "tabCd": "",
+                "publicYear": "",
+                "prevYearYn": "",
+                "workType": "",
+                "initialText": "",
+                "profInitKorNm": "",
+                "searchfield": "",
+                "searchword": "",
+            }
 
             resp = await client.post(
                 f"{BASE_URL}/home/medical/profList.do",
@@ -134,8 +149,7 @@ class CauCrawler:
             r"fn_DeatilPop\s*\(\s*'([^']*)'\s*,\s*'?(\d+)'?\s*,\s*'?(\d+)'?\s*,\s*'?(\w+)'?\s*\)"
         )
 
-        # 모든 의사 카드를 찾기 위해 doctor-card 또는 유사 컨테이너 사용
-        # 먼저 fn_DeatilPop 호출 모두 찾기
+        # fn_DeatilPop 호출 모두 찾기
         detail_calls = detail_pattern.findall(html_text)
 
         if not detail_calls:
@@ -146,26 +160,11 @@ class CauCrawler:
             for m in detail_pattern2.finditer(html_text):
                 detail_calls.append(("home", m.group(1), m.group(2), m.group(3)))
 
-        # fn_MoveReserve 호출에서 deptCd도 추출
-        reserve_pattern = re.compile(
-            r"fn_MoveReserve\s*\(\s*'?(\d+)'?\s*,\s*'?(\d+)'?\s*,\s*'?(\d+)'?\s*\)"
-        )
-
-        # 의사 카드 컨테이너 찾기
-        cards = soup.select("div.doctor-card, li.doctor-item, div.prof-item, div.profList")
-
-        if cards and len(cards) >= len(detail_calls):
-            # 카드 기반 파싱
-            for i, card in enumerate(cards):
-                doctor = self._parse_doctor_card(card, detail_calls[i] if i < len(detail_calls) else None)
-                if doctor:
-                    doctors.append(doctor)
-        elif detail_calls:
-            # fn_DeatilPop 기반 파싱 (카드 구조를 찾지 못한 경우)
-            for site_path, dept_no, prof_no, emp_no in detail_calls:
-                doctor = self._parse_from_context(soup, dept_no, prof_no, emp_no)
-                if doctor:
-                    doctors.append(doctor)
+        # fn_DeatilPop 호출이 포함된 <a> 태그의 부모 컨테이너에서 의사 정보 추출
+        for site_path, dept_no, prof_no, emp_no in detail_calls:
+            doctor = self._parse_doctor_from_page(soup, dept_no, prof_no, emp_no)
+            if doctor:
+                doctors.append(doctor)
 
         # 전체 페이지 수 계산
         total_pages = 1
@@ -247,19 +246,80 @@ class CauCrawler:
             "emp_no": emp_no,
         }
 
-    def _parse_from_context(self, soup, dept_no: str, prof_no: str, emp_no: str) -> dict | None:
-        """fn_DeatilPop 호출 주변 텍스트에서 의사 정보 추출"""
-        html_text = str(soup)
+    def _parse_doctor_from_page(self, soup, dept_no: str, prof_no: str, emp_no: str) -> dict | None:
+        """fn_DeatilPop 호출이 포함된 링크의 부모 컨테이너에서 의사 정보 + 스케줄 추출"""
+        # fn_DeatilPop 호출이 포함된 <a> 태그 찾기
+        for a_tag in soup.select("a"):
+            href_text = a_tag.get("href", "") + a_tag.get("onclick", "")
+            if prof_no not in href_text or emp_no not in href_text:
+                continue
+            if "fn_DeatilPop" not in href_text:
+                continue
 
-        # fn_DeatilPop 호출 근처의 텍스트에서 이름 등 추출
-        pattern = re.compile(
-            rf"fn_DeatilPop\s*\(\s*'home'\s*,\s*'{re.escape(dept_no)}'\s*,\s*'{re.escape(prof_no)}'\s*,\s*'{re.escape(emp_no)}'\s*\)"
-        )
-        match = pattern.search(html_text)
-        if not match:
-            return None
+            # 이 링크의 부모 컨테이너 찾기
+            # fn_DeatilPop 링크는 ul.doc_sche_btn_wrap > li 안에 있으므로
+            # 가장 가까운 li가 아닌 li.doc_sche_list를 찾아야 함
+            card = a_tag.find_parent("li", class_=re.compile(r"doc_sche|doctor|prof|card"))
+            if not card:
+                # li 두 단계: fn_DeatilPop의 li → ul → li.doc_sche_list
+                inner_li = a_tag.find_parent("li")
+                if inner_li:
+                    card = inner_li.find_parent("li") or inner_li.find_parent("div", class_=re.compile(r"doc_|doctor|prof"))
+            if not card:
+                card = a_tag.find_parent("div", class_=re.compile(r"doc_|doctor|prof")) or a_tag.find_parent("tr")
+            if not card:
+                card = a_tag.parent
 
-        # 이 매치 주변의 컨텍스트에서 이름을 추출하기 어려우므로 기본 정보만 반환
+            # 이름 추출: h4 (실제 HTML: <div class="doc_name"><h4>강기운</h4>)
+            name = ""
+            if card:
+                h4 = card.select_one("div.doc_name h4, h4")
+                if h4:
+                    name = h4.get_text(strip=True)
+
+            # 이름 폴백: img alt (e.g. "강기운 이미지")
+            if not name and card:
+                img = card.select_one("img[alt]")
+                if img:
+                    alt = img.get("alt", "").strip()
+                    alt_clean = re.sub(r'\s*(이미지|교수|전문의|과장|원장)$', '', alt).strip()
+                    if alt_clean and 2 <= len(alt_clean) <= 10 and re.search(r'[가-힣]', alt_clean):
+                        name = alt_clean
+
+            # 진료과: h5.doc_part (e.g. "[순환기내과]")
+            dept_name = ""
+            if card:
+                dept_el = card.select_one("h5.doc_part")
+                if dept_el:
+                    dept_name = dept_el.get_text(strip=True).strip("[]")
+
+            # 전문분야: h5.doc_explain
+            specialty = ""
+            if card:
+                spec_el = card.select_one("h5.doc_explain")
+                if spec_el:
+                    specialty = spec_el.get_text(strip=True)
+
+            # 스케줄: 카드 내 테이블에서 파싱
+            schedules = self._parse_schedule_table(card) if card else []
+
+            ext_id = f"CAU-{emp_no}" if emp_no else f"CAU-{prof_no}" if prof_no else f"CAU-{name}"
+            return {
+                "staff_id": ext_id,
+                "external_id": ext_id,
+                "name": name,
+                "department": dept_name,
+                "position": "",
+                "specialty": specialty,
+                "profile_url": f"{BASE_URL}/home/medical/profView.do?deptNo={dept_no}&profNo={prof_no}&empNo={emp_no}" if prof_no else "",
+                "notes": "",
+                "schedules": schedules,
+                "dept_no": dept_no,
+                "prof_no": prof_no,
+                "emp_no": emp_no,
+            }
+
+        # 링크를 찾지 못한 경우 기본 정보만 반환
         ext_id = f"CAU-{emp_no}" if emp_no else f"CAU-{prof_no}"
         return {
             "staff_id": ext_id,
@@ -348,40 +408,52 @@ class CauCrawler:
 
         return schedules
 
-    # ─── 전체 크롤링 (진료과별) ───
+    # ─── 전체 크롤링 (전체 목록 페이지네이션) ───
 
     async def _fetch_all(self):
+        """전체 의료진 크롤링.
+
+        profList.do의 deptNo 파라미터가 무시되고 항상 전체 목록(가나다순)이 반환되므로,
+        deptNo 없이 전체 페이지를 순회합니다. 각 카드의 h5.doc_part에서 진료과를 추출.
+        """
         if self._cached_data is not None:
             return self._cached_data
 
-        depts = await self._fetch_departments()
         all_doctors = {}  # ext_id → doctor dict
 
         async with httpx.AsyncClient(headers=self.headers, timeout=60, follow_redirects=True) as client:
-            for dept in depts:
+            page = 1
+            while True:
                 try:
-                    doctors_page1, total_pages = await self._fetch_prof_list_page(client, dept["code"], page=1)
-
-                    for doc in doctors_page1:
-                        ext_id = doc["external_id"]
-                        if not doc["department"]:
-                            doc["department"] = dept["name"]
-                        if ext_id not in all_doctors:
-                            all_doctors[ext_id] = doc
-
-                    # 추가 페이지 크롤링
-                    for page in range(2, min(total_pages + 1, 10)):
-                        more_docs, _ = await self._fetch_prof_list_page(client, dept["code"], page=page)
-                        for doc in more_docs:
-                            ext_id = doc["external_id"]
-                            if not doc["department"]:
-                                doc["department"] = dept["name"]
-                            if ext_id not in all_doctors:
-                                all_doctors[ext_id] = doc
-
-                    logger.info(f"[CAU] {dept['name']}: 완료")
+                    doctors, total_pages = await self._fetch_prof_list_page(client, dept_code=None, page=page)
                 except Exception as e:
-                    logger.error(f"[CAU] {dept['name']} 실패: {e}")
+                    logger.error(f"[CAU] 페이지 {page} 실패: {e}")
+                    break
+
+                for doc in doctors:
+                    ext_id = doc["external_id"]
+                    # 이름이 비어있으면 profView에서 보충
+                    if not doc["name"] and doc.get("prof_no"):
+                        try:
+                            info, view_schedules = await self._fetch_prof_schedule(
+                                client, doc["dept_no"], doc["prof_no"], doc["emp_no"]
+                            )
+                            if info.get("name"):
+                                doc["name"] = info["name"]
+                            if info.get("specialty"):
+                                doc["specialty"] = info["specialty"]
+                            if not doc["schedules"] and view_schedules:
+                                doc["schedules"] = view_schedules
+                        except Exception:
+                            pass
+                    if ext_id not in all_doctors:
+                        all_doctors[ext_id] = doc
+
+                logger.info(f"[CAU] 페이지 {page}/{total_pages}: {len(doctors)}명")
+
+                if page >= total_pages or not doctors:
+                    break
+                page += 1
 
         result = list(all_doctors.values())
         logger.info(f"[CAU] 총 {len(result)}명")

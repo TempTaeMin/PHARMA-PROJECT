@@ -156,11 +156,28 @@ class KhuCrawler:
                     profile_items.append(container)
 
         for item in profile_items:
-            # 이름 추출
-            name_el = item.select_one(".doctor_name")
-            if not name_el:
-                continue
-            name = name_el.get_text(strip=True)
+            # 이름 추출: img alt에서 한글 이름 우선 (EN 페이지의 .doctor_name은 영어이거나 비어있음)
+            name = ""
+
+            # 전략 1: img alt ("원장원교수 프로필" → "원장원")
+            img = item.select_one("img[alt]")
+            if img:
+                alt = img.get("alt", "")
+                cleaned = re.sub(r'\s*(교수|전문의|과장|원장|의사|선생님|임상강사)?\s*프로필\s*$', '', alt).strip()
+                if cleaned and re.fullmatch(r'[가-힣]{2,5}', cleaned):
+                    name = cleaned
+
+            # 전략 2: .doctor_name 텍스트 (한글인 경우만)
+            if not name:
+                name_el = item.select_one(".doctor_name")
+                if name_el:
+                    txt = name_el.get_text(strip=True)
+                    if txt and re.search(r'[가-힣]{2,}', txt):
+                        # 한글 이름만 추출 (영어 제거)
+                        m = re.search(r'([가-힣]{2,5})', txt)
+                        if m:
+                            name = m.group(1)
+
             if not name or len(name) < 2 or name in seen_names:
                 continue
             seen_names.add(name)
@@ -221,9 +238,15 @@ class KhuCrawler:
         return doctors
 
     def _extract_schedule_from_item(self, item) -> list[dict]:
-        """의사 항목에서 스케줄 테이블 파싱 (있는 경우)"""
+        """의사 항목에서 스케줄 테이블 파싱
+
+        EN 페이지 테이블 구조 (헤더 행 없음):
+          row 0: [AM, Mon진료, Tue진료, Wed진료, Thu진료, Fri진료, Sat진료]
+          row 1: [PM, Mon진료, Tue진료, Wed진료, Thu진료, Fri진료, Sat진료]
+        각 셀에 <em class="dat blue"> 있으면 진료 있음.
+        """
         schedules = []
-        table = item.select_one(".doctor_info table, table")
+        table = item.select_one("table")
         if not table:
             return schedules
 
@@ -231,46 +254,29 @@ class KhuCrawler:
         if not rows:
             return schedules
 
-        # 헤더에서 요일 열 매핑
-        header_cells = rows[0].select("th, td")
-        header_texts = [c.get_text(strip=True) for c in header_cells]
-
-        day_col_map = {}
-        for ci, text in enumerate(header_texts):
-            for di, day in enumerate(DAY_COLS):
-                if day.lower() in text.lower():
-                    day_col_map[ci] = di
-                    break
-            else:
-                for di, day in enumerate(DAY_COLS_KR):
-                    if day in text:
-                        day_col_map[ci] = di
-                        break
-
-        if not day_col_map:
-            return schedules
-
-        for row in rows[1:]:
+        for row in rows:
             cells = row.select("td, th")
             if not cells:
                 continue
-            first = cells[0].get_text(strip=True)
-            if "AM" in first.upper() or "오전" in first:
+
+            first_text = cells[0].get_text(strip=True).upper()
+            if "AM" in first_text or "오전" in first_text:
                 slot = "morning"
-            elif "PM" in first.upper() or "오후" in first:
+            elif "PM" in first_text or "오후" in first_text:
                 slot = "afternoon"
             else:
                 continue
 
-            for ci, cell in enumerate(cells):
-                if ci not in day_col_map:
-                    continue
-                text = cell.get_text(strip=True)
-                has_marker = bool(text) or cell.select("i, img, span.on, span.sche1")
-                if has_marker and text not in ("", "-", "X", "x", "off"):
+            # 열 1~6 = Mon(0)~Sat(5)
+            for ci in range(1, min(len(cells), 7)):
+                cell = cells[ci]
+                # <em class="dat"> 존재 여부로 진료 판단
+                has_schedule = bool(cell.select("em.dat, em, img, span.on"))
+                if has_schedule:
+                    day_of_week = ci - 1  # col 1=Mon(0), col 2=Tue(1), ...
                     start, end = TIME_RANGES[slot]
                     schedules.append({
-                        "day_of_week": day_col_map[ci],
+                        "day_of_week": day_of_week,
                         "time_slot": slot,
                         "start_time": start,
                         "end_time": end,

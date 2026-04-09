@@ -142,32 +142,53 @@ class KbsmcCrawler:
 
             seen_ids.add(md_idx)
 
-            # 이름 추출: div.name 안에서 첫 번째 텍스트 노드가 이름
-            parent_name_div = a.find_parent("div", class_="name")
+            # 이름 추출: 여러 전략 시도
             name = ""
-            if parent_name_div:
-                # div.name 내의 직속 텍스트 중 첫 번째가 이름
-                for child in parent_name_div.children:
-                    if isinstance(child, str):
-                        text = child.strip()
-                        if text:
-                            name = text
-                            break
-                    elif hasattr(child, 'name') and child.name == 'a':
-                        # <a> 안에서 첫 번째 직속 텍스트가 이름
-                        for sub in child.children:
-                            if isinstance(sub, str):
-                                text = sub.strip()
-                                if text:
-                                    name = text
-                                    break
-                        if name:
-                            break
+
+            # 전략 1: span[data-name-ko] 속성에서 직접 추출
+            name_span = a.select_one("span[data-name-ko]")
+            if name_span:
+                name = name_span.get("data-name-ko", "").strip()
+                if not name:
+                    name = name_span.get_text(strip=True)
+
+            # 전략 2: span.part를 제외한 링크 내 텍스트
             if not name:
-                # 폴백: 링크 텍스트에서 진료과명 제거
-                name = link_text
-                if dept_name and name.endswith(dept_name):
-                    name = name[:-len(dept_name)].strip()
+                for child in a.children:
+                    if hasattr(child, 'get') and 'part' in (child.get('class') or []):
+                        continue  # span.part (진료과명) 건너뛰기
+                    if isinstance(child, str):
+                        t = child.strip()
+                        if t and re.fullmatch(r'[가-힣]{2,5}', t):
+                            name = t
+                            break
+                    elif hasattr(child, 'get_text'):
+                        t = child.get_text(strip=True)
+                        if t and re.fullmatch(r'[가-힣]{2,5}', t):
+                            name = t
+                            break
+
+            # 전략 3: img alt 속성 ("강재헌 이미지" → "강재헌")
+            if not name:
+                parent_card = a.find_parent("li") or a.find_parent("div")
+                if parent_card:
+                    img = parent_card.select_one("img[alt]")
+                    if img:
+                        alt = img.get("alt", "").strip()
+                        alt_clean = re.sub(r'\s*(이미지|교수|전문의|과장|원장|의사|프로필)\s*$', '', alt).strip()
+                        if alt_clean and re.fullmatch(r'[가-힣]{2,5}', alt_clean):
+                            name = alt_clean
+
+            # 전략 4: 링크 텍스트에서 진료과명 제거
+            if not name:
+                if link_text and link_text not in ("상세보기", "진료예약", "예약"):
+                    if dept_name and link_text.endswith(dept_name):
+                        name = link_text[:-len(dept_name)].strip()
+                    elif len(link_text) <= 10:
+                        m_name = re.match(r'^([가-힣]{2,4})', link_text)
+                        if m_name:
+                            name = m_name.group(1)
+
             if not name or len(name) > 30 or name in ("상세보기", "진료예약"):
                 continue
 
@@ -200,7 +221,7 @@ class KbsmcCrawler:
                             position = pos_text
                             break
 
-            ext_id = f"KBSMC-{md_idx}"
+            ext_id = f"KBSMC-{md_idx}-{dept_code}"
             doctors.append({
                 "staff_id": ext_id,
                 "external_id": ext_id,
@@ -465,24 +486,47 @@ class KbsmcCrawler:
                         return self._to_schedule_dict(d)
             return empty
 
-        # 개별 조회: md_idx로 스케줄 가져오기
+        # 개별 조회: external_id에서 md_idx, mp_idx 파싱
+        # 형식: KBSMC-{md_idx}-{mp_idx} 또는 KBSMC-{md_idx}
         prefix = "KBSMC-"
-        md_idx = staff_id.replace(prefix, "") if staff_id.startswith(prefix) else staff_id
+        raw = staff_id.replace(prefix, "") if staff_id.startswith(prefix) else staff_id
+        parts = raw.split("-", 1)
+        md_idx = parts[0]
+        mp_idx = parts[1] if len(parts) > 1 else ""
+
+        # mp_idx가 없으면 profile_url에서 추출 시도
+        if not mp_idx:
+            m = re.search(r"mp_idx=(\d+)", staff_id)
+            if m:
+                mp_idx = m.group(1)
 
         async with httpx.AsyncClient(
             headers=self.headers, timeout=30, follow_redirects=True,
         ) as client:
-            # mp_idx를 모르므로 기본값 사용
-            schedules = await self._fetch_doctor_schedule(client, md_idx, "1")
+            # mp_idx가 없으면 view 페이지에서 추출
+            if not mp_idx:
+                try:
+                    resp = await client.get(
+                        f"{BASE_URL}/main/doctor/view.do",
+                        params={"md_idx": md_idx},
+                    )
+                    m = re.search(r"mp_idx[=:]\s*[\"']?(\d+)", resp.text)
+                    if m:
+                        mp_idx = m.group(1)
+                except Exception:
+                    pass
+            mp_idx = mp_idx or "1"
 
-            ext_id = f"KBSMC-{md_idx}"
+            schedules = await self._fetch_doctor_schedule(client, md_idx, mp_idx)
+
+            ext_id = f"KBSMC-{md_idx}-{mp_idx}"
             return {
                 "staff_id": ext_id,
                 "name": "",
                 "department": "",
                 "position": "",
                 "specialty": "",
-                "profile_url": f"{BASE_URL}/main/doctor/view.do?md_idx={md_idx}",
+                "profile_url": f"{BASE_URL}/main/doctor/view.do?md_idx={md_idx}&mp_idx={mp_idx}",
                 "notes": "",
                 "schedules": schedules,
             }
