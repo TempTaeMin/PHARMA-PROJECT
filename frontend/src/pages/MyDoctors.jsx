@@ -144,6 +144,8 @@ export default function MyDoctors() {
       await visitApi.create(reportFor.id, { doctor_id: reportFor.id, visit_date: new Date().toISOString(), status: reportStatus, product: reportProduct, notes: reportNotes });
       setReportDone(true);
       invalidate('doctors');
+      invalidate('my-visits');
+      invalidate('dashboard');
       setTimeout(() => { setReportFor(null); setReportDone(false); refresh(); }, 1200);
     } catch (e) { alert('저장 실패: ' + e.message); }
   };

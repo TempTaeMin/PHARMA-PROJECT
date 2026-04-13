@@ -248,13 +248,15 @@ class KbsmcCrawler:
         if not md_idx:
             return []
 
-        # 이번 주 월요일~토요일 날짜 계산
+        # 당월 1일~말일 날짜 계산 (1개월치로 주간 패턴을 더 정확하게 추출)
         today = datetime.now()
-        # 이번 주 월요일
-        monday = today - timedelta(days=today.weekday())
-        saturday = monday + timedelta(days=5)
-        sdate = monday.strftime("%Y-%m-%d")
-        edate = saturday.strftime("%Y-%m-%d")
+        first_day = today.replace(day=1)
+        if today.month == 12:
+            last_day = today.replace(year=today.year + 1, month=1, day=1) - timedelta(days=1)
+        else:
+            last_day = today.replace(month=today.month + 1, day=1) - timedelta(days=1)
+        sdate = first_day.strftime("%Y-%m-%d")
+        edate = last_day.strftime("%Y-%m-%d")
 
         try:
             resp = await client.post(
@@ -332,6 +334,90 @@ class KbsmcCrawler:
                 unique.append(s)
 
         return unique
+
+    async def _fetch_monthly_schedule(
+        self, client: httpx.AsyncClient, md_idx: str, mp_idx: str, months: int = 3
+    ) -> list[dict]:
+        """3개월치 날짜별 스케줄 수집 (date_schedules용)"""
+        if not md_idx:
+            return []
+
+        all_date_schedules = []
+        now = datetime.now()
+
+        for i in range(months):
+            target = now + timedelta(days=i * 30)
+            first_day = target.replace(day=1)
+            if first_day.month == 12:
+                last_day = first_day.replace(year=first_day.year + 1, month=1, day=1) - timedelta(days=1)
+            else:
+                last_day = first_day.replace(month=first_day.month + 1, day=1) - timedelta(days=1)
+
+            sdate = first_day.strftime("%Y-%m-%d")
+            edate = last_day.strftime("%Y-%m-%d")
+
+            try:
+                resp = await client.post(
+                    f"{BASE_URL}/main/doctor_schedule/ajax_schedule.do",
+                    data={
+                        "part_idx": mp_idx,
+                        "doctor_idx": md_idx,
+                        "sdate": sdate,
+                        "edate": edate,
+                    },
+                    headers={
+                        **self.headers,
+                        "Accept": "application/json, text/javascript, */*; q=0.01",
+                        "X-Requested-With": "XMLHttpRequest",
+                        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    },
+                )
+                resp.raise_for_status()
+                data = resp.json()
+            except Exception as e:
+                logger.warning(f"[KBSMC] 월별 스케줄 실패 ({sdate}~{edate}, md_idx={md_idx}): {e}")
+                continue
+
+            schedule_list = data if isinstance(data, list) else data.get("data", data.get("list", []))
+            if isinstance(schedule_list, dict):
+                schedule_list = [schedule_list]
+
+            for item in schedule_list:
+                date_str = str(item.get("date", item.get("sche_date", item.get("sdate", "")))).strip()
+                am_flag = str(item.get("am", item.get("jsAm", item.get("am_yn", "")))).strip()
+                pm_flag = str(item.get("pm", item.get("jsPm", item.get("pm_yn", "")))).strip()
+
+                if not date_str or len(date_str) < 10:
+                    continue
+
+                formatted_date = date_str[:10]
+                try:
+                    datetime.strptime(formatted_date, "%Y-%m-%d")
+                except ValueError:
+                    continue
+
+                if am_flag and am_flag not in ("", "0", "N", "null", "None", "close"):
+                    start, end = TIME_RANGES["morning"]
+                    all_date_schedules.append({
+                        "schedule_date": formatted_date,
+                        "time_slot": "morning",
+                        "start_time": start,
+                        "end_time": end,
+                        "location": "",
+                        "status": "진료",
+                    })
+                if pm_flag and pm_flag not in ("", "0", "N", "null", "None", "close"):
+                    start, end = TIME_RANGES["afternoon"]
+                    all_date_schedules.append({
+                        "schedule_date": formatted_date,
+                        "time_slot": "afternoon",
+                        "start_time": start,
+                        "end_time": end,
+                        "location": "",
+                        "status": "진료",
+                    })
+
+        return all_date_schedules
 
     async def _fetch_schedule_from_view(
         self, client: httpx.AsyncClient, md_idx: str, mp_idx: str
@@ -433,6 +519,10 @@ class KbsmcCrawler:
                     if md_idx:
                         schedules = await self._fetch_doctor_schedule(client, md_idx, mp_idx)
                         doc["schedules"] = schedules
+                        date_schedules = await self._fetch_monthly_schedule(client, md_idx, mp_idx)
+                        doc["date_schedules"] = date_schedules
+                    else:
+                        doc["date_schedules"] = []
 
                     all_doctors[ext_id] = doc
 
@@ -472,6 +562,7 @@ class KbsmcCrawler:
         empty = {
             "staff_id": staff_id, "name": "", "department": "", "position": "",
             "specialty": "", "profile_url": "", "notes": "", "schedules": [],
+            "date_schedules": [],
         }
 
         # 캐시가 이미 있으면 캐시에서 조회
@@ -518,6 +609,7 @@ class KbsmcCrawler:
             mp_idx = mp_idx or "1"
 
             schedules = await self._fetch_doctor_schedule(client, md_idx, mp_idx)
+            date_schedules = await self._fetch_monthly_schedule(client, md_idx, mp_idx)
 
             ext_id = f"KBSMC-{md_idx}-{mp_idx}"
             return {
@@ -529,6 +621,7 @@ class KbsmcCrawler:
                 "profile_url": f"{BASE_URL}/main/doctor/view.do?md_idx={md_idx}&mp_idx={mp_idx}",
                 "notes": "",
                 "schedules": schedules,
+                "date_schedules": date_schedules,
             }
 
     @staticmethod
@@ -542,6 +635,7 @@ class KbsmcCrawler:
             "profile_url": d["profile_url"],
             "notes": d.get("notes", ""),
             "schedules": d["schedules"],
+            "date_schedules": d.get("date_schedules", []),
         }
 
     async def crawl_doctors(self, department: str = None):
@@ -562,6 +656,7 @@ class KbsmcCrawler:
                 external_id=d["external_id"],
                 notes=d.get("notes", ""),
                 schedules=d["schedules"],
+                date_schedules=d.get("date_schedules", []),
             )
             for d in data
         ]

@@ -20,7 +20,7 @@ celery_app = Celery(
     "pharma_scheduler",
     broker=settings.CELERY_BROKER_URL,
     backend=settings.CELERY_RESULT_BACKEND,
-    include=["app.tasks.crawl_tasks"],
+    include=["app.tasks.crawl_tasks", "app.tasks.academic_tasks"],
 )
 
 # Celery 설정
@@ -58,11 +58,24 @@ celery_app.conf.update(
             "schedule": crontab(minute="*/30"),
             "options": {"queue": "crawl"},
         },
+        # 매월 1일 새벽 2시 학술행사 크롤링 (healthmedia)
+        "crawl-academic-events-monthly": {
+            "task": "app.tasks.academic_tasks.crawl_academic_events",
+            "schedule": crontab(day_of_month=1, hour=2, minute=0),
+            "options": {"queue": "crawl"},
+        },
+        # 매년 1월 2일 새벽 3시 KAMS 회원학회 마스터 리스트 재구축
+        "seed-academic-organizers-yearly": {
+            "task": "app.tasks.academic_tasks.seed_academic_organizers",
+            "schedule": crontab(month_of_year=1, day_of_month=2, hour=3, minute=0),
+            "options": {"queue": "crawl"},
+        },
     },
 
     # 큐 라우팅
     task_routes={
         "app.tasks.crawl_tasks.*": {"queue": "crawl"},
+        "app.tasks.academic_tasks.*": {"queue": "crawl"},
         "app.tasks.notification_tasks.*": {"queue": "notify"},
     },
 )

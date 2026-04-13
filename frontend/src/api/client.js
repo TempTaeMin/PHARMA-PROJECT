@@ -36,6 +36,10 @@ export const doctorApi = {
 export const visitApi = {
   list: (doctorId) => request(`/api/doctors/${doctorId}/visits`),
   create: (doctorId, data) => request(`/api/doctors/${doctorId}/visits`, { method: 'POST', body: JSON.stringify(data) }),
+  update: (doctorId, visitId, data) =>
+    request(`/api/doctors/${doctorId}/visits/${visitId}`, { method: 'PATCH', body: JSON.stringify(data) }),
+  remove: (doctorId, visitId) =>
+    request(`/api/doctors/${doctorId}/visits/${visitId}`, { method: 'DELETE' }),
 };
 
 // ─── Crawling ───
@@ -55,12 +59,49 @@ export const crawlApi = {
   registerDoctor: (data) => request('/api/crawl/register-doctor', { method: 'POST', body: JSON.stringify(data) }),
 };
 
+// ─── Dashboard ───
+export const dashboardApi = {
+  summary: () => request('/api/dashboard/'),
+  myVisits: (year, month) => request(`/api/dashboard/my-visits?year=${year}&month=${month}`),
+};
+
 // ─── Scheduler ───
 export const schedulerApi = {
   status: () => request('/api/scheduler/status'),
   run: (code) => request(`/api/scheduler/run/${code}`, { method: 'POST' }),
   runAll: () => request('/api/scheduler/run-all', { method: 'POST' }),
   task: (id) => request(`/api/scheduler/task/${id}`),
+};
+
+// ─── Academic (학회 일정) ───
+export const academicApi = {
+  list: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return request(`/api/academic-events/${qs ? '?' + qs : ''}`);
+  },
+  upcoming: (department, months = 3, source) => {
+    const params = new URLSearchParams({ months: String(months) });
+    if (department) params.set('department', department);
+    if (source) params.set('source', source);
+    return request(`/api/academic-events/upcoming?${params.toString()}`);
+  },
+  unclassified: () => request('/api/academic-events/unclassified'),
+  sync: () => request('/api/academic-events/sync', { method: 'POST' }),
+  updateEventDepartments: (id, departments) =>
+    request(`/api/academic-events/${id}/departments`, {
+      method: 'PATCH',
+      body: JSON.stringify({ departments }),
+    }),
+  organizers: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return request(`/api/academic-organizers/${qs ? '?' + qs : ''}`);
+  },
+  seedOrganizers: () => request('/api/academic-organizers/seed', { method: 'POST' }),
+  updateOrganizerDepartments: (id, departments) =>
+    request(`/api/academic-organizers/${id}/departments`, {
+      method: 'PATCH',
+      body: JSON.stringify({ departments }),
+    }),
 };
 
 // ─── Notifications ───

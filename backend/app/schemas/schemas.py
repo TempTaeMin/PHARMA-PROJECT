@@ -114,3 +114,46 @@ class VisitLogResponse(VisitLogCreate):
     created_at: datetime
     class Config:
         from_attributes = True
+
+
+# --- Academic Organizer ---
+class AcademicOrganizerBase(BaseModel):
+    name: str
+    name_en: Optional[str] = None
+    domain: Optional[str] = None
+    membership_type: Optional[str] = None
+    homepage: Optional[str] = None
+
+class AcademicOrganizerResponse(AcademicOrganizerBase):
+    id: int
+    departments: list[str] = []
+    classification_status: str
+    class Config:
+        from_attributes = True
+
+class AcademicOrganizerDepartmentsUpdate(BaseModel):
+    departments: list[str]
+
+
+# --- Academic Event ---
+class AcademicEventBase(BaseModel):
+    name: str
+    organizer_name: Optional[str] = None
+    start_date: Optional[str] = None
+    end_date: Optional[str] = None
+    location: Optional[str] = None
+    url: Optional[str] = None
+    description: Optional[str] = None
+
+class AcademicEventResponse(AcademicEventBase):
+    id: int
+    departments: list[str] = []
+    classification_status: str
+    source: Optional[str] = None
+    kma_category: Optional[str] = None
+    kma_eduidx: Optional[str] = None
+    class Config:
+        from_attributes = True
+
+class AcademicEventDepartmentsUpdate(BaseModel):
+    departments: list[str]

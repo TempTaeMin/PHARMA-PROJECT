@@ -126,6 +126,61 @@ class VisitLog(Base):
     doctor = relationship("Doctor", back_populates="visit_logs")
 
 
+class AcademicOrganizer(Base):
+    """대한의학회 회원학회 마스터 리스트. 연 1회 KAMS 에서 seed."""
+    __tablename__ = "academic_organizers"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(300), unique=True, nullable=False, index=True)
+    name_en = Column(String(300))
+    domain = Column(String(20))  # KAMS 8개 영역 (I~VIII)
+    membership_type = Column(String(20))  # "정회원" | "준회원" | "기간학회"
+    homepage = Column(String(500))
+    departments_json = Column(Text)  # JSON: ["비뇨의학과", ...]
+    classification_status = Column(String(20), default="unclassified")  # "mapped" | "keyword" | "unclassified"
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+
+class AcademicEvent(Base):
+    """월 1회 크롤링되는 학술행사 이벤트."""
+    __tablename__ = "academic_events"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(500), nullable=False)
+    organizer_name = Column(String(300), index=True)
+    organizer_id = Column(Integer, ForeignKey("academic_organizers.id"), nullable=True)
+    start_date = Column(String(10))  # "2026-05-10" ISO
+    end_date = Column(String(10))  # "2026-05-12"
+    location = Column(String(300))
+    url = Column(String(500))
+    description = Column(Text)
+    source = Column(String(50), default="healthmedia")  # "healthmedia" | "kma_edu"
+    classification_status = Column(String(20), default="unclassified")  # "kma" | "mapped" | "keyword" | "unclassified"
+    external_key = Column(String(100), unique=True, index=True)
+    kma_category = Column(String(200))  # KMA 임상의학 원본 (콤마 구분, 예: "정형외과, 마취통증의학과")
+    kma_eduidx = Column(String(50), index=True)  # KMA 상세 페이지 ID
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    departments = relationship(
+        "AcademicEventDepartment",
+        back_populates="event",
+        cascade="all, delete-orphan",
+    )
+
+
+class AcademicEventDepartment(Base):
+    """이벤트-진료과 many-to-many 조인."""
+    __tablename__ = "academic_event_departments"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    event_id = Column(Integer, ForeignKey("academic_events.id"), index=True)
+    department = Column(String(100), nullable=False, index=True)
+
+    event = relationship("AcademicEvent", back_populates="departments")
+
+
 class CrawlLog(Base):
     """크롤링 실행 로그"""
     __tablename__ = "crawl_logs"

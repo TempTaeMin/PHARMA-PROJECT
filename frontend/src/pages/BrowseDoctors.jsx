@@ -3,6 +3,7 @@ import { Search, ChevronRight, ChevronLeft, Star, RefreshCw, Clock, UserPlus, X,
 import { crawlApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
+import HospitalLogo from '../components/HospitalLogo';
 
 const DAY_NAMES = ['월', '화', '수', '목', '금', '토'];
 const SLOT_NAMES = { morning: '오전', afternoon: '오후', evening: '야간' };
@@ -283,7 +284,7 @@ export default function BrowseDoctors({ onNavigate }) {
 
             {/* 병원 헤더 + 크롤링 정보 */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, padding: 14, borderRadius: 10, background: 'var(--bg-1)', border: '1px solid var(--bd-s)' }}>
-              <div style={{ width: 36, height: 36, borderRadius: 8, background: 'var(--ac-d)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18 }}>🏥</div>
+              <HospitalLogo code={selectedHospital.code} size={36} radius={8} />
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 14, fontWeight: 600 }}>{selectedHospital.name}</div>
                 <div style={{ fontSize: 11, color: 'var(--t3)' }}>
@@ -549,7 +550,7 @@ export default function BrowseDoctors({ onNavigate }) {
               animation: `fadeUp .3s ease ${i * .04}s both`,
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                <div style={{ width: 44, height: 44, borderRadius: 10, background: 'var(--ac-d)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22 }}>🏥</div>
+                <HospitalLogo code={h.code} size={44} radius={10} />
                 <ChevronRight size={16} style={{ color: 'var(--t3)' }} />
               </div>
               <div>
@@ -578,7 +579,7 @@ export default function BrowseDoctors({ onNavigate }) {
                     animation: `fadeUp .3s ease ${i * .04}s both`,
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                      <div style={{ width: 44, height: 44, borderRadius: 10, background: 'var(--ac-d)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22 }}>🏥</div>
+                      <HospitalLogo code={h.code} size={44} radius={10} />
                       <ChevronRight size={16} style={{ color: 'var(--t3)' }} />
                     </div>
                     <div>

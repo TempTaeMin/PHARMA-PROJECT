@@ -233,14 +233,84 @@ async def run_my_doctors_crawl(db: AsyncSession = Depends(get_db)):
     return result
 
 
-@router.get("/doctor/{hospital_code}/{staff_id}", summary="의료진 개별 크롤링 (진료시간)")
-async def crawl_single_doctor(hospital_code: str, staff_id: str):
-    """특정 교수의 진료시간표를 실시간 크롤링합니다."""
+@router.get("/doctor/{hospital_code}/{staff_id}", summary="의료진 스케줄 조회 (DB 우선)")
+async def crawl_single_doctor(
+    hospital_code: str,
+    staff_id: str,
+    refresh: bool = False,
+    db: AsyncSession = Depends(get_db),
+):
+    """특정 교수의 진료시간표를 조회합니다.
+
+    기본: DB에서 먼저 조회 (이미 sync 된 교수는 즉시 반환).
+    refresh=true 또는 DB 미존재 시에만 크롤러로 실시간 조회합니다.
+    """
+    from sqlalchemy.orm import selectinload
+
+    if not refresh:
+        q = (
+            select(Doctor)
+            .options(
+                selectinload(Doctor.schedules),
+                selectinload(Doctor.date_schedules),
+            )
+            .join(Hospital, Doctor.hospital_id == Hospital.id)
+            .where(
+                Hospital.code == hospital_code,
+                Doctor.external_id == staff_id,
+                Doctor.is_active == True,
+            )
+        )
+        doctor = (await db.execute(q)).scalar_one_or_none()
+
+        if doctor and (doctor.schedules or doctor.date_schedules):
+            today_str = datetime.now().strftime("%Y-%m-%d")
+            schedules = [
+                {
+                    "day_of_week": s.day_of_week,
+                    "time_slot": s.time_slot,
+                    "start_time": s.start_time,
+                    "end_time": s.end_time,
+                    "location": s.location,
+                }
+                for s in doctor.schedules if s.is_active
+            ]
+            date_schedules = sorted(
+                [
+                    {
+                        "schedule_date": ds.schedule_date,
+                        "time_slot": ds.time_slot,
+                        "start_time": ds.start_time,
+                        "end_time": ds.end_time,
+                        "location": ds.location,
+                        "status": ds.status,
+                    }
+                    for ds in doctor.date_schedules
+                    if ds.schedule_date >= today_str
+                ],
+                key=lambda x: (x["schedule_date"], x["time_slot"] or ""),
+            )
+            return {
+                "staff_id": staff_id,
+                "name": doctor.name or "",
+                "department": doctor.department or "",
+                "position": doctor.position or "",
+                "specialty": doctor.specialty or "",
+                "profile_url": doctor.profile_url or "",
+                "photo_url": doctor.photo_url or "",
+                "notes": doctor.notes or "",
+                "schedules": schedules,
+                "date_schedules": date_schedules,
+                "source": "db",
+            }
+
     try:
         crawler = get_crawler(hospital_code)
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
     result = await crawler.crawl_doctor_schedule(staff_id)
+    if isinstance(result, dict):
+        result.setdefault("source", "crawler")
     return result
 
 

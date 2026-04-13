@@ -135,3 +135,51 @@ async def list_visit_logs(doctor_id: int, db: AsyncSession = Depends(get_db)):
     )
     result = await db.execute(query)
     return [VisitLogResponse.model_validate(v) for v in result.scalars().all()]
+
+
+@router.patch("/{doctor_id}/visits/{visit_id}", summary="방문 기록 수정")
+async def update_visit_log(
+    doctor_id: int,
+    visit_id: int,
+    data: dict,
+    db: AsyncSession = Depends(get_db),
+):
+    """방문 기록 수정. 예정(계획) → 실행 결과 전환에도 사용."""
+    visit = (await db.execute(
+        select(VisitLog).where(VisitLog.id == visit_id, VisitLog.doctor_id == doctor_id)
+    )).scalar_one_or_none()
+    if not visit:
+        raise HTTPException(404, "방문 기록을 찾을 수 없습니다.")
+
+    allowed = {"status", "product", "notes", "next_action", "visit_date"}
+    for key, value in data.items():
+        if key not in allowed:
+            continue
+        if key == "visit_date" and isinstance(value, str):
+            from datetime import datetime as _dt
+            value = _dt.fromisoformat(value.replace("Z", "+00:00"))
+        setattr(visit, key, value)
+
+    await db.commit()
+    await db.refresh(visit)
+    return VisitLogResponse.model_validate(visit)
+
+
+@router.delete("/{doctor_id}/visits/{visit_id}", summary="예정 방문 취소")
+async def delete_visit_log(
+    doctor_id: int,
+    visit_id: int,
+    db: AsyncSession = Depends(get_db),
+):
+    """예정된 방문만 삭제 가능. 이미 실행된 기록은 보호."""
+    visit = (await db.execute(
+        select(VisitLog).where(VisitLog.id == visit_id, VisitLog.doctor_id == doctor_id)
+    )).scalar_one_or_none()
+    if not visit:
+        raise HTTPException(404, "방문 기록을 찾을 수 없습니다.")
+    if visit.status != "예정":
+        raise HTTPException(400, "실행된 방문 기록은 삭제할 수 없습니다.")
+
+    await db.delete(visit)
+    await db.commit()
+    return {"deleted": visit_id}

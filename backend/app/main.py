@@ -6,10 +6,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.models.connection import init_db, async_session
 from app.models.seed import seed_database
 from app.api.crawl import router as crawl_router
+from app.api.dashboard import router as dashboard_router
 from app.api.doctors import router as doctors_router
 from app.api.hospitals import router as hospitals_router
 from app.api.notifications import router as notifications_router
 from app.api.scheduler import router as scheduler_router
+from app.api.academic import router as academic_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -43,10 +45,12 @@ app.add_middleware(
 )
 
 app.include_router(crawl_router)
+app.include_router(dashboard_router)
 app.include_router(hospitals_router)
 app.include_router(doctors_router)
 app.include_router(scheduler_router)
 app.include_router(notifications_router)
+app.include_router(academic_router)
 
 
 @app.get("/", tags=["헬스체크"])
