@@ -1,12 +1,13 @@
 """학회 마스터/이벤트 Celery 태스크.
 
 - seed_academic_organizers: KAMS 회원학회 마스터 리스트 재구축 (연 1회 / 수동)
-- crawl_academic_events: healthmedia 학술행사 월간 크롤링 (매월 1일)
+- crawl_academic_events: KMA 연수 학술행사 월간 크롤링 (매월 1일)
 """
 from __future__ import annotations
 
 import asyncio
 import hashlib
+import json
 import logging
 from datetime import datetime
 
@@ -22,7 +23,6 @@ from app.models.database import (
     AcademicOrganizer,
 )
 from app.crawlers.academic.kams_organizer_crawler import KamsOrganizerCrawler
-from app.crawlers.academic.healthmedia_event_crawler import HealthmediaEventCrawler
 from app.crawlers.academic.kma_edu_crawler import KmaEduCrawler
 from app.services.academic_mapping import (
     departments_from_json,
@@ -114,11 +114,13 @@ async def _seed_async() -> dict:
 # ============================================================
 @celery_app.task(name="app.tasks.academic_tasks.crawl_academic_events")
 def crawl_academic_events(max_pages: int = 3, kma_scan_back: int = 1500) -> dict:
-    """healthmedia + KMA 에서 학술행사 이벤트 크롤링 + DB 저장."""
+    """KMA 연수에서 학술행사 이벤트 크롤링 + DB 저장."""
     return _run_async(_crawl_events_async(max_pages, kma_scan_back))
 
 
 async def _crawl_events_async(max_pages: int, kma_scan_back: int = 1500) -> dict:
+    del max_pages  # healthmedia 크롤러 제거 후 미사용 (시그니처 호환용)
+
     # 1. organizer lookup
     async with async_session() as db:  # type: AsyncSession
         rows = (await db.execute(select(AcademicOrganizer))).scalars().all()
@@ -128,24 +130,16 @@ async def _crawl_events_async(max_pages: int, kma_scan_back: int = 1500) -> dict
 
     logger.info(f"crawl_academic_events: organizer lookup size={len(lookup)}")
 
-    # 2. 두 소스 병렬 크롤링
-    hm_result, kma_result = await asyncio.gather(
-        HealthmediaEventCrawler().crawl_events(max_pages=max_pages),
-        KmaEduCrawler().crawl_events(months_ahead=3, scan_back=kma_scan_back),
-        return_exceptions=True,
-    )
+    # 2. KMA 연수 크롤링
+    try:
+        kma_events = await KmaEduCrawler().crawl_events(
+            months_ahead=3, scan_back=kma_scan_back
+        )
+    except Exception as exc:  # pragma: no cover — 실패 시 0건 처리
+        logger.error(f"kma_edu crawl failed: {exc}")
+        kma_events = []
 
-    events_by_source: list[tuple[str, list[dict]]] = []
-    if isinstance(hm_result, Exception):
-        logger.error(f"healthmedia crawl failed: {hm_result}")
-        events_by_source.append(("healthmedia", []))
-    else:
-        events_by_source.append(("healthmedia", hm_result))
-    if isinstance(kma_result, Exception):
-        logger.error(f"kma_edu crawl failed: {kma_result}")
-        events_by_source.append(("kma_edu", []))
-    else:
-        events_by_source.append(("kma_edu", kma_result))
+    events_by_source: list[tuple[str, list[dict]]] = [("kma_edu", kma_events)]
 
     stats = {
         "total": 0,
@@ -203,6 +197,13 @@ async def _crawl_events_async(max_pages: int, kma_scan_back: int = 1500) -> dict
                     existing.source = source
                     existing.kma_category = kma_category
                     existing.kma_eduidx = e.get("eduidx")
+                    existing.sub_organizer = e.get("sub_organizer")
+                    existing.region = e.get("region")
+                    existing.event_code = e.get("code")
+                    existing.detail_url_external = e.get("detail_url_external")
+                    existing.lectures_json = json.dumps(
+                        e.get("lectures") or [], ensure_ascii=False
+                    )
                     existing.classification_status = status
                     existing.updated_at = datetime.utcnow()
                     existing.departments.clear()
@@ -224,6 +225,13 @@ async def _crawl_events_async(max_pages: int, kma_scan_back: int = 1500) -> dict
                         source=source,
                         kma_category=kma_category,
                         kma_eduidx=e.get("eduidx"),
+                        sub_organizer=e.get("sub_organizer"),
+                        region=e.get("region"),
+                        event_code=e.get("code"),
+                        detail_url_external=e.get("detail_url_external"),
+                        lectures_json=json.dumps(
+                            e.get("lectures") or [], ensure_ascii=False
+                        ),
                         classification_status=status,
                         external_key=external_key,
                     )

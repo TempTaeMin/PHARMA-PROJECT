@@ -58,7 +58,7 @@ celery_app.conf.update(
             "schedule": crontab(minute="*/30"),
             "options": {"queue": "crawl"},
         },
-        # 매월 1일 새벽 2시 학술행사 크롤링 (healthmedia)
+        # 매월 1일 새벽 2시 KMA 연수 학술행사 크롤링
         "crawl-academic-events-monthly": {
             "task": "app.tasks.academic_tasks.crawl_academic_events",
             "schedule": crontab(day_of_month=1, hour=2, minute=0),

@@ -104,6 +104,10 @@ export default function BrowseDoctors({ onNavigate }) {
   const [selectedHospital, setSelectedHospital] = useState(null);
   const [hospitalSearchQ, setHospitalSearchQ] = useState('');
 
+  // 전체 교수 검색 (병원 목록 화면용)
+  const [globalDoctorResults, setGlobalDoctorResults] = useState([]);
+  const [globalDoctorLoading, setGlobalDoctorLoading] = useState(false);
+
   // 교수 목록 (DB에서)
   const [doctors, setDoctors] = useState([]);
   const [doctorsLoading, setDoctorsLoading] = useState(false);
@@ -150,6 +154,44 @@ export default function BrowseDoctors({ onNavigate }) {
     setSyncResult(null);
     loadDoctors(hospital.code);
   };
+
+  // ── 전체 검색된 교수 클릭 → 해당 병원 선택 + 미리보기 자동 오픈 ──
+  const openDoctorFromGlobal = (doctor) => {
+    const hospital = (crawlHospitals?.hospitals || []).find(h => h.code === doctor.hospital_code)
+      || { code: doctor.hospital_code, name: doctor.hospital_name };
+    setSelectedHospital(hospital);
+    setSearchQ('');
+    setSyncResult(null);
+    setSelectedDoctor(doctor);
+    setSchedule(null);
+    setScheduleError(null);
+    setScheduleLoading(false);
+    setRegistered(doctor.visit_grade === 'A' || doctor.visit_grade === 'B' || registeredSet.has(doctor.external_id));
+    loadDoctors(hospital.code);
+  };
+
+  // ── 전체 교수 검색 (디바운스) ──
+  useEffect(() => {
+    const q = hospitalSearchQ.trim();
+    if (!q) {
+      setGlobalDoctorResults([]);
+      setGlobalDoctorLoading(false);
+      return;
+    }
+    setGlobalDoctorLoading(true);
+    const timer = setTimeout(async () => {
+      try {
+        const res = await crawlApi.searchDoctors(q);
+        setGlobalDoctorResults(res.doctors || []);
+      } catch (e) {
+        console.error(e);
+        setGlobalDoctorResults([]);
+      } finally {
+        setGlobalDoctorLoading(false);
+      }
+    }, 250);
+    return () => clearTimeout(timer);
+  }, [hospitalSearchQ]);
 
   // ── 검색 (디바운스) ──
   const handleSearch = (q) => {
@@ -530,9 +572,9 @@ export default function BrowseDoctors({ onNavigate }) {
   return (
     <>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', borderRadius: 7, padding: '6px 10px', flex: 1, maxWidth: 280 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', borderRadius: 7, padding: '6px 10px', flex: 1, maxWidth: 320 }}>
           <Search size={14} style={{ color: 'var(--t3)' }} />
-          <input placeholder="병원명 검색" value={hospitalSearchQ} onChange={e => setHospitalSearchQ(e.target.value)} style={{ border: 'none', background: 'none', outline: 'none', color: 'var(--t1)', fontSize: 12.5, width: '100%' }} />
+          <input placeholder="병원명 또는 교수 이름 검색" value={hospitalSearchQ} onChange={e => setHospitalSearchQ(e.target.value)} style={{ border: 'none', background: 'none', outline: 'none', color: 'var(--t1)', fontSize: 12.5, width: '100%' }} />
         </div>
         <span style={{ fontSize: 12, color: 'var(--t3)' }}>병원 선택 → 교수 검색 → 진료시간 확인 → 내 교수 등록</span>
       </div>
@@ -540,9 +582,18 @@ export default function BrowseDoctors({ onNavigate }) {
       {loading ? (
         <div style={{ textAlign: 'center', padding: 60, color: 'var(--t3)' }}>로딩 중…</div>
       ) : hospitalSearchQ ? (
-        /* 검색 시 그룹 없이 플랫 표시 */
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 10 }}>
-          {filteredHospitals.map((h, i) => (
+        /* 검색 시 플랫 표시: 병원 + 교수 통합 결과 */
+        <>
+          {/* 병원 검색 결과 */}
+          {filteredHospitals.length > 0 && (
+            <div style={{ marginBottom: 20 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+                <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--t2)' }}>병원</span>
+                <span style={{ fontSize: 11, color: 'var(--t3)', fontFamily: "'JetBrains Mono'" }}>{filteredHospitals.length}</span>
+                <div style={{ flex: 1, height: 1, background: 'var(--bd-s)' }} />
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 10 }}>
+                {filteredHospitals.map((h, i) => (
             <div key={h.code} onClick={() => openHospital(h)} style={{
               background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 12,
               padding: 20, cursor: 'pointer', transition: 'all .15s',
@@ -559,7 +610,62 @@ export default function BrowseDoctors({ onNavigate }) {
               <div style={{ paddingTop: 10, borderTop: '1px solid var(--bd-s)', fontSize: 11, color: 'var(--t2)', fontFamily: "'JetBrains Mono'" }}>{h.code}</div>
             </div>
           ))}
-        </div>
+              </div>
+            </div>
+          )}
+
+          {/* 교수 검색 결과 */}
+          {(globalDoctorLoading || globalDoctorResults.length > 0) && (
+            <div style={{ marginBottom: 20 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+                <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--t2)' }}>교수</span>
+                <span style={{ fontSize: 11, color: 'var(--t3)', fontFamily: "'JetBrains Mono'" }}>
+                  {globalDoctorLoading ? '…' : globalDoctorResults.length}
+                </span>
+                <div style={{ flex: 1, height: 1, background: 'var(--bd-s)' }} />
+              </div>
+              {globalDoctorLoading && globalDoctorResults.length === 0 ? (
+                <div style={{ textAlign: 'center', padding: 20, color: 'var(--t3)', fontSize: 12 }}>검색 중…</div>
+              ) : (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8 }}>
+                  {globalDoctorResults.map((d, i) => {
+                    const isMyDoctor = d.visit_grade === 'A' || d.visit_grade === 'B' || registeredSet.has(d.external_id);
+                    return (
+                      <div
+                        key={`${d.hospital_code}-${d.external_id || d.id || i}`}
+                        onClick={() => openDoctorFromGlobal(d)}
+                        style={{
+                          display: 'flex', alignItems: 'center', gap: 10,
+                          padding: '10px 12px', borderRadius: 9,
+                          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+                          cursor: 'pointer', transition: 'all .12s',
+                          animation: `fadeUp .25s ease ${i * .02}s both`,
+                        }}
+                      >
+                        <HospitalLogo code={d.hospital_code} size={32} radius={7} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ fontSize: 13, fontWeight: 500, display: 'flex', alignItems: 'center', gap: 4 }}>
+                            {d.name}
+                            {isMyDoctor && <Star size={11} style={{ color: 'var(--gn)' }} fill="var(--gn)" />}
+                          </div>
+                          <div style={{ fontSize: 11, color: 'var(--t3)', marginTop: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                            {d.hospital_name} · {d.department}
+                          </div>
+                        </div>
+                        <ChevronRight size={14} style={{ color: 'var(--t3)', flexShrink: 0 }} />
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* 둘 다 결과 없음 */}
+          {!globalDoctorLoading && filteredHospitals.length === 0 && globalDoctorResults.length === 0 && (
+            <div style={{ textAlign: 'center', padding: 40, color: 'var(--t3)', fontSize: 13 }}>검색 결과 없음</div>
+          )}
+        </>
       ) : (
         /* 지역별 그룹 표시 */
         <div>

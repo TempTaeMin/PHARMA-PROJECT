@@ -1,0 +1,28 @@
+# 환경변수 / 비밀
+.env
+.env.*
+!.env.example
+
+# 파이썬
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+
+# DB (백업 포함)
+*.db
+*.db-journal
+pharma_scheduler.backup-*.db
+
+# Node
+node_modules/
+dist/
+build/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

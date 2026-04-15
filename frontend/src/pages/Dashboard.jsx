@@ -1,11 +1,14 @@
-import { useState } from 'react';
-import { Plus, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Plus, X, Sparkles, RefreshCw } from 'lucide-react';
 import DailySchedule from '../components/DailySchedule';
 import AddEventBottomSheet from '../components/AddEventBottomSheet';
 import SelectDoctorForMeeting from '../components/SelectDoctorForMeeting';
 import DoctorScheduleHintPopup from '../components/DoctorScheduleHintPopup';
 import SelectMeetingTime from '../components/SelectMeetingTime';
+import VisitDetailModal from '../components/VisitDetailModal';
+import PersonalEventEditor from '../components/PersonalEventEditor';
 import { useMonthCalendar } from '../hooks/useMonthCalendar';
+import { memoApi, visitApi } from '../api/client';
 
 function ymd(y, m, d) {
   return `${y}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
@@ -23,16 +26,27 @@ export default function Dashboard({ onNavigate }) {
   const [flowStep, setFlowStep] = useState(null);
   const [flowDoctor, setFlowDoctor] = useState(null);
 
-  // ─ 방문 완료 처리 state (기존 기능 유지) ─
+  // ─ 방문 완료 처리 state ─
   const [completing, setCompleting] = useState(null);
   const [completeStatus, setCompleteStatus] = useState('');
-  const [completeProduct, setCompleteProduct] = useState('');
-  const [completeNotes, setCompleteNotes] = useState('');
+  const [rawMemo, setRawMemo] = useState('');
+  const [memoId, setMemoId] = useState(null);      // visits_memo.id
+  const [aiResult, setAiResult] = useState(null);  // { title, summary }
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState(null);
+
+  // ─ 일정 상세/수정 모달 state ─
+  const [detailVisit, setDetailVisit] = useState(null);
 
   const { year, month } = view;
   const {
-    doctors, visitsByDate, doctorsByDate, loading, actions,
+    doctors, visitsByDate, loading, actions, refresh,
   } = useMonthCalendar(year, month);
+
+  useEffect(() => {
+    refresh();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // 주간 스트립에서 다른 월의 날짜를 선택하면 view도 따라가야 함
   const handleSelectDate = (dateStr) => {
@@ -43,7 +57,6 @@ export default function Dashboard({ onNavigate }) {
     }
   };
 
-  const selectedDoctors = doctorsByDate[selected] || [];
   const selectedVisits = (visitsByDate[selected] || []).slice().sort((a, b) =>
     (a.visit_date || '').localeCompare(b.visit_date || '')
   );
@@ -52,7 +65,17 @@ export default function Dashboard({ onNavigate }) {
   const handleSelectCategory = (key) => {
     if (key === 'professor') {
       setFlowStep('select-doctor');
+    } else if (key === 'personal') {
+      setFlowStep('personal-event');
     }
+  };
+
+  const handleSubmitPersonal = async ({ dateStr, timeHHMM, title, notes }) => {
+    const dt = `${dateStr}T${timeHHMM}:00`;
+    await visitApi.createPersonal({ visit_date: dt, title, notes, status: '예정' });
+    refresh();
+    handleSelectDate(dateStr);
+    closeFlow();
   };
 
   const handlePickDoctor = (doctor) => {
@@ -76,25 +99,93 @@ export default function Dashboard({ onNavigate }) {
     setFlowDoctor(null);
   };
 
-  // ─ 기존 완료/취소 액션 ─
+  // ─ 완료/취소 액션 ─
   const openComplete = (visit) => {
     setCompleting(visit);
     setCompleteStatus('');
-    setCompleteProduct(visit.product || '');
-    setCompleteNotes(visit.notes || '');
+    setRawMemo(visit.notes || '');
+    setMemoId(null);
+    setAiResult(null);
+    setAiError(null);
+  };
+
+  const closeComplete = () => {
+    setCompleting(null);
+    setCompleteStatus('');
+    setRawMemo('');
+    setMemoId(null);
+    setAiResult(null);
+    setAiError(null);
   };
 
   const submitComplete = async () => {
     if (!completeStatus || !completing) return;
     try {
+      // 1) visit_logs 상태/메모 업데이트 (raw_memo를 notes에도 미러링)
       await actions.updateVisit(completing, {
         status: completeStatus,
-        product: completeProduct || null,
-        notes: completeNotes || null,
+        notes: rawMemo || null,
       });
-      setCompleting(null);
+      // 2) 메모가 아직 저장 전이면 원본만이라도 저장 (AI 정리는 선택)
+      if (!memoId && rawMemo.trim()) {
+        try {
+          await memoApi.create({
+            doctor_id: completing.doctor_id,
+            visit_log_id: completing.id,
+            visit_date: completing.visit_date,
+            memo_type: 'visit',
+            raw_memo: rawMemo,
+          });
+        } catch (e) {
+          console.warn('메모 저장 실패(무시):', e);
+        }
+      } else if (memoId) {
+        // 이미 생성된 메모에 visit_log_id 링크 보강
+        try {
+          await memoApi.update(memoId, {
+            visit_log_id: completing.id,
+            doctor_id: completing.doctor_id,
+          });
+        } catch (e) {
+          console.warn('메모 링크 업데이트 실패(무시):', e);
+        }
+      }
+      closeComplete();
     } catch (e) {
       alert('저장 실패: ' + e.message);
+    }
+  };
+
+  // MR AI 정리: 메모가 없으면 먼저 생성 → /summarize 호출
+  const handleAiOrganize = async () => {
+    if (!rawMemo.trim()) {
+      alert('정리할 메모를 먼저 작성해주세요.');
+      return;
+    }
+    setAiLoading(true);
+    setAiError(null);
+    try {
+      let id = memoId;
+      if (!id) {
+        const created = await memoApi.create({
+          doctor_id: completing.doctor_id,
+          visit_log_id: completing.id,
+          visit_date: completing.visit_date,
+          memo_type: 'visit',
+          raw_memo: rawMemo,
+        });
+        id = created.id;
+        setMemoId(id);
+      } else {
+        // 원본 메모 최신화
+        await memoApi.update(id, { raw_memo: rawMemo });
+      }
+      const result = await memoApi.summarize(id, null);
+      setAiResult(result.ai_summary || null);
+    } catch (e) {
+      setAiError(e.message || 'AI 정리 실패');
+    } finally {
+      setAiLoading(false);
     }
   };
 
@@ -120,11 +211,11 @@ export default function Dashboard({ onNavigate }) {
         <DailySchedule
           dateStr={selected}
           todayStr={todayStr}
-          doctors={selectedDoctors}
           visits={selectedVisits}
           onSelectDate={handleSelectDate}
           onComplete={openComplete}
           onCancel={cancelPlanned}
+          onOpenDetail={setDetailVisit}
           onOpenMonth={() => onNavigate?.('schedule')}
         />
       )}
@@ -174,6 +265,7 @@ export default function Dashboard({ onNavigate }) {
       <DoctorScheduleHintPopup
         open={flowStep === 'hint-popup'}
         doctor={flowDoctor}
+        selectedDate={selected}
         onClose={() => setFlowStep('select-doctor')}
         onConfirm={handleConfirmHint}
       />
@@ -185,27 +277,48 @@ export default function Dashboard({ onNavigate }) {
         onBack={() => setFlowStep('hint-popup')}
         onConfirm={handleConfirmTime}
       />
+      <PersonalEventEditor
+        open={flowStep === 'personal-event'}
+        initialDate={selected}
+        onClose={closeFlow}
+        onSubmit={handleSubmitPersonal}
+      />
 
-      {/* ── Complete Modal (기존 유지) ── */}
+      {/* ── Visit Detail / Edit Modal ── */}
+      <VisitDetailModal
+        open={!!detailVisit}
+        visit={detailVisit}
+        onClose={() => setDetailVisit(null)}
+        onSave={async (visit, patch) => {
+          await actions.updateVisit(visit, patch);
+        }}
+        onCancelPlanned={async (visit) => {
+          await actions.cancelPlanned(visit);
+        }}
+        onComplete={openComplete}
+      />
+
+      {/* ── Complete Modal (raw + AI 2영역) ── */}
       {completing && (
         <div
-          onClick={() => setCompleting(null)}
+          onClick={closeComplete}
           style={{
             position: 'fixed', inset: 0, background: 'rgba(0,0,0,.45)', zIndex: 200,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            animation: 'fadeIn .15s ease',
+            padding: 16, animation: 'fadeIn .15s ease',
           }}
         >
           <div
             onClick={e => e.stopPropagation()}
             style={{
               background: 'var(--bg-1)', borderRadius: 16, padding: 22,
-              width: 420, maxWidth: '92%', animation: 'fadeUp .2s ease',
+              width: 560, maxWidth: '100%', maxHeight: '92vh', overflowY: 'auto',
+              animation: 'fadeUp .2s ease',
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-              <div style={{ fontFamily: 'Manrope', fontSize: 17, fontWeight: 700 }}>방문 완료 처리</div>
-              <button onClick={() => setCompleting(null)} style={{
+              <div style={{ fontFamily: 'Manrope', fontSize: 17, fontWeight: 700 }}>방문 결과 기록</div>
+              <button onClick={closeComplete} style={{
                 background: 'none', border: 'none', cursor: 'pointer', color: 'var(--t3)',
               }}><X size={18} /></button>
             </div>
@@ -226,25 +339,97 @@ export default function Dashboard({ onNavigate }) {
               ))}
             </div>
 
-            <label style={{ display: 'block', fontSize: 11, color: 'var(--t3)', fontWeight: 600, marginBottom: 6 }}>디테일링 제품</label>
-            <input
-              value={completeProduct}
-              onChange={e => setCompleteProduct(e.target.value)}
-              placeholder="예: 관절주사A"
-              style={modalInput}
+            <div style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              marginBottom: 6,
+            }}>
+              <label style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 600 }}>
+                원본 메모 <span style={{ color: 'var(--t4, #9ca3af)', fontWeight: 500 }}>· 자유 입력</span>
+              </label>
+              <button
+                onClick={handleAiOrganize}
+                disabled={aiLoading || !rawMemo.trim()}
+                style={{
+                  padding: '5px 10px', borderRadius: 7,
+                  background: 'var(--ac-d)', color: 'var(--ac)',
+                  border: '1px solid var(--ac)',
+                  fontSize: 11, fontWeight: 700, fontFamily: 'inherit',
+                  cursor: (aiLoading || !rawMemo.trim()) ? 'not-allowed' : 'pointer',
+                  display: 'flex', alignItems: 'center', gap: 4,
+                  opacity: (aiLoading || !rawMemo.trim()) ? .5 : 1,
+                }}
+                title="Claude Haiku로 구조화된 방문일지로 정리"
+              >
+                {aiLoading ? <RefreshCw size={12} /> : <Sparkles size={12} />}
+                {aiLoading ? '정리 중…' : (aiResult ? '다시 정리' : 'MR AI로 정리')}
+              </button>
+            </div>
+            <textarea
+              value={rawMemo}
+              onChange={e => setRawMemo(e.target.value)}
+              rows={5}
+              placeholder="방문 결과·핵심 대화 내용을 자유롭게 입력하세요. 원본은 그대로 보존됩니다."
+              style={{ ...modalInput, resize: 'vertical', marginBottom: 8 }}
             />
 
-            <label style={{ display: 'block', fontSize: 11, color: 'var(--t3)', fontWeight: 600, marginBottom: 6 }}>메모</label>
-            <textarea
-              value={completeNotes}
-              onChange={e => setCompleteNotes(e.target.value)}
-              rows={3}
-              placeholder="핵심 대화 내용"
-              style={{ ...modalInput, resize: 'vertical' }}
-            />
+            {aiError && (
+              <div style={{
+                fontSize: 11, color: '#b91c1c', background: '#fee2e2',
+                padding: '7px 10px', borderRadius: 6, marginBottom: 10,
+              }}>
+                {aiError}
+              </div>
+            )}
+
+            {aiResult && (
+              <div style={{
+                marginTop: 4, marginBottom: 12,
+                padding: '12px 14px', borderRadius: 10,
+                background: 'var(--ac-d)', border: '1px solid var(--ac)',
+              }}>
+                <div style={{
+                  display: 'flex', alignItems: 'center', gap: 5,
+                  fontSize: 10, fontWeight: 800, letterSpacing: '.06em',
+                  color: 'var(--ac)', marginBottom: 8, fontFamily: 'Manrope',
+                }}>
+                  <Sparkles size={11} /> AI 정리 결과
+                </div>
+                {aiResult.title && (
+                  <div style={{
+                    fontSize: 14, fontWeight: 700, color: 'var(--t1)', marginBottom: 8,
+                  }}>
+                    {aiResult.title}
+                  </div>
+                )}
+                {aiResult.summary && typeof aiResult.summary === 'object' && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    {Object.entries(aiResult.summary)
+                      .filter(([, v]) => v != null && String(v).trim() !== '')
+                      .map(([k, v]) => (
+                        <div key={k} style={{
+                          display: 'flex', gap: 8, fontSize: 12,
+                          paddingBottom: 6, borderBottom: '1px dashed var(--bd-s)',
+                        }}>
+                          <span style={{
+                            minWidth: 76, color: 'var(--t3)', fontWeight: 700,
+                          }}>{k}</span>
+                          <span style={{ color: 'var(--t1)', flex: 1, lineHeight: 1.5 }}>
+                            {String(v)}
+                          </span>
+                        </div>
+                      ))}
+                  </div>
+                )}
+                <div style={{
+                  fontSize: 10, color: 'var(--t3)', marginTop: 8, fontStyle: 'italic',
+                }}>
+                  원본 메모는 그대로 보존됩니다. 필요 시 "다시 정리"로 재실행할 수 있어요.
+                </div>
+              </div>
+            )}
 
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end', marginTop: 14 }}>
-              <button onClick={() => setCompleting(null)} style={btnGhost}>취소</button>
+              <button onClick={closeComplete} style={btnGhost}>취소</button>
               <button
                 onClick={submitComplete}
                 disabled={!completeStatus}

@@ -40,6 +40,8 @@ export const visitApi = {
     request(`/api/doctors/${doctorId}/visits/${visitId}`, { method: 'PATCH', body: JSON.stringify(data) }),
   remove: (doctorId, visitId) =>
     request(`/api/doctors/${doctorId}/visits/${visitId}`, { method: 'DELETE' }),
+  createPersonal: (data) =>
+    request('/api/visits/personal', { method: 'POST', body: JSON.stringify(data) }),
 };
 
 // ─── Crawling ───
@@ -53,6 +55,7 @@ export const crawlApi = {
     const qs = params.toString();
     return request(`/api/crawl/browse/${code}${qs ? '?' + qs : ''}`);
   },
+  searchDoctors: (q) => request(`/api/crawl/search-doctors?q=${encodeURIComponent(q)}`),
   sync: (code, dept) => request(`/api/crawl/sync/${code}${dept ? '?department=' + encodeURIComponent(dept) : ''}`, { method: 'POST' }),
   runMyDoctors: () => request('/api/crawl/my-doctors', { method: 'POST' }),
   doctor: (code, staffId) => request(`/api/crawl/doctor/${code}/${encodeURIComponent(staffId)}`),
@@ -86,6 +89,7 @@ export const academicApi = {
     return request(`/api/academic-events/upcoming?${params.toString()}`);
   },
   unclassified: () => request('/api/academic-events/unclassified'),
+  getById: (id) => request(`/api/academic-events/${id}`),
   sync: () => request('/api/academic-events/sync', { method: 'POST' }),
   updateEventDepartments: (id, departments) =>
     request(`/api/academic-events/${id}/departments`, {
@@ -102,6 +106,36 @@ export const academicApi = {
       method: 'PATCH',
       body: JSON.stringify({ departments }),
     }),
+};
+
+// ─── Memos (방문 메모 / 회의록) ───
+export const memoApi = {
+  list: (params = {}) => {
+    const qs = new URLSearchParams();
+    Object.entries(params).forEach(([k, v]) => {
+      if (v !== undefined && v !== null && v !== '') qs.set(k, v);
+    });
+    const s = qs.toString();
+    return request(`/api/memos${s ? '?' + s : ''}`);
+  },
+  get: (id) => request(`/api/memos/${id}`),
+  create: (data) => request('/api/memos', { method: 'POST', body: JSON.stringify(data) }),
+  update: (id, data) => request(`/api/memos/${id}`, { method: 'PUT', body: JSON.stringify(data) }),
+  remove: (id) => request(`/api/memos/${id}`, { method: 'DELETE' }),
+  summarize: (id, templateId) =>
+    request(`/api/memos/${id}/summarize`, {
+      method: 'POST',
+      body: JSON.stringify({ template_id: templateId ?? null }),
+    }),
+  listByDoctor: (doctorId, limit = 20) =>
+    request(`/api/doctors/${doctorId}/memos?limit=${limit}`),
+};
+
+export const memoTemplateApi = {
+  list: () => request('/api/memo-templates'),
+  create: (data) => request('/api/memo-templates', { method: 'POST', body: JSON.stringify(data) }),
+  update: (id, data) => request(`/api/memo-templates/${id}`, { method: 'PUT', body: JSON.stringify(data) }),
+  remove: (id) => request(`/api/memo-templates/${id}`, { method: 'DELETE' }),
 };
 
 // ─── Notifications ───

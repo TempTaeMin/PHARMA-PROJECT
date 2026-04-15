@@ -14,7 +14,7 @@ export default function AddEventBottomSheet({ open, onClose, onSelectCategory })
       label: '개인 일정',
       sub: '연차, 반차, 개인 약속',
       icon: UserCog,
-      disabled: true,
+      disabled: false,
     },
     {
       key: 'professor',

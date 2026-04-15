@@ -1,7 +1,8 @@
 import { useState, useMemo } from 'react';
-import { Calendar, MapPin, BookOpen, ExternalLink, RefreshCw, Filter, AlertCircle } from 'lucide-react';
+import { Calendar, MapPin, BookOpen, ChevronRight, RefreshCw, Filter, AlertCircle } from 'lucide-react';
 import { academicApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
+import AcademicEventModal from '../components/AcademicEventModal';
 
 const DEPT_COLORS = [
   { bg: '#dbeafe', c: '#1e40af' },
@@ -31,32 +32,28 @@ function fmtRange(start, end) {
 }
 
 const SOURCE_LABELS = {
-  healthmedia: { label: '메디칼허브', bg: '#e0f2fe', c: '#0369a1' },
   kma_edu: { label: 'KMA 연수', bg: '#fef3c7', c: '#92400e' },
 };
 
-export default function Conferences() {
+export default function Conferences({ onNavigate }) {
   const [tab, setTab] = useState('upcoming'); // upcoming | all | unclassified
   const [deptFilter, setDeptFilter] = useState('');
-  const [sourceFilter, setSourceFilter] = useState(''); // '' | 'healthmedia' | 'kma_edu'
   const [syncStatus, setSyncStatus] = useState(null);
-
-  const srcKey = sourceFilter || 'all';
-  const srcParam = sourceFilter || undefined;
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   const {
     data: upcomingRaw, loading: upLoading, refresh: refreshUpcoming,
   } = useCachedApi(
-    `academic-upcoming:${srcKey}`,
-    () => academicApi.upcoming(null, 3, srcParam),
+    'academic-upcoming',
+    () => academicApi.upcoming(null, 3),
     { ttlKey: 'academic' },
   );
 
   const {
     data: allRaw, loading: allLoading, refresh: refreshAll,
   } = useCachedApi(
-    `academic-all:${srcKey}`,
-    () => academicApi.list({ limit: 1000, ...(srcParam ? { source: srcParam } : {}) }),
+    'academic-all',
+    () => academicApi.list({ limit: 1000 }),
     { ttlKey: 'academic' },
   );
 
@@ -143,27 +140,6 @@ export default function Conferences() {
         ))}
       </div>
 
-      {/* ── 소스 토글 ── */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 12 }}>
-        {[
-          { id: '', label: '전체 소스' },
-          { id: 'healthmedia', label: '메디칼허브' },
-          { id: 'kma_edu', label: 'KMA 연수' },
-        ].map(s => (
-          <button
-            key={s.id || 'all'}
-            onClick={() => setSourceFilter(s.id)}
-            style={{
-              padding: '5px 11px', borderRadius: 20,
-              background: sourceFilter === s.id ? 'var(--ac)' : 'var(--bg-1)',
-              color: sourceFilter === s.id ? '#fff' : 'var(--t2)',
-              border: '1px solid ' + (sourceFilter === s.id ? 'var(--ac)' : 'var(--bd-s)'),
-              fontSize: 11, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
-            }}
-          >{s.label}</button>
-        ))}
-      </div>
-
       {deptOptions.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
           <Filter size={14} style={{ color: 'var(--t3)' }} />
@@ -206,11 +182,18 @@ export default function Conferences() {
       ) : (
         <div style={{ display: 'grid', gap: 10 }}>
           {filtered.map((e, i) => (
-            <article key={e.id} style={{
-              background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 12,
-              padding: 16, display: 'flex', gap: 14,
-              animation: `fadeUp .25s ease ${i * .03}s both`,
-            }}>
+            <article
+              key={e.id}
+              onClick={() => setSelectedEvent(e)}
+              style={{
+                background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 12,
+                padding: 16, display: 'flex', gap: 14, cursor: 'pointer',
+                animation: `fadeUp .25s ease ${i * .03}s both`,
+                transition: 'border-color .15s',
+              }}
+              onMouseEnter={ev => ev.currentTarget.style.borderColor = 'var(--ac)'}
+              onMouseLeave={ev => ev.currentTarget.style.borderColor = 'var(--bd-s)'}
+            >
               <div style={{
                 flexShrink: 0, width: 60, textAlign: 'center',
                 padding: '8px 4px', borderRadius: 10,
@@ -277,21 +260,26 @@ export default function Conferences() {
                 ) : null}
               </div>
 
-              {e.url && (
-                <a href={e.url} target="_blank" rel="noopener noreferrer" style={{
-                  flexShrink: 0, alignSelf: 'flex-start',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  width: 32, height: 32, borderRadius: 8,
-                  background: 'var(--bg-2)', color: 'var(--t3)',
-                  textDecoration: 'none',
-                }}>
-                  <ExternalLink size={14} />
-                </a>
-              )}
+              <div style={{
+                flexShrink: 0, alignSelf: 'center',
+                color: 'var(--t3)',
+              }}>
+                <ChevronRight size={16} />
+              </div>
             </article>
           ))}
         </div>
       )}
+
+      <AcademicEventModal
+        open={!!selectedEvent}
+        event={selectedEvent}
+        onClose={() => setSelectedEvent(null)}
+        onNavigateDoctor={(doctorId) => {
+          setSelectedEvent(null);
+          if (onNavigate) onNavigate('my-doctors', { doctorId });
+        }}
+      />
     </div>
   );
 }

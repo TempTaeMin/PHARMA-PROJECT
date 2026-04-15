@@ -1,23 +1,26 @@
 import { useState, useEffect, useCallback } from 'react';
-import { LayoutDashboard, Star, Building2, BookOpen, Settings, Bell, Menu, CalendarDays } from 'lucide-react';
+import { LayoutDashboard, Star, Building2, BookOpen, Settings, Bell, Menu, CalendarDays, FileText } from 'lucide-react';
 import { notificationApi } from './api/client';
 import Dashboard from './pages/Dashboard';
 import MyDoctors from './pages/MyDoctors';
 import BrowseDoctors from './pages/BrowseDoctors';
 import Conferences from './pages/Conferences';
 import Schedule from './pages/Schedule';
+import Memos from './pages/Memos';
 import NotificationPanel from './components/NotificationPanel';
 
 const NAV = [
   { id: 'dashboard', label: '대시보드', icon: LayoutDashboard },
   { id: 'schedule', label: '월간 일정', icon: CalendarDays },
   { id: 'my-doctors', label: '내 교수', icon: Star },
+  { id: 'memos', label: '메모/회의록', icon: FileText },
   { id: 'browse', label: '교수 탐색', icon: Building2 },
   { id: 'conferences', label: '학회 일정', icon: BookOpen },
 ];
 
 export default function App() {
   const [page, setPage] = useState('dashboard');
+  const [pageProps, setPageProps] = useState({});
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [notifOpen, setNotifOpen] = useState(false);
   const [notifications, setNotifications] = useState([]);
@@ -41,7 +44,11 @@ export default function App() {
   useEffect(() => { loadNotifs(); }, []);
 
   const unread = notifications.filter(n => !n.read).length;
-  const navTo = (p) => { setPage(p); setSidebarOpen(false); };
+  const navTo = (p, props = {}) => {
+    setPage(p);
+    setPageProps(props);
+    setSidebarOpen(false);
+  };
 
   const sidebarVisible = !isMobile || sidebarOpen;
 
@@ -124,9 +131,10 @@ export default function App() {
         <div style={{ padding: isMobile ? '12px 10px' : '20px 24px' }}>
           {page === 'dashboard' && <Dashboard onNavigate={navTo} />}
           {page === 'schedule' && <Schedule />}
-          {page === 'my-doctors' && <MyDoctors />}
+          {page === 'my-doctors' && <MyDoctors onNavigate={navTo} initialDoctorId={pageProps.doctorId} />}
+          {page === 'memos' && <Memos initialFilters={pageProps.filters || {}} />}
           {page === 'browse' && <BrowseDoctors onNavigate={navTo} />}
-          {page === 'conferences' && <Conferences />}
+          {page === 'conferences' && <Conferences onNavigate={navTo} />}
         </div>
       </main>
 

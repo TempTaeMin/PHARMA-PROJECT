@@ -1,6 +1,6 @@
 """API Request/Response schemas"""
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Any
 from datetime import datetime
 
 
@@ -116,6 +116,13 @@ class VisitLogResponse(VisitLogCreate):
         from_attributes = True
 
 
+class PersonalEventCreate(BaseModel):
+    visit_date: datetime
+    title: Optional[str] = None
+    notes: Optional[str] = None
+    status: Optional[str] = "예정"
+
+
 # --- Academic Organizer ---
 class AcademicOrganizerBase(BaseModel):
     name: str
@@ -157,3 +164,69 @@ class AcademicEventResponse(AcademicEventBase):
 
 class AcademicEventDepartmentsUpdate(BaseModel):
     departments: list[str]
+
+
+# --- Memo Template ---
+class MemoTemplateBase(BaseModel):
+    name: str
+    fields: list[str]
+    prompt_addon: Optional[str] = None
+    is_default: Optional[bool] = False
+
+class MemoTemplateCreate(MemoTemplateBase):
+    pass
+
+class MemoTemplateUpdate(BaseModel):
+    name: Optional[str] = None
+    fields: Optional[list[str]] = None
+    prompt_addon: Optional[str] = None
+    is_default: Optional[bool] = None
+
+class MemoTemplateResponse(MemoTemplateBase):
+    id: int
+    user_id: int
+    created_at: datetime
+    class Config:
+        from_attributes = True
+
+
+# --- Visit Memo ---
+class VisitMemoCreate(BaseModel):
+    doctor_id: Optional[int] = None
+    visit_log_id: Optional[int] = None
+    template_id: Optional[int] = None
+    visit_date: Optional[datetime] = None
+    memo_type: Optional[str] = "visit"  # "visit" | "meeting" | "note"
+    title: Optional[str] = None
+    raw_memo: str
+
+class VisitMemoUpdate(BaseModel):
+    doctor_id: Optional[int] = None
+    visit_log_id: Optional[int] = None
+    template_id: Optional[int] = None
+    visit_date: Optional[datetime] = None
+    memo_type: Optional[str] = None
+    title: Optional[str] = None
+    raw_memo: Optional[str] = None
+    ai_summary: Optional[Any] = None  # dict or JSON string
+
+class VisitMemoResponse(BaseModel):
+    id: int
+    user_id: int
+    doctor_id: Optional[int] = None
+    doctor_name: Optional[str] = None
+    hospital_name: Optional[str] = None
+    department: Optional[str] = None
+    visit_log_id: Optional[int] = None
+    template_id: Optional[int] = None
+    visit_date: Optional[datetime] = None
+    memo_type: Optional[str] = None
+    title: Optional[str] = None
+    raw_memo: str
+    ai_summary: Optional[Any] = None  # parsed JSON
+    created_at: datetime
+    updated_at: Optional[datetime] = None
+
+
+class SummarizeRequest(BaseModel):
+    template_id: Optional[int] = None

@@ -8,7 +8,7 @@ const SLOT_LABELS = { morning: '오전', afternoon: '오후', evening: '야간' 
  * 교수 선택 후 "이 교수의 진료시간을 참고하세요" 를 보여주고
  * [확인하고 시간 선택] 으로 다음 단계(SelectMeetingTime)로 진입.
  */
-export default function DoctorScheduleHintPopup({ open, doctor, onClose, onConfirm }) {
+export default function DoctorScheduleHintPopup({ open, doctor, selectedDate, onClose, onConfirm }) {
   if (!open || !doctor) return null;
 
   // 요일 × 시간대 매트릭스 구성
@@ -20,6 +20,22 @@ export default function DoctorScheduleHintPopup({ open, doctor, onClose, onConfi
     const diff = (d.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
     return diff >= -1 && diff <= 14;
   });
+
+  // 선택 날짜 기반 진료 여부 판단 (0=월 ~ 6=일)
+  const selDow = selectedDate
+    ? (new Date(selectedDate + 'T00:00:00').getDay() + 6) % 7
+    : null;
+  const hasScheduleOnSelDow = selDow != null &&
+    Object.keys(matrix[selDow] || {}).length > 0;
+  const overridesOnSelDate = (doctor.date_schedules || [])
+    .filter(ds => ds.schedule_date === selectedDate);
+  const hasOpenOverride = overridesOnSelDate.some(ov => ov.status && ov.status !== '휴진');
+  const hasClosedOverride = overridesOnSelDate.length > 0 &&
+    overridesOnSelDate.every(ov => ov.status === '휴진');
+  const showNoClinicWarning = !!selectedDate && (
+    hasClosedOverride ||
+    (overridesOnSelDate.length === 0 && !hasScheduleOnSelDow)
+  );
 
   return (
     <div
@@ -77,6 +93,26 @@ export default function DoctorScheduleHintPopup({ open, doctor, onClose, onConfi
           </div>
         </div>
 
+        {/* 선택 날짜 진료 없음 경고 */}
+        {showNoClinicWarning && (
+          <div style={{
+            marginTop: 14, padding: '12px 14px', borderRadius: 10,
+            background: '#fee2e2', border: '1px solid #fca5a5',
+            display: 'flex', gap: 10, alignItems: 'flex-start',
+          }}>
+            <AlertCircle size={16} style={{ color: '#b91c1c', flexShrink: 0, marginTop: 1 }} />
+            <div style={{ flex: 1, fontSize: 12, color: '#7f1d1d', lineHeight: 1.55 }}>
+              <div style={{ fontWeight: 800, marginBottom: 3, fontFamily: 'Manrope' }}>
+                {formatSelDateShort(selectedDate)} ({DOW_LABELS[selDow]}) 진료 없음
+              </div>
+              <div style={{ opacity: .9 }}>
+                이 날은 해당 교수의 정규 진료일이 아닙니다.
+                다른 루트로 일정이 잡혔다면 그대로 진행해도 됩니다.
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* 매트릭스 */}
         <div style={{ marginTop: 16 }}>
           <div style={{
@@ -93,9 +129,25 @@ export default function DoctorScheduleHintPopup({ open, doctor, onClose, onConfi
               <thead>
                 <tr>
                   <th style={thStyle}></th>
-                  {DOW_LABELS.map(d => (
-                    <th key={d} style={thStyle}>{d}</th>
-                  ))}
+                  {DOW_LABELS.map((d, dowIdx) => {
+                    const isSel = dowIdx === selDow;
+                    return (
+                      <th key={d} style={{
+                        ...thStyle,
+                        background: isSel
+                          ? (showNoClinicWarning ? '#fee2e2' : 'var(--ac-d)')
+                          : thStyle.background,
+                        color: isSel
+                          ? (showNoClinicWarning ? '#b91c1c' : 'var(--ac)')
+                          : thStyle.color,
+                        outline: isSel ? '2px solid' : 'none',
+                        outlineColor: isSel
+                          ? (showNoClinicWarning ? '#fca5a5' : 'var(--ac)')
+                          : 'transparent',
+                        outlineOffset: -2,
+                      }}>{d}</th>
+                    );
+                  })}
                 </tr>
               </thead>
               <tbody>
@@ -109,11 +161,17 @@ export default function DoctorScheduleHintPopup({ open, doctor, onClose, onConfi
                     </td>
                     {DOW_LABELS.map((_, dowIdx) => {
                       const cell = matrix[dowIdx]?.[slot];
+                      const isSel = dowIdx === selDow;
+                      const selBg = showNoClinicWarning ? '#fee2e2' : 'var(--ac-d)';
                       return (
                         <td key={dowIdx} style={{
                           ...tdStyle,
-                          background: cell ? 'var(--ac-d)' : 'var(--bg-1)',
-                          color: cell ? 'var(--ac)' : 'var(--t3)',
+                          background: cell
+                            ? (isSel ? 'var(--ac)' : 'var(--ac-d)')
+                            : (isSel ? selBg : 'var(--bg-1)'),
+                          color: cell
+                            ? (isSel ? '#fff' : 'var(--ac)')
+                            : (isSel && showNoClinicWarning ? '#b91c1c' : 'var(--t3)'),
                           fontWeight: cell ? 700 : 400,
                           fontFamily: cell ? "'JetBrains Mono'" : 'inherit',
                         }}>
@@ -225,6 +283,12 @@ function formatOverride(ov) {
   const slot = SLOT_LABELS[ov.time_slot] || '';
   const status = ov.status || '';
   return `${date} ${slot} ${status}`.trim();
+}
+
+function formatSelDateShort(dateStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr + 'T00:00:00');
+  return `${d.getMonth() + 1}월 ${d.getDate()}일`;
 }
 
 const thStyle = {

@@ -32,6 +32,55 @@ DEFAULT_HEADERS = {
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
+def _parse_lectures(soup: BeautifulSoup) -> list[dict]:
+    """`table.scheduleList` 에서 강의 프로그램을 추출.
+
+    KMA 상세 페이지의 프로그램 테이블 헤더는 다음 6열로 구성된다:
+        구분 | 월/일 | 시간 | 강의제목 | 강사 | 소속
+
+    - 첫 row 는 헤더(th) 행이므로 skip.
+    - 강사 셀이 비어 있으면(개회사/폐회사/등록 등) skip.
+    - 실패 시 빈 리스트 반환.
+    """
+    table = soup.select_one("table.scheduleList")
+    if not table:
+        return []
+
+    rows = table.find_all("tr")
+    if len(rows) < 2:
+        return []
+
+    # 헤더 인덱스 매핑
+    header_cells = rows[0].find_all(["th", "td"])
+    headers = [c.get_text(" ", strip=True) for c in header_cells]
+    idx = {name: i for i, name in enumerate(headers)}
+
+    i_date = idx.get("월/일") or idx.get("일/시") or 1
+    i_time = idx.get("시간", 2)
+    i_title = idx.get("강의제목") or idx.get("강의명") or 3
+    i_lecturer = idx.get("강사") or idx.get("연자") or 4
+    i_aff = idx.get("소속") or idx.get("소속기관") or 5
+
+    lectures: list[dict] = []
+    for row in rows[1:]:
+        cells = row.find_all(["th", "td"])
+        if len(cells) <= max(i_lecturer, i_aff):
+            continue
+        lecturer = cells[i_lecturer].get_text(" ", strip=True)
+        if not lecturer:
+            continue
+        title = cells[i_title].get_text(" ", strip=True) if i_title < len(cells) else ""
+        time_str = cells[i_time].get_text(" ", strip=True) if i_time < len(cells) else ""
+        aff = cells[i_aff].get_text(" ", strip=True) if i_aff < len(cells) else ""
+        lectures.append({
+            "time": time_str or None,
+            "title": title or None,
+            "lecturer": lecturer,
+            "affiliation": aff or None,
+        })
+    return lectures
+
+
 def _parse_detail(html: str) -> Optional[dict]:
     """상세 페이지 HTML → dict. 실패 시 None."""
     soup = BeautifulSoup(html, "html.parser")
@@ -74,6 +123,7 @@ def _parse_detail(html: str) -> Optional[dict]:
         "description": (fields.get("비고") or "").strip() or None,
         "detail_url_external": (fields.get("교육 URL") or "").strip() or None,
         "code": (fields.get("교육코드") or "").strip() or None,
+        "lectures": _parse_lectures(soup),
     }
 
 

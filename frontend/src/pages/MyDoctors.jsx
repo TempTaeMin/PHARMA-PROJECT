@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Search, Plus, Clock, AlertTriangle, ChevronLeft, ChevronRight, FileText, Send, CheckCircle, XCircle, UserMinus, Calendar, RefreshCw } from 'lucide-react';
-import { doctorApi, visitApi, crawlApi } from '../api/client';
+import { useState, useEffect } from 'react';
+import { Search, Plus, Clock, AlertTriangle, ChevronLeft, ChevronRight, FileText, Send, CheckCircle, XCircle, UserMinus, Calendar, RefreshCw, Sparkles } from 'lucide-react';
+import { doctorApi, visitApi, crawlApi, memoApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
 
@@ -92,11 +92,12 @@ function MiniCalendar({ dateSchedules }) {
   );
 }
 
-export default function MyDoctors() {
+export default function MyDoctors({ onNavigate, initialDoctorId }) {
   const { data: doctors, loading, refresh } = useCachedApi('my-doctors', () => doctorApi.list({ my_only: true }), { ttlKey: 'doctors' });
   const [searchQ, setSearchQ] = useState('');
   const [detail, setDetail] = useState(null);
   const [visits, setVisits] = useState([]);
+  const [doctorMemos, setDoctorMemos] = useState([]);
   const [reportFor, setReportFor] = useState(null);
   const [reportStatus, setReportStatus] = useState('');
   const [reportProduct, setReportProduct] = useState('');
@@ -134,10 +135,18 @@ export default function MyDoctors() {
 
   const openDetail = async (doc) => {
     try {
-      const [d, v] = await Promise.all([doctorApi.get(doc.id), visitApi.list(doc.id)]);
-      setDetail(d); setVisits(v);
+      const [d, v, mm] = await Promise.all([
+        doctorApi.get(doc.id),
+        visitApi.list(doc.id),
+        memoApi.listByDoctor(doc.id, 5).catch(() => []),
+      ]);
+      setDetail(d); setVisits(v); setDoctorMemos(mm || []);
     } catch (e) { console.error(e); }
   };
+
+  useEffect(() => {
+    if (initialDoctorId) openDetail({ id: initialDoctorId });
+  }, [initialDoctorId]);
 
   const submitReport = async () => {
     try {
@@ -247,13 +256,102 @@ export default function MyDoctors() {
             <button onClick={() => { setReportFor(detail); setDetail(null); }} style={{ padding: '6px 14px', borderRadius: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: 'var(--t2)', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 4 }}><Plus size={13} /> 방문 기록</button>
           </div>
           {visits.length === 0 && <div style={{ padding: 30, textAlign: 'center', color: 'var(--t3)', fontSize: 13 }}>방문 기록 없음</div>}
-          {visits.map((v, i) => (
+          {visits.map(v => (
             <div key={v.id} style={{ padding: '12px 14px', borderRadius: 9, background: 'var(--bg-1)', border: '1px solid var(--bd-s)', marginBottom: 6 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}><span style={{ fontFamily: "'JetBrains Mono'", fontSize: 11, color: 'var(--t3)' }}>{new Date(v.visit_date).toLocaleDateString('ko-KR')}</span><span style={{ padding: '2px 8px', borderRadius: 4, fontSize: 10, fontWeight: 600, background: v.status === '성공' ? 'var(--gn-d)' : 'var(--am-d)', color: v.status === '성공' ? 'var(--gn)' : 'var(--am)' }}>{v.status}</span></div>
               {v.product && <div style={{ fontSize: 12, color: 'var(--ac)', marginBottom: 4 }}>{v.product}</div>}
               {v.notes && <div style={{ fontSize: 12, color: 'var(--t2)', lineHeight: 1.5 }}>{v.notes}</div>}
             </div>
           ))}
+        </div>
+
+        {/* 방문 메모 (AI 정리) */}
+        <div style={{ marginTop: 20 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+            <span style={{ fontFamily: 'Outfit', fontSize: 14, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}>
+              <Sparkles size={14} style={{ color: 'var(--ac)' }} /> 방문 메모
+            </span>
+            {doctorMemos.length > 0 && (
+              <button
+                onClick={() => onNavigate?.('memos', { filters: { doctor_id: detail.id } })}
+                style={{
+                  padding: '5px 11px', borderRadius: 6,
+                  background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
+                  color: 'var(--t2)', fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
+                }}
+              >
+                전체 보기
+              </button>
+            )}
+          </div>
+          {doctorMemos.length === 0 ? (
+            <div style={{
+              padding: '20px 16px', textAlign: 'center',
+              background: 'var(--bg-1)', border: '1px dashed var(--bd-s)',
+              borderRadius: 10, fontSize: 12, color: 'var(--t3)',
+            }}>
+              아직 이 교수에 대한 메모가 없습니다.
+              <div style={{ fontSize: 11, marginTop: 4 }}>
+                방문 후 "방문결과메모"를 작성하면 여기에 표시됩니다.
+              </div>
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {doctorMemos.map(m => {
+                const aiOk = !!(m.ai_summary && (
+                  (typeof m.ai_summary === 'object' && m.ai_summary.summary) ||
+                  (typeof m.ai_summary === 'string' && m.ai_summary.trim())
+                ));
+                const oneLine = (() => {
+                  if (aiOk && typeof m.ai_summary === 'object' && m.ai_summary.summary) {
+                    const s = m.ai_summary.summary;
+                    const pref = s['결과'] || s['논의내용'] || s['요약'];
+                    if (pref && String(pref).trim()) return String(pref);
+                    const first = Object.values(s).find(v => v && String(v).trim());
+                    if (first) return String(first);
+                  }
+                  return (m.raw_memo || '').slice(0, 80);
+                })();
+                return (
+                  <div
+                    key={m.id}
+                    onClick={() => onNavigate?.('memos', { filters: { doctor_id: detail.id } })}
+                    style={{
+                      padding: '11px 13px', borderRadius: 9,
+                      background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <div style={{ display: 'flex', gap: 6, alignItems: 'center', marginBottom: 4 }}>
+                      {aiOk && (
+                        <span style={{
+                          padding: '1px 6px', borderRadius: 4,
+                          background: 'var(--ac-d)', color: 'var(--ac)',
+                          fontSize: 9, fontWeight: 800, fontFamily: 'Manrope',
+                          display: 'inline-flex', alignItems: 'center', gap: 2,
+                        }}>
+                          <Sparkles size={8} /> AI
+                        </span>
+                      )}
+                      <span style={{ fontSize: 10, color: 'var(--t3)', fontFamily: "'JetBrains Mono'" }}>
+                        {m.visit_date ? new Date(m.visit_date).toLocaleDateString('ko-KR') : ''}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)', marginBottom: 3, lineHeight: 1.35 }}>
+                      {m.title || '(제목 없음)'}
+                    </div>
+                    <div style={{
+                      fontSize: 11, color: 'var(--t2)', lineHeight: 1.45,
+                      overflow: 'hidden', textOverflow: 'ellipsis',
+                      display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+                    }}>
+                      {oneLine}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     );

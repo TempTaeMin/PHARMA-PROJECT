@@ -1,6 +1,10 @@
 """PharmScheduler - FastAPI 메인 앱"""
 import logging
 from contextlib import asynccontextmanager
+
+from dotenv import load_dotenv
+load_dotenv()  # backend/.env → os.environ (ANTHROPIC_API_KEY 등)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.models.connection import init_db, async_session
@@ -12,6 +16,12 @@ from app.api.hospitals import router as hospitals_router
 from app.api.notifications import router as notifications_router
 from app.api.scheduler import router as scheduler_router
 from app.api.academic import router as academic_router
+from app.api.memos import (
+    router as memos_router,
+    templates_router as memo_templates_router,
+    doctor_memos_router,
+)
+from app.api.visits import router as visits_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -51,6 +61,10 @@ app.include_router(doctors_router)
 app.include_router(scheduler_router)
 app.include_router(notifications_router)
 app.include_router(academic_router)
+app.include_router(memos_router)
+app.include_router(memo_templates_router)
+app.include_router(doctor_memos_router)
+app.include_router(visits_router)
 
 
 @app.get("/", tags=["헬스체크"])

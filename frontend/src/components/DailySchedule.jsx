@@ -1,5 +1,5 @@
-import { useMemo } from 'react';
-import { CheckCircle, Clock, XCircle, MapPin, Trash2 } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { CheckCircle, Trash2, ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
 
 const DOW_KO = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
 const DOW_SHORT = ['일', '월', '화', '수', '목', '금', '토'];
@@ -9,12 +9,6 @@ const STATUS_THEME = {
   부재: { label: 'MISSED',    c: '#6b7280', bg: '#f3f4f6', accent: '#9ca3af' },
   거절: { label: 'DECLINED',  c: '#b91c1c', bg: '#fee2e2', accent: '#ef4444' },
   예정: { label: 'UPCOMING',  c: '#0369a1', bg: '#e0f2fe', accent: '#0284c7' },
-};
-
-const GC = {
-  A: { c: '#ba1a1a', bg: '#ffdad6' },
-  B: { c: '#b45309', bg: '#fef3c7' },
-  C: { c: '#0056d2', bg: '#dae2ff' },
 };
 
 function ymd(y, m, d) {
@@ -30,22 +24,22 @@ function startOfWeek(dateStr) {
   return d;
 }
 
+function addDays(dateStr, delta) {
+  const d = new Date(dateStr + 'T00:00:00');
+  d.setDate(d.getDate() + delta);
+  return ymd(d.getFullYear(), d.getMonth(), d.getDate());
+}
+
+function diffDays(a, b) {
+  const da = new Date(a + 'T00:00:00');
+  const db = new Date(b + 'T00:00:00');
+  return Math.round((da - db) / 86400000);
+}
+
 function hhmm(visitDate) {
   if (!visitDate) return '';
   const d = new Date(visitDate);
   return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-}
-
-function slotToHHMM(slot) {
-  if (slot === 'afternoon') return '13:00';
-  if (slot === 'evening') return '18:00';
-  return '09:00';
-}
-
-function minutesFromHHMM(s) {
-  if (!s) return 0;
-  const [h, m] = s.split(':').map(Number);
-  return h * 60 + (m || 0);
 }
 
 /**
@@ -55,53 +49,52 @@ function minutesFromHHMM(s) {
 export default function DailySchedule({
   dateStr,
   todayStr,
-  doctors = [],           // [{ doctor, slots, location }]
   visits = [],            // VisitLog[]
   onSelectDate,
   onComplete,
   onCancel,
+  onOpenDetail,           // 카드 본문 클릭 → 상세 모달
   onOpenMonth,            // "전체 일정 확인" 버튼
 }) {
   const dateObj = dateStr ? new Date(dateStr + 'T00:00:00') : new Date();
 
-  // ─ 주간 스트립 (월~일) ─
-  const weekDays = useMemo(() => {
-    const start = startOfWeek(dateStr);
-    return Array.from({ length: 7 }, (_, i) => {
-      const d = new Date(start);
-      d.setDate(start.getDate() + i);
-      return ymd(d.getFullYear(), d.getMonth(), d.getDate());
-    });
-  }, [dateStr]);
+  // ─ 주간 스트립: 7일 롤링 윈도우. 화살표로 하루씩 이동. ─
+  const initialStart = () => {
+    const s = startOfWeek(dateStr);
+    return ymd(s.getFullYear(), s.getMonth(), s.getDate());
+  };
+  const [stripStart, setStripStart] = useState(initialStart);
+  const [prevDateStr, setPrevDateStr] = useState(dateStr);
 
-  // ─ 타임라인 항목(visits + 예정된 교수)을 시각 순 정렬 ─
+  // dateStr이 외부에서 바뀌어 현재 윈도우 밖이 된 경우에만 재정렬
+  // (화살표 이동으로는 절대 자동 재정렬 하지 않음)
+  if (dateStr !== prevDateStr) {
+    setPrevDateStr(dateStr);
+    const delta = diffDays(dateStr, stripStart);
+    if (delta < 0 || delta > 6) {
+      const s = startOfWeek(dateStr);
+      setStripStart(ymd(s.getFullYear(), s.getMonth(), s.getDate()));
+    }
+  }
+
+  const weekDays = useMemo(
+    () => Array.from({ length: 7 }, (_, i) => addDays(stripStart, i)),
+    [stripStart]
+  );
+
+  const shiftStrip = (delta) => setStripStart(s => addDays(s, delta));
+
+  // ─ 타임라인 항목(visits만)을 시각 순 정렬 ─
   const items = useMemo(() => {
-    const visitedDoctorIds = new Set(visits.map(v => v.doctor_id));
-
-    const visitItems = visits.map(v => ({
-      kind: 'visit',
+    return visits.map(v => ({
       id: `v-${v.id}`,
-      time: hhmm(v.visit_date) || slotToHHMM('morning'),
+      time: hhmm(v.visit_date) || '09:00',
       minutes: v.visit_date
         ? new Date(v.visit_date).getHours() * 60 + new Date(v.visit_date).getMinutes()
         : 0,
       visit: v,
-    }));
-
-    const doctorItems = doctors
-      .filter(d => !visitedDoctorIds.has(d.doctor.id))
-      .flatMap(d => d.slots.map(slot => ({
-        kind: 'doctor',
-        id: `d-${d.doctor.id}-${slot}`,
-        time: slotToHHMM(slot),
-        minutes: minutesFromHHMM(slotToHHMM(slot)),
-        doctor: d.doctor,
-        slot,
-        location: d.location,
-      })));
-
-    return [...visitItems, ...doctorItems].sort((a, b) => a.minutes - b.minutes);
-  }, [doctors, visits]);
+    })).sort((a, b) => a.minutes - b.minutes);
+  }, [visits]);
 
   // ─ NEXT UP: 지금 시각 이후 첫 예정 visit ─
   const nextUpId = useMemo(() => {
@@ -109,8 +102,7 @@ export default function DailySchedule({
     const now = new Date();
     const nowMin = now.getHours() * 60 + now.getMinutes();
     const candidates = items.filter(it =>
-      (it.kind === 'visit' && it.visit.status === '예정' && it.minutes >= nowMin)
-      || (it.kind === 'doctor' && it.minutes >= nowMin)
+      it.visit.status === '예정' && it.minutes >= nowMin
     );
     return candidates[0]?.id || null;
   }, [items, dateStr, todayStr]);
@@ -142,30 +134,74 @@ export default function DailySchedule({
           </div>
         </div>
 
-        <button
-          onClick={onOpenMonth}
-          style={{
-            padding: '9px 14px', borderRadius: 10,
-            background: 'var(--ac-d)', color: 'var(--ac)',
-            border: '1px solid var(--ac)',
-            fontSize: 12, fontWeight: 700, cursor: 'pointer',
-            fontFamily: 'inherit', whiteSpace: 'nowrap',
-            display: 'flex', alignItems: 'center', gap: 6,
-          }}
-        >
-          📅 전체 일정
-        </button>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          {dateStr !== todayStr && (
+            <button
+              onClick={() => onSelectDate?.(todayStr)}
+              aria-label="오늘로 이동"
+              title="오늘로 이동"
+              style={{
+                width: 28, height: 28, borderRadius: '50%',
+                background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+                color: 'var(--t3)', cursor: 'pointer', fontFamily: 'inherit',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                transition: 'color .15s, border-color .15s',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.color = 'var(--ac)';
+                e.currentTarget.style.borderColor = 'var(--ac)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.color = 'var(--t3)';
+                e.currentTarget.style.borderColor = 'var(--bd-s)';
+              }}
+            >
+              <RotateCcw size={13} />
+            </button>
+          )}
+          <button
+            onClick={onOpenMonth}
+            style={{
+              padding: '9px 14px', borderRadius: 10,
+              background: 'var(--ac-d)', color: 'var(--ac)',
+              border: '1px solid var(--ac)',
+              fontSize: 12, fontWeight: 700, cursor: 'pointer',
+              fontFamily: 'inherit', whiteSpace: 'nowrap',
+              display: 'flex', alignItems: 'center', gap: 6,
+            }}
+          >
+            📅 전체 일정
+          </button>
+        </div>
       </div>
 
-      {/* ── 주간 스트립 ── */}
+      {/* ── 주간 스트립 (7일 롤링 윈도우 + 좌우 이동) ── */}
       <div style={{
-        display: 'flex', gap: 6, padding: '2px 2px 14px',
-        overflowX: 'auto',
+        display: 'flex', alignItems: 'stretch', gap: 6, padding: '2px 2px 14px',
       }}>
+        <button
+          onClick={() => shiftStrip(-1)}
+          aria-label="하루 이전"
+          style={{
+            width: 30, borderRadius: 10,
+            background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+            color: 'var(--t3)', cursor: 'pointer', fontFamily: 'inherit',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            flexShrink: 0,
+          }}
+        >
+          <ChevronLeft size={16} />
+        </button>
+        <div style={{
+          flex: 1, display: 'flex', gap: 6, overflowX: 'auto',
+        }}>
         {weekDays.map(d => {
           const obj = new Date(d + 'T00:00:00');
           const isSelected = d === dateStr;
           const isToday = d === todayStr;
+          const dow = obj.getDay(); // 0=일, 6=토
+          const weekendColor = dow === 0 ? 'var(--rd)' : dow === 6 ? 'var(--bl)' : null;
+          const textColor = isSelected ? '#fff' : (weekendColor || 'var(--t1)');
           return (
             <button
               key={d}
@@ -175,7 +211,7 @@ export default function DailySchedule({
                 borderRadius: 12, cursor: 'pointer',
                 fontFamily: 'inherit',
                 background: isSelected ? 'var(--ac)' : 'var(--bg-1)',
-                color: isSelected ? '#fff' : 'var(--t1)',
+                color: textColor,
                 border: `1px solid ${isSelected ? 'var(--ac)' : 'var(--bd-s)'}`,
                 display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4,
                 transition: 'background .15s',
@@ -201,6 +237,20 @@ export default function DailySchedule({
             </button>
           );
         })}
+        </div>
+        <button
+          onClick={() => shiftStrip(1)}
+          aria-label="하루 이후"
+          style={{
+            width: 30, borderRadius: 10,
+            background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+            color: 'var(--t3)', cursor: 'pointer', fontFamily: 'inherit',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            flexShrink: 0,
+          }}
+        >
+          <ChevronRight size={16} />
+        </button>
       </div>
 
       {/* ── 통계 bar ── */}
@@ -248,6 +298,7 @@ export default function DailySchedule({
               isNextUp={item.id === nextUpId}
               onComplete={onComplete}
               onCancel={onCancel}
+              onOpenDetail={onOpenDetail}
             />
           ))}
         </div>
@@ -256,9 +307,8 @@ export default function DailySchedule({
   );
 }
 
-function TimelineRow({ item, isNextUp, onComplete, onCancel }) {
-  const isVisit = item.kind === 'visit';
-  const theme = isVisit ? (STATUS_THEME[item.visit.status] || STATUS_THEME.예정) : STATUS_THEME.예정;
+function TimelineRow({ item, isNextUp, onComplete, onCancel, onOpenDetail }) {
+  const theme = STATUS_THEME[item.visit.status] || STATUS_THEME.예정;
   const accent = isNextUp ? '#0369a1' : theme.accent;
 
   return (
@@ -291,41 +341,53 @@ function TimelineRow({ item, isNextUp, onComplete, onCancel }) {
 
       {/* 우측 카드 */}
       <div style={{ flex: 1, paddingBottom: 10 }}>
-        {isVisit
-          ? <VisitCard visit={item.visit} theme={theme} isNextUp={isNextUp} onComplete={onComplete} onCancel={onCancel} />
-          : <DoctorCard doctor={item.doctor} location={item.location} isNextUp={isNextUp} />}
+        <VisitCard
+          visit={item.visit}
+          theme={theme}
+          isNextUp={isNextUp}
+          onComplete={onComplete}
+          onCancel={onCancel}
+          onOpenDetail={onOpenDetail}
+        />
       </div>
     </div>
   );
 }
 
-function VisitCard({ visit, theme, isNextUp, onComplete, onCancel }) {
+function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail }) {
   const isPlanned = visit.status === '예정';
+  const isPersonal = visit.category === 'personal' || !visit.doctor_name;
   return (
-    <div style={{
-      padding: '12px 14px', borderRadius: 12,
-      background: 'var(--bg-1)',
-      border: `1px solid ${isNextUp ? theme.accent : 'var(--bd-s)'}`,
-      boxShadow: isNextUp ? `0 4px 14px ${theme.accent}22` : '0 1px 4px rgba(0,0,0,.03)',
-    }}>
+    <div
+      onClick={() => !isPersonal && onOpenDetail?.(visit)}
+      style={{
+        padding: '12px 14px', borderRadius: 12,
+        background: 'var(--bg-1)',
+        border: `1px solid ${isNextUp ? theme.accent : 'var(--bd-s)'}`,
+        boxShadow: isNextUp ? `0 4px 14px ${theme.accent}22` : '0 1px 4px rgba(0,0,0,.03)',
+        cursor: isPersonal ? 'default' : 'pointer',
+      }}
+    >
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
         <span style={{
           padding: '2px 7px', borderRadius: 5,
           fontSize: 9, fontWeight: 800, letterSpacing: '.05em',
-          background: isNextUp ? '#0369a1' : theme.bg,
-          color: isNextUp ? '#fff' : theme.c,
+          background: isPersonal ? 'var(--ac-d)' : (isNextUp ? '#0369a1' : theme.bg),
+          color: isPersonal ? 'var(--ac)' : (isNextUp ? '#fff' : theme.c),
           fontFamily: "'Manrope'",
         }}>
-          {isNextUp ? 'NEXT UP' : theme.label}
+          {isPersonal ? 'PERSONAL' : (isNextUp ? 'NEXT UP' : theme.label)}
         </span>
-        {isNextUp && <span style={{ fontSize: 10, color: '#b91c1c', fontWeight: 700 }}>곧 시작</span>}
+        {!isPersonal && isNextUp && <span style={{ fontSize: 10, color: '#b91c1c', fontWeight: 700 }}>곧 시작</span>}
       </div>
       <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--t1)', marginBottom: 3 }}>
-        {visit.doctor_name}
+        {isPersonal ? (visit.title || '내 일정') : visit.doctor_name}
       </div>
-      <div style={{ fontSize: 11, color: 'var(--t3)' }}>
-        {visit.hospital_name} · {visit.department}
-      </div>
+      {!isPersonal && (
+        <div style={{ fontSize: 11, color: 'var(--t3)' }}>
+          {visit.hospital_name} · {visit.department}
+        </div>
+      )}
       {visit.product && (
         <div style={{
           display: 'inline-block', marginTop: 6,
@@ -334,30 +396,49 @@ function VisitCard({ visit, theme, isNextUp, onComplete, onCancel }) {
           🏷 {visit.product}
         </div>
       )}
-      {visit.notes && (
-        <div style={{
-          fontSize: 11, color: 'var(--t2)', marginTop: 4, lineHeight: 1.45,
-          padding: '6px 8px', background: 'var(--bg-2)', borderRadius: 6,
-        }}>
-          {visit.notes}
-        </div>
-      )}
-      {isPlanned && (
+      {(() => {
+        const aiDiscussion = visit.ai_summary?.summary?.['논의내용'];
+        const display = (aiDiscussion && String(aiDiscussion).trim()) || visit.notes;
+        if (!display) return null;
+        return (
+          <div style={{
+            fontSize: 11, color: 'var(--t2)', marginTop: 4, lineHeight: 1.45,
+            padding: '6px 8px', background: 'var(--bg-2)', borderRadius: 6,
+          }}>
+            {aiDiscussion && (
+              <span style={{
+                display: 'inline-block', marginRight: 5, padding: '1px 5px',
+                borderRadius: 3, fontSize: 9, fontWeight: 800,
+                background: 'var(--ac-d)', color: 'var(--ac)',
+                verticalAlign: 'middle',
+              }}>AI</span>
+            )}
+            {display}
+          </div>
+        );
+      })()}
+      {isPlanned && !isPersonal && (
         <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
-          <button onClick={() => onComplete?.(visit)} style={{
-            flex: 1, padding: '8px 10px', borderRadius: 8,
-            background: 'var(--ac)', color: '#fff', border: 'none',
-            fontSize: 12, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4,
-          }}>
+          <button
+            onClick={(e) => { e.stopPropagation(); onComplete?.(visit); }}
+            style={{
+              flex: 1, padding: '8px 10px', borderRadius: 8,
+              background: 'var(--ac)', color: '#fff', border: 'none',
+              fontSize: 12, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4,
+            }}
+          >
             <CheckCircle size={13} />
-            Check In
+            방문결과메모
           </button>
-          <button onClick={() => onCancel?.(visit)} style={{
-            padding: '8px 10px', borderRadius: 8,
-            background: 'var(--bg-2)', color: 'var(--rd)',
-            border: '1px solid var(--bd-s)', cursor: 'pointer',
-          }}>
+          <button
+            onClick={(e) => { e.stopPropagation(); onCancel?.(visit); }}
+            style={{
+              padding: '8px 10px', borderRadius: 8,
+              background: 'var(--bg-2)', color: 'var(--rd)',
+              border: '1px solid var(--bd-s)', cursor: 'pointer',
+            }}
+          >
             <Trash2 size={12} />
           </button>
         </div>
@@ -366,33 +447,3 @@ function VisitCard({ visit, theme, isNextUp, onComplete, onCancel }) {
   );
 }
 
-function DoctorCard({ doctor, location, isNextUp }) {
-  const gc = GC[doctor.visit_grade] || GC.B;
-  return (
-    <div style={{
-      padding: '12px 14px', borderRadius: 12,
-      background: 'var(--bg-2)',
-      border: `1px dashed ${isNextUp ? 'var(--ac)' : 'var(--bd-s)'}`,
-    }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-        <span style={{
-          fontSize: 9, fontWeight: 800, color: 'var(--t3)', letterSpacing: '.05em',
-          fontFamily: 'Manrope',
-        }}>진료 예정</span>
-        {doctor.visit_grade && (
-          <span style={{
-            padding: '1px 5px', borderRadius: 4, fontSize: 9, fontWeight: 700,
-            fontFamily: "'JetBrains Mono'", background: gc.bg, color: gc.c,
-          }}>{doctor.visit_grade}</span>
-        )}
-      </div>
-      <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--t1)', marginBottom: 2 }}>
-        {doctor.name}
-      </div>
-      <div style={{ fontSize: 11, color: 'var(--t3)' }}>
-        {doctor.hospital_name} · {doctor.department}
-        {location && <> · <MapPin size={9} style={{ display: 'inline', verticalAlign: -1 }} /> {location}</>}
-      </div>
-    </div>
-  );
-}

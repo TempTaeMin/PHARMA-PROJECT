@@ -125,7 +125,8 @@ export function useMonthCalendar(year, month) {
       : slot === 'afternoon' ? '13:00:00'
       : slot === 'evening'   ? '18:00:00'
       :                        '09:00:00';
-    const dt = new Date(`${dateStr}T${time}`).toISOString();
+    // 로컬 시각 그대로 전송 (toISOString()은 UTC 변환되어 왕복 시 시간대 밀림)
+    const dt = `${dateStr}T${time}`;
     const payload = { doctor_id: doctorId, visit_date: dt, status: '예정' };
     if (notes) payload.notes = notes;
     await visitApi.create(doctorId, payload);

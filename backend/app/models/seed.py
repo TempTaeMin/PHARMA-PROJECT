@@ -1,8 +1,9 @@
 """DB 초기 시드 데이터"""
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from app.models.database import Hospital, Doctor, DoctorSchedule, VisitLog
+from app.models.database import Hospital, Doctor, DoctorSchedule, VisitLog, MemoTemplate
 from datetime import datetime, timedelta
+import json
 import logging
 
 logger = logging.getLogger(__name__)
@@ -64,8 +65,35 @@ SEED_DOCTORS = [
 ]
 
 
+DEFAULT_MEMO_TEMPLATE_FIELDS = [
+    "방문일시", "교수명", "병원명", "논의내용",
+    "결과", "다음 액션", "논의 제품", "면담시간",
+]
+
+
+async def seed_memo_templates(db: AsyncSession):
+    """기본 메모 템플릿(user_id=1)이 없으면 생성."""
+    existing = (
+        await db.execute(select(MemoTemplate).where(MemoTemplate.user_id == 1))
+    ).scalars().first()
+    if existing:
+        return
+    db.add(
+        MemoTemplate(
+            user_id=1,
+            name="기본 방문일지",
+            fields=json.dumps(DEFAULT_MEMO_TEMPLATE_FIELDS, ensure_ascii=False),
+            prompt_addon=None,
+            is_default=True,
+        )
+    )
+    await db.commit()
+    logger.info("기본 메모 템플릿 시드 완료")
+
+
 async def seed_database(db: AsyncSession):
     """DB에 초기 데이터가 없으면 시드 데이터를 삽입합니다."""
+    await seed_memo_templates(db)
     result = await db.execute(select(Hospital))
     existing = result.scalars().all()
     existing_codes = {h.code for h in existing}

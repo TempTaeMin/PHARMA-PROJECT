@@ -111,16 +111,18 @@ class ScheduleChange(Base):
 
 
 class VisitLog(Base):
-    """방문 기록"""
+    """방문 기록 / 개인 일정"""
     __tablename__ = "visit_logs"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=False)
+    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=True)
     visit_date = Column(DateTime, nullable=False)
     status = Column(String(20))  # "성공", "부재", "거절", "예정"
     product = Column(String(200))  # 디테일링 제품
     notes = Column(Text)  # 방문 메모
     next_action = Column(Text)  # 다음 액션
+    category = Column(String(20), default='professor')  # 'professor' | 'personal' | 'etc'
+    title = Column(String(200))  # 개인 일정 제목 등
     created_at = Column(DateTime, default=datetime.utcnow)
 
     doctor = relationship("Doctor", back_populates="visit_logs")
@@ -155,11 +157,16 @@ class AcademicEvent(Base):
     location = Column(String(300))
     url = Column(String(500))
     description = Column(Text)
-    source = Column(String(50), default="healthmedia")  # "healthmedia" | "kma_edu"
+    source = Column(String(50), default="kma_edu")  # "kma_edu"
     classification_status = Column(String(20), default="unclassified")  # "kma" | "mapped" | "keyword" | "unclassified"
     external_key = Column(String(100), unique=True, index=True)
     kma_category = Column(String(200))  # KMA 임상의학 원본 (콤마 구분, 예: "정형외과, 마취통증의학과")
     kma_eduidx = Column(String(50), index=True)  # KMA 상세 페이지 ID
+    sub_organizer = Column(String(300))  # 주관 (공동/하위 기관)
+    region = Column(String(100))  # 지역 (예: 서울, 경기)
+    event_code = Column(String(100))  # 교육코드 (KMA)
+    detail_url_external = Column(String(500))  # 비고에 기재된 외부 상세 URL (학회 자체 페이지 등)
+    lectures_json = Column(Text)  # 강의 프로그램 JSON: [{time,title,lecturer,affiliation}]
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
@@ -179,6 +186,42 @@ class AcademicEventDepartment(Base):
     department = Column(String(100), nullable=False, index=True)
 
     event = relationship("AcademicEvent", back_populates="departments")
+
+
+class MemoTemplate(Base):
+    """메모/회의록 정리용 템플릿 (AI 프롬프트 구성)."""
+    __tablename__ = "memo_templates"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, default=1, nullable=False)  # 인증 도입 전까지 1
+    name = Column(String(200), nullable=False)
+    fields = Column(Text, nullable=False)  # JSON array of field names
+    prompt_addon = Column(Text)
+    is_default = Column(Boolean, default=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+
+class VisitMemo(Base):
+    """MR 방문 메모/회의록 (raw + AI 정리본)."""
+    __tablename__ = "visits_memo"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, default=1, nullable=False)
+    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=True)
+    visit_log_id = Column(Integer, ForeignKey("visit_logs.id"), nullable=True)
+    template_id = Column(Integer, ForeignKey("memo_templates.id"), nullable=True)
+    visit_date = Column(DateTime)
+    memo_type = Column(String(20), default="visit")  # "visit" | "meeting" | "note"
+    title = Column(String(300))
+    raw_memo = Column(Text, nullable=False)
+    ai_summary = Column(Text)  # JSON string
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    doctor = relationship("Doctor")
+    visit_log = relationship("VisitLog")
+    template = relationship("MemoTemplate")
 
 
 class CrawlLog(Base):

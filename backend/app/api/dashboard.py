@@ -1,13 +1,14 @@
 """대시보드 API — 내 교수 스케줄 + 방문현황 요약"""
+import json
 from calendar import monthrange
 
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, func
+from sqlalchemy import select, func, or_
 from sqlalchemy.orm import selectinload
 from datetime import datetime, timedelta
 from app.models.connection import get_db
-from app.models.database import Doctor, Hospital, VisitLog, ScheduleChange
+from app.models.database import Doctor, Hospital, VisitLog, ScheduleChange, VisitMemo
 
 router = APIRouter(prefix="/api/dashboard", tags=["대시보드"])
 
@@ -159,11 +160,15 @@ async def my_visits(
     end = datetime(year, month, last_day, 23, 59, 59)
 
     query = (
-        select(VisitLog, Doctor, Hospital)
-        .join(Doctor, VisitLog.doctor_id == Doctor.id)
+        select(VisitLog, Doctor, Hospital, VisitMemo)
+        .outerjoin(Doctor, VisitLog.doctor_id == Doctor.id)
         .outerjoin(Hospital, Doctor.hospital_id == Hospital.id)
+        .outerjoin(VisitMemo, VisitMemo.visit_log_id == VisitLog.id)
         .where(
-            Doctor.visit_grade.in_(["A", "B", "C"]),
+            or_(
+                Doctor.visit_grade.in_(["A", "B", "C"]),
+                VisitLog.category == "personal",
+            ),
             VisitLog.visit_date >= start,
             VisitLog.visit_date <= end,
         )
@@ -171,19 +176,30 @@ async def my_visits(
     )
     rows = (await db.execute(query)).all()
 
+    def _parse_ai(raw):
+        if not raw:
+            return None
+        try:
+            return json.loads(raw)
+        except (TypeError, ValueError):
+            return None
+
     return [
         {
             "id": v.id,
             "doctor_id": v.doctor_id,
-            "doctor_name": d.name,
+            "doctor_name": d.name if d else None,
             "hospital_name": h.name if h else None,
-            "department": d.department,
-            "visit_grade": d.visit_grade,
+            "department": d.department if d else None,
+            "visit_grade": d.visit_grade if d else None,
+            "category": v.category,
+            "title": v.title,
             "visit_date": v.visit_date.isoformat() if v.visit_date else None,
             "status": v.status,
             "product": v.product,
             "notes": v.notes,
             "next_action": v.next_action,
+            "ai_summary": _parse_ai(m.ai_summary) if m else None,
         }
-        for v, d, h in rows
+        for v, d, h, m in rows
     ]

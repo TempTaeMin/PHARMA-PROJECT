@@ -1,9 +1,5 @@
-import { useMemo, useState } from 'react';
-import { ArrowLeft, Calendar, Check, MapPin } from 'lucide-react';
-
-// 30분 단위 슬롯 정의
-const MORNING_SLOTS = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30'];
-const AFTERNOON_SLOTS = ['13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30'];
+import { useMemo, useState, useEffect } from 'react';
+import { ArrowLeft, Calendar, Check, ChevronUp, ChevronDown, MapPin } from 'lucide-react';
 
 const GRADE_CHIP = {
   A: { bg: '#ffdad6', c: '#ba1a1a' },
@@ -11,73 +7,83 @@ const GRADE_CHIP = {
   C: { bg: '#dae2ff', c: '#0056d2' },
 };
 
+const DOW_LABELS = ['일', '월', '화', '수', '목', '금', '토'];
+const SLOT_LABELS = { morning: '오전', afternoon: '오후', evening: '야간' };
+const MINUTE_STEP = 10;
+
 /**
  * 시간 선택 풀스크린.
- * 교수 진료시간(doctor.schedules) 기반으로 30분 단위 슬롯을 활성/비활성화.
- * 사전 메모 textarea 포함.
+ * 시/분 스피너 타임피커 (24H). 진료시간이 아닌 시각도 자유롭게 선택 가능.
+ * 해당 요일 정규 진료시간이 있으면 참고용 힌트로만 표시.
  */
 export default function SelectMeetingTime({
   open, doctor, initialDate, todayStr, onBack, onConfirm,
 }) {
   const [dateStr, setDateStr] = useState(initialDate || todayStr);
   const [dateEdit, setDateEdit] = useState(false);
-  const [selectedTime, setSelectedTime] = useState(null);
+  const [hour, setHour] = useState(9);
+  const [minute, setMinute] = useState(0);
   const [notes, setNotes] = useState('');
   const [saving, setSaving] = useState(false);
 
-  // 선택한 날짜의 요일 → 교수가 오전/오후 진료하는지
-  const availability = useMemo(() => {
-    if (!doctor || !dateStr) return { morningActive: false, afternoonActive: false };
+  useEffect(() => {
+    if (!open) return;
+    setDateStr(initialDate || todayStr);
+    setDateEdit(false);
+    setHour(9);
+    setMinute(0);
+    setNotes('');
+  }, [open, initialDate, todayStr]);
+
+  // 참고용 — 해당 요일 정규 진료시간
+  const scheduleHint = useMemo(() => {
+    if (!doctor || !dateStr) return null;
     const d = new Date(dateStr + 'T00:00:00');
-    const dow = (d.getDay() + 6) % 7; // 0=월 ~ 6=일
+    const dow = (d.getDay() + 6) % 7; // 0=월
 
-    // 해당 날짜 override 우선
     const overrides = (doctor.date_schedules || []).filter(ds => ds.schedule_date === dateStr);
-    const slotsFromOverride = overrides
-      .filter(ov => ov.status !== '휴진' && ov.status !== '')
-      .map(ov => ov.time_slot);
-
     if (overrides.length > 0) {
-      // override가 있으면 override만 인정 (휴진이 포함되면 해당 슬롯 비활성)
-      const closed = new Set(overrides.filter(ov => ov.status === '휴진').map(ov => ov.time_slot));
+      const openOv = overrides.filter(ov => ov.status && ov.status !== '휴진');
+      if (openOv.length === 0) return { closed: true };
       return {
-        morningActive: slotsFromOverride.includes('morning') && !closed.has('morning'),
-        afternoonActive: slotsFromOverride.includes('afternoon') && !closed.has('afternoon'),
+        entries: openOv.map(ov => ({
+          slot: SLOT_LABELS[ov.time_slot] || '',
+          range: '',
+          status: ov.status,
+        })),
         overridden: true,
       };
     }
 
     const weekly = (doctor.schedules || []).filter(s => s.day_of_week === dow);
+    if (weekly.length === 0) return null;
     return {
-      morningActive: weekly.some(s => s.time_slot === 'morning'),
-      afternoonActive: weekly.some(s => s.time_slot === 'afternoon'),
-      overridden: false,
+      entries: weekly.map(s => ({
+        slot: SLOT_LABELS[s.time_slot] || '',
+        range: formatRange(s.start_time, s.end_time),
+      })),
     };
   }, [doctor, dateStr]);
-
-  // 슬롯 비활성(과거 시각) 계산
-  const pastCheck = (time) => {
-    if (dateStr !== todayStr) return false;
-    const now = new Date();
-    const [h, m] = time.split(':').map(Number);
-    const slotMin = h * 60 + m;
-    const nowMin = now.getHours() * 60 + now.getMinutes();
-    return slotMin < nowMin;
-  };
 
   if (!open || !doctor) return null;
 
   const dateObj = new Date(dateStr + 'T00:00:00');
-  const dowLabel = ['일', '월', '화', '수', '목', '금', '토'][dateObj.getDay()];
+  const dowLabel = DOW_LABELS[dateObj.getDay()];
+
+  const incH = () => setHour((hour + 1) % 24);
+  const decH = () => setHour((hour + 23) % 24);
+  const incM = () => setMinute((minute + MINUTE_STEP) % 60);
+  const decM = () => setMinute((minute - MINUTE_STEP + 60) % 60);
+
+  const timeHHMM = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
 
   const handleConfirm = async () => {
-    if (!selectedTime) return;
     setSaving(true);
     try {
       await onConfirm({
         doctor,
         dateStr,
-        timeHHMM: selectedTime,
+        timeHHMM,
         notes: notes.trim() || null,
       });
     } catch (e) {
@@ -107,57 +113,76 @@ export default function SelectMeetingTime({
         </button>
         <div style={{
           flex: 1, fontFamily: 'Manrope', fontSize: 18, fontWeight: 800,
-          color: 'var(--t1)',
+          color: 'var(--t1)', textAlign: 'center', paddingRight: 36,
         }}>
-          시간 선택
+          일정 상세 설정
         </div>
       </div>
 
       {/* Body */}
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 140px' }}>
-        {/* 교수 카드 */}
+        {/* 의료진 정보 */}
+        <SectionLabel>의료진 정보</SectionLabel>
         <div style={{
-          padding: '14px 16px', borderRadius: 14,
+          padding: '18px 16px', borderRadius: 14,
           background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
-          marginBottom: 16,
+          marginBottom: 18, textAlign: 'center',
         }}>
           <div style={{
-            fontSize: 10, fontWeight: 700, color: 'var(--t3)', letterSpacing: '.05em',
-            marginBottom: 4,
+            fontSize: 10, fontWeight: 700, color: 'var(--ac)', letterSpacing: '.05em',
+            marginBottom: 6,
           }}>
             선택된 의료진
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
-            <div style={{ fontSize: 18, fontWeight: 800, color: 'var(--t1)' }}>
-              {doctor.name} 교수
-            </div>
+          <div style={{
+            fontFamily: 'Manrope', fontSize: 22, fontWeight: 800,
+            color: 'var(--t1)', marginBottom: 8,
+          }}>
+            {doctor.name} 교수
+          </div>
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 8,
+            justifyContent: 'center', flexWrap: 'wrap',
+          }}>
+            {doctor.department && (
+              <span style={{
+                padding: '4px 10px', borderRadius: 14,
+                background: 'var(--bg-2)', color: 'var(--t2)',
+                fontSize: 11, fontWeight: 700,
+              }}>{doctor.department}</span>
+            )}
+            <span style={{ fontSize: 12, color: 'var(--t3)' }}>
+              {doctor.hospital_name}
+            </span>
             {doctor.visit_grade && (
               <span style={{
                 padding: '2px 7px', borderRadius: 5,
-                fontSize: 9, fontWeight: 700, fontFamily: "'JetBrains Mono'",
+                fontSize: 9, fontWeight: 800, fontFamily: "'JetBrains Mono'",
                 ...(GRADE_CHIP[doctor.visit_grade] || {}),
               }}>{doctor.visit_grade}</span>
             )}
           </div>
-          <div style={{ fontSize: 12, color: 'var(--t3)' }}>
-            {doctor.hospital_name} · {doctor.department}
-            {location && <> · <MapPin size={10} style={{ display: 'inline', verticalAlign: -1 }}/> {location}</>}
-          </div>
+          {location && (
+            <div style={{
+              marginTop: 6, fontSize: 11, color: 'var(--t3)',
+              display: 'flex', alignItems: 'center', gap: 4, justifyContent: 'center',
+            }}>
+              <MapPin size={10} /> {location}
+            </div>
+          )}
         </div>
 
-        {/* 날짜 */}
+        {/* 방문 일정 */}
+        <SectionLabel>방문 일정</SectionLabel>
         <div style={{
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          marginBottom: 12,
+          padding: '14px 16px', borderRadius: 14,
+          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+          marginBottom: 18,
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10,
         }}>
-          <div>
-            <div style={{
-              fontSize: 11, fontWeight: 700, color: 'var(--t3)', letterSpacing: '.05em',
-              marginBottom: 3,
-            }}>
-              예약 희망일
-            </div>
-            <div style={{ fontSize: 17, fontWeight: 800, color: 'var(--t1)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <Calendar size={18} style={{ color: 'var(--ac)' }} />
+            <div style={{ fontSize: 15, fontWeight: 800, color: 'var(--t1)' }}>
               {dateObj.getFullYear()}년 {dateObj.getMonth() + 1}월 {dateObj.getDate()}일 ({dowLabel})
             </div>
           </div>
@@ -169,10 +194,8 @@ export default function SelectMeetingTime({
               border: '1px solid var(--bd-s)',
               fontSize: 12, fontWeight: 700, cursor: 'pointer',
               fontFamily: 'inherit',
-              display: 'flex', alignItems: 'center', gap: 5,
             }}
           >
-            <Calendar size={13} />
             날짜 변경
           </button>
         </div>
@@ -180,68 +203,90 @@ export default function SelectMeetingTime({
           <input
             type="date"
             value={dateStr}
-            onChange={e => { setDateStr(e.target.value); setSelectedTime(null); }}
+            onChange={e => setDateStr(e.target.value)}
             style={{
               width: '100%', padding: '11px 13px', borderRadius: 10,
               border: '1px solid var(--bd)', background: 'var(--bg-1)',
               fontSize: 14, fontFamily: 'inherit', color: 'var(--t1)',
-              marginBottom: 14,
+              marginTop: -12, marginBottom: 18, boxSizing: 'border-box',
             }}
           />
         )}
 
-        {/* 오전 슬롯 */}
-        <SlotSection
-          icon="☀"
-          label="오전"
-          slots={MORNING_SLOTS}
-          active={availability.morningActive}
-          selected={selectedTime}
-          onSelect={setSelectedTime}
-          pastCheck={pastCheck}
-        />
-
-        {/* 오후 슬롯 */}
-        <SlotSection
-          icon="🌤"
-          label="오후"
-          slots={AFTERNOON_SLOTS}
-          active={availability.afternoonActive}
-          selected={selectedTime}
-          onSelect={setSelectedTime}
-          pastCheck={pastCheck}
-        />
-
-        {availability.overridden && (
+        {/* 시간 설정 */}
+        <SectionLabel>시간 설정</SectionLabel>
+        <div style={{
+          padding: '22px 16px 20px', borderRadius: 14,
+          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+          marginBottom: scheduleHint ? 10 : 18,
+        }}>
           <div style={{
-            marginTop: 6, padding: '9px 12px', borderRadius: 8,
-            background: '#fef3c7', color: '#78350f', fontSize: 11,
-            border: '1px solid #fcd34d',
+            display: 'flex', alignItems: 'center', gap: 14,
+            justifyContent: 'center',
           }}>
-            ⚠ 이 날짜는 교수 일정 변경이 있습니다. 진료 가능한 시간대만 활성화됐어요.
+            <SpinnerCol value={hour} onInc={incH} onDec={decH} />
+            <div style={{
+              fontFamily: 'Manrope', fontSize: 38, fontWeight: 800,
+              color: 'var(--t2)', lineHeight: 1, paddingBottom: 4,
+            }}>:</div>
+            <SpinnerCol value={minute} onInc={incM} onDec={decM} />
+            <span style={{
+              marginLeft: 10, padding: '4px 9px', borderRadius: 6,
+              background: 'var(--ac-d)', color: 'var(--ac)',
+              fontSize: 10, fontWeight: 800, fontFamily: 'Manrope',
+              letterSpacing: '.04em',
+            }}>24H</span>
           </div>
+        </div>
+
+        {/* 진료시간 힌트 */}
+        {scheduleHint && (
+          scheduleHint.closed ? (
+            <div style={{
+              marginBottom: 18, padding: '10px 12px', borderRadius: 10,
+              background: '#fee2e2', border: '1px solid #fca5a5',
+              fontSize: 11, color: '#7f1d1d',
+            }}>
+              ⚠ 이 날은 해당 교수의 정규 진료가 없습니다. 자유롭게 시간을 선택할 수 있습니다.
+            </div>
+          ) : scheduleHint.entries && scheduleHint.entries.length > 0 ? (
+            <div style={{
+              marginBottom: 18, padding: '10px 12px', borderRadius: 10,
+              background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
+              fontSize: 11, color: 'var(--t2)', lineHeight: 1.5,
+            }}>
+              <span style={{ fontWeight: 800, color: 'var(--t3)', marginRight: 6 }}>
+                {scheduleHint.overridden ? '이 날짜 진료' : '정규 진료'}
+              </span>
+              {scheduleHint.entries.map((e, i) => (
+                <span key={i} style={{ marginRight: 10 }}>
+                  {e.slot}{e.range ? ` ${e.range}` : ''}{e.status ? ` (${e.status})` : ''}
+                </span>
+              ))}
+            </div>
+          ) : null
         )}
 
-        {/* 사전 메모 */}
-        <div style={{ marginTop: 20 }}>
-          <div style={{
-            fontSize: 11, fontWeight: 700, color: 'var(--t3)', letterSpacing: '.05em',
-            marginBottom: 6,
-          }}>
-            사전 메모 (선택)
-          </div>
-          <textarea
-            value={notes}
-            onChange={e => setNotes(e.target.value)}
-            rows={3}
-            placeholder="방문 전 준비사항, 언급할 제품/포인트 등"
-            style={{
-              width: '100%', padding: '11px 13px', borderRadius: 10,
-              border: '1px solid var(--bd)', background: 'var(--bg-1)',
-              fontSize: 13, fontFamily: 'inherit', color: 'var(--t1)',
-              outline: 'none', resize: 'vertical', boxSizing: 'border-box',
-            }}
-          />
+        {/* 방문 사전 메모 */}
+        <SectionLabel>방문 사전 메모</SectionLabel>
+        <textarea
+          value={notes}
+          onChange={e => setNotes(e.target.value)}
+          rows={4}
+          maxLength={500}
+          placeholder="미팅 목적이나 준비사항을 입력하세요..."
+          style={{
+            width: '100%', padding: '13px 14px', borderRadius: 14,
+            border: '1px solid var(--bd-s)', background: 'var(--bg-1)',
+            fontSize: 13, fontFamily: 'inherit', color: 'var(--t1)',
+            outline: 'none', resize: 'vertical', boxSizing: 'border-box',
+            lineHeight: 1.5,
+          }}
+        />
+        <div style={{
+          marginTop: 4, fontSize: 10, color: 'var(--t3)', textAlign: 'right',
+        }}>
+          {notes.length} / 500
         </div>
       </div>
 
@@ -255,82 +300,81 @@ export default function SelectMeetingTime({
       }}>
         <button
           onClick={handleConfirm}
-          disabled={!selectedTime || saving}
+          disabled={saving}
           style={{
             width: '100%', maxWidth: 520, padding: '15px 20px', borderRadius: 12,
-            background: selectedTime ? 'var(--ac)' : 'var(--bg-h)',
+            background: 'var(--ac)',
             color: '#fff', border: 'none',
             fontSize: 15, fontWeight: 800, fontFamily: 'inherit',
-            cursor: selectedTime ? 'pointer' : 'not-allowed',
+            cursor: saving ? 'not-allowed' : 'pointer',
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
             opacity: saving ? .7 : 1,
           }}
         >
-          <Check size={18} />
-          {saving ? '저장 중…' : selectedTime ? `${selectedTime} 으로 완료` : '시간을 선택하세요'}
+          {saving ? '저장 중…' : (
+            <>
+              일정 등록 완료
+              <Check size={18} />
+            </>
+          )}
         </button>
       </div>
     </div>
   );
 }
 
-function SlotSection({ icon, label, slots, active, selected, onSelect, pastCheck }) {
+function SectionLabel({ children }) {
   return (
-    <div style={{ marginBottom: 16 }}>
-      <div style={{
-        display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8,
-      }}>
-        <span style={{ fontSize: 14 }}>{icon}</span>
-        <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--t1)' }}>{label}</span>
-      </div>
-      <div style={{
-        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8,
-      }}>
-        {slots.map(time => {
-          const past = pastCheck(time);
-          const disabled = !active || past;
-          const isSelected = selected === time;
-          return (
-            <button
-              key={time}
-              disabled={disabled}
-              onClick={() => onSelect(time)}
-              style={{
-                padding: '12px 6px', borderRadius: 10,
-                background: isSelected ? 'var(--ac)'
-                  : disabled ? 'var(--bg-2)'
-                  : 'var(--bg-1)',
-                color: isSelected ? '#fff'
-                  : disabled ? 'var(--t3)'
-                  : 'var(--t1)',
-                border: `1.5px solid ${isSelected ? 'var(--ac)' : disabled ? 'var(--bd-s)' : 'var(--bd-s)'}`,
-                fontFamily: 'inherit', cursor: disabled ? 'not-allowed' : 'pointer',
-                opacity: disabled ? .55 : 1,
-                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2,
-              }}
-            >
-              <span style={{
-                fontSize: 14, fontWeight: 800,
-                fontFamily: "'JetBrains Mono'",
-              }}>{time}</span>
-              <span style={{
-                fontSize: 9, fontWeight: 600,
-                color: isSelected ? '#fff' : disabled ? 'var(--t3)' : 'var(--t3)',
-                opacity: isSelected ? .9 : 1,
-              }}>
-                {isSelected ? '선택됨' : disabled ? (past ? '지난 시각' : '미감') : '예약가능'}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+    <div style={{
+      fontSize: 11, fontWeight: 800, color: 'var(--t3)',
+      letterSpacing: '.04em', marginBottom: 8, marginLeft: 2,
+    }}>
+      {children}
     </div>
   );
+}
+
+function SpinnerCol({ value, onInc, onDec }) {
+  return (
+    <div style={{
+      display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2,
+    }}>
+      <button onClick={onInc} style={spinBtn} aria-label="증가">
+        <ChevronUp size={22} />
+      </button>
+      <div style={{
+        fontFamily: 'Manrope', fontSize: 46, fontWeight: 800,
+        color: 'var(--t1)', minWidth: 76, textAlign: 'center',
+        lineHeight: 1.1,
+        fontVariantNumeric: 'tabular-nums',
+      }}>
+        {String(value).padStart(2, '0')}
+      </div>
+      <button onClick={onDec} style={spinBtn} aria-label="감소">
+        <ChevronDown size={22} />
+      </button>
+    </div>
+  );
+}
+
+function formatRange(start, end) {
+  if (!start && !end) return '';
+  const s = (start || '').slice(0, 5);
+  const e = (end || '').slice(0, 5);
+  if (s && e) return `${s}-${e}`;
+  return s || e || '';
 }
 
 const iconBtn = {
   width: 36, height: 36, borderRadius: 10,
   background: 'transparent', border: 'none',
   cursor: 'pointer', color: 'var(--t1)',
+  display: 'flex', alignItems: 'center', justifyContent: 'center',
+};
+
+const spinBtn = {
+  width: 44, height: 32, borderRadius: 8,
+  background: 'transparent', border: 'none',
+  cursor: 'pointer', color: 'var(--t3)',
   display: 'flex', alignItems: 'center', justifyContent: 'center',
 };

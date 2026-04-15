@@ -91,6 +91,47 @@ async def browse_doctors(
     }
 
 
+@router.get("/search-doctors", summary="전 병원 교수 이름 검색")
+async def search_doctors_global(
+    q: str = Query("", description="교수 이름 검색어"),
+    limit: int = Query(50, ge=1, le=200),
+    db: AsyncSession = Depends(get_db),
+):
+    """모든 병원의 교수를 이름으로 검색합니다. 병원 선택 화면의 통합 검색용."""
+    q = (q or "").strip()
+    if not q:
+        return {"query": q, "count": 0, "doctors": []}
+
+    query = (
+        select(Doctor, Hospital)
+        .join(Hospital, Doctor.hospital_id == Hospital.id)
+        .where(Doctor.is_active == True, Doctor.name.contains(q))
+        .order_by(Hospital.name, Doctor.department, Doctor.name)
+        .limit(limit)
+    )
+    rows = (await db.execute(query)).all()
+
+    return {
+        "query": q,
+        "count": len(rows),
+        "doctors": [
+            {
+                "id": d.id,
+                "name": d.name,
+                "department": d.department,
+                "position": d.position or "",
+                "specialty": d.specialty or "",
+                "external_id": d.external_id or "",
+                "profile_url": d.profile_url or "",
+                "visit_grade": d.visit_grade,
+                "hospital_code": h.code,
+                "hospital_name": h.name,
+            }
+            for d, h in rows
+        ],
+    }
+
+
 @router.post("/sync/{hospital_code}", summary="병원 교수 목록 크롤링 → DB 저장")
 async def sync_hospital(
     hospital_code: str,
