@@ -1,0 +1,727 @@
+{
+  "hospital_code": "NCC",
+  "hospital_name": "국립암센터",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "유헌",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-10333",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽호신",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-12410",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김학균",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-10337",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류준선",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-10523",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성원",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-10204",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송기훈",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-13155",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신상훈",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-10191",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유석",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-10469",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주용",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-10617",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤탁",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-10816",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유창환",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-12431",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수경",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-12696",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도윤식",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-14243",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정헌",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-15056",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "왕규창",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-51881",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종호",
+      "department": "뇌척추종양센터",
+      "external_id": "NCC-52134",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준아",
+      "department": "위암센터",
+      "external_id": "NCC-13156",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강현귀",
+      "department": "위암센터",
+      "external_id": "NCC-11162",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준혁",
+      "department": "위암센터",
+      "external_id": "NCC-11738",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종웅",
+      "department": "위암센터",
+      "external_id": "NCC-13152",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현진",
+      "department": "전립선암센터",
+      "external_id": "NCC-10827",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박미림",
+      "department": "전립선암센터",
+      "external_id": "NCC-13150",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종목",
+      "department": "폐암센터",
+      "external_id": "NCC-10185",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문수",
+      "department": "폐암센터",
+      "external_id": "NCC-10582",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종열",
+      "department": "폐암센터",
+      "external_id": "NCC-10957",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영주",
+      "department": "폐암센터",
+      "external_id": "NCC-11889",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영일",
+      "department": "폐암센터",
+      "external_id": "NCC-12758",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진호",
+      "department": "폐암센터",
+      "external_id": "NCC-13016",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현성",
+      "department": "폐암센터",
+      "external_id": "NCC-13959",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송재원",
+      "department": "폐암센터",
+      "external_id": "NCC-13894",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안병철",
+      "department": "폐암센터",
+      "external_id": "NCC-14076",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권혜란",
+      "department": "폐암센터",
+      "external_id": "NCC-14591",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용우",
+      "department": "폐암센터",
+      "external_id": "NCC-53071",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상재",
+      "department": "간암센터",
+      "external_id": "NCC-10122",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우진",
+      "department": "간암센터",
+      "external_id": "NCC-10581",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성훈",
+      "department": "간암센터",
+      "external_id": "NCC-10514",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한성식",
+      "department": "간암센터",
+      "external_id": "NCC-10958",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우상명",
+      "department": "간암센터",
+      "external_id": "NCC-11435",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보현",
+      "department": "간암센터",
+      "external_id": "NCC-11986",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형민",
+      "department": "간암센터",
+      "external_id": "NCC-13957",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조유리",
+      "department": "간암센터",
+      "external_id": "NCC-13628",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전중원",
+      "department": "간암센터",
+      "external_id": "NCC-13905",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손지민",
+      "department": "간암센터",
+      "external_id": "NCC-15055",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영수",
+      "department": "간암센터",
+      "external_id": "NCC-15052",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한경수",
+      "department": "대장암센터",
+      "external_id": "NCC-10996",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손대경",
+      "department": "대장암센터",
+      "external_id": "NCC-10414",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병창",
+      "department": "대장암센터",
+      "external_id": "NCC-11148",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성찬",
+      "department": "대장암센터",
+      "external_id": "NCC-12129",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍창원",
+      "department": "대장암센터",
+      "external_id": "NCC-10826",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동운",
+      "department": "대장암센터",
+      "external_id": "NCC-13958",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김번",
+      "department": "대장암센터",
+      "external_id": "NCC-12785",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유기호",
+      "department": "대장암센터",
+      "external_id": "NCC-14435",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하나",
+      "department": "대장암센터",
+      "external_id": "NCC-15053",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍주현",
+      "department": "대장암센터",
+      "external_id": "NCC-14912",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안종성",
+      "department": "대장암센터",
+      "external_id": "NCC-53070",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오재환",
+      "department": "대장암센터",
+      "external_id": "NCC-52475",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영이",
+      "department": "부인암센터",
+      "external_id": "NCC-11047",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최일주",
+      "department": "부인암센터",
+      "external_id": "NCC-10366",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김찬규",
+      "department": "부인암센터",
+      "external_id": "NCC-10575",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤홍만",
+      "department": "부인암센터",
+      "external_id": "NCC-12127",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄방울",
+      "department": "부인암센터",
+      "external_id": "NCC-12128",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강한성",
+      "department": "유방암센터",
+      "external_id": "NCC-10119",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근석",
+      "department": "유방암센터",
+      "external_id": "NCC-10760",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이시연",
+      "department": "유방암센터",
+      "external_id": "NCC-11462",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정소연",
+      "department": "유방암센터",
+      "external_id": "NCC-11610",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심성훈",
+      "department": "유방암센터",
+      "external_id": "NCC-12547",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍지형",
+      "department": "유방암센터",
+      "external_id": "NCC-14688",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한재홍",
+      "department": "유방암센터",
+      "external_id": "NCC-13154",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은경3",
+      "department": "유방암센터",
+      "external_id": "NCC-14241",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서상수",
+      "department": "심장혈관센터",
+      "external_id": "NCC-10577",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강석범",
+      "department": "심장혈관센터",
+      "external_id": "NCC-10822",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동옥",
+      "department": "심장혈관센터",
+      "external_id": "NCC-10959",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임명철",
+      "department": "심장혈관센터",
+      "external_id": "NCC-11737",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정연경",
+      "department": "심장혈관센터",
+      "external_id": "NCC-11464",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지현",
+      "department": "심장혈관센터",
+      "external_id": "NCC-14689",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배재경",
+      "department": "심장혈관센터",
+      "external_id": "NCC-53075",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상윤",
+      "department": "심장혈관센터",
+      "external_id": "NCC-51651",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은경2",
+      "department": "갑상선암센터",
+      "external_id": "NCC-11736",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황보율",
+      "department": "갑상선암센터",
+      "external_id": "NCC-12760",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영기",
+      "department": "갑상선암센터",
+      "external_id": "NCC-13404",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장진선",
+      "department": "갑상선암센터",
+      "external_id": "NCC-15051",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진수",
+      "department": "췌장암센터",
+      "external_id": "NCC-10208",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서호경",
+      "department": "췌장암센터",
+      "external_id": "NCC-10614",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재영",
+      "department": "췌장암센터",
+      "external_id": "NCC-11463",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송기현",
+      "department": "췌장암센터",
+      "external_id": "NCC-14398",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형호",
+      "department": "췌장암센터",
+      "external_id": "NCC-13389",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄현석",
+      "department": "혈액암센터",
+      "external_id": "NCC-10833",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜원1",
+      "department": "혈액암센터",
+      "external_id": "NCC-11988",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정종헌",
+      "department": "혈액암센터",
+      "external_id": "NCC-13956",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은영",
+      "department": "혈액암센터",
+      "external_id": "NCC-12984",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

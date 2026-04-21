@@ -1,0 +1,1983 @@
+{
+  "hospital_code": "CAU",
+  "hospital_name": "중앙대병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "강기운",
+      "department": "순환기내과",
+      "external_id": "CAU-01350",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강수지",
+      "department": "신장내과",
+      "external_id": "CAU-01943",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강신혁",
+      "department": "성형외과",
+      "external_id": "CAU-01361",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정우",
+      "department": "소아청소년과",
+      "external_id": "CAU-01894",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강현",
+      "department": "마취통증의학과",
+      "external_id": "CAU-00864",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고명진",
+      "department": "신경외과",
+      "external_id": "CAU-01224",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고미희",
+      "department": "응급의학과",
+      "external_id": "CAU-01820",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고재현",
+      "department": "정형외과",
+      "external_id": "CAU-01987",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고현민",
+      "department": "외과",
+      "external_id": "CAU-01583",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽미영",
+      "department": "건진센터",
+      "external_id": "CAU-01265",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽병국",
+      "department": "영상의학과",
+      "external_id": "CAU-00744",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽영지",
+      "department": "외과",
+      "external_id": "CAU-01665",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구강모",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01360",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권소이",
+      "department": "신장내과",
+      "external_id": "CAU-01557",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권정택",
+      "department": "신경외과",
+      "external_id": "CAU-00688",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "기동훈",
+      "department": "응급의학과",
+      "external_id": "CAU-01495",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경도",
+      "department": "건진센터",
+      "external_id": "CAU-01339",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경수",
+      "department": "이비인후과",
+      "external_id": "CAU-00928",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경아",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01857",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경우",
+      "department": "안과",
+      "external_id": "CAU-01266",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광준",
+      "department": "산부인과",
+      "external_id": "CAU-00787",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김규원",
+      "department": "소화기내과",
+      "external_id": "CAU-01635",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김나연",
+      "department": "정신건강의학과",
+      "external_id": "CAU-01683",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동훈",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01793",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김두환",
+      "department": "재활의학과",
+      "external_id": "CAU-01311",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미경",
+      "department": "병리과",
+      "external_id": "CAU-00657",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민균",
+      "department": "외과",
+      "external_id": "CAU-01214",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민주",
+      "department": "영상의학과",
+      "external_id": "CAU-01388",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범규",
+      "department": "외과",
+      "external_id": "CAU-00766",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범준",
+      "department": "피부과",
+      "external_id": "CAU-00861",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범진",
+      "department": "소화기내과",
+      "external_id": "CAU-00958",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김서영",
+      "department": "이비인후과",
+      "external_id": "CAU-01983",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선미",
+      "department": "정신건강의학과",
+      "external_id": "CAU-01130",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선아",
+      "department": "건진센터",
+      "external_id": "CAU-01303",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "응급의학과",
+      "external_id": "CAU-00860",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성진",
+      "department": "건진센터",
+      "external_id": "CAU-80017",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성환",
+      "department": "정형외과",
+      "external_id": "CAU-01318",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "영상의학과",
+      "external_id": "CAU-01179",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우중",
+      "department": "류마티스내과",
+      "external_id": "CAU-01681",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원영",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01264",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재규",
+      "department": "소화기내과",
+      "external_id": "CAU-00679",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재열",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-00699",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재택",
+      "department": "내분비내과",
+      "external_id": "CAU-00727",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재환",
+      "department": "응급의학과",
+      "external_id": "CAU-01570",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정욱",
+      "department": "소화기내과",
+      "external_id": "CAU-00791",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정은",
+      "department": "혈액종양내과",
+      "external_id": "CAU-01982",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정하",
+      "department": "가정의학과",
+      "external_id": "CAU-00955",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종원",
+      "department": "외과",
+      "external_id": "CAU-01213",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주영",
+      "department": "병리과",
+      "external_id": "CAU-01642",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지숙",
+      "department": "건진센터",
+      "external_id": "CAU-01292",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "신장내과",
+      "external_id": "CAU-01981",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지택",
+      "department": "안과",
+      "external_id": "CAU-01140",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김찬웅",
+      "department": "응급의학과",
+      "external_id": "CAU-00796",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태완",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01559",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태형",
+      "department": "비뇨의학과",
+      "external_id": "CAU-00782",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태호",
+      "department": "순환기내과",
+      "external_id": "CAU-00691",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한구",
+      "department": "성형외과",
+      "external_id": "CAU-00719",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한나",
+      "department": "소아청소년과",
+      "external_id": "CAU-01979",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김해인",
+      "department": "감염내과",
+      "external_id": "CAU-01560",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현민",
+      "department": "내분비내과",
+      "external_id": "CAU-01117",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형준",
+      "department": "소화기내과",
+      "external_id": "CAU-00747",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜련",
+      "department": "진단검사의학과",
+      "external_id": "CAU-00811",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜미",
+      "department": "순환기내과",
+      "external_id": "CAU-01321",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍경",
+      "department": "진단검사의학과",
+      "external_id": "CAU-01589",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효준",
+      "department": "정형외과",
+      "external_id": "CAU-01728",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희준",
+      "department": "혈액종양내과",
+      "external_id": "CAU-01039",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남보다",
+      "department": "영상의학과",
+      "external_id": "CAU-01856",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남지나",
+      "department": "산부인과",
+      "external_id": "CAU-01338",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남택균",
+      "department": "신경외과",
+      "external_id": "CAU-00809",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노용호",
+      "department": "혈액종양내과",
+      "external_id": "CAU-01663",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도웅정",
+      "department": "순환기내과",
+      "external_id": "CAU-01791",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도재혁",
+      "department": "소화기내과",
+      "external_id": "CAU-00745",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "명순철",
+      "department": "비뇨의학과",
+      "external_id": "CAU-00772",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문경민",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01648",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문남주",
+      "department": "안과",
+      "external_id": "CAU-00774",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문석균",
+      "department": "이비인후과",
+      "external_id": "CAU-00810",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민경준",
+      "department": "정신건강의학과",
+      "external_id": "CAU-00703",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민경찬",
+      "department": "비뇨의학과",
+      "external_id": "CAU-01860",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민현진",
+      "department": "이비인후과",
+      "external_id": "CAU-01171",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경택",
+      "department": "순환기내과",
+      "external_id": "CAU-01359",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박광열",
+      "department": "신경과",
+      "external_id": "CAU-00865",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박귀영",
+      "department": "피부과",
+      "external_id": "CAU-01008",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박귀원",
+      "department": "외과",
+      "external_id": "CAU-01119",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박규태",
+      "department": "순환기내과",
+      "external_id": "CAU-01867",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박병관",
+      "department": "외과",
+      "external_id": "CAU-01184",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박병준",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAU-01185",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박승환",
+      "department": "정형외과",
+      "external_id": "CAU-01354",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용숙",
+      "department": "신경외과",
+      "external_id": "CAU-00899",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재용",
+      "department": "소화기내과",
+      "external_id": "CAU-01216",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박제성",
+      "department": "외과",
+      "external_id": "CAU-01859",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진호",
+      "department": "방사선종양학과",
+      "external_id": "CAU-00825",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박찬영",
+      "department": "신경과",
+      "external_id": "CAU-01526",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박충규",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAU-01593",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현정",
+      "department": "영상의학과",
+      "external_id": "CAU-01099",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백문성",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01315",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백종화",
+      "department": "마취통증의학과",
+      "external_id": "CAU-00773",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서석원",
+      "department": "외과",
+      "external_id": "CAU-01154",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정국",
+      "department": "소화기내과",
+      "external_id": "CAU-01561",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서지영",
+      "department": "치주과",
+      "external_id": "CAU-01694",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서형석",
+      "department": "마취통증의학과",
+      "external_id": "CAU-02001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서혜리",
+      "department": "치과교정과",
+      "external_id": "CAU-01947",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "석준",
+      "department": "피부과",
+      "external_id": "CAU-01441",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손장우",
+      "department": "구강악안면외과",
+      "external_id": "CAU-01994",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손혜주",
+      "department": "핵의학과",
+      "external_id": "CAU-01975",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손희준",
+      "department": "내분비내과",
+      "external_id": "CAU-01939",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송광섭",
+      "department": "정형외과",
+      "external_id": "CAU-00804",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송라영",
+      "department": "외과",
+      "external_id": "CAU-01187",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송윤미",
+      "department": "건진센터",
+      "external_id": "CAU-01923",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송정수",
+      "department": "류마티스내과",
+      "external_id": "CAU-00816",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신상희",
+      "department": "소아청소년과",
+      "external_id": "CAU-01668",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신정호",
+      "department": "신장내과",
+      "external_id": "CAU-01147",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신종욱",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-00759",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신지은",
+      "department": "응급의학과",
+      "external_id": "CAU-01795",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신현이",
+      "department": "재활의학과",
+      "external_id": "CAU-01322",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신혜원",
+      "department": "신경과",
+      "external_id": "CAU-00994",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신화용",
+      "department": "마취통증의학과",
+      "external_id": "CAU-01034",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안석원",
+      "department": "신경과",
+      "external_id": "CAU-01003",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안치원",
+      "department": "응급의학과",
+      "external_id": "CAU-01319",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안혜신",
+      "department": "영상의학과",
+      "external_id": "CAU-01124",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안화영",
+      "department": "내분비내과",
+      "external_id": "CAU-01068",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양재광",
+      "department": "응급의학과",
+      "external_id": "CAU-01819",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오영택",
+      "department": "응급의학과",
+      "external_id": "CAU-01661",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오종인",
+      "department": "마취통증의학과",
+      "external_id": "CAU-01816",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오주희",
+      "department": "소화기내과",
+      "external_id": "CAU-01940",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오충렬",
+      "department": "혈액종양내과",
+      "external_id": "CAU-01427",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오현지",
+      "department": "영상의학과",
+      "external_id": "CAU-01690",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오형철",
+      "department": "소화기내과",
+      "external_id": "CAU-00932",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우수현",
+      "department": "성형외과",
+      "external_id": "CAU-01562",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우영철",
+      "department": "마취통증의학과",
+      "external_id": "CAU-00673",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우정한",
+      "department": "영상의학과",
+      "external_id": "CAU-01792",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원호연",
+      "department": "순환기내과",
+      "external_id": "CAU-01121",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유래림",
+      "department": "영상의학과",
+      "external_id": "CAU-01674",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유철규",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01727",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤소운",
+      "department": "건진센터",
+      "external_id": "CAU-80016",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤신원",
+      "department": "소아청소년과",
+      "external_id": "CAU-00709",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤영철",
+      "department": "신경과",
+      "external_id": "CAU-00728",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤정은",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01868",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지민",
+      "department": "이비인후과",
+      "external_id": "CAU-01672",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이갑석",
+      "department": "피부과",
+      "external_id": "CAU-00930",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건무",
+      "department": "응급의학과",
+      "external_id": "CAU-01883",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경민",
+      "department": "소아청소년과",
+      "external_id": "CAU-01980",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이광제",
+      "department": "순환기내과",
+      "external_id": "CAU-00750",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기림",
+      "department": "병리과",
+      "external_id": "CAU-01781",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이다형",
+      "department": "응급의학과",
+      "external_id": "CAU-01884",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이다혜",
+      "department": "소아청소년과",
+      "external_id": "CAU-01564",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이대용",
+      "department": "소아청소년과",
+      "external_id": "CAU-01122",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이미경",
+      "department": "진단검사의학과",
+      "external_id": "CAU-00698",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이미란",
+      "department": "건진센터",
+      "external_id": "CAU-01342",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병찬",
+      "department": "재활의학과",
+      "external_id": "CAU-01565",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상진",
+      "department": "신경과",
+      "external_id": "CAU-01671",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이설아",
+      "department": "신경과",
+      "external_id": "CAU-01864",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이세영",
+      "department": "이비인후과",
+      "external_id": "CAU-00807",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소영",
+      "department": "소아청소년과",
+      "external_id": "CAU-01855",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수미",
+      "department": "건진센터",
+      "external_id": "CAU-01018",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승은",
+      "department": "외과",
+      "external_id": "CAU-00995",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승은",
+      "department": "건진센터",
+      "external_id": "CAU-00919",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이신헌",
+      "department": "신경외과",
+      "external_id": "CAU-01429",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이양원",
+      "department": "건진센터",
+      "external_id": "CAU-01262",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영석",
+      "department": "신경외과",
+      "external_id": "CAU-01403",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영호",
+      "department": "감염내과",
+      "external_id": "CAU-01858",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이오행",
+      "department": "마취통증의학과",
+      "external_id": "CAU-01331",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이왕수",
+      "department": "순환기내과",
+      "external_id": "CAU-00871",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤영",
+      "department": "소아청소년과",
+      "external_id": "CAU-01826",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은선",
+      "department": "소아청소년과",
+      "external_id": "CAU-01353",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은선",
+      "department": "영상의학과",
+      "external_id": "CAU-01151",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은주",
+      "department": "산부인과",
+      "external_id": "CAU-00952",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은향",
+      "department": "건진센터",
+      "external_id": "CAU-01553",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이의룡",
+      "department": "구강악안면외과",
+      "external_id": "CAU-01054",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재성",
+      "department": "정형외과",
+      "external_id": "CAU-00830",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정규",
+      "department": "안과",
+      "external_id": "CAU-00775",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정빈",
+      "department": "영상의학과",
+      "external_id": "CAU-01637",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이제진",
+      "department": "마취통증의학과",
+      "external_id": "CAU-01336",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종범",
+      "department": "건진센터",
+      "external_id": "CAU-01289",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이채연",
+      "department": "안과",
+      "external_id": "CAU-01974",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한아",
+      "department": "소화기내과",
+      "external_id": "CAU-01664",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한준",
+      "department": "정형외과",
+      "external_id": "CAU-00715",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현경",
+      "department": "소아청소년과",
+      "external_id": "CAU-01669",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜준",
+      "department": "가정의학과",
+      "external_id": "CAU-01424",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호석",
+      "department": "재활의학과",
+      "external_id": "CAU-01861",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임승운",
+      "department": "마취통증의학과",
+      "external_id": "CAU-01344",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임영희",
+      "department": "영상의학과",
+      "external_id": "CAU-01307",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임용관",
+      "department": "진단검사의학과",
+      "external_id": "CAU-01333",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장경아",
+      "department": "건진센터",
+      "external_id": "CAU-80018",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장우진",
+      "department": "순환기내과",
+      "external_id": "CAU-01662",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장인호",
+      "department": "비뇨의학과",
+      "external_id": "CAU-00945",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장주성",
+      "department": "신경외과",
+      "external_id": "CAU-01973",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전연숙",
+      "department": "안과",
+      "external_id": "CAU-00806",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정다진",
+      "department": "응급의학과",
+      "external_id": "CAU-01835",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정보미",
+      "department": "영상의학과",
+      "external_id": "CAU-01355",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정석민",
+      "department": "영상의학과",
+      "external_id": "CAU-01984",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정선혜",
+      "department": "영상의학과",
+      "external_id": "CAU-01380",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수용",
+      "department": "응급의학과",
+      "external_id": "CAU-01802",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤재",
+      "department": "내분비내과",
+      "external_id": "CAU-00858",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤주",
+      "department": "마취통증의학과",
+      "external_id": "CAU-01660",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인용",
+      "department": "정형외과",
+      "external_id": "CAU-01988",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재우",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01067",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진원",
+      "department": "감염내과",
+      "external_id": "CAU-00792",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정찬영",
+      "department": "신장내과",
+      "external_id": "CAU-01986",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해봉",
+      "department": "신경과",
+      "external_id": "CAU-01320",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해인",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAU-01426",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현일",
+      "department": "응급의학과",
+      "external_id": "CAU-01779",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조보연",
+      "department": "내분비내과",
+      "external_id": "CAU-01022",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조상현",
+      "department": "산부인과",
+      "external_id": "CAU-01977",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조수한",
+      "department": "응급의학과",
+      "external_id": "CAU-01790",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조수현",
+      "department": "가정의학과",
+      "external_id": "CAU-00756",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영민",
+      "department": "소아청소년과",
+      "external_id": "CAU-01895",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영윤",
+      "department": "소화기내과",
+      "external_id": "CAU-01243",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조준우",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAU-01976",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조현자",
+      "department": "건진센터",
+      "external_id": "CAU-01290",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주리히",
+      "department": "영상의학과",
+      "external_id": "CAU-01869",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주우희",
+      "department": "신경과",
+      "external_id": "CAU-01794",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채단아",
+      "department": "산부인과",
+      "external_id": "CAU-01686",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최근주",
+      "department": "마취통증의학과",
+      "external_id": "CAU-01086",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병인",
+      "department": "영상의학과",
+      "external_id": "CAU-01149",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최상태",
+      "department": "류마티스내과",
+      "external_id": "CAU-01033",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최세영",
+      "department": "비뇨의학과",
+      "external_id": "CAU-01272",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영득",
+      "department": "비뇨의학과",
+      "external_id": "CAU-01998",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영준",
+      "department": "구강악안면외과",
+      "external_id": "CAU-00771",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최우선",
+      "department": "영상의학과",
+      "external_id": "CAU-01245",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최원철",
+      "department": "치과교정과",
+      "external_id": "CAU-00798",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유신",
+      "department": "외과",
+      "external_id": "CAU-00859",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최인호",
+      "department": "정형외과",
+      "external_id": "CAU-01212",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최주원",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAU-02003",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진영",
+      "department": "영상의학과",
+      "external_id": "CAU-01673",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진화",
+      "department": "방사선종양학과",
+      "external_id": "CAU-00963",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최창환",
+      "department": "소화기내과",
+      "external_id": "CAU-00828",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현호",
+      "department": "신경외과",
+      "external_id": "CAU-01239",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최혜원",
+      "department": "영상의학과",
+      "external_id": "CAU-01356",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최혜정",
+      "department": "소아청소년과",
+      "external_id": "CAU-01978",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "태종현",
+      "department": "비뇨의학과",
+      "external_id": "CAU-01387",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한관희",
+      "department": "산부인과",
+      "external_id": "CAU-01934",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한덕현",
+      "department": "정신건강의학과",
+      "external_id": "CAU-00931",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한세희",
+      "department": "치과보존과",
+      "external_id": "CAU-00854",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한수현",
+      "department": "신경과",
+      "external_id": "CAU-01191",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승수",
+      "department": "산부인과",
+      "external_id": "CAU-00910",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한정혜",
+      "department": "건진센터",
+      "external_id": "CAU-01230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "함대웅",
+      "department": "정형외과",
+      "external_id": "CAU-01386",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍기연",
+      "department": "건진센터",
+      "external_id": "CAU-01752",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍민의",
+      "department": "병리과",
+      "external_id": "CAU-01397",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍순억",
+      "department": "병리과",
+      "external_id": "CAU-01288",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍준화",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAU-00960",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍지연",
+      "department": "피부과",
+      "external_id": "CAU-01670",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍진기",
+      "department": "치과보철과",
+      "external_id": "CAU-01919",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황소준",
+      "department": "응급의학과",
+      "external_id": "CAU-01687",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인규",
+      "department": "혈액종양내과",
+      "external_id": "CAU-00933",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황진호",
+      "department": "신장내과",
+      "external_id": "CAU-01141",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황현찬",
+      "department": "정신건강의학과",
+      "external_id": "CAU-01277",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

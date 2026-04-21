@@ -1,0 +1,103 @@
+{
+  "hospital_code": "DAEHAN",
+  "hospital_name": "대한병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박은식",
+      "department": "내과",
+      "external_id": "DAEHAN-doctor_07",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "한양대학교 의과대학 졸업\n한양대학교병원 인턴 수료\n한양대학교병원 레지던트 수료\n세브란스병원 소화기내과 전임의 수료\n내과전문의\nCM병원 소화기내과 과장\n혜민병원 소화기내과 과장\n연세우리병원 내과 과장\n現 대한병원 병원장"
+    },
+    {
+      "name": "장태훈",
+      "department": "내과",
+      "external_id": "DAEHAN-doctor_06",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "서울대학교 의과대학 졸업\n서울대학병원 인턴수료\n삼성서울병원 레지던트 수료\n성균관대학교 의과대학 대학원 석사\n내과전문의\n삼성서울병원 소화기내과 임상강사\n現 대한병원 진료부장"
+    },
+    {
+      "name": "이승익",
+      "department": "내과",
+      "external_id": "DAEHAN-doctor_08",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "가천대학교 의과대학 졸업\n의료법인 길의료재단 길병원 인턴 수료\n의료법인 길의료재단 길병원 레지던트 수료\n순천향대학교 서울병원 전임의\n내과 전문의\n소화기내시경 세부전문의\n동해동인병원 소화기내과\n강릉고려병원 소화기내과\n아산서울내과의원 건강검진센터 내과\n現 대한병원 내과 과장"
+    },
+    {
+      "name": "노원일",
+      "department": "정형외과",
+      "external_id": "DAEHAN-doctor_01",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "한양대학교 의과대학 졸업\n한양대학교 부속병원 정형외과 전공의 수료\n정형외과 전문의\n한양대학교 부속병원 정형외과 고관절 및 인공관절 전임의 수료\n한양대학교 의료원외래교수\n現 대한병원 정형외과 과장"
+    },
+    {
+      "name": "유현호",
+      "department": "정형외과",
+      "external_id": "DAEHAN-doctor_02",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "가톨릭 의과대학교 졸업\n가톨릭 중앙의료원 인턴 수료\n가톨릭 중앙의료원 레지던트 수료\n가톨릭대학교 성바오로병원 펠로우 수료\n검단탑병원 진료과장 역임\n강남나누리병원 진료과장 역임\n강원대학교병원 공공임상교수\n現 대한병원 정형외과 과장"
+    },
+    {
+      "name": "김주환",
+      "department": "신경과",
+      "external_id": "DAEHAN-doctor_04",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "전북대 의학전문대 석사\n삼성서울병원 전공의 수료\n서울아산병원 진료전담의\n이대목동병원 진료전담의\n강남성심병원 신경과 전공의 수료\n前 해븐리병원 신경7과 원장\n現 대한병원 신경과 과장"
+    },
+    {
+      "name": "최윤",
+      "department": "마취통증의학과",
+      "external_id": "DAEHAN-doctor_09",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "서울대학교 의과대학 졸업\n서울대학교병원 인턴 및 마취통증의학과 레지던트\n마취통증의학과 전문의\n경상대학교 조교수\n서울아산병원 마취통증의학과 부교수 등\n現 대한병원 마취통증의학과 과장"
+    },
+    {
+      "name": "김상흠",
+      "department": "영상의학과",
+      "external_id": "DAEHAN-doctor_10",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "한양대 의대 졸업\n가톨릭의료원 영상의학과 전공의 수료\n의정부 성모병원 인터벤션 펠로우쉽 수료\n을지의과대학 노원을지병원 조교수 역임\n영상의학과 전문의\n의학박사\n現 대한병원 영상의학과 과장"
+    },
+    {
+      "name": "정미라",
+      "department": "진단검사의학과",
+      "external_id": "DAEHAN-doctor_11",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "이화여자대학교 의과대학 졸업\n이화여자대학교 대학원 졸업\n고려대학교 대학원 의학박사\n순천향대학병원 진단검사의학과\n한국의학연구소 및 부설 부천제일병원 진단검사의학과\n순천향대학교 의과대학 진단검사의학과 외래교수\n대한가족계획협회 자문의\n포천중문의과대학 대체의학연구소 객원상임연구원\n대한진단검사의학회 검사실 신임제도 심사원\n건강검진기관 진단검사의학 검사실 심사위원\n現 대한병원 진단검사의학과 과장"
+    },
+    {
+      "name": "이선경",
+      "department": "산부인과",
+      "external_id": "DAEHAN-doctor_12",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "경희대학교 의과대학 의학과 졸업\n경희대학교 대학원 의학과 석사\n고려대학교 대학원 의학과 박사\n미국 Vanderbilt 의과대학 부인암 special fellowship\n미국 HCA Laser training center 연수\n前 경희대학교 의과대학 산부인과 교수\n前 강동경희대학교 병원 산부인과 과장 겸 여성의학센터장\n前 경희대학교 의과대학 산부인과 주임교수\n前 일산차병원 산부인과 임상교수\n現 대한병원 산부인과 과장"
+    },
+    {
+      "name": "이가원",
+      "department": "응급의학과",
+      "external_id": "DAEHAN-doctor_13",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "연세대학교 의과대학 졸업\n연세사랑요양병원 당직의\n공주시 보건소 공중보건의\n제주대림요양병원 진료원장\n꿈의숲요양병원 당직의\n現 대한병원 응급의학과 과장"
+    },
+    {
+      "name": "이승재",
+      "department": "응급의학과",
+      "external_id": "DAEHAN-doctor_14",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "경희대학교 의과대학 졸업\n경희의료원 인턴\n육군 군의관\n구리 윤서병원 응급실장\n現 대한병원 응급의학과 과장"
+    }
+  ]
+}

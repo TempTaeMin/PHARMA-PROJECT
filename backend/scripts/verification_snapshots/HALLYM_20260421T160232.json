@@ -1,0 +1,1703 @@
+{
+  "hospital_code": "HALLYM",
+  "hospital_name": "한림성심병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "백유진",
+      "department": "가정의학과",
+      "external_id": "HALLYM-126",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송홍지",
+      "department": "가정의학과",
+      "external_id": "HALLYM-130",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경희",
+      "department": "가정의학과",
+      "external_id": "HALLYM-132",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서영균",
+      "department": "가정의학과",
+      "external_id": "HALLYM-1747",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노혜미",
+      "department": "가정의학과",
+      "external_id": "HALLYM-1368",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박승아",
+      "department": "가정의학과",
+      "external_id": "HALLYM-2033",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍은영",
+      "department": "가정의학과",
+      "external_id": "HALLYM-2308",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이향래",
+      "department": "가정의학과",
+      "external_id": "HALLYM-3725",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김양수",
+      "department": "감염내과",
+      "external_id": "HALLYM-3724",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서현지",
+      "department": "감염내과",
+      "external_id": "HALLYM-2480",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양은미",
+      "department": "감염내과",
+      "external_id": "HALLYM-3391",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤우",
+      "department": "감염내과",
+      "external_id": "HALLYM-2736",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성진",
+      "department": "내분비내과",
+      "external_id": "HALLYM-733",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강준구",
+      "department": "내분비내과",
+      "external_id": "HALLYM-646",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허지혜",
+      "department": "내분비내과",
+      "external_id": "HALLYM-2224",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정한나",
+      "department": "내분비내과",
+      "external_id": "HALLYM-2850",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명진",
+      "department": "내분비내과",
+      "external_id": "HALLYM-3493",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현아",
+      "department": "류마티스내과",
+      "external_id": "HALLYM-336",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서영일",
+      "department": "류마티스내과",
+      "external_id": "HALLYM-26",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문현수",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-214",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수경",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-229",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은영",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-1049",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임태완",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-1789",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최이화",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-1446",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전현지",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-2482",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성민",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-2187",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소은선",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-2350",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민경",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-3348",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문철",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-3394",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신헬렌키",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-3627",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강희원",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-3412",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수련",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-3420",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정현",
+      "department": "마취통증의학과",
+      "external_id": "HALLYM-3421",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이미연",
+      "department": "방사선종양학과",
+      "external_id": "HALLYM-865",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구태률",
+      "department": "방사선종양학과",
+      "external_id": "HALLYM-2020",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정광호",
+      "department": "방사선종양학과",
+      "external_id": "HALLYM-2064",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서진원",
+      "department": "병리과",
+      "external_id": "HALLYM-866",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권미정",
+      "department": "병리과",
+      "external_id": "HALLYM-1086",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진선",
+      "department": "비뇨의학과",
+      "external_id": "HALLYM-3541",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오철영",
+      "department": "비뇨의학과",
+      "external_id": "HALLYM-883",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방우진",
+      "department": "비뇨의학과",
+      "external_id": "HALLYM-1191",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재훈",
+      "department": "비뇨의학과",
+      "external_id": "HALLYM-3176",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김환익",
+      "department": "비뇨의학과",
+      "external_id": "HALLYM-2486",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임채춘",
+      "department": "산부인과",
+      "external_id": "HALLYM-533",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석우",
+      "department": "산부인과",
+      "external_id": "HALLYM-1625",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤정",
+      "department": "산부인과",
+      "external_id": "HALLYM-2483",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영한",
+      "department": "산부인과",
+      "external_id": "HALLYM-60",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정찬민",
+      "department": "성형외과",
+      "external_id": "HALLYM-2113",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재현",
+      "department": "성형외과",
+      "external_id": "HALLYM-2498",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경식",
+      "department": "성형외과",
+      "external_id": "HALLYM-3671",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민재",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-1458",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유희준",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-1628",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한울",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-2164",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진선미",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-2181",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양송이",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-1629",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조명현",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-2180",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전주희",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-2060",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이예나",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-2686",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민지",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-2787",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-3522",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유진",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-3532",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박아영",
+      "department": "소아청소년과",
+      "external_id": "HALLYM-3490",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성훈",
+      "department": "소화기내과",
+      "external_id": "HALLYM-1173",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "소화기내과",
+      "external_id": "HALLYM-1348",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임현",
+      "department": "소화기내과",
+      "external_id": "HALLYM-1457",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강호석",
+      "department": "소화기내과",
+      "external_id": "HALLYM-1417",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지원",
+      "department": "소화기내과",
+      "external_id": "HALLYM-993",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소재승",
+      "department": "소화기내과",
+      "external_id": "HALLYM-1605",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동우",
+      "department": "소화기내과",
+      "external_id": "HALLYM-2525",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유병철",
+      "department": "소화기내과",
+      "external_id": "HALLYM-3629",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상진",
+      "department": "순환기내과",
+      "external_id": "HALLYM-877",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현숙",
+      "department": "순환기내과",
+      "external_id": "HALLYM-785",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조상호",
+      "department": "순환기내과",
+      "external_id": "HALLYM-645",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종영",
+      "department": "순환기내과",
+      "external_id": "HALLYM-3669",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강동선",
+      "department": "순환기내과",
+      "external_id": "HALLYM-3471",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병철",
+      "department": "신경과",
+      "external_id": "HALLYM-27",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유경호",
+      "department": "신경과",
+      "external_id": "HALLYM-30",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "마효일",
+      "department": "신경과",
+      "external_id": "HALLYM-29",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오미선",
+      "department": "신경과",
+      "external_id": "HALLYM-649",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영은",
+      "department": "신경과",
+      "external_id": "HALLYM-1460",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유환",
+      "department": "신경과",
+      "external_id": "HALLYM-2205",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진혁",
+      "department": "신경과",
+      "external_id": "HALLYM-2059",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민우",
+      "department": "신경과",
+      "external_id": "HALLYM-2293",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정영희",
+      "department": "신경과",
+      "external_id": "HALLYM-3453",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최상원",
+      "department": "신경과",
+      "external_id": "HALLYM-3556",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송준호",
+      "department": "신경외과",
+      "external_id": "HALLYM-56",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장인복",
+      "department": "신경외과",
+      "external_id": "HALLYM-471",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍용길",
+      "department": "신경외과",
+      "external_id": "HALLYM-2433",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임현택",
+      "department": "신경외과",
+      "external_id": "HALLYM-2859",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전치만",
+      "department": "신경외과",
+      "external_id": "HALLYM-3683",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성균",
+      "department": "신장내과",
+      "external_id": "HALLYM-24",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김좌경",
+      "department": "신장내과",
+      "external_id": "HALLYM-1081",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안정남",
+      "department": "신장내과",
+      "external_id": "HALLYM-2260",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민세홍",
+      "department": "신장내과",
+      "external_id": "HALLYM-3202",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤호중",
+      "department": "신장내과",
+      "external_id": "HALLYM-3670",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형수",
+      "department": "심장혈관흉부외과",
+      "external_id": "HALLYM-1552",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김건일",
+      "department": "심장혈관흉부외과",
+      "external_id": "HALLYM-2379",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나용준",
+      "department": "심장혈관흉부외과",
+      "external_id": "HALLYM-1618",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이홍규",
+      "department": "심장혈관흉부외과",
+      "external_id": "HALLYM-1828",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고호현",
+      "department": "심장혈관흉부외과",
+      "external_id": "HALLYM-2117",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임정현",
+      "department": "심장혈관흉부외과",
+      "external_id": "HALLYM-2546",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주연",
+      "department": "안과",
+      "external_id": "HALLYM-63",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민정",
+      "department": "안과",
+      "external_id": "HALLYM-1075",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권순일",
+      "department": "안과",
+      "external_id": "HALLYM-1003",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조범주",
+      "department": "안과",
+      "external_id": "HALLYM-2156",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백성욱",
+      "department": "안과",
+      "external_id": "HALLYM-2118",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최세현",
+      "department": "안과",
+      "external_id": "HALLYM-2063",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민선",
+      "department": "안과",
+      "external_id": "HALLYM-2258",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이열",
+      "department": "영상의학과",
+      "external_id": "HALLYM-1698",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이관섭",
+      "department": "영상의학과",
+      "external_id": "HALLYM-234",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이인재",
+      "department": "영상의학과",
+      "external_id": "HALLYM-235",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도영수",
+      "department": "영상의학과",
+      "external_id": "HALLYM-2860",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고성혜",
+      "department": "영상의학과",
+      "external_id": "HALLYM-239",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "영상의학과",
+      "external_id": "HALLYM-503",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하홍일",
+      "department": "영상의학과",
+      "external_id": "HALLYM-1087",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은수",
+      "department": "영상의학과",
+      "external_id": "HALLYM-1053",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하태호",
+      "department": "영상의학과",
+      "external_id": "HALLYM-2073",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권려민",
+      "department": "영상의학과",
+      "external_id": "HALLYM-2338",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송경섭",
+      "department": "영상의학과",
+      "external_id": "HALLYM-2349",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권혜윤",
+      "department": "영상의학과",
+      "external_id": "HALLYM-2532",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이보람",
+      "department": "영상의학과",
+      "external_id": "HALLYM-3442",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍원주",
+      "department": "영상의학과",
+      "external_id": "HALLYM-3178",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문순영",
+      "department": "영상의학과",
+      "external_id": "HALLYM-3491",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정예원",
+      "department": "영상의학과",
+      "external_id": "HALLYM-2600",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태호",
+      "department": "영상의학과",
+      "external_id": "HALLYM-3741",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병식",
+      "department": "외과",
+      "external_id": "HALLYM-3630",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희성",
+      "department": "외과",
+      "external_id": "HALLYM-3631",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오보영",
+      "department": "외과",
+      "external_id": "HALLYM-2079",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정우",
+      "department": "외과",
+      "external_id": "HALLYM-1633",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손일태",
+      "department": "외과",
+      "external_id": "HALLYM-2206",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권재현",
+      "department": "외과",
+      "external_id": "HALLYM-2273",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민성",
+      "department": "외과",
+      "external_id": "HALLYM-2542",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성준",
+      "department": "외과",
+      "external_id": "HALLYM-3726",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도일",
+      "department": "유방내분비외과",
+      "external_id": "HALLYM-2444",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서용준",
+      "department": "유방내분비외과",
+      "external_id": "HALLYM-1898",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상화",
+      "department": "유방내분비외과",
+      "external_id": "HALLYM-1757",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정호",
+      "department": "유방내분비외과",
+      "external_id": "HALLYM-2129",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하상욱",
+      "department": "응급의학과",
+      "external_id": "HALLYM-1464",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영선",
+      "department": "응급의학과",
+      "external_id": "HALLYM-2065",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양원석",
+      "department": "응급의학과",
+      "external_id": "HALLYM-2256",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신주용",
+      "department": "응급의학과",
+      "external_id": "HALLYM-2070",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규현",
+      "department": "응급의학과",
+      "external_id": "HALLYM-3297",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용원",
+      "department": "응급의학과",
+      "external_id": "HALLYM-2535",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정화영",
+      "department": "응급의학과",
+      "external_id": "HALLYM-2926",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한지숙",
+      "department": "응급의학과",
+      "external_id": "HALLYM-2927",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민지",
+      "department": "응급의학과",
+      "external_id": "HALLYM-3433",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수욱",
+      "department": "응급의학과",
+      "external_id": "HALLYM-3282",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영환",
+      "department": "응급의학과",
+      "external_id": "HALLYM-3218",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동욱",
+      "department": "응급의학과",
+      "external_id": "HALLYM-3328",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장병학",
+      "department": "응급의학과",
+      "external_id": "HALLYM-3341",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성호",
+      "department": "응급의학과",
+      "external_id": "HALLYM-3393",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형종",
+      "department": "이비인후과",
+      "external_id": "HALLYM-425",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효정",
+      "department": "이비인후과",
+      "external_id": "HALLYM-764",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성광",
+      "department": "이비인후과",
+      "external_id": "HALLYM-935",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이중섭",
+      "department": "이비인후과",
+      "external_id": "HALLYM-1498",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희진",
+      "department": "이비인후과",
+      "external_id": "HALLYM-2765",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "위지혜",
+      "department": "이비인후과",
+      "external_id": "HALLYM-2114",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정욱",
+      "department": "이비인후과",
+      "external_id": "HALLYM-2726",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정광익",
+      "department": "재활의학과",
+      "external_id": "HALLYM-95",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유우경",
+      "department": "재활의학과",
+      "external_id": "HALLYM-101",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준희",
+      "department": "재활의학과",
+      "external_id": "HALLYM-3632",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍현주",
+      "department": "정신건강의학과",
+      "external_id": "HALLYM-494",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유빈",
+      "department": "정신건강의학과",
+      "external_id": "HALLYM-2861",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오윤혜",
+      "department": "정신건강의학과",
+      "external_id": "HALLYM-2862",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜원",
+      "department": "정신건강의학과",
+      "external_id": "HALLYM-3283",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이창우",
+      "department": "정신건강의학과",
+      "external_id": "HALLYM-3590",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노규철",
+      "department": "정형외과",
+      "external_id": "HALLYM-3392",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권봉철",
+      "department": "정형외과",
+      "external_id": "HALLYM-51",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유제현",
+      "department": "정형외과",
+      "external_id": "HALLYM-977",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재용",
+      "department": "정형외과",
+      "external_id": "HALLYM-1054",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용범",
+      "department": "정형외과",
+      "external_id": "HALLYM-786",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준호",
+      "department": "정형외과",
+      "external_id": "HALLYM-3179",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장대영",
+      "department": "종양·혈액내과",
+      "external_id": "HALLYM-18",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효정",
+      "department": "종양·혈액내과",
+      "external_id": "HALLYM-19",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김호영",
+      "department": "종양·혈액내과",
+      "external_id": "HALLYM-809",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한보람",
+      "department": "종양·혈액내과",
+      "external_id": "HALLYM-1187",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범준",
+      "department": "종양·혈액내과",
+      "external_id": "HALLYM-2432",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세진",
+      "department": "종양·혈액내과",
+      "external_id": "HALLYM-3213",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성훈",
+      "department": "중환자의학과",
+      "external_id": "HALLYM-3568",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남현승",
+      "department": "중환자의학과",
+      "external_id": "HALLYM-3569",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형석",
+      "department": "중환자의학과",
+      "external_id": "HALLYM-3570",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽인희",
+      "department": "중환자의학과",
+      "external_id": "HALLYM-3571",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영경",
+      "department": "진단검사의학과",
+      "external_id": "HALLYM-244",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강희정",
+      "department": "진단검사의학과",
+      "external_id": "HALLYM-243",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한성",
+      "department": "진단검사의학과",
+      "external_id": "HALLYM-376",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노주혜",
+      "department": "진단검사의학과",
+      "external_id": "HALLYM-2396",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석우",
+      "department": "척추센터",
+      "external_id": "HALLYM-888",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태환",
+      "department": "척추센터",
+      "external_id": "HALLYM-1224",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장석인",
+      "department": "척추센터",
+      "external_id": "HALLYM-3729",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문봉수",
+      "department": "척추센터",
+      "external_id": "HALLYM-3728",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양병은",
+      "department": "치과",
+      "external_id": "HALLYM-501",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영희",
+      "department": "치과",
+      "external_id": "HALLYM-564",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김이경",
+      "department": "치과",
+      "external_id": "HALLYM-1781",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박인영",
+      "department": "치과",
+      "external_id": "HALLYM-1148",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변수환",
+      "department": "치과",
+      "external_id": "HALLYM-2237",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한현숙",
+      "department": "치과",
+      "external_id": "HALLYM-2119",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상민",
+      "department": "치과",
+      "external_id": "HALLYM-2336",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상윤",
+      "department": "치과",
+      "external_id": "HALLYM-3007",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현숙",
+      "department": "치과",
+      "external_id": "HALLYM-3523",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광중",
+      "department": "피부과",
+      "external_id": "HALLYM-36",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광호",
+      "department": "피부과",
+      "external_id": "HALLYM-37",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은주",
+      "department": "피부과",
+      "external_id": "HALLYM-650",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장예지",
+      "department": "피부과",
+      "external_id": "HALLYM-2869",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황희성",
+      "department": "핵의학과",
+      "external_id": "HALLYM-451",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동우",
+      "department": "핵의학과",
+      "external_id": "HALLYM-3180",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장승훈",
+      "department": "호흡기-알레르기내과",
+      "external_id": "HALLYM-9",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황용일",
+      "department": "호흡기-알레르기내과",
+      "external_id": "HALLYM-723",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주희",
+      "department": "호흡기-알레르기내과",
+      "external_id": "HALLYM-1080",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지영",
+      "department": "호흡기-알레르기내과",
+      "external_id": "HALLYM-1723",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최광용",
+      "department": "호흡기-알레르기내과",
+      "external_id": "HALLYM-2870",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김나영",
+      "department": "호흡기-알레르기내과",
+      "external_id": "HALLYM-3730",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규진",
+      "department": "호흡기-알레르기내과",
+      "external_id": "HALLYM-3727",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

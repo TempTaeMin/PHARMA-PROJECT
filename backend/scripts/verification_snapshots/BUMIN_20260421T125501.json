@@ -1,0 +1,423 @@
+{
+  "hospital_code": "BUMIN",
+  "hospital_name": "서울부민병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "정훈재",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-1",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성준",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-14",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용정",
+      "department": "김용정 척추변형센터",
+      "external_id": "BUMIN-26-23",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이인혁",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-19",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하용찬",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-240",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "은상수",
+      "department": "척추내시경센터",
+      "external_id": "BUMIN-27-290",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선녕",
+      "department": "호흡기내과",
+      "external_id": "BUMIN-24-47",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "궁윤배",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-238",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재훈",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-21",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유준영",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-297",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고석진",
+      "department": "척추내시경센터",
+      "external_id": "BUMIN-27-342",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수건",
+      "department": "순환기내과",
+      "external_id": "BUMIN-25-327",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하창윤",
+      "department": "소화기내과",
+      "external_id": "BUMIN-22-409",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주호",
+      "department": "간센터",
+      "external_id": "BUMIN-61-450",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서경묵",
+      "department": "재활의학과",
+      "external_id": "BUMIN-54-287",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지수",
+      "department": "정형외과",
+      "external_id": "BUMIN-8-294",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍태",
+      "department": "신장내과",
+      "external_id": "BUMIN-23-403",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안지용",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-392",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍근배",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-345",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서동환",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-381",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주용",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-338",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성철",
+      "department": "척추내시경센터",
+      "external_id": "BUMIN-27-309",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성한유",
+      "department": "김용정 척추변형센터",
+      "external_id": "BUMIN-26-26",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤선진",
+      "department": "김용정 척추변형센터",
+      "external_id": "BUMIN-26-395",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양희진",
+      "department": "인공신장센터",
+      "external_id": "BUMIN-4-198",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한수정",
+      "department": "소화기내과",
+      "external_id": "BUMIN-22-51",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "모은영",
+      "department": "내분비내과",
+      "external_id": "BUMIN-21-243",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은성",
+      "department": "류마티스내과",
+      "external_id": "BUMIN-20-54",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성충경",
+      "department": "외과",
+      "external_id": "BUMIN-11-282",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재정",
+      "department": "외과",
+      "external_id": "BUMIN-11-423",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정구",
+      "department": "비뇨의학과",
+      "external_id": "BUMIN-40-284",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현숙",
+      "department": "소아청소년과",
+      "external_id": "BUMIN-13-190",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수현",
+      "department": "소아청소년과",
+      "external_id": "BUMIN-13-323",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안소이",
+      "department": "신경과",
+      "external_id": "BUMIN-12-405",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안현준",
+      "department": "부민 라이프케어센터 서울",
+      "external_id": "BUMIN-5-415",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동훈",
+      "department": "부민 라이프케어센터 서울",
+      "external_id": "BUMIN-5-418",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정현",
+      "department": "부민 라이프케어센터 서울",
+      "external_id": "BUMIN-5-420",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최욱열",
+      "department": "부민 라이프케어센터 서울",
+      "external_id": "BUMIN-5-454",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안승찬",
+      "department": "응급의학과",
+      "external_id": "BUMIN-18-42",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장경철",
+      "department": "응급의학과",
+      "external_id": "BUMIN-18-453",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세훈",
+      "department": "응급의학과",
+      "external_id": "BUMIN-18-451",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍태곤",
+      "department": "임상시험센터",
+      "external_id": "BUMIN-7-179",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승재",
+      "department": "임상시험센터",
+      "external_id": "BUMIN-7-452",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경균",
+      "department": "마취통증의학과",
+      "external_id": "BUMIN-15-34",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤상원",
+      "department": "마취통증의학과",
+      "external_id": "BUMIN-15-225",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명종",
+      "department": "마취통증의학과",
+      "external_id": "BUMIN-15-331",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영혜",
+      "department": "마취통증의학과",
+      "external_id": "BUMIN-15-329",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재완",
+      "department": "진단검사의학과",
+      "external_id": "BUMIN-17-371",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고일권",
+      "department": "영상의학과",
+      "external_id": "BUMIN-16-435",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "선우희정",
+      "department": "영상의학과",
+      "external_id": "BUMIN-16-434",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤영석",
+      "department": "정형외과",
+      "external_id": "BUMIN-8-22",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원재연",
+      "department": "관절센터",
+      "external_id": "BUMIN-1-416",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

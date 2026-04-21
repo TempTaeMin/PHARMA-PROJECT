@@ -38,7 +38,7 @@ class CmcBaseCrawler:
         if self._cached_data is not None:
             return self._cached_data
 
-        all_doctors = []
+        all_doctors: dict[str, dict] = {}  # drNo → doctor dict (중복 제거)
         async with httpx.AsyncClient(
             headers=self.headers, cookies=self.cookies,
             timeout=30, follow_redirects=True,
@@ -75,6 +75,12 @@ class CmcBaseCrawler:
                     if not dr_no or not dr_name:
                         continue
 
+                    if dr_no in all_doctors:
+                        existing = all_doctors[dr_no]
+                        if dept_nm and dept_nm != existing["department"] and dept_nm not in existing["_extra_depts"]:
+                            existing["_extra_depts"].append(dept_nm)
+                        continue
+
                     schedules = self._parse_schedules(doc)
                     doc_dept = doc.get("doctorDept") or {}
                     treatment = doc.get("doctorTreatment") or {}
@@ -82,7 +88,7 @@ class CmcBaseCrawler:
                     position = doc.get("nuHptlJobTitle") or doc.get("hptlJobTitle", "")
                     ext_id = f"{self.hospital_code}-{dr_no}"
 
-                    all_doctors.append({
+                    all_doctors[dr_no] = {
                         "staff_id": ext_id,
                         "external_id": ext_id,
                         "name": dr_name,
@@ -92,13 +98,23 @@ class CmcBaseCrawler:
                         "profile_url": "",
                         "notes": "",
                         "schedules": schedules,
-                    })
+                        "_extra_depts": [],
+                    }
 
                 logger.info(f"[{self.hospital_code}] {dept_nm}: {len(docs)}명")
 
-        logger.info(f"[{self.hospital_code}] 총 {len(all_doctors)}명")
-        self._cached_data = all_doctors
-        return all_doctors
+        # 복수 진료과 표시를 notes 로 정리
+        result: list[dict] = []
+        for d in all_doctors.values():
+            extras = d.pop("_extra_depts")
+            if extras:
+                tag = f"복수 진료과: {', '.join(extras)}"
+                d["notes"] = (d["notes"] + "\n" + tag) if d["notes"] else tag
+            result.append(d)
+
+        logger.info(f"[{self.hospital_code}] 총 {len(result)}명 (dedup)")
+        self._cached_data = result
+        return result
 
     @staticmethod
     def _parse_schedules(doc: dict) -> list[dict]:

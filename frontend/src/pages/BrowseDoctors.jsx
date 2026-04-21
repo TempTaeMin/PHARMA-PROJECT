@@ -294,6 +294,9 @@ export default function BrowseDoctors({ onNavigate }) {
     if (!groupedHospitals[region]) groupedHospitals[region] = [];
     groupedHospitals[region].push(h);
   });
+  Object.keys(groupedHospitals).forEach(r => {
+    groupedHospitals[r].sort((a, b) => (a.name || '').localeCompare(b.name || '', 'ko'));
+  });
   const regionEntries = REGION_ORDER.map(r => [r, groupedHospitals[r] || []]).filter(([, list]) => list.length > 0);
   if (groupedHospitals['기타']?.length) regionEntries.push(['기타', groupedHospitals['기타']]);
 

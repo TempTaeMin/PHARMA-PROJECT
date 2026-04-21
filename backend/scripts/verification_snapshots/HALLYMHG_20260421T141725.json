@@ -1,0 +1,183 @@
+{
+  "hospital_code": "HALLYMHG",
+  "hospital_name": "한림대학교한강성심병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김영중",
+      "department": "내과",
+      "external_id": "HALLYMHG-3385",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤정민",
+      "department": "내과",
+      "external_id": "HALLYMHG-3650",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서영주",
+      "department": "마취통증의학과",
+      "external_id": "HALLYMHG-1970",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽인숙",
+      "department": "마취통증의학과",
+      "external_id": "HALLYMHG-148",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종욱",
+      "department": "성형외과",
+      "external_id": "HALLYMHG-122",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서동국",
+      "department": "성형외과",
+      "external_id": "HALLYMHG-600",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허지연",
+      "department": "성형외과",
+      "external_id": "HALLYMHG-1115",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김신미",
+      "department": "소아청소년과",
+      "external_id": "HALLYMHG-3268",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이일성",
+      "department": "영상의학과",
+      "external_id": "HALLYMHG-152",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정훈",
+      "department": "재활의학과",
+      "external_id": "HALLYMHG-459",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주소영",
+      "department": "재활의학과",
+      "external_id": "HALLYMHG-1581",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상용",
+      "department": "재활의학과",
+      "external_id": "HALLYMHG-3685",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병철",
+      "department": "정신건강의학과",
+      "external_id": "HALLYMHG-712",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전기범",
+      "department": "진단검사의학과",
+      "external_id": "HALLYMHG-2277",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허준",
+      "department": "화상외과",
+      "external_id": "HALLYMHG-100",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도헌",
+      "department": "화상외과",
+      "external_id": "HALLYMHG-102",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤재철",
+      "department": "화상외과",
+      "external_id": "HALLYMHG-1523",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이신애",
+      "department": "화상외과",
+      "external_id": "HALLYMHG-3278",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정수",
+      "department": "화상외과",
+      "external_id": "HALLYMHG-2631",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명진",
+      "department": "화상외과",
+      "external_id": "HALLYMHG-2550",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하성",
+      "department": "화상외과",
+      "external_id": "HALLYMHG-3245",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선태",
+      "department": "화상외과",
+      "external_id": "HALLYMHG-3250",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

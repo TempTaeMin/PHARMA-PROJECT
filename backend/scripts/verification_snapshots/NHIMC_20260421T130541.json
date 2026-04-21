@@ -1,0 +1,2023 @@
+{
+  "hospital_code": "NHIMC",
+  "hospital_name": "국민건강보험공단 일산병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-125-111712",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-128-112100",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-126-112569",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-127-112700",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-129-114236",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-679-114708",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-703-114986",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-717-114997",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "가정의학과",
+      "external_id": "NHIMC-29-730-114868",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "감염내과",
+      "external_id": "NHIMC-7-522-114689",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "감염내과",
+      "external_id": "NHIMC-7-376-114543",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "감염내과",
+      "external_id": "NHIMC-7-551-114719",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "내분비내과",
+      "external_id": "NHIMC-4-31-112489",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "내분비내과",
+      "external_id": "NHIMC-4-171-114818",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "내분비내과",
+      "external_id": "NHIMC-4-630-114818",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "내분비내과",
+      "external_id": "NHIMC-4-691-114901",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "내분비내과",
+      "external_id": "NHIMC-4-749-114993",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "류마티스내과",
+      "external_id": "NHIMC-8-218-114384",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "류마티스내과",
+      "external_id": "NHIMC-8-587-114774",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-113",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-114",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-8",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-215",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-648",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-747",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-641",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-667",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-771",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-778",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-779",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "마취통증의학과",
+      "external_id": "NHIMC-17-791",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "방사선종양학과",
+      "external_id": "NHIMC-25-9",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "병리과",
+      "external_id": "NHIMC-26-150",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "병리과",
+      "external_id": "NHIMC-26-149",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "병리과",
+      "external_id": "NHIMC-26-323",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "병리과",
+      "external_id": "NHIMC-26-628",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "병리과",
+      "external_id": "NHIMC-26-782",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "비뇨의학과",
+      "external_id": "NHIMC-23-67-110536",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "비뇨의학과",
+      "external_id": "NHIMC-23-68-111704",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "비뇨의학과",
+      "external_id": "NHIMC-23-761-114996",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "비뇨의학과",
+      "external_id": "NHIMC-23-656-114843",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "산부인과",
+      "external_id": "NHIMC-18-775-115007",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "산부인과",
+      "external_id": "NHIMC-18-788-115019",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "산부인과",
+      "external_id": "NHIMC-18-773-115005",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "산부인과",
+      "external_id": "NHIMC-18-378-114550",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "산부인과",
+      "external_id": "NHIMC-18-787-115016",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "산부인과",
+      "external_id": "NHIMC-18-280-114452",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "산부인과",
+      "external_id": "NHIMC-18-760-115003",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "성형외과",
+      "external_id": "NHIMC-16-258",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "성형외과",
+      "external_id": "NHIMC-16-450",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-46-114783",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-48-111717",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-50-112099",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-47-111720",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-203-114357",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-528-114694",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-694-114908",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-781-115013",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-580-114773",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-282-115029",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-663-115029",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-709-115029",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-710-115029",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-765-115029",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소아청소년과",
+      "external_id": "NHIMC-19-800-115029",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소화기내과",
+      "external_id": "NHIMC-1-15-110361",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소화기내과",
+      "external_id": "NHIMC-1-17-110361",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소화기내과",
+      "external_id": "NHIMC-1-18-111718",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소화기내과",
+      "external_id": "NHIMC-1-19-112565",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소화기내과",
+      "external_id": "NHIMC-1-20-113682",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소화기내과",
+      "external_id": "NHIMC-1-578-114766",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소화기내과",
+      "external_id": "NHIMC-1-653-114837",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "소화기내과",
+      "external_id": "NHIMC-1-728",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-76-110065",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-78-112090",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-79-112702",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-219-114375",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-620-114817",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-753-114976",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-754-114978",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-772-115004",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경과",
+      "external_id": "NHIMC-10-774-114975",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경외과",
+      "external_id": "NHIMC-14-90-112058",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경외과",
+      "external_id": "NHIMC-14-91-112051",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경외과",
+      "external_id": "NHIMC-14-92-113973",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경외과",
+      "external_id": "NHIMC-14-177-114344",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신경외과",
+      "external_id": "NHIMC-14-199-114356",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신장내과",
+      "external_id": "NHIMC-5-750-115001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신장내과",
+      "external_id": "NHIMC-5-41-114218",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신장내과",
+      "external_id": "NHIMC-5-301-114469",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신장내과",
+      "external_id": "NHIMC-5-521-114688",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신장내과",
+      "external_id": "NHIMC-5-751-115000",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "신장내과",
+      "external_id": "NHIMC-5-793-115022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-23-110062",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-24-112108",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-25-112903",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-26-113970",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-254-114404",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-389-114553",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-519-114686",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-695-114910",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-736-114999",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장내과",
+      "external_id": "NHIMC-2-794-115030",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장혈관흉부외과",
+      "external_id": "NHIMC-15-87-110067",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장혈관흉부외과",
+      "external_id": "NHIMC-15-88-112917",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장혈관흉부외과",
+      "external_id": "NHIMC-15-222-114372",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장혈관흉부외과",
+      "external_id": "NHIMC-15-626-114807",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장혈관흉부외과",
+      "external_id": "NHIMC-15-655-114844",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "심장혈관흉부외과",
+      "external_id": "NHIMC-15-741-114961",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "안과",
+      "external_id": "NHIMC-20-97-112783",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "안과",
+      "external_id": "NHIMC-20-95-112105",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "안과",
+      "external_id": "NHIMC-20-98-113254",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "안과",
+      "external_id": "NHIMC-20-458-114626",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "안과",
+      "external_id": "NHIMC-20-531-114695",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "안과",
+      "external_id": "NHIMC-20-629-114812",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "영상의학과",
+      "external_id": "NHIMC-24-141",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "영상의학과",
+      "external_id": "NHIMC-24-135",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "영상의학과",
+      "external_id": "NHIMC-24-136",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "영상의학과",
+      "external_id": "NHIMC-24-142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "영상의학과",
+      "external_id": "NHIMC-24-140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "영상의학과",
+      "external_id": "NHIMC-24-138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "영상의학과",
+      "external_id": "NHIMC-24-139",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "영상의학과",
+      "external_id": "NHIMC-24-165",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-338-112596",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-56-113977",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-58-113977",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-248-114400",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-270-114419",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-461-114635",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-596-114732",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-559-114732",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-563-114738",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-588-114839",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-589-114839",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-650-114839",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-693-114909",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-739-114960",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-770-114925",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-796-114925",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-756-114925",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "외과",
+      "external_id": "NHIMC-12-795-115033",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-228",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-132",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-133",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-273",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-420",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-201",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-616",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-688",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-732",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-766",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-767",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-768",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-769",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-789",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-792",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "응급의학과",
+      "external_id": "NHIMC-33-797",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "이비인후과",
+      "external_id": "NHIMC-21-100-112898",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "이비인후과",
+      "external_id": "NHIMC-21-102-113683",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "이비인후과",
+      "external_id": "NHIMC-21-283-114447",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "이비인후과",
+      "external_id": "NHIMC-21-724-114941",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "재활의학과",
+      "external_id": "NHIMC-28-121-114994",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "재활의학과",
+      "external_id": "NHIMC-28-762-114994",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "재활의학과",
+      "external_id": "NHIMC-28-669-114873",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "재활의학과",
+      "external_id": "NHIMC-28-285-114450",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "재활의학과",
+      "external_id": "NHIMC-28-763-114995",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "재활의학과",
+      "external_id": "NHIMC-28-159-114322",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "재활의학과",
+      "external_id": "NHIMC-28-533",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정신건강의학과",
+      "external_id": "NHIMC-11-10-110974",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정신건강의학과",
+      "external_id": "NHIMC-11-220-114374",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정신건강의학과",
+      "external_id": "NHIMC-11-303-114473",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정신건강의학과",
+      "external_id": "NHIMC-11-637-114819",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정신건강의학과",
+      "external_id": "NHIMC-11-755-115002",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정신건강의학과",
+      "external_id": "NHIMC-11-798-115026",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-62-112102",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-60-110366",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-61-111239",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-65-112906",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-156-114326",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-176-114340",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-704-114932",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-696-114913",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-801-115034",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-527-114692",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-645-114840",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-734-114949",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-759-114998",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "정형외과",
+      "external_id": "NHIMC-13-758-114979",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종양혈액내과",
+      "external_id": "NHIMC-6-36-112391",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종양혈액내과",
+      "external_id": "NHIMC-6-37-114325",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종양혈액내과",
+      "external_id": "NHIMC-6-158-114325",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종양혈액내과",
+      "external_id": "NHIMC-6-721",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "진단검사의학과",
+      "external_id": "NHIMC-27-152",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "진단검사의학과",
+      "external_id": "NHIMC-27-153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "진단검사의학과",
+      "external_id": "NHIMC-27-264",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "진단검사의학과",
+      "external_id": "NHIMC-27-465",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "진단검사의학과",
+      "external_id": "NHIMC-27-662",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-799",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-105",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-107",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-186",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-321",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-106",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-111",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-287",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-697",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "치과",
+      "external_id": "NHIMC-31-764",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "통합내과",
+      "external_id": "NHIMC-9-25",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "피부과",
+      "external_id": "NHIMC-22-75-112017",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "피부과",
+      "external_id": "NHIMC-22-74-110375",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "피부과",
+      "external_id": "NHIMC-22-664-114842",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "핵의학과",
+      "external_id": "NHIMC-30-134",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "호흡기내과",
+      "external_id": "NHIMC-3-27-110537",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "호흡기내과",
+      "external_id": "NHIMC-3-29-114343",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "호흡기내과",
+      "external_id": "NHIMC-3-170-114343",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "호흡기내과",
+      "external_id": "NHIMC-3-325-114912",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "호흡기내과",
+      "external_id": "NHIMC-3-698-114912",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "호흡기내과",
+      "external_id": "NHIMC-3-699-114911",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "호흡기내과",
+      "external_id": "NHIMC-3-784-115015",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "호흡기내과",
+      "external_id": "NHIMC-3-640-114827",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "통증클리닉",
+      "external_id": "NHIMC-32-113-110073",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "통증클리닉",
+      "external_id": "NHIMC-32-114-112103",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "통증클리닉",
+      "external_id": "NHIMC-32-215-114332",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "통증클리닉",
+      "external_id": "NHIMC-32-648-114845",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-491",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-492",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-498",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-499",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-54",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-748",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-127",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-129",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-679",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-703",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "국가검진센터",
+      "external_id": "NHIMC-64-717",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-486",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-489",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-128",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-126",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-129",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-679",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-492",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-491",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-728",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "종합검진센터",
+      "external_id": "NHIMC-65-790",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "유전클리닉",
+      "external_id": "NHIMC-66-153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진료일정",
+      "department": "중독 통합치료센터(정신)",
+      "external_id": "NHIMC-117-10-110974",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

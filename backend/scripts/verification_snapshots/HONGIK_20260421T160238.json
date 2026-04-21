@@ -1,0 +1,415 @@
+{
+  "hospital_code": "HONGIK",
+  "hospital_name": "홍익병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "송선홍",
+      "department": "소화기내과",
+      "external_id": "HONGIK-00-250304",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월  휴진:    11일(토),        25일(토)"
+    },
+    {
+      "name": "배상수",
+      "department": "소화기내과",
+      "external_id": "HONGIK-00-040301",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월  휴진 :    4일(토),    18일(토)"
+    },
+    {
+      "name": "민창욱",
+      "department": "소화기내과",
+      "external_id": "HONGIK-00-220301",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "▶  4월  휴진 :   2일(목)오후,      4일(토),       16일(목)오후,        18일(토),       23일(목)오후,       27일(월)오전"
+    },
+    {
+      "name": "조성일",
+      "department": "소화기내과",
+      "external_id": "HONGIK-00-250503",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월   휴진 :   11일(토),     25일(토)"
+    },
+    {
+      "name": "조환준",
+      "department": "소화기내과",
+      "external_id": "HONGIK-00-260302",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월  휴진 :    4일(토),    18일(토)"
+    },
+    {
+      "name": "김장원",
+      "department": "순환기내과",
+      "external_id": "HONGIK-01-030320",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진  :  1일(수), 4일(토)"
+    },
+    {
+      "name": "정영욱",
+      "department": "순환기내과",
+      "external_id": "HONGIK-01-220105",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진  :  8일(수), 11일(토), 29일(수)"
+    },
+    {
+      "name": "서지연",
+      "department": "순환기내과",
+      "external_id": "HONGIK-01-200301",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진  :   17일(금), 18일(토), 20일(월)"
+    },
+    {
+      "name": "문지애",
+      "department": "호흡기내과",
+      "external_id": "HONGIK-02-140101",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "▶  4월 휴진  :  10일(금), 11일(토), 25일(토)"
+    },
+    {
+      "name": "김지훈",
+      "department": "내분비내과",
+      "external_id": "HONGIK-03-090303",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶   4월 휴진  :  11일(토), 25일(토)"
+    },
+    {
+      "name": "이지운",
+      "department": "감염내과",
+      "external_id": "HONGIK-04-250602",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월휴진  :  1일(수), 2일(목), 3일(금), 4일(토), 11일(토), 18일(토)"
+    },
+    {
+      "name": "김성민",
+      "department": "신장내과",
+      "external_id": "HONGIK-05-240302",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶  4월  휴진 :   4일(토),     18일(토)"
+    },
+    {
+      "name": "송하섭",
+      "department": "신경과",
+      "external_id": "HONGIK-06-130608",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 : 10일(금) 오후, 11일(토), 23일(목) 오후, 24일(금), 25일(토)"
+    },
+    {
+      "name": "이준범",
+      "department": "신경과",
+      "external_id": "HONGIK-06-110306",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 : 3일(금) 오후, 4일(토), 17일(금) 오후, 18일(토)"
+    },
+    {
+      "name": "김종오",
+      "department": "정형외과",
+      "external_id": "HONGIK-07-210902",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영근",
+      "department": "정형외과",
+      "external_id": "HONGIK-07-040412",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 :  2일(목), 11일(토), 16(목), 24일(금), 25일(토), 30일(목)"
+    },
+    {
+      "name": "서영래",
+      "department": "정형외과",
+      "external_id": "HONGIK-07-180422",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 :  4일(토), 8일(수), 18일(토), 22일(수)"
+    },
+    {
+      "name": "민웅배",
+      "department": "정형외과",
+      "external_id": "HONGIK-07-260222",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 :  4일(토), 18일(토)"
+    },
+    {
+      "name": "박성준",
+      "department": "정형외과",
+      "external_id": "HONGIK-07-260401",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 :  11일(토), 21일(화), 22일(수), 23일(목), 25일(토)"
+    },
+    {
+      "name": "김준기",
+      "department": "신경외과",
+      "external_id": "HONGIK-08-210303",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 : 18일(토), 24일(금), 25일(토)"
+    },
+    {
+      "name": "노형진",
+      "department": "신경외과",
+      "external_id": "HONGIK-08-060903",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진  :  11일(토),  25일(토)"
+    },
+    {
+      "name": "정승화",
+      "department": "신경외과",
+      "external_id": "HONGIK-08-210605",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 : 4일(토), 11일(토)"
+    },
+    {
+      "name": "박임찬",
+      "department": "피부/비뇨의학과",
+      "external_id": "HONGIK-09-090203",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 : 11일(토), 24일(금), 25일(토)"
+    },
+    {
+      "name": "이정헌",
+      "department": "산부인과",
+      "external_id": "HONGIK-10-210302",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 :4일(토),18일(토)"
+    },
+    {
+      "name": "라기혁",
+      "department": "외과",
+      "external_id": "HONGIK-11-000302",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권기환",
+      "department": "외과",
+      "external_id": "HONGIK-11-060210",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 :  3일(금), 4일(토), 11일(토),16일(목) 오후"
+    },
+    {
+      "name": "강재승",
+      "department": "외과",
+      "external_id": "HONGIK-11-241001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 :  18일(토), 22일(수), 23일(목), 24일(금), 25일(토)"
+    },
+    {
+      "name": "홍정덕",
+      "department": "소아청소년과",
+      "external_id": "HONGIK-12-120203",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶  4월   휴진 :    11일(토),       25일(토)"
+    },
+    {
+      "name": "김원용",
+      "department": "가정의학과",
+      "external_id": "HONGIK-13-091201",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 : 11일(토), 24일(금), 25일(토)"
+    },
+    {
+      "name": "박진경",
+      "department": "가정의학과",
+      "external_id": "HONGIK-13-230307",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "▶4월 휴진  :1일(수-오후), 4일(토),18일(토)"
+    },
+    {
+      "name": "김광훈",
+      "department": "이비인후과",
+      "external_id": "HONGIK-15-110201",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진 :4일(토), 18일(토),21일(화)"
+    },
+    {
+      "name": "김미선",
+      "department": "성형외과",
+      "external_id": "HONGIK-16-120313",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월 휴진: 11일(토) , 17일(금), 25일(토)"
+    },
+    {
+      "name": "박서영",
+      "department": "치과",
+      "external_id": "HONGIK-18-250801",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶ 4월휴진 :3일(금-오후),11일(토), 17일(금-오후),25일(토)"
+    },
+    {
+      "name": "강성숙",
+      "department": "치과",
+      "external_id": "HONGIK-18-160902",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "▶4월 휴진: 10일(금),11일(토), 24일(금), 25일(토)"
+    },
+    {
+      "name": "김현주",
+      "department": "응급의학과",
+      "external_id": "HONGIK-19-090305",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤현우",
+      "department": "응급의학과",
+      "external_id": "HONGIK-19-120314",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창현",
+      "department": "응급의학과",
+      "external_id": "HONGIK-19-220201",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정환석",
+      "department": "응급의학과",
+      "external_id": "HONGIK-19-220901",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민우",
+      "department": "응급의학과",
+      "external_id": "HONGIK-19-240101",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준혁",
+      "department": "응급의학과",
+      "external_id": "HONGIK-19-251101",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재환",
+      "department": "응급의학과",
+      "external_id": "HONGIK-19-260301",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오경미",
+      "department": "마취통증의학과",
+      "external_id": "HONGIK-20-031101",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황재현",
+      "department": "마취통증의학과",
+      "external_id": "HONGIK-20-230321",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경선",
+      "department": "진단검사의학과",
+      "external_id": "HONGIK-21-010403",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조원식",
+      "department": "영상의학과",
+      "external_id": "HONGIK-22-961007",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재환",
+      "department": "영상의학과",
+      "external_id": "HONGIK-22-160315",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이명재",
+      "department": "영상의학과",
+      "external_id": "HONGIK-22-220801",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진아",
+      "department": "영상의학과",
+      "external_id": "HONGIK-22-201001",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선화",
+      "department": "영상의학과",
+      "external_id": "HONGIK-22-220303",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조병준",
+      "department": "영상의학과",
+      "external_id": "HONGIK-22-250502",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우진",
+      "department": "영상의학과",
+      "external_id": "HONGIK-22-250505",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

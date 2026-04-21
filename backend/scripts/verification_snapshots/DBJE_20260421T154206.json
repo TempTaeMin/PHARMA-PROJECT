@@ -1,0 +1,143 @@
+{
+  "hospital_code": "DBJE",
+  "hospital_name": "동부제일병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이은우",
+      "department": "내과센터",
+      "external_id": "DBJE-9c9bcb5c9f",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 수요일 오후 휴진 - 매월 첫째주 토요일 휴진"
+    },
+    {
+      "name": "문정연",
+      "department": "내과센터",
+      "external_id": "DBJE-0f9efce55d",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 금요일 오후 휴진 - 매월 넷째주 토요일 휴진"
+    },
+    {
+      "name": "김용현",
+      "department": "내과센터",
+      "external_id": "DBJE-c92289534f",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 월요일 오후 휴진 - 매월 둘째주 토요일 휴진"
+    },
+    {
+      "name": "유희승",
+      "department": "내과센터",
+      "external_id": "DBJE-2238b1b2de",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 목요일 오후 휴진 - 매월 셋째주 토요일 휴진"
+    },
+    {
+      "name": "김진영",
+      "department": "내과센터",
+      "external_id": "DBJE-67097f8dbc",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 목요일 오후 휴진 - 매월 넷째주 토요일 휴진"
+    },
+    {
+      "name": "이원재",
+      "department": "내과센터",
+      "external_id": "DBJE-0e13692d3a",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 화요일 오후 휴진 - 매월 첫째주 토요일 휴진"
+    },
+    {
+      "name": "강성만",
+      "department": "일반외과",
+      "external_id": "DBJE-baf1dc0222",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 금요일 오후 휴진"
+    },
+    {
+      "name": "박재우",
+      "department": "일반외과",
+      "external_id": "DBJE-f61e87d69b",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 목요일 오후 휴진"
+    },
+    {
+      "name": "유희성",
+      "department": "정형외과",
+      "external_id": "DBJE-1ab042cc61",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 수요일 오후 휴진 - 매월 넷째주 토요일 휴진"
+    },
+    {
+      "name": "전종욱",
+      "department": "정형외과",
+      "external_id": "DBJE-8237a86ce5",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 화요일 오후 휴진 - 매월 넷째주 토요일 휴진"
+    },
+    {
+      "name": "조호승",
+      "department": "정형외과",
+      "external_id": "DBJE-4d037f808b",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 수요일 오후 휴진 - 매월 셋째주 토요일 휴진"
+    },
+    {
+      "name": "김형준",
+      "department": "정형외과",
+      "external_id": "DBJE-717867be86",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 목요일 오후 휴진 - 매월 둘째주 토요일 휴진"
+    },
+    {
+      "name": "강덕원",
+      "department": "정형외과",
+      "external_id": "DBJE-85a8d954ac",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 수요일 오후 휴진 - 매월 셋째주 토요일 휴진"
+    },
+    {
+      "name": "홍정용",
+      "department": "정형외과",
+      "external_id": "DBJE-2e33720360",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 예약 진료"
+    },
+    {
+      "name": "성백강",
+      "department": "신경외과",
+      "external_id": "DBJE-c8594b1ccf",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 목요일 오후 휴진"
+    },
+    {
+      "name": "강경수",
+      "department": "신경과",
+      "external_id": "DBJE-98d6e56da0",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 금요일 오후 휴진"
+    },
+    {
+      "name": "김민경",
+      "department": "산부인과",
+      "external_id": "DBJE-46f9f7506e",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "점심시간 13:00~14:00 / 매월 첫째, 셋째 주 토요일 휴진"
+    }
+  ]
+}

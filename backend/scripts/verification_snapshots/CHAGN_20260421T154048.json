@@ -1,0 +1,911 @@
+{
+  "hospital_code": "CHAGN",
+  "hospital_name": "강남차병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이정노",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24861",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한원보",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-p27",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문영",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24349",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신중식",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23209",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차동현",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23459",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전혜선",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23069",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성석주",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23499",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준식",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24619",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경진",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-p36",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박희진",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23409",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심성신",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB03309",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지연",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24821",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조연경",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23749",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용욱",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23879",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미라",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23899",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보욱",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24831",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수현",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23849",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한유정",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24329",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미경",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB23939",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수윤",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24941",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심소현",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24701",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이나라",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24359",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원세연",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24379",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최수현",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24691",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍유미",
+      "department": "산부인과(산과/부인과)",
+      "external_id": "CHAGN-list/obstetrics-AB24841",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희준",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-AB24011",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황정혜",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-20260102",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한이정",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-AB24141",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민경",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-AB24191",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세정",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-AB24361",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노은지",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-AB24901",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전행준",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-A176012",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고유라",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-p2190",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하진경",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-AB24771",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민규",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-AB24781",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이여진",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-AB24791",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박한뫼",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-p771",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유나경",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAGN-list/Infertility-20260330",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한광협",
+      "department": "소화기병센터(소화기내과/외과)",
+      "external_id": "CHAGN-list/gastroenterology-23040701",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조주영",
+      "department": "소화기병센터(소화기내과/외과)",
+      "external_id": "CHAGN-list/gastroenterology-94949494",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성환",
+      "department": "소화기병센터(소화기내과/외과)",
+      "external_id": "CHAGN-list/gastroenterology-121212121",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성우",
+      "department": "소화기병센터(소화기내과/외과)",
+      "external_id": "CHAGN-list/gastroenterology-20230201",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이아영",
+      "department": "소화기병센터(소화기내과/외과)",
+      "external_id": "CHAGN-list/gastroenterology-p2574",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유리",
+      "department": "내분비내과",
+      "external_id": "CHAGN-list/endocrinology-AA11251",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원진",
+      "department": "내분비내과",
+      "external_id": "CHAGN-list/endocrinology-AB11191",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "내분비내과",
+      "external_id": "CHAGN-list/endocrinology-B253004",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종진",
+      "department": "순환기내과",
+      "external_id": "CHAGN-list/cardiology-469715",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조윤경",
+      "department": "순환기내과",
+      "external_id": "CHAGN-list/cardiology-B203066",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김신태",
+      "department": "호흡기내과",
+      "external_id": "CHAGN-list/pulmonology-AB11131",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노동영",
+      "department": "외과(유방·갑상선센터)",
+      "external_id": "CHAGN-list/generalsurgery-AB18161",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박해린",
+      "department": "외과(유방·갑상선센터)",
+      "external_id": "CHAGN-list/generalsurgery-AB18021",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤찬석",
+      "department": "외과(유방·갑상선센터)",
+      "external_id": "CHAGN-list/generalsurgery-AB18121",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유미",
+      "department": "외과(유방·갑상선센터)",
+      "external_id": "CHAGN-list/generalsurgery-AB18171",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정민",
+      "department": "외과(유방·갑상선센터)",
+      "external_id": "CHAGN-list/generalsurgery-AB18181",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성우(소화기병센터)",
+      "department": "외과(유방·갑상선센터)",
+      "external_id": "CHAGN-list/generalsurgery-20230201",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하정현",
+      "department": "성형외과",
+      "external_id": "CHAGN-list/plasticsurgery-AB22041",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정희정",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-20250731",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박국인",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-794679",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박원순",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-B223033",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤소영",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-AB29381",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성태정",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-p2481",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도현",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-B253001",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전지현",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-AB29221",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기은",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-p372",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최엄지",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-AB29611",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남수경",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-p2445",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김호",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-p2646",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노주형",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-AB29661",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공단",
+      "department": "소아청소년과",
+      "external_id": "CHAGN-pediatrics-AB29281",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권성원",
+      "department": "비뇨의학과",
+      "external_id": "CHAGN-list/urology-AB34031",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상원(소아비뇨의학과)교수",
+      "department": "비뇨의학과",
+      "external_id": "CHAGN-list/urology-B233005",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송승훈",
+      "department": "비뇨의학과",
+      "external_id": "CHAGN-list/urology-AB34051",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태호",
+      "department": "비뇨의학과",
+      "external_id": "CHAGN-list/urology-AB34211",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김일빈",
+      "department": "정신건강의학과",
+      "external_id": "CHAGN-list/psychiatry-AB36141",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성진",
+      "department": "치과",
+      "external_id": "CHAGN-list/dentistry-p644",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손수민",
+      "department": "치과",
+      "external_id": "CHAGN-list/dentistry-p1030",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조아라",
+      "department": "치과",
+      "external_id": "CHAGN-list/dentistry-p2563",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종인",
+      "department": "소아외과",
+      "external_id": "CHAGN-list/pediatricsurgery-p1439",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방은치",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p276",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명옥",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2277",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강용인",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p274",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현숙",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p275",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효은",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2655",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성희",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2318",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공유경",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2033",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수연",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2176",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지연",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p1487",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유화림",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2048",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김고운",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2278",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유은숙",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2517",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조지연",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2645",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양소영",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2656",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강보배",
+      "department": "마취통증의학과",
+      "external_id": "CHAGN-list/anesthesia-p2651",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양보라",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p1663",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경상",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p1699",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김화영",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p2317",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍민지",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p2312",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이안",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p2311",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종태",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p2315",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정균순",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p2313",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우진",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p1867",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상민",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p2316",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강초음",
+      "department": "영상의학과",
+      "external_id": "CHAGN-list/radiology-p2647",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백진영",
+      "department": "진단검사의학과",
+      "external_id": "CHAGN-list/diagnostic-check-p277",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희정",
+      "department": "진단검사의학과",
+      "external_id": "CHAGN-list/diagnostic-check-p1411",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신우용",
+      "department": "진단검사의학과",
+      "external_id": "CHAGN-list/diagnostic-check-p2186",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심정연",
+      "department": "병리과",
+      "external_id": "CHAGN-list/pathology-p194",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "병리과",
+      "external_id": "CHAGN-list/pathology-p68",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노송미",
+      "department": "병리과",
+      "external_id": "CHAGN-list/pathology-p1028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상령",
+      "department": "병리과",
+      "external_id": "CHAGN-list/pathology-p2035",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준정",
+      "department": "병리과",
+      "external_id": "CHAGN-list/pathology-p2320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안혜인",
+      "department": "병리과",
+      "external_id": "CHAGN-list/pathology-p2503",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "금수정",
+      "department": "병리과",
+      "external_id": "CHAGN-list/pathology-p2501",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

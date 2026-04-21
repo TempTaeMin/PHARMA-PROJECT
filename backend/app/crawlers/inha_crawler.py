@@ -228,12 +228,62 @@ class InhaCrawler:
 
         return self._parse_schedule_from_soup(soup)
 
+    async def _fetch_doctor_profile(
+        self, client: httpx.AsyncClient, doc_id: str
+    ) -> dict:
+        """개별 프로필 페이지에서 이름/진료과/전문분야 + 스케줄 파싱
+
+        한 번의 네트워크 요청으로 의사 1명의 모든 정보를 얻는다.
+        개별 교수 조회(crawl_doctor_schedule)에서 사용.
+        """
+        empty = {"name": "", "department": "", "specialty": "", "schedules": []}
+        try:
+            resp = await client.get(
+                f"{BASE_URL}/page/department/medicine/doctor/{doc_id}",
+            )
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
+        except Exception as e:
+            logger.error(f"[INHA] 프로필 조회 실패 {doc_id}: {e}")
+            return empty
+
+        name_el = soup.select_one("p.name")
+        dept_el = soup.select_one("p.dept")
+        name = name_el.get_text(strip=True) if name_el else ""
+        department = dept_el.get_text(strip=True) if dept_el else ""
+
+        specialty = ""
+        for wrap in soup.select("div.prg-wrap"):
+            title = wrap.select_one(".prg-title")
+            if title and title.get_text(strip=True) == "전문분야":
+                val = wrap.select_one(".prg-right .prg-cont")
+                if val:
+                    specialty = val.get_text(" ", strip=True)
+                break
+
+        schedules = self._parse_schedule_from_soup(soup)
+
+        return {
+            "name": name,
+            "department": department,
+            "specialty": specialty,
+            "schedules": schedules,
+        }
+
     async def _fetch_dept_schedule(
         self, client: httpx.AsyncClient, dept_code: str
     ) -> dict[str, list[dict]]:
         """진료과 스케줄 페이지에서 의사별 스케줄 일괄 파싱
 
         URL: /page/department/medicine/dept/{CODE}/schedule
+        테이블 구조 (table.dept-time):
+          thead 2행:
+            [의료진 rs=2 | 전문분야 rs=2 | 진료일정 cs=7 | 예약 rs=2]
+            [구분 | 월 | 화 | 수 | 목 | 금 | 토]
+          tbody — 의사당 2행:
+            오전 행: [의료진 rs=2 | 전문분야 rs=2 | 오전 | 월~토(6) | 예약 rs=2]
+            오후 행: [오후 | 월~토(6)]
+
         반환: {doc_id: [schedule_list]}
         """
         try:
@@ -245,92 +295,60 @@ class InhaCrawler:
         except Exception:
             return {}
 
-        result = {}
+        table = soup.select_one("table.dept-time")
+        if not table:
+            return {}
+        tbody = table.select_one("tbody")
+        if not tbody:
+            return {}
 
-        # 스케줄 테이블에서 의사별 행 파싱
-        tables = soup.select("table")
-        for table in tables:
-            rows = table.select("tr")
-            if not rows:
+        result: dict[str, list[dict]] = {}
+        current_doc_id: str | None = None
+
+        rows = [tr for tr in tbody.children if getattr(tr, "name", None) == "tr"]
+        for row in rows:
+            cells = [td for td in row.children if getattr(td, "name", None) == "td"]
+            if not cells:
                 continue
 
-            # 헤더에서 요일 칼럼 매핑
-            header_row = rows[0]
-            header_cells = header_row.select("th, td")
-            col_to_dow = {}
-            for ci, cell in enumerate(header_cells):
-                text = cell.get_text(strip=True)
-                for char, dow in DAY_CHAR_MAP.items():
-                    if char in text:
-                        col_to_dow[ci] = dow
-                        break
-
-            if not col_to_dow:
-                continue
-
-            # 의사별 행 파싱 (이미지/링크에서 ID 추출)
-            for row in rows[1:]:
-                # 의사 ID 추출
-                doc_id = ""
-                img = row.select_one("img[src*='/doctor/']")
-                if img:
-                    src = img.get("src", "")
-                    m = re.search(r'/doctor/(\d+)', src)
-                    if m:
-                        doc_id = m.group(1)
-
-                if not doc_id:
-                    for link in row.select("a[href*='/doctor/']"):
-                        href = link.get("href", "")
-                        m = re.search(r'/doctor/(\d+)', href)
-                        if m:
-                            doc_id = m.group(1)
-                            break
-
-                if not doc_id:
-                    data_el = row.select_one("[data-no]")
-                    if data_el:
-                        doc_id = data_el.get("data-no", "")
-
-                if not doc_id:
+            img = row.select_one("img[src*='/doctor/']")
+            if img:
+                # 오전 행 — 의사 ID 갱신
+                src = img.get("src", "")
+                m = re.search(r"/doctor/(\d+)", src)
+                current_doc_id = m.group(1) if m else None
+                slot = "morning"
+                # [img/name][specialty][오전][월~토][예약] → 날짜 셀 = cells[3:9]
+                day_cells = cells[3:9] if len(cells) >= 9 else []
+            else:
+                if not current_doc_id:
                     continue
+                slot = "afternoon"
+                # [오후][월~토] → 날짜 셀 = cells[1:7]
+                day_cells = cells[1:7] if len(cells) >= 7 else []
 
-                # 각 셀에서 오전/오후 스케줄 파싱
-                cells = row.select("td")
-                schedules = []
-                seen = set()
+            if not current_doc_id or len(day_cells) < 6:
+                continue
 
-                for ci, cell in enumerate(cells):
-                    if ci not in col_to_dow:
-                        continue
-                    dow = col_to_dow[ci]
-
-                    cell_text = cell.get_text(strip=True)
-                    # ★센터 또는 ●진료과 등 표시 확인
-                    # 셀 안에 오전/오후 정보가 같이 들어있을 수 있음
-                    if "★" in cell_text or "●" in cell_text or (cell_text and cell_text not in ("-", "", "X", "x", "휴진")):
-                        location = ""
-                        if "센터" in cell_text:
-                            location = "센터"
-                        elif "진료과" in cell_text:
-                            location = "진료과"
-
-                        # 오전/오후 모두 표시
-                        for slot in ("morning", "afternoon"):
-                            key = (dow, slot)
-                            if key not in seen:
-                                seen.add(key)
-                                start, end = TIME_RANGES[slot]
-                                schedules.append({
-                                    "day_of_week": dow,
-                                    "time_slot": slot,
-                                    "start_time": start,
-                                    "end_time": end,
-                                    "location": location,
-                                })
-
-                if schedules:
-                    result[doc_id] = schedules
+            schedules = result.setdefault(current_doc_id, [])
+            seen = {(s["day_of_week"], s["time_slot"]) for s in schedules}
+            for dow, cell in enumerate(day_cells):
+                has_dept = cell.select_one("span.dept-icon") is not None
+                has_center = cell.select_one("span.center-icon") is not None
+                if not (has_dept or has_center):
+                    continue
+                key = (dow, slot)
+                if key in seen:
+                    continue
+                seen.add(key)
+                start, end = TIME_RANGES[slot]
+                schedules.append({
+                    "day_of_week": dow,
+                    "time_slot": slot,
+                    "start_time": start,
+                    "end_time": end,
+                    "location": "센터" if has_center else "",
+                })
 
         return result
 
@@ -387,10 +405,9 @@ class InhaCrawler:
 
                     if "★" in cell_text or "●" in cell_text:
                         has_schedule = True
-                        if "센터" in cell_text:
+                        # 단일 캠퍼스라 장소명 기록 불필요, 센터 진료만 구분
+                        if "★" in cell_text or "센터" in cell_text:
                             location = "센터"
-                        elif "진료과" in cell_text:
-                            location = "진료과"
                     elif cell_text and cell_text not in ("-", "X", "x", "휴진", ""):
                         has_schedule = True
                     elif "on" in cell_classes or "active" in cell_classes or "check" in cell_classes:
@@ -491,54 +508,37 @@ class InhaCrawler:
         ]
 
     async def crawl_doctor_schedule(self, staff_id: str) -> dict:
-        """개별 교수 진료시간 조회"""
+        """개별 교수 진료시간 조회 — 해당 교수 1명만 네트워크 요청"""
         empty = {
             "staff_id": staff_id, "name": "", "department": "", "position": "",
             "specialty": "", "profile_url": "", "notes": "", "schedules": [],
         }
 
-        # 캐시가 이미 있으면 캐시에서 조회
         if self._cached_data is not None:
             for d in self._cached_data:
                 if d["staff_id"] == staff_id or d["external_id"] == staff_id:
                     return {k: d.get(k, "") for k in ("staff_id", "name", "department", "position", "specialty", "profile_url", "notes", "schedules")}
             return empty
 
-        # 개별 조회: doc_id 추출 후 스케줄 가져오기
         prefix = "INHA-"
         doc_id = staff_id.replace(prefix, "") if staff_id.startswith(prefix) else staff_id
 
         async with httpx.AsyncClient(
             headers=self.headers, timeout=30, follow_redirects=True,
         ) as client:
-            schedules = await self._fetch_schedule(client, doc_id)
+            profile = await self._fetch_doctor_profile(client, doc_id)
 
-            # 의사 정보: 진료과 순회하며 찾기
-            name, department, position, specialty = "", "", "", ""
-            depts = await self._fetch_departments()
-            for dept in depts:
-                docs = await self._fetch_dept_doctors(client, dept["code"], dept["name"])
-                for doc in docs:
-                    if doc["doc_id"] == doc_id:
-                        name = doc["name"]
-                        department = doc["department"]
-                        position = doc["position"]
-                        specialty = doc["specialty"]
-                        break
-                if name:
-                    break
-
-            ext_id = f"INHA-{doc_id}"
-            return {
-                "staff_id": ext_id,
-                "name": name,
-                "department": department,
-                "position": position,
-                "specialty": specialty,
-                "profile_url": f"{BASE_URL}/page/department/medicine/doctor/{doc_id}",
-                "notes": "",
-                "schedules": schedules,
-            }
+        ext_id = f"INHA-{doc_id}"
+        return {
+            "staff_id": ext_id,
+            "name": profile["name"],
+            "department": profile["department"],
+            "position": "",
+            "specialty": profile["specialty"],
+            "profile_url": f"{BASE_URL}/page/department/medicine/doctor/{doc_id}",
+            "notes": "",
+            "schedules": profile["schedules"],
+        }
 
     async def crawl_doctors(self, department: str = None):
         """전체 크롤링 (CrawlResult 반환)"""

@@ -1,0 +1,271 @@
+{
+  "hospital_code": "HYH",
+  "hospital_name": "남양주한양병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "임규성",
+      "department": "소화기내과",
+      "external_id": "HYH-10_3",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오동준",
+      "department": "소화기내과",
+      "external_id": "HYH-10_42",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김중석",
+      "department": "소화기내과",
+      "external_id": "HYH-10_49",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이인효",
+      "department": "이비인후과",
+      "external_id": "HYH-12_2",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "성인병내과",
+      "external_id": "HYH-13_5",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "부재",
+      "department": "비뇨기과",
+      "external_id": "HYH-14_6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선동",
+      "department": "부인과",
+      "external_id": "HYH-15_7",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지용",
+      "department": "성형외과",
+      "external_id": "HYH-16_8",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재헌",
+      "department": "순환기내과",
+      "external_id": "HYH-17_9",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤주희",
+      "department": "순환기내과",
+      "external_id": "HYH-17_46",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "선봉균",
+      "department": "신장내과",
+      "external_id": "HYH-19_11",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주유선",
+      "department": "신장내과",
+      "external_id": "HYH-19_55",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성욱",
+      "department": "외과",
+      "external_id": "HYH-20_13",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주영",
+      "department": "외과",
+      "external_id": "HYH-20_12",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "준비중",
+      "department": "흉부혈관외과",
+      "external_id": "HYH-21_14",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희선",
+      "department": "정형외과",
+      "external_id": "HYH-22_15",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기덕",
+      "department": "정형외과",
+      "external_id": "HYH-22_56",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백승숙",
+      "department": "호흡기내과",
+      "external_id": "HYH-23_16",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정혁",
+      "department": "신경과",
+      "external_id": "HYH-24_17",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인순",
+      "department": "마취통증의학과",
+      "external_id": "HYH-25_18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서관용",
+      "department": "진단검사의학과",
+      "external_id": "HYH-26_19",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안용식",
+      "department": "영상의학과",
+      "external_id": "HYH-27_20",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김욱",
+      "department": "영상의학과",
+      "external_id": "HYH-27_57",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성은",
+      "department": "응급의학과",
+      "external_id": "HYH-28_21",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정태교",
+      "department": "응급의학과",
+      "external_id": "HYH-28_23",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조장환",
+      "department": "응급의학과",
+      "external_id": "HYH-28_24",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우식",
+      "department": "응급의학과",
+      "external_id": "HYH-28_53",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍종근",
+      "department": "응급의학과",
+      "external_id": "HYH-28_54",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "함인권",
+      "department": "치과",
+      "external_id": "HYH-29_26",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양재혁",
+      "department": "치과",
+      "external_id": "HYH-29_58",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수현",
+      "department": "치과",
+      "external_id": "HYH-29_59",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "·",
+      "department": "혈액종양내과",
+      "external_id": "HYH-40_1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전우재",
+      "department": "감염내과",
+      "external_id": "HYH-41_47",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "hospital_code": "BESEOUL",
+  "hospital_name": "베스티안서울병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김경식",
+      "department": "화상외과",
+      "external_id": "BESEOUL-adult-2496bb8a",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤천재",
+      "department": "화상외과",
+      "external_id": "BESEOUL-adult-d9a05c96",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강종철",
+      "department": "화상외과",
+      "external_id": "BESEOUL-adult-22e343cd",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전후완",
+      "department": "화상외과",
+      "external_id": "BESEOUL-adult-3847cfa9",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현진",
+      "department": "화상외과",
+      "external_id": "BESEOUL-adult-e9dda367",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이문철",
+      "department": "내과",
+      "external_id": "BESEOUL-internal-d01e8ddf",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종구",
+      "department": "화상재건",
+      "external_id": "BESEOUL-recon-95c31b17",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진경",
+      "department": "소아화상",
+      "external_id": "BESEOUL-child-72c54df6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "hospital_code": "GGPC",
+  "hospital_name": "경기도의료원 포천병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박선수",
+      "department": "내과",
+      "external_id": "GGPC-75-im11",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경엽",
+      "department": "내과",
+      "external_id": "GGPC-75-im31",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원혜진",
+      "department": "내과",
+      "external_id": "GGPC-75-im21",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신은영",
+      "department": "가정의학과",
+      "external_id": "GGPC-100-8693",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김대성",
+      "department": "신경과",
+      "external_id": "GGPC-76-nm11",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병석",
+      "department": "외과",
+      "external_id": "GGPC-77-7362",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양승진",
+      "department": "정형외과",
+      "external_id": "GGPC-78-os11",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성은",
+      "department": "치과",
+      "external_id": "GGPC-79-a879",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이승주",
+      "department": "이비인후과",
+      "external_id": "GGPC-80-7325",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현아",
+      "department": "소아청소년과",
+      "external_id": "GGPC-82-pd11",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고영채",
+      "department": "산부인과",
+      "external_id": "GGPC-83-og11",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신윤철",
+      "department": "마취통증의학과",
+      "external_id": "GGPC-84-1234",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은경",
+      "department": "마취통증의학과",
+      "external_id": "GGPC-84-9689",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수완",
+      "department": "영상의학과",
+      "external_id": "GGPC-85-001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김근",
+      "department": "진단검사의학과",
+      "external_id": "GGPC-86-001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "손성호",
+      "department": "응급의학과",
+      "external_id": "GGPC-87-001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전동진",
+      "department": "재활의학과",
+      "external_id": "GGPC-88-a641",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "은성종",
+      "department": "비뇨의학과",
+      "external_id": "GGPC-109-9984",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고창원",
+      "department": "건강증진센터",
+      "external_id": "GGPC-96-001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

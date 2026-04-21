@@ -1,0 +1,551 @@
+{
+  "hospital_code": "SCHMC",
+  "hospital_name": "순천향대학교서울병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "유병욱",
+      "department": "가정의학과",
+      "external_id": "SCHMC-1145",
+      "n_schedules": 5,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "조현",
+      "department": "가정의학과",
+      "external_id": "SCHMC-512",
+      "n_schedules": 5,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "곽영환",
+      "department": "가정의학과",
+      "external_id": "SCHMC-125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지영민",
+      "department": "가정의학과",
+      "external_id": "SCHMC-4108",
+      "n_schedules": 3,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "백수아",
+      "department": "가정의학과",
+      "external_id": "SCHMC-4505",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김태형",
+      "department": "감염내과",
+      "external_id": "SCHMC-1200",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "이은정",
+      "department": "감염내과",
+      "external_id": "SCHMC-1201",
+      "n_schedules": 4,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "백예지",
+      "department": "감염내과",
+      "external_id": "SCHMC-2307",
+      "n_schedules": 4,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "정종탁",
+      "department": "감염내과",
+      "external_id": "SCHMC-2308",
+      "n_schedules": 4,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "강민서",
+      "department": "감염내과",
+      "external_id": "SCHMC-4107",
+      "n_schedules": 4,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김현숙",
+      "department": "관절류마티스내과",
+      "external_id": "SCHMC-627",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "이경언",
+      "department": "관절류마티스내과",
+      "external_id": "SCHMC-96",
+      "n_schedules": 5,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "주진영",
+      "department": "관절류마티스내과",
+      "external_id": "SCHMC-4506",
+      "n_schedules": 1,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "유병욱",
+      "department": "국제진료센터",
+      "external_id": "SCHMC-1430",
+      "n_schedules": 5,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "곽영환",
+      "department": "국제진료센터",
+      "external_id": "SCHMC-3566",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변동원",
+      "department": "내분비대사내과",
+      "external_id": "SCHMC-1164",
+      "n_schedules": 4,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "박형규",
+      "department": "내분비대사내과",
+      "external_id": "SCHMC-801",
+      "n_schedules": 6,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김혜정",
+      "department": "내분비대사내과",
+      "external_id": "SCHMC-600",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "박상준",
+      "department": "내분비대사내과",
+      "external_id": "SCHMC-1527",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "서미혜",
+      "department": "내분비대사내과",
+      "external_id": "SCHMC-4162",
+      "n_schedules": 4,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "김상호",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-757",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지원",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-385",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문규",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-1264",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선영",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-758",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유재화",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-528",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조호범",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-377",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송상훈",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-85",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서성민",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-4115",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원영",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-4116",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신온섭",
+      "department": "마취통증의학과",
+      "external_id": "SCHMC-4117",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장아람",
+      "department": "방사선종양학과",
+      "external_id": "SCHMC-1254",
+      "n_schedules": 10,
+      "n_date_schedules": 110,
+      "notes": ""
+    },
+    {
+      "name": "김재식",
+      "department": "방사선종양학과",
+      "external_id": "SCHMC-2463",
+      "n_schedules": 10,
+      "n_date_schedules": 110,
+      "notes": ""
+    },
+    {
+      "name": "진소영",
+      "department": "병리과",
+      "external_id": "SCHMC-1128",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동원",
+      "department": "병리과",
+      "external_id": "SCHMC-1129",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진윤미",
+      "department": "병리과",
+      "external_id": "SCHMC-806",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최인호",
+      "department": "병리과",
+      "external_id": "SCHMC-539",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연희",
+      "department": "병리과",
+      "external_id": "SCHMC-299",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경민",
+      "department": "병리과",
+      "external_id": "SCHMC-2405",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김길향",
+      "department": "병리과",
+      "external_id": "SCHMC-4503",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송윤섭",
+      "department": "비뇨의학과",
+      "external_id": "SCHMC-1255",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "두승환",
+      "department": "비뇨의학과",
+      "external_id": "SCHMC-800",
+      "n_schedules": 4,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김재헌",
+      "department": "비뇨의학과",
+      "external_id": "SCHMC-586",
+      "n_schedules": 4,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "윤종현",
+      "department": "비뇨의학과",
+      "external_id": "SCHMC-3549",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "송미호",
+      "department": "비뇨의학과",
+      "external_id": "SCHMC-3581",
+      "n_schedules": 4,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "이현영",
+      "department": "비뇨의학과",
+      "external_id": "SCHMC-4113",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "이정재",
+      "department": "산부인과",
+      "external_id": "SCHMC-1222",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "최규연",
+      "department": "산부인과",
+      "external_id": "SCHMC-1223",
+      "n_schedules": 3,
+      "n_date_schedules": 30,
+      "notes": ""
+    },
+    {
+      "name": "김정식",
+      "department": "산부인과",
+      "external_id": "SCHMC-718",
+      "n_schedules": 3,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "이은실",
+      "department": "산부인과",
+      "external_id": "SCHMC-712",
+      "n_schedules": 5,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "조재현",
+      "department": "산부인과",
+      "external_id": "SCHMC-1226",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김준환",
+      "department": "산부인과",
+      "external_id": "SCHMC-4601",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "탁민성",
+      "department": "성형외과",
+      "external_id": "SCHMC-1244",
+      "n_schedules": 2,
+      "n_date_schedules": 20,
+      "notes": ""
+    },
+    {
+      "name": "강상규",
+      "department": "성형외과",
+      "external_id": "SCHMC-1245",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "김철한",
+      "department": "성형외과",
+      "external_id": "SCHMC-666",
+      "n_schedules": 3,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "송우진",
+      "department": "성형외과",
+      "external_id": "SCHMC-306",
+      "n_schedules": 2,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "이우령",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-1239",
+      "n_schedules": 2,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "양현종",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-1240",
+      "n_schedules": 5,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "민택기",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-694",
+      "n_schedules": 6,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "이정호",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-646",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": ""
+    },
+    {
+      "name": "배성필",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-207",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정소윤",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-206",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한별",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-1782",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지은",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-3064",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도현",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-3344",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장소영",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-3518",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문의현",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-3802",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성학승",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-3801",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이다정",
+      "department": "소아청소년과",
+      "external_id": "SCHMC-4656",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

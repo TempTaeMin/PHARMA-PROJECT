@@ -1,0 +1,1343 @@
+{
+  "hospital_code": "KUGURO",
+  "hospital_name": "고대구로병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김남렬",
+      "department": "응급중환자외상외과",
+      "external_id": "KUGURO-00238",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "김태식",
+      "department": "응급중환자외상외과",
+      "external_id": "KUGURO-00075",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "노태욱",
+      "department": "응급중환자외상외과",
+      "external_id": "KUGURO-21250",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "조민정",
+      "department": "응급중환자외상외과",
+      "external_id": "KUGURO-23467",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조준민",
+      "department": "응급중환자외상외과",
+      "external_id": "KUGURO-05081",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "최낙준",
+      "department": "응급중환자외상외과",
+      "external_id": "KUGURO-19114",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "공명훈",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-91009",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영성",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-09394",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜빈",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-22544",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희주",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-00486",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지은",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-26342",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오석경",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-08125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이일옥",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-84083",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이충훈",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-08145",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임병건",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-05178",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜인",
+      "department": "마취통증의학과",
+      "external_id": "KUGURO-07165",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용엽",
+      "department": "유방내분비외과",
+      "external_id": "KUGURO-12113",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "김우영",
+      "department": "유방내분비외과",
+      "external_id": "KUGURO-02037",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김지혜",
+      "department": "유방내분비외과",
+      "external_id": "KUGURO-18140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우상욱",
+      "department": "유방내분비외과",
+      "external_id": "KUGURO-06610",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "장미영",
+      "department": "유방내분비외과",
+      "external_id": "KUGURO-23461",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "정재현",
+      "department": "유방내분비외과",
+      "external_id": "KUGURO-17320",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "조신제",
+      "department": "유방내분비외과",
+      "external_id": "KUGURO-23701",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강동오",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-10103",
+      "n_schedules": 3,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "김영훈",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-93085",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김응주",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-02224",
+      "n_schedules": 4,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "김진원",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-03148",
+      "n_schedules": 3,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "나승운",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-02186",
+      "n_schedules": 5,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "나진오",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-99117",
+      "n_schedules": 3,
+      "n_date_schedules": 30,
+      "notes": ""
+    },
+    {
+      "name": "노승영",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-05100",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수형",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-12139",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "박은진",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-10205",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "이대인",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-08340",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "이선기",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-05068",
+      "n_schedules": 3,
+      "n_date_schedules": 30,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "심혈관센터(순환기)",
+      "external_id": "KUGURO-16117",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "강상희",
+      "department": "대장항문외과",
+      "external_id": "KUGURO-04046",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "봉준우",
+      "department": "대장항문외과",
+      "external_id": "KUGURO-19113",
+      "n_schedules": 2,
+      "n_date_schedules": 20,
+      "notes": ""
+    },
+    {
+      "name": "이선일",
+      "department": "대장항문외과",
+      "external_id": "KUGURO-98051",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "이성훈",
+      "department": "대장항문외과",
+      "external_id": "KUGURO-08138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주연욱",
+      "department": "대장항문외과",
+      "external_id": "KUGURO-13770",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "김영수",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUGURO-23470",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "김현구",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUGURO-04409",
+      "n_schedules": 2,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "백만종",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUGURO-06286",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "이준희",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUGURO-15161",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "김고은",
+      "department": "피부과",
+      "external_id": "KUGURO-17106",
+      "n_schedules": 4,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "백유상",
+      "department": "피부과",
+      "external_id": "KUGURO-09334",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전지현",
+      "department": "피부과",
+      "external_id": "KUGURO-02119",
+      "n_schedules": 4,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "신주희",
+      "department": "치과보존과",
+      "external_id": "KUGURO-06611",
+      "n_schedules": 6,
+      "n_date_schedules": 74,
+      "notes": ""
+    },
+    {
+      "name": "김예진",
+      "department": "치과교정과",
+      "external_id": "KUGURO-06284",
+      "n_schedules": 6,
+      "n_date_schedules": 62,
+      "notes": ""
+    },
+    {
+      "name": "정석기",
+      "department": "치과교정과",
+      "external_id": "KUGURO-14414",
+      "n_schedules": 6,
+      "n_date_schedules": 72,
+      "notes": ""
+    },
+    {
+      "name": "심지석",
+      "department": "치과보철과",
+      "external_id": "KUGURO-05152",
+      "n_schedules": 6,
+      "n_date_schedules": 72,
+      "notes": ""
+    },
+    {
+      "name": "이정열",
+      "department": "치과보철과",
+      "external_id": "KUGURO-95318",
+      "n_schedules": 6,
+      "n_date_schedules": 72,
+      "notes": ""
+    },
+    {
+      "name": "류혜진",
+      "department": "내분비내과",
+      "external_id": "KUGURO-01260",
+      "n_schedules": 4,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "박민정",
+      "department": "내분비내과",
+      "external_id": "KUGURO-17114",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "백세현",
+      "department": "내분비내과",
+      "external_id": "KUGURO-94019",
+      "n_schedules": 4,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "송의연",
+      "department": "내분비내과",
+      "external_id": "KUGURO-20181",
+      "n_schedules": 5,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "장수연",
+      "department": "내분비내과",
+      "external_id": "KUGURO-18222",
+      "n_schedules": 4,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "장아름",
+      "department": "내분비내과",
+      "external_id": "KUGURO-22I35",
+      "n_schedules": 4,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "최경묵",
+      "department": "내분비내과",
+      "external_id": "KUGURO-99194",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김선미",
+      "department": "가정의학과",
+      "external_id": "KUGURO-03183",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "남가은",
+      "department": "가정의학과",
+      "external_id": "KUGURO-06121",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "남가은",
+      "department": "가정의학과",
+      "external_id": "KUGURO-*6121",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현진",
+      "department": "가정의학과",
+      "external_id": "KUGURO-23452",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "이유정",
+      "department": "가정의학과",
+      "external_id": "KUGURO-19351",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "가정의학과",
+      "external_id": "KUGURO-26187",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김승한",
+      "department": "소화기내과",
+      "external_id": "KUGURO-05042",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "김원식",
+      "department": "소화기내과",
+      "external_id": "KUGURO-15219",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "김재선",
+      "department": "소화기내과",
+      "external_id": "KUGURO-92054",
+      "n_schedules": 3,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "김효정",
+      "department": "소화기내과",
+      "external_id": "KUGURO-01118",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "이범재",
+      "department": "소화기내과",
+      "external_id": "KUGURO-98270",
+      "n_schedules": 4,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "주문경",
+      "department": "소화기내과",
+      "external_id": "KUGURO-99443",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "김종한",
+      "department": "위장관외과(상부)",
+      "external_id": "KUGURO-98040",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "서원준",
+      "department": "위장관외과(상부)",
+      "external_id": "KUGURO-19123",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김종욱",
+      "department": "비뇨의학과",
+      "external_id": "KUGURO-04115",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "안순태",
+      "department": "비뇨의학과",
+      "external_id": "KUGURO-08189",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오미미",
+      "department": "비뇨의학과",
+      "external_id": "KUGURO-02050",
+      "n_schedules": 3,
+      "n_date_schedules": 30,
+      "notes": ""
+    },
+    {
+      "name": "강은주",
+      "department": "종양내과",
+      "external_id": "KUGURO-06102",
+      "n_schedules": 5,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "박인혜",
+      "department": "종양내과",
+      "external_id": "KUGURO-19F33",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "서재홍",
+      "department": "종양내과",
+      "external_id": "KUGURO-01318",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "오상철",
+      "department": "종양내과",
+      "external_id": "KUGURO-01383",
+      "n_schedules": 9,
+      "n_date_schedules": 105,
+      "notes": ""
+    },
+    {
+      "name": "이경민",
+      "department": "종양내과",
+      "external_id": "KUGURO-19C56",
+      "n_schedules": 4,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김완배",
+      "department": "간담췌외과",
+      "external_id": "KUGURO-99196",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "김완준",
+      "department": "간담췌외과",
+      "external_id": "KUGURO-17226",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "김우주",
+      "department": "감염내과",
+      "external_id": "KUGURO-93022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남엘리엘",
+      "department": "감염내과",
+      "external_id": "KUGURO-22545",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "노지윤",
+      "department": "감염내과",
+      "external_id": "KUGURO-05101",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "송준영",
+      "department": "감염내과",
+      "external_id": "KUGURO-99065",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "정희진",
+      "department": "감염내과",
+      "external_id": "KUGURO-98019",
+      "n_schedules": 2,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "김지훈",
+      "department": "간센터(내과)",
+      "external_id": "KUGURO-98036",
+      "n_schedules": 4,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "연종은",
+      "department": "간센터(내과)",
+      "external_id": "KUGURO-96025",
+      "n_schedules": 3,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "이영선",
+      "department": "간센터(내과)",
+      "external_id": "KUGURO-06152",
+      "n_schedules": 3,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "고강지",
+      "department": "신장내과",
+      "external_id": "KUGURO-01203",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "김지은",
+      "department": "신장내과",
+      "external_id": "KUGURO-11281",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "김효진",
+      "department": "신장내과",
+      "external_id": "KUGURO-25256",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "조은정",
+      "department": "신장내과",
+      "external_id": "KUGURO-06167",
+      "n_schedules": 2,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "권우근",
+      "department": "신경외과",
+      "external_id": "KUGURO-10108",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권택현",
+      "department": "신경외과",
+      "external_id": "KUGURO-98017",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김종현",
+      "department": "신경외과",
+      "external_id": "KUGURO-04228",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김주한",
+      "department": "신경외과",
+      "external_id": "KUGURO-01103",
+      "n_schedules": 3,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "변준호",
+      "department": "신경외과",
+      "external_id": "KUGURO-22548",
+      "n_schedules": 3,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "윤원기",
+      "department": "신경외과",
+      "external_id": "KUGURO-16926",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "이승훈",
+      "department": "신경외과",
+      "external_id": "KUGURO-21246",
+      "n_schedules": 3,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "조현준",
+      "department": "신경외과",
+      "external_id": "KUGURO-11305",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "강성훈",
+      "department": "신경과",
+      "external_id": "KUGURO-11201",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "고성범",
+      "department": "신경과",
+      "external_id": "KUGURO-01387",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "김지현",
+      "department": "신경과",
+      "external_id": "KUGURO-05489",
+      "n_schedules": 5,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "김치경",
+      "department": "신경과",
+      "external_id": "KUGURO-16222",
+      "n_schedules": 4,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "송민지",
+      "department": "신경과",
+      "external_id": "KUGURO-19338",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "신지혜",
+      "department": "신경과",
+      "external_id": "KUGURO-16110",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "오경미",
+      "department": "신경과",
+      "external_id": "KUGURO-01124",
+      "n_schedules": 4,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "이건주",
+      "department": "신경과",
+      "external_id": "KUGURO-22553",
+      "n_schedules": 2,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "이정윤",
+      "department": "신경과",
+      "external_id": "KUGURO-17304",
+      "n_schedules": 3,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "이혜림",
+      "department": "신경과",
+      "external_id": "KUGURO-17235",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "김용진",
+      "department": "산부인과",
+      "external_id": "KUGURO-12630",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "신정호",
+      "department": "산부인과",
+      "external_id": "KUGURO-97058",
+      "n_schedules": 2,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "오민정",
+      "department": "산부인과",
+      "external_id": "KUGURO-02085",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "오수민",
+      "department": "산부인과",
+      "external_id": "KUGURO-22551",
+      "n_schedules": 2,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "이재관",
+      "department": "산부인과",
+      "external_id": "KUGURO-00422",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "박일호",
+      "department": "이비인후·두경부외과",
+      "external_id": "KUGURO-01215",
+      "n_schedules": 5,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "송재준",
+      "department": "이비인후·두경부외과",
+      "external_id": "KUGURO-04231",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "우정수",
+      "department": "이비인후·두경부외과",
+      "external_id": "KUGURO-93029",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "조재구",
+      "department": "이비인후·두경부외과",
+      "external_id": "KUGURO-99122",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "채성원",
+      "department": "이비인후·두경부외과",
+      "external_id": "KUGURO-97097",
+      "n_schedules": 3,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "이의석",
+      "department": "구강악안면외과",
+      "external_id": "KUGURO-04527",
+      "n_schedules": 5,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "임호경",
+      "department": "구강악안면외과",
+      "external_id": "KUGURO-15A74",
+      "n_schedules": 5,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "강형주",
+      "department": "안과",
+      "external_id": "KUGURO-17177",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "김우진",
+      "department": "안과",
+      "external_id": "KUGURO-17153",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "백세현",
+      "department": "안과",
+      "external_id": "KUGURO-04258",
+      "n_schedules": 3,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "서영우",
+      "department": "안과",
+      "external_id": "KUGURO-01262",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "송종석",
+      "department": "안과",
+      "external_id": "KUGURO-98027",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김학준",
+      "department": "정형외과",
+      "external_id": "KUGURO-08993",
+      "n_schedules": 1,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "남윤진",
+      "department": "정형외과",
+      "external_id": "KUGURO-21253",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문준규",
+      "department": "정형외과",
+      "external_id": "KUGURO-02227",
+      "n_schedules": 2,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "박영환",
+      "department": "정형외과",
+      "external_id": "KUGURO-08180",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "서승우",
+      "department": "정형외과",
+      "external_id": "KUGURO-95031",
+      "n_schedules": 5,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "오종건",
+      "department": "정형외과",
+      "external_id": "KUGURO-95247",
+      "n_schedules": 2,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "이정일",
+      "department": "정형외과",
+      "external_id": "KUGURO-03126",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "조재우",
+      "department": "정형외과",
+      "external_id": "KUGURO-06169",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "남효경",
+      "department": "소아청소년과",
+      "external_id": "KUGURO-06122",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "박유진",
+      "department": "소아청소년과",
+      "external_id": "KUGURO-23456",
+      "n_schedules": 5,
+      "n_date_schedules": 56,
+      "notes": ""
+    },
+    {
+      "name": "송대진",
+      "department": "소아청소년과",
+      "external_id": "KUGURO-99046",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "신승현",
+      "department": "소아청소년과",
+      "external_id": "KUGURO-22467",
+      "n_schedules": 2,
+      "n_date_schedules": 5,
+      "notes": ""
+    },
+    {
+      "name": "양동화",
+      "department": "소아청소년과",
+      "external_id": "KUGURO-24331",
+      "n_schedules": 6,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "윤윤선",
+      "department": "소아청소년과",
+      "external_id": "KUGURO-14126",
+      "n_schedules": 4,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "이은상",
+      "department": "소아청소년과",
+      "external_id": "KUGURO-17227",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "나영현",
+      "department": "소아외과",
+      "external_id": "KUGURO-08103",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "나영현",
+      "department": "소아외과",
+      "external_id": "KUGURO-U3444",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오채연",
+      "department": "소아외과",
+      "external_id": "KUGURO-18285",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남궁식",
+      "department": "성형외과",
+      "external_id": "KUGURO-08178",
+      "n_schedules": 2,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "동은상",
+      "department": "성형외과",
+      "external_id": "KUGURO-01086",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "문경철",
+      "department": "성형외과",
+      "external_id": "KUGURO-09323",
+      "n_schedules": 2,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "정성호",
+      "department": "성형외과",
+      "external_id": "KUGURO-04237",
+      "n_schedules": 3,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "민경훈",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUGURO-11528",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "심재겸",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUGURO-09400",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "심재정",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUGURO-93051",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "오지연",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUGURO-09341",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "이승룡",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUGURO-03165",
+      "n_schedules": 5,
+      "n_date_schedules": 56,
+      "notes": ""
+    },
+    {
+      "name": "장성원",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUGURO-17313",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "송관규",
+      "department": "류마티스내과",
+      "external_id": "KUGURO-95027",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "강석",
+      "department": "재활의학과",
+      "external_id": "KUGURO-05089",
+      "n_schedules": 9,
+      "n_date_schedules": 94,
+      "notes": ""
+    },
+    {
+      "name": "양승남",
+      "department": "재활의학과",
+      "external_id": "KUGURO-00122",
+      "n_schedules": 7,
+      "n_date_schedules": 83,
+      "notes": ""
+    },
+    {
+      "name": "윤준식",
+      "department": "재활의학과",
+      "external_id": "KUGURO-01096",
+      "n_schedules": 6,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "전소연",
+      "department": "재활의학과",
+      "external_id": "KUGURO-23469",
+      "n_schedules": 6,
+      "n_date_schedules": 70,
+      "notes": ""
+    },
+    {
+      "name": "권태원",
+      "department": "이식혈관외과",
+      "external_id": "KUGURO-23692",
+      "n_schedules": 1,
+      "n_date_schedules": 3,
+      "notes": ""
+    },
+    {
+      "name": "김효기",
+      "department": "이식혈관외과",
+      "external_id": "KUGURO-14101",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "박평재",
+      "department": "이식혈관외과",
+      "external_id": "KUGURO-01252",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "이성훈",
+      "department": "이식혈관외과",
+      "external_id": "KUGURO-U4129",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

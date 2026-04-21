@@ -1,0 +1,15 @@
+{
+  "hospital_code": "MEDIFIELD",
+  "hospital_name": "메디필드한강병원",
+  "status": "partial",
+  "doctors": [
+    {
+      "name": "의료진 정보 미공개",
+      "department": "안내",
+      "external_id": "MEDIFIELD-notice",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 메디필드한강병원은 2026년 3월 개원한 신규 병원으로, 홈페이지에 개별 의료진/진료시간표가 아직 공개되어 있지 않습니다. 외래 진료 가능 시간은 병원에 직접 문의해 주세요."
+    }
+  ]
+}

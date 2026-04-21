@@ -1,0 +1,2519 @@
+{
+  "hospital_code": "ISPAIK",
+  "hospital_name": "인제대학교 일산백병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김승희",
+      "department": "가정의학과",
+      "external_id": "ISPAIK-2214",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤영숙",
+      "department": "가정의학과",
+      "external_id": "ISPAIK-644",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이언숙",
+      "department": "가정의학과",
+      "external_id": "ISPAIK-645",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준형",
+      "department": "가정의학과",
+      "external_id": "ISPAIK-646",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준성",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-2284",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경아",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-2285",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손준혁",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-2287",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태승",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-2288",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김아령",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-2286",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성원",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-2282",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신용찬",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-2283",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜숙",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-1524",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강승희",
+      "department": "간·담도·췌장암센터",
+      "external_id": "ISPAIK-757",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽이경",
+      "department": "감염내과",
+      "external_id": "ISPAIK-603",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "감염내과",
+      "external_id": "ISPAIK-2017",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현종훈",
+      "department": "감염내과",
+      "external_id": "ISPAIK-605",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소윤경",
+      "department": "갑상선클리닉",
+      "external_id": "ISPAIK-1296",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조재근",
+      "department": "갑상선클리닉",
+      "external_id": "ISPAIK-1545",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한정열",
+      "department": "고위험산모클리닉",
+      "external_id": "ISPAIK-826",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한정열",
+      "department": "고해상초음파클리닉",
+      "external_id": "ISPAIK-1400",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재원",
+      "department": "기침클리닉",
+      "external_id": "ISPAIK-828",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이전미",
+      "department": "난청·인공와우수술클리닉",
+      "external_id": "ISPAIK-1528",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승재",
+      "department": "난청·인공와우수술클리닉",
+      "external_id": "ISPAIK-2120",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동준",
+      "department": "내분비내과 (당뇨병·내분비센터)",
+      "external_id": "ISPAIK-606",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노정현",
+      "department": "내분비내과 (당뇨병·내분비센터)",
+      "external_id": "ISPAIK-607",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소희",
+      "department": "내분비내과 (당뇨병·내분비센터)",
+      "external_id": "ISPAIK-1640",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손서영",
+      "department": "내분비내과 (당뇨병·내분비센터)",
+      "external_id": "ISPAIK-2226",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구해원",
+      "department": "노발리스방사선수술센터",
+      "external_id": "ISPAIK-760",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손문준",
+      "department": "노발리스방사선수술센터",
+      "external_id": "ISPAIK-1403",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병주",
+      "department": "노발리스방사선수술센터",
+      "external_id": "ISPAIK-2118",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이채혁",
+      "department": "노발리스방사선수술센터",
+      "external_id": "ISPAIK-1911",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최찬영",
+      "department": "노발리스방사선수술센터",
+      "external_id": "ISPAIK-1404",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한성록",
+      "department": "노발리스방사선수술센터",
+      "external_id": "ISPAIK-2119",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이채혁",
+      "department": "뇌·척추종양센터",
+      "external_id": "ISPAIK-1910",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손문준",
+      "department": "뇌·척추종양센터",
+      "external_id": "ISPAIK-763",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최찬영",
+      "department": "뇌·척추종양센터",
+      "external_id": "ISPAIK-764",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍근식",
+      "department": "뇌졸중센터",
+      "external_id": "ISPAIK-1405",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용진",
+      "department": "뇌졸중센터",
+      "external_id": "ISPAIK-1406",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이채혁",
+      "department": "뇌졸중센터",
+      "external_id": "ISPAIK-1912",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최찬영",
+      "department": "뇌졸중센터",
+      "external_id": "ISPAIK-1410",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손문준",
+      "department": "뇌졸중센터",
+      "external_id": "ISPAIK-1411",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한성록",
+      "department": "뇌졸중센터",
+      "external_id": "ISPAIK-1412",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박홍균",
+      "department": "뇌졸중센터",
+      "external_id": "ISPAIK-765",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이채혁",
+      "department": "뇌혈관내수술센터",
+      "external_id": "ISPAIK-1909",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구해원",
+      "department": "뇌혈관내수술센터",
+      "external_id": "ISPAIK-767",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동준",
+      "department": "당뇨병·내분비센터",
+      "external_id": "ISPAIK-768",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노정현",
+      "department": "당뇨병·내분비센터",
+      "external_id": "ISPAIK-769",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소희",
+      "department": "당뇨병·내분비센터",
+      "external_id": "ISPAIK-1641",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손서영",
+      "department": "당뇨병·내분비센터",
+      "external_id": "ISPAIK-2223",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소윤경",
+      "department": "두경부암센터",
+      "external_id": "ISPAIK-1586",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조재근",
+      "department": "두경부암센터",
+      "external_id": "ISPAIK-1583",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜숙",
+      "department": "두경부암센터",
+      "external_id": "ISPAIK-1584",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강승희",
+      "department": "두경부암센터",
+      "external_id": "ISPAIK-1579",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허식",
+      "department": "레이저클리닉",
+      "external_id": "ISPAIK-830",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수향",
+      "department": "레이저클리닉",
+      "external_id": "ISPAIK-832",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "레이저클리닉",
+      "external_id": "ISPAIK-829",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건철",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2053",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여정균",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2054",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해도",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2055",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조석",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2056",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고재환",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2057",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영아",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2058",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전경철",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2059",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황동원",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2060",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재일",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2061",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신용찬",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2062",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄상수",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2063",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성원",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2064",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성민",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2065",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최평화",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2066",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경운",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2067",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소윤경",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2068",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조재근",
+      "department": "로봇수술센터",
+      "external_id": "ISPAIK-2069",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구본산",
+      "department": "류마티스내과",
+      "external_id": "ISPAIK-1819",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정곤",
+      "department": "류마티스내과",
+      "external_id": "ISPAIK-1225",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤보영",
+      "department": "류마티스내과",
+      "external_id": "ISPAIK-609",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경우",
+      "department": "마취통증의학과",
+      "external_id": "ISPAIK-648",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경태",
+      "department": "마취통증의학과",
+      "external_id": "ISPAIK-1229",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준현",
+      "department": "마취통증의학과",
+      "external_id": "ISPAIK-1231",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수연",
+      "department": "마취통증의학과",
+      "external_id": "ISPAIK-1989",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지연",
+      "department": "마취통증의학과",
+      "external_id": "ISPAIK-1230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상일",
+      "department": "마취통증의학과",
+      "external_id": "ISPAIK-650",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최원주",
+      "department": "마취통증의학과",
+      "external_id": "ISPAIK-1228",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허민희",
+      "department": "마취통증의학과",
+      "external_id": "ISPAIK-1232",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이언숙",
+      "department": "만성피로클리닉",
+      "external_id": "ISPAIK-834",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고재환",
+      "department": "무수혈센터",
+      "external_id": "ISPAIK-1533",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최원주",
+      "department": "무수혈센터",
+      "external_id": "ISPAIK-1534",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성윤",
+      "department": "무수혈센터",
+      "external_id": "ISPAIK-1535",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조종래",
+      "department": "무수혈센터",
+      "external_id": "ISPAIK-1536",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오형근",
+      "department": "무수혈센터",
+      "external_id": "ISPAIK-1537",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한성록",
+      "department": "무수혈센터",
+      "external_id": "ISPAIK-1538",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준현",
+      "department": "무수혈센터",
+      "external_id": "ISPAIK-1539",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강승희",
+      "department": "방사선종양학과",
+      "external_id": "ISPAIK-651",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건철",
+      "department": "배뇨장애클리닉",
+      "external_id": "ISPAIK-837",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여정균",
+      "department": "배뇨장애클리닉",
+      "external_id": "ISPAIK-2115",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조석",
+      "department": "배뇨장애클리닉",
+      "external_id": "ISPAIK-2116",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해도",
+      "department": "배뇨장애클리닉",
+      "external_id": "ISPAIK-2117",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연주",
+      "department": "배뇨장애클리닉",
+      "external_id": "ISPAIK-2235",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지예",
+      "department": "병리과",
+      "external_id": "ISPAIK-1236",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한성",
+      "department": "병리과",
+      "external_id": "ISPAIK-1233",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장선희",
+      "department": "병리과",
+      "external_id": "ISPAIK-1235",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주미",
+      "department": "병리과",
+      "external_id": "ISPAIK-1234",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건철",
+      "department": "비뇨기암센터",
+      "external_id": "ISPAIK-773",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여정균",
+      "department": "비뇨기암센터",
+      "external_id": "ISPAIK-2112",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조석",
+      "department": "비뇨기암센터",
+      "external_id": "ISPAIK-2113",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해도",
+      "department": "비뇨기암센터",
+      "external_id": "ISPAIK-2114",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연주",
+      "department": "비뇨기암센터",
+      "external_id": "ISPAIK-2234",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연주",
+      "department": "비뇨의학과",
+      "external_id": "ISPAIK-2229",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여정균",
+      "department": "비뇨의학과",
+      "external_id": "ISPAIK-1921",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건철",
+      "department": "비뇨의학과",
+      "external_id": "ISPAIK-654",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해도",
+      "department": "비뇨의학과",
+      "external_id": "ISPAIK-1566",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조석",
+      "department": "비뇨의학과",
+      "external_id": "ISPAIK-655",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤영숙",
+      "department": "비만클리닉",
+      "external_id": "ISPAIK-1294",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준형",
+      "department": "비만클리닉",
+      "external_id": "ISPAIK-1295",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고재환",
+      "department": "산부인과",
+      "external_id": "ISPAIK-659",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영아",
+      "department": "산부인과",
+      "external_id": "ISPAIK-656",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전경철",
+      "department": "산부인과",
+      "external_id": "ISPAIK-658",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한정열",
+      "department": "산부인과",
+      "external_id": "ISPAIK-660",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황동원",
+      "department": "산부인과",
+      "external_id": "ISPAIK-1884",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김해숙",
+      "department": "산부인과",
+      "external_id": "ISPAIK-1443",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "산부인과",
+      "external_id": "ISPAIK-657",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수향",
+      "department": "성형외과",
+      "external_id": "ISPAIK-662",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준",
+      "department": "성형외과",
+      "external_id": "ISPAIK-1971",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "성형외과",
+      "external_id": "ISPAIK-661",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "소아내분비클리닉",
+      "external_id": "ISPAIK-1292",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송태원",
+      "department": "소아알레르기클리닉",
+      "external_id": "ISPAIK-839",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남희",
+      "department": "소아청소년과",
+      "external_id": "ISPAIK-669",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영대",
+      "department": "소아청소년과",
+      "external_id": "ISPAIK-667",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송태원",
+      "department": "소아청소년과",
+      "external_id": "ISPAIK-670",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "소아청소년과",
+      "external_id": "ISPAIK-672",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유진",
+      "department": "소아청소년과",
+      "external_id": "ISPAIK-671",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍미",
+      "department": "소아청소년과",
+      "external_id": "ISPAIK-673",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용원",
+      "department": "소아청소년과",
+      "external_id": "ISPAIK-1717",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "소아청소년과",
+      "external_id": "ISPAIK-666",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강석인",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-618",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경아",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-612",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남훈",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-613",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김아령",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-1881",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김숙연",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-2007",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정욱",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-614",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손준혁",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-616",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태승",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-2219",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준성",
+      "department": "소화기내과",
+      "external_id": "ISPAIK-611",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박송이",
+      "department": "수면무호흡클리닉",
+      "external_id": "ISPAIK-1714",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최익수",
+      "department": "수면무호흡클리닉",
+      "external_id": "ISPAIK-842",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권성욱",
+      "department": "순환기내과 (심장혈관센터)",
+      "external_id": "ISPAIK-623",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "순환기내과 (심장혈관센터)",
+      "external_id": "ISPAIK-1642",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남궁준",
+      "department": "순환기내과 (심장혈관센터)",
+      "external_id": "ISPAIK-622",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도준형",
+      "department": "순환기내과 (심장혈관센터)",
+      "external_id": "ISPAIK-621",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오현정",
+      "department": "순환기내과 (심장혈관센터)",
+      "external_id": "ISPAIK-1988",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성우",
+      "department": "순환기내과 (심장혈관센터)",
+      "external_id": "ISPAIK-626",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조현",
+      "department": "순환기내과 (심장혈관센터)",
+      "external_id": "ISPAIK-2019",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황지원",
+      "department": "순환기내과 (심장혈관센터)",
+      "external_id": "ISPAIK-625",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배희원",
+      "department": "신경과",
+      "external_id": "ISPAIK-2025",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박홍균",
+      "department": "신경과",
+      "external_id": "ISPAIK-680",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송파멜라",
+      "department": "신경과",
+      "external_id": "ISPAIK-678",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영건",
+      "department": "신경과",
+      "external_id": "ISPAIK-1685",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수진",
+      "department": "신경과",
+      "external_id": "ISPAIK-1883",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용진",
+      "department": "신경과",
+      "external_id": "ISPAIK-676",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조중양",
+      "department": "신경과",
+      "external_id": "ISPAIK-677",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍근식",
+      "department": "신경과",
+      "external_id": "ISPAIK-675",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "신경과",
+      "external_id": "ISPAIK-1706",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구해원",
+      "department": "신경외과",
+      "external_id": "ISPAIK-687",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손문준",
+      "department": "신경외과",
+      "external_id": "ISPAIK-684",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병주",
+      "department": "신경외과",
+      "external_id": "ISPAIK-688",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이채혁",
+      "department": "신경외과",
+      "external_id": "ISPAIK-1907",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최찬영",
+      "department": "신경외과",
+      "external_id": "ISPAIK-685",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황상훈",
+      "department": "신경외과",
+      "external_id": "ISPAIK-2213",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한성록",
+      "department": "신경외과",
+      "external_id": "ISPAIK-686",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서진수",
+      "department": "신발교정,평발클리닉",
+      "external_id": "ISPAIK-843",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태경",
+      "department": "신장내과",
+      "external_id": "ISPAIK-2029",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조형아",
+      "department": "신장내과",
+      "external_id": "ISPAIK-630",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상엽",
+      "department": "신장내과",
+      "external_id": "ISPAIK-628",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승현",
+      "department": "신장내과",
+      "external_id": "ISPAIK-2016",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정희진",
+      "department": "신장내과",
+      "external_id": "ISPAIK-2247",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남궁준",
+      "department": "심박동기클리닉",
+      "external_id": "ISPAIK-845",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오현정",
+      "department": "심박동기클리닉",
+      "external_id": "ISPAIK-1991",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남궁준",
+      "department": "심장혈관센터",
+      "external_id": "ISPAIK-777",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도준형",
+      "department": "심장혈관센터",
+      "external_id": "ISPAIK-776",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권성욱",
+      "department": "심장혈관센터",
+      "external_id": "ISPAIK-778",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성우",
+      "department": "심장혈관센터",
+      "external_id": "ISPAIK-781",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황지원",
+      "department": "심장혈관센터",
+      "external_id": "ISPAIK-780",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "심장혈관센터",
+      "external_id": "ISPAIK-1643",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오현정",
+      "department": "심장혈관센터",
+      "external_id": "ISPAIK-1987",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조현",
+      "department": "심장혈관센터",
+      "external_id": "ISPAIK-2018",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정원",
+      "department": "심장혈관흉부외과",
+      "external_id": "ISPAIK-1920",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류지윤",
+      "department": "심장혈관흉부외과",
+      "external_id": "ISPAIK-752",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영아",
+      "department": "아기희망클리닉",
+      "external_id": "ISPAIK-847",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송민경",
+      "department": "안과",
+      "external_id": "ISPAIK-698",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민채",
+      "department": "안과",
+      "external_id": "ISPAIK-1969",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이도형",
+      "department": "안과",
+      "external_id": "ISPAIK-691",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종현",
+      "department": "안과",
+      "external_id": "ISPAIK-693",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한동진",
+      "department": "안과",
+      "external_id": "ISPAIK-1869",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "안과",
+      "external_id": "ISPAIK-692",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재원",
+      "department": "약물알러지클리닉",
+      "external_id": "ISPAIK-848",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이전미",
+      "department": "어지럼증클리닉",
+      "external_id": "ISPAIK-849",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승재",
+      "department": "어지럼증클리닉",
+      "external_id": "ISPAIK-2121",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연주",
+      "department": "여성요실금클리닉",
+      "external_id": "ISPAIK-2236",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여정균",
+      "department": "여성요실금클리닉",
+      "external_id": "ISPAIK-2125",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건철",
+      "department": "여성요실금클리닉",
+      "external_id": "ISPAIK-851",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기환",
+      "department": "영상의학과",
+      "external_id": "ISPAIK-1888",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태형",
+      "department": "영상의학과",
+      "external_id": "ISPAIK-2179",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박창현",
+      "department": "영상의학과",
+      "external_id": "ISPAIK-1253",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정욱",
+      "department": "영상의학과",
+      "external_id": "ISPAIK-701",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서초롱",
+      "department": "영상의학과",
+      "external_id": "ISPAIK-1952",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승철",
+      "department": "영상의학과",
+      "external_id": "ISPAIK-1647",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성준",
+      "department": "영상의학과",
+      "external_id": "ISPAIK-1886",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지수",
+      "department": "외과",
+      "external_id": "ISPAIK-2022",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신용찬",
+      "department": "외과",
+      "external_id": "ISPAIK-711",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재일",
+      "department": "외과",
+      "external_id": "ISPAIK-1624",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄상수",
+      "department": "외과",
+      "external_id": "ISPAIK-1636",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄은혜",
+      "department": "외과",
+      "external_id": "ISPAIK-713",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성원",
+      "department": "외과",
+      "external_id": "ISPAIK-714",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장영진",
+      "department": "외과",
+      "external_id": "ISPAIK-1793",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경운",
+      "department": "외과",
+      "external_id": "ISPAIK-716",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성민",
+      "department": "외과",
+      "external_id": "ISPAIK-712",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최평화",
+      "department": "외과",
+      "external_id": "ISPAIK-709",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철남",
+      "department": "외과",
+      "external_id": "ISPAIK-715",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장석효",
+      "department": "외과",
+      "external_id": "ISPAIK-1830",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최평화",
+      "department": "위·대장암센터",
+      "external_id": "ISPAIK-784",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성민",
+      "department": "위·대장암센터",
+      "external_id": "ISPAIK-786",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜란",
+      "department": "위·대장암센터",
+      "external_id": "ISPAIK-783",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄상수",
+      "department": "위·대장암센터",
+      "external_id": "ISPAIK-1707",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경운",
+      "department": "위·대장암센터",
+      "external_id": "ISPAIK-1542",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재일",
+      "department": "유방암센터",
+      "external_id": "ISPAIK-1518",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄은혜",
+      "department": "유방암센터",
+      "external_id": "ISPAIK-789",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜란",
+      "department": "유방암센터",
+      "external_id": "ISPAIK-787",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강승희",
+      "department": "유방암센터",
+      "external_id": "ISPAIK-788",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지수",
+      "department": "유방암센터",
+      "external_id": "ISPAIK-2023",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜숙",
+      "department": "유방암센터",
+      "external_id": "ISPAIK-1523",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조재근",
+      "department": "음성클리닉",
+      "external_id": "ISPAIK-1546",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소윤경",
+      "department": "음성클리닉",
+      "external_id": "ISPAIK-854",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준석",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-1941",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김훈",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-1940",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동운",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-1942",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형민",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-1945",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기종",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-1944",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고경일",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-1948",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용원",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-2004",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민경민",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-1947",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재진",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-2259",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준민",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-2199",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정국",
+      "department": "응급의료센터",
+      "external_id": "ISPAIK-2232",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고경일",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-1950",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기종",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-1878",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용원",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-2003",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재진",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-2258",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준민",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-2200",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김훈",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-1248",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준석",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-1246",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정국",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-2231",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동운",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-1247",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형민",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-1879",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민경민",
+      "department": "응급의학과",
+      "external_id": "ISPAIK-1949",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박송이",
+      "department": "이비인후과",
+      "external_id": "ISPAIK-1637",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소윤경",
+      "department": "이비인후과",
+      "external_id": "ISPAIK-719",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승재",
+      "department": "이비인후과",
+      "external_id": "ISPAIK-1632",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이전미",
+      "department": "이비인후과",
+      "external_id": "ISPAIK-722",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조재근",
+      "department": "이비인후과",
+      "external_id": "ISPAIK-721",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최익수",
+      "department": "이비인후과",
+      "external_id": "ISPAIK-720",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "이비인후과",
+      "external_id": "ISPAIK-1906",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성원",
+      "department": "장기이식센터",
+      "external_id": "ISPAIK-813",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장영진",
+      "department": "장기이식센터",
+      "external_id": "ISPAIK-1794",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상엽",
+      "department": "장기이식센터",
+      "external_id": "ISPAIK-814",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조형아",
+      "department": "장기이식센터",
+      "external_id": "ISPAIK-816",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승현",
+      "department": "장기이식센터",
+      "external_id": "ISPAIK-2044",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태경",
+      "department": "장기이식센터",
+      "external_id": "ISPAIK-2070",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이도형",
+      "department": "장기이식센터",
+      "external_id": "ISPAIK-809",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유지현",
+      "department": "재활의학과",
+      "external_id": "ISPAIK-725",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하성",
+      "department": "재활의학과",
+      "external_id": "ISPAIK-2137",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동우",
+      "department": "재활의학과",
+      "external_id": "ISPAIK-2135",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "재활의학과",
+      "external_id": "ISPAIK-726",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김율리",
+      "department": "정신건강의학과",
+      "external_id": "ISPAIK-1817",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현",
+      "department": "정신건강의학과",
+      "external_id": "ISPAIK-730",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노대영",
+      "department": "정신건강의학과",
+      "external_id": "ISPAIK-2136",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강준",
+      "department": "정신건강의학과",
+      "external_id": "ISPAIK-729",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승환",
+      "department": "정신건강의학과",
+      "external_id": "ISPAIK-728",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "정신건강의학과",
+      "external_id": "ISPAIK-732",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승주",
+      "department": "정형외과",
+      "external_id": "ISPAIK-2230",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진환",
+      "department": "정형외과",
+      "external_id": "ISPAIK-737",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나경욱",
+      "department": "정형외과",
+      "external_id": "ISPAIK-736",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서진수",
+      "department": "정형외과",
+      "external_id": "ISPAIK-735",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오형근",
+      "department": "정형외과",
+      "external_id": "ISPAIK-739",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진호",
+      "department": "정형외과",
+      "external_id": "ISPAIK-738",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주석규",
+      "department": "정형외과",
+      "external_id": "ISPAIK-1970",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준영",
+      "department": "정형외과",
+      "external_id": "ISPAIK-741",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄태현",
+      "department": "진단검사의학과",
+      "external_id": "ISPAIK-1256",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장정현",
+      "department": "진단검사의학과",
+      "external_id": "ISPAIK-1244",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조종래",
+      "department": "진단검사의학과",
+      "external_id": "ISPAIK-1257",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황동희",
+      "department": "진단검사의학과",
+      "external_id": "ISPAIK-1818",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고원경",
+      "department": "치과",
+      "external_id": "ISPAIK-746",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김강호",
+      "department": "치과",
+      "external_id": "ISPAIK-1239",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심혜원",
+      "department": "치과",
+      "external_id": "ISPAIK-745",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임지영",
+      "department": "치과",
+      "external_id": "ISPAIK-1240",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상일",
+      "department": "통증클리닉",
+      "external_id": "ISPAIK-857",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성윤",
+      "department": "폐암센터",
+      "external_id": "ISPAIK-818",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강승희",
+      "department": "폐암센터",
+      "external_id": "ISPAIK-817",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태윤",
+      "department": "피부과",
+      "external_id": "ISPAIK-1792",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최미라",
+      "department": "피부과",
+      "external_id": "ISPAIK-750",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허식",
+      "department": "피부과",
+      "external_id": "ISPAIK-749",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "피부과",
+      "external_id": "ISPAIK-748",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권혜령",
+      "department": "핵의학과",
+      "external_id": "ISPAIK-751",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜숙",
+      "department": "혈액종양내과",
+      "external_id": "ISPAIK-1853",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성윤",
+      "department": "혈액종양내과",
+      "external_id": "ISPAIK-1799",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜란",
+      "department": "혈액종양내과",
+      "external_id": "ISPAIK-632",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성윤",
+      "department": "혈액질환클리닉",
+      "external_id": "ISPAIK-859",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜숙",
+      "department": "혈액질환클리닉",
+      "external_id": "ISPAIK-1525",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이언숙",
+      "department": "호스피스완화의료센터",
+      "external_id": "ISPAIK-819",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지연",
+      "department": "호흡기내과",
+      "external_id": "ISPAIK-641",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강형구",
+      "department": "호흡기내과",
+      "external_id": "ISPAIK-638",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구현경",
+      "department": "호흡기내과",
+      "external_id": "ISPAIK-637",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성순",
+      "department": "호흡기내과",
+      "external_id": "ISPAIK-635",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김덕희",
+      "department": "호흡기내과",
+      "external_id": "ISPAIK-2161",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재원",
+      "department": "호흡기알레르기내과",
+      "external_id": "ISPAIK-642",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

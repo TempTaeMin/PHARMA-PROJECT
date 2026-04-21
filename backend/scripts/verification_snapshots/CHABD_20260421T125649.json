@@ -1,0 +1,1375 @@
+{
+  "hospital_code": "CHABD",
+  "hospital_name": "분당차병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "차동훈",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA11111",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상욱",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA11121",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인재",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA11391",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성정훈",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA11491",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문재연",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA11791",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승률",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA13511",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이봄",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA13521",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임하정",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA13451",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권순일",
+      "department": "심장내과",
+      "external_id": "CHABD-Cardiology_AA13901",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장병철",
+      "department": "심장혈관흉부외과",
+      "external_id": "CHABD-CardiovascularSurgery_AA21151",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심영목",
+      "department": "심장혈관흉부외과",
+      "external_id": "CHABD-CardiovascularSurgery_AA21178",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김관욱",
+      "department": "심장혈관흉부외과",
+      "external_id": "CHABD-CardiovascularSurgery_AA21161",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정희석",
+      "department": "심장혈관흉부외과",
+      "external_id": "CHABD-CardiovascularSurgery_AA21148",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임공민",
+      "department": "심장혈관흉부외과",
+      "external_id": "CHABD-CardiovascularSurgery_AA21188",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황유정",
+      "department": "치과",
+      "external_id": "CHABD-Dentistry_AA46151",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황유선",
+      "department": "치과",
+      "external_id": "CHABD-Dentistry_AA46261",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤희영",
+      "department": "치과",
+      "external_id": "CHABD-Dentistry_AA46231",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영롱",
+      "department": "치과",
+      "external_id": "CHABD-Dentistry_AA46291",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양민영",
+      "department": "치과",
+      "external_id": "CHABD-Dentistry_26021209",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤문수",
+      "department": "피부과",
+      "external_id": "CHABD-Dermatology_AA33231",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "피부과",
+      "external_id": "CHABD-Dermatology_AA33241",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희정",
+      "department": "피부과",
+      "external_id": "CHABD-Dermatology_AA33261",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신정우",
+      "department": "피부과",
+      "external_id": "CHABD-Dermatology_AA33301",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조미연",
+      "department": "피부과",
+      "external_id": "CHABD-Dermatology_AA33311",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용욱",
+      "department": "내분비내과",
+      "external_id": "CHABD-Endocrinology_AA11051",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경수",
+      "department": "내분비내과",
+      "external_id": "CHABD-Endocrinology_AA12111",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현주",
+      "department": "내분비내과",
+      "external_id": "CHABD-Endocrinology_AA13591",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최아림",
+      "department": "내분비내과",
+      "external_id": "CHABD-Endocrinology_AA13661",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문종",
+      "department": "가정의학과",
+      "external_id": "CHABD-FamilyMedicine_AA43071",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영상",
+      "department": "가정의학과",
+      "external_id": "CHABD-FamilyMedicine_AA43341",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용환",
+      "department": "가정의학과",
+      "external_id": "CHABD-FamilyMedicine_AA43651",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서인호",
+      "department": "가정의학과",
+      "external_id": "CHABD-FamilyMedicine_AA43641",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은별",
+      "department": "가정의학과",
+      "external_id": "CHABD-FamilyMedicine_AA43661",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이관식",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA13501",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성표",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA11061",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고광현",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA11361",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권창일",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA11681",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유준환",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA12311",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신석표",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA13531",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전영은",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA12571",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방기배",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA13831",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유인경",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA12751",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하연정",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA12581",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승준",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA13631",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성민제",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA13231",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이관주",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA13331",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오주현",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA13771",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서준영",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_AA13851",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조혜민",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_26022702",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유지훈",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_26022705",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진호용",
+      "department": "소화기내과",
+      "external_id": "CHABD-Gastroenterology_26022706",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종우",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18031",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종인",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18282",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승기",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승아",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18241",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전학훈",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18182",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성환",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18341",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양석정",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18391",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한정희",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18461",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김이삭",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18311",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강인천",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18361",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수미",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18331",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동규",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18402",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용준",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18471",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구혜영",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18381",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이관범",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18351",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정의혁",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18423",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성준",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18491",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원태",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18522",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장재영",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_AA18371",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하상우",
+      "department": "외과",
+      "external_id": "CHABD-GeneralSurgery_314124",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정소영",
+      "department": "혈액내과",
+      "external_id": "CHABD-HematologyDepartment_AA11211",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대영",
+      "department": "혈액내과",
+      "external_id": "CHABD-HematologyDepartment_AA13841",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성관",
+      "department": "감염내과",
+      "external_id": "CHABD-InfectiousDiseases_AA11311",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종훈",
+      "department": "감염내과",
+      "external_id": "CHABD-InfectiousDiseases_AA13191",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이채령",
+      "department": "감염내과",
+      "external_id": "CHABD-InfectiousDiseases_AA13141",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양동호",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_AA11301",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소영",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_AA11781",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜윤",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_AA12431",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기표",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_AA13861",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정상현",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_AA13291",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백지현",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_AA13441",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양태영",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_AA13482",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수영",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_AA13711",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우섭",
+      "department": "신장내과",
+      "external_id": "CHABD-Nephrology_26022708",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종식",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35151",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허지회",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35171",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김옥준",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35031",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원찬",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35051",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현숙",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35061",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오승헌",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35071",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허영은",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35121",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신정원",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35101",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주하람",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_AA35181",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장예지",
+      "department": "신경과",
+      "external_id": "CHABD-Neurology_26022707",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조경기",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20161",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태곤",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20101",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승훈",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20291",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주평",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20211",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임재준",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20201",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤도흠",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20301",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한인보",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_A053025",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손세일",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20241",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안성배",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20311",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정선윤",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_AA20321",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유환",
+      "department": "신경외과",
+      "external_id": "CHABD-Neurosurgery_26021206",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임호영",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA13781",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주항",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA12471",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문용화",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA12481",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전홍재",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA12491",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강버들",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA13051",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "상윤범",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA13321",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김슬기",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA13381",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정선",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA13621",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은",
+      "department": "종양내과",
+      "external_id": "CHABD-OncologyDepartment_AA13811",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유혜린",
+      "department": "안과",
+      "external_id": "CHABD-Ophthalmology_AA31081",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노승수",
+      "department": "안과",
+      "external_id": "CHABD-Ophthalmology_AA31191",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성영제",
+      "department": "안과",
+      "external_id": "CHABD-Ophthalmology_AA31231",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준형",
+      "department": "안과",
+      "external_id": "CHABD-Ophthalmology_AA31271",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용우",
+      "department": "안과",
+      "external_id": "CHABD-Ophthalmology_AA31301",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "안과",
+      "external_id": "CHABD-Ophthalmology_RA31ZZ1",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박남경",
+      "department": "한방부인과",
+      "external_id": "CHABD-OrientalGynecology_A243024",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손성세",
+      "department": "한의학과",
+      "external_id": "CHABD-OrientalMedicine_AS50081",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동은",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19091",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재화",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19151",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최원철",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19291",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이순철",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19261",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현일",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19661",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안태근",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19371",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성현",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19651",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성준",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19621",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재영",
+      "department": "정형외과",
+      "external_id": "CHABD-OrthopedicSurgery_AA19591",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이창호",
+      "department": "이비인후과-두경부외과",
+      "external_id": "CHABD-Otorhinolaryngology_AA32091",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노종렬",
+      "department": "이비인후과-두경부외과",
+      "external_id": "CHABD-Otorhinolaryngology_AA32201",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형미",
+      "department": "이비인후과-두경부외과",
+      "external_id": "CHABD-Otorhinolaryngology_AA32141",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안재철",
+      "department": "이비인후과-두경부외과",
+      "external_id": "CHABD-Otorhinolaryngology_AA32171",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "길홍권",
+      "department": "이비인후과-두경부외과",
+      "external_id": "CHABD-Otorhinolaryngology_AA32221",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성철",
+      "department": "마취통증의학과",
+      "external_id": "CHABD-PainMedicine_AA38502",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석화",
+      "department": "성형외과",
+      "external_id": "CHABD-PlasticSurgery_AA22231",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정헌",
+      "department": "성형외과",
+      "external_id": "CHABD-PlasticSurgery_AA22141",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안희창",
+      "department": "성형외과",
+      "external_id": "CHABD-PlasticSurgery_AA22241",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김덕열",
+      "department": "성형외과",
+      "external_id": "CHABD-PlasticSurgery_AA22221",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "육기환",
+      "department": "정신건강의학과",
+      "external_id": "CHABD-Psychiatry_AA36031",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상혁",
+      "department": "정신건강의학과",
+      "external_id": "CHABD-Psychiatry_AA36061",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최태규",
+      "department": "정신건강의학과",
+      "external_id": "CHABD-Psychiatry_AA36071",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강수",
+      "department": "정신건강의학과",
+      "external_id": "CHABD-Psychiatry_AA36111",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현주",
+      "department": "정신건강의학과",
+      "external_id": "CHABD-Psychiatry_AA36211",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "호흡기알레르기내과",
+      "external_id": "CHABD-PulmonologyAllergy_AA11351",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽승민",
+      "department": "호흡기알레르기내과",
+      "external_id": "CHABD-PulmonologyAllergy_26022701",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정현",
+      "department": "호흡기알레르기내과",
+      "external_id": "CHABD-PulmonologyAllergy_AA12031",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미애",
+      "department": "호흡기알레르기내과",
+      "external_id": "CHABD-PulmonologyAllergy_AA12231",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이세희",
+      "department": "호흡기알레르기내과",
+      "external_id": "CHABD-PulmonologyAllergy_AA13061",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서창옥",
+      "department": "방사선종양학과",
+      "external_id": "CHABD-RadiationOncology_AA40811",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신현수",
+      "department": "방사선종양학과",
+      "external_id": "CHABD-RadiationOncology_AA40141",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장세경",
+      "department": "방사선종양학과",
+      "external_id": "CHABD-RadiationOncology_AA40251",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임정호",
+      "department": "방사선종양학과",
+      "external_id": "CHABD-RadiationOncology_AA40821",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전경식",
+      "department": "영상의학과",
+      "external_id": "CHABD-Radiology_AA40571",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민영",
+      "department": "재활의학과",
+      "external_id": "CHABD-RehabilitationMedicine_AA37081",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민경훈",
+      "department": "재활의학과",
+      "external_id": "CHABD-RehabilitationMedicine_AA37151",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종문",
+      "department": "재활의학과",
+      "external_id": "CHABD-RehabilitationMedicine_AA37201",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서미리",
+      "department": "재활의학과",
+      "external_id": "CHABD-RehabilitationMedicine_AA37211",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신세영",
+      "department": "재활의학과",
+      "external_id": "CHABD-RehabilitationMedicine_AA37241",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수곤",
+      "department": "류마티스내과",
+      "external_id": "CHABD-Rheumatology_AA12641",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진정",
+      "department": "류마티스내과",
+      "external_id": "CHABD-Rheumatology_AA06061",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정상윤",
+      "department": "류마티스내과",
+      "external_id": "CHABD-Rheumatology_AA11931",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박동수",
+      "department": "비뇨의학과",
+      "external_id": "CHABD-Urology_AA34041",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍영권",
+      "department": "비뇨의학과",
+      "external_id": "CHABD-Urology_AA34071",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승렬",
+      "department": "비뇨의학과",
+      "external_id": "CHABD-Urology_AA34092",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경화",
+      "department": "비뇨의학과",
+      "external_id": "CHABD-Urology_AA34121",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유영동",
+      "department": "비뇨의학과",
+      "external_id": "CHABD-Urology_AA34142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태헌",
+      "department": "비뇨의학과",
+      "external_id": "CHABD-Urology_AA34132",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,535 @@
+{
+  "hospital_code": "HWAHONG",
+  "hospital_name": "화홍병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이세호",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-188",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남수현",
+      "department": "가정의학과",
+      "external_id": "HWAHONG-203",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정민아",
+      "department": "가정의학과",
+      "external_id": "HWAHONG-245",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지운",
+      "department": "내분비내과",
+      "external_id": "HWAHONG-233",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전세근",
+      "department": "마취통증의학과",
+      "external_id": "HWAHONG-273",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경배",
+      "department": "마취통증의학과",
+      "external_id": "HWAHONG-184",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이해광",
+      "department": "마취통증의학과",
+      "external_id": "HWAHONG-279",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유형상",
+      "department": "비뇨의학과",
+      "external_id": "HWAHONG-217",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허원석",
+      "department": "비뇨의학과",
+      "external_id": "HWAHONG-322",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한우석",
+      "department": "산부인과",
+      "external_id": "HWAHONG-268",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조동환",
+      "department": "성형외과",
+      "external_id": "HWAHONG-314",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임명섭",
+      "department": "소아청소년과",
+      "external_id": "HWAHONG-181",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성욱",
+      "department": "소아청소년과",
+      "external_id": "HWAHONG-252",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전제혁",
+      "department": "소화기내과",
+      "external_id": "HWAHONG-249",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현미",
+      "department": "소화기내과",
+      "external_id": "HWAHONG-177",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조상용",
+      "department": "소화기내과",
+      "external_id": "HWAHONG-179",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서덕준",
+      "department": "소화기내과",
+      "external_id": "HWAHONG-246",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤선주",
+      "department": "소화기내과",
+      "external_id": "HWAHONG-321",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안성식",
+      "department": "신경과",
+      "external_id": "HWAHONG-175",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤운규",
+      "department": "신경과",
+      "external_id": "HWAHONG-229",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인영",
+      "department": "신경과",
+      "external_id": "HWAHONG-253",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우성",
+      "department": "신경외과(뇌)",
+      "external_id": "HWAHONG-261",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "신경외과(뇌)",
+      "external_id": "HWAHONG-290",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍영호",
+      "department": "신경외과(척추)",
+      "external_id": "HWAHONG-287",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안광업",
+      "department": "신경외과(척추)",
+      "external_id": "HWAHONG-262",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이응현",
+      "department": "신장내과",
+      "external_id": "HWAHONG-277",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정훈",
+      "department": "신장내과",
+      "external_id": "HWAHONG-230",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규호",
+      "department": "심장내과",
+      "external_id": "HWAHONG-205",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정훈",
+      "department": "심장내과",
+      "external_id": "HWAHONG-243",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효은",
+      "department": "심장내과",
+      "external_id": "HWAHONG-171",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성빈",
+      "department": "심장혈관흉부외과",
+      "external_id": "HWAHONG-326",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이세형",
+      "department": "영상의학과",
+      "external_id": "HWAHONG-274",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성희",
+      "department": "영상의학과",
+      "external_id": "HWAHONG-270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성욱",
+      "department": "영상의학과",
+      "external_id": "HWAHONG-271",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전수령",
+      "department": "영상의학과",
+      "external_id": "HWAHONG-272",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유효현",
+      "department": "영상의학과",
+      "external_id": "HWAHONG-275",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최선주",
+      "department": "영상의학과",
+      "external_id": "HWAHONG-296",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최서연",
+      "department": "영상의학과",
+      "external_id": "HWAHONG-324",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최승조",
+      "department": "외과",
+      "external_id": "HWAHONG-182",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신관",
+      "department": "외과",
+      "external_id": "HWAHONG-301",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신준상",
+      "department": "외과",
+      "external_id": "HWAHONG-325",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽진호",
+      "department": "외과(유방·갑상선)",
+      "external_id": "HWAHONG-320",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권정훈",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-189",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송예완",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-195",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인혁",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-231",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성미",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-227",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보람",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-247",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형민",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-256",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남규",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-280",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신규철",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-289",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유진",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-304",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최형수",
+      "department": "응급의학과",
+      "external_id": "HWAHONG-305",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오장근",
+      "department": "이비인후과",
+      "external_id": "HWAHONG-319",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태형",
+      "department": "정형외과(관절)",
+      "external_id": "HWAHONG-169",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진현",
+      "department": "정형외과(관절)",
+      "external_id": "HWAHONG-257",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양성욱",
+      "department": "정형외과(관절)",
+      "external_id": "HWAHONG-318",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경훈",
+      "department": "정형외과(척추)",
+      "external_id": "HWAHONG-285",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오인영",
+      "department": "중환자의학과",
+      "external_id": "HWAHONG-223",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최갑용",
+      "department": "중환자의학과",
+      "external_id": "HWAHONG-222",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현수",
+      "department": "중환자의학과",
+      "external_id": "HWAHONG-254",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천영호",
+      "department": "중환자의학과",
+      "external_id": "HWAHONG-258",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경훈",
+      "department": "중환자의학과",
+      "external_id": "HWAHONG-292",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한미순",
+      "department": "진단검사의학과",
+      "external_id": "HWAHONG-197",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "진단검사의학과",
+      "external_id": "HWAHONG-264",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상훈",
+      "department": "호흡기내과",
+      "external_id": "HWAHONG-167",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형준",
+      "department": "호흡기내과",
+      "external_id": "HWAHONG-303",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

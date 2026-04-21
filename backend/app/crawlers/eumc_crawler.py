@@ -242,6 +242,8 @@ class EumcBaseCrawler:
         return result
 
     async def _fetch_all(self) -> list[dict]:
+        import asyncio
+
         if self._cached_data is not None:
             return self._cached_data
 
@@ -269,11 +271,19 @@ class EumcBaseCrawler:
                     else:
                         all_doctors[ext_id] = doc
 
-            # 월별 날짜 스케줄 수집
-            for doc in all_doctors.values():
+            # 월별 날짜 스케줄 수집 (병렬, Semaphore 제한)
+            sem = asyncio.Semaphore(8)
+
+            async def fetch_one(doc):
                 dr_sid = doc["external_id"].replace(f"{self.hospital_code}-", "")
-                date_scheds = await self._fetch_monthly_schedule(client, dr_sid)
-                doc["date_schedules"] = date_scheds
+                async with sem:
+                    try:
+                        doc["date_schedules"] = await self._fetch_monthly_schedule(client, dr_sid)
+                    except Exception as e:
+                        logger.warning(f"[{self.hospital_code}] 월별 실패 {dr_sid}: {e}")
+                        doc["date_schedules"] = []
+
+            await asyncio.gather(*(fetch_one(d) for d in all_doctors.values()))
 
         result = list(all_doctors.values())
         logger.info(f"[{self.hospital_code}] 총 {len(result)}명")

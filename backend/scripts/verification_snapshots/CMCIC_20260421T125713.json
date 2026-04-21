@@ -1,0 +1,2047 @@
+{
+  "hospital_code": "CMCIC",
+  "hospital_name": "인천성모병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "황선욱",
+      "department": "가정의학과",
+      "external_id": "CMCIC-599",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대균",
+      "department": "가정의학과",
+      "external_id": "CMCIC-1",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서민석",
+      "department": "가정의학과",
+      "external_id": "CMCIC-5",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤영철",
+      "department": "간담췌외과",
+      "external_id": "CMCIC-155",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태윤",
+      "department": "간담췌외과",
+      "external_id": "CMCIC-358",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤정",
+      "department": "감염내과",
+      "external_id": "CMCIC-330",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김시현",
+      "department": "감염내과",
+      "external_id": "CMCIC-46",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정연정",
+      "department": "감염내과",
+      "external_id": "CMCIC-380",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조관훈",
+      "department": "내분비내과",
+      "external_id": "CMCIC-265",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은숙",
+      "department": "내분비내과",
+      "external_id": "CMCIC-49",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한제호",
+      "department": "내분비내과",
+      "external_id": "CMCIC-47",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성대",
+      "department": "내분비내과",
+      "external_id": "CMCIC-48",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조윤정",
+      "department": "내분비내과",
+      "external_id": "CMCIC-432",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지훈",
+      "department": "대장항문외과",
+      "external_id": "CMCIC-161",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송주명",
+      "department": "대장항문외과",
+      "external_id": "CMCIC-398",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문진",
+      "department": "대장항문외과",
+      "external_id": "CMCIC-385",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍연식",
+      "department": "류마티스내과",
+      "external_id": "CMCIC-7",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성희",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-54",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은정",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-53",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장연",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-12",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영준",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-56",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정현",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-55",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김달아",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-57",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성아",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-326",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노희천",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-488",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지원",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-237",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고유리",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-447",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조승희",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-448",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한일웅",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-327",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효선",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-425",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명수",
+      "department": "방사선종양학과",
+      "external_id": "CMCIC-61",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽유강",
+      "department": "방사선종양학과",
+      "external_id": "CMCIC-275",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강혜진",
+      "department": "방사선종양학과",
+      "external_id": "CMCIC-389",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소정",
+      "department": "방사선종양학과",
+      "external_id": "CMCIC-319",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은수",
+      "department": "병리과",
+      "external_id": "CMCIC-64",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "맹이소",
+      "department": "병리과",
+      "external_id": "CMCIC-62",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전선영",
+      "department": "병리과",
+      "external_id": "CMCIC-63",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "병리과",
+      "external_id": "CMCIC-66",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태은",
+      "department": "병리과",
+      "external_id": "CMCIC-302",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안소연",
+      "department": "병리과",
+      "external_id": "CMCIC-209",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정준",
+      "department": "비뇨의학과",
+      "external_id": "CMCIC-301",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영숙",
+      "department": "병리과",
+      "external_id": "CMCIC-450",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동환",
+      "department": "비뇨의학과",
+      "external_id": "CMCIC-67",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황태곤",
+      "department": "비뇨의학과",
+      "external_id": "CMCIC-458",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최세경",
+      "department": "산부인과",
+      "external_id": "CMCIC-210",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용욱",
+      "department": "산부인과",
+      "external_id": "CMCIC-73",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준용",
+      "department": "성형외과",
+      "external_id": "CMCIC-77",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유결",
+      "department": "성형외과",
+      "external_id": "CMCIC-211",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백상운",
+      "department": "성형외과",
+      "external_id": "CMCIC-80",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-455",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김라윤",
+      "department": "성형외과",
+      "external_id": "CMCIC-563",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김봉겸",
+      "department": "성형외과",
+      "external_id": "CMCIC-76",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전윤홍",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-84",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상용",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-82",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전정식",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-87",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김신희",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-86",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민성",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-85",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성구",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-554",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박유진",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-305",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유이",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-318",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경민",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-364",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지정선",
+      "department": "소화기내과",
+      "external_id": "CMCIC-28",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병욱",
+      "department": "소화기내과",
+      "external_id": "CMCIC-178",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남순우",
+      "department": "소화기내과",
+      "external_id": "CMCIC-15",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최황",
+      "department": "",
+      "external_id": "CMCIC-27",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권정현",
+      "department": "소화기내과",
+      "external_id": "CMCIC-16",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준성",
+      "department": "소화기내과",
+      "external_id": "CMCIC-29",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이순규",
+      "department": "소화기내과",
+      "external_id": "CMCIC-467",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종율",
+      "department": "소화기내과",
+      "external_id": "CMCIC-195",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나수영",
+      "department": "소화기내과",
+      "external_id": "CMCIC-367",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영희",
+      "department": "소화기내과",
+      "external_id": "CMCIC-368",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재신",
+      "department": "소화기내과",
+      "external_id": "CMCIC-215",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성우",
+      "department": "신경과",
+      "external_id": "CMCIC-88",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조현지",
+      "department": "신경과",
+      "external_id": "CMCIC-90",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송인욱",
+      "department": "신경과",
+      "external_id": "CMCIC-89",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영도",
+      "department": "신경과",
+      "external_id": "CMCIC-91",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태원",
+      "department": "신경과",
+      "external_id": "CMCIC-92",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최윤호",
+      "department": "신경과",
+      "external_id": "CMCIC-266",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나승희",
+      "department": "신경과",
+      "external_id": "CMCIC-218",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종태",
+      "department": "신경외과",
+      "external_id": "CMCIC-133",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤완수",
+      "department": "신경외과",
+      "external_id": "CMCIC-100",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정동섭",
+      "department": "신경외과",
+      "external_id": "CMCIC-94",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허륭",
+      "department": "신경외과",
+      "external_id": "CMCIC-95",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장동규",
+      "department": "신경외과",
+      "external_id": "CMCIC-98",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신명훈",
+      "department": "신경외과",
+      "external_id": "CMCIC-135",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최두용",
+      "department": "신경외과",
+      "external_id": "CMCIC-136",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조병래",
+      "department": "신경외과",
+      "external_id": "CMCIC-102",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장일",
+      "department": "신경외과",
+      "external_id": "CMCIC-315",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영훈",
+      "department": "신경외과",
+      "external_id": "CMCIC-562",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유승찬",
+      "department": "신경외과",
+      "external_id": "CMCIC-442",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신석준",
+      "department": "신장내과",
+      "external_id": "CMCIC-103",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최익준",
+      "department": "심장혈관내과",
+      "external_id": "CMCIC-31",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미정",
+      "department": "심장혈관내과",
+      "external_id": "CMCIC-10",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변재호",
+      "department": "심장혈관내과",
+      "external_id": "CMCIC-431",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황형빈",
+      "department": "안과",
+      "external_id": "CMCIC-110",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임혜빈",
+      "department": "안과",
+      "external_id": "CMCIC-107",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정휘",
+      "department": "영상의학과",
+      "external_id": "CMCIC-113",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기준",
+      "department": "영상의학과",
+      "external_id": "CMCIC-33",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박창숙",
+      "department": "영상의학과",
+      "external_id": "CMCIC-200",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심동재",
+      "department": "영상의학과",
+      "external_id": "CMCIC-117",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현숙",
+      "department": "영상의학과",
+      "external_id": "CMCIC-469",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손경명",
+      "department": "영상의학과",
+      "external_id": "CMCIC-112",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강훈",
+      "department": "영상의학과",
+      "external_id": "CMCIC-332",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선기",
+      "department": "영상의학과",
+      "external_id": "CMCIC-114",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백문희",
+      "department": "영상의학과",
+      "external_id": "CMCIC-356",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도영",
+      "department": "영상의학과",
+      "external_id": "CMCIC-393",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오진경",
+      "department": "핵의학과",
+      "external_id": "CMCIC-116",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용안",
+      "department": "핵의학과",
+      "external_id": "CMCIC-111",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은경",
+      "department": "핵의학과",
+      "external_id": "CMCIC-118",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진조",
+      "department": "위장관외과",
+      "external_id": "CMCIC-199",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최훈",
+      "department": "유방갑상선외과",
+      "external_id": "CMCIC-36",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정훈",
+      "department": "유방갑상선외과",
+      "external_id": "CMCIC-638",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오세정",
+      "department": "유방갑상선외과",
+      "external_id": "CMCIC-35",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강영준",
+      "department": "유방갑상선외과",
+      "external_id": "CMCIC-325",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이운정",
+      "department": "응급의학과",
+      "external_id": "CMCIC-41",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우선희",
+      "department": "응급의학과",
+      "external_id": "CMCIC-42",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대희",
+      "department": "응급의학과",
+      "external_id": "CMCIC-43",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준영",
+      "department": "응급의학과",
+      "external_id": "CMCIC-230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문형기",
+      "department": "응급의학과",
+      "external_id": "CMCIC-522",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상윤",
+      "department": "응급의학과",
+      "external_id": "CMCIC-498",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박시경",
+      "department": "응급의학과",
+      "external_id": "CMCIC-197",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태완",
+      "department": "응급의학과",
+      "external_id": "CMCIC-282",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정창환",
+      "department": "응급의학과",
+      "external_id": "CMCIC-457",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남인철",
+      "department": "이비인후과",
+      "external_id": "CMCIC-123",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "이비인후과",
+      "external_id": "CMCIC-122",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전은주",
+      "department": "이비인후과",
+      "external_id": "CMCIC-121",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현진",
+      "department": "이비인후과",
+      "external_id": "CMCIC-257",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박아름",
+      "department": "입원내과",
+      "external_id": "CMCIC-341",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이국형",
+      "department": "입원내과",
+      "external_id": "CMCIC-436",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤진",
+      "department": "외과",
+      "external_id": "CMCIC-423",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재민",
+      "department": "재활의학과",
+      "external_id": "CMCIC-201",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민욱",
+      "department": "재활의학과",
+      "external_id": "CMCIC-124",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장대현",
+      "department": "재활의학과",
+      "external_id": "CMCIC-125",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영아",
+      "department": "재활의학과",
+      "external_id": "CMCIC-321",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재원",
+      "department": "재활의학과",
+      "external_id": "CMCIC-391",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박이진",
+      "department": "정신건강의학과",
+      "external_id": "CMCIC-128",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허휴정",
+      "department": "정신건강의학과",
+      "external_id": "CMCIC-320",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원왕연",
+      "department": "정신건강의학과",
+      "external_id": "CMCIC-236",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전양환",
+      "department": "정신건강의학과",
+      "external_id": "CMCIC-127",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상욱",
+      "department": "정형외과",
+      "external_id": "CMCIC-20",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주선영",
+      "department": "정형외과",
+      "external_id": "CMCIC-21",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장윤종",
+      "department": "정형외과",
+      "external_id": "CMCIC-22",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성산",
+      "department": "정형외과",
+      "external_id": "CMCIC-635",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용석",
+      "department": "정형외과",
+      "external_id": "CMCIC-294",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전상현",
+      "department": "정형외과",
+      "external_id": "CMCIC-231",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승옥",
+      "department": "진단검사의학과",
+      "external_id": "CMCIC-131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유재은",
+      "department": "진단검사의학과",
+      "external_id": "CMCIC-365",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재웅",
+      "department": "진단검사의학과",
+      "external_id": "CMCIC-451",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민나",
+      "department": "치과",
+      "external_id": "CMCIC-138",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜성",
+      "department": "피부과",
+      "external_id": "CMCIC-143",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조상현",
+      "department": "피부과",
+      "external_id": "CMCIC-142",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정덕",
+      "department": "피부과",
+      "external_id": "CMCIC-141",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우유리",
+      "department": "피부과",
+      "external_id": "CMCIC-347",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상동",
+      "department": "혈관이식외과",
+      "external_id": "CMCIC-185",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양승아",
+      "department": "혈액내과",
+      "external_id": "CMCIC-145",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변재호",
+      "department": "종양내과",
+      "external_id": "CMCIC-144",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신아영",
+      "department": "호흡기내과",
+      "external_id": "CMCIC-151",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주상",
+      "department": "호흡기내과",
+      "external_id": "CMCIC-149",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안중현",
+      "department": "호흡기내과",
+      "external_id": "CMCIC-148",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준영",
+      "department": "호흡기내과",
+      "external_id": "CMCIC-361",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하직환",
+      "department": "호흡기내과",
+      "external_id": "CMCIC-150",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형우",
+      "department": "호흡기내과",
+      "external_id": "CMCIC-273",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경훈",
+      "department": "호흡기내과",
+      "external_id": "CMCIC-291",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서종희",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCIC-154",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진용",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCIC-153",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤정섭",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCIC-9",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도연",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCIC-229",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지윤",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCIC-382",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현아",
+      "department": "",
+      "external_id": "CMCIC-421",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박보림",
+      "department": "",
+      "external_id": "CMCIC-408",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오숙희",
+      "department": "",
+      "external_id": "CMCIC-410",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "음상훈",
+      "department": "신장내과",
+      "external_id": "CMCIC-468",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동섭",
+      "department": "신경외과",
+      "external_id": "CMCIC-472",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송희경",
+      "department": "산부인과",
+      "external_id": "CMCIC-475",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성언",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-489",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신재민",
+      "department": "영상의학과",
+      "external_id": "CMCIC-491",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신재호",
+      "department": "외과",
+      "external_id": "CMCIC-493",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백승환",
+      "department": "영상의학과",
+      "external_id": "CMCIC-497",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정선",
+      "department": "위장관외과",
+      "external_id": "CMCIC-509",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문용식",
+      "department": "입원내과",
+      "external_id": "CMCIC-510",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동준",
+      "department": "영상의학과",
+      "external_id": "CMCIC-513",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종혁",
+      "department": "혈액내과",
+      "external_id": "CMCIC-516",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허준영",
+      "department": "정형외과",
+      "external_id": "CMCIC-517",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세진",
+      "department": "가정의학과",
+      "external_id": "CMCIC-523",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장유성",
+      "department": "입원내과",
+      "external_id": "CMCIC-528",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송영우",
+      "department": "심장혈관내과",
+      "external_id": "CMCIC-530",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양승희",
+      "department": "입원내과",
+      "external_id": "CMCIC-537",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은지",
+      "department": "입원내과",
+      "external_id": "CMCIC-539",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤제호",
+      "department": "외과",
+      "external_id": "CMCIC-540",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경택",
+      "department": "외과",
+      "external_id": "CMCIC-541",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서유미",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-543",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병석",
+      "department": "신경과",
+      "external_id": "CMCIC-546",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임채동",
+      "department": "대장항문외과",
+      "external_id": "CMCIC-551",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희원",
+      "department": "",
+      "external_id": "CMCIC-552",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박유미",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-556",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수현",
+      "department": "심장혈관내과",
+      "external_id": "CMCIC-557",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선의",
+      "department": "산부인과",
+      "external_id": "CMCIC-559",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경안",
+      "department": "심장혈관내과",
+      "external_id": "CMCIC-561",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하나",
+      "department": "소아청소년과",
+      "external_id": "CMCIC-564",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현순",
+      "department": "응급의학과",
+      "external_id": "CMCIC-565",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김립",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-566",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현제",
+      "department": "치과",
+      "external_id": "CMCIC-569",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태우",
+      "department": "소화기내과",
+      "external_id": "CMCIC-573",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이슬아",
+      "department": "이비인후과",
+      "external_id": "CMCIC-570",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은진",
+      "department": "영상의학과",
+      "external_id": "CMCIC-574",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효빈",
+      "department": "유방갑상선외과",
+      "external_id": "CMCIC-575",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서민범",
+      "department": "응급의학과",
+      "external_id": "CMCIC-577",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선미",
+      "department": "마취통증의학과",
+      "external_id": "CMCIC-579",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노지현",
+      "department": "응급의학과",
+      "external_id": "CMCIC-567",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문소희",
+      "department": "입원내과",
+      "external_id": "CMCIC-583",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안숙현",
+      "department": "입원내과",
+      "external_id": "CMCIC-587",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민호",
+      "department": "입원내과",
+      "external_id": "CMCIC-588",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전수연",
+      "department": "입원내과",
+      "external_id": "CMCIC-590",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤하은",
+      "department": "입원내과",
+      "external_id": "CMCIC-591",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조일혜",
+      "department": "",
+      "external_id": "CMCIC-592",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허종일",
+      "department": "외과",
+      "external_id": "CMCIC-593",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최건국",
+      "department": "입원내과",
+      "external_id": "CMCIC-594",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주현",
+      "department": "외과",
+      "external_id": "CMCIC-596",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김다해",
+      "department": "응급의학과",
+      "external_id": "CMCIC-600",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문유림",
+      "department": "입원내과",
+      "external_id": "CMCIC-601",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노경훈",
+      "department": "심장혈관내과",
+      "external_id": "CMCIC-602",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나도현",
+      "department": "신장내과",
+      "external_id": "CMCIC-604",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채승윤",
+      "department": "신장내과",
+      "external_id": "CMCIC-603",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이권재",
+      "department": "종양내과",
+      "external_id": "CMCIC-605",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방청원",
+      "department": "정형외과",
+      "external_id": "CMCIC-616",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지욱",
+      "department": "정형외과",
+      "external_id": "CMCIC-606",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백진욱",
+      "department": "안과",
+      "external_id": "CMCIC-607",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정석훈",
+      "department": "안과",
+      "external_id": "CMCIC-608",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준명",
+      "department": "안과",
+      "external_id": "CMCIC-464",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이익환",
+      "department": "소화기내과",
+      "external_id": "CMCIC-609",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류세영",
+      "department": "신장내과",
+      "external_id": "CMCIC-612",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "사승우",
+      "department": "응급의학과",
+      "external_id": "CMCIC-617",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유정",
+      "department": "외과",
+      "external_id": "CMCIC-619",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민호",
+      "department": "응급의학과",
+      "external_id": "CMCIC-623",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정원주",
+      "department": "신경외과",
+      "external_id": "CMCIC-624",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정영",
+      "department": "유방갑상선외과",
+      "external_id": "CMCIC-625",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조태준",
+      "department": "소화기내과",
+      "external_id": "CMCIC-626",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정일구",
+      "department": "",
+      "external_id": "CMCIC-629",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유인숙",
+      "department": "",
+      "external_id": "CMCIC-630",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선희",
+      "department": "유방갑상선외과",
+      "external_id": "CMCIC-631",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명훈",
+      "department": "호흡기내과",
+      "external_id": "CMCIC-632",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하원석",
+      "department": "신경외과",
+      "external_id": "CMCIC-633",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우재연",
+      "department": "산부인과",
+      "external_id": "CMCIC-636",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성혁",
+      "department": "류마티스내과",
+      "external_id": "CMCIC-637",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김여름",
+      "department": "심장혈관내과",
+      "external_id": "CMCIC-639",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이산하",
+      "department": "산부인과",
+      "external_id": "CMCIC-640",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배세종",
+      "department": "대장항문외과",
+      "external_id": "CMCIC-641",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동준",
+      "department": "소화기내과",
+      "external_id": "CMCIC-642",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유진영",
+      "department": "소화기내과",
+      "external_id": "CMCIC-643",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유신애",
+      "department": "소화기내과",
+      "external_id": "CMCIC-644",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하영수",
+      "department": "소화기내과",
+      "external_id": "CMCIC-645",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이문수",
+      "department": "소화기내과",
+      "external_id": "CMCIC-646",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민경일",
+      "department": "혈액내과",
+      "external_id": "CMCIC-647",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "안과",
+      "external_id": "CMCIC-648",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이보령",
+      "department": "응급의학과",
+      "external_id": "CMCIC-649",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

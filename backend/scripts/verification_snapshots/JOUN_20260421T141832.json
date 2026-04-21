@@ -1,0 +1,343 @@
+{
+  "hospital_code": "JOUN",
+  "hospital_name": "조은오산병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "권기영",
+      "department": "신경외과",
+      "external_id": "JOUN-1_doctor27",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "신경외과 척추센터"
+    },
+    {
+      "name": "양동준",
+      "department": "신경외과",
+      "external_id": "JOUN-1_doctor1",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "신경외과 척추센터"
+    },
+    {
+      "name": "김건우",
+      "department": "신경외과",
+      "external_id": "JOUN-1_doctor22-2",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정명훈",
+      "department": "신경외과",
+      "external_id": "JOUN-1_doctor22",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "신경외과 척추센터 척추내시경수술센터"
+    },
+    {
+      "name": "추원호",
+      "department": "신경외과",
+      "external_id": "JOUN-1_doctor22-1",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "신경외과 척추센터 척추내시경수술센터"
+    },
+    {
+      "name": "김정철",
+      "department": "신경외과",
+      "external_id": "JOUN-1_doctor26-1",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심재훈",
+      "department": "정형외과",
+      "external_id": "JOUN-2_doctor47-1",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경순",
+      "department": "정형외과",
+      "external_id": "JOUN-2_doctor48",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오영식",
+      "department": "외과",
+      "external_id": "JOUN-3_doctor49",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "외과 복강경수술센터"
+    },
+    {
+      "name": "김지윤",
+      "department": "내과",
+      "external_id": "JOUN-4_doctor233-6",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안병수",
+      "department": "내과",
+      "external_id": "JOUN-4_doctor233-7",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정대관",
+      "department": "내과",
+      "external_id": "JOUN-4_doctor233-33",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤택중",
+      "department": "내과",
+      "external_id": "JOUN-4_doctor50",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최철준",
+      "department": "내과",
+      "external_id": "JOUN-4_doctor233-11",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "순환기내과"
+    },
+    {
+      "name": "YSJ",
+      "department": "내과",
+      "external_id": "JOUN-4_doctor233-9",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박일우",
+      "department": "성형외과",
+      "external_id": "JOUN-5_doctor233-4",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "준비중입니다.",
+      "department": "성형외과",
+      "external_id": "JOUN-5_doctor5_b",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "구지훈",
+      "department": "성형외과",
+      "external_id": "JOUN-5_doctor5",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "문준일",
+      "department": "성형외과",
+      "external_id": "JOUN-5_doctor15",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "옥태진",
+      "department": "성형외과",
+      "external_id": "JOUN-5_doctor233",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "박세정",
+      "department": "성형외과",
+      "external_id": "JOUN-5_doctor233-2",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "오종배",
+      "department": "신경과",
+      "external_id": "JOUN-6_doctor41",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정대관",
+      "department": "신경과",
+      "external_id": "JOUN-6_doctor233-3",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "준비중입니다.",
+      "department": "신경과",
+      "external_id": "JOUN-6_doctor5_b",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "구지훈",
+      "department": "신경과",
+      "external_id": "JOUN-6_doctor5",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "문준일",
+      "department": "신경과",
+      "external_id": "JOUN-6_doctor15",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "옥태진",
+      "department": "신경과",
+      "external_id": "JOUN-6_doctor233",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "박세정",
+      "department": "신경과",
+      "external_id": "JOUN-6_doctor233-2",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내과"
+    },
+    {
+      "name": "이재승",
+      "department": "피부비뇨의학과",
+      "external_id": "JOUN-7_doctor36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은하",
+      "department": "마취통증의학과",
+      "external_id": "JOUN-9_doctor9-3",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영석",
+      "department": "가정의학과",
+      "external_id": "JOUN-10_doctor12-2",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영석",
+      "department": "가정의학과",
+      "external_id": "JOUN-10_doctor40",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "가정의과"
+    },
+    {
+      "name": "권현옥",
+      "department": "가정의학과",
+      "external_id": "JOUN-10_doctor40-1",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승환",
+      "department": "가정의학과",
+      "external_id": "JOUN-10_doctor40-2",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문숙인",
+      "department": "진단검사의학과",
+      "external_id": "JOUN-12_doctor44",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동재",
+      "department": "영상의학과",
+      "external_id": "JOUN-14_doctor51",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이인학 과장/소아청소년과 전문의",
+      "department": "소아청소년과",
+      "external_id": "JOUN-15_doctor37",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세용",
+      "department": "부인과",
+      "external_id": "JOUN-16_doctor43",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배인근",
+      "department": "직업환경의학과",
+      "external_id": "JOUN-17_doctor21",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "직업환경의학과, 특수건강검진"
+    },
+    {
+      "name": "박정훈",
+      "department": "신장내과",
+      "external_id": "JOUN-18_doctor35",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우중",
+      "department": "신장내과",
+      "external_id": "JOUN-18_doctor35-1",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "신장 / 소화기내과"
+    },
+    {
+      "name": "김석중",
+      "department": "피부미용과",
+      "external_id": "JOUN-21_doctor0703",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "부인과/피부미용과"
+    }
+  ]
+}

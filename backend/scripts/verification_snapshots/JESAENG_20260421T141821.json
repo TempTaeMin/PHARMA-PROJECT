@@ -1,0 +1,967 @@
+{
+  "hospital_code": "JESAENG",
+  "hospital_name": "분당제생병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박계선",
+      "department": "가정의학과",
+      "external_id": "JESAENG-1008331",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "오후 진료: 신관 3층 가정의학과 진료실"
+    },
+    {
+      "name": "이경식",
+      "department": "가정의학과",
+      "external_id": "JESAENG-1007131",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성민",
+      "department": "가정의학과",
+      "external_id": "JESAENG-1006835",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "오후 진료: 신관 3층 가정의학과 진료실"
+    },
+    {
+      "name": "최영아",
+      "department": "가정의학과",
+      "external_id": "JESAENG-1006989",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 13~14일 오후 진료: 신관 3층 가정의학과 진료실 / 수 오전: 온열암 클리닉"
+    },
+    {
+      "name": "조윤숙",
+      "department": "감염내과",
+      "external_id": "JESAENG-1007266",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 4일"
+    },
+    {
+      "name": "김용현",
+      "department": "내분비내과",
+      "external_id": "JESAENG-1007067",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동현",
+      "department": "내분비내과",
+      "external_id": "JESAENG-1006829",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 18일"
+    },
+    {
+      "name": "채지영",
+      "department": "류마티스내과",
+      "external_id": "JESAENG-1007093",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "김가현",
+      "department": "마취통증의학과",
+      "external_id": "JESAENG-1007130",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주훈",
+      "department": "마취통증의학과",
+      "external_id": "JESAENG-1006833",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주영",
+      "department": "마취통증의학과",
+      "external_id": "JESAENG-1006838",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최미영",
+      "department": "마취통증의학과",
+      "external_id": "JESAENG-1006988",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현규",
+      "department": "마취통증의학과",
+      "external_id": "JESAENG-1006821",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오소라",
+      "department": "마취통증의학과",
+      "external_id": "JESAENG-1127391",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원영주",
+      "department": "마취통증의학과",
+      "external_id": "JESAENG-1127741",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성훈",
+      "department": "방사선종양학과",
+      "external_id": "JESAENG-1007192",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화 문의 후 진료예약 바랍니다(031-779-5000,5010)"
+    },
+    {
+      "name": "백소야",
+      "department": "병리과",
+      "external_id": "JESAENG-1006997",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한은미",
+      "department": "병리과",
+      "external_id": "JESAENG-1006970",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "&nbsp;"
+    },
+    {
+      "name": "김영혜",
+      "department": "병리과",
+      "external_id": "JESAENG-1127812",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손정환",
+      "department": "비뇨의학과",
+      "external_id": "JESAENG-1006968",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 23일~26일, 5월 4일"
+    },
+    {
+      "name": "이재원",
+      "department": "비뇨의학과",
+      "external_id": "JESAENG-1007103",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장석흔",
+      "department": "비뇨의학과",
+      "external_id": "JESAENG-1006163",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장재혁",
+      "department": "산부인과",
+      "external_id": "JESAENG-1007430",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유정현",
+      "department": "산부인과",
+      "external_id": "JESAENG-1007097",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 28일"
+    },
+    {
+      "name": "김진",
+      "department": "성형외과",
+      "external_id": "JESAENG-1126148",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 22~24일, 5월 14~15일"
+    },
+    {
+      "name": "민경원",
+      "department": "성형외과",
+      "external_id": "JESAENG-1126812",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 14~15일"
+    },
+    {
+      "name": "정창은",
+      "department": "성형외과",
+      "external_id": "JESAENG-1007237",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 14~15일, 26~29일"
+    },
+    {
+      "name": "김아리",
+      "department": "소아청소년과",
+      "external_id": "JESAENG-1007142",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 1일, 29일"
+    },
+    {
+      "name": "변성환",
+      "department": "소아청소년과",
+      "external_id": "JESAENG-1001087",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 7~8일, 25일~29일"
+    },
+    {
+      "name": "안연화",
+      "department": "소아청소년과",
+      "external_id": "JESAENG-1006830",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 24일, 5월 1일, 4일"
+    },
+    {
+      "name": "윤지희",
+      "department": "소아청소년과",
+      "external_id": "JESAENG-1127604",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 15일, 18일, 22일"
+    },
+    {
+      "name": "최종운",
+      "department": "소아청소년과",
+      "external_id": "JESAENG-1006822",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 20~21일"
+    },
+    {
+      "name": "박준영",
+      "department": "소아청소년과",
+      "external_id": "JESAENG-1127461",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상종",
+      "department": "소화기내과",
+      "external_id": "JESAENG-1006827",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 1일, 25일○ : 내시경 검사시간이며 진료는 불가합니다"
+    },
+    {
+      "name": "박상운",
+      "department": "소화기내과",
+      "external_id": "JESAENG-1001791",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일O : 내시경 검사시간이며 진료는 불가합니다"
+    },
+    {
+      "name": "박주상",
+      "department": "소화기내과",
+      "external_id": "JESAENG-1006831",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일O : 내시경 검사시간이며 진료는 불가합니다"
+    },
+    {
+      "name": "김상중",
+      "department": "소화기내과",
+      "external_id": "JESAENG-1007096",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "○ : 내시경 검사시간이며 진료는 불가합니다"
+    },
+    {
+      "name": "장은정",
+      "department": "소화기내과",
+      "external_id": "JESAENG-1006832",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "오전 진료: 5월 25일○ : 내시경 검사시간이며 진료는 불가합니다"
+    },
+    {
+      "name": "김현기",
+      "department": "소화기내과",
+      "external_id": "JESAENG-2603028",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재형",
+      "department": "소화기내과",
+      "external_id": "JESAENG-2603027",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "선우문경",
+      "department": "신경과",
+      "external_id": "JESAENG-1004360",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 5~6일, 14일오전 진료: 9시 시작/수 오후: 파킨슨 및 운동질환 클리닉/서류 상담 4시 이후 예약"
+    },
+    {
+      "name": "성민재",
+      "department": "신경과",
+      "external_id": "JESAENG-1025018",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 7일, 오전 진료: 5월 25일화 오전: 수면 클리닉(코골이, 불면증, 낮졸림)"
+    },
+    {
+      "name": "유현정",
+      "department": "신경과",
+      "external_id": "JESAENG-1007023",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 30일, 5월 25일월 오후: 손.발저림 클리닉"
+    },
+    {
+      "name": "이재정",
+      "department": "신경과",
+      "external_id": "JESAENG-1126996",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 24일, 5월 11~15일, 25일월 오후: 치매, 보행장애 및 보톡스 클리닉"
+    },
+    {
+      "name": "임동규",
+      "department": "신경과",
+      "external_id": "JESAENG-1126490",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 1일~4일수 오전: 두통 클리닉"
+    },
+    {
+      "name": "정은혜",
+      "department": "신경과",
+      "external_id": "JESAENG-1007114",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 1~5일목 오후: 치매 클리닉"
+    },
+    {
+      "name": "두통어지러움당일",
+      "department": "신경과",
+      "external_id": "JESAENG-1126946",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "두통/어지럼증 원스톱 클리닉 예약 안내"
+    },
+    {
+      "name": "강재성",
+      "department": "신경외과",
+      "external_id": "JESAENG-1006188",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 24일, 5월 1일, 29일"
+    },
+    {
+      "name": "김현곤",
+      "department": "신경외과",
+      "external_id": "JESAENG-1007265",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 29일, 5월 4일"
+    },
+    {
+      "name": "황교준",
+      "department": "신경외과",
+      "external_id": "JESAENG-1007408",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 1일 서류작성(진단서 및 소견서 등) 진료는 토요일에만 가능합니다"
+    },
+    {
+      "name": "오성한",
+      "department": "신경외과",
+      "external_id": "JESAENG-1006843",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 척추센터에서 확인 부탁드립니다.본관 1층 척추센터에서 진료"
+    },
+    {
+      "name": "박종혁",
+      "department": "신경외과",
+      "external_id": "JESAENG-1127135",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 척추센터에서 확인 부탁드립니다. 본관 1층 척추센터에서 진료"
+    },
+    {
+      "name": "이장한",
+      "department": "신장내과",
+      "external_id": "JESAENG-1007074",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤철",
+      "department": "신장내과",
+      "external_id": "JESAENG-1006996",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 1일, 25일"
+    },
+    {
+      "name": "최용선",
+      "department": "신장내과",
+      "external_id": "JESAENG-1005053",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "김동진",
+      "department": "심장혈관내과",
+      "external_id": "JESAENG-1006820",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "오민석",
+      "department": "심장혈관내과",
+      "external_id": "JESAENG-1006297",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진"
+    },
+    {
+      "name": "정익모",
+      "department": "심장혈관내과",
+      "external_id": "JESAENG-1128001",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "조상균",
+      "department": "심장혈관내과",
+      "external_id": "JESAENG-1006359",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진, 오전 진료: 5월 25일"
+    },
+    {
+      "name": "조성욱",
+      "department": "심장혈관내과",
+      "external_id": "JESAENG-1006278",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "권진태",
+      "department": "심장혈관흉부외과",
+      "external_id": "JESAENG-1007138",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 30일~5월 1일"
+    },
+    {
+      "name": "조재민",
+      "department": "심장혈관흉부외과",
+      "external_id": "JESAENG-1006277",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "길현경",
+      "department": "안과",
+      "external_id": "JESAENG-1006971",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 7일, 19~21일, 25일목 오후: 망막레이저 클리닉"
+    },
+    {
+      "name": "장윤경",
+      "department": "안과",
+      "external_id": "JESAENG-1126530",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "김대윤",
+      "department": "영상의학과",
+      "external_id": "JESAENG-1007128",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혁중",
+      "department": "영상의학과",
+      "external_id": "JESAENG-1002981",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현진",
+      "department": "영상의학과",
+      "external_id": "JESAENG-1005759",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박운주",
+      "department": "영상의학과",
+      "external_id": "JESAENG-1007127",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배영아",
+      "department": "영상의학과",
+      "external_id": "JESAENG-1004596",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "연재우",
+      "department": "영상의학과",
+      "external_id": "JESAENG-1006834",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주연",
+      "department": "영상의학과",
+      "external_id": "JESAENG-1126639",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍혁진",
+      "department": "영상의학과",
+      "external_id": "JESAENG-1006839",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상욱",
+      "department": "외과",
+      "external_id": "JESAENG-1006836",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진: 유방갑상선센터에서 확인 부탁드립니다.본관 2층 유방.갑상선센터에서 진료"
+    },
+    {
+      "name": "김정기",
+      "department": "외과",
+      "external_id": "JESAENG-1127161",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 23일~28일"
+    },
+    {
+      "name": "박진수",
+      "department": "외과",
+      "external_id": "JESAENG-1006825",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 23~24일, 30일, 5월 18~19일"
+    },
+    {
+      "name": "안요셉",
+      "department": "외과",
+      "external_id": "JESAENG-1126418",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수호",
+      "department": "외과",
+      "external_id": "JESAENG-1006609",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정연",
+      "department": "외과",
+      "external_id": "JESAENG-1007238",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 17~21일"
+    },
+    {
+      "name": "전병건",
+      "department": "외과",
+      "external_id": "JESAENG-1007113",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 23~25일"
+    },
+    {
+      "name": "김영식",
+      "department": "응급의학과",
+      "external_id": "JESAENG-1007069",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상민",
+      "department": "응급의학과",
+      "external_id": "JESAENG-1127803",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준우",
+      "department": "응급의학과",
+      "external_id": "JESAENG-2603034",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지현",
+      "department": "응급의학과",
+      "external_id": "JESAENG-1005776",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승교",
+      "department": "응급의학과",
+      "external_id": "JESAENG-1127608",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현정",
+      "department": "응급의학과",
+      "external_id": "JESAENG-1127607",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준완",
+      "department": "응급의학과",
+      "external_id": "JESAENG-1127702",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방진영",
+      "department": "응급의학과",
+      "external_id": "JESAENG-2603035",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광현",
+      "department": "이비인후과",
+      "external_id": "JESAENG-1007604",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배미례",
+      "department": "이비인후과",
+      "external_id": "JESAENG-1006763",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "오전 진료: 5월 1일"
+    },
+    {
+      "name": "안윤숙",
+      "department": "이비인후과",
+      "external_id": "JESAENG-1007134",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 4일, 18일"
+    },
+    {
+      "name": "구의경",
+      "department": "중환자의학과",
+      "external_id": "JESAENG-1007463",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조경민",
+      "department": "중환자의학과",
+      "external_id": "JESAENG-1007149",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성실",
+      "department": "중환자의학과",
+      "external_id": "JESAENG-1007306",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성규",
+      "department": "진단검사의학과",
+      "external_id": "JESAENG-1007038",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "&nbsp;"
+    },
+    {
+      "name": "최영희",
+      "department": "진단검사의학과",
+      "external_id": "JESAENG-1127225",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성현",
+      "department": "재활의학과",
+      "external_id": "JESAENG-1007610",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 23일, 5월 3일수 오전: 보톡스 클리닉, 금 오후: 소아 보조기 클리닉O : 검사시간이며 진료는 불가합니다"
+    },
+    {
+      "name": "김주섭",
+      "department": "재활의학과",
+      "external_id": "JESAENG-1006084",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 24일월 오후: 보조기 클리닉"
+    },
+    {
+      "name": "문현임",
+      "department": "재활의학과",
+      "external_id": "JESAENG-1007144",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 23일, 30일금 오전: 연하장애 클리닉"
+    },
+    {
+      "name": "김수정",
+      "department": "정신건강의학과",
+      "external_id": "JESAENG-1006480",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 4일, 8일, 오전 진료: 5월 25일"
+    },
+    {
+      "name": "김정훈",
+      "department": "정신건강의학과",
+      "external_id": "JESAENG-1006824",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "정재원",
+      "department": "정신건강의학과",
+      "external_id": "JESAENG-1007101",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 4일, 25일"
+    },
+    {
+      "name": "곽대경",
+      "department": "정형외과",
+      "external_id": "JESAENG-1127876",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 1일~8일, 15~16일"
+    },
+    {
+      "name": "송우석",
+      "department": "정형외과",
+      "external_id": "JESAENG-1007077",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이관범",
+      "department": "정형외과",
+      "external_id": "JESAENG-1127669",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "오전 진료: 5월 1일, 5월 25일"
+    },
+    {
+      "name": "정유훈",
+      "department": "정형외과",
+      "external_id": "JESAENG-1007100",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "최준철",
+      "department": "정형외과",
+      "external_id": "JESAENG-1006837",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 25일"
+    },
+    {
+      "name": "나화엽",
+      "department": "정형외과",
+      "external_id": "JESAENG-1006366",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "휴진: 척추센터에서 확인 부탁드립니다.본관 1층 척추센터에서 진료"
+    },
+    {
+      "name": "이영상",
+      "department": "정형외과",
+      "external_id": "JESAENG-1001122",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "휴진: 척추센터에서 확인 부탁드립니다.본관 1층 척추센터에서 진료"
+    },
+    {
+      "name": "김태완",
+      "department": "치과",
+      "external_id": "JESAENG-1000912",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "진료 예약/변경: 031-779-0188"
+    },
+    {
+      "name": "선화경",
+      "department": "치과",
+      "external_id": "JESAENG-1005808",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 4일진료 예약/변경: 031-779-0188"
+    },
+    {
+      "name": "정연희",
+      "department": "치과",
+      "external_id": "JESAENG-1005569",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "진료 예약/변경: 031-779-0188\r\n/ 금요일 1, 3주 진료"
+    },
+    {
+      "name": "오재호",
+      "department": "치과",
+      "external_id": "JESAENG-1127415",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 26일진료 예약/변경: 031-779-0188"
+    },
+    {
+      "name": "윤완자",
+      "department": "치과",
+      "external_id": "JESAENG-1003967",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "진료 예약/변경: 031-779-0188  ,  수요일 2,4주 진료"
+    },
+    {
+      "name": "서정화",
+      "department": "피부과",
+      "external_id": "JESAENG-1000820",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안세진",
+      "department": "피부과",
+      "external_id": "JESAENG-1126516",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영철",
+      "department": "핵의학과",
+      "external_id": "JESAENG-1007135",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "&nbsp;"
+    },
+    {
+      "name": "손희정",
+      "department": "혈액종양내과",
+      "external_id": "JESAENG-1006963",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "1,3,5주 금요일 오전만 진료 / 2,4주 금요일 오후만 진료"
+    },
+    {
+      "name": "김도훈",
+      "department": "호흡기-알레르기내과",
+      "external_id": "JESAENG-1007041",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 28일, 5월 25일"
+    },
+    {
+      "name": "오미정",
+      "department": "호흡기-알레르기내과",
+      "external_id": "JESAENG-1006969",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 4월 24일, 5월 7~9일, 25일"
+    },
+    {
+      "name": "이경주",
+      "department": "호흡기-알레르기내과",
+      "external_id": "JESAENG-1007099",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "휴진: 5월 4일, 오전 진료: 5월 25일"
+    }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "hospital_code": "GOODM",
+  "hospital_name": "굿모닝병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "최윤아",
+      "department": "소화기내과",
+      "external_id": "GOODM-139",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "소화기내과1"
+    },
+    {
+      "name": "홍성욱",
+      "department": "소화기내과",
+      "external_id": "GOODM-7",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "소화기내과3"
+    },
+    {
+      "name": "류수정",
+      "department": "소화기내과",
+      "external_id": "GOODM-191",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "소화기내과4"
+    },
+    {
+      "name": "심대근",
+      "department": "순환기내과",
+      "external_id": "GOODM-9",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "순환기내과1"
+    },
+    {
+      "name": "배병주",
+      "department": "순환기내과",
+      "external_id": "GOODM-10",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "순환기내과3"
+    },
+    {
+      "name": "최병주",
+      "department": "순환기내과",
+      "external_id": "GOODM-177",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "순환기내과4"
+    },
+    {
+      "name": "권숙회",
+      "department": "내분비내과",
+      "external_id": "GOODM-13",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "내분비내과1"
+    },
+    {
+      "name": "이준호",
+      "department": "내분비내과",
+      "external_id": "GOODM-14",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "내분비내과2"
+    },
+    {
+      "name": "이상국",
+      "department": "호흡기내과",
+      "external_id": "GOODM-15",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "호흡기내과1"
+    },
+    {
+      "name": "문성미",
+      "department": "호흡기내과",
+      "external_id": "GOODM-224",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "호흡기내과2"
+    },
+    {
+      "name": "이현기",
+      "department": "신장내과",
+      "external_id": "GOODM-17",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "신장내과1"
+    },
+    {
+      "name": "황현철",
+      "department": "신장내과",
+      "external_id": "GOODM-18",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "신장내과2"
+    },
+    {
+      "name": "김미희",
+      "department": "감염내과",
+      "external_id": "GOODM-193",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창희",
+      "department": "일반외과",
+      "external_id": "GOODM-22",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "일반외과1"
+    },
+    {
+      "name": "최진용",
+      "department": "일반외과",
+      "external_id": "GOODM-159",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "일반외과2"
+    },
+    {
+      "name": "이효준",
+      "department": "일반외과",
+      "external_id": "GOODM-176",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "일반외과4"
+    },
+    {
+      "name": "박근형",
+      "department": "정형외과",
+      "external_id": "GOODM-23",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "정형외과1"
+    },
+    {
+      "name": "김현민",
+      "department": "정형외과",
+      "external_id": "GOODM-192",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "정형외과2"
+    },
+    {
+      "name": "신영록",
+      "department": "정형외과",
+      "external_id": "GOODM-173",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "정형외과3"
+    },
+    {
+      "name": "안영섭",
+      "department": "정형외과",
+      "external_id": "GOODM-149",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "정형외과4"
+    },
+    {
+      "name": "최일승",
+      "department": "신경외과",
+      "external_id": "GOODM-26",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "신경외과1"
+    },
+    {
+      "name": "고정호",
+      "department": "신경외과",
+      "external_id": "GOODM-206",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "신경외과2"
+    },
+    {
+      "name": "박승섭",
+      "department": "신경외과",
+      "external_id": "GOODM-223",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "신경외과3"
+    },
+    {
+      "name": "박성철",
+      "department": "신경외과",
+      "external_id": "GOODM-154",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "신경외과4"
+    },
+    {
+      "name": "박권재",
+      "department": "심장혈관흉부외과",
+      "external_id": "GOODM-28",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "심장혈관흉부외과1"
+    },
+    {
+      "name": "원경준",
+      "department": "심장혈관흉부외과",
+      "external_id": "GOODM-151",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "심장혈관흉부외과2"
+    },
+    {
+      "name": "김영균",
+      "department": "비뇨의학과",
+      "external_id": "GOODM-31",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "비뇨의학과1"
+    },
+    {
+      "name": "김병창",
+      "department": "산부인과",
+      "external_id": "GOODM-32",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "산부인과1"
+    },
+    {
+      "name": "윤형준",
+      "department": "이비인후과",
+      "external_id": "GOODM-33",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "이비인후과1"
+    },
+    {
+      "name": "고한석",
+      "department": "소아청소년과",
+      "external_id": "GOODM-37",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "소아청소년과1"
+    },
+    {
+      "name": "오흥근",
+      "department": "소아청소년과",
+      "external_id": "GOODM-36",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "소아청소년과2"
+    },
+    {
+      "name": "김재수",
+      "department": "신경과",
+      "external_id": "GOODM-38",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "신경과1"
+    },
+    {
+      "name": "윤두상",
+      "department": "신경과",
+      "external_id": "GOODM-39",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "신경과2"
+    },
+    {
+      "name": "이혜민",
+      "department": "신경과",
+      "external_id": "GOODM-171",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "신경과3"
+    },
+    {
+      "name": "서일교",
+      "department": "신경과",
+      "external_id": "GOODM-167",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "신경과4"
+    },
+    {
+      "name": "표형선",
+      "department": "재활의학과",
+      "external_id": "GOODM-183",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경수",
+      "department": "정신건강의학과",
+      "external_id": "GOODM-221",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이권일",
+      "department": "응급의학과",
+      "external_id": "GOODM-47",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정훈",
+      "department": "응급의학과",
+      "external_id": "GOODM-45",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오필성",
+      "department": "응급의학과",
+      "external_id": "GOODM-219",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선범",
+      "department": "응급의학과",
+      "external_id": "GOODM-46",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현재",
+      "department": "응급의학과",
+      "external_id": "GOODM-220",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동욱",
+      "department": "응급의학과",
+      "external_id": "GOODM-203",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장윤수",
+      "department": "응급의학과",
+      "external_id": "GOODM-155",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박창용",
+      "department": "응급의학과",
+      "external_id": "GOODM-212",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박연아",
+      "department": "응급의학과",
+      "external_id": "GOODM-226",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이장원",
+      "department": "마취통증의학과",
+      "external_id": "GOODM-51",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전용섭",
+      "department": "마취통증의학과",
+      "external_id": "GOODM-52",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽수달",
+      "department": "마취통증의학과",
+      "external_id": "GOODM-53",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채영남",
+      "department": "마취통증의학과",
+      "external_id": "GOODM-170",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종완",
+      "department": "마취통증의학과",
+      "external_id": "GOODM-187",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "마취통증의학과5"
+    },
+    {
+      "name": "이재규",
+      "department": "영상의학과",
+      "external_id": "GOODM-54",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전양현",
+      "department": "영상의학과",
+      "external_id": "GOODM-55",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기현",
+      "department": "영상의학과",
+      "external_id": "GOODM-58",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선영",
+      "department": "영상의학과",
+      "external_id": "GOODM-59",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은지",
+      "department": "영상의학과",
+      "external_id": "GOODM-132",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석현",
+      "department": "영상의학과",
+      "external_id": "GOODM-138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유동수",
+      "department": "영상의학과",
+      "external_id": "GOODM-166",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍상협",
+      "department": "영상의학과",
+      "external_id": "GOODM-180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽현주",
+      "department": "영상의학과",
+      "external_id": "GOODM-184",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심우열",
+      "department": "영상의학과",
+      "external_id": "GOODM-196",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대수",
+      "department": "병리과",
+      "external_id": "GOODM-62",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "병리과1"
+    },
+    {
+      "name": "김덕환",
+      "department": "병리과",
+      "external_id": "GOODM-209",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "병리과2"
+    },
+    {
+      "name": "김주훈",
+      "department": "혈액종양내과",
+      "external_id": "GOODM-19",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "혈액종양내과1"
+    },
+    {
+      "name": "이진수",
+      "department": "혈액종양내과",
+      "external_id": "GOODM-125",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "혈액종양내과2"
+    },
+    {
+      "name": "신경수",
+      "department": "진단검사의학과",
+      "external_id": "GOODM-61",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "진단검사의학과1"
+    },
+    {
+      "name": "송수덕",
+      "department": "진단검사의학과",
+      "external_id": "GOODM-66",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "진단검사의학과2"
+    },
+    {
+      "name": "윤석남",
+      "department": "핵의학과",
+      "external_id": "GOODM-197",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김항걸",
+      "department": "치과",
+      "external_id": "GOODM-70",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "치과1"
+    },
+    {
+      "name": "김소미",
+      "department": "류마티스내과",
+      "external_id": "GOODM-156",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조백현",
+      "department": "유방갑상선외과",
+      "external_id": "GOODM-119",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "유방갑상선외과1"
+    },
+    {
+      "name": "박병관",
+      "department": "유방갑상선외과",
+      "external_id": "GOODM-205",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "유방갑상선외과2"
+    },
+    {
+      "name": "임남규",
+      "department": "성형외과",
+      "external_id": "GOODM-225",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "좌은진",
+      "department": "방사선종양학과",
+      "external_id": "GOODM-127",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이두현 과장(의학물리)",
+      "department": "방사선종양학과",
+      "external_id": "GOODM-128",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

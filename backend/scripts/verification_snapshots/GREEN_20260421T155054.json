@@ -1,0 +1,223 @@
+{
+  "hospital_code": "GREEN",
+  "hospital_name": "녹색병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김은일",
+      "department": "심장내과",
+      "external_id": "GREEN-fbb6c6958a",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "권혁진",
+      "department": "소화기내과",
+      "external_id": "GREEN-86182e1519",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민정화",
+      "department": "소화기내과",
+      "external_id": "GREEN-e685647683",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신원창",
+      "department": "소화기내과",
+      "external_id": "GREEN-73ada8d0bf",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "신정환",
+      "department": "소화기내과",
+      "external_id": "GREEN-8c5fab70d0",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김미정",
+      "department": "신장내분비내과",
+      "external_id": "GREEN-0719f1731f",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백상익",
+      "department": "종합내과",
+      "external_id": "GREEN-f71cd58742",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장중현",
+      "department": "호흡기내과",
+      "external_id": "GREEN-d48829070c",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김봉구",
+      "department": "외과",
+      "external_id": "GREEN-2a960ad7f1",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "백현명",
+      "department": "외과",
+      "external_id": "GREEN-89a7b1d29d",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김현주",
+      "department": "신경외과",
+      "external_id": "GREEN-e7fdb8f2c6",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이응재",
+      "department": "신경외과",
+      "external_id": "GREEN-eb5b034de5",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종수",
+      "department": "신경과",
+      "external_id": "GREEN-eb1fe7f368",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이종국",
+      "department": "정신건강의학과",
+      "external_id": "GREEN-beab1ef533",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규상",
+      "department": "정형외과",
+      "external_id": "GREEN-b9757b0ad6",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "송한의",
+      "department": "정형외과",
+      "external_id": "GREEN-bf4fda31ff",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "류수진",
+      "department": "재활의학과",
+      "external_id": "GREEN-ab6a8ce46d",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김 윤",
+      "department": "재활의학과",
+      "external_id": "GREEN-71d6d561ca",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜영",
+      "department": "산부인과",
+      "external_id": "GREEN-e190bae48d",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서문영",
+      "department": "소아청소년과",
+      "external_id": "GREEN-79a6f21d0d",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "인형욱",
+      "department": "가정의학과",
+      "external_id": "GREEN-ffb18a0ea4",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜진",
+      "department": "가정의학과",
+      "external_id": "GREEN-4868d4eb40",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤간우",
+      "department": "직업환경의학과",
+      "external_id": "GREEN-231789542b",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상윤",
+      "department": "직업환경의학과",
+      "external_id": "GREEN-6a789f8be1",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이명준",
+      "department": "직업환경의학과",
+      "external_id": "GREEN-dc089eec8b",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백도명",
+      "department": "직업환경의학과",
+      "external_id": "GREEN-452b7181ef",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황보경",
+      "department": "피부비뇨의학과",
+      "external_id": "GREEN-71956ce062",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

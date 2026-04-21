@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Calendar, MapPin, BookOpen, ChevronRight, RefreshCw, Filter, AlertCircle } from 'lucide-react';
+import { Calendar, MapPin, BookOpen, ChevronRight, RefreshCw, Filter, AlertCircle, CalendarRange } from 'lucide-react';
 import { academicApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
 import AcademicEventModal from '../components/AcademicEventModal';
@@ -35,26 +35,39 @@ const SOURCE_LABELS = {
   kma_edu: { label: 'KMA 연수', bg: '#fef3c7', c: '#92400e' },
 };
 
+const MONTH_OPTIONS = [3, 6, 12];
+
+function addMonthsISO(date, months) {
+  const d = new Date(date);
+  d.setMonth(d.getMonth() + months);
+  return d.toISOString().slice(0, 10);
+}
+
 export default function Conferences({ onNavigate }) {
   const [tab, setTab] = useState('upcoming'); // upcoming | all | unclassified
   const [deptFilter, setDeptFilter] = useState('');
+  const [months, setMonths] = useState(3);
   const [syncStatus, setSyncStatus] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const {
     data: upcomingRaw, loading: upLoading, refresh: refreshUpcoming,
   } = useCachedApi(
-    'academic-upcoming',
-    () => academicApi.upcoming(null, 3),
-    { ttlKey: 'academic' },
+    `academic-upcoming:${months}`,
+    () => academicApi.upcoming(null, months),
+    { ttlKey: 'academic', deps: [months] },
   );
 
   const {
     data: allRaw, loading: allLoading, refresh: refreshAll,
   } = useCachedApi(
-    'academic-all',
-    () => academicApi.list({ limit: 1000 }),
-    { ttlKey: 'academic' },
+    `academic-all:${months}`,
+    () => {
+      const today = new Date().toISOString().slice(0, 10);
+      const end = addMonthsISO(new Date(), months);
+      return academicApi.list({ limit: 1000, start_from: today, start_to: end });
+    },
+    { ttlKey: 'academic', deps: [months] },
   );
 
   const {
@@ -119,25 +132,48 @@ export default function Conferences({ onNavigate }) {
         </button>
       </div>
 
-      {/* ── 탭 + 필터 ── */}
+      {/* ── 탭 + 기간 필터 ── */}
       <div style={{
-        display: 'flex', gap: 4, marginBottom: 16, padding: 4,
-        background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 10,
-        width: 'fit-content',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        marginBottom: 16, gap: 12, flexWrap: 'wrap',
       }}>
-        {[
-          { id: 'upcoming', label: '다가오는 일정' },
-          { id: 'all', label: '전체' },
-          { id: 'unclassified', label: '미분류' },
-        ].map(t => (
-          <button key={t.id} onClick={() => setTab(t.id)} style={{
-            padding: '7px 14px', borderRadius: 7, border: 'none',
-            background: tab === t.id ? 'var(--ac-d)' : 'transparent',
-            color: tab === t.id ? 'var(--ac)' : 'var(--t3)',
-            fontWeight: tab === t.id ? 600 : 500, fontSize: 12,
-            fontFamily: 'inherit', cursor: 'pointer',
-          }}>{t.label}</button>
-        ))}
+        <div style={{
+          display: 'flex', gap: 4, padding: 4,
+          background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 10,
+          width: 'fit-content',
+        }}>
+          {[
+            { id: 'upcoming', label: '다가오는 일정' },
+            { id: 'all', label: '전체' },
+            { id: 'unclassified', label: '미분류' },
+          ].map(t => (
+            <button key={t.id} onClick={() => setTab(t.id)} style={{
+              padding: '7px 14px', borderRadius: 7, border: 'none',
+              background: tab === t.id ? 'var(--ac-d)' : 'transparent',
+              color: tab === t.id ? 'var(--ac)' : 'var(--t3)',
+              fontWeight: tab === t.id ? 600 : 500, fontSize: 12,
+              fontFamily: 'inherit', cursor: 'pointer',
+            }}>{t.label}</button>
+          ))}
+        </div>
+
+        {tab !== 'unclassified' && (
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 6, padding: 4,
+            background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 10,
+          }}>
+            <CalendarRange size={13} style={{ color: 'var(--t3)', marginLeft: 6 }} />
+            {MONTH_OPTIONS.map(m => (
+              <button key={m} onClick={() => setMonths(m)} style={{
+                padding: '6px 12px', borderRadius: 7, border: 'none',
+                background: months === m ? 'var(--ac-d)' : 'transparent',
+                color: months === m ? 'var(--ac)' : 'var(--t3)',
+                fontWeight: months === m ? 600 : 500, fontSize: 12,
+                fontFamily: 'inherit', cursor: 'pointer',
+              }}>{m}개월</button>
+            ))}
+          </div>
+        )}
       </div>
 
       {deptOptions.length > 0 && (

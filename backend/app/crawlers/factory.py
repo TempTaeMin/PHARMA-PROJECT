@@ -5,8 +5,19 @@
   CMCEP, CMCYD, GANSEV, EUMCMK, EUMCSL,
   KUANAM, KUGURO, KUANSAN, KCCH, NCC,
   KUH, HYUMC, DUIH, SNUBH, KHU, KBSMC,
-  CAU, CMCSV, SCHBC, AJOUMC, HALLYM,
-  GIL, CMCIC, INHA
+  CAU, CMCSV, SCHBC, AJOUMC, HALLYM, HALLYMKN, HALLYMHG,
+  GIL, CMCIC, INHA, HYEMIN, GREEN, DBJE,
+  NPH, VHS, KHNMC, KDH, SYMC, SMC2, BEDRO, SSHH,
+  EULJINW, SGPAIK, SMGDB, CHAGN, SCHMC,
+  NMC, HANIL, BESEOUL, SHH, DAEHAN, SRCH, HYJH, SERAN, BRMH,
+  SUNGAE, HUIMYUNG, DONGSHIN, DRH,
+  MJSM, CM, HONGIK, CGSS, GSS,
+  SNMC, BUMIN, WOORIDUL, CHAMJE, ICHEON,
+  ANSEONG, DAVOS, YONGIN, ASSM, MEDIFIELD, SNJA,
+  SNMCC, CHABD, JESAENG, SNJUNG, GNHOSP, HYH, HALLYMDT, HYUGR,
+  OSHANKOOK, JOUN, HDGH, DSWHOSP, GOODM, WILLS, WKGH,
+  GGSW, PARK, PTSM, SWDS, HWAHONG, JISAM,
+  SWOORI, METRO, WMCSB, CMCUJB, UPAIK, AYSAM, GGPC, UEMC
 그 외: Playwright 범용 크롤러
 """
 from app.crawlers.playwright_engine import PlaywrightCrawler, HOSPITAL_CONFIGS
@@ -39,6 +50,89 @@ from app.crawlers.hallym_crawler import HallymCrawler
 from app.crawlers.gil_crawler import GilCrawler
 from app.crawlers.cmcincheon_crawler import CmcincheonCrawler
 from app.crawlers.inha_crawler import InhaCrawler
+from app.crawlers.hyemin_crawler import HyeminCrawler
+from app.crawlers.green_crawler import GreenCrawler
+from app.crawlers.dbje_crawler import DbjeCrawler
+from app.crawlers.nph_crawler import NphCrawler
+from app.crawlers.vhs_crawler import VhsCrawler
+from app.crawlers.khnmc_crawler import KhnmcCrawler
+from app.crawlers.kdh_crawler import KdhCrawler
+from app.crawlers.symc_crawler import SymcCrawler
+from app.crawlers.smc2_crawler import Smc2Crawler
+from app.crawlers.bedro_crawler import BedroCrawler
+from app.crawlers.sshh_crawler import SshhCrawler
+from app.crawlers.eulji_nowon_crawler import EuljiNowonCrawler
+from app.crawlers.sgpaik_crawler import SgpaikCrawler
+from app.crawlers.smgdb_crawler import SmgdbCrawler
+from app.crawlers.chagn_crawler import ChagnCrawler
+from app.crawlers.schmc_seoul_crawler import SchmcSeoulCrawler
+from app.crawlers.nmc_crawler import NmcCrawler
+from app.crawlers.hanil_crawler import HanilCrawler
+from app.crawlers.beseoul_crawler import BeseoulCrawler
+from app.crawlers.shh_crawler import ShhCrawler
+from app.crawlers.daehan_crawler import DaehanCrawler
+from app.crawlers.srch_crawler import SrchCrawler
+from app.crawlers.hyjh_crawler import HyjhCrawler
+from app.crawlers.seran_crawler import SeranCrawler
+from app.crawlers.brmh_crawler import BrmhCrawler
+from app.crawlers.sungae_crawler import SungaeCrawler
+from app.crawlers.huimyung_crawler import HuimyungCrawler
+from app.crawlers.dongshin_crawler import DongshinCrawler
+from app.crawlers.hallymkn_crawler import HallymknCrawler
+from app.crawlers.hallymhg_crawler import HallymhgCrawler
+from app.crawlers.drh_crawler import DrhCrawler
+from app.crawlers.mjsm_crawler import MjsmCrawler
+from app.crawlers.cm_crawler import CmCrawler
+from app.crawlers.hongik_crawler import HongikCrawler
+from app.crawlers.cgss_crawler import CgssCrawler
+from app.crawlers.gss_crawler import GssCrawler
+from app.crawlers.snmc_crawler import SnmcCrawler
+from app.crawlers.bumin_crawler import BuminCrawler
+from app.crawlers.wooridul_crawler import WooridulCrawler
+from app.crawlers.chamje_crawler import ChamjeCrawler
+from app.crawlers.icheon_crawler import IcheonCrawler
+from app.crawlers.anseong_crawler import AnseongCrawler
+from app.crawlers.davos_crawler import DavosCrawler
+from app.crawlers.yongin_crawler import YonginCrawler
+from app.crawlers.assm_crawler import AssmCrawler
+from app.crawlers.medifield_crawler import MedifieldCrawler
+from app.crawlers.snja_crawler import SnjaCrawler
+from app.crawlers.snmcc_crawler import SnmccCrawler
+from app.crawlers.chabd_crawler import ChabdCrawler
+from app.crawlers.jesaeng_crawler import JesaengCrawler
+from app.crawlers.snjung_crawler import SnjungCrawler
+from app.crawlers.gnhosp_crawler import GnhospCrawler
+from app.crawlers.hyh_crawler import HyhCrawler
+from app.crawlers.hallymdt_crawler import HallymdtCrawler
+from app.crawlers.hyugr_crawler import HyugrCrawler
+from app.crawlers.oshankook_crawler import OshankookCrawler
+from app.crawlers.joun_crawler import JounCrawler
+from app.crawlers.hdgh_crawler import HdghCrawler
+from app.crawlers.dswhosp_crawler import DswhospCrawler
+from app.crawlers.goodm_crawler import GoodmCrawler
+from app.crawlers.wills_crawler import WillsCrawler
+from app.crawlers.wkgh_crawler import WkghCrawler
+from app.crawlers.ggsw_crawler import GgswCrawler
+from app.crawlers.park_crawler import ParkCrawler
+from app.crawlers.ptsm_crawler import PtsmCrawler
+from app.crawlers.swds_crawler import SwdsCrawler
+from app.crawlers.hwahong_crawler import HwahongCrawler
+from app.crawlers.jisam_crawler import JisamCrawler
+from app.crawlers.swoori_crawler import SwooriCrawler
+from app.crawlers.metro_crawler import MetroCrawler
+from app.crawlers.wmcsb_crawler import WmcsbCrawler
+from app.crawlers.cmcujb_crawler import CmcujbCrawler
+from app.crawlers.upaik_crawler import UpaikCrawler
+from app.crawlers.aysam_crawler import AysamCrawler
+from app.crawlers.ggpc_crawler import GgpcCrawler
+from app.crawlers.uemc_crawler import UemcCrawler
+from app.crawlers.caugm_crawler import CaugmCrawler
+from app.crawlers.gmsa_crawler import GmsaCrawler
+from app.crawlers.cmcbc_crawler import CmcbcCrawler
+from app.crawlers.myongji_crawler import MyongjiCrawler
+from app.crawlers.nhimc_crawler import NhimcCrawler
+from app.crawlers.chais_crawler import ChaisCrawler
+from app.crawlers.ispaik_crawler import IspaikCrawler
 
 # 병원 코드 → (크롤러 클래스, 병원 이름)
 _DEDICATED_CRAWLERS = {
@@ -71,6 +165,89 @@ _DEDICATED_CRAWLERS = {
     "GIL": (GilCrawler, "길병원"),
     "CMCIC": (CmcincheonCrawler, "인천성모병원"),
     "INHA": (InhaCrawler, "인하대병원"),
+    "HYEMIN": (HyeminCrawler, "혜민병원"),
+    "GREEN": (GreenCrawler, "녹색병원"),
+    "DBJE": (DbjeCrawler, "동부제일병원"),
+    "NPH": (NphCrawler, "경찰병원"),
+    "VHS": (VhsCrawler, "중앙보훈병원"),
+    "KHNMC": (KhnmcCrawler, "강동경희대학교병원"),
+    "KDH": (KdhCrawler, "강동성심병원"),
+    "SYMC": (SymcCrawler, "삼육서울병원"),
+    "SMC2": (Smc2Crawler, "서울의료원"),
+    "BEDRO": (BedroCrawler, "강남베드로병원"),
+    "SSHH": (SshhCrawler, "서울성심병원"),
+    "EULJINW": (EuljiNowonCrawler, "노원을지대학교병원"),
+    "SGPAIK": (SgpaikCrawler, "인제대학교 상계백병원"),
+    "SMGDB": (SmgdbCrawler, "서울특별시 동부병원"),
+    "CHAGN": (ChagnCrawler, "강남차병원"),
+    "SCHMC": (SchmcSeoulCrawler, "순천향대학교서울병원"),
+    "NMC": (NmcCrawler, "국립중앙의료원"),
+    "HANIL": (HanilCrawler, "한일병원"),
+    "BESEOUL": (BeseoulCrawler, "베스티안서울병원"),
+    "SHH": (ShhCrawler, "서울현대병원"),
+    "DAEHAN": (DaehanCrawler, "대한병원"),
+    "SRCH": (SrchCrawler, "서울적십자병원"),
+    "HYJH": (HyjhCrawler, "에이치플러스 양지병원"),
+    "SERAN": (SeranCrawler, "세란병원"),
+    "BRMH": (BrmhCrawler, "서울특별시 보라매병원"),
+    "SUNGAE": (SungaeCrawler, "성애병원"),
+    "HUIMYUNG": (HuimyungCrawler, "희명병원"),
+    "DONGSHIN": (DongshinCrawler, "동신병원"),
+    "HALLYMKN": (HallymknCrawler, "한림대학교강남성심병원"),
+    "HALLYMHG": (HallymhgCrawler, "한림대학교한강성심병원"),
+    "DRH": (DrhCrawler, "대림성모병원"),
+    "MJSM": (MjsmCrawler, "명지성모병원"),
+    "CM": (CmCrawler, "CM병원"),
+    "HONGIK": (HongikCrawler, "홍익병원"),
+    "CGSS": (CgssCrawler, "청구성심병원"),
+    "GSS": (GssCrawler, "구로성심병원"),
+    "SNMC": (SnmcCrawler, "서울특별시 서남병원"),
+    "BUMIN": (BuminCrawler, "서울부민병원"),
+    "WOORIDUL": (WooridulCrawler, "청담 우리들병원"),
+    "CHAMJE": (ChamjeCrawler, "참조은병원"),
+    "ICHEON": (IcheonCrawler, "경기도의료원 이천병원"),
+    "ANSEONG": (AnseongCrawler, "경기도의료원 안성병원"),
+    "DAVOS": (DavosCrawler, "다보스병원"),
+    "YONGIN": (YonginCrawler, "용인세브란스병원"),
+    "ASSM": (AssmCrawler, "안성성모병원"),
+    "MEDIFIELD": (MedifieldCrawler, "메디필드한강병원"),
+    "SNJA": (SnjaCrawler, "성남중앙병원"),
+    "SNMCC": (SnmccCrawler, "성남시의료원"),
+    "CHABD": (ChabdCrawler, "분당차병원"),
+    "JESAENG": (JesaengCrawler, "분당제생병원"),
+    "SNJUNG": (SnjungCrawler, "성남정병원"),
+    "GNHOSP": (GnhospCrawler, "강남병원"),
+    "HYH": (HyhCrawler, "남양주한양병원"),
+    "HALLYMDT": (HallymdtCrawler, "한림대학교동탄성심병원"),
+    "HYUGR": (HyugrCrawler, "한양대학교구리병원"),
+    "OSHANKOOK": (OshankookCrawler, "오산한국병원"),
+    "JOUN": (JounCrawler, "조은오산병원"),
+    "HDGH": (HdghCrawler, "현대병원"),
+    "DSWHOSP": (DswhospCrawler, "동수원병원"),
+    "GOODM": (GoodmCrawler, "굿모닝병원"),
+    "WILLS": (WillsCrawler, "윌스기념병원"),
+    "WKGH": (WkghCrawler, "원광종합병원"),
+    "GGSW": (GgswCrawler, "경기도의료원 수원병원"),
+    "PARK": (ParkCrawler, "PMC박병원"),
+    "PTSM": (PtsmCrawler, "평택성모병원"),
+    "SWDS": (SwdsCrawler, "수원덕산병원"),
+    "HWAHONG": (HwahongCrawler, "화홍병원"),
+    "JISAM": (JisamCrawler, "효산의료재단 지샘병원"),
+    "SWOORI": (SwooriCrawler, "포천우리병원"),
+    "METRO": (MetroCrawler, "메트로병원"),
+    "WMCSB": (WmcsbCrawler, "원광대학교산본병원"),
+    "CMCUJB": (CmcujbCrawler, "의정부성모병원"),
+    "UPAIK": (UpaikCrawler, "의정부백병원"),
+    "AYSAM": (AysamCrawler, "안양샘병원"),
+    "GGPC": (GgpcCrawler, "경기도의료원 포천병원"),
+    "UEMC": (UemcCrawler, "의정부을지대학교병원"),
+    "CAUGM": (CaugmCrawler, "중앙대학교광명병원"),
+    "GMSA": (GmsaCrawler, "광명성애병원"),
+    "CMCBC": (CmcbcCrawler, "부천성모병원"),
+    "MYONGJI": (MyongjiCrawler, "명지병원"),
+    "NHIMC": (NhimcCrawler, "국민건강보험공단 일산병원"),
+    "CHAIS": (ChaisCrawler, "일산차병원"),
+    "ISPAIK": (IspaikCrawler, "인제대학교 일산백병원"),
 }
 
 
@@ -101,6 +278,33 @@ _HOSPITAL_REGION = {
     "KUANSAN": "경기", "NCC": "경기", "DUIH": "경기", "SNUBH": "경기",
     "CMCSV": "경기", "SCHBC": "경기", "AJOUMC": "경기", "HALLYM": "경기",
     "GIL": "인천", "CMCIC": "인천", "INHA": "인천",
+    "HYEMIN": "서울", "GREEN": "서울", "DBJE": "서울", "NPH": "서울",
+    "VHS": "서울", "KHNMC": "서울", "KDH": "서울", "SYMC": "서울",
+    "SMC2": "서울", "BEDRO": "서울", "SSHH": "서울", "EULJINW": "서울",
+    "SGPAIK": "서울", "SMGDB": "서울", "CHAGN": "서울",
+    "SCHMC": "서울", "NMC": "서울", "HANIL": "서울",
+    "BESEOUL": "서울", "SHH": "서울",
+    "DAEHAN": "서울", "SRCH": "서울", "HYJH": "서울",
+    "SERAN": "서울", "BRMH": "서울",
+    "SUNGAE": "서울", "HUIMYUNG": "서울", "DONGSHIN": "서울",
+    "HALLYMKN": "서울", "HALLYMHG": "서울", "DRH": "서울",
+    "MJSM": "서울", "CM": "서울", "HONGIK": "서울",
+    "CGSS": "서울", "GSS": "서울",
+    "SNMC": "서울", "BUMIN": "서울", "WOORIDUL": "서울",
+    "CHAMJE": "경기", "ICHEON": "경기",
+    "ANSEONG": "경기", "DAVOS": "경기", "YONGIN": "경기",
+    "ASSM": "경기", "MEDIFIELD": "경기", "SNJA": "경기",
+    "SNMCC": "경기", "CHABD": "경기", "JESAENG": "경기", "SNJUNG": "경기",
+    "GNHOSP": "경기", "HYH": "경기", "HALLYMDT": "경기", "HYUGR": "경기",
+    "OSHANKOOK": "경기", "JOUN": "경기", "HDGH": "경기",
+    "DSWHOSP": "경기", "GOODM": "경기", "WILLS": "경기", "WKGH": "경기",
+    "GGSW": "경기", "PARK": "경기", "PTSM": "경기", "SWDS": "경기",
+    "HWAHONG": "경기", "JISAM": "경기",
+    "SWOORI": "경기", "METRO": "경기", "WMCSB": "경기",
+    "CMCUJB": "경기", "UPAIK": "경기", "AYSAM": "경기",
+    "GGPC": "경기", "UEMC": "경기",
+    "CAUGM": "경기", "GMSA": "경기", "CMCBC": "경기",
+    "MYONGJI": "경기", "NHIMC": "경기", "CHAIS": "경기", "ISPAIK": "경기",
 }
 
 

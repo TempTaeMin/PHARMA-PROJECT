@@ -1,0 +1,119 @@
+{
+  "hospital_code": "PARK",
+  "hospital_name": "PMC박병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "조기원",
+      "department": "내과",
+      "external_id": "PARK-6fc35e419b",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임현미",
+      "department": "내과",
+      "external_id": "PARK-40ea0bc2f2",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정호",
+      "department": "내과",
+      "external_id": "PARK-384051b9f8",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍일태",
+      "department": "가정의학과",
+      "external_id": "PARK-6ff3155371",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보미",
+      "department": "신경과",
+      "external_id": "PARK-a576f50ecd",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준철",
+      "department": "신경외과",
+      "external_id": "PARK-6fb9665396",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박창규",
+      "department": "신경외과",
+      "external_id": "PARK-f90311e598",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심재현",
+      "department": "신경외과",
+      "external_id": "PARK-bc845afaad",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진규",
+      "department": "신경외과",
+      "external_id": "PARK-5a5023ee65",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성호",
+      "department": "외과",
+      "external_id": "PARK-cdbaea7b24",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류근정",
+      "department": "정형외과",
+      "external_id": "PARK-bc9bab0eb7",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재훈",
+      "department": "정형외과",
+      "external_id": "PARK-650c96dfc0",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상범",
+      "department": "산부인과",
+      "external_id": "PARK-58aa4926eb",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혁동",
+      "department": "재활의학과",
+      "external_id": "PARK-43b211ed6b",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

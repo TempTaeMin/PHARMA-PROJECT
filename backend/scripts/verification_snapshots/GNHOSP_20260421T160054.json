@@ -1,0 +1,375 @@
+{
+  "hospital_code": "GNHOSP",
+  "hospital_name": "강남병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "강용석",
+      "department": "소화기내과",
+      "external_id": "GNHOSP-1_3247",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배준호",
+      "department": "소화기내과",
+      "external_id": "GNHOSP-1_3241",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성욱",
+      "department": "소화기내과",
+      "external_id": "GNHOSP-1_3242",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성학",
+      "department": "소화기내과",
+      "external_id": "GNHOSP-1_3248",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박서화",
+      "department": "순환기내과",
+      "external_id": "GNHOSP-2_3246",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혁준",
+      "department": "신장내과",
+      "external_id": "GNHOSP-3_3203",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송원석",
+      "department": "신장내과",
+      "external_id": "GNHOSP-3_3189",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김나혜",
+      "department": "신장내과",
+      "external_id": "GNHOSP-3_3243",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이문수",
+      "department": "소아청소년과",
+      "external_id": "GNHOSP-4_3216",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이미진",
+      "department": "소아청소년과",
+      "external_id": "GNHOSP-4_3217",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장주영",
+      "department": "내분비내과",
+      "external_id": "GNHOSP-5_3213",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정한나",
+      "department": "내분비내과",
+      "external_id": "GNHOSP-5_3215",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형노",
+      "department": "호흡기내과",
+      "external_id": "GNHOSP-6_3256",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정상준",
+      "department": "호흡기내과",
+      "external_id": "GNHOSP-6_3251",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심재은",
+      "department": "신경과",
+      "external_id": "GNHOSP-7_3191",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진선진",
+      "department": "신경과",
+      "external_id": "GNHOSP-7_3190",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성진",
+      "department": "가정의학과",
+      "external_id": "GNHOSP-8_3210",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전민정",
+      "department": "가정의학과",
+      "external_id": "GNHOSP-8_3211",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원술",
+      "department": "가정의학과",
+      "external_id": "GNHOSP-8_3214",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강봉진",
+      "department": "정신건강의학과",
+      "external_id": "GNHOSP-9_3237",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창근",
+      "department": "정형외과",
+      "external_id": "GNHOSP-10_3249",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진우",
+      "department": "정형외과",
+      "external_id": "GNHOSP-10_3253",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영일",
+      "department": "정형외과",
+      "external_id": "GNHOSP-10_3250",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임석범",
+      "department": "정형외과",
+      "external_id": "GNHOSP-10_3254",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류정석",
+      "department": "외과",
+      "external_id": "GNHOSP-11_3236",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재호",
+      "department": "산부인과",
+      "external_id": "GNHOSP-12_3240",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤옥",
+      "department": "마취통증의학과",
+      "external_id": "GNHOSP-13_3238",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최익현",
+      "department": "마취통증의학과",
+      "external_id": "GNHOSP-13_3239",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전지영",
+      "department": "신경외과",
+      "external_id": "GNHOSP-15_3244",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조원익",
+      "department": "신경외과",
+      "external_id": "GNHOSP-15_3245",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "염승희",
+      "department": "비뇨의학과",
+      "external_id": "GNHOSP-17_3255",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김관호",
+      "department": "응급의학과",
+      "external_id": "GNHOSP-19_3221",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유태영",
+      "department": "응급의학과",
+      "external_id": "GNHOSP-19_3222",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송인한",
+      "department": "응급의학과",
+      "external_id": "GNHOSP-19_3223",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜정",
+      "department": "응급의학과",
+      "external_id": "GNHOSP-19_3224",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이산",
+      "department": "응급의학과",
+      "external_id": "GNHOSP-19_3225",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노기상",
+      "department": "응급의학과",
+      "external_id": "GNHOSP-19_3227",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜정",
+      "department": "영상의학과",
+      "external_id": "GNHOSP-20_3200",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "석지현",
+      "department": "영상의학과",
+      "external_id": "GNHOSP-20_3201",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주하",
+      "department": "영상의학과",
+      "external_id": "GNHOSP-20_3202",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승관",
+      "department": "영상의학과",
+      "external_id": "GNHOSP-20_3198",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선의",
+      "department": "진단검사의학과",
+      "external_id": "GNHOSP-21_3252",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현준섭",
+      "department": "건강증진센터",
+      "external_id": "GNHOSP-23_3212",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강창기",
+      "department": "달빛어린이병원",
+      "external_id": "GNHOSP-24_3220",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이문수",
+      "department": "달빛어린이병원",
+      "external_id": "GNHOSP-24_3218",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이미진",
+      "department": "달빛어린이병원",
+      "external_id": "GNHOSP-24_3219",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

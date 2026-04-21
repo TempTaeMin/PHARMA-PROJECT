@@ -1,0 +1,2855 @@
+{
+  "hospital_code": "AJOUMC",
+  "hospital_name": "아주대병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김광민",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-88",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범택",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-119",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주남석",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-148",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김규남",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-297",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수지",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-708",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석훈",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-520",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광윤",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-666",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임지순",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-996",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유정",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-997",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김휘영",
+      "department": "가정의학과",
+      "external_id": "AJOUMC-995",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김욱환",
+      "department": "간담췌외과",
+      "external_id": "AJOUMC-63",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김봉완",
+      "department": "간담췌외과",
+      "external_id": "AJOUMC-81",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지훈",
+      "department": "간담췌외과",
+      "external_id": "AJOUMC-124",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우현",
+      "department": "간담췌외과",
+      "external_id": "AJOUMC-627",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성연",
+      "department": "간담췌외과",
+      "external_id": "AJOUMC-267",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양혜연",
+      "department": "간담췌외과",
+      "external_id": "AJOUMC-854",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영화",
+      "department": "감염내과",
+      "external_id": "AJOUMC-106",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허중연",
+      "department": "감염내과",
+      "external_id": "AJOUMC-700",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은진",
+      "department": "감염내과",
+      "external_id": "AJOUMC-660",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영롱",
+      "department": "감염내과",
+      "external_id": "AJOUMC-549",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현학준",
+      "department": "감염내과",
+      "external_id": "AJOUMC-842",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형규",
+      "department": "갑상선내분비외과",
+      "external_id": "AJOUMC-623",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수영",
+      "department": "갑상선내분비외과",
+      "external_id": "AJOUMC-804",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진석",
+      "department": "갑상선내분비외과",
+      "external_id": "AJOUMC-903",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정호중",
+      "department": "갑상선내분비외과",
+      "external_id": "AJOUMC-964",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유진세",
+      "department": "급성기일반내과",
+      "external_id": "AJOUMC-815",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤정",
+      "department": "급성기일반내과",
+      "external_id": "AJOUMC-980",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이관우",
+      "department": "내분비대사내과",
+      "external_id": "AJOUMC-70",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤석",
+      "department": "내분비대사내과",
+      "external_id": "AJOUMC-24",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대중",
+      "department": "내분비대사내과",
+      "external_id": "AJOUMC-172",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜진",
+      "department": "내분비대사내과",
+      "external_id": "AJOUMC-200",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승진",
+      "department": "내분비대사내과",
+      "external_id": "AJOUMC-271",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최용준",
+      "department": "내분비대사내과",
+      "external_id": "AJOUMC-151",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전자영",
+      "department": "내분비대사내과",
+      "external_id": "AJOUMC-244",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이나미",
+      "department": "내분비대사내과",
+      "external_id": "AJOUMC-535",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오승엽",
+      "department": "대장항문외과",
+      "external_id": "AJOUMC-219",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창우",
+      "department": "대장항문외과",
+      "external_id": "AJOUMC-817",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태균",
+      "department": "대장항문외과",
+      "external_id": "AJOUMC-902",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진민",
+      "department": "대장항문외과",
+      "external_id": "AJOUMC-901",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선정",
+      "department": "대장항문외과",
+      "external_id": "AJOUMC-892",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서창희",
+      "department": "류마티스내과",
+      "external_id": "AJOUMC-147",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현아",
+      "department": "류마티스내과",
+      "external_id": "AJOUMC-155",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주양",
+      "department": "류마티스내과",
+      "external_id": "AJOUMC-238",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지원",
+      "department": "류마티스내과",
+      "external_id": "AJOUMC-488",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진수",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-103",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이숙영",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-60",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민상기",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-89",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종엽",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-185",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성용",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채윤정",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-158",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조한범",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지은",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-626",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유지영",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최종범",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-619",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하연",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-699",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손혜민",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-744",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이인경",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-235",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배진영",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-844",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안효은",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-491",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태광",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-672",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조제호",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-911",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유경호",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-958",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영일",
+      "department": "마취통증의학과",
+      "external_id": "AJOUMC-977",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전미선",
+      "department": "방사선종양학과",
+      "external_id": "AJOUMC-6",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오영택",
+      "department": "방사선종양학과",
+      "external_id": "AJOUMC-77",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노오규",
+      "department": "방사선종양학과",
+      "external_id": "AJOUMC-300",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조오연",
+      "department": "방사선종양학과",
+      "external_id": "AJOUMC-307",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허재성",
+      "department": "방사선종양학과",
+      "external_id": "AJOUMC-380",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승연",
+      "department": "방사선종양학과",
+      "external_id": "AJOUMC-795",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용희",
+      "department": "병리과",
+      "external_id": "AJOUMC-372",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한재호",
+      "department": "병리과",
+      "external_id": "AJOUMC-131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임현이",
+      "department": "병리과",
+      "external_id": "AJOUMC-61",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김장희",
+      "department": "병리과",
+      "external_id": "AJOUMC-95",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이다근",
+      "department": "병리과",
+      "external_id": "AJOUMC-453",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권지은",
+      "department": "병리과",
+      "external_id": "AJOUMC-390",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고영화",
+      "department": "병리과",
+      "external_id": "AJOUMC-506",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노진",
+      "department": "병리과",
+      "external_id": "AJOUMC-662",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석휘",
+      "department": "병리과",
+      "external_id": "AJOUMC-784",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노명균",
+      "department": "병리과",
+      "external_id": "AJOUMC-894",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한지흔",
+      "department": "병리과",
+      "external_id": "AJOUMC-897",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안현수",
+      "department": "비뇨의학과",
+      "external_id": "AJOUMC-76",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최종보",
+      "department": "비뇨의학과",
+      "external_id": "AJOUMC-137",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선일",
+      "department": "비뇨의학과",
+      "external_id": "AJOUMC-204",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조대성",
+      "department": "비뇨의학과",
+      "external_id": "AJOUMC-144",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "추설호",
+      "department": "비뇨의학과",
+      "external_id": "AJOUMC-503",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심강희",
+      "department": "비뇨의학과",
+      "external_id": "AJOUMC-470",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양정인",
+      "department": "산부인과",
+      "external_id": "AJOUMC-30",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황경주",
+      "department": "산부인과",
+      "external_id": "AJOUMC-75",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미란",
+      "department": "산부인과",
+      "external_id": "AJOUMC-49",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장석준",
+      "department": "산부인과",
+      "external_id": "AJOUMC-80",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백지흠",
+      "department": "산부인과",
+      "external_id": "AJOUMC-374",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공태욱",
+      "department": "산부인과",
+      "external_id": "AJOUMC-205",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽동욱",
+      "department": "산부인과",
+      "external_id": "AJOUMC-738",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손주혁",
+      "department": "산부인과",
+      "external_id": "AJOUMC-344",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장혜진",
+      "department": "산부인과",
+      "external_id": "AJOUMC-127",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지연",
+      "department": "산부인과",
+      "external_id": "AJOUMC-670",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지민",
+      "department": "산부인과",
+      "external_id": "AJOUMC-706",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박명철",
+      "department": "성형외과",
+      "external_id": "AJOUMC-38",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박동하",
+      "department": "성형외과",
+      "external_id": "AJOUMC-50",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이일재",
+      "department": "성형외과",
+      "external_id": "AJOUMC-125",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임효섭",
+      "department": "성형외과",
+      "external_id": "AJOUMC-142",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한형민",
+      "department": "성형외과",
+      "external_id": "AJOUMC-584",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민지",
+      "department": "성형외과",
+      "external_id": "AJOUMC-788",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심주현",
+      "department": "소아외과",
+      "external_id": "AJOUMC-353",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방민정",
+      "department": "소아외과",
+      "external_id": "AJOUMC-851",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수영",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-26",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박문성",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-45",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이장훈",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-341",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정다은",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-240",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이해상",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-175",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현주",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-123",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심영석",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-459",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수인",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-578",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최서희",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-837",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유리타미영",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-889",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경욱",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-351",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영배",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-800",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서융아",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-675",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조민형",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-556",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오재혁",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-602",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성완",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-947",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주연",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-956",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최효원",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-990",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유신",
+      "department": "소아청소년과",
+      "external_id": "AJOUMC-989",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성원",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-48",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이광재",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-73",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유병무",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-78",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재연",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-159",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신성재",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-218",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황재철",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-111",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임선교",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-126",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김순선",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-194",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양민재",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-195",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조효정",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-305",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이길호",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-325",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안영환",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-407",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종훈",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-493",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종선",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-756",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최창영",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-760",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박제연",
+      "department": "소화기내과",
+      "external_id": "AJOUMC-982",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "탁승제",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-2",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신준한",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-28",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황교승",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-133",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤명호",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-92",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최소연",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-53",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임홍석",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-99",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양형모",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-115",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진선",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-166",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서경우",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-167",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황정원",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-220",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최운정",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-128",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이광노",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-783",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진우람",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-322",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소문승",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-449",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도영",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-898",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이양연",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-899",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재오",
+      "department": "순환기내과",
+      "external_id": "AJOUMC-983",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주인수",
+      "department": "신경과",
+      "external_id": "AJOUMC-34",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병곤",
+      "department": "신경과",
+      "external_id": "AJOUMC-188",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문소영",
+      "department": "신경과",
+      "external_id": "AJOUMC-225",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진수",
+      "department": "신경과",
+      "external_id": "AJOUMC-141",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤정한",
+      "department": "신경과",
+      "external_id": "AJOUMC-181",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선아",
+      "department": "신경과",
+      "external_id": "AJOUMC-69",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준영",
+      "department": "신경과",
+      "external_id": "AJOUMC-192",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태준",
+      "department": "신경과",
+      "external_id": "AJOUMC-741",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성준",
+      "department": "신경과",
+      "external_id": "AJOUMC-258",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박동규",
+      "department": "신경과",
+      "external_id": "AJOUMC-370",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소영",
+      "department": "신경과",
+      "external_id": "AJOUMC-607",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민제홍",
+      "department": "신경과",
+      "external_id": "AJOUMC-553",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재욱",
+      "department": "신경과",
+      "external_id": "AJOUMC-960",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근",
+      "department": "신경과",
+      "external_id": "AJOUMC-984",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안영환",
+      "department": "신경외과",
+      "external_id": "AJOUMC-59",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세혁",
+      "department": "신경외과",
+      "external_id": "AJOUMC-71",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임용철",
+      "department": "신경외과",
+      "external_id": "AJOUMC-98",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상현",
+      "department": "신경외과",
+      "external_id": "AJOUMC-224",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송지혜",
+      "department": "신경외과",
+      "external_id": "AJOUMC-747",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조평구",
+      "department": "신경외과",
+      "external_id": "AJOUMC-743",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유남규",
+      "department": "신경외과",
+      "external_id": "AJOUMC-425",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노성현",
+      "department": "신경외과",
+      "external_id": "AJOUMC-805",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영주",
+      "department": "신경외과",
+      "external_id": "AJOUMC-717",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤제휘",
+      "department": "신경외과",
+      "external_id": "AJOUMC-930",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김흥수",
+      "department": "신장내과",
+      "external_id": "AJOUMC-25",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신규태",
+      "department": "신장내과",
+      "external_id": "AJOUMC-79",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박인휘",
+      "department": "신장내과",
+      "external_id": "AJOUMC-113",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민정",
+      "department": "신장내과",
+      "external_id": "AJOUMC-289",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최희정",
+      "department": "신장내과",
+      "external_id": "AJOUMC-719",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍유선",
+      "department": "심장혈관흉부외과",
+      "external_id": "AJOUMC-242",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상현",
+      "department": "심장혈관흉부외과",
+      "external_id": "AJOUMC-221",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "함석진",
+      "department": "심장혈관흉부외과",
+      "external_id": "AJOUMC-590",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유우식",
+      "department": "심장혈관흉부외과",
+      "external_id": "AJOUMC-748",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정준호",
+      "department": "심장혈관흉부외과",
+      "external_id": "AJOUMC-252",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도정",
+      "department": "심장혈관흉부외과",
+      "external_id": "AJOUMC-737",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수진",
+      "department": "심장혈관흉부외과",
+      "external_id": "AJOUMC-895",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승욱",
+      "department": "심장혈관흉부외과",
+      "external_id": "AJOUMC-678",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안재홍",
+      "department": "안과",
+      "external_id": "AJOUMC-104",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송지훈",
+      "department": "안과",
+      "external_id": "AJOUMC-298",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승아",
+      "department": "안과",
+      "external_id": "AJOUMC-340",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유리",
+      "department": "안과",
+      "external_id": "AJOUMC-182",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영준",
+      "department": "안과",
+      "external_id": "AJOUMC-787",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김해랑",
+      "department": "안과",
+      "external_id": "AJOUMC-910",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정후",
+      "department": "안과",
+      "external_id": "AJOUMC-953",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이안나",
+      "department": "안과",
+      "external_id": "AJOUMC-962",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최수연",
+      "department": "안과",
+      "external_id": "AJOUMC-970",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김청운",
+      "department": "안과",
+      "external_id": "AJOUMC-951",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여수지",
+      "department": "안과",
+      "external_id": "AJOUMC-952",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수경",
+      "department": "안과",
+      "external_id": "AJOUMC-963",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유화영",
+      "department": "안과",
+      "external_id": "AJOUMC-985",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박해심",
+      "department": "알레르기면역내과",
+      "external_id": "AJOUMC-43",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남동호",
+      "department": "알레르기면역내과",
+      "external_id": "AJOUMC-62",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "예영민",
+      "department": "알레르기면역내과",
+      "external_id": "AJOUMC-122",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신유섭",
+      "department": "알레르기면역내과",
+      "external_id": "AJOUMC-114",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영수",
+      "department": "알레르기면역내과",
+      "external_id": "AJOUMC-327",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장재혁",
+      "department": "알레르기면역내과",
+      "external_id": "AJOUMC-548",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경주",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-22",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은주",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-29",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원제환",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-121",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강두경",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-132",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "선주성",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-83",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽규성",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-202",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진욱",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-388",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하은주",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-455",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성훈",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-454",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한미란",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-243",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우상",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-655",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허지미",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-697",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유슬기",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-497",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하태양",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-498",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최태원",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-820",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백지현",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-829",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양수정",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-907",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정민",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-908",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유나",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-973",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정주",
+      "department": "영상의학과",
+      "external_id": "AJOUMC-994",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경원",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-338",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문종환",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-191",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강병희",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-253",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권준식",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-379",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허요",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-313",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최동환",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-632",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소중섭",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-433",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주홍",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-733",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최상희",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-534",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진주",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-785",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정호형",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-803",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서동민",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-447",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유재리",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-715",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최항준",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-811",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우혜영",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-904",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지은",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-846",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지원",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-848",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주일석",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-926",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재호",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-969",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경학",
+      "department": "외상의학과",
+      "external_id": "AJOUMC-971",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상욱",
+      "department": "위장관외과",
+      "external_id": "AJOUMC-74",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허훈",
+      "department": "위장관외과",
+      "external_id": "AJOUMC-336",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손상용",
+      "department": "위장관외과",
+      "external_id": "AJOUMC-562",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송정호",
+      "department": "위장관외과",
+      "external_id": "AJOUMC-821",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "부여진",
+      "department": "위장관외과",
+      "external_id": "AJOUMC-780",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용식",
+      "department": "유방외과",
+      "external_id": "AJOUMC-52",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허민희",
+      "department": "유방외과",
+      "external_id": "AJOUMC-799",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백수연",
+      "department": "유방외과",
+      "external_id": "AJOUMC-822",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤석",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-105",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민영기",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-82",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안정환",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-143",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지숙",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김중헌",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-746",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성은",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-229",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양희원",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-483",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고유라",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-496",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안주호",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-489",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-401",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심문기",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-710",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천은재",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-448",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변현범",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-712",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경은",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-965",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효빈",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-966",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효진",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-950",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고승연",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-615",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문형준",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-979",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인성",
+      "department": "응급의학과",
+      "external_id": "AJOUMC-986",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신호정",
+      "department": "응급중환자외과",
+      "external_id": "AJOUMC-386",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철호",
+      "department": "이비인후과",
+      "external_id": "AJOUMC-157",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현준",
+      "department": "이비인후과",
+      "external_id": "AJOUMC-169",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박헌이",
+      "department": "이비인후과",
+      "external_id": "AJOUMC-222",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신유섭",
+      "department": "이비인후과",
+      "external_id": "AJOUMC-375",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장전엽",
+      "department": "이비인후과",
+      "external_id": "AJOUMC-654",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안상현",
+      "department": "이비인후과",
+      "external_id": "AJOUMC-981",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성열",
+      "department": "이비인후과",
+      "external_id": "AJOUMC-293",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하정호",
+      "department": "이비인후과",
+      "external_id": "AJOUMC-685",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오창권",
+      "department": "이식혈관외과",
+      "external_id": "AJOUMC-46",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수형",
+      "department": "이식혈관외과",
+      "external_id": "AJOUMC-474",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방준배",
+      "department": "이식혈관외과",
+      "external_id": "AJOUMC-362",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤승현",
+      "department": "재활의학과",
+      "external_id": "AJOUMC-85",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현정근",
+      "department": "재활의학과",
+      "external_id": "AJOUMC-978",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유명은",
+      "department": "재활의학과",
+      "external_id": "AJOUMC-975",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노재성",
+      "department": "정신건강의학과",
+      "external_id": "AJOUMC-47",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신윤미",
+      "department": "정신건강의학과",
+      "external_id": "AJOUMC-96",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍창형",
+      "department": "정신건강의학과",
+      "external_id": "AJOUMC-223",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손상준",
+      "department": "정신건강의학과",
+      "external_id": "AJOUMC-393",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장형윤",
+      "department": "정신건강의학과",
+      "external_id": "AJOUMC-530",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노현웅",
+      "department": "정신건강의학과",
+      "external_id": "AJOUMC-365",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용혁",
+      "department": "정신건강의학과",
+      "external_id": "AJOUMC-684",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김가희",
+      "department": "정신건강의학과",
+      "external_id": "AJOUMC-921",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한경진",
+      "department": "정형외과",
+      "external_id": "AJOUMC-135",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조재호",
+      "department": "정형외과",
+      "external_id": "AJOUMC-173",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이두형",
+      "department": "정형외과",
+      "external_id": "AJOUMC-241",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정남수",
+      "department": "정형외과",
+      "external_id": "AJOUMC-117",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송형근",
+      "department": "정형외과",
+      "external_id": "AJOUMC-389",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영욱",
+      "department": "정형외과",
+      "external_id": "AJOUMC-471",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정준영",
+      "department": "정형외과",
+      "external_id": "AJOUMC-392",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한동",
+      "department": "정형외과",
+      "external_id": "AJOUMC-363",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박도영",
+      "department": "정형외과",
+      "external_id": "AJOUMC-234",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최완선",
+      "department": "정형외과",
+      "external_id": "AJOUMC-505",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정택",
+      "department": "정형외과",
+      "external_id": "AJOUMC-656",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태훈",
+      "department": "정형외과",
+      "external_id": "AJOUMC-264",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조원태",
+      "department": "정형외과",
+      "external_id": "AJOUMC-797",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임수민",
+      "department": "정형외과",
+      "external_id": "AJOUMC-617",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정희웅",
+      "department": "정형외과",
+      "external_id": "AJOUMC-601",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "사공승엽",
+      "department": "정형외과",
+      "external_id": "AJOUMC-841",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서영욱",
+      "department": "정형외과",
+      "external_id": "AJOUMC-495",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이명섭",
+      "department": "정형외과",
+      "external_id": "AJOUMC-946",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종화",
+      "department": "정형외과",
+      "external_id": "AJOUMC-967",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승민",
+      "department": "정형외과",
+      "external_id": "AJOUMC-974",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진혁",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-72",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준성",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-67",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강석윤",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-93",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성현",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-109",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현우",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-139",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최용원",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-179",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안미선",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-193",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태환",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-411",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양청인",
+      "department": "종양혈액내과",
+      "external_id": "AJOUMC-555",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재범",
+      "department": "직업환경의학과",
+      "external_id": "AJOUMC-100",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인철",
+      "department": "직업환경의학과",
+      "external_id": "AJOUMC-292",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재혁",
+      "department": "직업환경의학과",
+      "external_id": "AJOUMC-502",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이위교",
+      "department": "진단검사의학과",
+      "external_id": "AJOUMC-56",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임영애",
+      "department": "진단검사의학과",
+      "external_id": "AJOUMC-66",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성란",
+      "department": "진단검사의학과",
+      "external_id": "AJOUMC-145",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박서진",
+      "department": "진단검사의학과",
+      "external_id": "AJOUMC-333",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유찬",
+      "department": "피부과",
+      "external_id": "AJOUMC-184",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강희영",
+      "department": "피부과",
+      "external_id": "AJOUMC-31",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지웅",
+      "department": "피부과",
+      "external_id": "AJOUMC-653",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영준",
+      "department": "피부과",
+      "external_id": "AJOUMC-361",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진철",
+      "department": "피부과",
+      "external_id": "AJOUMC-671",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준기",
+      "department": "핵의학과",
+      "external_id": "AJOUMC-161",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안영실",
+      "department": "핵의학과",
+      "external_id": "AJOUMC-152",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수진",
+      "department": "핵의학과",
+      "external_id": "AJOUMC-331",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용진",
+      "department": "핵의학과",
+      "external_id": "AJOUMC-838",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박광주",
+      "department": "호흡기내과",
+      "external_id": "AJOUMC-91",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승수",
+      "department": "호흡기내과",
+      "external_id": "AJOUMC-51",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주헌",
+      "department": "호흡기내과",
+      "external_id": "AJOUMC-174",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우영",
+      "department": "호흡기내과",
+      "external_id": "AJOUMC-269",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤정",
+      "department": "호흡기내과",
+      "external_id": "AJOUMC-214",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지은",
+      "department": "호흡기내과",
+      "external_id": "AJOUMC-731",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오주현",
+      "department": "호흡기내과",
+      "external_id": "AJOUMC-959",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손영배",
+      "department": "희귀질환센터",
+      "external_id": "AJOUMC-383",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

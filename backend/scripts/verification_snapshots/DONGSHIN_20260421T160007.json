@@ -1,0 +1,127 @@
+{
+  "hospital_code": "DONGSHIN",
+  "hospital_name": "동신병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김현삼",
+      "department": "내과",
+      "external_id": "DONGSHIN-62a9e6ed9f",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정현",
+      "department": "내과",
+      "external_id": "DONGSHIN-787a4f7909",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문윤권",
+      "department": "내과",
+      "external_id": "DONGSHIN-c81e1f9aa4",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신기원",
+      "department": "내과",
+      "external_id": "DONGSHIN-4a4fa825a4",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경원",
+      "department": "내과",
+      "external_id": "DONGSHIN-f03783e02f",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영욱",
+      "department": "내과",
+      "external_id": "DONGSHIN-abc9dfddbb",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심원용",
+      "department": "내과",
+      "external_id": "DONGSHIN-17a0f4a995",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보양",
+      "department": "정형외과",
+      "external_id": "DONGSHIN-79794ee7c3",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송석환",
+      "department": "정형외과",
+      "external_id": "DONGSHIN-b1e3afd104",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성락",
+      "department": "정형외과",
+      "external_id": "DONGSHIN-8a34044c0d",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "금재화",
+      "department": "외 과",
+      "external_id": "DONGSHIN-9852b3ee9f",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장연수",
+      "department": "외 과",
+      "external_id": "DONGSHIN-606fe6980f",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "산부인과 과장",
+      "department": "외 과",
+      "external_id": "DONGSHIN-2ad07bf97c",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동원",
+      "department": "신경외과",
+      "external_id": "DONGSHIN-bf62884cb4",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신경과 과장",
+      "department": "신경외과",
+      "external_id": "DONGSHIN-49d363d0c5",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

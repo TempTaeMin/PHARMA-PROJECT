@@ -117,6 +117,8 @@ class DuihCrawler:
                     break
             return dept
 
+        seen: dict[str, dict] = {}  # doc_code → doctor dict (dedup)
+
         for m in doc_row_pattern.finditer(html):
             dept_code = m.group(1)
             doc_code = m.group(2)
@@ -128,7 +130,6 @@ class DuihCrawler:
                 dept_nm = DUIH_DEPARTMENTS.get(dept_code, "")
 
             schedules = []
-            # AM: groups 5-10 (월~토)
             for dow in range(6):
                 cell = m.group(5 + dow).strip()
                 if '●' in cell or '○' in cell:
@@ -137,8 +138,6 @@ class DuihCrawler:
                         "day_of_week": dow, "time_slot": "morning",
                         "start_time": start, "end_time": end, "location": "외래",
                     })
-
-            # PM: groups 11-16 (월~토)
             for dow in range(6):
                 cell = m.group(11 + dow).strip()
                 if '●' in cell or '○' in cell:
@@ -148,17 +147,35 @@ class DuihCrawler:
                         "start_time": start, "end_time": end, "location": "외래",
                     })
 
+            if doc_code in seen:
+                existing = seen[doc_code]
+                if dept_nm and dept_nm != existing["department"] and dept_nm not in existing["_extra_depts"]:
+                    existing["_extra_depts"].append(dept_nm)
+                # 추가 진료과의 스케줄도 누락 없이 합치기
+                for s in schedules:
+                    if s not in existing["schedules"]:
+                        existing["schedules"].append(s)
+                continue
+
             ext_id = f"DUIH-{doc_code}"
-            doctors.append({
+            seen[doc_code] = {
                 "staff_id": ext_id, "external_id": ext_id,
                 "name": name, "department": dept_nm,
                 "position": "", "specialty": specialty,
                 "profile_url": f"{BASE_URL}/medical/department/deptDocPopDetail.do?act=deptDocInfo&nowPageInfo=ILSH&deptCode={dept_code}&docCode={doc_code}",
                 "notes": "", "schedules": schedules,
                 "_dept_code": dept_code, "_doc_code": doc_code,
-            })
+                "_extra_depts": [],
+            }
 
-        logger.info(f"[DUIH] 파싱 완료: {len(doctors)}명")
+        for d in seen.values():
+            extras = d.pop("_extra_depts")
+            if extras:
+                tag = f"복수 진료과: {', '.join(extras)}"
+                d["notes"] = (d["notes"] + "\n" + tag) if d["notes"] else tag
+            doctors.append(d)
+
+        logger.info(f"[DUIH] 파싱 완료: {len(doctors)}명 (dedup)")
         return doctors
 
     async def _fetch_all(self) -> list[dict]:

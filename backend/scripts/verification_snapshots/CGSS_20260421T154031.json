@@ -1,0 +1,191 @@
+{
+  "hospital_code": "CGSS",
+  "hospital_name": "청구성심병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "최성근",
+      "department": "내분비/다질환내과",
+      "external_id": "CGSS-47",
+      "n_schedules": 11,
+      "n_date_schedules": 80,
+      "notes": ""
+    },
+    {
+      "name": "김유철",
+      "department": "소화기내과",
+      "external_id": "CGSS-28365",
+      "n_schedules": 10,
+      "n_date_schedules": 78,
+      "notes": ""
+    },
+    {
+      "name": "이준희",
+      "department": "소화기내과",
+      "external_id": "CGSS-32087",
+      "n_schedules": 11,
+      "n_date_schedules": 78,
+      "notes": ""
+    },
+    {
+      "name": "김민지",
+      "department": "소화기내과",
+      "external_id": "CGSS-28895",
+      "n_schedules": 11,
+      "n_date_schedules": 82,
+      "notes": ""
+    },
+    {
+      "name": "전병관",
+      "department": "호흡기내과",
+      "external_id": "CGSS-51",
+      "n_schedules": 11,
+      "n_date_schedules": 83,
+      "notes": ""
+    },
+    {
+      "name": "금세진",
+      "department": "정형외과",
+      "external_id": "CGSS-52",
+      "n_schedules": 10,
+      "n_date_schedules": 82,
+      "notes": ""
+    },
+    {
+      "name": "유경호",
+      "department": "정형외과",
+      "external_id": "CGSS-53",
+      "n_schedules": 10,
+      "n_date_schedules": 65,
+      "notes": ""
+    },
+    {
+      "name": "최영진",
+      "department": "정형외과",
+      "external_id": "CGSS-32363",
+      "n_schedules": 11,
+      "n_date_schedules": 83,
+      "notes": ""
+    },
+    {
+      "name": "이병동",
+      "department": "외과",
+      "external_id": "CGSS-55",
+      "n_schedules": 11,
+      "n_date_schedules": 84,
+      "notes": ""
+    },
+    {
+      "name": "오정근",
+      "department": "신경과",
+      "external_id": "CGSS-56",
+      "n_schedules": 11,
+      "n_date_schedules": 81,
+      "notes": ""
+    },
+    {
+      "name": "신동식",
+      "department": "비뇨의학과",
+      "external_id": "CGSS-58",
+      "n_schedules": 11,
+      "n_date_schedules": 87,
+      "notes": ""
+    },
+    {
+      "name": "권영희",
+      "department": "소아청소년과",
+      "external_id": "CGSS-60",
+      "n_schedules": 11,
+      "n_date_schedules": 83,
+      "notes": ""
+    },
+    {
+      "name": "백승원",
+      "department": "응급의학과",
+      "external_id": "CGSS-61",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문지형",
+      "department": "응급의학과",
+      "external_id": "CGSS-27184",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박도영",
+      "department": "응급의학과",
+      "external_id": "CGSS-45588",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유재영",
+      "department": "응급의학과",
+      "external_id": "CGSS-44174",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최희령",
+      "department": "마취통증의학과",
+      "external_id": "CGSS-66",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이연주",
+      "department": "마취통증의학과",
+      "external_id": "CGSS-31454",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공정화",
+      "department": "영상의학과",
+      "external_id": "CGSS-67",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장용호",
+      "department": "영상의학과",
+      "external_id": "CGSS-47238",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오영철",
+      "department": "진단검사의학과",
+      "external_id": "CGSS-69",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민현진",
+      "department": "신장내과",
+      "external_id": "CGSS-17780",
+      "n_schedules": 11,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김태범",
+      "department": "신장내과",
+      "external_id": "CGSS-47239",
+      "n_schedules": 10,
+      "n_date_schedules": 43,
+      "notes": ""
+    }
+  ]
+}

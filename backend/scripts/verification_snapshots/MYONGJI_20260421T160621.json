@@ -1,0 +1,1287 @@
+{
+  "hospital_code": "MYONGJI",
+  "hospital_name": "명지병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박준리",
+      "department": "가정의학과",
+      "external_id": "MYONGJI-3-FM014",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박희열",
+      "department": "가정의학과",
+      "external_id": "MYONGJI-4-FM019",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강유민",
+      "department": "감염내과",
+      "external_id": "MYONGJI-6-IN003",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조동호",
+      "department": "감염내과",
+      "external_id": "MYONGJI-8-IN005",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재혁",
+      "department": "내분비내과",
+      "external_id": "MYONGJI-9-EN005",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민경",
+      "department": "내분비내과",
+      "external_id": "MYONGJI-10-EN007",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안지연",
+      "department": "내분비내과",
+      "external_id": "MYONGJI-12-EN009",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허정",
+      "department": "내분비내과",
+      "external_id": "MYONGJI-251-EN010",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소연",
+      "department": "류마티스내과",
+      "external_id": "MYONGJI-13-RM009",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수영",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-17-AN021",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민진혜",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-143-AN002",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용경",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-15-AN008",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이애리나",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-144-AN018",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박문기",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-18-AN022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정정",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-243-AN023",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배자영",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-256-AN025",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-272-AN026",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임수진",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-0-AN029",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조혜령",
+      "department": "마취통증의학과",
+      "external_id": "MYONGJI-0-AN028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박석원",
+      "department": "방사선종양학과",
+      "external_id": "MYONGJI-19-RO004",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권태정",
+      "department": "병리과",
+      "external_id": "MYONGJI-157-PL006",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤양",
+      "department": "병리과",
+      "external_id": "MYONGJI-159-PL008",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주종은",
+      "department": "병리과",
+      "external_id": "MYONGJI-158-PL010",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정주",
+      "department": "병리과",
+      "external_id": "MYONGJI-284-PL012",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진환",
+      "department": "병리과",
+      "external_id": "MYONGJI-189-PL011",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현회",
+      "department": "비뇨의학과",
+      "external_id": "MYONGJI-223-UR010",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정태융",
+      "department": "비뇨의학과",
+      "external_id": "MYONGJI-20-UR002",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소연",
+      "department": "비뇨의학과",
+      "external_id": "MYONGJI-21-UR007",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권휘안",
+      "department": "비뇨의학과",
+      "external_id": "MYONGJI-22-UR009",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송용상",
+      "department": "산부인과",
+      "external_id": "MYONGJI-253-OB019",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이연지",
+      "department": "산부인과",
+      "external_id": "MYONGJI-239-OB018",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최제민",
+      "department": "성형외과",
+      "external_id": "MYONGJI-271-PS020",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤정수",
+      "department": "성형외과",
+      "external_id": "MYONGJI-277-PS022",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광남",
+      "department": "소아청소년과",
+      "external_id": "MYONGJI-30-PE026",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종민",
+      "department": "소아청소년과",
+      "external_id": "MYONGJI-32-PE029",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남수",
+      "department": "소아청소년과",
+      "external_id": "MYONGJI-33-PE030",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철홍",
+      "department": "소아청소년과",
+      "external_id": "MYONGJI-235-PE033",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형석",
+      "department": "소아청소년과",
+      "external_id": "MYONGJI-240-PE034",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박중원",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-255-GI074",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송병준",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-39-GI040",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현진",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-41-GI064",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재학",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-254-GI073",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진우",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-264-GI077",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진수",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-258-GI075",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종연",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-265-GI078",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영길",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-278-GI080",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신경민",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-202-GI058",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현근",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-304-GI081",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병표",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-307-GI082",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서혁",
+      "department": "소화기내과",
+      "external_id": "MYONGJI-204-GI057",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병인",
+      "department": "신경과",
+      "external_id": "MYONGJI-224-NR024",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이서영",
+      "department": "신경과",
+      "external_id": "MYONGJI-286-NR027",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김아원",
+      "department": "신경과",
+      "external_id": "MYONGJI-280-NR028",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "신경과",
+      "external_id": "MYONGJI-279-NR029",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영빈",
+      "department": "신경과",
+      "external_id": "MYONGJI-300-NR030",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정영섭",
+      "department": "신경외과",
+      "external_id": "MYONGJI-58-NS022",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성춘",
+      "department": "신경외과",
+      "external_id": "MYONGJI-54-NS017",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안성열",
+      "department": "신경외과",
+      "external_id": "MYONGJI-52-NS014",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수언",
+      "department": "신경외과",
+      "external_id": "MYONGJI-53-NS016",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양제열",
+      "department": "신경외과",
+      "external_id": "MYONGJI-57-NS021",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서대희",
+      "department": "신경외과",
+      "external_id": "MYONGJI-275-NS023",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오동진",
+      "department": "신장내과",
+      "external_id": "MYONGJI-59-NE005",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최혜민",
+      "department": "신장내과",
+      "external_id": "MYONGJI-60-NE006",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권영은",
+      "department": "신장내과",
+      "external_id": "MYONGJI-61-NE007",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백송인",
+      "department": "신장내과",
+      "external_id": "MYONGJI-62-NE011",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조윤형",
+      "department": "심장내과",
+      "external_id": "MYONGJI-64-CA006",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황의석",
+      "department": "심장내과",
+      "external_id": "MYONGJI-142-CA009",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서용성",
+      "department": "심장내과",
+      "external_id": "MYONGJI-65-CA013",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "심장내과",
+      "external_id": "MYONGJI-66-CA015",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현주",
+      "department": "심장내과",
+      "external_id": "MYONGJI-67-CA016",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재혁",
+      "department": "심장내과",
+      "external_id": "MYONGJI-71-CA021",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이철호",
+      "department": "심장내과",
+      "external_id": "MYONGJI-257-CA023",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재영",
+      "department": "심장내과",
+      "external_id": "MYONGJI-302-CA025",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상신",
+      "department": "심장내과",
+      "external_id": "MYONGJI-303-CA026",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기봉",
+      "department": "심장혈관흉부외과",
+      "external_id": "MYONGJI-74-CS013",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성욱",
+      "department": "심장혈관흉부외과",
+      "external_id": "MYONGJI-75-CS014",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민석",
+      "department": "심장혈관흉부외과",
+      "external_id": "MYONGJI-76-CS016",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백효채",
+      "department": "심장혈관흉부외과",
+      "external_id": "MYONGJI-206-CS017",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황은구",
+      "department": "심장혈관흉부외과",
+      "external_id": "MYONGJI-250-CS018",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도균",
+      "department": "안과",
+      "external_id": "MYONGJI-283-EY019",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동현",
+      "department": "안과",
+      "external_id": "MYONGJI-298-EY020",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임재훈",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-160-RA021",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박노혁",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-81-RA005",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종건",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-197-RA012",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현범",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-190-RA031",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임정기",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-191-RA032",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선정",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-82-RA022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정원",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-83-RA027",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백승연",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-205-RA034",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박찬섭",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-276-RA036",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지연",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-263-RA035",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이관세",
+      "department": "영상의학과",
+      "external_id": "MYONGJI-209-RA026",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진호",
+      "department": "외과",
+      "external_id": "MYONGJI-84-GS002",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정훈",
+      "department": "외과",
+      "external_id": "MYONGJI-86-GS014",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신혁재",
+      "department": "외과",
+      "external_id": "MYONGJI-85-GS008",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김완성",
+      "department": "외과",
+      "external_id": "MYONGJI-87-GS016",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경구",
+      "department": "외과",
+      "external_id": "MYONGJI-90-GS027",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종섭",
+      "department": "외과",
+      "external_id": "MYONGJI-92-GS035",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석구",
+      "department": "외과",
+      "external_id": "MYONGJI-93-GS038",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임마누엘",
+      "department": "외과",
+      "external_id": "MYONGJI-145-GS039",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정수",
+      "department": "외과",
+      "external_id": "MYONGJI-289-GS041",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용만",
+      "department": "외과",
+      "external_id": "MYONGJI-305-GS042",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문현종",
+      "department": "외과",
+      "external_id": "MYONGJI-185-GS006",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연진",
+      "department": "외과",
+      "external_id": "MYONGJI-232-GS040",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인병",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-94-EM001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정시영",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-95-EM022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박치호",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-96-EM023",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안기옥",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-97-EM026",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임장선",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-99-EM030",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경재",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-147-EM031",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배소현",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-98-EM028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현철",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-101-EM035",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최주영",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-148-EM034",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효동",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-244-EM041",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인찬",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-273-EM044",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최소연",
+      "department": "응급의학과",
+      "external_id": "MYONGJI-269-EM043",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송창은",
+      "department": "이비인후과",
+      "external_id": "MYONGJI-103-ET007",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수영",
+      "department": "이비인후과",
+      "external_id": "MYONGJI-104-ET012",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희옥",
+      "department": "이비인후과",
+      "external_id": "MYONGJI-295-ET017",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조기주",
+      "department": "이비인후과",
+      "external_id": "MYONGJI-152-ET015",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용균",
+      "department": "재활의학과",
+      "external_id": "MYONGJI-106-PM003",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤정",
+      "department": "재활의학과",
+      "external_id": "MYONGJI-105-PM002",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김아람",
+      "department": "재활의학과",
+      "external_id": "MYONGJI-107-PM011",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임길병",
+      "department": "재활의학과",
+      "external_id": "MYONGJI-293-PM013",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "정신건강의학과",
+      "external_id": "MYONGJI-110-PY024",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한창우",
+      "department": "정신건강의학과",
+      "external_id": "MYONGJI-113-PY030",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정한용",
+      "department": "정신건강의학과",
+      "external_id": "MYONGJI-291-PY033",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승훈",
+      "department": "정신건강의학과",
+      "external_id": "MYONGJI-114-PY031",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류진선",
+      "department": "정신건강의학과",
+      "external_id": "MYONGJI-153-PY032",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진구",
+      "department": "정형외과",
+      "external_id": "MYONGJI-117-OS033",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용걸",
+      "department": "정형외과",
+      "external_id": "MYONGJI-118-OS034",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주학",
+      "department": "정형외과",
+      "external_id": "MYONGJI-116-OS009",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송상헌",
+      "department": "정형외과",
+      "external_id": "MYONGJI-187-OS022",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정상진",
+      "department": "정형외과",
+      "external_id": "MYONGJI-229-OS043",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지원",
+      "department": "정형외과",
+      "external_id": "MYONGJI-287-OS052",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이범석",
+      "department": "정형외과",
+      "external_id": "MYONGJI-308-OS054",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노수용",
+      "department": "직업환경의학과",
+      "external_id": "MYONGJI-123-OM005",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지훈",
+      "department": "직업환경의학과",
+      "external_id": "MYONGJI-125-OM008",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문진영",
+      "department": "직업환경의학과",
+      "external_id": "MYONGJI-294-OM009",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조해원",
+      "department": "진단검사의학과",
+      "external_id": "MYONGJI-210-LM014",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기환",
+      "department": "치과",
+      "external_id": "MYONGJI-126-DT015",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하종철",
+      "department": "치과",
+      "external_id": "MYONGJI-128-DT018",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심우현",
+      "department": "치과",
+      "external_id": "MYONGJI-129-DT019",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박미숙",
+      "department": "치과",
+      "external_id": "MYONGJI-208-DT021",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심우현",
+      "department": "치과(스케일링전용)",
+      "external_id": "MYONGJI-245-DTM19",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기환",
+      "department": "치과(스케일링전용)",
+      "external_id": "MYONGJI-248-DTM15",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배수현",
+      "department": "통합내과",
+      "external_id": "MYONGJI-195-II004",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박익현",
+      "department": "통합내과",
+      "external_id": "MYONGJI-194-II002",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공나실",
+      "department": "통합내과",
+      "external_id": "MYONGJI-130-II005",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태림",
+      "department": "통합내과",
+      "external_id": "MYONGJI-306-II022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조한경",
+      "department": "피부과",
+      "external_id": "MYONGJI-132-DR002",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성주",
+      "department": "피부과",
+      "external_id": "MYONGJI-270-DR008",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준연",
+      "department": "핵의학과",
+      "external_id": "MYONGJI-134-NM006",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문진",
+      "department": "혈액종양내과",
+      "external_id": "MYONGJI-135-HO007",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임진",
+      "department": "혈액종양내과",
+      "external_id": "MYONGJI-292-HO010",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상준",
+      "department": "호흡기내과",
+      "external_id": "MYONGJI-137-PU005",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최원일",
+      "department": "호흡기내과",
+      "external_id": "MYONGJI-139-PU008",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하은혜",
+      "department": "호흡기내과",
+      "external_id": "MYONGJI-138-PU007",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김샛별",
+      "department": "호흡기내과",
+      "external_id": "MYONGJI-266-PU011",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성유민",
+      "department": "호흡기내과",
+      "external_id": "MYONGJI-259-PU010",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -274,7 +274,7 @@ async def run_my_doctors_crawl(db: AsyncSession = Depends(get_db)):
     return result
 
 
-@router.get("/doctor/{hospital_code}/{staff_id}", summary="의료진 스케줄 조회 (DB 우선)")
+@router.get("/doctor/{hospital_code}/{staff_id:path}", summary="의료진 스케줄 조회 (DB 우선)")
 async def crawl_single_doctor(
     hospital_code: str,
     staff_id: str,

@@ -5,6 +5,7 @@
 의사 상세: /mdlDoctorPopup.ncc?in_wkpers_id={id}
 """
 import re
+import asyncio
 import logging
 import httpx
 from datetime import datetime
@@ -168,7 +169,13 @@ class NccCrawler:
         return [{k: d[k] for k in ("staff_id", "external_id", "name", "department", "position", "specialty", "profile_url", "notes")} for d in data]
 
     async def crawl_doctor_schedule(self, staff_id: str) -> dict:
-        """개별 교수 진료시간 조회"""
+        """개별 교수 진료시간 조회
+
+        NCC는 의사 개별 상세 URL이 없다(`/mdlDoctorPopup.ncc` 는 404).
+        어느 센터에 속하는지 external_id로는 알 수 없고, 한 의사가 여러 센터에
+        중복 등장할 수 있어 **13개 센터를 병렬 조회 후 스케줄/전문분야를 병합**한다.
+        순차 루프 대비 응답 시간이 13배 가량 단축된다.
+        """
         empty = {"staff_id": staff_id, "name": "", "department": "", "position": "",
                  "specialty": "", "profile_url": "", "notes": "", "schedules": []}
 
@@ -178,18 +185,63 @@ class NccCrawler:
                     return {k: d.get(k, "") for k in ("staff_id", "name", "department", "position", "specialty", "profile_url", "notes", "schedules")}
             return empty
 
-        # 개별 조회: wkpers_id 추출 후 각 센터 순회
         prefix = "NCC-"
         wkpers_id = staff_id.replace(prefix, "") if staff_id.startswith(prefix) else staff_id
 
-        async with httpx.AsyncClient(headers=self.headers, timeout=30, follow_redirects=True) as client:
-            for center_cd, center_nm in CENTER_CODES:
-                docs = await self._fetch_center_schedule(client, center_cd, center_nm)
-                for doc in docs:
-                    if doc.get("external_id") == staff_id or doc.get("_wkpers_id") == wkpers_id:
-                        return {k: doc.get(k, "") for k in ("staff_id", "name", "department", "position", "specialty", "profile_url", "notes", "schedules")}
+        logger.warning(
+            f"[NCC] 개별 상세 URL이 없어 13개 센터 병렬 조회 (staff_id={staff_id})"
+        )
 
-        return empty
+        matched: dict | None = None
+        merged_specialty = ""
+        merged_schedules: list[dict] = []
+        merged_keys: set = set()
+
+        async with httpx.AsyncClient(headers=self.headers, timeout=30, follow_redirects=True) as client:
+            tasks = [
+                asyncio.create_task(self._fetch_center_schedule(client, cd, nm))
+                for cd, nm in CENTER_CODES
+            ]
+            try:
+                for coro in asyncio.as_completed(tasks):
+                    docs = await coro
+                    for doc in docs:
+                        if doc.get("_wkpers_id") != wkpers_id and doc.get("external_id") != staff_id:
+                            continue
+                        if matched is None:
+                            matched = doc
+                            for s in doc["schedules"]:
+                                merged_keys.add((s["day_of_week"], s["time_slot"]))
+                                merged_schedules.append(s)
+                            merged_specialty = doc.get("specialty", "")
+                        else:
+                            # 여러 센터에서 발견되면 스케줄/전문분야 병합
+                            for s in doc["schedules"]:
+                                k = (s["day_of_week"], s["time_slot"])
+                                if k not in merged_keys:
+                                    merged_keys.add(k)
+                                    merged_schedules.append(s)
+                            sp = doc.get("specialty", "")
+                            if sp and sp not in merged_specialty:
+                                merged_specialty = f"{merged_specialty}, {sp}" if merged_specialty else sp
+            finally:
+                for t in tasks:
+                    if not t.done():
+                        t.cancel()
+
+        if matched is None:
+            return empty
+
+        return {
+            "staff_id": matched["staff_id"],
+            "name": matched["name"],
+            "department": matched["department"],
+            "position": matched.get("position", ""),
+            "specialty": merged_specialty,
+            "profile_url": matched.get("profile_url", ""),
+            "notes": matched.get("notes", ""),
+            "schedules": merged_schedules,
+        }
 
     async def crawl_doctors(self, department: str = None):
         from app.schemas.schemas import CrawlResult, CrawledDoctor

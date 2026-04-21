@@ -1,0 +1,399 @@
+{
+  "hospital_code": "OSHANKOOK",
+  "hospital_name": "오산한국병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "源�������怨쇱��",
+      "department": "������湲곕�닿낵",
+      "external_id": "OSHANKOOK-608",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 1 ������湲곕�닿낵"
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "������湲곕�닿낵",
+      "external_id": "OSHANKOOK-609",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "��� 2 ������湲곕�닿낵"
+    },
+    {
+      "name": "������李�怨쇱��",
+      "department": "������湲곕�닿낵",
+      "external_id": "OSHANKOOK-615",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 3 ������湲곕�닿낵"
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "������湲곕�닿낵",
+      "external_id": "OSHANKOOK-717",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 5 ������湲곕�닿낵"
+    },
+    {
+      "name": "源�蹂�寃�怨쇱��",
+      "department": "������湲곕�닿낵",
+      "external_id": "OSHANKOOK-613",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "(������湲곕�닿낵(��댁��寃쎌�쇳��))"
+    },
+    {
+      "name": "怨�������怨쇱��",
+      "department": "������湲곕�닿낵",
+      "external_id": "OSHANKOOK-612",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "(��댁��寃쎌�쇳��)"
+    },
+    {
+      "name": "蹂���������닿낵遺����",
+      "department": "�����λ�닿낵",
+      "external_id": "OSHANKOOK-620",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 1 �����λ�닿낵"
+    },
+    {
+      "name": "援����以�怨쇱��",
+      "department": "�����λ�닿낵",
+      "external_id": "OSHANKOOK-701",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 2 �����λ�닿낵"
+    },
+    {
+      "name": "源�������以���������ㅼ��",
+      "department": "��명�↔린��닿낵",
+      "external_id": "OSHANKOOK-619",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "���1 ��명�↔린��닿낵"
+    },
+    {
+      "name": "源����吏����臾댁�����",
+      "department": "��멸낵",
+      "external_id": "OSHANKOOK-628",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 1 ��멸낵"
+    },
+    {
+      "name": "���������吏�猷�遺�������",
+      "department": "��멸낵",
+      "external_id": "OSHANKOOK-629",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 2 ��멸낵"
+    },
+    {
+      "name": "援�������怨쇱��",
+      "department": "��멸낵",
+      "external_id": "OSHANKOOK-708",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 5 ��멸낵"
+    },
+    {
+      "name": "源���������명��",
+      "department": "��멸낵",
+      "external_id": "OSHANKOOK-722",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "源�������怨쇱��",
+      "department": "���寃쎌�멸낵",
+      "external_id": "OSHANKOOK-637",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 1 ���寃쎌�멸낵"
+    },
+    {
+      "name": "源�������吏�猷�遺����",
+      "department": "���寃쎌�멸낵",
+      "external_id": "OSHANKOOK-636",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 2 ���寃쎌�멸낵"
+    },
+    {
+      "name": "源�������泥�異���쇳�곗��",
+      "department": "���寃쎌�멸낵",
+      "external_id": "OSHANKOOK-681",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "議�������蹂�������",
+      "department": "���寃쎌�멸낵",
+      "external_id": "OSHANKOOK-639",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���������QI��ㅼ��",
+      "department": "��ъ�ν��愿����遺���멸낵",
+      "external_id": "OSHANKOOK-664",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "���遺���멸낵"
+    },
+    {
+      "name": "諛����洹�二쇱��怨쇱��",
+      "department": "��������멸낵",
+      "external_id": "OSHANKOOK-624",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 1 ��������멸낵"
+    },
+    {
+      "name": "議�寃�以�怨쇱��",
+      "department": "��������멸낵",
+      "external_id": "OSHANKOOK-627",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 2 ��������멸낵"
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "��������멸낵",
+      "external_id": "OSHANKOOK-680",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 3 ��������멸낵"
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "��������멸낵",
+      "external_id": "OSHANKOOK-716",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 5 ��������멸낵"
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "������泥�������怨�",
+      "external_id": "OSHANKOOK-651",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "������寃���명��",
+      "department": "������泥�������怨�",
+      "external_id": "OSHANKOOK-723",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "怨����沅�怨쇱��",
+      "department": "��곕����멸낵",
+      "external_id": "OSHANKOOK-655",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���寃����怨쇱��",
+      "department": "��대����명��怨�",
+      "external_id": "OSHANKOOK-653",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "��쇰��.鍮���⑥�����怨�",
+      "external_id": "OSHANKOOK-693",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��쇰��쨌鍮���⑥�����怨�"
+    },
+    {
+      "name": "���蹂�湲�怨쇱��",
+      "department": "������嫄닿��������怨�",
+      "external_id": "OSHANKOOK-654",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���������援���≪����⑤�����",
+      "department": "媛����������怨�",
+      "external_id": "OSHANKOOK-672",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "媛����������怨�",
+      "external_id": "OSHANKOOK-696",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "源�醫����怨쇱��",
+      "department": "��ы��������怨�",
+      "external_id": "OSHANKOOK-718",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���醫����怨쇱��",
+      "department": "留�痍⑦�듭��������怨�",
+      "external_id": "OSHANKOOK-657",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "諛����嫄�怨쇱��",
+      "department": "留�痍⑦�듭��������怨�",
+      "external_id": "OSHANKOOK-658",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���湲�李�怨쇱��",
+      "department": "������������怨�",
+      "external_id": "OSHANKOOK-662",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 1 ������������怨�"
+    },
+    {
+      "name": "���寃����怨쇱��",
+      "department": "������������怨�",
+      "external_id": "OSHANKOOK-707",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 3 ������������怨�"
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "������������怨�",
+      "external_id": "OSHANKOOK-695",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���以�怨쇱��",
+      "department": "吏���④����ъ�����怨�",
+      "external_id": "OSHANKOOK-715",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "源�遺����HK嫄닿��利�吏���쇳�곗��",
+      "department": "吏�������寃쎌�����怨�",
+      "external_id": "OSHANKOOK-659",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "���1 吏�������寃쎌�����怨�"
+    },
+    {
+      "name": "���吏����怨쇱��",
+      "department": "吏�������寃쎌�����怨�",
+      "external_id": "OSHANKOOK-660",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 2 吏�������寃쎌�����怨�"
+    },
+    {
+      "name": "留�������怨쇱��",
+      "department": "吏�������寃쎌�����怨�",
+      "external_id": "OSHANKOOK-682",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "��� 3 吏�������寃쎌�����怨�"
+    },
+    {
+      "name": "源����二�怨쇱��",
+      "department": "移�怨�",
+      "external_id": "OSHANKOOK-656",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "怨����������湲���ㅼ��",
+      "department": "���湲�������怨�",
+      "external_id": "OSHANKOOK-642",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "媛�������怨쇱��",
+      "department": "���湲�������怨�",
+      "external_id": "OSHANKOOK-643",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "諛�������怨쇱��",
+      "department": "���湲�������怨�",
+      "external_id": "OSHANKOOK-665",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "理�吏����怨쇱��",
+      "department": "���湲�������怨�",
+      "external_id": "OSHANKOOK-711",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "���湲�������怨�",
+      "external_id": "OSHANKOOK-713",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "源�������泥�異���쇳�곗��",
+      "department": "泥�異���멸낵",
+      "external_id": "OSHANKOOK-689",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "諛����洹�二쇱��怨쇱��",
+      "department": "泥�異���멸낵",
+      "external_id": "OSHANKOOK-703",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "��� 1 ��������멸낵"
+    },
+    {
+      "name": "���������怨쇱��",
+      "department": "泥�異���멸낵",
+      "external_id": "OSHANKOOK-704",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "��� 5 ��������멸낵"
+    }
+  ]
+}

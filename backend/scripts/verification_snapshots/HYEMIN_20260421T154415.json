@@ -1,0 +1,351 @@
+{
+  "hospital_code": "HYEMIN",
+  "hospital_name": "혜민병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김대현",
+      "department": "가정의학과",
+      "external_id": "HYEMIN-b3ba90b2a1",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "박선미",
+      "department": "내분비내과",
+      "external_id": "HYEMIN-bb5756f828",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강선영",
+      "department": "내분비내과",
+      "external_id": "HYEMIN-53784e9582",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "조해선",
+      "department": "마취통증의학과",
+      "external_id": "HYEMIN-6df072b212",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강홍선",
+      "department": "소화기내과",
+      "external_id": "HYEMIN-ff05eaae53",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "주형준",
+      "department": "소화기내과",
+      "external_id": "HYEMIN-dc06c3e5f4",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "염윤진",
+      "department": "소화기내과",
+      "external_id": "HYEMIN-46209efd77",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "정혜미",
+      "department": "소화기내과",
+      "external_id": "HYEMIN-9253e75d01",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김효진",
+      "department": "소화기내과",
+      "external_id": "HYEMIN-d37a1beb81",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "백지원",
+      "department": "소화기내과",
+      "external_id": "HYEMIN-fe958be214",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김중희",
+      "department": "소화기내과",
+      "external_id": "HYEMIN-819b0e5fb6",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "정규윤",
+      "department": "신경과",
+      "external_id": "HYEMIN-7deadb6967",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김수정",
+      "department": "신경과",
+      "external_id": "HYEMIN-d26b26fb95",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "황종헌",
+      "department": "신경외과",
+      "external_id": "HYEMIN-2c8c23fbad",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이한일",
+      "department": "신경외과",
+      "external_id": "HYEMIN-43c61689b6",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "조일련",
+      "department": "신장내과",
+      "external_id": "HYEMIN-c60d728f94",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "박근회",
+      "department": "신장내과",
+      "external_id": "HYEMIN-87f78b46af",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김의숙",
+      "department": "여성의학과",
+      "external_id": "HYEMIN-4d1700abf4",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조윤현",
+      "department": "여성의학과",
+      "external_id": "HYEMIN-ebdc309211",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장석환",
+      "department": "영상의학과",
+      "external_id": "HYEMIN-6da1acb8eb",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오병연",
+      "department": "응급의학과",
+      "external_id": "HYEMIN-c213854432",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전진우",
+      "department": "응급의학과",
+      "external_id": "HYEMIN-33c0505ed6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지수",
+      "department": "응급의학과",
+      "external_id": "HYEMIN-97d8749040",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진원",
+      "department": "응급의학과",
+      "external_id": "HYEMIN-189c5f2bfb",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진용",
+      "department": "응급의학과",
+      "external_id": "HYEMIN-7d39e00172",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남성훈",
+      "department": "이비인후과",
+      "external_id": "HYEMIN-d8ad402c14",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "홍은준",
+      "department": "복부암완화클리닉",
+      "external_id": "HYEMIN-cc5694c7c1",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "홍은준",
+      "department": "일반외과",
+      "external_id": "HYEMIN-ad0edd0e3c",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이중렬",
+      "department": "일반외과",
+      "external_id": "HYEMIN-daf89655ec",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "전승주",
+      "department": "정형외과",
+      "external_id": "HYEMIN-e5a5b7a318",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "안병현",
+      "department": "정형외과",
+      "external_id": "HYEMIN-3d972445b9",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "박정민",
+      "department": "정형외과",
+      "external_id": "HYEMIN-9ad8186e9e",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "최경미",
+      "department": "진단검사의학과",
+      "external_id": "HYEMIN-9c959837a1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김충훈",
+      "department": "심장내과",
+      "external_id": "HYEMIN-d554c2fc48",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이가연",
+      "department": "심장내과",
+      "external_id": "HYEMIN-3789396ebb",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "강예원",
+      "department": "호흡기&알레르기내과",
+      "external_id": "HYEMIN-8aaeac2be0",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정한",
+      "department": "흉부외과",
+      "external_id": "HYEMIN-3e1051b7ad",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "손웅주",
+      "department": "건강증진센터",
+      "external_id": "HYEMIN-3705a3e8e4",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정민",
+      "department": "당뇨발센터",
+      "external_id": "HYEMIN-4e612f2471",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "전승주",
+      "department": "관절·척추센터",
+      "external_id": "HYEMIN-d093827bcf",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이한일",
+      "department": "관절·척추센터",
+      "external_id": "HYEMIN-56a9f9e3b7",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "안병현",
+      "department": "관절·척추센터",
+      "external_id": "HYEMIN-1c8d05264d",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "백경기",
+      "department": "혈액종양내과",
+      "external_id": "HYEMIN-306405ff3f",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

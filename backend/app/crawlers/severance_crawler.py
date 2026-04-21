@@ -175,7 +175,11 @@ class SeveranceCrawler:
                                 if existing["specialty"] else specialty
                             )
                     else:
-                        ext_id = f"SEV-{emp_no}" if emp_no else f"SEV-{name}"
+                        if emp_no:
+                            ext_id = f"SEV-{emp_no}"
+                        else:
+                            safe_dept = (dept_nm or "").replace("/", "_").replace(" ", "")
+                            ext_id = f"SEV-{name}-{safe_dept}" if safe_dept else f"SEV-{name}"
                         all_doctors[key] = {
                             "staff_id": ext_id,
                             "external_id": ext_id,

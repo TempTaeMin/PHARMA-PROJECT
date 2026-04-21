@@ -1,0 +1,279 @@
+{
+  "hospital_code": "GSS",
+  "hospital_name": "구로성심병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "강정호",
+      "department": "영상의학과",
+      "external_id": "GSS-ba9a1d3d41",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽상훈",
+      "department": "응급의학과",
+      "external_id": "GSS-6ad62cedd3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김두배",
+      "department": "비뇨의학과",
+      "external_id": "GSS-f8430d570d",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명중",
+      "department": "응급의학과",
+      "external_id": "GSS-7fb2c0be0b",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병성",
+      "department": "직업환경의학과",
+      "external_id": "GSS-d2348b59fb",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상익",
+      "department": "흉부외과",
+      "external_id": "GSS-4567fa9c0c",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용복",
+      "department": "외과",
+      "external_id": "GSS-6069bae389",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤기",
+      "department": "가정의학과",
+      "external_id": "GSS-50e23ffd79",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준현",
+      "department": "신경과",
+      "external_id": "GSS-203f295409",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지선",
+      "department": "응급의학과",
+      "external_id": "GSS-d910467c41",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현정",
+      "department": "마취통증의학과",
+      "external_id": "GSS-ad9a57bc8c",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현주",
+      "department": "마취통증의학과",
+      "external_id": "GSS-87edbd58b1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남영오",
+      "department": "성형외과",
+      "external_id": "GSS-dfefe45840",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선민",
+      "department": "외과",
+      "external_id": "GSS-b1363e7a49",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소영",
+      "department": "병리과",
+      "external_id": "GSS-51360cacde",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안송이",
+      "department": "응급의학과",
+      "external_id": "GSS-3eae961985",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오다연",
+      "department": "소화기내과",
+      "external_id": "GSS-b098daaea5",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤귀준",
+      "department": "소화기내과",
+      "external_id": "GSS-c2262cdb78",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤도영",
+      "department": "영상의학과",
+      "external_id": "GSS-381a3fa837",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤호성",
+      "department": "류마티스내과",
+      "external_id": "GSS-1c620375b8",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승언",
+      "department": "신장내과",
+      "external_id": "GSS-eed150249f",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재우",
+      "department": "외과",
+      "external_id": "GSS-e86dc57089",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태길",
+      "department": "영상의학과",
+      "external_id": "GSS-27df426319",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호석",
+      "department": "정형외과",
+      "external_id": "GSS-4b6002498d",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임우정",
+      "department": "신경외과",
+      "external_id": "GSS-a9357d5493",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임태완",
+      "department": "외과",
+      "external_id": "GSS-a15c357ec1",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임효석",
+      "department": "호흡기내과",
+      "external_id": "GSS-c56b9d3782",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장현무",
+      "department": "건강검진센터 내과",
+      "external_id": "GSS-89aa28c00c",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지훈",
+      "department": "가정의학과",
+      "external_id": "GSS-9aec2e7a11",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진행",
+      "department": "응급의학과",
+      "external_id": "GSS-a239db0d3c",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조출현",
+      "department": "산부인과",
+      "external_id": "GSS-0f85e6bb6b",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최문찬",
+      "department": "내분비내과",
+      "external_id": "GSS-e831860a47",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상환",
+      "department": "정형외과",
+      "external_id": "GSS-165452c132",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허정민",
+      "department": "외과",
+      "external_id": "GSS-4cf7d504cf",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "hospital_code": "DRH",
+  "hospital_name": "대림성모병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김성원",
+      "department": "유방외과",
+      "external_id": "DRH-1-20",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주리",
+      "department": "방사선종양학과",
+      "external_id": "DRH-1-161",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동원",
+      "department": "유방외과",
+      "external_id": "DRH-1-21",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강은영",
+      "department": "유방외과",
+      "external_id": "DRH-1-162",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "유방외과",
+      "external_id": "DRH-1-123",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현정",
+      "department": "유방외과",
+      "external_id": "DRH-1-150",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지원",
+      "department": "혈액종양내과",
+      "external_id": "DRH-1-96",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여경아",
+      "department": "혈액종양내과",
+      "external_id": "DRH-1-164",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소민",
+      "department": "영상의학과",
+      "external_id": "DRH-1-86",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지윤",
+      "department": "영상의학과",
+      "external_id": "DRH-1-117",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유경",
+      "department": "영상의학과",
+      "external_id": "DRH-1-142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하정",
+      "department": "영상의학과",
+      "external_id": "DRH-1-155",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최혜경",
+      "department": "영상의학과",
+      "external_id": "DRH-1-169",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍준석",
+      "department": "산부인과",
+      "external_id": "DRH-1-130",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태준",
+      "department": "산부인과",
+      "external_id": "DRH-1-158",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소연",
+      "department": "핵의학과",
+      "external_id": "DRH-1-87",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오윤정",
+      "department": "정신건강의학과",
+      "external_id": "DRH-1-167",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정철",
+      "department": "재활의학과",
+      "external_id": "DRH-1-178",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성진용",
+      "department": "갑상선영상의학과",
+      "external_id": "DRH-2-55",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이남섭",
+      "department": "갑상선외과",
+      "external_id": "DRH-2-22",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유행랑",
+      "department": "갑상선외과",
+      "external_id": "DRH-2-128",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양세정",
+      "department": "내분비내과",
+      "external_id": "DRH-2-10",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장혜원",
+      "department": "내분비내과",
+      "external_id": "DRH-2-149",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽민숙",
+      "department": "영상의학과",
+      "external_id": "DRH-2-56",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성현",
+      "department": "영상의학과",
+      "external_id": "DRH-2-57",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동현",
+      "department": "영상의학과",
+      "external_id": "DRH-2-154",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송민교",
+      "department": "영상의학과",
+      "external_id": "DRH-2-166",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지원",
+      "department": "소화기내과",
+      "external_id": "DRH-3-74",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심영광",
+      "department": "소화기내과",
+      "external_id": "DRH-3-47",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지원",
+      "department": "소화기내과",
+      "external_id": "DRH-3-140",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍정",
+      "department": "소화기내과",
+      "external_id": "DRH-3-176",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경우",
+      "department": "신경과",
+      "external_id": "DRH-4-106",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한",
+      "department": "신경과",
+      "external_id": "DRH-4-92",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재구",
+      "department": "정형외과",
+      "external_id": "DRH-5-26",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현주",
+      "department": "정형외과",
+      "external_id": "DRH-5-175",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한실비",
+      "department": "가정의학과",
+      "external_id": "DRH-9-98",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍배",
+      "department": "가정의학과",
+      "external_id": "DRH-9-174",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효숙",
+      "department": "치과",
+      "external_id": "DRH-9-180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정삼",
+      "department": "소화기혈관외과",
+      "external_id": "DRH-25-160",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

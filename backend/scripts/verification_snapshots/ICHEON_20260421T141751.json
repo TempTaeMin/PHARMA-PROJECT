@@ -1,0 +1,311 @@
+{
+  "hospital_code": "ICHEON",
+  "hospital_name": "경기도의료원 이천병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박철희",
+      "department": "내과",
+      "external_id": "ICHEON-49-001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지원",
+      "department": "내과",
+      "external_id": "ICHEON-49-im36",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤솔지",
+      "department": "내과",
+      "external_id": "ICHEON-49-123",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장지민",
+      "department": "내과",
+      "external_id": "ICHEON-49-im27",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김수현",
+      "department": "순환기내과",
+      "external_id": "ICHEON-92-22",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "권오경",
+      "department": "순환기내과",
+      "external_id": "ICHEON-92-im51",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "조계열",
+      "department": "정형외과",
+      "external_id": "ICHEON-58-001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서규남",
+      "department": "정형외과",
+      "external_id": "ICHEON-58-13",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김호석",
+      "department": "정형외과",
+      "external_id": "ICHEON-58-os32",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백광재",
+      "department": "외과",
+      "external_id": "ICHEON-50-123",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이옥엽",
+      "department": "소아청소년과",
+      "external_id": "ICHEON-52-pd18",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정종성",
+      "department": "소아청소년과(야간)",
+      "external_id": "ICHEON-103-11",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김백균",
+      "department": "신경과",
+      "external_id": "ICHEON-51-123",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도연",
+      "department": "신경과",
+      "external_id": "ICHEON-51-11",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "계민석",
+      "department": "신경과",
+      "external_id": "ICHEON-51-14",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문석종",
+      "department": "비뇨의학과",
+      "external_id": "ICHEON-102-123",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박율현",
+      "department": "재활의학과",
+      "external_id": "ICHEON-95-rm11",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우지은",
+      "department": "재활의학과",
+      "external_id": "ICHEON-95-rm12",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성준",
+      "department": "재활의학과",
+      "external_id": "ICHEON-95-pt18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "전미향",
+      "department": "재활의학과",
+      "external_id": "ICHEON-95-pt20",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김동훈",
+      "department": "재활의학과",
+      "external_id": "ICHEON-95-gpmc7721",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "고성운",
+      "department": "재활의학과",
+      "external_id": "ICHEON-95-pt25",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김진아",
+      "department": "재활의학과",
+      "external_id": "ICHEON-95-pt27",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이진영",
+      "department": "치과",
+      "external_id": "ICHEON-59-001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "송하균",
+      "department": "응급의학과",
+      "external_id": "ICHEON-55-11",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "양승하",
+      "department": "응급의학과",
+      "external_id": "ICHEON-55-62",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "허재홍",
+      "department": "응급의학과",
+      "external_id": "ICHEON-55-24",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김은수",
+      "department": "응급의학과",
+      "external_id": "ICHEON-55-001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "함승호",
+      "department": "응급의학과",
+      "external_id": "ICHEON-55-1231",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "왕진원",
+      "department": "응급의학과",
+      "external_id": "ICHEON-55-40",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "강현솔",
+      "department": "응급의학과",
+      "external_id": "ICHEON-55-123",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김병철",
+      "department": "건강관리과",
+      "external_id": "ICHEON-57-001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병철",
+      "department": "진단검사의학과",
+      "external_id": "ICHEON-56-001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상호",
+      "department": "영상의학과",
+      "external_id": "ICHEON-54-001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류재일",
+      "department": "영상의학과",
+      "external_id": "ICHEON-54-51",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최인식",
+      "department": "영상의학과",
+      "external_id": "ICHEON-54-rd04",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤성",
+      "department": "마취통증의학과",
+      "external_id": "ICHEON-53-001",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성일",
+      "department": "돌봄의료센터",
+      "external_id": "ICHEON-122-11",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

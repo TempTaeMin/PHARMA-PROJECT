@@ -1,0 +1,239 @@
+{
+  "hospital_code": "ASSM",
+  "hospital_name": "안성성모병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "정내인",
+      "department": "심장내과",
+      "external_id": "ASSM-01-doctor_jni",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "이병수",
+      "department": "소화기내과",
+      "external_id": "ASSM-02-doctor_agl",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "권순범",
+      "department": "소화기내과",
+      "external_id": "ASSM-02-doctor_ksb",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "한융희",
+      "department": "소화기내과",
+      "external_id": "ASSM-02-20240101",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김다해",
+      "department": "소화기내과",
+      "external_id": "ASSM-02-dckdhae",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김종엽",
+      "department": "소화기내과",
+      "external_id": "ASSM-02-dc_kimjy",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "민경민",
+      "department": "내과",
+      "external_id": "ASSM-03-doctorminkm",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김현서",
+      "department": "신장내과",
+      "external_id": "ASSM-04-doctor_khs3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "이종현",
+      "department": "신장내과",
+      "external_id": "ASSM-04-doctor_ljh_2",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "손홍석",
+      "department": "신경과",
+      "external_id": "ASSM-05-doctor_shs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "공보준",
+      "department": "외과",
+      "external_id": "ASSM-06-dtkbj",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김준국",
+      "department": "정형외과",
+      "external_id": "ASSM-07-kjk_1230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "오승열",
+      "department": "정형외과",
+      "external_id": "ASSM-07-doctor_osy",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "유인선",
+      "department": "정형외과",
+      "external_id": "ASSM-07-dc_jis",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김수연",
+      "department": "신경외과",
+      "external_id": "ASSM-08-doctor_ksuy",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "박관웅",
+      "department": "신경외과",
+      "external_id": "ASSM-08-dc_park",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "공병곤",
+      "department": "비뇨의학과",
+      "external_id": "ASSM-09-doctor_kbk",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "허용석",
+      "department": "직업환경의학과",
+      "external_id": "ASSM-12-20250618",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "박강원",
+      "department": "직업환경의학과",
+      "external_id": "ASSM-12-doctor_pkw",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "정성기",
+      "department": "영상의학과",
+      "external_id": "ASSM-13-doctor_jsg",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "서정구",
+      "department": "마취통증의학과",
+      "external_id": "ASSM-14-doctor_sjg",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "임득호",
+      "department": "응급의학과",
+      "external_id": "ASSM-15-doctor_lim20250908",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "박영태",
+      "department": "응급의학과",
+      "external_id": "ASSM-15-doctor_park",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "황인성",
+      "department": "응급의학과",
+      "external_id": "ASSM-15-20250902_hwang",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "양형준",
+      "department": "응급의학과",
+      "external_id": "ASSM-15-doctor_yang",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김웅기",
+      "department": "응급의학과",
+      "external_id": "ASSM-15-doctor_kimwung",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "이승엽",
+      "department": "응급의학과",
+      "external_id": "ASSM-15-doctor_lsy",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "석정호",
+      "department": "진단검사의학과",
+      "external_id": "ASSM-18-doctor_sjh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    },
+    {
+      "name": "신형도",
+      "department": "산부인과",
+      "external_id": "ASSM-21-doctor_shd",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."
+    }
+  ]
+}

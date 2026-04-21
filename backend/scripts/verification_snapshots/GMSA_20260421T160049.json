@@ -1,0 +1,591 @@
+{
+  "hospital_code": "GMSA",
+  "hospital_name": "광명성애병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박노원",
+      "department": "가정의학과",
+      "external_id": "GMSA-SH1701-DT2558",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경채",
+      "department": "가정의학과",
+      "external_id": "GMSA-SH1701-DT2578",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최봉규",
+      "department": "가정의학과",
+      "external_id": "GMSA-SH1701-DT2579",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "기세윤",
+      "department": "감염내과",
+      "external_id": "GMSA-SH1790-DT3104",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경채",
+      "department": "건강의학센터",
+      "external_id": "GMSA-SH1702-DT3137",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최봉규",
+      "department": "건강의학센터",
+      "external_id": "GMSA-SH1702-DT3138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍수",
+      "department": "건강의학센터",
+      "external_id": "GMSA-SH1702-DT2602",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍연표",
+      "department": "건강의학센터",
+      "external_id": "GMSA-SH1702-DT3193",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한미경",
+      "department": "건강의학센터",
+      "external_id": "GMSA-SH1702-DT3136",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소찬수",
+      "department": "건강의학센터",
+      "external_id": "GMSA-SH1702-DT3216",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하지윤",
+      "department": "내분비내과",
+      "external_id": "GMSA-SH1675-DT3228",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이후전",
+      "department": "마취통증의학과",
+      "external_id": "GMSA-SH1697-DT2562",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경중",
+      "department": "마취통증의학과",
+      "external_id": "GMSA-SH1697-DT2563",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성후",
+      "department": "마취통증의학과",
+      "external_id": "GMSA-SH1697-DT2564",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희정",
+      "department": "병리과",
+      "external_id": "GMSA-SH1700-DT2577",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "비뇨의학과",
+      "external_id": "GMSA-SH1679-DT2518",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우영",
+      "department": "산부인과",
+      "external_id": "GMSA-SH1680-DT3076",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안효정",
+      "department": "산부인과",
+      "external_id": "GMSA-SH1680-DT3168",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진수",
+      "department": "성형외과/수부외과",
+      "external_id": "GMSA-SH1699-DT2573",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동철",
+      "department": "성형외과/수부외과",
+      "external_id": "GMSA-SH1699-DT2574",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노시영",
+      "department": "성형외과/수부외과",
+      "external_id": "GMSA-SH1699-DT2575",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경진",
+      "department": "성형외과/수부외과",
+      "external_id": "GMSA-SH1699-DT2572",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고성훈",
+      "department": "성형외과/수부외과",
+      "external_id": "GMSA-SH1699-DT3128",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원욱",
+      "department": "소아청소년과",
+      "external_id": "GMSA-SH1681-DT2524",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전연진",
+      "department": "소아청소년과",
+      "external_id": "GMSA-SH1681-DT3071",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유상수",
+      "department": "소아청소년과",
+      "external_id": "GMSA-SH1681-DT3213",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신현호",
+      "department": "소화기내과",
+      "external_id": "GMSA-SH1677-DT3194",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지훈",
+      "department": "소화기내과",
+      "external_id": "GMSA-SH1677-DT3215",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤동진",
+      "department": "소화기내과",
+      "external_id": "GMSA-SH1677-DT3217",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박광희",
+      "department": "소화기내과",
+      "external_id": "GMSA-SH1677-DT3218",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심충섭",
+      "department": "신경과",
+      "external_id": "GMSA-SH1682-DT2529",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤영훈",
+      "department": "신경과",
+      "external_id": "GMSA-SH1682-DT2530",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태은",
+      "department": "신경과",
+      "external_id": "GMSA-SH1682-DT2528",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박승원",
+      "department": "신경외과",
+      "external_id": "GMSA-SH1683-DT3230",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유동진",
+      "department": "신경외과",
+      "external_id": "GMSA-SH1683-DT3221",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상원",
+      "department": "신장내과",
+      "external_id": "GMSA-SH1674-DT2506",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희서",
+      "department": "신장내과",
+      "external_id": "GMSA-SH1674-DT3101",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박기수",
+      "department": "심장내과",
+      "external_id": "GMSA-SH1676-DT2509",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경중",
+      "department": "심장내과",
+      "external_id": "GMSA-SH1676-DT2511",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤성보",
+      "department": "심장내과",
+      "external_id": "GMSA-SH1676-DT3222",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안상기",
+      "department": "안과",
+      "external_id": "GMSA-SH1779-DT2590",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수정",
+      "department": "영상의학과",
+      "external_id": "GMSA-SH1685-DT2534",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지용",
+      "department": "영상의학과",
+      "external_id": "GMSA-SH1685-DT2535",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구진회",
+      "department": "영상의학과",
+      "external_id": "GMSA-SH1685-DT2536",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병규",
+      "department": "영상의학과",
+      "external_id": "GMSA-SH1685-DT2537",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박신희",
+      "department": "외과",
+      "external_id": "GMSA-SH1686-DT2539",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김행수",
+      "department": "외과",
+      "external_id": "GMSA-SH1686-DT2538",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세혁",
+      "department": "외과",
+      "external_id": "GMSA-SH1686-DT3223",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유진현",
+      "department": "응급의학과",
+      "external_id": "GMSA-SH1698-DT2568",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노현웅",
+      "department": "응급의학과",
+      "external_id": "GMSA-SH1698-DT2567",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤준",
+      "department": "응급의학과",
+      "external_id": "GMSA-SH1698-DT2569",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽동훈",
+      "department": "응급의학과",
+      "external_id": "GMSA-SH1698-DT3109",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형수",
+      "department": "응급의학과",
+      "external_id": "GMSA-SH1698-DT3165",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지운",
+      "department": "응급의학과",
+      "external_id": "GMSA-SH1698-DT3201",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진석",
+      "department": "응급의학과",
+      "external_id": "GMSA-SH1698-DT3203",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한세희",
+      "department": "응급의학과",
+      "external_id": "GMSA-SH1698-DT3226",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백성준",
+      "department": "이비인후과",
+      "external_id": "GMSA-SH1687-DT2542",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도연",
+      "department": "이비인후과",
+      "external_id": "GMSA-SH1687-DT3169",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백소영",
+      "department": "재활의학과",
+      "external_id": "GMSA-SH1688-DT2544",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "인득상",
+      "department": "정신건강의학과",
+      "external_id": "GMSA-SH1690-DT3219",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박병문",
+      "department": "정형외과",
+      "external_id": "GMSA-SH1691-DT2549",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동민",
+      "department": "정형외과",
+      "external_id": "GMSA-SH1691-DT3174",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권혁민",
+      "department": "정형외과",
+      "external_id": "GMSA-SH1691-DT3173",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상엽",
+      "department": "정형외과",
+      "external_id": "GMSA-SH1691-DT3197",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오수현",
+      "department": "정형외과",
+      "external_id": "GMSA-SH1691-DT3212",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태우",
+      "department": "정형외과",
+      "external_id": "GMSA-SH1691-DT3211",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍연표",
+      "department": "직업환경의학과",
+      "external_id": "GMSA-SH1695-DT3192",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김일태",
+      "department": "진단검사의학과",
+      "external_id": "GMSA-SH1692-DT2553",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희원",
+      "department": "치과",
+      "external_id": "GMSA-SH1696-DT2560",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤기용",
+      "department": "치과",
+      "external_id": "GMSA-SH1696-DT3079",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박혜진",
+      "department": "피부과",
+      "external_id": "GMSA-SH1693-DT3204",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김고운",
+      "department": "호흡기알레르기내과",
+      "external_id": "GMSA-SH1678-DT3116",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승우",
+      "department": "호흡기알레르기내과",
+      "external_id": "GMSA-SH1678-DT3125",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,735 @@
+{
+  "hospital_code": "HANIL",
+  "hospital_name": "한일병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박장원",
+      "department": "소화기내과",
+      "external_id": "HANIL-19510040",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동춘",
+      "department": "소화기내과",
+      "external_id": "HANIL-15510036",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서상준",
+      "department": "소화기내과",
+      "external_id": "HANIL-19510042",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "피규영",
+      "department": "소화기내과",
+      "external_id": "HANIL-24610021",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태훈",
+      "department": "순환기내과",
+      "external_id": "HANIL-22510030",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장호준",
+      "department": "순환기내과",
+      "external_id": "HANIL-23510027",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지박",
+      "department": "순환기내과",
+      "external_id": "HANIL-23510021",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최태영",
+      "department": "순환기내과",
+      "external_id": "HANIL-25610016",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고영민",
+      "department": "호흡기내과",
+      "external_id": "HANIL-19610031",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은실",
+      "department": "내분비내과",
+      "external_id": "HANIL-19610045",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이인영",
+      "department": "내분비내과",
+      "external_id": "HANIL-23610025",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승민",
+      "department": "신장내과",
+      "external_id": "HANIL-20610001",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수현",
+      "department": "신장내과",
+      "external_id": "HANIL-19610044",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이운지",
+      "department": "감염내과",
+      "external_id": "HANIL-20610023",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍석찬",
+      "department": "신경과",
+      "external_id": "HANIL-24510005",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장재홍",
+      "department": "신경과",
+      "external_id": "HANIL-17510003",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신재원",
+      "department": "신경과",
+      "external_id": "HANIL-18510022",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장현순",
+      "department": "신경과",
+      "external_id": "HANIL-20610002",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최예지",
+      "department": "신경과",
+      "external_id": "HANIL-24610017",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최휘영",
+      "department": "정신건강의학과",
+      "external_id": "HANIL-01580358",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우고운",
+      "department": "외과",
+      "external_id": "HANIL-19610001",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한민수",
+      "department": "외과",
+      "external_id": "HANIL-19510004",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유경탁",
+      "department": "외과",
+      "external_id": "HANIL-19510003",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한진수",
+      "department": "외과",
+      "external_id": "HANIL-20510005",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남윤환",
+      "department": "외과",
+      "external_id": "HANIL-18510023",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조정남",
+      "department": "외과",
+      "external_id": "HANIL-21510026",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진혁",
+      "department": "정형외과",
+      "external_id": "HANIL-22510028",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전대근",
+      "department": "정형외과",
+      "external_id": "HANIL-25510006",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승주",
+      "department": "정형외과",
+      "external_id": "HANIL-14510017",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동우",
+      "department": "정형외과",
+      "external_id": "HANIL-17510022",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조윤재",
+      "department": "정형외과",
+      "external_id": "HANIL-20510003",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한진",
+      "department": "정형외과",
+      "external_id": "HANIL-23510019",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이훈훈",
+      "department": "재활의학과",
+      "external_id": "HANIL-18510019",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임창수",
+      "department": "신경외과",
+      "external_id": "HANIL-05580275",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현호",
+      "department": "신경외과",
+      "external_id": "HANIL-20510004",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현식",
+      "department": "신경외과",
+      "external_id": "HANIL-23510002",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영진",
+      "department": "신경외과",
+      "external_id": "HANIL-24510008",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손상태",
+      "department": "심장혈관흉부외과",
+      "external_id": "HANIL-24510040",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주홍실",
+      "department": "성형외과",
+      "external_id": "HANIL-14610030",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승원",
+      "department": "성형외과",
+      "external_id": "HANIL-21510024",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우용",
+      "department": "성형외과",
+      "external_id": "HANIL-21510025",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강양자",
+      "department": "마취통증의학과",
+      "external_id": "HANIL-19610022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유성",
+      "department": "마취통증의학과",
+      "external_id": "HANIL-19510023",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유정영",
+      "department": "마취통증의학과",
+      "external_id": "HANIL-21610001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박윤선",
+      "department": "마취통증의학과",
+      "external_id": "HANIL-25610015",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권보람",
+      "department": "산부인과",
+      "external_id": "HANIL-22610031",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정아",
+      "department": "소아청소년과",
+      "external_id": "HANIL-04680358",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최응상",
+      "department": "소아청소년과",
+      "external_id": "HANIL-17510028",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손영주",
+      "department": "소아청소년과",
+      "external_id": "HANIL-21610021",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민수",
+      "department": "안과",
+      "external_id": "HANIL-12680505",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양찬주",
+      "department": "이비인후과",
+      "external_id": "HANIL-17610002",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안승현",
+      "department": "비뇨의학과",
+      "external_id": "HANIL-03580413",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동민",
+      "department": "비뇨의학과",
+      "external_id": "HANIL-19510034",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이무형",
+      "department": "피부과",
+      "external_id": "HANIL-21510009",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진아",
+      "department": "가정의학과",
+      "external_id": "HANIL-03680528",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양희진",
+      "department": "가정의학과",
+      "external_id": "HANIL-25610012",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이자연",
+      "department": "치과",
+      "external_id": "HANIL-19610043",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "치과",
+      "external_id": "HANIL-18610020",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허지혜",
+      "department": "영상의학과",
+      "external_id": "HANIL-17610018",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강희민",
+      "department": "영상의학과",
+      "external_id": "HANIL-25510008",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조충휘",
+      "department": "영상의학과",
+      "external_id": "HANIL-25510009",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민영",
+      "department": "영상의학과",
+      "external_id": "HANIL-25610019",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오은영",
+      "department": "진단검사의학과",
+      "external_id": "HANIL-24610029",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오현식",
+      "department": "병리과",
+      "external_id": "HANIL-25510020",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조인수",
+      "department": "응급의학과",
+      "external_id": "HANIL-24510004",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하철민",
+      "department": "응급의학과",
+      "external_id": "HANIL-16510031",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형주",
+      "department": "응급의학과",
+      "external_id": "HANIL-17510001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변준섭",
+      "department": "응급의학과",
+      "external_id": "HANIL-19510024",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김총명",
+      "department": "응급의학과",
+      "external_id": "HANIL-20510020",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정영윤",
+      "department": "응급의학과",
+      "external_id": "HANIL-21510015",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경욱",
+      "department": "응급의학과",
+      "external_id": "HANIL-23510018",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권오준",
+      "department": "응급의학과",
+      "external_id": "HANIL-2551001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최수복",
+      "department": "응급의학과",
+      "external_id": "HANIL-25510003",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서형우",
+      "department": "응급의학과",
+      "external_id": "HANIL-25510014",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "응급의학과",
+      "external_id": "HANIL-26510002",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이창균",
+      "department": "입원의학과",
+      "external_id": "HANIL-21510022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임동민",
+      "department": "입원의학과",
+      "external_id": "HANIL-19510028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강새한",
+      "department": "입원의학과",
+      "external_id": "HANIL-20510024",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송준규",
+      "department": "입원의학과",
+      "external_id": "HANIL-20510025",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종훈",
+      "department": "입원의학과",
+      "external_id": "HANIL-21510023",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최주은",
+      "department": "입원의학과",
+      "external_id": "HANIL-23510020",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신택수",
+      "department": "입원의학과",
+      "external_id": "HANIL-25510027",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대성",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-16510028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지수",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-22510005",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동일",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-25510005",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종헌",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-22510002",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강충원",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-22510003",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진우",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-22510001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현석",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-24510003",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조재혁",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-22510026",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조하람",
+      "department": "직업환경의학과",
+      "external_id": "HANIL-25510004",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

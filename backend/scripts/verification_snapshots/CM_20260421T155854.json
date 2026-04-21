@@ -1,0 +1,207 @@
+{
+  "hospital_code": "CM",
+  "hospital_name": "CM병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이상훈",
+      "department": "상지관절 1과",
+      "external_id": "CM-02",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형석",
+      "department": "상지관절 2과",
+      "external_id": "CM-44",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태희",
+      "department": "상지관절 4과",
+      "external_id": "CM-26",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍완기",
+      "department": "상지관절 5과",
+      "external_id": "CM-42",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천성하",
+      "department": "상지관절 5과",
+      "external_id": "CM-51",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유미",
+      "department": "하지관절 1과",
+      "external_id": "CM-47",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종인",
+      "department": "하지관절 2과",
+      "external_id": "CM-32",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종화",
+      "department": "하지관절 5과",
+      "external_id": "CM-43",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병섭",
+      "department": "척추 3과",
+      "external_id": "CM-41",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허동렬",
+      "department": "척추 4과",
+      "external_id": "CM-05",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장용준",
+      "department": "내과",
+      "external_id": "CM-13",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유형준",
+      "department": "내과",
+      "external_id": "CM-14",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보미",
+      "department": "내과",
+      "external_id": "CM-45",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태훈",
+      "department": "내과",
+      "external_id": "CM-49",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송인성",
+      "department": "내과",
+      "external_id": "CM-48",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병옥",
+      "department": "내과",
+      "external_id": "CM-50",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손호연",
+      "department": "신경과",
+      "external_id": "CM-18",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서병선",
+      "department": "일반외과",
+      "external_id": "CM-19",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장세권",
+      "department": "산부인과",
+      "external_id": "CM-20",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유성열",
+      "department": "마취통증의학과",
+      "external_id": "CM-21",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최승연",
+      "department": "마취통증의학과",
+      "external_id": "CM-52",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동오",
+      "department": "영상의학과",
+      "external_id": "CM-23",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현지",
+      "department": "영상의학과",
+      "external_id": "CM-24",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양성은",
+      "department": "진단검사의학과",
+      "external_id": "CM-25",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선기",
+      "department": "가정의학과",
+      "external_id": "CM-33",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

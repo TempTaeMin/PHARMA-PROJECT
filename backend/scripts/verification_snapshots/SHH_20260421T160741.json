@@ -1,0 +1,191 @@
+{
+  "hospital_code": "SHH",
+  "hospital_name": "서울현대병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이우태",
+      "department": "정형외과",
+      "external_id": "SHH-1",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허재우",
+      "department": "성형외과＆수부외과",
+      "external_id": "SHH-2",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허영우",
+      "department": "정형외과",
+      "external_id": "SHH-23",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성문",
+      "department": "정형외과",
+      "external_id": "SHH-4",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양두근",
+      "department": "정형외과",
+      "external_id": "SHH-30",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성재",
+      "department": "정형외과",
+      "external_id": "SHH-31",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허준영",
+      "department": "신경외과",
+      "external_id": "SHH-6",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주현",
+      "department": "마취통증의학과",
+      "external_id": "SHH-18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한홍석",
+      "department": "외과",
+      "external_id": "SHH-32",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백경원",
+      "department": "내과",
+      "external_id": "SHH-12",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김규",
+      "department": "내과",
+      "external_id": "SHH-25",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채민규",
+      "department": "내과",
+      "external_id": "SHH-28",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유어진",
+      "department": "내과",
+      "external_id": "SHH-33",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현기",
+      "department": "검진센터＆가정의학과",
+      "external_id": "SHH-24",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신지예",
+      "department": "검진센터＆가정의학과",
+      "external_id": "SHH-22",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임선영",
+      "department": "신경과",
+      "external_id": "SHH-8",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송경아",
+      "department": "산부인과",
+      "external_id": "SHH-17",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한준희",
+      "department": "영상의학과",
+      "external_id": "SHH-15",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서준",
+      "department": "영상의학과",
+      "external_id": "SHH-16",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용준",
+      "department": "진단검사의학과",
+      "external_id": "SHH-19",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이쌍현",
+      "department": "응급실",
+      "external_id": "SHH-26",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이창훈",
+      "department": "응급실",
+      "external_id": "SHH-29",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지웅",
+      "department": "치과",
+      "external_id": "SHH-21",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

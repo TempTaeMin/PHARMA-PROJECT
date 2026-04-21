@@ -1,0 +1,591 @@
+{
+  "hospital_code": "CHAMJE",
+  "hospital_name": "참조은병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "홍진숙",
+      "department": "가정의학과",
+      "external_id": "CHAMJE-22",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원정연",
+      "department": "감염내과",
+      "external_id": "CHAMJE-23",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수연",
+      "department": "내분비내과",
+      "external_id": "CHAMJE-24",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이세정",
+      "department": "내분비내과",
+      "external_id": "CHAMJE-97",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태규",
+      "department": "마취통증의학과",
+      "external_id": "CHAMJE-74",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박슬기",
+      "department": "마취통증의학과",
+      "external_id": "CHAMJE-73",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승환",
+      "department": "마취통증의학과",
+      "external_id": "CHAMJE-75",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신용호",
+      "department": "비뇨의학과",
+      "external_id": "CHAMJE-25",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승훈",
+      "department": "산부인과",
+      "external_id": "CHAMJE-26",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진영",
+      "department": "성형외과",
+      "external_id": "CHAMJE-27",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선재",
+      "department": "성형외과",
+      "external_id": "CHAMJE-28",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재한",
+      "department": "성형외과",
+      "external_id": "CHAMJE-116",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황태웅",
+      "department": "소아청소년과",
+      "external_id": "CHAMJE-29",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정희진",
+      "department": "소아청소년과",
+      "external_id": "CHAMJE-30",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤상필",
+      "department": "소화기내과",
+      "external_id": "CHAMJE-33",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민국",
+      "department": "소화기내과",
+      "external_id": "CHAMJE-31",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오쌍용",
+      "department": "소화기내과",
+      "external_id": "CHAMJE-32",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성균",
+      "department": "소화기내과",
+      "external_id": "CHAMJE-94",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원희",
+      "department": "소화기내과",
+      "external_id": "CHAMJE-35",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오진선",
+      "department": "소화기내과",
+      "external_id": "CHAMJE-95",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조동희",
+      "department": "소화기내과",
+      "external_id": "CHAMJE-34",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양지혜",
+      "department": "신경과",
+      "external_id": "CHAMJE-109",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임정아",
+      "department": "신경과",
+      "external_id": "CHAMJE-37",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용재",
+      "department": "신경외과",
+      "external_id": "CHAMJE-96",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최대한",
+      "department": "신경외과",
+      "external_id": "CHAMJE-102",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최태원",
+      "department": "신경외과",
+      "external_id": "CHAMJE-113",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태연",
+      "department": "신장내과",
+      "external_id": "CHAMJE-39",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현호",
+      "department": "신장내과",
+      "external_id": "CHAMJE-114",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고이경",
+      "department": "심장내과",
+      "external_id": "CHAMJE-111",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재덕",
+      "department": "심장내과",
+      "external_id": "CHAMJE-41",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동훈",
+      "department": "심장내과",
+      "external_id": "CHAMJE-115",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤표",
+      "department": "심장내과",
+      "external_id": "CHAMJE-42",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재호",
+      "department": "영상의학과",
+      "external_id": "CHAMJE-76",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정조성",
+      "department": "영상의학과",
+      "external_id": "CHAMJE-77",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송현",
+      "department": "영상의학과",
+      "external_id": "CHAMJE-78",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤선재",
+      "department": "영상의학과",
+      "external_id": "CHAMJE-79",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용표",
+      "department": "영상의학과",
+      "external_id": "CHAMJE-80",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성일",
+      "department": "외과",
+      "external_id": "CHAMJE-43",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동주",
+      "department": "외과",
+      "external_id": "CHAMJE-44",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준엽",
+      "department": "외과",
+      "external_id": "CHAMJE-45",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조인철",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-46",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문기준",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-47",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은호",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-54",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정희",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-48",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지혁",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-81",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태림",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-50",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유승준",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-51",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경욱",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-52",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인찬",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-53",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유주영",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-82",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이언우",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-108",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백의현",
+      "department": "응급의학과",
+      "external_id": "CHAMJE-49",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박승리",
+      "department": "재활의학과",
+      "external_id": "CHAMJE-55",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문정윤",
+      "department": "정신건강의학과",
+      "external_id": "CHAMJE-57",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문석현",
+      "department": "정신건강의학과",
+      "external_id": "CHAMJE-106",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원종화",
+      "department": "정형외과",
+      "external_id": "CHAMJE-58",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이춘기",
+      "department": "정형외과",
+      "external_id": "CHAMJE-59",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구형모",
+      "department": "정형외과",
+      "external_id": "CHAMJE-60",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구기형",
+      "department": "정형외과",
+      "external_id": "CHAMJE-61",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안준환",
+      "department": "정형외과",
+      "external_id": "CHAMJE-62",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송지웅",
+      "department": "정형외과",
+      "external_id": "CHAMJE-63",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "옥현수",
+      "department": "정형외과",
+      "external_id": "CHAMJE-65",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상길",
+      "department": "정형외과",
+      "external_id": "CHAMJE-64",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종수",
+      "department": "정형외과",
+      "external_id": "CHAMJE-66",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조관재",
+      "department": "정형외과",
+      "external_id": "CHAMJE-67",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태겸",
+      "department": "진단검사의학과",
+      "external_id": "CHAMJE-83",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세훈",
+      "department": "치과",
+      "external_id": "CHAMJE-68",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정한",
+      "department": "치과",
+      "external_id": "CHAMJE-112",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김근영",
+      "department": "치과",
+      "external_id": "CHAMJE-107",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장희승",
+      "department": "치과",
+      "external_id": "CHAMJE-110",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오기종",
+      "department": "호흡기내과",
+      "external_id": "CHAMJE-72",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한진형",
+      "department": "호흡기내과",
+      "external_id": "CHAMJE-93",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류혜미",
+      "department": "호흡기내과",
+      "external_id": "CHAMJE-104",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

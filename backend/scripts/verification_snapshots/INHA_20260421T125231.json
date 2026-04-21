@@ -1,0 +1,2151 @@
+{
+  "hospital_code": "INHA",
+  "hospital_name": "인하대병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이연지",
+      "department": "가정의학과",
+      "external_id": "INHA-63490",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지호",
+      "department": "가정의학과",
+      "external_id": "INHA-129453",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진수",
+      "department": "감염내과",
+      "external_id": "INHA-63448",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백지현",
+      "department": "감염내과",
+      "external_id": "INHA-63449",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이세주",
+      "department": "감염내과",
+      "external_id": "INHA-119719",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임재형",
+      "department": "감염내과",
+      "external_id": "INHA-63361",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소헌",
+      "department": "내분비내과",
+      "external_id": "INHA-63408",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성빈",
+      "department": "내분비내과",
+      "external_id": "INHA-63439",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안성희",
+      "department": "내분비내과",
+      "external_id": "INHA-63616",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서다혜",
+      "department": "내분비내과",
+      "external_id": "INHA-63511",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용인",
+      "department": "내분비내과",
+      "external_id": "INHA-85402",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김채아",
+      "department": "내분비내과",
+      "external_id": "INHA-150111",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권성렬",
+      "department": "류마티스내과",
+      "external_id": "INHA-63480",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임미진",
+      "department": "류마티스내과",
+      "external_id": "INHA-63396",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지열",
+      "department": "류마티스내과",
+      "external_id": "INHA-159114",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송한선",
+      "department": "류마티스내과",
+      "external_id": "INHA-139496",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송장호",
+      "department": "마취통증의학과",
+      "external_id": "INHA-63446",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임현경",
+      "department": "마취통증의학과",
+      "external_id": "INHA-63417",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정종권",
+      "department": "마취통증의학과",
+      "external_id": "INHA-63391",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한정욱",
+      "department": "마취통증의학과",
+      "external_id": "INHA-63420",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현주",
+      "department": "마취통증의학과",
+      "external_id": "INHA-63349",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양춘우",
+      "department": "마취통증의학과",
+      "external_id": "INHA-63558",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김나은",
+      "department": "마취통증의학과",
+      "external_id": "INHA-63513",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권혜림",
+      "department": "마취통증의학과",
+      "external_id": "INHA-122902",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김예원",
+      "department": "마취통증의학과",
+      "external_id": "INHA-135651",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강현욱",
+      "department": "마취통증의학과",
+      "external_id": "INHA-151056",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광섭",
+      "department": "마취통증의학과",
+      "external_id": "INHA-151057",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강수정",
+      "department": "마취통증의학과",
+      "external_id": "INHA-153948",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지명",
+      "department": "마취통증의학과",
+      "external_id": "INHA-153949",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유진",
+      "department": "마취통증의학과",
+      "external_id": "INHA-153950",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김헌정",
+      "department": "방사선종양학과",
+      "external_id": "INHA-63354",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정심",
+      "department": "방사선종양학과",
+      "external_id": "INHA-63538",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최윤선",
+      "department": "방사선종양학과",
+      "external_id": "INHA-150117",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김루시아",
+      "department": "병리과",
+      "external_id": "INHA-63460",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준미",
+      "department": "병리과",
+      "external_id": "INHA-63348",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최석진",
+      "department": "병리과",
+      "external_id": "INHA-63663",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한지영",
+      "department": "병리과",
+      "external_id": "INHA-63374",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류지간",
+      "department": "비뇨의학과",
+      "external_id": "INHA-63435",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이택",
+      "department": "비뇨의학과",
+      "external_id": "INHA-63388",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강동혁",
+      "department": "비뇨의학과",
+      "external_id": "INHA-63394",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종원",
+      "department": "비뇨의학과",
+      "external_id": "INHA-101401",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정두용",
+      "department": "비뇨의학과",
+      "external_id": "INHA-63664",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노범용",
+      "department": "비뇨의학과",
+      "external_id": "INHA-150118",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성욱",
+      "department": "산부인과",
+      "external_id": "INHA-63434",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최수란",
+      "department": "산부인과",
+      "external_id": "INHA-63537",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이방현",
+      "department": "산부인과",
+      "external_id": "INHA-88607",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수연",
+      "department": "산부인과",
+      "external_id": "INHA-126763",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "선기은",
+      "department": "산부인과",
+      "external_id": "INHA-139487",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장신아",
+      "department": "산부인과",
+      "external_id": "INHA-63667",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최화연",
+      "department": "산부인과",
+      "external_id": "INHA-150116",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "추성필",
+      "department": "산부인과",
+      "external_id": "INHA-126790",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임희경",
+      "department": "산부인과",
+      "external_id": "INHA-146067",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지연",
+      "department": "산부인과",
+      "external_id": "INHA-159116",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호",
+      "department": "산부인과",
+      "external_id": "INHA-160244",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "기세휘",
+      "department": "성형외과",
+      "external_id": "INHA-63633",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문지현",
+      "department": "성형외과",
+      "external_id": "INHA-126760",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍민기",
+      "department": "성형외과",
+      "external_id": "INHA-106361",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권영세",
+      "department": "소아청소년과",
+      "external_id": "INHA-63502",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정희",
+      "department": "소아청소년과",
+      "external_id": "INHA-63456",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "소아청소년과",
+      "external_id": "INHA-63315",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임대현",
+      "department": "소아청소년과",
+      "external_id": "INHA-63421",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효빈",
+      "department": "소아청소년과",
+      "external_id": "INHA-148478",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "소아청소년과",
+      "external_id": "INHA-63330",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한원호",
+      "department": "소아청소년과",
+      "external_id": "INHA-139493",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "소아청소년과",
+      "external_id": "INHA-86865",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정아",
+      "department": "소아청소년과",
+      "external_id": "INHA-107475",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽병옥",
+      "department": "소아청소년과",
+      "external_id": "INHA-145077",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지선",
+      "department": "소아청소년과",
+      "external_id": "INHA-139492",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주은영",
+      "department": "소아청소년과",
+      "external_id": "INHA-114143",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손혜준",
+      "department": "소아청소년과",
+      "external_id": "INHA-145078",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이가영",
+      "department": "소아청소년과",
+      "external_id": "INHA-126775",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안영민",
+      "department": "소아청소년과",
+      "external_id": "INHA-146450",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤석원",
+      "department": "소아청소년과",
+      "external_id": "INHA-139981",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유명지",
+      "department": "소아청소년과",
+      "external_id": "INHA-126769",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남수",
+      "department": "소아청소년과",
+      "external_id": "INHA-139608",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영석",
+      "department": "소아청소년과",
+      "external_id": "INHA-156823",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백남선",
+      "department": "소아청소년과",
+      "external_id": "INHA-156825",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전민준",
+      "department": "소아청소년과",
+      "external_id": "INHA-163779",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권계숙",
+      "department": "소화기내과",
+      "external_id": "INHA-63453",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이돈행",
+      "department": "소화기내과",
+      "external_id": "INHA-63381",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진우",
+      "department": "소화기내과",
+      "external_id": "INHA-63429",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정석",
+      "department": "소화기내과",
+      "external_id": "INHA-63433",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진영주",
+      "department": "소화기내과",
+      "external_id": "INHA-63552",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유정환",
+      "department": "소화기내과",
+      "external_id": "INHA-63546",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신종범",
+      "department": "소화기내과",
+      "external_id": "INHA-91685",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차보람",
+      "department": "소화기내과",
+      "external_id": "INHA-101322",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정남",
+      "department": "소화기내과",
+      "external_id": "INHA-110861",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고윤미",
+      "department": "소화기내과",
+      "external_id": "INHA-162363",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜미",
+      "department": "소화기내과",
+      "external_id": "INHA-156826",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형길",
+      "department": "소화기내과",
+      "external_id": "INHA-156824",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백일현",
+      "department": "소화기내과",
+      "external_id": "INHA-155721",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신용운",
+      "department": "소화기내과",
+      "external_id": "INHA-151054",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민성준",
+      "department": "소화기내과",
+      "external_id": "INHA-162364",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나정호",
+      "department": "신경과",
+      "external_id": "INHA-63601",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성혜",
+      "department": "신경과",
+      "external_id": "INHA-63602",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박희권",
+      "department": "신경과",
+      "external_id": "INHA-63603",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤혜원",
+      "department": "신경과",
+      "external_id": "INHA-63604",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권순욱",
+      "department": "신경과",
+      "external_id": "INHA-102059",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신용우",
+      "department": "신경과",
+      "external_id": "INHA-134211",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준용",
+      "department": "신경과",
+      "external_id": "INHA-146291",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송진택",
+      "department": "신경과",
+      "external_id": "INHA-150105",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김서연",
+      "department": "신경과",
+      "external_id": "INHA-150113",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "모희정",
+      "department": "신경과",
+      "external_id": "INHA-150114",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "신경과",
+      "external_id": "INHA-63478",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심유식",
+      "department": "신경외과",
+      "external_id": "INHA-63607",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤승환",
+      "department": "신경외과",
+      "external_id": "INHA-63586",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현동근",
+      "department": "신경외과",
+      "external_id": "INHA-63606",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류달성",
+      "department": "신경외과",
+      "external_id": "INHA-63548",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경민",
+      "department": "신경외과",
+      "external_id": "INHA-114308",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태형",
+      "department": "신경외과",
+      "external_id": "INHA-127840",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오세양",
+      "department": "신경외과",
+      "external_id": "INHA-150115",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송준호",
+      "department": "신장내과",
+      "external_id": "INHA-63454",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승우",
+      "department": "신장내과",
+      "external_id": "INHA-63401",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황선덕",
+      "department": "신장내과",
+      "external_id": "INHA-63464",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차준혁",
+      "department": "신장내과",
+      "external_id": "INHA-162365",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대혁",
+      "department": "심장내과",
+      "external_id": "INHA-63595",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우성일",
+      "department": "심장내과",
+      "external_id": "INHA-63525",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신성희",
+      "department": "심장내과",
+      "external_id": "INHA-63596",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상돈",
+      "department": "심장내과",
+      "external_id": "INHA-63597",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백용수",
+      "department": "심장내과",
+      "external_id": "INHA-63540",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대영",
+      "department": "심장내과",
+      "external_id": "INHA-126748",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장지훈",
+      "department": "심장내과",
+      "external_id": "INHA-107663",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성환",
+      "department": "심장내과",
+      "external_id": "INHA-92441",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기정",
+      "department": "심장내과",
+      "external_id": "INHA-150110",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형석",
+      "department": "심장내과",
+      "external_id": "INHA-155719",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정택",
+      "department": "심장혈관흉부외과",
+      "external_id": "INHA-63363",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤용한",
+      "department": "심장혈관흉부외과",
+      "external_id": "INHA-63398",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강철웅",
+      "department": "심장혈관흉부외과",
+      "external_id": "INHA-63427",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영삼",
+      "department": "심장혈관흉부외과",
+      "external_id": "INHA-63524",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성모",
+      "department": "안과",
+      "external_id": "INHA-63382",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김나래",
+      "department": "안과",
+      "external_id": "INHA-63497",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진희승",
+      "department": "안과",
+      "external_id": "INHA-63393",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김요셉",
+      "department": "안과",
+      "external_id": "INHA-138569",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신혜은",
+      "department": "안과",
+      "external_id": "INHA-126768",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강훈",
+      "department": "안과",
+      "external_id": "INHA-151912",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철우",
+      "department": "알레르기내과",
+      "external_id": "INHA-63440",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미영",
+      "department": "영상의학과",
+      "external_id": "INHA-63414",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경희",
+      "department": "영상의학과",
+      "external_id": "INHA-63438",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임명관",
+      "department": "영상의학과",
+      "external_id": "INHA-63369",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조순구",
+      "department": "영상의학과",
+      "external_id": "INHA-63418",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강영혜",
+      "department": "영상의학과",
+      "external_id": "INHA-63482",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구유진",
+      "department": "영상의학과",
+      "external_id": "INHA-134510",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원홍",
+      "department": "영상의학과",
+      "external_id": "INHA-63339",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노지훈",
+      "department": "영상의학과",
+      "external_id": "INHA-126759",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규홍",
+      "department": "영상의학과",
+      "external_id": "INHA-101405",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이로운",
+      "department": "영상의학과",
+      "external_id": "INHA-63673",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍정의",
+      "department": "영상의학과",
+      "external_id": "INHA-101406",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정은",
+      "department": "영상의학과",
+      "external_id": "INHA-139497",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건영",
+      "department": "외과",
+      "external_id": "INHA-63378",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최선근",
+      "department": "외과",
+      "external_id": "INHA-63430",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최윤미",
+      "department": "외과",
+      "external_id": "INHA-63481",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신우영",
+      "department": "외과",
+      "external_id": "INHA-63517",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경덕",
+      "department": "외과",
+      "external_id": "INHA-114146",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박신영",
+      "department": "외과",
+      "external_id": "INHA-91694",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최문석",
+      "department": "외과",
+      "external_id": "INHA-114150",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수영",
+      "department": "외과",
+      "external_id": "INHA-139482",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서지현",
+      "department": "외과",
+      "external_id": "INHA-126765",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성묵",
+      "department": "외과",
+      "external_id": "INHA-93890",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선민",
+      "department": "외과",
+      "external_id": "INHA-133413",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정태영",
+      "department": "외과",
+      "external_id": "INHA-101784",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오승종",
+      "department": "외과",
+      "external_id": "INHA-135443",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재철",
+      "department": "외과",
+      "external_id": "INHA-145075",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박호정",
+      "department": "외과",
+      "external_id": "INHA-150112",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공윤",
+      "department": "외과",
+      "external_id": "INHA-162366",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김사홍",
+      "department": "외과",
+      "external_id": "INHA-162368",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지혜",
+      "department": "응급의학과",
+      "external_id": "INHA-63476",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백진휘",
+      "department": "응급의학과",
+      "external_id": "INHA-63510",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승백",
+      "department": "응급의학과",
+      "external_id": "INHA-63424",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강수",
+      "department": "응급의학과",
+      "external_id": "INHA-63474",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현민",
+      "department": "응급의학과",
+      "external_id": "INHA-63509",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김아름",
+      "department": "응급의학과",
+      "external_id": "INHA-63615",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유진",
+      "department": "응급의학과",
+      "external_id": "INHA-63436",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태윤",
+      "department": "응급의학과",
+      "external_id": "INHA-133527",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김강호",
+      "department": "응급의학과",
+      "external_id": "INHA-122586",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김근영",
+      "department": "응급의학과",
+      "external_id": "INHA-126998",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민솔",
+      "department": "응급의학과",
+      "external_id": "INHA-126749",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김장효",
+      "department": "응급의학과",
+      "external_id": "INHA-101410",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문순정",
+      "department": "응급의학과",
+      "external_id": "INHA-135778",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상미",
+      "department": "응급의학과",
+      "external_id": "INHA-126997",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성혜",
+      "department": "응급의학과",
+      "external_id": "INHA-91682",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승열",
+      "department": "응급의학과",
+      "external_id": "INHA-63423",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안태규",
+      "department": "응급의학과",
+      "external_id": "INHA-95574",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이나현",
+      "department": "응급의학과",
+      "external_id": "INHA-95785",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이의영",
+      "department": "응급의학과",
+      "external_id": "INHA-126777",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형후",
+      "department": "응급의학과",
+      "external_id": "INHA-126781",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정다솜",
+      "department": "응급의학과",
+      "external_id": "INHA-152514",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한주홍",
+      "department": "응급의학과",
+      "external_id": "INHA-152140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최가영",
+      "department": "응급의학과",
+      "external_id": "INHA-146802",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임윤주",
+      "department": "응급의학과",
+      "external_id": "INHA-145927",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이제섭",
+      "department": "응급의학과",
+      "external_id": "INHA-141330",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이솔문",
+      "department": "응급의학과",
+      "external_id": "INHA-141328",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유시윤",
+      "department": "응급의학과",
+      "external_id": "INHA-141327",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진수",
+      "department": "응급의학과",
+      "external_id": "INHA-141326",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주예진",
+      "department": "응급의학과",
+      "external_id": "INHA-162374",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김규성",
+      "department": "이비인후과",
+      "external_id": "INHA-63431",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정석",
+      "department": "이비인후과",
+      "external_id": "INHA-63333",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현지",
+      "department": "이비인후과",
+      "external_id": "INHA-63468",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성용",
+      "department": "이비인후과",
+      "external_id": "INHA-162369",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "이비인후과",
+      "external_id": "INHA-63485",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철우",
+      "department": "임상약리학과",
+      "external_id": "INHA-83571",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김아진",
+      "department": "입원의학과",
+      "external_id": "INHA-63467",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성도환",
+      "department": "입원의학과",
+      "external_id": "INHA-63367",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정수",
+      "department": "입원의학과",
+      "external_id": "INHA-63617",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박미화",
+      "department": "입원의학과",
+      "external_id": "INHA-63572",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이만종",
+      "department": "입원의학과",
+      "external_id": "INHA-63618",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정미",
+      "department": "입원의학과",
+      "external_id": "INHA-63619",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "염태순",
+      "department": "입원의학과",
+      "external_id": "INHA-124714",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유동준",
+      "department": "입원의학과",
+      "external_id": "INHA-114318",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정환",
+      "department": "입원의학과",
+      "external_id": "INHA-63620",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정훈",
+      "department": "입원의학과",
+      "external_id": "INHA-155518",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소미",
+      "department": "입원의학과",
+      "external_id": "INHA-152867",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준희",
+      "department": "입원의학과",
+      "external_id": "INHA-139484",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소연",
+      "department": "입원의학과",
+      "external_id": "INHA-146645",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주환",
+      "department": "입원의학과",
+      "external_id": "INHA-144123",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양수철",
+      "department": "입원의학과",
+      "external_id": "INHA-155722",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정한영",
+      "department": "재활의학과",
+      "external_id": "INHA-63503",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창환",
+      "department": "재활의학과",
+      "external_id": "INHA-63426",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명옥",
+      "department": "재활의학과",
+      "external_id": "INHA-63613",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "좌경림",
+      "department": "재활의학과",
+      "external_id": "INHA-63610",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배재남",
+      "department": "정신건강의학과",
+      "external_id": "INHA-63366",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정섭",
+      "department": "정신건강의학과",
+      "external_id": "INHA-63389",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원형",
+      "department": "정신건강의학과",
+      "external_id": "INHA-63592",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김양식",
+      "department": "정신건강의학과",
+      "external_id": "INHA-119721",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "맹세리",
+      "department": "정신건강의학과",
+      "external_id": "INHA-63679",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은정",
+      "department": "정신건강의학과",
+      "external_id": "INHA-159115",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "정신건강의학과",
+      "external_id": "INHA-63383",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조규정",
+      "department": "정형외과",
+      "external_id": "INHA-63585",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동주",
+      "department": "정형외과",
+      "external_id": "INHA-63442",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범수",
+      "department": "정형외과",
+      "external_id": "INHA-63501",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전윤상",
+      "department": "정형외과",
+      "external_id": "INHA-63549",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유준일",
+      "department": "정형외과",
+      "external_id": "INHA-126774",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신근영",
+      "department": "정형외과",
+      "external_id": "INHA-155720",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류동진",
+      "department": "정형외과",
+      "external_id": "INHA-91415",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원사무엘재윤",
+      "department": "정형외과",
+      "external_id": "INHA-139488",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이제욱",
+      "department": "정형외과",
+      "external_id": "INHA-162370",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한희수",
+      "department": "정형외과",
+      "external_id": "INHA-162371",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "정형외과",
+      "external_id": "INHA-63325",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김환철",
+      "department": "직업환경의학과",
+      "external_id": "INHA-63488",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박신구",
+      "department": "직업환경의학과",
+      "external_id": "INHA-63462",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임종한",
+      "department": "직업환경의학과",
+      "external_id": "INHA-63397",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김양우",
+      "department": "직업환경의학과",
+      "external_id": "INHA-162373",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남정현",
+      "department": "진단검사의학과",
+      "external_id": "INHA-63380",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문연숙",
+      "department": "진단검사의학과",
+      "external_id": "INHA-63622",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최종원",
+      "department": "진단검사의학과",
+      "external_id": "INHA-63340",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장우리",
+      "department": "진단검사의학과",
+      "external_id": "INHA-63682",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오남식",
+      "department": "치과",
+      "external_id": "INHA-63419",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미경",
+      "department": "치과",
+      "external_id": "INHA-106011",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진호",
+      "department": "치과",
+      "external_id": "INHA-88606",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소현",
+      "department": "치과",
+      "external_id": "INHA-92539",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김복음",
+      "department": "치과",
+      "external_id": "INHA-142972",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신정현",
+      "department": "피부과",
+      "external_id": "INHA-63331",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최광성",
+      "department": "피부과",
+      "external_id": "INHA-63385",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변지원",
+      "department": "피부과",
+      "external_id": "INHA-63542",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신현태",
+      "department": "피부과",
+      "external_id": "INHA-91599",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "피부과",
+      "external_id": "INHA-153034",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현인영",
+      "department": "핵의학과",
+      "external_id": "INHA-63373",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유민영",
+      "department": "핵의학과",
+      "external_id": "INHA-126772",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이문희",
+      "department": "혈액종양내과",
+      "external_id": "INHA-63425",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임주한",
+      "department": "혈액종양내과",
+      "external_id": "INHA-63477",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진현",
+      "department": "혈액종양내과",
+      "external_id": "INHA-63326",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진철",
+      "department": "혈액종양내과",
+      "external_id": "INHA-91686",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류정선",
+      "department": "호흡기내과",
+      "external_id": "INHA-63386",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유우경",
+      "department": "호흡기내과",
+      "external_id": "INHA-126773",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임준혁",
+      "department": "호흡기내과",
+      "external_id": "INHA-63681",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차형근",
+      "department": "호흡기내과",
+      "external_id": "INHA-114227",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장혜진",
+      "department": "호흡기내과",
+      "external_id": "INHA-139480",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜수",
+      "department": "호흡기내과",
+      "external_id": "INHA-142264",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준",
+      "department": "호흡기내과",
+      "external_id": "INHA-162372",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

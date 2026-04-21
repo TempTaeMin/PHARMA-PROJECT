@@ -1,0 +1,1367 @@
+{
+  "hospital_code": "HYUMC",
+  "hospital_name": "한양대병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박훈기",
+      "department": "가정의학과",
+      "external_id": "HYUMC-1952898-111340",
+      "n_schedules": 5,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "황환식",
+      "department": "가정의학과",
+      "external_id": "HYUMC-2011793-111340",
+      "n_schedules": 5,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "박계영",
+      "department": "가정의학과",
+      "external_id": "HYUMC-2150259-111340",
+      "n_schedules": 4,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김용태",
+      "department": "비뇨의학과",
+      "external_id": "HYUMC-2061603-111290",
+      "n_schedules": 4,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "박성열",
+      "department": "비뇨의학과",
+      "external_id": "HYUMC-2082131-111290",
+      "n_schedules": 4,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "윤영은",
+      "department": "비뇨의학과",
+      "external_id": "HYUMC-2170067-111290",
+      "n_schedules": 5,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "조정기",
+      "department": "비뇨의학과",
+      "external_id": "HYUMC-2160021-111290",
+      "n_schedules": 6,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "윤성구",
+      "department": "비뇨의학과",
+      "external_id": "HYUMC-2260441-111290",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "최중섭",
+      "department": "산부인과",
+      "external_id": "HYUMC-2121841-111260",
+      "n_schedules": 5,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "호정규",
+      "department": "산부인과",
+      "external_id": "HYUMC-2101483-111260",
+      "n_schedules": 6,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "배재만",
+      "department": "산부인과",
+      "external_id": "HYUMC-2121856-111260",
+      "n_schedules": 5,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "이원무",
+      "department": "산부인과",
+      "external_id": "HYUMC-2110135-111260",
+      "n_schedules": 4,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "금지현",
+      "department": "산부인과",
+      "external_id": "HYUMC-2190186-111260",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "김연환",
+      "department": "성형외과",
+      "external_id": "HYUMC-2082040-111250",
+      "n_schedules": 4,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "장란숙",
+      "department": "성형외과",
+      "external_id": "HYUMC-2200121-111250",
+      "n_schedules": 4,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "김효성",
+      "department": "성형외과",
+      "external_id": "HYUMC-2232111-111250",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "성형외과",
+      "external_id": "HYUMC-2242362-111250",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "이호형",
+      "department": "성형외과",
+      "external_id": "HYUMC-2260455-111250",
+      "n_schedules": 5,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "구자욱",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2242381-111270",
+      "n_schedules": 4,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "김용주",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-1943643-111270",
+      "n_schedules": 4,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "양승",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2210023-111270",
+      "n_schedules": 7,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "박현경",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2071304-111270",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "이현주",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2102069-111270",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "안자혜",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2191819-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나재윤",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2200102-111270",
+      "n_schedules": 4,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "임성민",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2230066-111270",
+      "n_schedules": 4,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "최진주",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2220260-111270",
+      "n_schedules": 7,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "이인욱",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2242487-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문진화",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2107041-111270",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "서정호",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2242468-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유명진",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2242472-111270",
+      "n_schedules": 4,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "강윤구",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2242621-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤혜현",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2243957-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신주희",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2250190-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지은",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2250644-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안소윤",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2260857-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민정",
+      "department": "소아청소년과",
+      "external_id": "HYUMC-2260876-111270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최호순",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2260861-111110",
+      "n_schedules": 5,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "이오영",
+      "department": "소화기내과",
+      "external_id": "HYUMC-1941674-111110",
+      "n_schedules": 5,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "이항락",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2027291-111110",
+      "n_schedules": 4,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "전대원",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2101426-111110",
+      "n_schedules": 8,
+      "n_date_schedules": 56,
+      "notes": ""
+    },
+    {
+      "name": "이강녕",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2081651-111110",
+      "n_schedules": 4,
+      "n_date_schedules": 30,
+      "notes": ""
+    },
+    {
+      "name": "윤재훈",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2181367-111110",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "이상표",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2242673-111110",
+      "n_schedules": 3,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "윤아일린",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2210038-111110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진화",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2220217-111110",
+      "n_schedules": 5,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "최재영",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2242525-111110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효영",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2243589-111110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임대현",
+      "department": "소화기내과",
+      "external_id": "HYUMC-2250037-111110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승현",
+      "department": "신경과",
+      "external_id": "HYUMC-1931351-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희태",
+      "department": "신경과",
+      "external_id": "HYUMC-1941693-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현영",
+      "department": "신경과",
+      "external_id": "HYUMC-2050189-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희진",
+      "department": "신경과",
+      "external_id": "HYUMC-2081593-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "김영서",
+      "department": "신경과",
+      "external_id": "HYUMC-2100138-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오기욱",
+      "department": "신경과",
+      "external_id": "HYUMC-2110211-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진석",
+      "department": "신경과",
+      "external_id": "HYUMC-2140137-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성원재",
+      "department": "신경과",
+      "external_id": "HYUMC-2200303-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병우",
+      "department": "신경과",
+      "external_id": "HYUMC-2210191-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용성",
+      "department": "신경과",
+      "external_id": "HYUMC-2221907-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수",
+      "department": "신경과",
+      "external_id": "HYUMC-2230123-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현기",
+      "department": "신경과",
+      "external_id": "HYUMC-2230233-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용경",
+      "department": "신경과",
+      "external_id": "HYUMC-2242635-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강일모",
+      "department": "신경과",
+      "external_id": "HYUMC-2251029-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성우",
+      "department": "신경과",
+      "external_id": "HYUMC-2251033-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정수",
+      "department": "신경과",
+      "external_id": "HYUMC-2251105-111320",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최새미",
+      "department": "신경과",
+      "external_id": "HYUMC-2251124-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜선",
+      "department": "신경과",
+      "external_id": "HYUMC-2260785-111320",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백광흠",
+      "department": "신경외과",
+      "external_id": "HYUMC-1956726-111230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형중",
+      "department": "신경외과",
+      "external_id": "HYUMC-2000197-111230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전형준",
+      "department": "신경외과",
+      "external_id": "HYUMC-2071414-111230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최규선",
+      "department": "신경외과",
+      "external_id": "HYUMC-2160017-111230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나민균",
+      "department": "신경외과",
+      "external_id": "HYUMC-2200098-111230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한건희",
+      "department": "신경외과",
+      "external_id": "HYUMC-2242339-111230",
+      "n_schedules": 0,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "홍승우",
+      "department": "신경외과",
+      "external_id": "HYUMC-2242343-111230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이창화",
+      "department": "신장내과",
+      "external_id": "HYUMC-2021480-111150",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준성",
+      "department": "신장내과",
+      "external_id": "HYUMC-2060391-111150",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최종욱",
+      "department": "신장내과",
+      "external_id": "HYUMC-2242310-111150",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용준",
+      "department": "신장내과",
+      "external_id": "HYUMC-2252776-111150",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신진호",
+      "department": "심장내과",
+      "external_id": "HYUMC-2031161-111120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임영효",
+      "department": "심장내과",
+      "external_id": "HYUMC-2090140-111120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진규",
+      "department": "심장내과",
+      "external_id": "HYUMC-2150024-111120",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허란",
+      "department": "심장내과",
+      "external_id": "HYUMC-2180007-111120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우현",
+      "department": "심장내과",
+      "external_id": "HYUMC-2202382-111120",
+      "n_schedules": 0,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "국형돈",
+      "department": "심장내과",
+      "external_id": "HYUMC-2211675-111120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진선",
+      "department": "심장내과",
+      "external_id": "HYUMC-2250993-111120",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조하혜",
+      "department": "심장내과",
+      "external_id": "HYUMC-2251000-111120",
+      "n_schedules": 0,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "김혁",
+      "department": "심장혈관흉부외과",
+      "external_id": "HYUMC-1943677-111220",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장효준",
+      "department": "심장혈관흉부외과",
+      "external_id": "HYUMC-2180026-111220",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송승환",
+      "department": "심장혈관흉부외과",
+      "external_id": "HYUMC-2233562-111220",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "심장혈관흉부외과",
+      "external_id": "HYUMC-2250018-111220",
+      "n_schedules": 0,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "김연수",
+      "department": "심장혈관흉부외과",
+      "external_id": "HYUMC-2250022-111220",
+      "n_schedules": 0,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "임한웅",
+      "department": "안과",
+      "external_id": "HYUMC-2127361-111300",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안성준",
+      "department": "안과",
+      "external_id": "HYUMC-2160036-111300",
+      "n_schedules": 0,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "이원준",
+      "department": "안과",
+      "external_id": "HYUMC-2180050-111300",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유정",
+      "department": "안과",
+      "external_id": "HYUMC-2161965-111300",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지홍",
+      "department": "안과",
+      "external_id": "HYUMC-2211345-111300",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박혜민",
+      "department": "안과",
+      "external_id": "HYUMC-2251052-111300",
+      "n_schedules": 0,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "이종섭",
+      "department": "안과",
+      "external_id": "HYUMC-2260838-111300",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전석철",
+      "department": "영상의학과",
+      "external_id": "HYUMC-1830156-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고병희",
+      "department": "영상의학과",
+      "external_id": "HYUMC-1850390-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송순영",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2051080-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정선",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2081890-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영준",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2082035-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승훈",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2100123-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강보경",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2140051-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미미",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2160041-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유승진",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2200174-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이철민",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2200193-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선영",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2230071-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구혜령",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2251139-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권배주",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2232150-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황윤지",
+      "department": "영상의학과",
+      "external_id": "HYUMC-2242970-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경근",
+      "department": "외과",
+      "external_id": "HYUMC-2000111-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "최동호",
+      "department": "외과",
+      "external_id": "HYUMC-2131815-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정민성",
+      "department": "외과",
+      "external_id": "HYUMC-2071323-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하태경",
+      "department": "외과",
+      "external_id": "HYUMC-2081608-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안병규",
+      "department": "외과",
+      "external_id": "HYUMC-2090173-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "이주희",
+      "department": "외과",
+      "external_id": "HYUMC-2200064-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차치환",
+      "department": "외과",
+      "external_id": "HYUMC-2200079-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지윤",
+      "department": "외과",
+      "external_id": "HYUMC-2200141-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤경",
+      "department": "외과",
+      "external_id": "HYUMC-2210042-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경식",
+      "department": "외과",
+      "external_id": "HYUMC-2220236-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성실",
+      "department": "외과",
+      "external_id": "HYUMC-2230138-111210",
+      "n_schedules": 3,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "박신정",
+      "department": "외과",
+      "external_id": "HYUMC-2240264-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준선",
+      "department": "외과",
+      "external_id": "HYUMC-2251511-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준영",
+      "department": "외과",
+      "external_id": "HYUMC-2260823-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임태호",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2011296-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오재훈",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2120242-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고벽성",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2170048-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용일",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2170287-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원태영",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2191732-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배준원",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2200451-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준철",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2210076-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유경헌",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2221931-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진수",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2230157-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용탁",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2242396-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나승구",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2242563-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상환",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2251158-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍중",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2251909-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배주연",
+      "department": "응급의학과",
+      "external_id": "HYUMC-2254229-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "태경",
+      "department": "이비인후과",
+      "external_id": "HYUMC-1941655-111310",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조석현",
+      "department": "이비인후과",
+      "external_id": "HYUMC-2027311-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송창면",
+      "department": "이비인후과",
+      "external_id": "HYUMC-2120080-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재호",
+      "department": "이비인후과",
+      "external_id": "HYUMC-2137062-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상윤",
+      "department": "이비인후과",
+      "external_id": "HYUMC-2242415-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고주연",
+      "department": "피부과",
+      "external_id": "HYUMC-2071290-111280",
+      "n_schedules": 0,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "김정은",
+      "department": "피부과",
+      "external_id": "HYUMC-2120056-111280",
+      "n_schedules": 0,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "주민숙",
+      "department": "피부과",
+      "external_id": "HYUMC-2220221-111280",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최윤영",
+      "department": "핵의학과",
+      "external_id": "HYUMC-1961592-112160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수진",
+      "department": "핵의학과",
+      "external_id": "HYUMC-2160055-112160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤호주",
+      "department": "호흡기알레르기내과",
+      "external_id": "HYUMC-1932396-111130",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손장원",
+      "department": "호흡기알레르기내과",
+      "external_id": "HYUMC-1996429-111130",
+      "n_schedules": 0,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "김상헌",
+      "department": "호흡기알레르기내과",
+      "external_id": "HYUMC-2061512-111130",
+      "n_schedules": 0,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "이현",
+      "department": "호흡기알레르기내과",
+      "external_id": "HYUMC-2181352-111130",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한동우",
+      "department": "호흡기알레르기내과",
+      "external_id": "HYUMC-2251014-111130",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승준",
+      "department": "호흡기알레르기내과",
+      "external_id": "HYUMC-2260493-111130",
+      "n_schedules": 0,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "이종욱",
+      "department": "혈액종양내과",
+      "external_id": "HYUMC-2242401-111160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안명주",
+      "department": "혈액종양내과",
+      "external_id": "HYUMC-2260460-111160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박병배",
+      "department": "혈액종양내과",
+      "external_id": "HYUMC-2071706-111160",
+      "n_schedules": 0,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "엄지은",
+      "department": "혈액종양내과",
+      "external_id": "HYUMC-2142001-111160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성원",
+      "department": "혈액종양내과",
+      "external_id": "HYUMC-2260436-111160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태환",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-1975102-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남보라",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-2210205-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배상철",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-1911964-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "성윤경",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-2071892-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전재범",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-1942192-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조수경",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-2121818-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최찬범",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-2090025-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용범",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-2230214-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "최세림",
+      "department": "류마티스내과",
+      "external_id": "HYUMC-2242377-111190",
+      "n_schedules": 0,
+      "n_date_schedules": 18,
+      "notes": ""
+    }
+  ]
+}

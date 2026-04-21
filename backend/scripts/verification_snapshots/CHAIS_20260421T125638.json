@@ -1,0 +1,1479 @@
+{
+  "hospital_code": "CHAIS",
+  "hospital_name": "일산차병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박성철",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11481",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강석호",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11191",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김의혁",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11511",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하종원",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11501",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "부혜연",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11311",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍소연",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11341",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍다경",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11451",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수빈",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11461",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍기림",
+      "department": "산부인과(분만센터)",
+      "external_id": "CHAIS-department_childbirth-AG11421",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경은",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAIS-department_infertility-AG11291",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "염진아",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAIS-department_infertility-p2497",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류혜진",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAIS-department_infertility-AG11411",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜경",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAIS-department_infertility-p2248",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤혜경",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAIS-department_infertility-AG11561",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현지",
+      "department": "산부인과(난임센터)",
+      "external_id": "CHAIS-department_infertility-AG11611",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기헌",
+      "department": "산부인과(부인종양센터)",
+      "external_id": "CHAIS-department_gynecologicOncology-AG11221",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나영정",
+      "department": "산부인과(부인종양센터)",
+      "external_id": "CHAIS-department_gynecologicOncology-AG11241",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노주원",
+      "department": "산부인과(부인종양센터)",
+      "external_id": "CHAIS-department_gynecologicOncology-AG11231",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "산부인과(부인종양센터)",
+      "external_id": "CHAIS-department_gynecologicOncology-AG11201",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤보성",
+      "department": "산부인과(부인종양센터)",
+      "external_id": "CHAIS-department_gynecologicOncology-AG11371",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "산부인과(부인종양센터)",
+      "external_id": "CHAIS-department_gynecologicOncology-AG11551",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채수현",
+      "department": "산부인과(부인종양센터)",
+      "external_id": "CHAIS-department_gynecologicOncology-AG11581",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이아진",
+      "department": "산부인과(부인종양센터)",
+      "external_id": "CHAIS-department_gynecologicOncology-AG11601",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송경호",
+      "department": "소화기내과",
+      "external_id": "CHAIS-department_gastroenterology-AG20291",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한재용",
+      "department": "소화기내과",
+      "external_id": "CHAIS-department_gastroenterology-AG20301",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재복",
+      "department": "소화기내과",
+      "external_id": "CHAIS-department_gastroenterology-AG20372",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한소정",
+      "department": "소화기내과",
+      "external_id": "CHAIS-department_gastroenterology-AG20531",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지윤",
+      "department": "소화기내과",
+      "external_id": "CHAIS-department_gastroenterology-p2615",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원장",
+      "department": "순환기내과",
+      "external_id": "CHAIS-department_cardiology-AG20461",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재홍",
+      "department": "순환기내과",
+      "external_id": "CHAIS-department_cardiology-AG20551",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정훈",
+      "department": "호흡기내과",
+      "external_id": "CHAIS-department_pulmonology-AG20271",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박근형",
+      "department": "신장내과",
+      "external_id": "CHAIS-department_nephrology-AG20421",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양은지",
+      "department": "신장내과",
+      "external_id": "CHAIS-department_nephrology-AG20511",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송제은",
+      "department": "감염내과",
+      "external_id": "CHAIS-department_Infectious-AG20581",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현명한",
+      "department": "혈액종양내과",
+      "external_id": "CHAIS-department_HematoOncology-p2323",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "한방내과",
+      "external_id": "CHAIS-department_OrientalMedicine-p2173",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성은",
+      "department": "한방내과",
+      "external_id": "CHAIS-department_OrientalMedicine-p2331",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영업",
+      "department": "외과(유방암센터)",
+      "external_id": "CHAIS-department_breast-AG18151",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세중",
+      "department": "외과(유방암센터)",
+      "external_id": "CHAIS-department_breast-AG18361",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성수",
+      "department": "외과(유방암센터)",
+      "external_id": "CHAIS-department_breast-AG18111",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정선",
+      "department": "외과(유방암센터)",
+      "external_id": "CHAIS-department_breast-AG18401",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소은",
+      "department": "외과(유방암센터)",
+      "external_id": "CHAIS-department_breast-AG18141",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박귀선",
+      "department": "외과(대장항문)",
+      "external_id": "CHAIS-department_coloanal-AG18211",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍사랑",
+      "department": "외과(간담췌)",
+      "external_id": "CHAIS-department_hepato-biliary-pancreatic-AG18331",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황은아",
+      "department": "성형외과",
+      "external_id": "CHAIS-department_plasticSurgery-AA22171",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강유선",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24261",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미라",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24321",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민희",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24391",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현수",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24471",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신윤정",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24441",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손세형",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24241",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세라",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24461",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이창진",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-12341243",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선호",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24401",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미진",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24311",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신지원",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24431",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원석",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-AG24121",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근무",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-IL0062",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이흔지",
+      "department": "소아청소년과",
+      "external_id": "CHAIS-department_pediatrics-20240229",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송재만",
+      "department": "비뇨의학과",
+      "external_id": "CHAIS-department_urology-AG28141",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태진",
+      "department": "비뇨의학과",
+      "external_id": "CHAIS-department_urology-AA34151",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영주",
+      "department": "비뇨의학과",
+      "external_id": "CHAIS-department_urology-AG28111",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문정림",
+      "department": "재활의학과",
+      "external_id": "CHAIS-department_rehabilitationMedicine-AG29201",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "재활의학과",
+      "external_id": "CHAIS-department_rehabilitationMedicine-AG29211",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민경",
+      "department": "정신건강의학과",
+      "external_id": "CHAIS-department_psychiatry-AG19111",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정슬아",
+      "department": "정신건강의학과",
+      "external_id": "CHAIS-department_psychiatry-AG19121",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경란",
+      "department": "정신건강의학과",
+      "external_id": "CHAIS-department_psychiatry-AG19131",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이애영",
+      "department": "가정의학과",
+      "external_id": "CHAIS-department_FamilyMedicine-p2292",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효준",
+      "department": "가정의학과",
+      "external_id": "CHAIS-department_FamilyMedicine-p2582",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박숙영",
+      "department": "가정의학과",
+      "external_id": "CHAIS-department_FamilyMedicine-p2335",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임웅철",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p1786",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주영",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p1808",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김난설",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p2654",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강세희",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p2018",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정강하",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p2024",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정다운",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p1809",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주현",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p2193",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이나래",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p2245",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정민",
+      "department": "마취통증의학과",
+      "external_id": "CHAIS-department_anesthesiology-p2397",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명준",
+      "department": "영상의학과",
+      "external_id": "CHAIS-department_radiology-p1761",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고지은",
+      "department": "영상의학과",
+      "external_id": "CHAIS-department_radiology-p1789",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지희",
+      "department": "영상의학과",
+      "external_id": "CHAIS-department_radiology-p1812",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지희",
+      "department": "영상의학과",
+      "external_id": "CHAIS-department_radiology-p2138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜희",
+      "department": "영상의학과",
+      "external_id": "CHAIS-department_radiology-p2352",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경미",
+      "department": "진단검사의학과",
+      "external_id": "CHAIS-department_laboratoryMedicine-p1790",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현철",
+      "department": "병리과",
+      "external_id": "CHAIS-department_pathology-p2020",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한강민",
+      "department": "병리과",
+      "external_id": "CHAIS-department_pathology-p2339",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜라",
+      "department": "병리과",
+      "external_id": "CHAIS-department_pathology-p1868",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정완",
+      "department": "병리과",
+      "external_id": "CHAIS-department_pathology-p2141",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양고운",
+      "department": "방사선종양학과",
+      "external_id": "CHAIS-department_radiationOncology-AG47121",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주희",
+      "department": "핵의학과",
+      "external_id": "CHAIS-department_nuclearMedicine-p1791",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원석",
+      "department": "지역응급의료기관",
+      "external_id": "CHAIS-department_localEmergency-p1782",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근무",
+      "department": "지역응급의료기관",
+      "external_id": "CHAIS-department_localEmergency-p1805",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송주영",
+      "department": "지역응급의료기관",
+      "external_id": "CHAIS-department_localEmergency-p2393",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이흔지",
+      "department": "지역응급의료기관",
+      "external_id": "CHAIS-department_localEmergency-p2395",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신재원",
+      "department": "지역응급의료기관",
+      "external_id": "CHAIS-department_localEmergency-p2418",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박남경",
+      "department": "한방부인과",
+      "external_id": "CHAIS-department_OrientalGynecology-260031004",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성철",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11481",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강석호",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11191",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김의혁",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11511",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하종원",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11501",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "부혜연",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11311",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍소연",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11341",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍다경",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11451",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수빈",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11461",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍기림",
+      "department": "분만센터",
+      "external_id": "CHAIS-center_childbirth-AG11421",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경은",
+      "department": "난임센터",
+      "external_id": "CHAIS-center_infertility-AG11291",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "염진아",
+      "department": "난임센터",
+      "external_id": "CHAIS-center_infertility-p2497",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류혜진",
+      "department": "난임센터",
+      "external_id": "CHAIS-center_infertility-AG11411",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜경",
+      "department": "난임센터",
+      "external_id": "CHAIS-center_infertility-p2248",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤혜경",
+      "department": "난임센터",
+      "external_id": "CHAIS-center_infertility-AG11561",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현지",
+      "department": "난임센터",
+      "external_id": "CHAIS-center_infertility-AG11611",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기헌",
+      "department": "부인종양센터",
+      "external_id": "CHAIS-center_gynecologicOncology-AG11221",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나영정",
+      "department": "부인종양센터",
+      "external_id": "CHAIS-center_gynecologicOncology-AG11241",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노주원",
+      "department": "부인종양센터",
+      "external_id": "CHAIS-center_gynecologicOncology-AG11231",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "부인종양센터",
+      "external_id": "CHAIS-center_gynecologicOncology-AG11201",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤보성",
+      "department": "부인종양센터",
+      "external_id": "CHAIS-center_gynecologicOncology-AG11371",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "부인종양센터",
+      "external_id": "CHAIS-center_gynecologicOncology-AG11551",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채수현",
+      "department": "부인종양센터",
+      "external_id": "CHAIS-center_gynecologicOncology-AG11581",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이아진",
+      "department": "부인종양센터",
+      "external_id": "CHAIS-center_gynecologicOncology-AG11601",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영업",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AG18151",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세중",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AG18361",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성수",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AG18111",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정선",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AG18401",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소은",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AG18141",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황은아",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AA22171",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양고운",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AG47121",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주희",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p1791",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현명한",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p2323",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민경",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AG19111",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경란",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-AG19131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고지은",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p1789",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지희",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p1812",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜린",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p1888",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지희",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p2138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경미",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p1790",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현철",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p2020",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜라",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p1868",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정완",
+      "department": "유방암센터",
+      "external_id": "CHAIS-center_breast-p2141",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김법우",
+      "department": "갑상선암센터",
+      "external_id": "CHAIS-center_thyroid-AG18121",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민지",
+      "department": "갑상선암센터",
+      "external_id": "CHAIS-center_thyroid-AG18161",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희준",
+      "department": "갑상선암센터",
+      "external_id": "CHAIS-center_thyroid-AG18251",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나영정",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p1744",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기헌",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p1768",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노주원",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p1745",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p1742",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤보성",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p1925",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p2321",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채수현",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p2468",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이아진",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p2540",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김법우",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p1755",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민지",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-AG18161",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희준",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p2016",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정선",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p2539",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍사랑",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p2192",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영주",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p1784",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태진",
+      "department": "로봇수술센터",
+      "external_id": "CHAIS-center_RobotSurgery-p2156",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송경호",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20291",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한재용",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20301",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재복",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20372",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한소정",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20531",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임창훈",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20111",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍재원",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20561",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경혜",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20521",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원장",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20461",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재홍",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20551",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정훈",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20271",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박근형",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20421",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양은지",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20511",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송제은",
+      "department": "첨단 내과센터",
+      "external_id": "CHAIS-center_Internal-Medicine-AG20581",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박근형",
+      "department": "인공신장센터",
+      "external_id": "CHAIS-center_Artificial-Kidney-AG20421",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양은지",
+      "department": "인공신장센터",
+      "external_id": "CHAIS-center_Artificial-Kidney-AG20511",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박귀선",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p1950",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현종희",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2055",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜린",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p1888",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수지",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2229",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지혜",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2505",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이애영",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2293",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박숙영",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2335",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효준",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2582",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2614",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지윤",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2615",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선영",
+      "department": "건강증진센터",
+      "external_id": "CHAIS-center_checkup-p2616",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민경",
+      "department": "국제진료센터",
+      "external_id": "CHAIS-center_global-AG19111",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,1887 @@
+{
+  "hospital_code": "CMCEP",
+  "hospital_name": "은평성모병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "송찬희",
+      "department": "가정의학과",
+      "external_id": "CMCEP-D0001100",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "옥진주",
+      "department": "가정의학과",
+      "external_id": "CMCEP-D0000147",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진노",
+      "department": "가정의학과",
+      "external_id": "CMCEP-D0002789",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "복수 진료과: 완화의학과"
+    },
+    {
+      "name": "이재동",
+      "department": "가정의학과",
+      "external_id": "CMCEP-D0002606",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주영",
+      "department": "가정의학과",
+      "external_id": "CMCEP-D0002951",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한성화",
+      "department": "가정의학과",
+      "external_id": "CMCEP-D0003142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박천수",
+      "department": "간담췌외과",
+      "external_id": "CMCEP-D0001695",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정현",
+      "department": "간담췌외과",
+      "external_id": "CMCEP-D0000119",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박한얼",
+      "department": "간담췌외과",
+      "external_id": "CMCEP-D0002063",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정현",
+      "department": "감염내과",
+      "external_id": "CMCEP-D0001528",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선희",
+      "department": "감염내과",
+      "external_id": "CMCEP-D0002538",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소희",
+      "department": "갑상선내분비외과",
+      "external_id": "CMCEP-D0000625",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장상아",
+      "department": "내분비내과",
+      "external_id": "CMCEP-D0001056",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정민",
+      "department": "내분비내과",
+      "external_id": "CMCEP-D0000951",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미경",
+      "department": "내분비내과",
+      "external_id": "CMCEP-D0000059",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정민",
+      "department": "내분비내과",
+      "external_id": "CMCEP-D0000571",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽정은",
+      "department": "내분비내과",
+      "external_id": "CMCEP-D0002840",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종경",
+      "department": "대장항문외과",
+      "external_id": "CMCEP-D0000821",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형진",
+      "department": "대장항문외과",
+      "external_id": "CMCEP-D0001196",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "표대희",
+      "department": "대장항문외과",
+      "external_id": "CMCEP-D0002766",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진형",
+      "department": "대장항문외과",
+      "external_id": "CMCEP-D0002093",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창환",
+      "department": "대장항문외과",
+      "external_id": "CMCEP-D0003011",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤종현",
+      "department": "류마티스내과",
+      "external_id": "CMCEP-D0000865",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진희",
+      "department": "류마티스내과",
+      "external_id": "CMCEP-D0000516",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창재",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001027",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정미영",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0000988",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전준표",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001229",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문호식",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001241",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민지영",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001704",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤혜주",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001705",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지현숙",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001870",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소연",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001844",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정시욱",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0002443",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "형성우",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0002274",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채민석",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0000288",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박승재",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0003056",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정겨운",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001869",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수호",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0003040",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김고은",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0002461",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현성",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0002533",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전지현",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0001353",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성준",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0003091",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박의진",
+      "department": "마취통증의학과",
+      "external_id": "CMCEP-D0002769",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이시원",
+      "department": "방사선종양학과",
+      "external_id": "CMCEP-D0000468",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진아",
+      "department": "방사선종양학과",
+      "external_id": "CMCEP-D0003092",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은선",
+      "department": "병리과",
+      "external_id": "CMCEP-D0001180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민기옥",
+      "department": "병리과",
+      "external_id": "CMCEP-D0000991",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영섭",
+      "department": "병리과",
+      "external_id": "CMCEP-D0001725",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김다루",
+      "department": "병리과",
+      "external_id": "CMCEP-D0002682",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박원상",
+      "department": "병리과",
+      "external_id": "CMCEP-D0003084",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정호진",
+      "department": "병리과",
+      "external_id": "CMCEP-D0003099",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조수연",
+      "department": "비뇨의학과",
+      "external_id": "CMCEP-D0001049",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현우",
+      "department": "비뇨의학과",
+      "external_id": "CMCEP-D0000040",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상훈",
+      "department": "비뇨의학과",
+      "external_id": "CMCEP-D0000007",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규원",
+      "department": "비뇨의학과",
+      "external_id": "CMCEP-D0000512",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용석",
+      "department": "산부인과",
+      "external_id": "CMCEP-D0001141",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권지영",
+      "department": "산부인과",
+      "external_id": "CMCEP-D0001220",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남궁정",
+      "department": "산부인과",
+      "external_id": "CMCEP-D0000205",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정민진",
+      "department": "산부인과",
+      "external_id": "CMCEP-D0001674",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤현지",
+      "department": "산부인과",
+      "external_id": "CMCEP-D0002102",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배재영",
+      "department": "산부인과",
+      "external_id": "CMCEP-D0002759",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김채원",
+      "department": "산부인과",
+      "external_id": "CMCEP-D0002568",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나은영",
+      "department": "성형외과",
+      "external_id": "CMCEP-D0001531",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신종원",
+      "department": "성형외과",
+      "external_id": "CMCEP-D0000302",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지윤",
+      "department": "성형외과",
+      "external_id": "CMCEP-D0002607",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤종서",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0001238",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최의윤",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0000196",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범준",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0002088",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주영",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0001617",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배길성",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0000090",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김슬기",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0001394",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강은경",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0002991",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤정하",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0002696",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜미",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0001849",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심선희",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0002940",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석민",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0002643",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노혜령",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0002815",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유민선",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0002994",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규진",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0003009",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한부현",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0003030",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신혜원",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0003033",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박유나",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0003093",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조수진",
+      "department": "소아청소년과",
+      "external_id": "CMCEP-D0003143",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배시현",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0001212",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오정환",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0001066",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진수",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0000025",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성훈",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0000027",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임철현",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0000031",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤승배",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0000260",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고성우",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0000399",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양현",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0001677",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재준",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0001846",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이인호",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0002817",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용석",
+      "department": "소화기내과",
+      "external_id": "CMCEP-D0003008",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장성원",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0000963",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서석민",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0000053",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정은",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0001681",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권오성",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0001692",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최연직",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0002090",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정훈",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0002282",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김숙정",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0002276",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "온대웅",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0002526",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성진",
+      "department": "순환기내과",
+      "external_id": "CMCEP-D0003090",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종호",
+      "department": "신경과",
+      "external_id": "CMCEP-D0003014",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류나영",
+      "department": "신경과",
+      "external_id": "CMCEP-D0002286",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임은예",
+      "department": "신경과",
+      "external_id": "CMCEP-D0000405",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손효신",
+      "department": "신경과",
+      "external_id": "CMCEP-D0002613",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유현지",
+      "department": "신경과",
+      "external_id": "CMCEP-D0002761",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주영",
+      "department": "신경과",
+      "external_id": "CMCEP-D0002762",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한선규",
+      "department": "신경과",
+      "external_id": "CMCEP-D0003097",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박해관",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0000995",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안재근",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0001052",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유도성",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0001126",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주원일",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0000971",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍재택",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0000954",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허정우",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0000180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상혁",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0000365",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "은진",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0001346",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장서량",
+      "department": "신경외과",
+      "external_id": "CMCEP-D0001329",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병수",
+      "department": "신장내과",
+      "external_id": "CMCEP-D0001211",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최범순",
+      "department": "신장내과",
+      "external_id": "CMCEP-D0000910",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "반태현",
+      "department": "신장내과",
+      "external_id": "CMCEP-D0000292",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형덕",
+      "department": "신장내과",
+      "external_id": "CMCEP-D0001257",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성미",
+      "department": "신장내과",
+      "external_id": "CMCEP-D0002758",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강준규",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCEP-D0000479",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문영규",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCEP-D0000220",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안세하",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCEP-D0002434",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정석",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCEP-D0002630",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희경",
+      "department": "심장혈관흉부외과",
+      "external_id": "CMCEP-D0002488",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이나영",
+      "department": "안과",
+      "external_id": "CMCEP-D0001534",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현수",
+      "department": "안과",
+      "external_id": "CMCEP-D0000086",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원재연",
+      "department": "안과",
+      "external_id": "CMCEP-D0000419",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "염혜리",
+      "department": "안과",
+      "external_id": "CMCEP-D0001530",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신다영",
+      "department": "안과",
+      "external_id": "CMCEP-D0001378",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양순원",
+      "department": "안과",
+      "external_id": "CMCEP-D0001979",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임연주",
+      "department": "안과",
+      "external_id": "CMCEP-D0003094",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이순영",
+      "department": "안과",
+      "external_id": "CMCEP-D0002252",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전영준",
+      "department": "안과",
+      "external_id": "CMCEP-D0003095",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승은",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0000859",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이배영",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0000856",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천호종",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0000906",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영준",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0001072",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원유동",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0001067",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정나영",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0001230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이신우",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심동재",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0003035",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이하영",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002708",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김일중",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0000638",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최문형",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0000388",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오세원",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0001886",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유진영",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002901",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전창호",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002091",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지민",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002212",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤이은",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002757",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박석희",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002105",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지은",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0003060",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박혜주",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0001398",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송호석",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002427",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변호균",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002428",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장민재",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0002993",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희수",
+      "department": "영상의학과",
+      "external_id": "CMCEP-D0003042",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이시원",
+      "department": "완화의학과",
+      "external_id": "CMCEP-D0002938",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "복수 진료과: 종양내과"
+    },
+    {
+      "name": "김동진",
+      "department": "위장관외과",
+      "external_id": "CMCEP-D0000178",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박신혜",
+      "department": "위장관외과",
+      "external_id": "CMCEP-D0002765",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최승혜",
+      "department": "유방외과",
+      "external_id": "CMCEP-D0000927",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄용화",
+      "department": "유방외과",
+      "external_id": "CMCEP-D0000350",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최승필",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0000953",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수현",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0000125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성욱",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0001687",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권미경",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0000045",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오재훈",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0000565",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주종호",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0000307",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송찬이",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0002289",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임현묵",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0002009",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창환",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0002008",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박혜주",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0002537",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권용희",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0002868",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이광호",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0000308",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정일채",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0002790",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고현승",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0003098",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지수",
+      "department": "응급의학과",
+      "external_id": "CMCEP-D0003096",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병국",
+      "department": "이비인후과",
+      "external_id": "CMCEP-D0001216",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김청수",
+      "department": "이비인후과",
+      "external_id": "CMCEP-D0002939",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지선",
+      "department": "이비인후과",
+      "external_id": "CMCEP-D0000502",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한재상",
+      "department": "이비인후과",
+      "external_id": "CMCEP-D0001641",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방주인",
+      "department": "이비인후과",
+      "external_id": "CMCEP-D0002388",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임소연",
+      "department": "이비인후과",
+      "external_id": "CMCEP-D0003041",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전은정",
+      "department": "입원의학과",
+      "external_id": "CMCEP-D0001075",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황세원",
+      "department": "입원의학과",
+      "external_id": "CMCEP-D0000594",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송대헌",
+      "department": "재활의학과",
+      "external_id": "CMCEP-D0000993",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지혜",
+      "department": "재활의학과",
+      "external_id": "CMCEP-D0000395",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조아라",
+      "department": "재활의학과",
+      "external_id": "CMCEP-D0000660",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정규인",
+      "department": "정신건강의학과",
+      "external_id": "CMCEP-D0001174",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민현",
+      "department": "정신건강의학과",
+      "external_id": "CMCEP-D0000117",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승엽",
+      "department": "정신건강의학과",
+      "external_id": "CMCEP-D0000318",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석영",
+      "department": "정신건강의학과",
+      "external_id": "CMCEP-D0003013",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송현석",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0000945",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주엽",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0001002",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준석",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0000001",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고인준",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0000014",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승찬",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0000306",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형열",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0000564",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형석",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0001689",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용덕",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0002433",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원석형",
+      "department": "정형외과",
+      "external_id": "CMCEP-D0002764",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재진",
+      "department": "종양내과",
+      "external_id": "CMCEP-D0002992",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "종양내과",
+      "external_id": "CMCEP-D0003071",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "종양내과",
+      "external_id": "CMCEP-D0002283",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이제훈",
+      "department": "진단검사의학과",
+      "external_id": "CMCEP-D0000861",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임지향",
+      "department": "진단검사의학과",
+      "external_id": "CMCEP-D0000911",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성진",
+      "department": "진단검사의학과",
+      "external_id": "CMCEP-D0000525",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상화",
+      "department": "치과",
+      "external_id": "CMCEP-D0001192",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "모성서",
+      "department": "치과",
+      "external_id": "CMCEP-D0000145",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "감세훈",
+      "department": "치과",
+      "external_id": "CMCEP-D0001691",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고결",
+      "department": "치과",
+      "external_id": "CMCEP-D0001977",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남량",
+      "department": "치과",
+      "external_id": "CMCEP-D0002818",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강훈",
+      "department": "피부과",
+      "external_id": "CMCEP-D0001159",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정은",
+      "department": "피부과",
+      "external_id": "CMCEP-D0000191",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박혜림",
+      "department": "핵의학과",
+      "external_id": "CMCEP-D0000407",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권수진",
+      "department": "핵의학과",
+      "external_id": "CMCEP-D0002393",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황정기",
+      "department": "혈관이식외과",
+      "external_id": "CMCEP-D0001535",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미형",
+      "department": "혈관이식외과",
+      "external_id": "CMCEP-D0000334",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조형진",
+      "department": "혈관이식외과",
+      "external_id": "CMCEP-D0002429",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문지섬",
+      "department": "혈관이식외과",
+      "external_id": "CMCEP-D0002658",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준성",
+      "department": "혈관이식외과",
+      "external_id": "CMCEP-D0003010",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승환",
+      "department": "혈액내과",
+      "external_id": "CMCEP-D0000076",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병수",
+      "department": "혈액내과",
+      "external_id": "CMCEP-D0001867",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준엽",
+      "department": "혈액내과",
+      "external_id": "CMCEP-D0001945",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오예은",
+      "department": "혈액내과",
+      "external_id": "CMCEP-D0002319",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상학",
+      "department": "호흡기내과",
+      "external_id": "CMCEP-D0001179",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여창동",
+      "department": "호흡기내과",
+      "external_id": "CMCEP-D0000134",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세원",
+      "department": "호흡기내과",
+      "external_id": "CMCEP-D0001349",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜연",
+      "department": "호흡기내과",
+      "external_id": "CMCEP-D0000296",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이보라",
+      "department": "호흡기내과",
+      "external_id": "CMCEP-D0002752",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지호",
+      "department": "호흡기내과",
+      "external_id": "CMCEP-D0002929",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

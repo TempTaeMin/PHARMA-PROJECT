@@ -1,0 +1,1839 @@
+{
+  "hospital_code": "CAUGM",
+  "hospital_name": "중앙대학교광명병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "강경민",
+      "department": "외과",
+      "external_id": "CAUGM-115-1328-01957",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강세진",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1201-01806",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강수연",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-952-01528",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강승리",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAUGM-107-1125-01706",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지영",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-1185-01776",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강흥식",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-1031-01602",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고영준",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-398-01469",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고은별",
+      "department": "입원내과",
+      "external_id": "CAUGM-88-1259-01905",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고은진",
+      "department": "보철과",
+      "external_id": "CAUGM-98-1063-01639",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고은혜",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-1346-01999",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고현민",
+      "department": "외과",
+      "external_id": "CAUGM-115-1022-01583",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고혜영",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-963-01538",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권병택",
+      "department": "정형외과",
+      "external_id": "CAUGM-92-1062-01634",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권오주",
+      "department": "진단검사의학과",
+      "external_id": "CAUGM-94-321-01287",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권정혜",
+      "department": "혈액종양내과",
+      "external_id": "CAUGM-103-1268-01926",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권하나",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1215-01850",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "길종한",
+      "department": "신경외과",
+      "external_id": "CAUGM-111-1331-01968",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김가은",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-1139-01723",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김강민",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAUGM-107-1124-01705",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김강준",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-386-01479",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도희",
+      "department": "치과",
+      "external_id": "CAUGM-412-1280-01938",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김돈규",
+      "department": "재활의학과",
+      "external_id": "CAUGM-90-322-00742",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-1260-01909",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명선",
+      "department": "산부인과",
+      "external_id": "CAUGM-102-1182-01766",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민경",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-323-01357",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민준",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-1219-01871",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민철",
+      "department": "감염내과",
+      "external_id": "CAUGM-80-324-01234",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범석",
+      "department": "재활의학과",
+      "external_id": "CAUGM-90-432-01414",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병기",
+      "department": "산부인과",
+      "external_id": "CAUGM-102-1275-01930",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병준",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-1263-01875",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상욱",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-325-00700",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선회",
+      "department": "외과",
+      "external_id": "CAUGM-115-390-01446",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성희",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-970-01542",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소영",
+      "department": "핵의학과",
+      "external_id": "CAUGM-101-1341-01862",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수현",
+      "department": "신장내과",
+      "external_id": "CAUGM-112-326-00935",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김양수",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-366-01498",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영신",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-327-01270",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우섭",
+      "department": "성형외과",
+      "external_id": "CAUGM-105-1065-01632",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우주",
+      "department": "성형외과",
+      "external_id": "CAUGM-105-427-01475",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유민",
+      "department": "산부인과",
+      "external_id": "CAUGM-102-328-01302",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유진",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-980-01591",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은주",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-377-01404",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김응수",
+      "department": "안과",
+      "external_id": "CAUGM-113-406-01450",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김이수",
+      "department": "외과",
+      "external_id": "CAUGM-115-376-01445",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재민",
+      "department": "입원내과",
+      "external_id": "CAUGM-88-1264-01918",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재수",
+      "department": "정형외과",
+      "external_id": "CAUGM-92-1069-01641",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정숙",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-381-01451",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정훈",
+      "department": "비뇨의학과",
+      "external_id": "CAUGM-99-407-01457",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종혁",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-951-01527",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주연",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-973-01549",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주연",
+      "department": "류마티스내과",
+      "external_id": "CAUGM-84-1179-01704",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준열",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-1218-01870",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준환",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-1347-02000",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진욱",
+      "department": "비뇨의학과",
+      "external_id": "CAUGM-99-368-01120",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태우",
+      "department": "신경과",
+      "external_id": "CAUGM-110-1283-01936",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현승",
+      "department": "신경과",
+      "external_id": "CAUGM-110-1224-01880",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현아",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-1336-01972",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형호",
+      "department": "외과",
+      "external_id": "CAUGM-115-1056-01630",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜리",
+      "department": "정신건강의학과",
+      "external_id": "CAUGM-91-1339-01863",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김환일",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-1229-01890",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효진",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-430-01458",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희진",
+      "department": "정신건강의학과",
+      "external_id": "CAUGM-91-988-01369",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나용재",
+      "department": "재활의학과",
+      "external_id": "CAUGM-90-1130-01711",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나지민",
+      "department": "병리과",
+      "external_id": "CAUGM-96-1222-01877",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남궁명",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-991-01374",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남선우",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1035-01585",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남웅",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-1321-01962",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노정현",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-1318-01952",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "두영재",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-981-01556",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류나리",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-423-01470",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문석균",
+      "department": "이비인후과",
+      "external_id": "CAUGM-87-1277-00810",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성민",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-1265-01911",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문정빈",
+      "department": "입원내과",
+      "external_id": "CAUGM-88-1286-01945",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민수기",
+      "department": "병리과",
+      "external_id": "CAUGM-96-433-01453",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민철",
+      "department": "신경과",
+      "external_id": "CAUGM-110-409-01483",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선영",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-1140-01724",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성원",
+      "department": "구강악안면외과",
+      "external_id": "CAUGM-81-960-01534",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성준",
+      "department": "이비인후과",
+      "external_id": "CAUGM-87-332-01395",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소영",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-333-01392",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수정",
+      "department": "내과",
+      "external_id": "CAUGM-433-1231-01892",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용범",
+      "department": "정형외과",
+      "external_id": "CAUGM-92-336-01186",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은혜",
+      "department": "류마티스내과",
+      "external_id": "CAUGM-84-387-01343",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정하",
+      "department": "감염내과",
+      "external_id": "CAUGM-80-419-01352",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준호",
+      "department": "통합치의학과",
+      "external_id": "CAUGM-424-1146-01736",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박중민",
+      "department": "외과",
+      "external_id": "CAUGM-115-337-00953",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지연",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1141-01725",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박태순",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-435-01503",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박태영",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-413-01391",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박해리",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1211-01829",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박효준",
+      "department": "방사선종양학과",
+      "external_id": "CAUGM-89-1227-01886",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방시라",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1117-01696",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방창환",
+      "department": "신경외과",
+      "external_id": "CAUGM-111-401-01473",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배문숙",
+      "department": "감염내과",
+      "external_id": "CAUGM-80-1327-01956",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배성진",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-338-01364",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배은혜",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-1020-01582",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배정훈",
+      "department": "신경과",
+      "external_id": "CAUGM-110-408-01477",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배태희",
+      "department": "성형외과",
+      "external_id": "CAUGM-105-339-00812",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배현경",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-1323-01954",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백교림",
+      "department": "외과",
+      "external_id": "CAUGM-115-340-01348",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서상균",
+      "department": "외과",
+      "external_id": "CAUGM-115-420-01466",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정석",
+      "department": "정신건강의학과",
+      "external_id": "CAUGM-91-341-01349",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서형석",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-1032-01603",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "설혜령",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-972-01548",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성지수",
+      "department": "산부인과",
+      "external_id": "CAUGM-102-342-01363",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손지희",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-1322-01963",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손형은",
+      "department": "신장내과",
+      "external_id": "CAUGM-112-311-01463",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손희주",
+      "department": "외과",
+      "external_id": "CAUGM-115-421-01467",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송정민",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-1329-01958",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송효정",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-436-01504",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승용",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-343-01268",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신우영",
+      "department": "가정의학과",
+      "external_id": "CAUGM-79-344-01337",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심미영",
+      "department": "치과 교정과",
+      "external_id": "CAUGM-97-1145-01735",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안석원",
+      "department": "신경과",
+      "external_id": "CAUGM-110-1343-01003",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안소은",
+      "department": "외과",
+      "external_id": "CAUGM-115-1091-01659",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안아름",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-1287-01944",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안은진",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-345-01313",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안장훈",
+      "department": "치과 교정과",
+      "external_id": "CAUGM-97-977-01555",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양신호",
+      "department": "산부인과",
+      "external_id": "CAUGM-102-1066-01640",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양창봉",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-1039-01889",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여준형",
+      "department": "안과",
+      "external_id": "CAUGM-113-346-01325",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오도훈",
+      "department": "방사선종양학과",
+      "external_id": "CAUGM-89-347-01261",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오윤환",
+      "department": "가정의학과",
+      "external_id": "CAUGM-79-434-01415",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오자영",
+      "department": "안과",
+      "external_id": "CAUGM-113-1220-01873",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오창완",
+      "department": "신경외과",
+      "external_id": "CAUGM-111-1198-01789",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오현정",
+      "department": "이비인후과",
+      "external_id": "CAUGM-87-1334-01964",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우지연",
+      "department": "보존과",
+      "external_id": "CAUGM-427-1177-01760",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우하영",
+      "department": "병리과",
+      "external_id": "CAUGM-96-967-01544",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원기범",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-1060-01629",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "위성현",
+      "department": "신경외과",
+      "external_id": "CAUGM-111-348-01323",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유광호",
+      "department": "피부과",
+      "external_id": "CAUGM-100-349-01312",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유병선",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-1330-01959",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유지희",
+      "department": "내분비내과",
+      "external_id": "CAUGM-82-1122-01702",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유혜조",
+      "department": "방사선종양학과",
+      "external_id": "CAUGM-89-1133-01717",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유희준",
+      "department": "신경외과",
+      "external_id": "CAUGM-111-402-01474",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤경원",
+      "department": "외과",
+      "external_id": "CAUGM-115-506-01512",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤규호",
+      "department": "구강악안면외과",
+      "external_id": "CAUGM-81-1144-01734",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤세희",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-949-01519",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤수미",
+      "department": "진단검사의학과",
+      "external_id": "CAUGM-94-1142-01373",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤신원",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-498-00709",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤정석",
+      "department": "안과",
+      "external_id": "CAUGM-113-1295-01960",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지민",
+      "department": "이비인후과",
+      "external_id": "CAUGM-87-1272-01672",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤효민",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1202-01807",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강훈",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAUGM-107-1028-01581",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근영",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-370-01152",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이나미",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-351-01040",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이대근",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-417-01480",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동훈",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-352-00978",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동훈",
+      "department": "정형외과",
+      "external_id": "CAUGM-92-1043-01849",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이리리",
+      "department": "핵의학과",
+      "external_id": "CAUGM-101-353-01326",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상곤",
+      "department": "신경과",
+      "external_id": "CAUGM-110-975-01948",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상엽",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-414-01406",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상철",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1175-01768",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수영",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-1320-01953",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승현",
+      "department": "안과",
+      "external_id": "CAUGM-113-1129-01710",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승호",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-1138-01722",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이안복",
+      "department": "외과",
+      "external_id": "CAUGM-115-320-01448",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용성",
+      "department": "비뇨의학과",
+      "external_id": "CAUGM-99-428-01413",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유경",
+      "department": "재활의학과",
+      "external_id": "CAUGM-90-411-01485",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은주",
+      "department": "외과",
+      "external_id": "CAUGM-115-1023-01599",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정석",
+      "department": "신경과",
+      "external_id": "CAUGM-110-1337-01950",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종원",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-1061-01638",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준용",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1055-01627",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이찬영",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-507-01888",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이철영",
+      "department": "신경외과",
+      "external_id": "CAUGM-111-355-01394",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이충언",
+      "department": "비뇨의학과",
+      "external_id": "CAUGM-99-1126-01707",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태진",
+      "department": "병리과",
+      "external_id": "CAUGM-96-356-00734",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이향윤",
+      "department": "신장내과",
+      "external_id": "CAUGM-112-1326-01955",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현경",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-1171-01669",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현주",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-945-01523",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-388-01486",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임정원",
+      "department": "정형외과",
+      "external_id": "CAUGM-92-313-01472",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임홍의",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-1203-01817",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장경민",
+      "department": "신경외과",
+      "external_id": "CAUGM-111-358-01285",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장명화",
+      "department": "내분비내과",
+      "external_id": "CAUGM-82-1324-01949",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장정인",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-315-01459",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장지선",
+      "department": "산부인과",
+      "external_id": "CAUGM-102-957-01535",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장한밀",
+      "department": "진단검사의학과",
+      "external_id": "CAUGM-94-1338-01961",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장현준",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-1319-01965",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전민수",
+      "department": "방사선종양학과",
+      "external_id": "CAUGM-89-371-01390",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전재완",
+      "department": "신장내과",
+      "external_id": "CAUGM-112-1325-01951",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정광율",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-383-01416",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정다운",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-1120-01699",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정문기",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-416-01700",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정연수",
+      "department": "이비인후과",
+      "external_id": "CAUGM-87-1135-01719",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정영훈",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-415-01447",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용훈",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-359-00705",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤주",
+      "department": "외과",
+      "external_id": "CAUGM-115-1282-01937",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인숙",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-399-01488",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재훈",
+      "department": "안과",
+      "external_id": "CAUGM-113-405-01412",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정형석",
+      "department": "정형외과",
+      "external_id": "CAUGM-92-360-01254",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜민",
+      "department": "감염내과",
+      "external_id": "CAUGM-80-989-01419",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜선",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-361-01358",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정훈교",
+      "department": "신경외과",
+      "external_id": "CAUGM-111-1167-01716",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조세민",
+      "department": "신장내과",
+      "external_id": "CAUGM-112-389-01464",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은정",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-378-01455",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조준환",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-372-01269",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진환",
+      "department": "순환기내과",
+      "external_id": "CAUGM-109-1221-01876",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조창훈",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1214-01845",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주진호",
+      "department": "안과",
+      "external_id": "CAUGM-113-1116-01695",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차미경",
+      "department": "입원내과",
+      "external_id": "CAUGM-88-1178-01765",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최계원",
+      "department": "진단검사의학과",
+      "external_id": "CAUGM-94-1134-01718",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병휘",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-955-01531",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최상림",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-429-01482",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최선영",
+      "department": "피부과",
+      "external_id": "CAUGM-100-496-01422",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최윤형",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-1119-01698",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재철",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-362-00829",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정원",
+      "department": "신경과",
+      "external_id": "CAUGM-110-1136-01720",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최종영",
+      "department": "소화기내과",
+      "external_id": "CAUGM-108-1186-01767",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최중원",
+      "department": "비뇨의학과",
+      "external_id": "CAUGM-99-1030-01598",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현진",
+      "department": "산부인과",
+      "external_id": "CAUGM-102-373-01263",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최훈성",
+      "department": "내분비내과",
+      "external_id": "CAUGM-82-394-01456",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "추현희",
+      "department": "치과 교정과",
+      "external_id": "CAUGM-97-959-01539",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하삼열",
+      "department": "신경과",
+      "external_id": "CAUGM-110-363-01375",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하헌균",
+      "department": "외과",
+      "external_id": "CAUGM-115-503-01511",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한국남",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAUGM-107-403-01449",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한기오",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-1225-01882",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한우식",
+      "department": "심장혈관흉부외과",
+      "external_id": "CAUGM-107-404-01487",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한지원",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-431-01476",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한혜성",
+      "department": "피부과",
+      "external_id": "CAUGM-100-1029-01587",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허선진",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-954-01532",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허유정",
+      "department": "소아청소년과",
+      "external_id": "CAUGM-106-424-01471",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허진영",
+      "department": "호흡기알레르기내과",
+      "external_id": "CAUGM-104-319-01461",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현선지",
+      "department": "마취통증의학과",
+      "external_id": "CAUGM-85-1232-01897",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍기훈",
+      "department": "응급의학과",
+      "external_id": "CAUGM-86-1183-01774",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍준화",
+      "department": "심장뇌혈관병원",
+      "external_id": "CAUGM-393-1053-00960",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍지선",
+      "department": "정신건강의학과",
+      "external_id": "CAUGM-91-400-01411",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황아실이",
+      "department": "소하검진센터",
+      "external_id": "CAUGM-118-1223-01879",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황지연",
+      "department": "영상의학과",
+      "external_id": "CAUGM-114-1261-01908",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황지웅",
+      "department": "외과",
+      "external_id": "CAUGM-115-393-01409",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

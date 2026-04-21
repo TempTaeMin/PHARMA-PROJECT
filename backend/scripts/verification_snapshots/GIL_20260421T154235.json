@@ -1,0 +1,2399 @@
+{
+  "hospital_code": "GIL",
+  "hospital_name": "길병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "서희선",
+      "department": "가정의학과",
+      "external_id": "GIL-47145",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경곤",
+      "department": "가정의학과",
+      "external_id": "GIL-47106",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인철",
+      "department": "가정의학과",
+      "external_id": "GIL-47184",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고기동",
+      "department": "가정의학과",
+      "external_id": "GIL-46573",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최수정",
+      "department": "가정의학과",
+      "external_id": "GIL-229776",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규래",
+      "department": "가정의학과",
+      "external_id": "GIL-3899645",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용균",
+      "department": "감염내과",
+      "external_id": "GIL-52107",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주영",
+      "department": "감염내과",
+      "external_id": "GIL-2171579",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍신희",
+      "department": "감염내과",
+      "external_id": "GIL-285605",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄중식",
+      "department": "감염내과",
+      "external_id": "GIL-56135",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "시혜진",
+      "department": "감염내과",
+      "external_id": "GIL-56539",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박윤선",
+      "department": "감염내과",
+      "external_id": "GIL-1293713",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기영",
+      "department": "내분비대사내과",
+      "external_id": "GIL-52311",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박이병",
+      "department": "내분비대사내과",
+      "external_id": "GIL-52457",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄영실",
+      "department": "내분비대사내과",
+      "external_id": "GIL-53901",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이시훈",
+      "department": "내분비대사내과",
+      "external_id": "GIL-53349",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최철수",
+      "department": "내분비대사내과",
+      "external_id": "GIL-53512",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광원",
+      "department": "내분비대사내과",
+      "external_id": "GIL-54575",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병준",
+      "department": "내분비대사내과",
+      "external_id": "GIL-54699",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최효진",
+      "department": "류마티스내과",
+      "external_id": "GIL-52992",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여지나",
+      "department": "류마티스내과",
+      "external_id": "GIL-665691",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경천",
+      "department": "마취통증의학과",
+      "external_id": "GIL-57068",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍순",
+      "department": "마취통증의학과",
+      "external_id": "GIL-51325",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정월선",
+      "department": "마취통증의학과",
+      "external_id": "GIL-52272",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동철",
+      "department": "마취통증의학과",
+      "external_id": "GIL-52784",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽현정",
+      "department": "마취통증의학과",
+      "external_id": "GIL-52847",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조윤이",
+      "department": "마취통증의학과",
+      "external_id": "GIL-54025",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정주",
+      "department": "마취통증의학과",
+      "external_id": "GIL-55213",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용범",
+      "department": "마취통증의학과",
+      "external_id": "GIL-53140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박희연",
+      "department": "마취통증의학과",
+      "external_id": "GIL-53453",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지연",
+      "department": "마취통증의학과",
+      "external_id": "GIL-53472",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이미금",
+      "department": "마취통증의학과",
+      "external_id": "GIL-54044",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박춘곤",
+      "department": "마취통증의학과",
+      "external_id": "GIL-325456",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규찬",
+      "department": "방사선종양학과",
+      "external_id": "GIL-52743",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석호",
+      "department": "방사선종양학과",
+      "external_id": "GIL-53055",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성기훈",
+      "department": "방사선종양학과",
+      "external_id": "GIL-55398",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현주",
+      "department": "방사선종양학과",
+      "external_id": "GIL-56378",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준교",
+      "department": "방사선종양학과",
+      "external_id": "GIL-2676719",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하승연",
+      "department": "병리과",
+      "external_id": "GIL-51552",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정동해",
+      "department": "병리과",
+      "external_id": "GIL-52212",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주현",
+      "department": "병리과",
+      "external_id": "GIL-56076",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상호",
+      "department": "병리과",
+      "external_id": "GIL-54206",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지섭",
+      "department": "병리과",
+      "external_id": "GIL-666205",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태범",
+      "department": "비뇨의학과",
+      "external_id": "GIL-53432",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창희",
+      "department": "비뇨의학과",
+      "external_id": "GIL-55112",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경진",
+      "department": "비뇨의학과",
+      "external_id": "GIL-53761",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광택",
+      "department": "비뇨의학과",
+      "external_id": "GIL-54430",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박태영",
+      "department": "비뇨의학과",
+      "external_id": "GIL-2943976",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박일우",
+      "department": "비뇨의학과",
+      "external_id": "GIL-3606121",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이광범",
+      "department": "산부인과",
+      "external_id": "GIL-53119",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석영",
+      "department": "산부인과",
+      "external_id": "GIL-52045",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신진우",
+      "department": "산부인과",
+      "external_id": "GIL-52909",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승호",
+      "department": "산부인과",
+      "external_id": "GIL-53285",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전승주",
+      "department": "산부인과",
+      "external_id": "GIL-55337",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오수현",
+      "department": "산부인과",
+      "external_id": "GIL-692182",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안선아",
+      "department": "산부인과",
+      "external_id": "GIL-3899548",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김양우",
+      "department": "성형외과",
+      "external_id": "GIL-55009",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유진",
+      "department": "성형외과",
+      "external_id": "GIL-52621",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차진한",
+      "department": "성형외과",
+      "external_id": "GIL-2857594",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정태",
+      "department": "성형외과",
+      "external_id": "GIL-3386328",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효헌",
+      "department": "성형외과",
+      "external_id": "GIL-3386337",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안경진",
+      "department": "소아심장과",
+      "external_id": "GIL-1914828",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심우섭",
+      "department": "소아심장과",
+      "external_id": "GIL-1975099",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손동우",
+      "department": "소아청소년과",
+      "external_id": "GIL-52888",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조혜정",
+      "department": "소아청소년과",
+      "external_id": "GIL-54145",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은진",
+      "department": "소아청소년과",
+      "external_id": "GIL-56055",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효정",
+      "department": "소아청소년과",
+      "external_id": "GIL-55295",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진욱",
+      "department": "소아청소년과",
+      "external_id": "GIL-2120449",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영환",
+      "department": "소아청소년과",
+      "external_id": "GIL-3334729",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백경윤",
+      "department": "소아청소년과",
+      "external_id": "GIL-2070285",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허지애",
+      "department": "소아청소년과",
+      "external_id": "GIL-2019732",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상훈",
+      "department": "소아청소년과",
+      "external_id": "GIL-3334720",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수중",
+      "department": "소아청소년과",
+      "external_id": "GIL-3899676",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주현",
+      "department": "소화기내과",
+      "external_id": "GIL-51345",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연석",
+      "department": "소화기내과",
+      "external_id": "GIL-52415",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권오상",
+      "department": "소화기내과",
+      "external_id": "GIL-52128",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정호",
+      "department": "소화기내과",
+      "external_id": "GIL-53880",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권광안",
+      "department": "소화기내과",
+      "external_id": "GIL-94935",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연수",
+      "department": "소화기내과",
+      "external_id": "GIL-53098",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김의주",
+      "department": "소화기내과",
+      "external_id": "GIL-55233",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승각",
+      "department": "소화기내과",
+      "external_id": "GIL-55133",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정준원",
+      "department": "소화기내과",
+      "external_id": "GIL-53719",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경오",
+      "department": "소화기내과",
+      "external_id": "GIL-229742",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한나",
+      "department": "소화기내과",
+      "external_id": "GIL-666317",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한영헌",
+      "department": "소화기내과",
+      "external_id": "GIL-2070752",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤석",
+      "department": "소화기내과",
+      "external_id": "GIL-2390210",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민나",
+      "department": "소화기내과",
+      "external_id": "GIL-3911454",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문상훈",
+      "department": "소화기내과",
+      "external_id": "GIL-3901786",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우성진",
+      "department": "소화기내과",
+      "external_id": "GIL-3899707",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현미",
+      "department": "신경과",
+      "external_id": "GIL-51798",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영배",
+      "department": "신경과",
+      "external_id": "GIL-52352",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박기형",
+      "department": "신경과",
+      "external_id": "GIL-53076",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노영",
+      "department": "신경과",
+      "external_id": "GIL-54720",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양지원",
+      "department": "신경과",
+      "external_id": "GIL-56196",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현",
+      "department": "신경과",
+      "external_id": "GIL-55563",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하상희",
+      "department": "신경과",
+      "external_id": "GIL-2070575",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배은기",
+      "department": "신경과",
+      "external_id": "GIL-3096223",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장대일",
+      "department": "신경과",
+      "external_id": "GIL-3283654",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양희준",
+      "department": "신경과",
+      "external_id": "GIL-3386346",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우경",
+      "department": "신경외과",
+      "external_id": "GIL-53222",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유찬종",
+      "department": "신경외과",
+      "external_id": "GIL-51944",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영보",
+      "department": "신경외과",
+      "external_id": "GIL-51531",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박광우",
+      "department": "신경외과",
+      "external_id": "GIL-56498",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은영",
+      "department": "신경외과",
+      "external_id": "GIL-52868",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손성",
+      "department": "신경외과",
+      "external_id": "GIL-54166",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정태석",
+      "department": "신경외과",
+      "external_id": "GIL-55438",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기택",
+      "department": "신경외과",
+      "external_id": "GIL-54615",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명진",
+      "department": "신경외과",
+      "external_id": "GIL-54636",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박한별",
+      "department": "신경외과",
+      "external_id": "GIL-2070227",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동원",
+      "department": "신경외과",
+      "external_id": "GIL-1293753",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오한산",
+      "department": "신경외과",
+      "external_id": "GIL-2070459",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박윤관",
+      "department": "신경외과",
+      "external_id": "GIL-2070169",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박태윤",
+      "department": "신경외과",
+      "external_id": "GIL-3899485",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우경",
+      "department": "신장내과",
+      "external_id": "GIL-52477",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현희",
+      "department": "신장내과",
+      "external_id": "GIL-52497",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김애진",
+      "department": "신장내과",
+      "external_id": "GIL-54864",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장제현",
+      "department": "신장내과",
+      "external_id": "GIL-53635",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지용",
+      "department": "신장내과",
+      "external_id": "GIL-53677",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신익균",
+      "department": "심장내과",
+      "external_id": "GIL-3417181",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신미승",
+      "department": "심장내과",
+      "external_id": "GIL-52394",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승환",
+      "department": "심장내과",
+      "external_id": "GIL-52517",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강웅철",
+      "department": "심장내과",
+      "external_id": "GIL-52579",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정욱진",
+      "department": "심장내과",
+      "external_id": "GIL-52600",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박예민",
+      "department": "심장내과",
+      "external_id": "GIL-54741",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경훈",
+      "department": "심장내과",
+      "external_id": "GIL-53656",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문정근",
+      "department": "심장내과",
+      "external_id": "GIL-54124",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민수",
+      "department": "심장내과",
+      "external_id": "GIL-666668",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장영우",
+      "department": "심장내과",
+      "external_id": "GIL-56457",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하경은",
+      "department": "심장내과",
+      "external_id": "GIL-2070723",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준표",
+      "department": "심장내과",
+      "external_id": "GIL-686367",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양태일",
+      "department": "심장내과",
+      "external_id": "GIL-3283694",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원윤선",
+      "department": "심장내과",
+      "external_id": "GIL-1290974",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "위진",
+      "department": "심장내과",
+      "external_id": "GIL-56662",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양소영",
+      "department": "심장내과",
+      "external_id": "GIL-3732334",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상훈",
+      "department": "심장내과",
+      "external_id": "GIL-3911445",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박국양",
+      "department": "심장혈관흉부외과",
+      "external_id": "GIL-51653",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박철현",
+      "department": "심장혈관흉부외과",
+      "external_id": "GIL-51673",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김건우",
+      "department": "심장혈관흉부외과",
+      "external_id": "GIL-54657",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최창휴",
+      "department": "심장혈관흉부외과",
+      "external_id": "GIL-52951",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손국희",
+      "department": "심장혈관흉부외과",
+      "external_id": "GIL-54678",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소영",
+      "department": "심장혈관흉부외과",
+      "external_id": "GIL-671704",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석인",
+      "department": "심장혈관흉부외과",
+      "external_id": "GIL-55666",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백혜정",
+      "department": "안과",
+      "external_id": "GIL-51923",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남동흔",
+      "department": "안과",
+      "external_id": "GIL-52825",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이대영",
+      "department": "안과",
+      "external_id": "GIL-53306",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤진",
+      "department": "안과",
+      "external_id": "GIL-2070517",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신영인",
+      "department": "안과",
+      "external_id": "GIL-2675978",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준우",
+      "department": "안과",
+      "external_id": "GIL-3283703",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최연선",
+      "department": "안과",
+      "external_id": "GIL-3899738",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형식",
+      "department": "영상의학과",
+      "external_id": "GIL-51242",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황희영",
+      "department": "영상의학과",
+      "external_id": "GIL-55254",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유미",
+      "department": "영상의학과",
+      "external_id": "GIL-53822",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정호",
+      "department": "영상의학과",
+      "external_id": "GIL-52972",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최승준",
+      "department": "영상의학과",
+      "external_id": "GIL-54187",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안수좌",
+      "department": "영상의학과",
+      "external_id": "GIL-321240",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최혜영",
+      "department": "영상의학과",
+      "external_id": "GIL-53533",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수영",
+      "department": "영상의학과",
+      "external_id": "GIL-56703",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남상유",
+      "department": "영상의학과",
+      "external_id": "GIL-54782",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유은영",
+      "department": "영상의학과",
+      "external_id": "GIL-55154",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희영",
+      "department": "영상의학과",
+      "external_id": "GIL-55972",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황정한",
+      "department": "영상의학과",
+      "external_id": "GIL-56316",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안태란",
+      "department": "영상의학과",
+      "external_id": "GIL-86685",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "두경원",
+      "department": "영상의학과",
+      "external_id": "GIL-3906214",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이운기",
+      "department": "외과",
+      "external_id": "GIL-51387",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박흥규",
+      "department": "외과",
+      "external_id": "GIL-52231",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박연호",
+      "department": "외과",
+      "external_id": "GIL-52025",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백정흠",
+      "department": "외과",
+      "external_id": "GIL-52537",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최상태",
+      "department": "외과",
+      "external_id": "GIL-53013",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤영",
+      "department": "외과",
+      "external_id": "GIL-54801",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강진모",
+      "department": "외과",
+      "external_id": "GIL-53391",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원석",
+      "department": "외과",
+      "external_id": "GIL-53492",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유승",
+      "department": "외과",
+      "external_id": "GIL-54004",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성민",
+      "department": "외과",
+      "external_id": "GIL-54244",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전용순",
+      "department": "외과",
+      "external_id": "GIL-54327",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고대식",
+      "department": "외과",
+      "external_id": "GIL-98774",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양준영",
+      "department": "외과",
+      "external_id": "GIL-55377",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현직",
+      "department": "외과",
+      "external_id": "GIL-1294601",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김두진",
+      "department": "외과",
+      "external_id": "GIL-56477",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이두호",
+      "department": "외과",
+      "external_id": "GIL-56641",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전영배",
+      "department": "외과",
+      "external_id": "GIL-228994",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황유나",
+      "department": "외과",
+      "external_id": "GIL-3365980",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양재훈",
+      "department": "외과",
+      "external_id": "GIL-2070430",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재봉",
+      "department": "외과",
+      "external_id": "GIL-2641883",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근철",
+      "department": "외과",
+      "external_id": "GIL-2676599",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "외과",
+      "external_id": "GIL-3899579",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정남",
+      "department": "외상외과",
+      "external_id": "GIL-51262",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현성열",
+      "department": "외상외과",
+      "external_id": "GIL-51985",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전양빈",
+      "department": "외상외과",
+      "external_id": "GIL-52373",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유병철",
+      "department": "외상외과",
+      "external_id": "GIL-54472",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이길재",
+      "department": "외상외과",
+      "external_id": "GIL-54493",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민아",
+      "department": "외상외과",
+      "external_id": "GIL-55051",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승환",
+      "department": "외상외과",
+      "external_id": "GIL-86585",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영은",
+      "department": "외상외과",
+      "external_id": "GIL-55501",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤용철",
+      "department": "외상외과",
+      "external_id": "GIL-55192",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최강국",
+      "department": "외상외과",
+      "external_id": "GIL-55274",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우석",
+      "department": "외상외과",
+      "external_id": "GIL-56865",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전세범",
+      "department": "외상외과",
+      "external_id": "GIL-1294543",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민순기",
+      "department": "외상외과",
+      "external_id": "GIL-2070111",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조자윤",
+      "department": "외상외과",
+      "external_id": "GIL-57049",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영민",
+      "department": "외상외과",
+      "external_id": "GIL-1293844",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송한별",
+      "department": "외상외과",
+      "external_id": "GIL-2783436",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장재익",
+      "department": "외상외과",
+      "external_id": "GIL-2676840",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강우성",
+      "department": "외상외과",
+      "external_id": "GIL-3606130",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근",
+      "department": "응급의학과",
+      "external_id": "GIL-2586308",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박철완",
+      "department": "응급의학과",
+      "external_id": "GIL-51469",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양혁준",
+      "department": "응급의학과",
+      "external_id": "GIL-51735",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임용수",
+      "department": "응급의학과",
+      "external_id": "GIL-52291",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진성",
+      "department": "응급의학과",
+      "external_id": "GIL-53740",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남기룡",
+      "department": "응급의학과",
+      "external_id": "GIL-54225",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우재혁",
+      "department": "응급의학과",
+      "external_id": "GIL-54884",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박원빈",
+      "department": "응급의학과",
+      "external_id": "GIL-53922",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장재호",
+      "department": "응급의학과",
+      "external_id": "GIL-54904",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재연",
+      "department": "응급의학과",
+      "external_id": "GIL-55522",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유재진",
+      "department": "응급의학과",
+      "external_id": "GIL-86023",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최우성",
+      "department": "응급의학과",
+      "external_id": "GIL-55647",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "추승화",
+      "department": "응급의학과",
+      "external_id": "GIL-278617",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진원석",
+      "department": "응급의학과",
+      "external_id": "GIL-1423019",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하석균",
+      "department": "응급의학과",
+      "external_id": "GIL-56683",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성운",
+      "department": "응급의학과",
+      "external_id": "GIL-282230",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최석원",
+      "department": "응급의학과",
+      "external_id": "GIL-679540",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진주",
+      "department": "응급의학과",
+      "external_id": "GIL-3855172",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형수",
+      "department": "응급의학과",
+      "external_id": "GIL-1294746",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤주희",
+      "department": "응급의학과",
+      "external_id": "GIL-3615672",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민아",
+      "department": "응급의학과",
+      "external_id": "GIL-3899614",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승준",
+      "department": "응급의학과",
+      "external_id": "GIL-3730034",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형원",
+      "department": "응급의학과",
+      "external_id": "GIL-3615681",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병학",
+      "department": "응급의학과",
+      "external_id": "GIL-3615663",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허규진",
+      "department": "응급의학과",
+      "external_id": "GIL-3615690",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차흥억",
+      "department": "이비인후과",
+      "external_id": "GIL-51449",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선태",
+      "department": "이비인후과",
+      "external_id": "GIL-51612",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한규철",
+      "department": "이비인후과",
+      "external_id": "GIL-52066",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동영",
+      "department": "이비인후과",
+      "external_id": "GIL-52191",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조창현",
+      "department": "이비인후과",
+      "external_id": "GIL-52251",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주형",
+      "department": "이비인후과",
+      "external_id": "GIL-52804",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주현",
+      "department": "이비인후과",
+      "external_id": "GIL-53593",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "선우웅상",
+      "department": "이비인후과",
+      "external_id": "GIL-56156",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박우리",
+      "department": "이비인후과",
+      "external_id": "GIL-2070140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방제호",
+      "department": "이비인후과",
+      "external_id": "GIL-3899517",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임오경",
+      "department": "재활의학과",
+      "external_id": "GIL-51489",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주강",
+      "department": "재활의학과",
+      "external_id": "GIL-51860",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유제현",
+      "department": "재활의학과",
+      "external_id": "GIL-3283663",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종훈",
+      "department": "정신건강의학과",
+      "external_id": "GIL-52702",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배승민",
+      "department": "정신건강의학과",
+      "external_id": "GIL-53698",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강승걸",
+      "department": "정신건강의학과",
+      "external_id": "GIL-54369",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조서은",
+      "department": "정신건강의학과",
+      "external_id": "GIL-84112",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나경세",
+      "department": "정신건강의학과",
+      "external_id": "GIL-55030",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문도현",
+      "department": "정형외과",
+      "external_id": "GIL-51283",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이범구",
+      "department": "정형외과",
+      "external_id": "GIL-57028",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박홍기",
+      "department": "정형외과",
+      "external_id": "GIL-51694",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전득수",
+      "department": "정형외과",
+      "external_id": "GIL-52170",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심재앙",
+      "department": "정형외과",
+      "external_id": "GIL-53034",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백종민",
+      "department": "정형외과",
+      "external_id": "GIL-56034",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병훈",
+      "department": "정형외과",
+      "external_id": "GIL-57007",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진동욱",
+      "department": "정형외과",
+      "external_id": "GIL-2676870",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임지섭",
+      "department": "정형외과",
+      "external_id": "GIL-3867268",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조류경",
+      "department": "정형외과",
+      "external_id": "GIL-3606139",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동복",
+      "department": "종양내과",
+      "external_id": "GIL-51304",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은경",
+      "department": "종양내과",
+      "external_id": "GIL-51839",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영생",
+      "department": "종양내과",
+      "external_id": "GIL-54843",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심선진",
+      "department": "종양내과",
+      "external_id": "GIL-53370",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배지홍",
+      "department": "종양내과",
+      "external_id": "GIL-2070256",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주환",
+      "department": "종양내과",
+      "external_id": "GIL-391587",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조장호",
+      "department": "종양내과",
+      "external_id": "GIL-3086812",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최원준",
+      "department": "직업환경의학과",
+      "external_id": "GIL-54556",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성규",
+      "department": "직업환경의학과",
+      "external_id": "GIL-55827",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "함승헌",
+      "department": "직업환경의학과",
+      "external_id": "GIL-56238",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유민",
+      "department": "직업환경의학과",
+      "external_id": "GIL-3283712",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서일혜",
+      "department": "진단검사의학과",
+      "external_id": "GIL-51592",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안정열",
+      "department": "진단검사의학과",
+      "external_id": "GIL-52087",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박필환",
+      "department": "진단검사의학과",
+      "external_id": "GIL-52005",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서자영",
+      "department": "진단검사의학과",
+      "external_id": "GIL-54925",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대원",
+      "department": "진단검사의학과",
+      "external_id": "GIL-271288",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문철현",
+      "department": "치과",
+      "external_id": "GIL-51366",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "치과",
+      "external_id": "GIL-53614",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배정윤",
+      "department": "치과",
+      "external_id": "GIL-53781",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진용",
+      "department": "치과",
+      "external_id": "GIL-54946",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성범",
+      "department": "치과",
+      "external_id": "GIL-56417",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심우철",
+      "department": "치과",
+      "external_id": "GIL-2070401",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희헌",
+      "department": "치과",
+      "external_id": "GIL-2069995",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김서경",
+      "department": "치과",
+      "external_id": "GIL-2086190",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상혁",
+      "department": "치과",
+      "external_id": "GIL-2120420",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백진옥",
+      "department": "피부과",
+      "external_id": "GIL-53983",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박향준",
+      "department": "피부과",
+      "external_id": "GIL-55931",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희주",
+      "department": "피부과",
+      "external_id": "GIL-55951",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상현",
+      "department": "피부과",
+      "external_id": "GIL-2676659",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현정",
+      "department": "피부과",
+      "external_id": "GIL-3492207",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황경훈",
+      "department": "핵의학과",
+      "external_id": "GIL-52661",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이해준",
+      "department": "핵의학과",
+      "external_id": "GIL-278846",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석균",
+      "department": "핵의학과",
+      "external_id": "GIL-54084",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상은",
+      "department": "핵의학과",
+      "external_id": "GIL-2433806",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서효정",
+      "department": "핵의학과",
+      "external_id": "GIL-3436537",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤병우",
+      "department": "혈액내과",
+      "external_id": "GIL-3334528",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인환",
+      "department": "혈액내과",
+      "external_id": "GIL-3757038",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "경선영",
+      "department": "호흡기알레르기내과",
+      "external_id": "GIL-52681",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성환",
+      "department": "호흡기알레르기내과",
+      "external_id": "GIL-57087",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정웅",
+      "department": "호흡기알레르기내과",
+      "external_id": "GIL-53243",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상표",
+      "department": "호흡기알레르기내과",
+      "external_id": "GIL-52763",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고의원",
+      "department": "호흡기알레르기내과",
+      "external_id": "GIL-303598",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신범수",
+      "department": "호흡기알레르기내과",
+      "external_id": "GIL-2676750",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

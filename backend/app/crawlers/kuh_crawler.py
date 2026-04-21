@@ -9,6 +9,8 @@ import logging
 import httpx
 from datetime import datetime, timedelta
 
+from app.crawlers._schedule_rules import find_exclude_keyword
+
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://www.kuh.ac.kr"
@@ -145,6 +147,9 @@ class KuhCrawler:
 
             ap = entry.get("apflag_cd", "")
             dept_nm = entry.get("dept_nm", "외래")
+            # EXCLUDE 필터 — 검사/수술/내시경 등 외래 아님
+            if find_exclude_keyword(dept_nm):
+                continue
             # 특수클리닉 구분: dept_nm에 "클리닉" 포함 시 location으로 사용
             location = dept_nm if dept_nm else "외래"
 

@@ -1,0 +1,551 @@
+{
+  "hospital_code": "PTSM",
+  "hospital_name": "평택성모병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이경원",
+      "department": "소화기내과",
+      "external_id": "PTSM-1649667183",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주환",
+      "department": "소화기내과",
+      "external_id": "PTSM-1649667123",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임준욱",
+      "department": "소화기내과",
+      "external_id": "PTSM-1691969231",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현준",
+      "department": "소화기내과",
+      "external_id": "PTSM-1761200932",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배상수",
+      "department": "내시경센터",
+      "external_id": "PTSM-1753170846",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보혜",
+      "department": "내시경센터",
+      "external_id": "PTSM-1753170823",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서원우",
+      "department": "내시경센터",
+      "external_id": "PTSM-1753170865",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전병민",
+      "department": "내시경센터",
+      "external_id": "PTSM-1753170882",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진민",
+      "department": "내시경센터",
+      "external_id": "PTSM-1756947626",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜철",
+      "department": "호흡기내과",
+      "external_id": "PTSM-1763012785",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽은경",
+      "department": "호흡기내과",
+      "external_id": "PTSM-1649667615",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경진",
+      "department": "호흡기내과",
+      "external_id": "PTSM-1757286897",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현철",
+      "department": "신장내과",
+      "external_id": "PTSM-1649667713",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선주",
+      "department": "신장내과",
+      "external_id": "PTSM-1709521082",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경미",
+      "department": "신장내과",
+      "external_id": "PTSM-1685581125",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방우대",
+      "department": "심장내과",
+      "external_id": "PTSM-1649667934",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이세환",
+      "department": "심장내과",
+      "external_id": "PTSM-1649720801",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현철원",
+      "department": "심장내과",
+      "external_id": "PTSM-1649720836",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤석",
+      "department": "류마티스내과",
+      "external_id": "PTSM-1649720865",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임태석",
+      "department": "내분비내과",
+      "external_id": "PTSM-1649720910",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박신애",
+      "department": "내분비내과",
+      "external_id": "PTSM-1664589564",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최석원",
+      "department": "외과",
+      "external_id": "PTSM-1649721200",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정남용",
+      "department": "외과",
+      "external_id": "PTSM-1649721105",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준기",
+      "department": "외과",
+      "external_id": "PTSM-1649721163",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주정일",
+      "department": "외과",
+      "external_id": "PTSM-1741069622",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황정주",
+      "department": "흉부외과",
+      "external_id": "PTSM-1751264393",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정민교",
+      "department": "이비인후과",
+      "external_id": "PTSM-1728347937",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민정기",
+      "department": "산부인과",
+      "external_id": "PTSM-1649721290",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권민정",
+      "department": "산부인과",
+      "external_id": "PTSM-1649721329",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방준호",
+      "department": "소아청소년과",
+      "external_id": "PTSM-1649832241",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김응식",
+      "department": "정형외과",
+      "external_id": "PTSM-1649721393",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원석",
+      "department": "정형외과",
+      "external_id": "PTSM-1649721504",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한석구",
+      "department": "정형외과",
+      "external_id": "PTSM-1649721460",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재준",
+      "department": "정형외과",
+      "external_id": "PTSM-1769761123",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주동균",
+      "department": "신경외과",
+      "external_id": "PTSM-1649721662",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조윤성",
+      "department": "신경외과",
+      "external_id": "PTSM-1769761188",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황정연",
+      "department": "신경과",
+      "external_id": "PTSM-1649721875",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동근",
+      "department": "신경과",
+      "external_id": "PTSM-1649721926",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정아름",
+      "department": "신경과",
+      "external_id": "PTSM-1651800551",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주재정",
+      "department": "신경과",
+      "external_id": "PTSM-1767319533",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유창희",
+      "department": "비뇨의학과",
+      "external_id": "PTSM-1649721953",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용현",
+      "department": "비뇨의학과",
+      "external_id": "PTSM-1649722012",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정세윤",
+      "department": "치과",
+      "external_id": "PTSM-1649722153",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유병국",
+      "department": "정신건강의학과",
+      "external_id": "PTSM-1677714737",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한솔",
+      "department": "응급의학과",
+      "external_id": "PTSM-1649808139",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경춘",
+      "department": "응급의학과",
+      "external_id": "PTSM-1649751998",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진우",
+      "department": "응급의학과",
+      "external_id": "PTSM-1709521227",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류정우",
+      "department": "응급의학과",
+      "external_id": "PTSM-1738549133",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허지한",
+      "department": "응급의학과",
+      "external_id": "PTSM-1768010126",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용욱",
+      "department": "응급의학과",
+      "external_id": "PTSM-1770860082",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준환",
+      "department": "응급의학과",
+      "external_id": "PTSM-1772582439",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유지수",
+      "department": "응급의학과",
+      "external_id": "PTSM-1772582486",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조훈",
+      "department": "영상의학과",
+      "external_id": "PTSM-1649808163",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정민",
+      "department": "영상의학과",
+      "external_id": "PTSM-1649808254",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이해규",
+      "department": "영상의학과",
+      "external_id": "PTSM-1677818309",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준혁",
+      "department": "영상의학과",
+      "external_id": "PTSM-1678085637",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형엽",
+      "department": "영상의학과",
+      "external_id": "PTSM-1710912053",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정태",
+      "department": "마취통증의학과",
+      "external_id": "PTSM-1649816730",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영록",
+      "department": "마취통증의학과",
+      "external_id": "PTSM-1649816797",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천무영",
+      "department": "마취통증의학과",
+      "external_id": "PTSM-1740786370",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전용범",
+      "department": "진단검사의학과",
+      "external_id": "PTSM-1742169184",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이대영",
+      "department": "진단검사의학과",
+      "external_id": "PTSM-1770259543",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송준택",
+      "department": "직업환경의학과",
+      "external_id": "PTSM-1649813104",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권종호",
+      "department": "직업환경의학과",
+      "external_id": "PTSM-1649813193",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조인정",
+      "department": "직업환경의학과",
+      "external_id": "PTSM-1649813506",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한욱",
+      "department": "직업환경의학과",
+      "external_id": "PTSM-1659417294",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현준",
+      "department": "직업환경의학과",
+      "external_id": "PTSM-1769761376",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정우",
+      "department": "직업환경의학과",
+      "external_id": "PTSM-1775440532",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

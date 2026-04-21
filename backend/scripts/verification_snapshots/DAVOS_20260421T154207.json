@@ -1,0 +1,311 @@
+{
+  "hospital_code": "DAVOS",
+  "hospital_name": "다보스병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "양성범",
+      "department": "정형외과",
+      "external_id": "DAVOS-12",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "정용진",
+      "department": "정형외과",
+      "external_id": "DAVOS-100",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건희",
+      "department": "정형외과",
+      "external_id": "DAVOS-77",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종섭",
+      "department": "정형외과",
+      "external_id": "DAVOS-154",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이명호",
+      "department": "정형외과",
+      "external_id": "DAVOS-153",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장종호",
+      "department": "신경외과",
+      "external_id": "DAVOS-62",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여운탁",
+      "department": "신경외과",
+      "external_id": "DAVOS-139",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경미",
+      "department": "신경외과",
+      "external_id": "DAVOS-146",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대규",
+      "department": "신장내과",
+      "external_id": "DAVOS-143",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상훈",
+      "department": "외과",
+      "external_id": "DAVOS-17",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성중",
+      "department": "이비인후과",
+      "external_id": "DAVOS-103",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나경일",
+      "department": "비뇨의학과",
+      "external_id": "DAVOS-157",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주원식",
+      "department": "부인과",
+      "external_id": "DAVOS-156",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "양소영",
+      "department": "소아청소년과",
+      "external_id": "DAVOS-29",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태우",
+      "department": "신경과",
+      "external_id": "DAVOS-135",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수성",
+      "department": "신경과",
+      "external_id": "DAVOS-140",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고원진",
+      "department": "소화기내과",
+      "external_id": "DAVOS-86",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허웅",
+      "department": "소화기내과",
+      "external_id": "DAVOS-138",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준영",
+      "department": "심장내과",
+      "external_id": "DAVOS-155",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유충현",
+      "department": "소화기내과",
+      "external_id": "DAVOS-141",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안희원",
+      "department": "마취통증의학과",
+      "external_id": "DAVOS-145",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "오종은",
+      "department": "마취통증의학과",
+      "external_id": "DAVOS-74",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "윤홍섭",
+      "department": "진단검사의학과",
+      "external_id": "DAVOS-122",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양선우",
+      "department": "가정의학과",
+      "external_id": "DAVOS-31",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정상훈",
+      "department": "가정의학과",
+      "external_id": "DAVOS-84",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "강대성",
+      "department": "직업환경의학과",
+      "external_id": "DAVOS-151",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "노우환",
+      "department": "직업환경의학과",
+      "external_id": "DAVOS-113",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천보미",
+      "department": "가정의학과",
+      "external_id": "DAVOS-144",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주향",
+      "department": "",
+      "external_id": "DAVOS-152",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신욱",
+      "department": "영상의학과",
+      "external_id": "DAVOS-133",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송재민",
+      "department": "영상의학과",
+      "external_id": "DAVOS-125",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전장우",
+      "department": "영상의학과",
+      "external_id": "DAVOS-68",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "추용식",
+      "department": "응급의학과",
+      "external_id": "DAVOS-78",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "강경호",
+      "department": "응급의학과",
+      "external_id": "DAVOS-88",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "김홍원",
+      "department": "응급의학과",
+      "external_id": "DAVOS-148",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "이준기",
+      "department": "응급의학과",
+      "external_id": "DAVOS-150",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "한기찬",
+      "department": "응급의학과",
+      "external_id": "DAVOS-149",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    },
+    {
+      "name": "오태훈",
+      "department": "응급의학과",
+      "external_id": "DAVOS-128",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간이 '진료' 로 명시되어 있지 않거나 '문의/수술' 로 표기되어 있습니다. 정확한 외래 시간은 병원에 문의해 주세요."
+    }
+  ]
+}

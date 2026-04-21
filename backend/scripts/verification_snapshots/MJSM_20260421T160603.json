@@ -1,0 +1,287 @@
+{
+  "hospital_code": "MJSM",
+  "hospital_name": "명지성모병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "허춘웅",
+      "department": "신경외과",
+      "external_id": "MJSM-MjLD5hle",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "김달수",
+      "department": "신경외과",
+      "external_id": "MJSM-cCBzvrWh",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "허준",
+      "department": "신경외과",
+      "external_id": "MJSM-6mcPKwtG",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "이현구",
+      "department": "신경외과",
+      "external_id": "MJSM-xvPoMWhB",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상욱",
+      "department": "신경외과",
+      "external_id": "MJSM-qILR69hk",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "심숙영",
+      "department": "신경외과",
+      "external_id": "MJSM-VLi4qhs2",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "하승현",
+      "department": "신경과",
+      "external_id": "MJSM-DNtv4VqT",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "박평강",
+      "department": "신경과",
+      "external_id": "MJSM-La1Xyfmj",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "정재운",
+      "department": "신경과",
+      "external_id": "MJSM-qA2stxKl",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "안종현",
+      "department": "신경과",
+      "external_id": "MJSM-lyoPbfN3",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "정형희",
+      "department": "재활의학과",
+      "external_id": "MJSM-0XkPq4JH",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "김원섭",
+      "department": "재활의학과",
+      "external_id": "MJSM-ZxLBTObl",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "홍영기",
+      "department": "응급의학과",
+      "external_id": "MJSM-PVwxunhc",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "마범석",
+      "department": "응급의학과",
+      "external_id": "MJSM-eVOSaU50",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "신재복",
+      "department": "응급의학과",
+      "external_id": "MJSM-7QmyIcsT",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "이두성",
+      "department": "응급의학과",
+      "external_id": "MJSM-R4XDA8Bz",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "하진근",
+      "department": "응급의학과",
+      "external_id": "MJSM-zpR6sn4H",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "박성민",
+      "department": "내과(소화기)",
+      "external_id": "MJSM-rsWYH7lV",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "옥주현",
+      "department": "내과(소화기)",
+      "external_id": "MJSM-S3QulsMc",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "노금엽",
+      "department": "내과(소화기)",
+      "external_id": "MJSM-u6osYB7C",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조민주",
+      "department": "내과(호흡기)",
+      "external_id": "MJSM-JIKcHSms",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "이다현",
+      "department": "내과(심장)",
+      "external_id": "MJSM-QTOMcwxF",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "※ 격주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "옥찬호",
+      "department": "외과",
+      "external_id": "MJSM-6FXGhcfb",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "※ 격주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "이재철",
+      "department": "정형외과",
+      "external_id": "MJSM-SDq9uHKo",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "※ 12월 8일(월) ~ 12월 13일(토)까지 휴진입니다. \r\n※ 격주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "조형우",
+      "department": "산부인과",
+      "external_id": "MJSM-NkJmB2zL",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "김지영",
+      "department": "산부인과",
+      "external_id": "MJSM-vp0hzFjc",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "※ 매주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "송미회",
+      "department": "가정의학과",
+      "external_id": "MJSM-8uSYZw1g",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "※ 격주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "권영은",
+      "department": "가정의학과",
+      "external_id": "MJSM-kcvfGPK0",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "※ 격주 토요일, 진료과별 당직제 정상진료이니 내원에 참고 바랍니다."
+    },
+    {
+      "name": "황윤섭",
+      "department": "영상의학과",
+      "external_id": "MJSM-lfaqWg1F",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "김이경",
+      "department": "영상의학과",
+      "external_id": "MJSM-AOWzRIs2",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "박치영",
+      "department": "영상의학과",
+      "external_id": "MJSM-rEl50znh",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "남보경",
+      "department": "마취통증의학과",
+      "external_id": "MJSM-OzXK50Co",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "권소영",
+      "department": "마취통증의학과",
+      "external_id": "MJSM-De7An5wJ",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "이현정",
+      "department": "마취통증의학과",
+      "external_id": "MJSM-uUzDHVxa",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    },
+    {
+      "name": "이선아",
+      "department": "진단검사의학과",
+      "external_id": "MJSM-wXmZgQzh",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "※진료 일정 변동이 가능하오니 유선 확인 후 내원 부탁드립니다."
+    }
+  ]
+}

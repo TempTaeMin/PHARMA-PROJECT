@@ -113,7 +113,11 @@ class GangnamSevCrawler:
                         if specialty and specialty not in existing["specialty"]:
                             existing["specialty"] = f"{existing['specialty']}, {specialty}" if existing["specialty"] else specialty
                     else:
-                        ext_id = f"GANSEV-{emp_no}" if emp_no else f"GANSEV-{name}"
+                        if emp_no:
+                            ext_id = f"GANSEV-{emp_no}"
+                        else:
+                            safe_dept = (dept_nm or "").replace("/", "_").replace(" ", "")
+                            ext_id = f"GANSEV-{name}-{safe_dept}" if safe_dept else f"GANSEV-{name}"
                         all_doctors[key] = {
                             "staff_id": ext_id, "external_id": ext_id,
                             "name": name, "department": dept_nm,

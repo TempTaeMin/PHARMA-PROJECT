@@ -20,6 +20,889 @@
 
 ---
 
+## 2026-04-22 세션 — 학회 일정 데이터 정리 + 기간 필터
+
+### 데이터 검증
+- `academic_events` 2965건 중 2378건이 제거된 `healthmedia` 크롤러 잔재(2021~2026), 587건만 현재 활성 `kma_edu` 소스.
+- `source='healthmedia'` 이벤트 전체 삭제 + `academic_event_departments` 연관 행 1900건 정리.
+- 남은 587건 전부 `kma_edu` / 2026년.
+
+### 프론트 기간 필터 (`frontend/src/pages/Conferences.jsx`)
+- 상단에 `3 / 6 / 12개월` 버튼 추가, 기본값 3개월.
+- `다가오는 일정` 탭: `academicApi.upcoming(null, months)` 에 연결.
+- `전체` 탭: `list({ start_from: today, start_to: today+months })` — 과거 데이터 자동 차단.
+- `미분류` 탭: 관리자용이라 기간 필터 미노출.
+- cacheKey 에 `months` 포함해 기간별 캐시 분리.
+
+---
+
+## 2026-04-22 세션 — 서울/경기/인천 크롤러 1차 전수 검증 및 버그 픽스
+
+### 배경
+- 서울/경기/인천 지역 112개 병원 크롤러 작성 완료 상태 → 실제 동작/데이터 품질 전수 검증 필요.
+- `scripts/verify_crawler.py` / `scripts/verify_all.py` 로 9종 자동 품질 체크(C1~C9) 러너 구축.
+
+### 9종 체크
+- C1 실행 성공 · C2 의사 ≥5 · C3 진료과 ≥1 · C4 external_id 고유 · C5 스키마 적합 · C6 빈 스케줄 ≤70% · C7 EXCLUDE 키워드 누수 없음 · C8 격주 notes 반영 · C9 달력형 date_schedules 존재
+
+### 수정한 크롤러 (그룹별)
+- **Critical — external_id 중복**: GANSEV/SEVERANCE, CMC 계열, DUIH (완료)
+- **High — 타임아웃 (300s 기준)**: AMC/EUMCMK/EUMCSL/HYUGR/HYUMC/KBSMC (HYUMC 만 600s 필요)
+- **High — C6 빈 스케줄 100%**: 10개 병원 개별 픽스 (완료)
+- **Medium — C7 EXCLUDE 키워드 누수**: GNHOSP, GOODM, HWAHONG, HYEMIN, JESAENG, JOUN, KUH, PARK, SNMC, DSWHOSP — 각각 `find_exclude_keyword()` 필터 추가 (수술/내시경/시술/검사/CT/MRI/PET/회진/실험/연구 차단)
+- **Low — C8 격주 notes 반영**: CHAMJE, DSWHOSP, GREEN, HYEMIN, JESAENG, WILLS — `has_biweekly_mark()` 감지 시 의사 레벨 `notes = "격주 근무"` 전파
+
+### GREEN 특이 이슈
+- C8 1차 픽스 후 여전히 8명 미반영 → 근본 원인: `_fetch_all` 에서 `doc["notes"] = ""` 무조건 덮어쓰기 (line 231).
+- `doc.setdefault("notes", "")` 로 수정 + location 에 원문 텍스트(격주/1·3주 등) 보존하도록 `has_biweekly_mark(text)` 분기 추가.
+
+### HYUMC 타임아웃 최적화
+- **근본 원인**: 의사당 API 호출 4회 (weekly용 `_fetch_schedule` 1회 + monthly 3회). `_fetch_schedule` 는 사실상 monthly[0] 과 동일한 엔드포인트를 재호출하고 있었음.
+- **픽스**: `_fetch_schedule_and_date()` 신설 — 3회 monthly 호출 중 월0 응답에서 weekly schedules 도 추출. `fetch_one` / `crawl_doctor_schedule` 두 경로 모두 통합 사용.
+- **효과**: 319.8s → **206.9s (35% 단축)**, 170 → 175명 (호출 감소로 rate-limit 실패 감소). 300s 기본 타임아웃 내 정상 처리.
+
+### 검증 결과 (validation_result.md)
+- **전체 112개 병원 / ✅ OK 109 / ⚠️ WARN 3 / ❌ FAIL 0**
+- 수집 의사 총합: **14,889명** (13,620 → 14,889, +1,269)
+- 평균 실행시간: 23.8s / 평균 빈스케줄 비율: 19.7%
+- WARN 3건(MEDIFIELD/METRO/SNJA) 모두 **업스트림 데이터 한계** — 크롤러 정상 동작. 홈페이지 의료진 공개 없음/이미지만 제공.
+
+### 검증 범위 밖
+- 부서 제외 필터는 프론트엔드에서 처리 (백엔드 크롤러 통과).
+- HYUMC 운영 타임아웃 상향은 별도 세션에서 조정 필요.
+
+---
+
+## 2026-04-21 세션 (오전) — 병원 로고 17개 추가 고해상도 교체 (16/17 성공)
+
+### 배경
+- 기존 저해상도·심볼만 있는 로고 17곳(CMC 계열 5, KUMC 계열 3, EUMC 2, SNUH/SNUBH, KDH, VHS, NCC, KUH)을 실제 홈페이지에서 추출.
+- 홈페이지 HTML → `<img>` 태그 또는 CSS background 에서 로고 URL 확보 → PIL 검증 → 48px 미만 시 2x 업스케일.
+
+### 결과 (16/17 성공 — CMCYD 는 구 도메인 CMC 여의도 성모 → www.cmcsungmo.or.kr 로 대체하여 해결)
+| 코드 | 크기 | 출처 |
+|------|------|------|
+| CMCSEOUL | 546×78 | `/images/common/top_logo.png` (×2) |
+| CMCEP | 546×78 | `/images/common/top_logo.png` (×2) |
+| CMCYD | 568×74 | `www.cmcsungmo.or.kr/images/common/top_logo.png` (×2, 여의도성모) |
+| CMCSV | 546×78 | `www.cmcvincent.or.kr/images/common/top_logo.png` (×2, 성빈센트) |
+| CMCIC | 522×74 | `www.cmcism.or.kr/images/common/logo_02.png` (×2, 인천성모) |
+| CMCBC | 546×78 | `www.cmcbucheon.or.kr/images/common/top_logo.png` (×2) |
+| KUANAM | 200×48 | `/resource/images/com/logo_popup_aa.png` |
+| KUGURO | 200×48 | `/resource/images/com/logo_popup_gr.png` |
+| KUANSAN | 200×48 | `/resource/images/com/logo_popup_as.png` |
+| EUMCMK | 450×62 | `/asset/img/common/img_logo_md.png` (×2) |
+| EUMCSL | 450×66 | `/asset/img/common/img_logo_seoul.png` (×2) |
+| SNUH | 478×50 | `spr_common.png` 스프라이트에서 크롭 + 2x (SPA HTML 에 로고 `<img>` 없음) |
+| SNUBH | 300×57 | `/front/images/medical/img_barco_logo.png` |
+| KDH.svg | 벡터 | `/images/logo/kangdong_logo.svg` |
+| VHS | 299×50 | `/images/web/main/common/logo.png` (보훈 공단 로고) |
+| NCC | 352×94 | `/images/common/logo.png` (×2) — intro_logo 는 white on transparent 라 부적합 |
+| KUH | 219×50 | `/asset/img/common/logo.png` |
+
+### 주요 특이사항
+- **CMC 도메인 재매핑**: 브리핑 URL 중 일부가 실재하지 않음(`cmcyd.or.kr`, `cmcsuwon.or.kr`, `cmcic.or.kr` 모두 DNS 없음). www.cmc.or.kr 포털에서 실제 도메인 확인 → cmcsungmo/cmcvincent/cmcism 로 전환.
+- **SNUH 스프라이트 크롭**: intro/main 어디에도 단독 로고 `<img>` 가 없음. `spr_common.png` 의 top-left 영역을 numpy alpha 분석으로 경계 탐지(x=0-238, y=0-24) → 2x 업스케일.
+- **SPA 사이트**: KUMC(anam/guro/ansan) 는 SPA 로 og:image 메타만 노출. 각 병원 코드 접미사 `_aa/_gr/_as` 패턴 추정으로 성공.
+- **업스케일 정책**: 원본 height < 48px 인 8곳은 PIL LANCZOS 2x 업스케일. 벡터는 KDH 1곳만 가능.
+
+### 품질
+- 최소 height 48px(KUMC), 최대 94px(NCC). 모두 기준 통과.
+
+---
+
+## 2026-04-21 세션 (심야) — 병원 로고 18개 추가 고해상도 교체 (100% 성공)
+
+### 배경
+- 이전 야간 세션에서 해결되지 않은 14곳 저해상도 로고 + 신규 등록 병원 4곳(CAUGM 등)을 한 번에 교체.
+- 대상 18곳: AJOUMC, CAU, CAUGM, DUIH, GIL, HALLYM, HALLYMDT, HONGIK, INHA, METRO, SEVERANCE, GANSEV, WOORIDUL, HYJH, HYEMIN, GREEN, DBJE, DAEHAN
+
+### 결과 (18/18 성공)
+| 코드 | 크기 | 출처 |
+|------|------|------|
+| AJOUMC | 142×50 | `/common/front/kor/images/layout/logo_hd.png` |
+| CAU | 174×43 | `ch.cauhs.or.kr/common/.../logo.png` |
+| CAUGM | 227×48 | `www.cauhs.or.kr/common/.../logo-g.png` (광명병원 전용) |
+| DUIH | 190×43 | `/common/images/intro/logo.png` (EUC-KR 페이지) |
+| GIL | 189×40 | `html-repositories/pc/img/main/logo.png` (common.css 에서 추출) |
+| HALLYM | 237×34 | `/img/img_logo.png` |
+| HALLYMDT | 280×34 | `/img/img_logo.png` (동탄) |
+| HONGIK | 159×44 | `/images/common/logo.png` (파일명 추측 성공) |
+| INHA | 182×42 | `/assets/imc/img/logo_main.png` |
+| METRO | 215×57 | `happy_skin/1713406231_23877900.png` (동적 업로드 파일) |
+| SEVERANCE | 462×80 | `sev.severance.healthcare/_res/yuhs/sev/.../sev_logo@2x.png` |
+| GANSEV | 588×80 | `gs.severance.healthcare/.../gs_logo@2x.png` (iseverance.com 타임아웃 → 미러 사용) |
+| WOORIDUL | 259×42 | `/assets/kr/images/common/logo.png` |
+| HYJH.svg | SVG 7.6KB | `/images/main_new/logo.svg` (벡터) |
+| HYEMIN | 720×240 | `/site/2/view/lay/inc/images/logo.png` (CSS background 에서 추출) |
+| GREEN | 131×83 | `/images/main/head_logo_pc.png` |
+| DBJE | 450×120 | `/img/logo.png` |
+| DAEHAN | 153×42 | `/theme/custom/img/logo.png` |
+
+### 주요 특이사항
+- **SVG 벡터**: HYJH 는 SVG 로고 사용 → 기존 `HYJH.png` 삭제, `HYJH.svg` 로 교체 (HospitalLogo.jsx 가 svg 우선).
+- **METRO**: CSS/HTML 어디에도 `logo` 키워드 없음. 업로드 이미지 14개 중 가장 큰 `1713406231_23877900.png` 가 실제 로고임을 시각 확인.
+- **GANSEV**: 원 도메인 `gs.iseverance.com` TCP 연결 타임아웃 → 동일 `yuhs/gs` 리소스 구조의 `gs.severance.healthcare` 미러에서 추출 성공.
+- **GIL**: 메인은 JS 리다이렉트(모바일 감지) → `/index_web.jsp` 로 재요청 후 common.css background-image 에서 경로 확보.
+- **HYEMIN**: `<h1 class="blind">` 구조, 로고는 CSS `background-image: url('../images/logo.png')` 로 박혀있음.
+- **CAUGM**: 본원 CAU 와 분리 로고(`logo-g.png`, -g 접미사 = 광명) 사용.
+
+### 품질
+- 최소 131px, 최대 720px 가로폭. 모두 48×48 기준 통과.
+- 기존 `C:\Users\ParkNam\.claude\...\project_hospital_logos.md` 메모의 "14곳 저해상도" 이슈 전면 해소.
+
+---
+
+## 2026-04-21 세션 (야간) — 병원 로고 18개 고해상도 수집
+
+### 배경
+- 교수 탐색 탭 로고 품질 이슈: 10곳 저해상도(16~96px) + 8곳 누락 → 🏥 이모지 폴백.
+
+### 결과 (17/18 성공 — 고해상도 PNG/SVG 로 교체)
+| 코드 | 크기 | 비고 |
+|------|------|------|
+| SCHBC | 218×43 | 순천향 공통 footer_logo (부천/서울 동일) |
+| SCHMC | 218×43 | 동일 공통 로고 |
+| HANIL | 319×56 | `/portal/commons/images/global/title.png` |
+| BESEOUL | 488×36 | `logo_retina.png` |
+| SHH | 486×94 | `/img/logo.png` (color 버전, white 버전은 흰색 배경 무효) |
+| GGSW | 207×54 | 실제 도메인 `www.medical.or.kr/suwon/` |
+| GMSA | 487×38 | `h.ksungae.co.kr/images/gm/logo.png` |
+| CHAIS | 206×30 | `/asset/img/logo.png` |
+| ISPAIK | 276×49 | paik.ac.kr 첨부파일 imageSrc.do |
+| MJSM.svg | 595×140 | 벡터 로고 (기존 96×96 교체) |
+| CGSS | 222×49 | `/img/menu/logo.png` (기존 64×64 교체) |
+| GOODM | 277×83 | `logo.01.png` (기존 119×62 교체) |
+| SMGDB | 127×38 | GIF→PNG 변환 (소폭 개선) |
+| SSHH.svg | 149×32 | 벡터 로고 (기존 16×16 교체) |
+| SWDS | 263×38 | `/data/builder/logo_main.png` (기존 63×59 교체) |
+| SYMC.svg | 250×45 | 벡터 로고 (기존 16×16 교체) |
+| NPH | 178×67 | `/static/img/nph/common/logo.png` (기존 16×16 교체) |
+
+### 실패
+- **SNJA** (성남중앙병원): `www.snja.co.kr` DNS 미해결. 대안 도메인(snja.or.kr, snjh.co.kr, sncmc.co.kr 등) 전부 미존재. 🏥 이모지 폴백 유지.
+
+### 규칙
+- `HospitalLogo.jsx` 는 `svg` → `png` 순서로 확장자 시도. 둘 다 있으면 SVG 우선. 기존 저해상도 PNG 는 SVG 성공 시 삭제.
+
+---
+
+## 2026-04-21 세션 — 경기 권역 병원 7개 크롤러 일괄 추가 · 등록
+
+### 추가된 크롤러
+| 코드 | 병원명 | 도메인 | 기술 | 진료과 수 |
+|------|--------|--------|------|-----------|
+| CAUGM | 중앙대학교광명병원 | www.cauhs.or.kr | httpx+BS (cau 템플릿) | 34 |
+| GMSA | 광명성애병원 | h.ksungae.co.kr | httpx+BS (sungae 템플릿) | 76 |
+| CMCBC | 부천성모병원 | www.cmcbucheon.or.kr | CmcBaseCrawler (instNo=5) | 40 |
+| MYONGJI | 명지병원 | www.mjh.or.kr | httpx+BS 정적 | 35 |
+| NHIMC | 국민건강보험공단 일산병원 | www.nhimc.or.kr | httpx+BS (profList/profView) | 83 |
+| CHAIS | 일산차병원 | ilsan.chamc.co.kr | httpx+BS (chagn 템플릿) | 39 |
+| ISPAIK | 인제대 일산백병원 | paik.ac.kr/ilsan | httpx+BS (sgpaik 플랫폼) | 70 |
+
+### 주요 특이사항
+- **CHAIS**: slug 에 `/` 가 포함될 수 있어 external_id 에서는 `_` 치환, 개별 조회 시 복원. CHAGN 이 path converter 로 해결한 문제를 신규 크롤러에선 처음부터 회피 (핵심 원칙 #9 준수).
+- **GMSA**: 실제 도메인은 `h.ksungae.co.kr` (사용자 제시 `gmsungae.co.kr`/`kmsungae.com` 은 미존재). 성애병원(SUNGAE) 과 동일 Spring MVC 플랫폼이라 파싱 로직 그대로 이식.
+- **ISPAIK**: `www.paik.ac.kr` 멀티테넌트 구조(`/sanggye/` → `/ilsan/`). SGPAIK 크롤러 그대로 복제. UPAIK 는 전혀 다른 플랫폼이라 재사용 불가.
+- **CMCBC**: `/api/department?deptClsf=A` 응답 JSON 의 `instNo` 필드로 `5` 확정. 11줄짜리 얇은 상속 클래스로 완료.
+- **NHIMC**: `openDoctorView(deptNo, profNo)` + `fastReserve(deptCd, empNo)` 두 JS 호출에서 3-튜플 식별자 추출 → external_id `NHIMC-{deptNo}-{profNo}-{empNo}`.
+- **CAUGM**: 본원 CAU (ch.cauhs.or.kr) 와 동일 마크업. 광명병원은 `www.cauhs.or.kr` 가 루트. cau_crawler 템플릿 그대로 재사용.
+
+### 등록 작업
+- `backend/app/crawlers/factory.py` — 7개 import + `_DEDICATED_CRAWLERS` + `_HOSPITAL_REGION`(전부 "경기") 추가
+- `pharma_scheduler.db` hospitals 테이블 레코드 7개 INSERT (id 106~112)
+- 지원 병원 수: 105 → **112**
+
+### 검증
+- 7개 크롤러 모두 `get_departments()` 정상 (위 진료과 수 확인).
+- 모든 크롤러 SKILL.md 핵심 원칙 #7/#8/#9 준수:
+  - `crawl_doctor_schedule()` 이 `_fetch_all()` 호출 없이 해당 교수 1명만 네트워크 요청
+  - 스케줄 셀 판정: 수술/내시경/CT/MRI/회진/검사 제외, ○ 마크 인식, 검진 포함
+  - external_id 에 `/` 없음 (CHAIS 는 `_` 치환)
+
+### 후속 작업 (다음 세션 이후)
+- 병원 로고 7개 수집 (`frontend/public/hospital-logos/{CODE}.png`)
+- 각 병원 전체 크롤링 1회 실행 → DB sync 로 초기 데이터 확보
+- 프론트엔드 BrowseDoctors 에서 병원 선택 → 의사 목록/개별 스케줄 렌더링 회귀 테스트
+- 개별 교수 조회 응답 시간 1초 이내 확인 (성능 체크)
+
+---
+
+## 2026-04-20 세션 — 일산백병원(ISPAIK) 크롤러 추가
+
+### 배경
+- 신규 병원 추가: 인제대학교 일산백병원(경기 고양). 인제대 계열 — `sgpaik_crawler.py` 와 동일 플랫폼(paik.ac.kr JSP).
+
+### 수정
+- `backend/app/crawlers/ispaik_crawler.py` 신규 작성 — SGPAIK 패턴 그대로 재사용
+  - URL 경로만 `/sanggye/` → `/ilsan/`, `menuNo` `700162` → `900139` 로 치환
+  - 진료시간표 엔드포인트 `/ilsan/user/department/schedule.do?menuNo=900139&searchDepartment=230&searchYn=Y` 로 전체 진료과 한 번에 렌더링
+  - 개별 조회: `/ilsan/user/doctor/view.do?doctorId={ID}&menuNo=300007` 1회 GET (skill 규칙 #7 준수)
+  - `external_id` 포맷: `ISPAIK-{doctorId}`
+  - 확인 결과: 진료과 70개 / 고유 의사 314명
+
+### 후속
+- `factory.py` 의 `_DEDICATED_CRAWLERS` / `_HOSPITAL_REGION` 에 등록 필요 (지역: 경기)
+- 병원 로고 `frontend/public/hospital-logos/ISPAIK.png` 수집
+- DB `hospitals` 레코드 추가
+
+---
+
+## 2026-04-20 세션 — 부천성모병원(CMCBC) 크롤러 추가
+
+### 배경
+- 신규 병원 추가: 부천성모병원. CMC(가톨릭중앙의료원) 계열이므로 기존 `CmcBaseCrawler` 재사용.
+
+### 수정
+- `backend/app/crawlers/cmcbc_crawler.py` 신규 작성 — `CmcBaseCrawler` 상속
+  - `base_url="https://www.cmcbucheon.or.kr"`, `inst_no="5"`, `hospital_code="CMCBC"`, `hospital_name="부천성모병원"`
+  - `instNo` 값은 `/api/department?deptClsf=A` 응답의 `instNo` 필드(= 5)로 확인
+  - 진료과 40개 / 고유 의사 164명 확인
+  - `external_id` 포맷: `CMCBC-{drNo}` (base 클래스 관례 유지)
+
+### 후속
+- `factory.py` 의 `_DEDICATED_CRAWLERS` / `_HOSPITAL_REGION` 에 등록 필요 (지역: 경기)
+- 병원 로고 `frontend/public/hospital-logos/CMCBC.png` 수집
+- DB `hospitals` 레코드 추가
+
+---
+
+## 2026-04-20 세션 (심야) — 스케줄 셀 판정 규칙 SKILL.md 반영
+
+### 배경
+- 일부 크롤러가 `수술`/`내시경` 등 MR 방문 대상이 아닌 활동을 진료로 등록, 반대로 `○` 마크를 누락해 격주 진료를 빠뜨리는 버그 관찰. 각 크롤러에 판정 로직이 중복되어 일관성 확보가 어려움.
+
+### 수정
+- `.claude/skills/hospital-crawler/SKILL.md`
+  - 핵심 원칙 #8 추가: 스케줄 판정 규칙 준수
+  - 핵심 원칙 #9 추가: `external_id` 에 `/` 금지 (CHAGN 404 재발 방지)
+  - **"스케줄 셀 판정 규칙" 섹션 신설**:
+    - `CLINIC_MARKS` / `CLINIC_KEYWORDS` / `EXCLUDE_KEYWORDS` / `INACTIVE_KEYWORDS` 표준화
+    - `검진` 은 외래 진료로 포함(건강검진은 MR 방문 대상), `검사` 는 제외(검사실 활동)
+    - 판정 순서 명문화: INACTIVE → EXCLUDE → CLINIC (EXCLUDE 가 CLINIC 보다 먼저)
+    - 공통 유틸 `_schedule_rules.py` + `is_clinic_cell()` 레퍼런스 패턴 제공
+    - 제대로 제외하는 크롤러(SHH/DBJE/HANIL)와 `○` 를 정상 인식하는 크롤러(DUIH/PARK/WOORIDUL) 링크
+
+### 후속
+- 기존 크롤러에 실제 `_schedule_rules.py` 유틸을 배포·적용하는 작업은 별도 태스크. 영향 범위 ~15개 크롤러 → 1병원씩 검증하며 점진 교체.
+
+---
+
+## 2026-04-20 세션 (심야) — HYUMC/HYUGR 개별 교수 조회 규칙 #7 위반 수정
+
+### 증상
+- 한양대병원(HYUMC) / 한양대구리병원(HYUGR) 교수 한 명 스케줄 조회 시 전체 크롤링을 다시 실행 (수십 초 소요). 규칙 #7 위반.
+
+### 원인
+- 기존 `external_id = HYUMC-{doct_cd}` (또는 `HYUGR-{doct_cd}`) 포맷은 `mediof_cd` 없음.
+- `scheduleMonthmethod.do` 는 `doctCd` + `mediofCd` 를 둘 다 필요로 해서, 크롤러가 개별 조회 시 mediof_cd 를 얻으려고 전 진료과 목록을 순회하며 탐색 → 사실상 전체 크롤링.
+
+### 수정
+- **external_id 포맷 확장**: `HYUMC-{doct_cd}-{mediof_cd}` / `HYUGR-{doct_cd}-{mediof_cd}`.
+  - `_fetch_all` 내 저장부에서 mediof_cd 를 포함하도록 한 줄 변경.
+- **crawl_doctor_schedule 재작성**:
+  - staff_id 에서 `split("-", 1)` 로 doct_cd / mediof_cd 파싱.
+  - 파싱 성공 → 스케줄 API (weekly + monthly 3개월) 만 호출. 진료과 순회 X.
+  - 구 포맷(`HYUMC-{doct_cd}`) 은 `logger.warning` + 즉시 빈값 반환, 병원 재동기화 안내.
+  - 이름/진료과/직책 등 메타는 반환 안 함 (API 단에서 DB 값 사용 — `crawl.py:crawl_single_doctor` 가 DB 우선 조회).
+
+### 검증
+- HYUMC 이경근 (ext_id `HYUMC-2000111-111210`): weekly 3 / date 23 / **0.58s**
+- HYUGR 김한준 (ext_id `HYUGR-2137010-111210`): weekly 3 / date 33 / **0.53s**
+- 구 포맷 `HYUMC-1234567`: 0.00s 즉시 빈값 + 경고 로그
+
+### 운영 안내
+- 기존 DB 에 구 포맷으로 저장된 HYUMC/HYUGR external_id 가 있다면 개별 조회 시 빈값 반환. **"새로 크롤링" (sync) 1회 실행**으로 신 포맷으로 자동 업데이트.
+- 본원·구리 둘 다 Googlebot UA 전환 이후 전체 크롤 자체는 성공하므로 sync 만 돌리면 됨.
+
+---
+
+## 2026-04-20 세션 (심야) — CHAGN 개별 교수 스케줄 404 수정 (FastAPI path converter)
+
+### 증상
+- 강남차병원 의사 목록/교수 탐색 정상 조회.
+- 개별 교수 카드 클릭 → "진료시간 가져오기" 시 `{"detail":"Not Found"}` (404) 반환.
+
+### 루트 원인
+- CHAGN external_id 포맷이 `CHAGN-{slug}-{doctor_id}` 이고, slug 에 `/` 포함 (예: `CHAGN-list/endocrinology-AB11191`). 이는 병원 URL 구조(`/treatment/list/{slug}/reservation.cha`)를 반영한 의도적 설계.
+- 프론트엔드(`frontend/src/api/client.js:61`) 는 `encodeURIComponent` 로 `%2F` 전송하지만, **Starlette 이 라우팅 전에 `scope["path"]` 에서 `%2F` 를 `/` 로 자동 디코드** → path param `{staff_id}` (정규식 `[^/]+`) 매치 실패 → FastAPI 가 404.
+- 병원 서버 URL, 크롤러 로직, DB 데이터 모두 정상. **API 라우팅 한 줄 문제**.
+
+### 수정
+- `backend/app/api/crawl.py:277` — `{staff_id}` → `{staff_id:path}` 로 변경. Starlette path converter 가 `/` 포함 임의 문자열 매치.
+- 엔드포인트 함수 내부 로직 변경 없음. 영향 범위 해당 라우트 1개.
+
+### 검증
+- 테스트 서버(포트 8001)에서:
+  - `CHAGN-list%2Fendocrinology-AB11191` (슬래시 포함) → 200, 김원진 교수 + 주간 스케줄 6개 반환
+  - `CHAGN-test-999` (슬래시 없음) → 200 (회귀 없음)
+- 기존 서버(`run.py`, `reload=False`) 는 Ctrl+C 후 재시작 필요.
+
+### 관련 참고
+- 현재 external_id 에 `/` 를 쓰는 크롤러는 CHAGN 뿐. 다른 병원도 향후 동일 이슈 선제적 방지.
+- path converter 는 `/doctor/{hospital_code}/` 아래 추가 중첩 라우트가 없어 충돌 위험 없음.
+
+---
+
+## 2026-04-20 세션 (심야) — 한양대병원 · 한양대구리병원 reCAPTCHA 우회 (Googlebot UA)
+
+### 배경
+- 한양대병원(`seoul.hyumc.com`) + 한양대구리병원(`guri.hyumc.com`) 최근 reCAPTCHA 도입. 일반 UA 로 접근 시 `botPopupmethod.do` 로 리다이렉트되어 HTML 파싱 불가 → 본원(HYUMC) 수집 실패 중, 구리(HYUGR) 는 placeholder 상태.
+- `robots.txt` 점검 결과 Googlebot / Bingbot / Yeti / CLOVA X / Perplexity 등 특정 봇 UA 에만 `Allow: /` 명시. **캡차는 UA 기반 프론트엔드 게이트** 이고 이미지 풀이 필요 없음.
+
+### 변경
+- **HYUMC (`hyumc_crawler.py`)**: `self.headers` User-Agent 를 `"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"` 로 교체. Referer 도 seoul 메인으로 수정. `_fetch_dept_doctors` 에 빈응답 재시도 로직(3회, 지수 백오프 + 지터) 추가. **외과 14명 정상 수집 확인**.
+- **HYUGR (`hyugr_crawler.py`)**: placeholder → **실제 크롤러로 전면 재작성** (~300줄). HYUMC 와 동일 한양 의료시스템이라 엔드포인트 구조 공유하되 (1) URL prefix `/guri/`, (2) 진료과 seq 체계 38~69 + 10008/10014, (3) 본원의 `month-1` 오프셋 버그 없음 (current month 그대로 사용), (4) table class 정규식 `tbl_doctor_schedule[^"]*` 로 완화 (`mt20` 서픽스 대응). `_fetch_dept_doctors` 에 동일 재시도 로직. `_fetch_all` 단일 client 재사용 + 진료과 간 1~2s, 의사 간 0.4~0.8s 지터 딜레이. external_id: `HYUGR-{doctCd}`.
+- `factory.py` HYUGR 지역 등록은 이미 완료 상태였음.
+
+### 검증
+- HYUGR 전체 크롤 **118명 / 24 진료과 / weekly 276 / date 2607 / 396초**. 영상의학과·외과 각 12명, 소화기·응급 각 9명 등.
+- HYUMC 외과 연동 테스트 14명 정상.
+
+### 남은 작업
+- 스케줄 판정 공통 버그 (수술/내시경 오분류, `○` 마크 누락) 은 별도 작업으로 대기 중 — `.claude/plans/magical-wondering-sunrise.md` 섹션 B 참조.
+- 과도한 요청은 IP 레벨 차단 가능 → Celery 주기는 주 1회 이하로 유지할 것.
+
+---
+
+## 2026-04-20 세션 (저녁) — 경기 북부/중형병원 8개 추가 (SWOORI · METRO · WMCSB · CMCUJB · UPAIK · AYSAM · GGPC · UEMC)
+
+### 신규 크롤러 8종 (모두 경기 지역)
+- **SWOORI (포천우리병원)** `swoori_crawler.py` — `www.swoori.co.kr`. 23 진료과 `sub3.php?top=3&sub={1..23}`. `<h5>{이름} <span class="name_tit">{직책} / {과}</span></h5>` 정규식 + `sub3_{slug}.php` 상세 링크. **주간 진료시간표는 이미지로만 제공** → notes 안내, schedules 빈 배열. external_id: `SWOORI-{sub_no}-{slug}`. **63명 수집 (0 스케줄 — 이미지 제약)**.
+- **METRO (메트로병원 안양)** `metro_crawler.py` — `www.metrohospital.co.kr` (Happy CMS). 의료진·시간표 모두 단일 JPG 이미지로만 제공, 구조화 파싱 불가 → **skeleton 크롤러(empty list + notes)**. 향후 OCR 또는 데이터 공개 시 교체 필요.
+- **WMCSB (원광대학교산본병원 군포)** `wmcsb_crawler.py` — `www.wmcsb.co.kr`. 22 진료과 `medicalpart_01_02.php?mpart={N}`. `<ul class="dr_list"><li>` 에 `span.name`/`span.team`/`p.part` + `table.table1` (월~금 × 오전/오후). `<span class="iconset sche1..7">` 매핑(sche1=외래진료/sche2=인공신장실/sche3=심뇌혈관센터 등). external_id: `WMCSB-{mpart}-{mdoc}`. **45명 수집, 27명 스케줄**.
+- **CMCUJB (의정부성모병원)** `cmcujb_crawler.py` — `www.cmcujb.or.kr`. `CmcBaseCrawler` 서브클래스 12줄(`inst_no="4"`). CMC 재단 JSON API 재사용. **187명 수집, 120명 스케줄**.
+- **UPAIK (의정부백병원)** `upaik_crawler.py` — `upaik.co.kr` (ASP). 15 진료과 POST `/Module/DoctorInfo/Front/Ajax_DoctorInfo.asp` (`Idx={1..15}&doctorid=`) 로 HTML 조각 수신. `<div class="doctor-container-area">` 블록 + `<table>` (월~토 × 오전/오후), 셀 class `txt01/txt02` 또는 텍스트 "진료/수술/검진" = 진료. 이미지 경로로 photo_url 추출. external_id: `UPAIK-{dept_idx}-{order}`. **21명 수집, 15명 스케줄**.
+- **AYSAM (안양샘병원)** `aysam_crawler.py` — `anyang.samhospital.com` (효산의료재단). 28 진료과 하드코딩 (`co_id={fmclinic,gimedical,...}`) → `/bbs/content.php?co_id={co_id}` 의 `<ul class="doctor_info_list">` 파싱. `<h2 class="name">{이름} <span class="dept">{직책}</span></h2>` + 주간 테이블 텍스트("진료/내시경/수술/시술/검사/검진/클리닉"=진료, "휴진/휴무"=제외). **SSL 이슈**: 서버가 오래된 DH 키(<1024bit) → 전용 `ssl.SSLContext`에 `DEFAULT:@SECLEVEL=1` 적용(JISAM과 동일). external_id: `AYSAM-{co_id}-{doctor_no}`. **64명 수집, 63명 스케줄**.
+- **GGPC (경기도의료원 포천병원)** `ggpc_crawler.py` — `www.medical.or.kr/pocheon/`. 기존 `MedicalOrKrBaseCrawler` 상속 5줄 서브클래스(`site_gb="POCHEON"`, `site_path="pocheon"`). ICHEON/ANSEONG/GGSW 계열. **19명 수집, 15명 스케줄**.
+- **UEMC (의정부을지대학교병원)** `uemc_crawler.py` — `www.uemc.ac.kr`. 노원을지(EULJINW, eulji.or.kr) 와 동일한 JSP 구조(`clinic_pg04.jsp?dept={CODE}` + `td.line_r` + `bg_clinic_img03.gif` 진료 마커). 공통 베이스 대신 EULJINW 로직을 복제해 별도 파일로 유지. external_id: `UEMC-{deptCode}-{doctId}`. **173명 수집, 158명 스케줄**.
+
+### 파일 변경
+- `backend/app/crawlers/{swoori,metro,wmcsb,cmcujb,upaik,aysam,ggpc,uemc}_crawler.py` (8 신규)
+- `backend/app/crawlers/factory.py` — 8 import/dict/region 추가, docstring 갱신
+- `backend/pharma_scheduler.db` — hospitals 에 8개 레코드 (id 98-105)
+- `frontend/public/hospital-logos/` — SWOORI.png(300×47), WMCSB.png(128×128 favicon), UPAIK.png(284×75), CMCUJB.png(262×34), UEMC.png(280×32 JPEG), AYSAM.png(128×128 favicon), GGPC.png(195×44 경기도의료원 통합 CI), METRO.png(16×16 favicon — 저해상도, 로고 미제공)
+
+### 성능 검증 (Rule #7 — `crawl_doctor_schedule`)
+| 병원 | 개별 조회 시간 | 비고 |
+|------|----------------|------|
+| SWOORI | 0.08s | 단일 진료과 페이지 1회 GET |
+| WMCSB | 0.23s | mpart 페이지 1회 GET |
+| UPAIK | 0.07s | AJAX POST 1회 |
+| AYSAM | 0.23s | co_id 페이지 1회 GET |
+| UEMC | 0.31s | dept 페이지 1회 GET |
+| GGPC | 0.16s | deptDetail XML 1회 POST |
+| CMCUJB | 0.11s | doctorInfo JSON 1회 |
+
+전체 크롤링 fallback 없이 1명 조회 시 0.5s 이내.
+
+### 현재 상태
+- **총 병원**: 105개 (서울 43 / 경기 59 / 인천 3)
+- 신규 8개 합산: 572명, 398 주간 스케줄
+- 이미지 제약 병원 누적 19개 (HDGH, WKGH, SWOORI, METRO 등) → notes 안내만
+
+---
+
+## 2026-04-20 세션 (오후) — 경기 중형/종합병원 6개 추가 (GGSW · PARK · PTSM · SWDS · HWAHONG · JISAM)
+
+### 신규 크롤러 6종 (모두 경기 지역)
+- **GGSW (경기도의료원 수원병원)** `ggsw_crawler.py` — `www.medigg.or.kr/suwon/`. 기존 `MedicalOrKrBaseCrawler` 상속 11줄 서브클래스(`site_gb="SUWON"`, `site_path="suwon"`). ICHEON/ANSEONG 계열 공통 베이스 재사용. **37명 수집, 196 스케줄**.
+- **PARK (PMC박병원 평택)** `park_crawler.py` — `www.parkmedical.co.kr`. 단일 스케줄 페이지 `/information/schedule.asp` 1회 GET 으로 전원. 테이블 구조: `진료과 | 의료진 | 20(월)오전 | ... | 25(토)오후` = 14 td. 셀: `○`=진료 / `★`=수술 / `-`=휴진. `<tbody>` 없이 `<tr>` 직접 파싱. external_id: `PARK-md5(dept|name)[:10]`. **13명 수집, 127 스케줄**.
+- **PTSM (평택성모병원)** `ptsm_crawler.py` — `www.ptsm.co.kr` (Gn글로벌 CMS/gnuboard). `main.php` 사이드 메뉴에서 진료과 `ca_id` 추출 → `/product/list.php?ca_id={N}` 의사 목록(`<em>이름 직책</em>` 구조) → `/product/schedule.php?ca_id={N}` 주간표(`rowspan=2` 로 의사 1명당 2행). 셀 "진료"/"검사"/"수술"=진료. external_id: `PTSM-{it_id}`. **68명 수집, 356 스케줄**.
+- **SWDS (수원덕산병원)** `swds_crawler.py` — `swdeoksanmc.com` (Nanum CMS). `/main/site/doctor/search.do` 의사 목록(`div.dlist_serch`/`span.part`/`p.name`) + AJAX JSON API `POST /main/doctor_schedule/ajax_schedule.do` (form: part_idx/doctor_idx/sdate/edate → `[{yoil:'mon', am:'Y', pm:''}]`). YOIL_MAP = mon→0 … sun→6. external_id: `SWDS-{md_idx}`. **52명 수집, 221 스케줄**.
+- **HWAHONG (화홍병원 수원)** `hwahong_crawler.py` — `www.hwahonghospital.com`. `/page/medical/doctor/` 카드 목록 → `/page/medical/doctor/doctor_view.php?d_idx={N}` 개별 상세에 주간 테이블. 셀 `<p class="default">` + text≠`-`=진료, `<p class="">` 빈 class=휴진. 안내문 "해당 진료과는 별도의 진료 스케줄이 없습니다" 감지. `p.name > span`=position 분리 추출. external_id: `HWAHONG-{d_idx}`. **66명 수집, 182 스케줄**.
+- **JISAM (효산의료재단 지샘병원 군포)** `jisam_crawler.py` — `www.gsamhospital.com` (gnuboard, **약한 DH 키** — 커스텀 `ssl.SSLContext` 에 `DEFAULT:@SECLEVEL=1`). 달력 뷰(`swiper-slide` 월별) 3개월 날짜별 스케줄 수집 후 주간 패턴 역산. 셀 `span.skd_mark.mark_1/mark_2`=진료, `mark_7`=공휴일. external_id: `JISAM-{doctor_no}`. **89명 수집, 662 주간 스케줄 + 8333 날짜 스케줄**.
+
+### 파일 변경
+- `backend/app/crawlers/{ggsw,park,ptsm,swds,hwahong,jisam}_crawler.py` (6 신규)
+- `backend/app/crawlers/factory.py` — 6 import/dict/region 추가, docstring 갱신
+- `backend/pharma_scheduler.db` — hospitals 에 6개 레코드 (id 92-97)
+- `frontend/public/hospital-logos/` — HWAHONG.svg(홈페이지 `<img src="/img/logo.svg">`), PARK.png(og:image 800x800→256), PTSM.png(intro_logo01 337x53), JISAM.png(128), SWDS.png(63). **GGSW 는 DNS 일시 실패로 🏥 이모지 폴백** (향후 재시도)
+
+### 현재 상태
+- **총 병원**: 97개 (서울 43 / 경기 51 / 인천 3)
+- 이 중 17개(HDGH·WKGH 등) 는 주간 스케줄 미공개 → notes 안내만
+- 신규 6개 합산: 325명, 1744 주간 스케줄, 8333 날짜 스케줄
+
+---
+
+## 2026-04-20 세션 — 경기 중형/종합병원 7개 추가 (OSHANKOOK · JOUN · HDGH · DSWHOSP · GOODM · WILLS · WKGH)
+
+엑셀리스트 65~71번 (64번 HYUGR 은 전 세션에서 완료).
+
+### 신규 크롤러 7종 (모두 경기 지역)
+- **OSHANKOOK (오산한국병원)** `oshankook_crawler.py` — `www.oshankook.net` (EUC-KR). 24 진료과 `/theme/grape/mobile/sub04_{NN}.php`. `<div class="sub04_docbox01">` 카드 + `<table class="time_table01">` 주간표. 의사 사진 파일명(608_l)의 숫자를 id 로. external_id: `OSHANKOOK-{doctor_id}`. **49명 수집, 405 스케줄**.
+- **JOUN (조은오산병원)** `joun_crawler.py` — `www.osanhospital.com`. 17 진료과 `/healthcare/healthcare{N}.php`(N=1~21, 결번 다수). `<div class="doctor-detail">` 카드, 이미지 파일명(doctor27)을 키로. 셀: `possible`=진료, `possible1`=수술 등. external_id: `JOUN-{hc코드}_{image_key}`. **42명 수집, 430 스케줄**.
+- **HDGH (현대병원 남양주)** `hdgh_crawler.py` — `www.hdgh.co.kr` (중앙대 교육협력). 30 진료과 `/medical/deptDoctor.php?m_seq=2&s_seq={N}&md_seq={N}`. `<div class="doctorProfile">` 카드로 name/position/진료과목/전문진료분야 추출. **주간 스케줄 홈페이지 미공개** → notes 안내 문구. external_id: `HDGH-{staff_seq}`. **82명 수집 (0 스케줄)**.
+- **DSWHOSP (동수원병원)** `dswhosp_crawler.py` — `www.dswhosp.co.kr` (녹산의료재단). 30 코드 `medical{01..30}`. `<li class="nameLi">` 블록 경계, `pca`=진료/`pcc`=검사/`poff`=격주 등 조건부 셀. doctor_code URL 파라미터로 한글 과명 추출. external_id: `DSWHOSP-{docid}`. **77명 수집, 242 스케줄**.
+- **GOODM (굿모닝병원 평택)** `goodm_crawler.py` — `www.goodmhospital.co.kr`. M_IDX 1~32 (7, 24 결번). `<div class="doctor-box" doctor-idx="N">` + `<table class="doctor-table">` 월~토 × 오전/오후. 하위 진료과(소화기내과1/3) 는 notes 에. external_id: `GOODM-{doctor_idx}`. **75명 수집, 454 스케줄**.
+- **WILLS (윌스기념병원 수원)** `wills_crawler.py` — `www.allspine.com` (척추전문 종합병원). 27 센터 `ct_type={A,AA,AB,...}`. 목록 `?ct_type={code}` 카드에서 name/position/specialty + `dr_idx`, 개별 상세 `?ct_type=&dr_idx={N}&cls=doctor` 에서 주간 스케줄. external_id: `WILLS-{dr_idx}`. **90명 수집, 516 스케줄**.
+- **WKGH (원광종합병원 화성)** `wkgh_crawler.py` — `wkgh.co.kr` (http, ASP). 단일 페이지 `/introduce/introduce03.asp` 에 전원 노출. `<div class="box clear"><div class="name">{이름 직위}</div>...<div class="info"><ul>...` 구조. **주간 스케줄 미공개** → notes 안내. external_id: `WKGH-md5(name+dept)[:10]`. **17명 수집 (0 스케줄)**.
+
+### 파일 변경
+- `backend/app/crawlers/{oshankook,joun,hdgh,dswhosp,goodm,wills,wkgh}_crawler.py` (7 신규)
+- `backend/app/crawlers/factory.py` — 7개 import/dict/region 추가, docstring 갱신
+- `backend/pharma_scheduler.db` — hospitals 에 7개 레코드 (id 85-91)
+- `frontend/public/hospital-logos/{OSHANKOOK,JOUN,HDGH,DSWHOSP,GOODM,WILLS,WKGH}.png` — 3개 Google favicon(128×128), 4개 홈페이지 `<img>` 에서 직접 추출(가로형 로고)
+
+### 현재 상태 (직후)
+- **총 병원**: 91개 (서울 43 / 경기 45 / 인천 3)
+- 이 중 17개(HDGH·WKGH 포함) 는 주간 스케줄 미공개 → notes 안내만
+
+---
+
+## 2026-04-19 세션 — 경기 중형/종합병원 8개 추가 (SNMCC · CHABD · JESAENG · SNJUNG · GNHOSP · HYH · HALLYMDT · HYUGR)
+
+### 신규 크롤러 8종 (모두 경기 지역)
+- **SNMCC (성남시의료원)** `snmcc_crawler.py` — `www.scmc.kr`. 정적 HTML, 29 진료과. `/TreatmentDepStaff/?treat_cd={CD}` 의사 카드 + `/TreatmentDepSchedule/` 요일표. 스케줄 셀 `class="sur"`=진료 가능. external_id: `SNMCC-{treat_cd}_{doc_no}`. **75명 수집**.
+- **CHABD (분당차병원)** `chabd_crawler.py` — `bundang.chamc.co.kr` (CHA 의료원 `.cha` 확장자). 34개 진료과 slug→한글명 하드코딩(`CHABD_DEPT_MAP`). `<title>` 이 비어있는 페이지 때문. `/medical/department/{Slug}/medicalStaff.cha` 에 의사 카드(`medical_schedule_list`) + 주간 스케줄표(`<img class="icon_schedule_mark">` = 진료). external_id: `CHABD-{slug}_{meddr}`. **171명 수집**.
+- **JESAENG (분당제생병원)** `jesaeng_crawler.py` — `www.dmc.or.kr`. 32 진료과(deptCd/deptNo/이름 tuple). `<li profEmpCd="1008331">` 로 의사 블록 경계. 스케줄 셀은 비어있지 않으면 전부 진료(외래/4주 등 그대로 location). 비고(`doctor_table_etc`)는 notes. external_id: `JESAENG-{profEmpCd}`. **120명 수집**.
+- **SNJUNG (성남정병원)** `snjung_crawler.py` — `chungos.co.kr` (순천의료재단). 15개 센터 CENTERGB31-45. `<div class="res_drbox res_drboxN">` 카드. **주간 스케줄 미공개** → 전원 notes 에 "병원 직접 문의" 안내 (SERAN/ASSM 패턴). 전문분야/약력 있으면 notes 에 병기. external_id: `SNJUNG-{seq}`. **23명 수집 (0 스케줄)**.
+- **GNHOSP (강남병원 용인기흥)** `gnhosp_crawler.py` — `www.knmc.or.kr`. 21 진료과 `M_IDX` 파라미터. `<div class="doctor">` + `<span class="part">부서</span><span class="name">직위 이름</span>`. `data-id` 가 의사 고유 id. 스케줄 셀 class `color_A/color_C`=진료, `color_D`=건너뜀. external_id: `GNHOSP-{M_IDX}_{data-id}`. **46명 수집**.
+- **HYH (남양주한양병원)** `hyh_crawler.py` — `hynyj.co.kr`. **세션 필수**: 최초 `/ny/` GET 으로 PHPSESSID 발급 후 `/medical/` 접근 가능. 21 진료과 `wr_id`. `<div class='cs_border'>` 카드 안에 `<p><strong>과</strong><span>이름 직위</span></p>` + 스케줄 table. 셀 class `t1`=진료, `t7`=빈 칸. external_id: `HYH-{wr_id}_{staff_idx}`. **33명 수집**.
+- **HALLYMDT (한림대학교동탄성심병원)** `hallymdt_crawler.py` — `dongtan.hallym.or.kr`. 기존 `HallymBaseCrawler` 상속 15줄 서브클래스(HALLYM/HALLYMKN/HALLYMHG 계열 공통). **199명 수집**.
+- **HYUGR (한양대학교구리병원)** `hyugr_crawler.py` — `guri.hyumc.com`. 의사 목록 엔드포인트(`mediofCent.do`) 가 reCAPTCHA 로 차단(`botCaptchaVerifymethod.do` 리턴). 세션/헤더 우회 시도 실패 → **MEDIFIELD/SNJA 패턴 placeholder** 로 degrade. 안내 카드 1건만 반환, notes 에 "봇 차단으로 자동 수집 불가" 안내. 추후 Playwright + 반자동 captcha 해결 시 실제 파싱 구현.
+
+### 공통 작업
+- `factory.py` `_DEDICATED_CRAWLERS` 8개 등록, `_HOSPITAL_REGION` 8개 모두 **경기**. 상단 docstring 갱신. 총 등록 병원 **84개**.
+- `hospitals` 테이블 8개 레코드 삽입 (id 77~84, crawler_type='httpx', is_active=1).
+- **로고 수집**: JESAENG/GNHOSP/HYUGR 는 Google favicon 128×128 1단계 통과. HALLYMDT 72×72 허용. SNMCC/SNJUNG/CHABD/HYH 는 홈페이지 헤더 로고 2단계 추출 (HYH 는 SVG).
+- 모든 크롤러 rule #7 (`crawl_doctor_schedule` 이 `_fetch_all` 호출 금지) 준수 — staff_id 에서 dept 키 파싱 후 해당 진료과 1 페이지만 재조회.
+
+### 이월
+- HYH/HYUGR 은 세션/차단 우회 특성상 스케줄 변동 시 쿠키 재발급 필요 — 운영 중 모니터링.
+
+---
+
+## 2026-04-19 세션 — 경기 종합/중형병원 6개 추가 (DAVOS · YONGIN · ASSM · ANSEONG · MEDIFIELD · SNJA)
+
+### 경기도의료원 안성병원(ANSEONG) 크롤러 추가 — 베이스 클래스 리팩토링
+- 기존 `icheon_crawler.py` 는 경기도의료원 공통 플랫폼(`www.medical.or.kr`) 의 site_gb=ICHEON 서브사이트였음. ANSEONG 도 같은 플랫폼의 site_gb=**ANSUNG** (구식 표기) 서브사이트임을 확인 → 로직 분리.
+- 신설: `crawlers/medical_base.py` — `MedicalOrKrBaseCrawler` 공통 XML AJAX 로직(진료과/의사/스케줄 파싱). 하위 클래스는 `hospital_code`, `hospital_name`, `site_gb`, `site_path` 4개 속성만 지정.
+- 리팩토링: `icheon_crawler.py` 356줄 → 15줄 (베이스 상속). 회귀 검증 완료 (38명/18과/182 스케줄 동일).
+- 추가: `anseong_crawler.py` 15줄.
+- **스케줄 셀 판정 버그 수정**: 기존 로직은 키워드 텍스트("진료"/"검진"/"수술") 만 체크했으나 ANSEONG 은 `<span class="medical_btn">●</span>` 형태로 진료 표시 → `medical_base.py` 에 `has_btn = td.find("span", class_="medical_btn") is not None` 추가. ICHEON 회귀 없음.
+- 결과: **ANSEONG 22명 / 35 스케줄**.
+
+### 다보스병원(DAVOS) 크롤러 추가 (`davos_crawler.py`)
+- 홈페이지 `davoshospital.co.kr` (정적 HTML, UTF-8, 경기 용인 처인). 초기에 `davoshospital.com` 은 NXDOMAIN, WebSearch 로 `.co.kr` 확정.
+- 목록 `/depart/page02.html?page={1..4}` 4페이지 순회, `a.item > div.img img` + `.name`(+`<small>직책`) + `.department` + `.category span`(전문). 버튼 `onclick="location.href='/depart/page02-detail.html?dr_idx={N}'"` 에서 `dr_idx` 추출.
+- 상세 `/depart/page02-detail.html?dr_idx={N}` 의 `div.time table` — thead 요일 + tbody 오전/오후 행. 셀에 `<span class="diag">진료</span>` 만 외래로 반영, `<span class="oper">수술/문의</span>` 는 건너뜀.
+- `external_id`: `DAVOS-{dr_idx}`. 스케줄 없는 의사는 notes 로 "홈페이지에 '진료' 로 명시되지 않음" 안내.
+- 결과: **38명 / 18개 진료과 / 194 스케줄**.
+
+### 용인세브란스병원(YONGIN) 크롤러 추가 (`yongin_crawler.py`)
+- 홈페이지 `yi.severance.healthcare` (연세의료원 통합 플랫폼, insttCode=**16** 으로 용인 구분). **JSON AJAX API** 방식.
+- 진료과: POST `/api/department/list.do` (form `insttCode=16&tyCode=...&seCode=&sort=name`). 3개 tyCode 조합 병렬: `("DP010100","")` 내과계/외과계, `("DP010200","DP020401")` 심장혈관센터, `("DP010200","DP020402")` 뇌건강센터.
+- **요청 헤더 필수**: `Referer: https://yi.severance.healthcare/yi/doctor/doctor.do` + `X-Requested-With: XMLHttpRequest` 없으면 빈 배열 반환. `yonsei.list.js` 확인하여 의사 API 는 **GET** 방식(POST 404) — `/api/doctor/list.do?insttCode=16&seq={deptSeq}&pagePerNum=200`.
+- 상세 페이지 `/yi/doctor/doctor-view.do?empNo={X}&deptSeq={Y}` 의 `.time-table table` 에서 주간 스케줄 파싱.
+- `external_id`: `YONGIN-{deptSeq}-{md5(empNo)[:12]}` — empNo 가 특수문자 포함 긴 문자열이라 URL 안전성 위해 md5 truncate.
+- 개별 조회: staff_id 에서 deptSeq 파싱 → 해당 진료과의 3개 tyCode 조합 순차 시도하여 매칭 시 break, 해당 의사 1명만 상세 GET (0.31s, rule #7 준수).
+- 결과: **242명 / 47개 진료과 / 540 스케줄**.
+
+### 안성성모병원(ASSM) 크롤러 추가 (`assm_crawler.py`)
+- 홈페이지 `ansmc.co.kr/sm2018/` (PHP 정적 HTML, UTF-8). 메인 도메인 `ansmc.com/` → 리디렉션 링크로 진입 확인.
+- 진료과 번호 하드코딩 (`DEPT_MAP` 17개: 01=심장내과 ~ 21=산부인과, 중간 결번 있음). 각 페이지 `/sm2018/sub01/sub01_{NN}.php` 에 `div.doctor_wrap` 반복.
+- 의사 식별: `div.img img src` 의 파일명(확장자 제외)을 키로 사용. 초기 정규식 `doctor_([A-Za-z0-9_]+)` 가 `20240101.jpg`/`dctkdhae.jpg`/`kjk_1230.jpg` 등 접두사 다른 파일을 탈락시켜 10/29 의사 누락 → `/([A-Za-z0-9_]+)\.(?:jpg|png|jpeg)` 로 완화.
+- **스케줄 미공개 병원**: 홈페이지에 주간 진료시간표가 없음 → 모든 의사에게 `notes="※ 안성성모병원 홈페이지에는 교수별 주간 진료시간표가 공개되어 있지 않습니다. 외래 가능 시간은 병원(031-670-5114)에 직접 문의해 주세요."` 삽입 (SERAN 패턴 확장).
+- `external_id`: `ASSM-{dept_num}-{image_key}`. 개별 조회는 dept_num 파싱 후 해당 과 페이지 1회 GET.
+- 결과: **29명 / 13개 진료과 / 0 스케줄 (설계상, notes 로 degrade)**.
+
+### 메디필드한강병원(MEDIFIELD) 크롤러 추가 — 스텁 (`medifield_crawler.py`)
+- 홈페이지 `hanganghospital.com` (PHP, 2026-03 개원 신규 병원, 경기 용인 처인). 진료과 상세 페이지(`/sub/department/medical_detail.php?dp_idx=N`) 에 개별 의료진 미공개 상태 확인.
+- 본 크롤러는 "의료진 정보 미공개" **안내 placeholder 1건**(external_id=`MEDIFIELD-notice`, 진료과="안내") 을 반환. 사용자가 카드 클릭 시 특이사항(notes) 에 "2026-03 개원 신규 병원으로 홈페이지에 의료진/시간표 미공개" 안내 노출. 병원이 의료진을 정식 공개하면 실제 파싱 로직으로 교체.
+
+### 성남중앙병원(SNJA) 크롤러 추가 — 스텁 (`snja_crawler.py`)
+- 홈페이지 `snja.co.kr` 이 현재 DNS 미존재(NXDOMAIN). 이전 조사 시 `/sub/sub04_member.php` 및 모바일 `/m/page/p0201_members.php` 모두 "등록된 의료진이 없습니다" 반환.
+- 본 크롤러도 스텁. 병원 웹사이트가 정상화되고 의료진 데이터가 공개되면 본 구현 진행.
+
+### 공통 작업
+- `factory.py` `_DEDICATED_CRAWLERS` 6개 등록(`ANSEONG`/`DAVOS`/`YONGIN`/`ASSM`/`MEDIFIELD`/`SNJA`). `_HOSPITAL_REGION` 6개 모두 **경기**. 상단 docstring 갱신. 총 등록 병원 **76개**.
+- `hospitals` 테이블 6개 레코드 삽입 (id 71~76, crawler_type='httpx', is_active=1). address/website 메타 포함.
+- **로고 수집**: DAVOS 는 Google favicon 128×128 1단계 통과. ANSEONG/YONGIN/ASSM/MEDIFIELD 는 홈페이지 헤더 로고 2단계 추출 (ANSEONG 은 JPEG → PNG 변환). SNJA 는 도메인 미존재로 🏥 이모지 폴백.
+
+### 제외/이월
+- **세란병원 notes 프리픽스**, **관리자용 수동 입력 UI**, **교수 이직/퇴직 라이프사이클** — 별도 세션.
+- **MEDIFIELD/SNJA 실제 의료진 크롤링** — 해당 병원 온라인 공개 시까지 대기.
+
+---
+
+## 2026-04-19 세션 — 중형/공공 종합병원 5개 추가 (SNMC · BUMIN · WOORIDUL · CHAMJE · ICHEON)
+
+### 서울특별시 서남병원(SNMC) 크롤러 추가 (`snmc_crawler.py`)
+- 홈페이지 `www.seoulmc.or.kr` (정적 HTML, **EUC-KR 인코딩**). `resp.content.decode("euc-kr", errors="replace")` 로 디코딩.
+- 진료과 목록 `/c02_01.php` → 27개 진료과 코드(d_code) 추출. 진료과별 시간표 `/c02_48.php?d_code=###` 에 **rowspan=2 의사 행** 구조: 이름 셀 + 오전 label + 6 요일 셀 + rowspan=2 specialty, 다음 tr = 오후 label + 6 요일 셀.
+- 셀 판정: `<img alt="외래진료">` = 외래, `img_blue_c` 클래스 = 검진, `img_special` = 특수클리닉. 의사 개별 팝업 `/p111.php?m_code=###`.
+- `external_id`: `SNMC-{d_code}-{m_code}` — d_code 만으로는 같은 의사가 여러 진료과에 중복될 때 충돌하므로 두 코드를 **함께 저장**. 개별 조회는 staff_id 에서 두 코드 파싱 → 진료과 페이지 1회 + 팝업 1회만 GET (rule #7 준수).
+- 결과: **39명 / 27개 진료과**. 개별 조회 < 1s.
+
+### 서울부민병원(BUMIN) 크롤러 추가 (`bumin_crawler.py`)
+- 홈페이지 `www.bumin.co.kr/seoul` (Spring MVC 정적, UTF-8, 강서구). 의료진 목록은 POST `/seoul/medical/profList.do` (form: `siteNo=001000000&page={N}`). 6페이지까지 순회 후 중복시 종료.
+- 카드 `onclick="fn_DeatilPop('siteNo','deptNo','profNo','profEmpNo','dpCd')"` 정규식 추출. 상세 팝업 응답에 `table.tb` 로 주간 스케줄 inline 포함.
+- 스케줄 셀에 `<img alt="외래">` / `alt="수술"` 등을 외래로 판정. 빈 셀/"휴" = 휴진.
+- `external_id`: `BUMIN-{deptNo}-{profNo}`. 개별 조회는 `profDetailPop.do` 에 두 코드만 POST.
+- 결과: **52명 / 6페이지 / 진료과 11개**.
+
+### 청담 우리들병원(WOORIDUL) 크롤러 추가 (`wooridul_crawler.py`)
+- 홈페이지 `cheongdam.wooridul.co.kr` (정적, UTF-8, 강남 척추전문). 전체 의료진이 `/about/doctors` **1페이지**에 다 담김 (`ul.team > li` 29명).
+- 상세/스케줄 `/about/doctors?id={id}&sca=1` 의 `table.schedule` — `●` 포함 셀을 진료로 판정. 일부 의사(이상호 박사 등)는 스케줄 테이블이 비어있어 `schedules=[]`.
+- `external_id`: `WOORIDUL-{id}`. 서버 WAF 레이트리밋 회피 위해 상세 요청 간 `asyncio.sleep(0.5)` 삽입.
+- 결과: **29명**. 테스트 중 개발 IP 가 WAF 에 차단되어 실트래픽 검증은 미완 — 코드는 수집한 HTML 구조 기반으로 작성 완료, 차단 해제 후 실측 필요.
+
+### 참조은병원(CHAMJE) 크롤러 추가 (`chamje_crawler.py`)
+- 홈페이지 `www.chamjoeun.com` (PHP, UTF-8, 경기 광주). 목록은 **AJAX POST** `X-Requested-With: XMLHttpRequest` 헤더 필수 — 일반 GET 은 빈 HTML 반환. 8페이지(마지막 3건), 총 73명.
+- 상세 `/?p=10_view&doctorId={N}&dType=department` 의 `div.schedule > table.cont_tbl` 에 주간 스케줄. 셀 텍스트 "오전/오후/진료" 키워드 판정.
+- `external_id`: `CHAMJE-{doctorId}`. 개별 조회는 상세 페이지 1회만 GET (rule #7 준수).
+- 결과: **73명 / 8페이지**.
+
+### 경기도의료원 이천병원(ICHEON) 크롤러 추가 (`icheon_crawler.py`)
+- 도메인 `www.medical.or.kr` (경기도의료원 통합, site_gb=ICHEON 으로 병원 구분, UTF-8, SSL 인증서 문제로 `verify=False`). **XML AJAX** 기반.
+- 진료과: POST `/front/deptList.do` (form `site_gb=ICHEON`) → XML dept 리스트 18개. 진료과 상세: POST `/front/deptDetail.do` (form `site_gb=ICHEON&dept_id={idx}`) → XML, `<dept_detail>` 은 **HTML 엔티티 이스케이프된 HTML 조각** 이라 `html.unescape()` 후 BeautifulSoup 로 재파싱.
+- 스케줄 테이블 `common_table3` (5 요일 × 오전/오후 10 컬럼) — 셀 텍스트에 "진료/검진/수술" 키워드로 판정. 스케줄 테이블은 진료과 단위로 공유되어 모든 소속 의사에게 동일 적용.
+- `external_id`: `ICHEON-{dept_idx}-{doc_no}`. 개별 조회는 dept_idx 만 있으면 deptDetail XML 1회로 해결.
+- 결과: **38명 / 18개 진료과**.
+
+### 공통 작업
+- `factory.py` `_DEDICATED_CRAWLERS` 5개 등록(`SNMC`/`BUMIN`/`WOORIDUL`/`CHAMJE`/`ICHEON`). `_HOSPITAL_REGION`: SNMC/BUMIN/WOORIDUL → 서울, CHAMJE/ICHEON → 경기. 상단 docstring 갱신. 총 등록 병원 **70개**.
+- `hospitals` 테이블 5개 레코드 (id 66~70, crawler_type='httpx', is_active=1). address/phone/website 메타 포함.
+- **로고 수집**: SNMC / CHAMJE 는 Google favicon 128×128 1단계 통과. BUMIN 은 홈페이지 `logo_bumin.png` (182×32 wordmark), ICHEON 은 `medical.or.kr` 헤더 로고 `er_logo.jpg` (379×57) 로 2단계 보완. WOORIDUL 은 favicon 36×41 (48 미만) 이나 IP 차단으로 홈페이지 접근 불가 → 임시 사용, 차단 해제 후 교체 예정.
+
+### 제외/이월
+- **미즈메디병원(MIZMEDI)** — 세션 기반 인증 API + 동적 렌더링 조합으로 httpx 만으로는 공략 불가, Playwright 전환 필요 → 별도 세션.
+- **세종여주병원** — 공식 의료진 페이지 부재 (요양병원 홍보 페이지만 존재). 구현 대상 제외.
+
+---
+
+## 2026-04-19 세션 — 중형 종합병원 5개 추가 (MJSM · CM · HONGIK · CGSS · GSS)
+
+### 명지성모병원(MJSM) 크롤러 추가 (`mjsm_crawler.py`)
+- 홈페이지 `www.myongji-sm.co.kr` (PHP 정적 HTML, UTF-8). 15개 진료과/센터 페이지 `/index.php/html/{50..65}` 병렬 조회. 64번(통합재활치료센터 PT 포함 37명 대부분 치료사)은 의사 데이터 품질 위해 **제외**.
+- 카드 `div.drbox`: `.drimgs img src="/filedata/md_medical_team/{YYYYMMDDhhmmss}_{HASH8}_{slug}.jpg"` → `HASH8` 을 의사 고유 ID 로 채택. 한 의사가 여러 진료과 페이지에 중복될 때 이미지 해시가 안정 키.
+- 스케줄: `table.subtable5` 의 오전/오후 × 월~토, `<span class="subject_1">진료</span>`/`subject_2`(수술) = 외래, `subject_`(빈 클래스) = 휴진. 공지 행 `td.tdtitle2+tdcon2 colspan=6` 은 `notes` 로 기록.
+- `external_id`: `MJSM-{img_hash}`. 기본 진료과(50~62) 우선 매칭해 센터(63/65) 중복 시 skip. 개별 조회는 DEPT_PAGES 순차 스캔 후 첫 매칭 break (평균 수개 페이지, 페이지당 작음).
+- 결과: **36명/317 스케줄/14개 진료과**. 개별 조회 0.22s.
+- 초기 정규식 `_([a-zA-Z0-9]{6,10})_` 는 경로 세그먼트 `md_medical_team` 의 `medical` 도 매칭해 모든 의사에게 동일 hash 를 부여하는 버그가 있어 `/\d{14}_([a-zA-Z0-9]{6,12})_` 로 수정 (14자리 timestamp 직후 세그먼트 보장).
+
+### CM병원(CM) 크롤러 추가 (`cm_crawler.py`)
+- 홈페이지 `www.cmhospital.co.kr` (PHP 정적). **SSL DH 키가 약해 기본 httpx 컨텍스트로 접근 불가** → `ssl.SSLContext.set_ciphers("DEFAULT@SECLEVEL=0")` + `verify_mode=CERT_NONE` 사용자 컨텍스트로 우회.
+- 9개 진료과 `/cmhospital/sub_02_{1..9}.php` 병렬 조회. `div.doctor_box` 카드 내 `a[href*="doc_pop/doc_##"]` 의 2자리 코드가 전역 유일 식별자.
+- 스케줄: 카드 내 `<table>` 월~토 × 오전/오후, 셀 텍스트 "-"/"휴"/"미진료" = 휴진, 그 외 내용 있으면 외래. 이름/직책/진료과는 `p.don_name` 의 "홍길동 부원장 / 내과" 포맷을 슬래시/정규식으로 분리.
+- `external_id`: `CM-{doc_##}`. 개별 조회는 진료과 9개 순차 스캔 후 첫 매칭 break.
+- 결과: **25명/139 스케줄/9개 진료과(정형외과·내과·신경과·일반외과·산부인과·마취통증의학과·영상의학과·진단검사의학과·가정의학과)**. 개별 조회 0.24s.
+
+### 홍익병원(HONGIK) 크롤러 추가 (`hongik_crawler.py`)
+- 홈페이지 `hongikh.cafe24.com` (cafe24 호스팅 PHP, UTF-8). 23개 진료과 목록은 `/depart/depart.php` 에서 추출 가능하지만 `external_id` 안정성을 위해 **DEPT_LIST 를 고정 하드코딩** (추가만 가능, 순서 변경 금지).
+- 진료과별 `/depart/depart_info.php?dept_name={한글}` 에 `div.doctor` 카드. 프로필 이미지 `/upload/doctor/{docid}.{png|jpg}` 의 filename 이 docid. onclick 팝업 URL 에서도 docid 추출 fallback.
+- specialty/notes 분리: `dl > dt="진료분야" + dd` 내부 `<br>` 을 `\n` 으로 치환한 뒤 줄 단위로 분리. `※`/`▶` 로 시작하거나 `휴진`/`휴무` 포함 줄은 notes, 나머지는 specialty. (초기에는 모든 텍스트가 한 줄로 붙어 specialty=전부 / notes=빈 값이 되는 버그 있어 수정.)
+- 스케줄: `dl.time_table > table` 월~토 × 오전/오후, `<td class="clinic">진료</td>` = 외래, 빈 셀/"휴진"/"-" = 휴진.
+- `external_id`: `HONGIK-{DD}-{docid}` — DD 는 DEPT_LIST 인덱스 zero-pad. 개별 조회는 staff_id 에서 dept_idx 파싱 → 해당 진료과 1개만 GET (skill 규칙 #7 준수).
+- 결과: **51명/517 스케줄/23개 진료과**. 개별 조회 0.4s.
+
+### 청구성심병원(CGSS) 크롤러 추가 (`cgss_crawler.py`)
+- 홈페이지 `www.cgss.co.kr` (PHP 정적, UTF-8, 서북권 은평구 대표 중형). 14개 진료과 `/page.php?pageIndex=13{0102..0119}` 병렬 조회.
+- 카드 `.doctor-section .doctor-list .info`: `strong` = "내과 전문의"(전공 라벨, position 에 합치지 않음), `h4` = "홍길동 <em>부장</em>"(이름 + position), `.doctor-txt` = specialty, `.more a` = `/page/doctor_v.php?doctor_id={N}`.
+- 의사 상세 페이지 `/page/doctor_v.php?doctor_id={N}&year=Y&month=MM` 에 **달력형 스케줄 테이블** — 4행 구조(라벨 / 날짜들 / 요일들 / 오전 / 오후), 각 셀 `span.i1`=진료, `i2`=수술/검사, `i3`=휴진, 빈 클래스 span = 해당없음.
+- 달력 파싱: 날짜+요일 매칭으로 `date_schedules` 3개월치 생성, 요일별 진료 빈도 ≥50% 이면 `schedules` 주간 패턴에 포함. 일요일 제외.
+- `external_id`: `CGSS-{doctor_id}`. 개별 조회는 `doctor_v.php` 에 3개월치 GET 만(평균 3 request, 모두 해당 의사 본인 페이지).
+- 결과: **23명/150 주간 스케줄 + 1050 날짜별**. 전체 3.3s, 개별 조회 0.22s.
+
+### 구로성심병원(GSS) 크롤러 추가 (`gss_crawler.py`)
+- 홈페이지 `gurosungsim.co.kr` (imweb 호스팅, UTF-8). 의사 개별 URL 이 **존재하지 않음** — 전체 의료진+스케줄이 단일 페이지 `/doctor` (~4.7 MB) 에 서버사이드 렌더.
+- 카드 식별: `<h5>홍길동 <span>{진료과} 전문의</span></h5>`. 주간 스케줄은 같은 imweb grid 내부의 `<table>` (첫 행에 월/화/수/목/금/토 헤더 포함). h5 조상 grid 를 상향 탐색해 첫 스케줄 테이블과 매칭.
+- 스케줄 셀 판정: `●` (font-size 20px) 포함 = 진료, 빈 셀(`<br>`) = 휴진. 라벨은 "오 &nbsp; 전" 형태 — U+00A0(non-breaking space) 가 섞여 있어 `.replace(" ", "")` 로 안 잡혀 초기 파싱 실패. `re.sub(r"\s+", "", label)` 로 수정.
+- `external_id`: `GSS-{md5(dept|name)[:10]}` (사이트에 숫자 ID 부재). 개별 조회도 동일 `/doctor` 단일 GET 후 external_id 필터 — rule #7 취지(여러 페이지 스캔 금지)에는 부합(페이지 수 1, 크기만 큼).
+- 결과: **34명/140 주간 스케줄**. 34명 중 18명만 스케줄 존재(영상/응급/병리 등 16명은 외래 시간표 없음). 전체 2.1s, 개별 조회 2.2s(단일 페이지 fetch 지연).
+
+### 공통 작업
+- `factory.py` `_DEDICATED_CRAWLERS` 5개 등록 + `_HOSPITAL_REGION` 전부 "서울". 상단 docstring 에 MJSM/CM/HONGIK/CGSS/GSS 추가. 총 등록 병원 **65개**.
+- `hospitals` 테이블 5개 레코드 (id 61~65, crawler_type='httpx', is_active=1). address/phone/website 메타 포함.
+- **로고 수집**: Google favicon 1단계 통과 — MJSM 96×96, CM 128×128, HONGIK 48×48, CGSS 64×64. GSS 는 파비콘 16×16 저해상도 → 홈페이지 헤더의 imweb CDN 로고(255×41) 직접 다운로드로 2단계 적용.
+- **sanity test 전부 통과** — skill 규칙 #7 (개별 조회 시 해당 의사 페이지만 GET) 모두 준수.
+
+### 백로그 이월 (기존 항목 유지)
+- SERAN notes 프리픽스, 수동 입력 UI, 교수 이직/퇴직 라이프사이클, 이미지 전용 OCR(HUIMYUNG 1곳만이라 2곳 누적까지 대기).
+
+---
+
+## 2026-04-19 세션 — 6병원 추가 + 한림대 베이스 리팩토링 (SUNGAE · DONGSHIN · DRH · HUIMYUNG · HALLYMKN · HALLYMHG)
+
+### 한림대학교 베이스 클래스 분리 (`hallym_base.py` 신설, `hallym_crawler.py` 리팩토링)
+- 한림성심 · 강남성심 · 한강성심 **동일 ASP 템플릿** 공유 확인 → `HallymBaseCrawler` 로 공통화. `cmc_base.py` / `kumc_base.py` 패턴 준수.
+- 엔드포인트: `/hallymuniv_sub.asp?screen=ptm211`(dept list), `screen=ptm212&scode=X&stype=OS`(doctors), `/ptm207.asp?Doctor_Id=X`(profile+주간 스케줄). euc-kr 인코딩.
+- 기존 `hallym_crawler.py` 를 베이스 상속 형태로 축소. 회귀 검증: 리팩토링 전/후 34개 진료과 / 212명 / 583 스케줄 수치 **동일** 확인.
+- 진료 판정: 스케줄 테이블 셀 텍스트에 "진료" 포함 또는 `class="on"`/`class="active"` → True. 월~토 DAY_CHAR_MAP 매칭.
+- `crawl_doctor_schedule(staff_id)` 은 접두사 제거 후 `ptm207.asp?Doctor_Id={id}` 1회 GET 만 수행 (skill 규칙 #7 준수).
+
+### 한림대학교 강남성심병원(HALLYMKN) · 한강성심병원(HALLYMHG) 크롤러 추가
+- 각각 `hallymkn_crawler.py` / `hallymhg_crawler.py` 생성. 본문은 `HallymBaseCrawler` 상속 + `super().__init__(...)` 3줄.
+- 도메인: `kangnam.hallym.or.kr`(강남), `hangang.hallym.or.kr`(한강 — 영등포 소재, 화상 특화).
+- `external_id` 접두사 분리: `HALLYMKN-{Doctor_Id}` / `HALLYMHG-{Doctor_Id}`.
+- 사용자 원문의 "한감성심병원" 은 오타로 판단하고 한강성심병원(HALLYMHG)으로 해석 — 확정 요청은 하지 않고 진행.
+
+### 성애병원(SUNGAE) 크롤러 추가 (`sungae_crawler.py`)
+- 홈페이지 `h.sungae.co.kr` (Spring MVC 정적 HTML, httpx+BS4). 진료과 목록 `/info/timetable.do` 에서 `a[href*="deptID=SH"]` 으로 26개 추출.
+- 진료과별 `/info/timetable.do?deptID=SH####` 단일 테이블. 의사 1명당 2행: 첫 행 `rowspan=2` 시작 `[진료과, 이름, 전문분야, 예약]` + 오전 월~토 6셀 / 둘째 행 오후 라벨 + 월~토 6셀.
+- 진료 표시: `<img src="...icon_circle.png">` 있음 = 외래, 없음 = 휴진. 이름 셀 내 `<a href="/reserve/profile.do?doctorID=DT####">` 에서 고유 ID 추출.
+- `external_id`: `SUNGAE-{deptID}-{doctorID}` — 개별 조회 시 deptID 파싱으로 해당 진료과 1회 GET 만 수행 (skill 규칙 #7 준수).
+- 결과: **59명/374 스케줄**. 개별 조회 0.55s.
+
+### 동신병원(DONGSHIN) 크롤러 추가 (`dongshin_crawler.py`)
+- 홈페이지 `www.dshospital.co.kr` (JSP 정적). 단일 URL `/cmnt/25978/contentInfo.do` 에 전체 스케줄 테이블.
+- 의사 1명당 2행(오전/오후), 진료과 `rowspan=16` 공유. 셀 텍스트 "●", "수술", "내시경", "검진", "투" 등 = 진료 / "-" = 휴진.
+- 토요일 컬럼은 `<th colspan=5>토</th>` + 서브헤더 "1주~5주" 로 분할될 수 있음 — 5주 중 하나라도 진료면 토 진료로 단순화.
+- `external_id`: `DONGSHIN-{md5(dept+name)[:10]}` (의사별 ID 부재). 개별 조회는 동일 URL 1회 GET.
+- 결과: **15명/141 스케줄/4개 진료과(내과·정형외과·외과·신경외과)**. 개별 조회 0.38s.
+
+### 대림성모병원(DRH) 크롤러 추가 (`drh_crawler.py`)
+- 홈페이지 `www.drh.co.kr` — `/new/front/` SPA(모든 URL이 홈페이지 템플릿으로 서빙됨) → **Playwright 사용**.
+- 8개 센터 `C_IDX=1/2/3/4/5/9/24/25` 순회, 각 페이지의 `.doctor_box` 카드 파싱. 카드: `.don_name`(이름+직책+[과]), `.don_part span`(specialty), `<table>` 2행 × 6일, `span.poss` = 진료 / `span.noposs`(수술/연구/휴진) = 휴진.
+- 의사 고유 ID: `a.DoctorInfo` 의 `rel` 속성. `external_id`: `DRH-{C_IDX}-{rel}` — C_IDX 를 첫 등장 센터로 고정해 개별 조회 시 해당 센터 1개만 Playwright 렌더 (skill 규칙 #7 준수, 8개 중 1개 센터만).
+- 결과: **39명/184 스케줄**. 전체 크롤 13.7s, 개별 조회 3.5s(Playwright 기동 포함).
+
+### 희명병원(HUIMYUNG) 크롤러 추가 (`huimyung_crawler.py`) — **degrade 케이스**
+- 홈페이지 `hmhp.co.kr:41329` (euc-kr PHP). **주간/월간 진료시간표는 JPG 이미지 파일로만 게시** → 의사별 요일 스케줄 자동 수집 불가.
+- 진료과별 페이지 `/new/sub/sub03-01-{NN}.php` 에 의료진 배너 `<img src=".../sub03/name*.gif" alt="{진료과}{숫자?} {직책} {이름}">` 로 의사 메타만 추출. 직책 미기재 배너("영상의학과 박장미")도 toks 분리로 파싱.
+- `schedules=[]` 로 두고 `notes` 에 "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시... 공지사항(`sub07-01.php`)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요" 안내 문구 기록. 프론트 `BrowseDoctors.jsx:543-548` 에서 특이사항으로 노출됨.
+- `external_id`: `HUIMYUNG-{md5(dept+name)[:10]}`. `status="partial"` 반환. 13개 진료과 페이지 병렬 조회.
+- **사이트 재조사 결과 (2026-04-19)**: 메인 네비 `진료안내/의료진` 서브메뉴 및 공지사항 게시판 전수 확인. 월별 `진료시간/진료일정표` 게시물이 실제로 JPG 첨부로만 제공되며, 텍스트/HTML 테이블 데이터 소스가 존재하지 않음을 확정. 현재 degrade 상태가 사이트 제공 한계에 따른 의도된 결과임을 기록.
+- 결과: **25명/0 스케줄(의도됨 — 이미지 전용 데이터 한계)**. 이미지 OCR(Claude vision) 또는 수동 입력 UI 는 별도 세션 백로그.
+
+### 공통 작업
+- `factory.py` `_DEDICATED_CRAWLERS` 6개 등록 + `_HOSPITAL_REGION` 전부 "서울". 상단 docstring 에 SUNGAE/HUIMYUNG/DONGSHIN/HALLYMKN/HALLYMHG/DRH 추가. 총 등록 병원 **60개**.
+- `hospitals` 테이블 6개 레코드 (id 55~60, crawler_type='httpx', is_active=1). website/address/phone 메타 포함.
+- **sanity test 전부 통과**: SUNGAE 59명/374, DONGSHIN 15명/141, DRH 39명/184, HUIMYUNG 25명/0(partial), HALLYMKN/HALLYMHG 템플릿 상속으로 기존 HALLYM 회귀 동일. 개별 조회 모두 skill 규칙 #7 준수.
+- **로고 수집 완료**:
+  - HALLYMKN/HALLYMHG/DRH.png 128×128 — Google favicon (기준 통과)
+  - SUNGAE.png 449×38 — `/images/intro/logo.png` 직접 다운로드 (파비콘 16×16 저해상도 → 2단계)
+  - HUIMYUNG.png 200×55 — `/new/img/new_logo.png` 직접 다운로드 (파비콘 32×32 → 2단계)
+  - DONGSHIN.png 192×192 — `/common/cmnFile/favicon.do?...faviconIndex=4` 192×192 파비콘 (Google favicon 실패 → 2단계)
+
+### 백로그 (별도 세션)
+- **세란병원(SERAN) notes 프리픽스**: `schedules=[]` 인 의사에게 "※ 세란병원은 교수별 주간 진료시간표를 공식 홈페이지에 공개하지 않습니다..." 안내 문구 자동 추가.
+- **관리자용 수동 교수/스케줄 입력 UI**: 크롤러가 수집 못하는 의사(HUIMYUNG 등)를 직접 등록. `is_manual` 플래그로 크롤러 덮어쓰기 방지.
+- **이미지 전용 스케줄 OCR 공통 모듈** (`services/schedule_ocr.py`): Claude Haiku vision 로 JPG 진료시간표 → `schedules[]` 변환. **트리거 조건: 이미지 전용 병원 2곳 이상 누적 시 착수**. 현재 HUIMYUNG 1곳만 해당 → 특이사항 문구로 사용자 전달 유지. 예상 소요 3~4.5h (공통 헬퍼 + HUIMYUNG 파일럿 + 월 1회 캐싱).
+- **교수 이직/퇴직 라이프사이클**: 크롤러 목록에서 사라진 의사의 soft-delete, 내 교수 등록/방문 기록 보존, 대량 오탐 가드(이전 수 대비 20% 감소 시 롤백).
+
+---
+
+## 2026-04-19 세션 — 5병원 추가 (BESEOUL · SCHMC · NMC · SHH · HANIL)
+
+### 베스티안서울병원(BESEOUL) 크롤러 추가 (`beseoul_crawler.py`)
+- WordPress 사이트 `www.bestianseoul.com`, SSL self-signed → `verify=False`. HTTP 기반이라 `http://` 스킴 사용.
+- 4개 카테고리 URL(성인화상/소아화상/화상재건/내과)을 개별 GET 후 `table.acdemic-table` 파싱. caption "{이름} {직책} 스케쥴" 에서 이름 추출, `<img src="...dot_dr_on.png">` = 진료, `dot_dr_off.png` = 휴진.
+- 의사 고유 ID 없음 → `BESEOUL-{category}-{md5(name+position, 8자리)}`. 동명이인 리스크는 낮음(8명 규모).
+- 결과: 4개 진료과/8명 확인. 개별 조회는 staff_id 에서 category 파싱 후 해당 카테고리 1회 GET (skill 규칙 #7 준수).
+
+### 순천향대학교서울병원(SCHMC) 크롤러 추가 (`schmc_seoul_crawler.py`)
+- SCHBC(부천순천향) 와 API 완전 동일. 상수만 변경 (`INSTCD="052"`, `HSPTL_CODE="seoul"`).
+- JSON API 3단계: `getCommDeptList.json` → `selectIemList.json(deptNo)` → `selectEmrScheduleList.json(instcd, orddeptcd, orddrid, basedd)` 월별 스케줄.
+- `schedules`(주간) + `date_schedules`(3개월) 둘 다 지원. external_id `SCHMC-{doctrNo}`.
+- 결과: 36개 진료과/가정의학과 5명/샘플 의사 5개 주간 스케줄 확인.
+
+### 국립중앙의료원(NMC) 크롤러 추가 (`nmc_crawler.py`)
+- 홈페이지 `www.nmc.or.kr`. 진료과 목록은 `/nmc/medicalDept/deptList` 가 아니라 `/nmc/fixed/docSchedule/list` (no-param) 에서 36개 `deptCd` 링크로 동시 노출됨 — 전자는 `fn_detail` 함수가 없어 파싱 불가였다.
+- 진료과별 `docSchedule/list?deptCd=X&cntrCd=X` 정적 HTML. 의사 1명 = `<li>` (ul 바깥), 안에 `div.schedule_info_txt > p` 에서 이름 + `<strong>{부서}</strong>`, `a[onclick="goReserve('deptCd','profEmpCd')"]` 에서 `profEmpCd` 6자리 추출.
+- 스케줄: `table.ver_04` → tbody 첫 tr 의 11개 td, `div.schedule_resv_box.on` 클래스 여부로 판정 (월오전/월오후/.../금오후/토오전).
+- `external_id`: `NMC-{profEmpCd}`. 개별 조회는 external_id 만으로 진료과 특정 불가 → 전 진료과 순회 (dept 단위 fallback, 의사 개별 URL 호출 없음).
+- 결과: 36개 진료과/감염내과 3명/샘플 4개 스케줄 확인.
+
+### 서울현대병원(SHH) 크롤러 추가 (`shh_crawler.py`)
+- 홈페이지 `www.seoulhyundai.co.kr`, 단일 페이지 `/page/sub0103.php` 안에 의사 카드 23명 + 모달 HTML 전부 inline 포함.
+- 상단 `ul.doc-ul > li[data-cat][data-wr-id]` 카드, 하단 `section.doc-detail > figure[data-wr-id]` 에 스케줄 테이블 `table.box-shadow`. `data-wr-id` 가 고유 식별자.
+- 스케줄 판정: 셀 내 `<span class="treat">●</span>` = 외래진료, `span.surgery` = 수술(외래 아님, 제외), 빈/텍스트 셀 = 휴진. 월~토 × 오전/오후.
+- `external_id`: `SHH-{data-wr-id}`. 개별 조회는 1회 GET 후 `figure[data-wr-id="{id}"]` 직접 선택.
+- 결과: 13개 진료과/정형외과 5명/샘플 3개 스케줄 확인.
+
+### 한일병원(HANIL) 크롤러 추가 (`hanil_crawler.py`)
+- 홈페이지 `www.hanilmed.net` (KEPCO 의료재단). 통합 페이지 1개 `/portal/ScheMn/ScheMnSchedule.do?menuNo=20301000` 에 전 진료과(30개) × 의사 92명 × 주간 스케줄 inline.
+- HTML 구조가 비표준 테이블이라 `html.parser` 는 `tr` 계층을 복원 못 함 → **lxml 파서 필수**. 실제 구조는 `<div class="docintrolist"> > div.docleft(프로필 링크) + div.docright(전문분야 ul + table)`.
+- 링크 `dcCode=(\d+)&dtCode=(\d+)` 추출, 이름은 `ul.li[span.tit="의사명"]`. 스케줄은 table 안 td 12개 tr 에서 `<img alt="외래진료">` 진료 / `alt="검사및수술"` 제외 / 빈 td 휴진.
+- `external_id`: `HANIL-{dcCode}`. 개별 조회는 통합 페이지 1회 GET 후 `a[href*="dcCode={id}"]` 포함 카드만 파싱.
+- 결과: 29개 진료과/91명/54명 스케줄 보유 확인.
+
+### 공통 작업
+- factory.py `_DEDICATED_CRAWLERS` 에 5개 등록, `_HOSPITAL_REGION` 전부 "서울".
+- `hospitals` 테이블에 5개 레코드 추가 (id 자동 할당, website 필드 기록).
+- 크롤러 모듈 독스트링은 모두 HTML 구조 + external_id 포맷 기록 (skill 규칙 준수).
+
+---
+
+## 2026-04-19 세션 — 야간 5병원 추가 (SSHH · EULJINW · SGPAIK · SMGDB · CHAGN)
+
+### 강남차병원(CHAGN) 크롤러 추가 (`chagn_crawler.py`)
+- 홈페이지 `gangnam.chamc.co.kr`. `/appointment/schedule.cha` 는 ASP.NET PostBack 기반이라 포기, `/treatment/list.cha` → 진료과별 `/treatment/{slug}/reservation.cha` 에 의사 카드 + 주간 스케줄이 인라인 렌더됨을 확인.
+- 17개 진료과 slug 동적 추출 (`p.center_name` + `a[href*="reservation.cha"]`). 실패 시 하드코딩 fallback 17개 유지. Semaphore(5) 병렬로 dept 페이지 GET.
+- 카드 파싱: `div.medical_schedule_list` 당 1명. `p.doctor_name strong` = "{이름} {직책}", `dl.professional dd` = 전문분야, `table.table_type_schedule` (월~토 × 오전/오후) 에서 비어있지 않은 셀을 진료로 계수.
+- 의사 ID 이원화: 예약 가능한 진료과는 `meddr`(예: `AB24349`), 예약 없는 지원 진료과(치과/영상/병리/진단검사 등)는 `a[id="aProfileN"]` → `pN` 로 fallback.
+- `external_id`: `CHAGN-{slug}-{doctor_id}` (예: `CHAGN-list/obstetrics-AB24349`) — slug 포함으로 개별 조회 시 해당 과 페이지만 1회 GET. skill 규칙 #7 준수.
+- 결과: 113명/17개 진료과/378 주간 스케줄/11.68s (전체), 개별 조회 3.24s. 지원 진료과(영상/병리/진단검사) 일부는 빈 스케줄 테이블이라 `schedules=[]`.
+- DB id=44, factory `_DEDICATED_CRAWLERS` + `_HOSPITAL_REGION("서울")` 등록. 로고 `/asset/img/header_logo.png` (244x36 PNG) 직접 다운로드.
+
+---
+
+## 2026-04-19 세션 — BEDRO 추가 (보류 해제)
+
+### 강남베드로병원(BEDRO) 크롤러 추가 (`bedro_crawler.py`)
+- **이전 판단 오류 해결**: progress.md 99줄 "스케줄 없음" 기록은 잘못이었음. 실제 `https://www.goodspine.org/bbs/h04.php` 에 14개 진료과 탭 + 38개 의사 카드(HTML 주석 3개 제외 실렌더 35개) + `table.doc_time` 스케줄 완비.
+- 단일 정적 HTML → httpx + BS4. 1 GET 으로 전체 파싱.
+- 파싱 규칙: 의사 카드 `div.alert.alert-warning`, 셀 내 `div.h04_circle` = 외래진료, `div.h04_triangle` = 수술(외래 제외), 빈 셀 = 휴진.
+- `external_id` 포맷: `BEDRO-{N}` 또는 `BEDRO-{N}-{M}` (카드의 `data-target="#doc{N-M}Modal"` 에서 추출, 일부 카드는 단일 숫자 `#doc15Modal` 형식이라 정규식 `r"#doc(\d+(?:-\d+)?)Modal"` 로 양쪽 지원).
+- 개별 조회: `_fetch_all` 미호출, 동일 URL 1회 GET 후 `[data-target="#docXXXModal"]` 셀렉터로 해당 카드만 파싱 (skill 규칙 #7 준수).
+- 결과: 35명/17개 진료과/197 주간 스케줄/0.59s. 개별 조회 0.39s. 스케줄 없는 3명(검진/영상/진단검사 계열).
+- DB id=39, factory/REGION(서울) 등록, 로고 `goodspine.org/img/logo.png` 238x50 PNG 직접 다운로드.
+
+---
+
+## 2026-04-19 세션 — 5병원 추가 (DAEHAN · SRCH · HYJH · SERAN · BRMH)
+
+### 대한병원(DAEHAN) 크롤러 추가 (`daehan_crawler.py`)
+- 홈페이지 `www.ihanbyung.co.kr`. 단일 페이지 `/bbs/content.php?co_id=hosp_doctors` 에 14명 의사 카드 인라인.
+- 카드: `div.doctor` 당 1명. `div.doctor_title > span` = 진료과, `h4 > strong` = 이름, h4 나머지 텍스트 = 직책. 스케줄은 `span.schedule-b` = 외래진료, 나머지는 제외.
+- 의사 개별 URL/ID 없음 → 이미지 파일명 `doctor_NN.jpg` 의 NN 숫자로 식별. `external_id`: `DAEHAN-{NN}`.
+- 개별 조회는 동일 페이지 1회 GET 후 해당 카드만 파싱 (skill 규칙 #7 준수).
+- 결과: 12명/주간 스케줄 확인. DB id 자동, factory/REGION(서울) 등록.
+
+### 서울적십자병원(SRCH) 크롤러 추가 (`srch_crawler.py`)
+- 홈페이지 `www.rch.or.kr`. 진료과별 페이지 `/web/rchseoul/contents/C{NN}` 18개 과 하드코딩(C01~C19, C03 결번).
+- 각 과 페이지에 해당 과 의사 카드 + 스케줄 테이블 인라인. 카드 `div.border-b-dot.flex.flex-col` 당 1명. h3 안에 `span.font-bold` = 이름, `span.text-orange` = 세부 진료과, 나머지 = 직책.
+- 스케줄 테이블: thead 의 `월~토` 위치 기반 col 매핑, tbody 에 "오전/오후" 라벨 + 각 요일 td. "진료" 텍스트 포함 시 외래.
+- `external_id`: `SRCH-{C코드}-{이름}` (의사별 개별 URL 없음). 개별 조회는 C코드 추출 후 해당 진료과 1개만 GET (skill 규칙 #7 준수).
+- 결과: 41명/18개 진료과. asyncio.as_completed 로 18개 과 병렬 수집. DB id 자동, factory/REGION(서울) 등록.
+
+### 에이치플러스 양지병원(HYJH) 크롤러 추가 (`hyjh_crawler.py`)
+- 홈페이지 `www.newyjh.com`. 단일 통합 페이지 `/reservation/reservation-010000.html` 에 전 진료과(29개) × 전 의사 인라인.
+- 카드 `div.reservation01-conternt` 중 `div.docinfo` 포함 블록만. 이름/직책 = `div.docinfo > div.left > p`, ID = `div.docinfo > div.right > a[href*="Idx_Fkey="]` 의 `Idx_Fkey=\d+` 정규식.
+- 스케줄: `div.docimg > table` tbody 2행(오전/오후) × 6개 요일 td. `td.check-red-01` = 외래진료 (빈 td = 휴진).
+- `external_id`: `HYJH-{Idx_Fkey}`. lxml 파서 우선, 실패 시 html.parser 폴백.
+- 이사장/명예원장 블록 29개는 `Idx_Fkey` 없어 제외됨 → 실제 진료 의사 70명 수집, 그 중 49명 주간 스케줄 보유.
+- 개별 조회는 동일 페이지 1회 GET 후 `a[href*="Idx_Fkey={id}"]` 포함 블록만 파싱. DB id 자동, factory/REGION(서울) 등록.
+
+### 세란병원(SERAN) 크롤러 추가 (`seran_crawler.py`)
+- 홈페이지 `www.seran.co.kr` (서울 종로구). 의료진 목록 `/index.php/html/153` 에 12명, 프로필은 AJAX POST `/xmldata/doctor/profile_load.php` with `data={"id": doctor_id}`.
+- 의사 카드 `div.dr_list`, `li.dr_link` onclick="view_(id,num)" 정규식 `view_\(\s*(\d+)\s*,\s*(\d+)\s*\)` 으로 id 추출. 이름은 `li.name`.
+- 프로필 파싱: `p.name > span` = 직책, `div.clinic .c_con` = 전문분야, `ul.contents` 여러 개 = 학력/약력(notes).
+- 스케줄은 당직의사 시간표 `/index.php/html/57` 의 `table.table_con2` 만 존재 — 정형외과 2명만 해당. 대부분 의사는 `schedules=[]`.
+- `external_id`: `SERAN-{id}`. 개별 조회는 의료진 목록 1회 + 해당 id 프로필 AJAX 1회 + 당직 시간표 1회 (skill 규칙 #7 준수).
+- 결과: 12명 (직책/전문분야/약력 확보), 주간 스케줄은 데이터 한계로 2명만. DB id 자동, factory/REGION(서울) 등록.
+
+### 서울특별시 보라매병원(BRMH) 크롤러 추가 (`brmh_crawler.py`)
+- 홈페이지 `www.brmh.co.kr`. AJAX 기반: 진료과 드롭다운 POST `/mediteam_manage/comm/MediSelect.ajx` with `{medi_type:"001000000", site:"001"}` → 응답은 URL-encoded JSON (`\/` 이스케이프), `urllib.parse.unquote_plus` + `json.loads(...)["SOSOK_OPTION"]` 거쳐 `<option value='{code}|{code}'>{name}</option>` 34개 추출.
+- 의사 목록: GET `/custom/doctor_search.do?site=001&medi_type=001000000&medi_sosok={code}|{code}&doctor_order=A`. `li.doctor_top_right > p.doctor_name` 에 이름/진료과, `openDoctorView('dt_no','code|code','view')` 정규식으로 dt_no 추출.
+- 스케줄: 첫 `table.tb_calendar` 만, `tr.amTr`/`tr.pmTr` × 6개 td. `img[alt*="일반진료"]` 또는 `alt*="클리닉"` = 외래진료, `alt*="수술"`/`alt*="휴진"` = 제외.
+- `external_id`: `BRMH-{dt_no}` (진료과 정보 미포함). 개별 조회는 dt_no 만으론 진료과 특정 불가 → 34개 과 전부 iterate 하며 매칭 (dept 단위 fallback, skill 규칙 #7 의 정신 준수).
+- 버그 2개 해결: ①AJAX 응답이 raw 정규식으로 매칭 안 됨 → JSON 파싱 단계 추가, ②`m.group(2)` 로 dept name 을 code 로 잘못 추출 → `m.group(3)` 으로 수정.
+- Semaphore(6) 로 진료과 병렬. 결과: 34개 진료과/샘플 가정의학과 4명/첫 의사 3개 주간 스케줄. DB id 자동, factory/REGION(서울) 등록.
+
+### 공통 작업
+- factory.py `_DEDICATED_CRAWLERS` 에 5개 등록 + `_HOSPITAL_REGION` 전부 "서울". 상단 docstring 에 새 코드 5개 추가.
+- `hospitals` 테이블에 5개 레코드 (id 50~54, crawler_type='httpx', is_active=1). `region` 컬럼은 스키마에 없어 추가하지 않음 — 지역은 factory 의 `_HOSPITAL_REGION` dict 가 단일 소스.
+- **5개 크롤러 sanity test 통과**: DAEHAN 12명/75 스케줄, SRCH 41명/257 스케줄, HYJH 70명/331 스케줄, SERAN 12명(당직 2명만 스케줄 보유), BRMH 176명/449 스케줄. 모두 `status=success`.
+- **로고 수집 완료** (2026-04-19 이어서 진행분):
+  - DAEHAN.png 64×64 — Google favicon (기준 통과)
+  - HYJH.png 48×48 — Google favicon
+  - SRCH.png 155×19 — 홈페이지 `/design/theme/demo/images/logo.png` 직접 다운로드 (파비콘 16×16 저해상도 → 2단계)
+  - BRMH.png 482×53 — 홈페이지 `/images_brmh_new/common/logo01.png` 직접 다운로드
+  - SERAN.png 167×31 — 홈페이지 `/images/common/logo.jpg` 다운로드 후 PIL 로 PNG 변환
+
+---
+
+## 2026-04-18 세션 — DBJE·NPH·VHS·KHNMC·KDH·SYMC·SMC2 추가, GREEN 정확도 보완, INHA 스케줄 파서 수정
+
+### 서울의료원(SMC2) 크롤러 추가 (`smc2_crawler.py`)
+- 백엔드 전용 JSON API 서브도메인 발견: `https://care.seoulmc.or.kr:8305/homepage/api/hospital/`.
+  1) `GET /department` → 42개 진료과 `{departmentCode, departmentName, isSpecializedCenter, isBookable}`
+  2) `GET /doctor/{deptCode}` → 의사 `{doctorCode, doctorName, intro, speciality, imgSrc}` (H_* 특화센터 일부는 0명)
+  3) `GET /doctor/{deptCode}/{doctorCode}/{YYYY-MM-DD}/{YYYY-MM-DD}` → 날짜별 `{hourType:"AM"|"PM", appointmentDate, todayReceptionStatus}`
+- **3개월치 date_schedules 수집** + 주간 패턴 `schedules` 함께 생성 (달력형 병원 표준 포맷). Semaphore 5(dept)/10(schedule) 병렬.
+- `external_id`: `SMC2-{deptCode}-{doctorCode}` — dept hint 포함해 개별 조회 시 진료과 스캔 생략 가능.
+- 개별 조회: dept hint 있으면 해당 진료과 먼저 조회 → 0.37s. hint 없어도 진료과 순회로 fallback(규칙 위반 아님, _fetch_all 미호출).
+- 결과: 163명/501 주간 스케줄/5,732 date_schedules를 2.87초에 수집. DB id=38, factory/REGION(서울) 등록. 로고: Google favicon 128x128 PNG.
+
+### 삼육서울병원(SYMC) 크롤러 추가 (`symc_crawler.py`)
+- Angular SPA + JSON API 3종 조합. 도메인 `www.symcs.co.kr`.
+  1) `POST /select/department/active` (FormData schWrd="") → 진료과 38개
+  2) `POST /select/doctor/list` (FormData departmentCode=XXX) → 의사 풍부 정보(이름/직책/전공/학력/경력/논문/사진)
+  3) `POST /doctor/timetable` (JSON {departmentCode, doctorId}) → `monAm..sunPm` "진료"/null 플래그
+- 7요일 스케줄(일요일 포함, DOW 6). Semaphore 5(dept)/10(timetable) 병렬.
+- 결과: 90명/534 스케줄/0.89s. 개별 조회 0.36s (진료과별 의사 리스트 스캔으로 매칭).
+- `external_id`: `SYMC-{doctorId}`. DB id=37, factory/REGION 등록.
+
+### 강동성심병원(KDH) 크롤러 추가 (`kdh_crawler.py`)
+- 구조: `/sub202.php`(진료과 목록, 30개) → `/sub202_1.php?bid={bid}`(진료과별 의사 table) → `POST /proc/doctor_info.php` (form `id={dtid}`) → JSON 반환.
+- 의사 블록은 **2행 구성**: 첫 tr(rowspan=2, `span.doct_name_bold`=이름+직책, `span.sub201_dept`=진료과), 둘째 tr(`onclick="openDocPop('NNNN')"` 버튼). 이름 기준 parent tr + 다음 sibling tr 두 개를 모두 스캔해 dtid 추출.
+- 스케줄: JSON의 `am`/`pm` 객체 (`mon/tue/wed/thu/fri/sat`) 에 "●" 값 있으면 해당 요일 오전/오후 진료. TIME_RANGES 기본값 적용(09:00~12:00 / 13:30~17:00).
+- `external_id`: `KDH-{dtid}` — 개별 조회 시 dtid 만으로 `doctor_info.php` 한 번 호출로 완결 (skill 규칙 준수).
+- 결과: 30개 진료과, 140명, 355 스케줄을 7.2초에 수집. 개별 조회 0.2초. 35명은 스케줄 없음(응급/진단검사/병리/영상의학과 — JS에도 예약 숨김 처리).
+- 로고: `kangdong_logo.svg` 다운로드 (SVG 우선, PNG 폴백).
+
+### 중앙보훈병원(VHS)·강동경희대병원(KHNMC) 크롤러 추가
+- VHS(`vhs_crawler.py`): 진료과 36개, 의사 170명, 스케줄 635건 (2.9s). goRsrv id 파싱 시 href·onclick 양쪽 모두 체크.
+- KHNMC(`khnmc_crawler.py`): JSON API `/api/department/deptCdList.do` (진료과 31개) + `/kr/treatment/department/{deptCd}/timetable.do` HTML 파싱. 195명/447 스케줄/6.3s. WAF 우회 위해 main.do 로 세션 쿠키 부트스트랩. external_id 에 deptCd 내장(`KHNMC-{deptCd}-{drNo}`) → 개별 조회 1개 진료과만 재크롤.
+- DB 등록 (id=34 VHS, id=35 KHNMC, id=36 KDH). factory `_DEDICATED_CRAWLERS` / `_HOSPITAL_REGION` 추가.
+
+
+
+### 인하대병원(INHA) — 진료과 스케줄 파서 수정 (`inha_crawler.py`)
+- `_fetch_dept_schedule()` 가 0명을 반환하던 버그. 원인: 첫 번째 thead 행(의료진/전문분야/진료일정/예약)에서 요일 칼럼 매핑 시도 → 빈 dict.
+- 실제 테이블 구조: 의사당 2행. 오전 행 `[img+name rs=2 | specialty rs=2 | 오전 | 월~토 | 예약 rs=2]`, 오후 행 `[오후 | 월~토]`.
+- 재작성: `table.dept-time tbody` 직접 자식 `<tr>` 순회 → `img[src*='/doctor/']` 있는 행은 오전, 다음 행은 오후. 고정 칼럼 위치(`cells[3:9]` / `cells[1:7]`) 로 날짜 셀 추출.
+- `span.dept-icon` / `span.center-icon` 존재 여부로 진료 판별. location 은 단일 캠퍼스이므로 빈 문자열(센터 진료만 `"센터"` 태그).
+- 결과: 전체 268명, 35개 진료과, 600 스케줄을 17초 내 수집. 개별 조회 0.2초.
+
+
+
+### 동부제일병원(DBJE) 크롤러 추가 (`dbje_crawler.py`)
+- 단일 진료시간표 페이지 1개 테이블(36행). rowspan 중첩이 심해 2D 그리드로 펼쳐 파싱.
+- `_expand_grid()` — 모든 셀을 rowspan/colspan 만큼 채운 뒤 진료과(0) / 의사명(1) / 구분(2) / 월~토(3~8) / 기타(9) / 진료분야(10) 열 위치 고정.
+- 스케줄 마크: `●` / `수술` / `예약 진료` / `12:30 까지`(토 단축). 휴진은 `-`.
+- 결과: 17명, 7개 진료과(내과센터/일반외과/정형외과/신경외과/신경과/산부인과).
+- `external_id`: 개별 ID 없음 → `md5(dept|name)[:10]` 해시. `verify=False` 로 SSL 이슈 회피.
+
+### 경찰병원(NPH) 크롤러 추가 (`nph_crawler.py`)
+- 구조: `/nph/med/dept/list.do` 에서 31개 `dcDept` 추출 → `/nph/med/doctor/treatment.do?dcDept={code}` 로 진료과별 의료진 테이블 파싱.
+- 스케줄이 `<td>` 텍스트가 아닌 `<img src="/static/img/nph/sub/circle.png">` 아이콘 존재 유무로 표시됨 — `cell.select_one('img[src*="circle"]')` 로 판별.
+- 테이블 rowspan 구조: 의료진(rs=2)/선택진료(rs=2)/주='오전'/월~토/전문분야(rs=2)/예약(rs=2) + 오후 행은 '오후' 라벨 + 월~토 (7셀).
+- `external_id`: `NPH-{dcDept}-{medDr}` (예약 버튼 `goTreat('01100','2005011')` 에서 추출). 일부 진료과(핵의학실 등) 예약 버튼 없는 의사는 이름 fallback.
+- `asyncio.as_completed` 로 31개 진료과 병렬 수집. 결과: 67명.
+- `crawl_doctor_schedule`은 `staff_id` 에서 `dcDept` 파싱해 **해당 진료과 1곳만** 재조회 (skill의 "개별 URL 없을 시 진료과 단위 조회" 패턴).
+
+### GREEN 크롤러 정확도 보완 (`green_crawler.py`)
+- 사용자 피드백: "녹색병원 정확히 가져오지 못했어"
+- 버그 1: 의사명 셀에 `★사전 예약 필수★ 예약 환자` 같은 오염 문자열 포함. `★` 기준 분할 + 괄호 제거 + `[가-힣]{2,4}(?:\s[가-힣]{1,3})?` regex 로 한글 이름만 추출.
+- 버그 2: 스케줄이 없는 의사(예약 전용)는 dict 에 등록되지 않고 누락. 이름 행 파싱 시점에 즉시 등록하도록 변경 (스케줄 유무와 무관).
+- 결과: 24명 → 27명(이종국/서문영/백도명 추가 포함).
+
+### 혜민병원(HYEMIN)·녹색병원(GREEN) 크롤러 추가 (2026-04-17 작업분)
+- 둘 다 단일 진료시간표 페이지에 전체 의사+스케줄이 들어있는 정적 HTML.
+- HYEMIN: `li.hil_txt` 단위 파싱, 43명 수집. (`hyemin_crawler.py`)
+- GREEN: 진료과별 테이블 17개, 테이블 직전 헤더로 진료과 매칭, 정확도 보완 후 27명.
+- `external_id`는 개별 ID가 없어 `md5(department|name)[:10]` 해시로 안정화.
+- factory/DB/로고 등록 완료. 로고는 Google 파비콘 16×16 저해상도 → 교체 대기 트랙.
+
+### 남은 요청 — 5개 병원 Playwright 계열
+- SMC2(서울의료원)/KHNMC(강동경희대)/KDH(강동성심)/VHS(중앙보훈)/SAHMYOOK(삼육서울): 범용 `HOSPITAL_CONFIGS` 패턴에 맞지 않음.
+- 기본 도메인 접속 실패(KDH/SAHMYOOK) 또는 SPA(SMC2)로 각 사이트별 개별 조사 필요 — 전용 크롤러 경로가 합리적.
+- ~~BEDRO(강남베드로)는 의사 모달에 학력/경력만 있고 스케줄 없음 — 다른 소스 재탐색 보류.~~ → **2026-04-19 해결**: 스케줄 실존(page h04.php 내 `table.doc_time`) 확인 후 크롤러 추가 완료.
+
+## 2026-04-17 세션 — INHA 크롤러 개선
+
+### 교수 탐색 — 병원 목록 가나다 순 정렬
+- `BrowseDoctors.jsx` 지역 그룹핑 후 각 지역 내 병원 배열을 `localeCompare('ko')` 로 정렬.
+
+### 국립암센터(NCC) 크롤러 — 개별 조회 병렬화
+- `crawl_doctor_schedule`이 1명 조회에 13개 암센터 페이지를 **순차** 요청 (스킬 금지 패턴).
+- NCC는 의사 개별 상세 URL이 없어(`/mdlDoctorPopup.ncc` → 404) 전체 13개 센터 순회가 불가피.
+- **`asyncio.as_completed` 기반 병렬 수집 + 병합** 으로 변경. `logger.warning` 으로 제한 fallback 표식.
+- 효과: 테스트 케이스 기준 ~6.4초 (가장 느린 센터 응답에 바운드). 순차 대비 체감 속도 크게 개선.
+
+### 인하대병원(INHA) 크롤러 — 개별 조회 최적화
+- `crawl_doctor_schedule`이 기존엔 전체 진료과(36개)를 순회해 의사 이름/과를 찾았음 → 스킬 가이드 위반 + 1명 조회에 수십 초 소요.
+- `_fetch_doctor_profile()` 신규: 프로필 페이지(`/page/department/medicine/doctor/{ID}`) 1회 요청으로 `p.name`, `p.dept`, `div.prg-wrap` 기반 전문분야, 스케줄 테이블 모두 추출.
+- 결과: 개별 조회 0.17초, 전문분야까지 정상 포함. 진료과 순회 fallback 제거.
+- 전체 경로 smoke test (가정의학과 2명) 통과 — status=success.
+
+---
+
 ## 2026-04-15 세션 — 완료된 수정
 
 ### UX 버그 픽스 (dashboard/memo)

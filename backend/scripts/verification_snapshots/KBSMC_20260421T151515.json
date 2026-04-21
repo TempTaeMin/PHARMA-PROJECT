@@ -1,0 +1,3335 @@
+{
+  "hospital_code": "KBSMC",
+  "hospital_name": "강북삼성병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "강재헌",
+      "department": "가정의학과",
+      "external_id": "KBSMC-1-1",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김철환",
+      "department": "가정의학과",
+      "external_id": "KBSMC-2-1",
+      "n_schedules": 5,
+      "n_date_schedules": 65,
+      "notes": ""
+    },
+    {
+      "name": "동재준",
+      "department": "가정의학과",
+      "external_id": "KBSMC-440-1",
+      "n_schedules": 3,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "배예슬",
+      "department": "가정의학과",
+      "external_id": "KBSMC-5-1",
+      "n_schedules": 8,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "성은주",
+      "department": "가정의학과",
+      "external_id": "KBSMC-3-1",
+      "n_schedules": 11,
+      "n_date_schedules": 89,
+      "notes": ""
+    },
+    {
+      "name": "신수정",
+      "department": "가정의학과",
+      "external_id": "KBSMC-6-1",
+      "n_schedules": 5,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "가정의학과",
+      "external_id": "KBSMC-7-1",
+      "n_schedules": 7,
+      "n_date_schedules": 59,
+      "notes": ""
+    },
+    {
+      "name": "김보미",
+      "department": "감염내과",
+      "external_id": "KBSMC-20-2",
+      "n_schedules": 8,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "정혜숙",
+      "department": "감염내과",
+      "external_id": "KBSMC-21-2",
+      "n_schedules": 12,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "주은정",
+      "department": "감염내과",
+      "external_id": "KBSMC-22-2",
+      "n_schedules": 12,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "권혜미",
+      "department": "내분비내과",
+      "external_id": "KBSMC-23-3",
+      "n_schedules": 6,
+      "n_date_schedules": 65,
+      "notes": ""
+    },
+    {
+      "name": "문선준",
+      "department": "내분비내과",
+      "external_id": "KBSMC-24-3",
+      "n_schedules": 9,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "박세은",
+      "department": "내분비내과",
+      "external_id": "KBSMC-25-3",
+      "n_schedules": 7,
+      "n_date_schedules": 80,
+      "notes": ""
+    },
+    {
+      "name": "박철영",
+      "department": "내분비내과",
+      "external_id": "KBSMC-26-3",
+      "n_schedules": 6,
+      "n_date_schedules": 78,
+      "notes": ""
+    },
+    {
+      "name": "오기원",
+      "department": "내분비내과",
+      "external_id": "KBSMC-27-3",
+      "n_schedules": 12,
+      "n_date_schedules": 72,
+      "notes": ""
+    },
+    {
+      "name": "이다연",
+      "department": "내분비내과",
+      "external_id": "KBSMC-403-3",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "이원영",
+      "department": "내분비내과",
+      "external_id": "KBSMC-28-3",
+      "n_schedules": 9,
+      "n_date_schedules": 74,
+      "notes": ""
+    },
+    {
+      "name": "이은정",
+      "department": "내분비내과",
+      "external_id": "KBSMC-29-3",
+      "n_schedules": 6,
+      "n_date_schedules": 71,
+      "notes": ""
+    },
+    {
+      "name": "장한나",
+      "department": "내분비내과",
+      "external_id": "KBSMC-398-3",
+      "n_schedules": 12,
+      "n_date_schedules": 91,
+      "notes": ""
+    },
+    {
+      "name": "안중경",
+      "department": "류마티스내과",
+      "external_id": "KBSMC-31-4",
+      "n_schedules": 9,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "은영희",
+      "department": "류마티스내과",
+      "external_id": "KBSMC-32-4",
+      "n_schedules": 10,
+      "n_date_schedules": 64,
+      "notes": ""
+    },
+    {
+      "name": "권은진",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-442-5",
+      "n_schedules": 4,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "김윤홍",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-33-5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하라",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-441-5",
+      "n_schedules": 6,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "문연진",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-484-5",
+      "n_schedules": 4,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "변재훈",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-35-5",
+      "n_schedules": 12,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "심재금",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-36-5",
+      "n_schedules": 4,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "안진희",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-37-5",
+      "n_schedules": 4,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "오은정",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-434-5",
+      "n_schedules": 12,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "이승현",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-39-5",
+      "n_schedules": 12,
+      "n_date_schedules": 120,
+      "notes": ""
+    },
+    {
+      "name": "전수용",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-410-5",
+      "n_schedules": 2,
+      "n_date_schedules": 4,
+      "notes": ""
+    },
+    {
+      "name": "전주현",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-425-5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은아",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-40-5",
+      "n_schedules": 2,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "최원준",
+      "department": "마취통증의학과",
+      "external_id": "KBSMC-41-5",
+      "n_schedules": 4,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "남희림",
+      "department": "방사선종양학과",
+      "external_id": "KBSMC-44-6",
+      "n_schedules": 8,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "이준복",
+      "department": "방사선종양학과",
+      "external_id": "KBSMC-45-6",
+      "n_schedules": 9,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "이혜빈",
+      "department": "방사선종양학과",
+      "external_id": "KBSMC-46-6",
+      "n_schedules": 11,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "권도희",
+      "department": "병리과",
+      "external_id": "KBSMC-47-7",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동훈",
+      "department": "병리과",
+      "external_id": "KBSMC-49-7",
+      "n_schedules": 10,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "김한나",
+      "department": "병리과",
+      "external_id": "KBSMC-59-7",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도성임",
+      "department": "병리과",
+      "external_id": "KBSMC-50-7",
+      "n_schedules": 4,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "도인구",
+      "department": "병리과",
+      "external_id": "KBSMC-51-7",
+      "n_schedules": 10,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "문지혜",
+      "department": "병리과",
+      "external_id": "KBSMC-52-7",
+      "n_schedules": 12,
+      "n_date_schedules": 98,
+      "notes": ""
+    },
+    {
+      "name": "방성식",
+      "department": "병리과",
+      "external_id": "KBSMC-487-7",
+      "n_schedules": 0,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "서연림",
+      "department": "병리과",
+      "external_id": "KBSMC-479-7",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송보람",
+      "department": "병리과",
+      "external_id": "KBSMC-54-7",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현주",
+      "department": "병리과",
+      "external_id": "KBSMC-55-7",
+      "n_schedules": 2,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "정유민",
+      "department": "병리과",
+      "external_id": "KBSMC-56-7",
+      "n_schedules": 0,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "채승완",
+      "department": "병리과",
+      "external_id": "KBSMC-57-7",
+      "n_schedules": 4,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "추진아",
+      "department": "병리과",
+      "external_id": "KBSMC-58-7",
+      "n_schedules": 3,
+      "n_date_schedules": 3,
+      "notes": ""
+    },
+    {
+      "name": "김동훈",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-18-8",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박흥재",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-12-8",
+      "n_schedules": 6,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "박태용",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-407-8",
+      "n_schedules": 7,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "정재용",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-13-8",
+      "n_schedules": 5,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "조영삼",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-14-8",
+      "n_schedules": 5,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "주관중",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-15-8",
+      "n_schedules": 10,
+      "n_date_schedules": 75,
+      "notes": ""
+    },
+    {
+      "name": "최한용",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-16-8",
+      "n_schedules": 6,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "편종현",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-17-8",
+      "n_schedules": 12,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "비뇨의학과",
+      "external_id": "KBSMC-19-8",
+      "n_schedules": 4,
+      "n_date_schedules": 5,
+      "notes": ""
+    },
+    {
+      "name": "김계현",
+      "department": "산부인과",
+      "external_id": "KBSMC-60-9",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김서연",
+      "department": "산부인과",
+      "external_id": "KBSMC-61-9",
+      "n_schedules": 4,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "김우영",
+      "department": "산부인과",
+      "external_id": "KBSMC-62-9",
+      "n_schedules": 7,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "노정래",
+      "department": "산부인과",
+      "external_id": "KBSMC-514-9",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "백이선",
+      "department": "산부인과",
+      "external_id": "KBSMC-63-9",
+      "n_schedules": 4,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "송태종",
+      "department": "산부인과",
+      "external_id": "KBSMC-64-9",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "이교원",
+      "department": "산부인과",
+      "external_id": "KBSMC-65-9",
+      "n_schedules": 10,
+      "n_date_schedules": 57,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "산부인과",
+      "external_id": "KBSMC-66-9",
+      "n_schedules": 4,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "김규남",
+      "department": "성형외과",
+      "external_id": "KBSMC-67-10",
+      "n_schedules": 8,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "김준규",
+      "department": "성형외과",
+      "external_id": "KBSMC-68-10",
+      "n_schedules": 5,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "신현우",
+      "department": "성형외과",
+      "external_id": "KBSMC-69-10",
+      "n_schedules": 5,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "성형외과",
+      "external_id": "KBSMC-71-10",
+      "n_schedules": 6,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "공영화",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-443-11",
+      "n_schedules": 8,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "김덕수",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-73-11",
+      "n_schedules": 9,
+      "n_date_schedules": 69,
+      "notes": ""
+    },
+    {
+      "name": "김명진",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-515-11",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "김은실",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-74-11",
+      "n_schedules": 12,
+      "n_date_schedules": 102,
+      "notes": ""
+    },
+    {
+      "name": "김흥동",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-75-11",
+      "n_schedules": 6,
+      "n_date_schedules": 71,
+      "notes": ""
+    },
+    {
+      "name": "심재원",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-76-11",
+      "n_schedules": 3,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "심정연",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-77-11",
+      "n_schedules": 6,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "양아람",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-78-11",
+      "n_schedules": 5,
+      "n_date_schedules": 56,
+      "notes": ""
+    },
+    {
+      "name": "임수연",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-81-11",
+      "n_schedules": 2,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "장신영",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-444-11",
+      "n_schedules": 6,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "전가원",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-508-11",
+      "n_schedules": 2,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "정혜림",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-79-11",
+      "n_schedules": 6,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "소아청소년과",
+      "external_id": "KBSMC-80-11",
+      "n_schedules": 2,
+      "n_date_schedules": 3,
+      "notes": ""
+    },
+    {
+      "name": "김남희",
+      "department": "소화기내과",
+      "external_id": "KBSMC-85-12",
+      "n_schedules": 12,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "김병익",
+      "department": "소화기내과",
+      "external_id": "KBSMC-109-12",
+      "n_schedules": 7,
+      "n_date_schedules": 57,
+      "notes": ""
+    },
+    {
+      "name": "김태우",
+      "department": "소화기내과",
+      "external_id": "KBSMC-423-12",
+      "n_schedules": 8,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "김홍주",
+      "department": "소화기내과",
+      "external_id": "KBSMC-110-12",
+      "n_schedules": 9,
+      "n_date_schedules": 71,
+      "notes": ""
+    },
+    {
+      "name": "박동일",
+      "department": "소화기내과",
+      "external_id": "KBSMC-112-12",
+      "n_schedules": 10,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "박수경",
+      "department": "소화기내과",
+      "external_id": "KBSMC-115-12",
+      "n_schedules": 7,
+      "n_date_schedules": 58,
+      "notes": ""
+    },
+    {
+      "name": "박정호",
+      "department": "소화기내과",
+      "external_id": "KBSMC-116-12",
+      "n_schedules": 4,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "손원",
+      "department": "소화기내과",
+      "external_id": "KBSMC-117-12",
+      "n_schedules": 10,
+      "n_date_schedules": 74,
+      "notes": ""
+    },
+    {
+      "name": "손정일",
+      "department": "소화기내과",
+      "external_id": "KBSMC-118-12",
+      "n_schedules": 11,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "양효준",
+      "department": "소화기내과",
+      "external_id": "KBSMC-119-12",
+      "n_schedules": 5,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "오현우",
+      "department": "소화기내과",
+      "external_id": "KBSMC-401-12",
+      "n_schedules": 4,
+      "n_date_schedules": 62,
+      "notes": ""
+    },
+    {
+      "name": "이시영",
+      "department": "소화기내과",
+      "external_id": "KBSMC-512-12",
+      "n_schedules": 7,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "전우규",
+      "department": "소화기내과",
+      "external_id": "KBSMC-121-12",
+      "n_schedules": 10,
+      "n_date_schedules": 56,
+      "notes": ""
+    },
+    {
+      "name": "정윤숙",
+      "department": "소화기내과",
+      "external_id": "KBSMC-122-12",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "조용균",
+      "department": "소화기내과",
+      "external_id": "KBSMC-123-12",
+      "n_schedules": 4,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김정용",
+      "department": "소화기내과",
+      "external_id": "KBSMC-469-12",
+      "n_schedules": 11,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "소화기내과",
+      "external_id": "KBSMC-128-12",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유진",
+      "department": "소화기내과",
+      "external_id": "KBSMC-491-12",
+      "n_schedules": 11,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "서명원",
+      "department": "소화기내과",
+      "external_id": "KBSMC-492-12",
+      "n_schedules": 10,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "이한명",
+      "department": "소화기내과",
+      "external_id": "KBSMC-493-12",
+      "n_schedules": 10,
+      "n_date_schedules": 20,
+      "notes": ""
+    },
+    {
+      "name": "신현오",
+      "department": "소화기내과",
+      "external_id": "KBSMC-516-12",
+      "n_schedules": 0,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "안효진",
+      "department": "소화기내과",
+      "external_id": "KBSMC-517-12",
+      "n_schedules": 0,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "함형석",
+      "department": "소화기내과",
+      "external_id": "KBSMC-518-12",
+      "n_schedules": 0,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "박대현",
+      "department": "소화기내과",
+      "external_id": "KBSMC-530-12",
+      "n_schedules": 2,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "김재범",
+      "department": "소화기내과",
+      "external_id": "KBSMC-538-12",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권우찬",
+      "department": "순환기내과",
+      "external_id": "KBSMC-402-13",
+      "n_schedules": 7,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "김민",
+      "department": "순환기내과",
+      "external_id": "KBSMC-435-13",
+      "n_schedules": 9,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "김범수",
+      "department": "순환기내과",
+      "external_id": "KBSMC-130-13",
+      "n_schedules": 12,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "김병진",
+      "department": "순환기내과",
+      "external_id": "KBSMC-200-13",
+      "n_schedules": 9,
+      "n_date_schedules": 62,
+      "notes": ""
+    },
+    {
+      "name": "김지원",
+      "department": "순환기내과",
+      "external_id": "KBSMC-445-13",
+      "n_schedules": 5,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "성기철",
+      "department": "순환기내과",
+      "external_id": "KBSMC-203-13",
+      "n_schedules": 5,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "신혜영",
+      "department": "순환기내과",
+      "external_id": "KBSMC-519-13",
+      "n_schedules": 3,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "이성호",
+      "department": "순환기내과",
+      "external_id": "KBSMC-215-13",
+      "n_schedules": 11,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "이승재",
+      "department": "순환기내과",
+      "external_id": "KBSMC-216-13",
+      "n_schedules": 11,
+      "n_date_schedules": 58,
+      "notes": ""
+    },
+    {
+      "name": "최효인",
+      "department": "순환기내과",
+      "external_id": "KBSMC-221-13",
+      "n_schedules": 4,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "홍민석",
+      "department": "순환기내과",
+      "external_id": "KBSMC-520-13",
+      "n_schedules": 3,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "권영남",
+      "department": "신경과",
+      "external_id": "KBSMC-521-14",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "김용범",
+      "department": "신경과",
+      "external_id": "KBSMC-225-14",
+      "n_schedules": 7,
+      "n_date_schedules": 58,
+      "notes": ""
+    },
+    {
+      "name": "문희수",
+      "department": "신경과",
+      "external_id": "KBSMC-227-14",
+      "n_schedules": 9,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "백장현",
+      "department": "신경과",
+      "external_id": "KBSMC-229-14",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "서범천",
+      "department": "신경과",
+      "external_id": "KBSMC-230-14",
+      "n_schedules": 7,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "선우준상",
+      "department": "신경과",
+      "external_id": "KBSMC-231-14",
+      "n_schedules": 4,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "윤원태",
+      "department": "신경과",
+      "external_id": "KBSMC-235-14",
+      "n_schedules": 5,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "정필욱",
+      "department": "신경과",
+      "external_id": "KBSMC-238-14",
+      "n_schedules": 0,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "신경과",
+      "external_id": "KBSMC-242-14",
+      "n_schedules": 4,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "김민우",
+      "department": "신경외과",
+      "external_id": "KBSMC-446-15",
+      "n_schedules": 4,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "신현철",
+      "department": "신경외과",
+      "external_id": "KBSMC-244-15",
+      "n_schedules": 10,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "원유삼",
+      "department": "신경외과",
+      "external_id": "KBSMC-247-15",
+      "n_schedules": 9,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "이종주",
+      "department": "신경외과",
+      "external_id": "KBSMC-248-15",
+      "n_schedules": 8,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "오재근",
+      "department": "신경외과",
+      "external_id": "KBSMC-432-15",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "윤홍규",
+      "department": "신경외과",
+      "external_id": "KBSMC-447-15",
+      "n_schedules": 9,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "정연구",
+      "department": "신경외과",
+      "external_id": "KBSMC-249-15",
+      "n_schedules": 12,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "홍제범",
+      "department": "신경외과",
+      "external_id": "KBSMC-254-15",
+      "n_schedules": 7,
+      "n_date_schedules": 57,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "신경외과",
+      "external_id": "KBSMC-255-15",
+      "n_schedules": 6,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "양지현",
+      "department": "신장내과",
+      "external_id": "KBSMC-260-16",
+      "n_schedules": 7,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "이규백",
+      "department": "신장내과",
+      "external_id": "KBSMC-262-16",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "현영율",
+      "department": "신장내과",
+      "external_id": "KBSMC-273-16",
+      "n_schedules": 6,
+      "n_date_schedules": 59,
+      "notes": ""
+    },
+    {
+      "name": "김유정",
+      "department": "신장내과",
+      "external_id": "KBSMC-522-16",
+      "n_schedules": 5,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "이주영",
+      "department": "신장내과",
+      "external_id": "KBSMC-523-16",
+      "n_schedules": 4,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "공민귀",
+      "department": "안과",
+      "external_id": "KBSMC-267-17",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김보희",
+      "department": "안과",
+      "external_id": "KBSMC-268-17",
+      "n_schedules": 8,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "김준모",
+      "department": "안과",
+      "external_id": "KBSMC-269-17",
+      "n_schedules": 8,
+      "n_date_schedules": 59,
+      "notes": ""
+    },
+    {
+      "name": "송수정",
+      "department": "안과",
+      "external_id": "KBSMC-270-17",
+      "n_schedules": 5,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "최철영",
+      "department": "안과",
+      "external_id": "KBSMC-271-17",
+      "n_schedules": 7,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "한소영",
+      "department": "안과",
+      "external_id": "KBSMC-198-17",
+      "n_schedules": 12,
+      "n_date_schedules": 89,
+      "notes": ""
+    },
+    {
+      "name": "한지상",
+      "department": "안과",
+      "external_id": "KBSMC-272-17",
+      "n_schedules": 12,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "안과",
+      "external_id": "KBSMC-494-17",
+      "n_schedules": 10,
+      "n_date_schedules": 87,
+      "notes": ""
+    },
+    {
+      "name": "박정우",
+      "department": "안과",
+      "external_id": "KBSMC-525-17",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "구보연",
+      "department": "영상의학과",
+      "external_id": "KBSMC-460-18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고지수",
+      "department": "영상의학과",
+      "external_id": "KBSMC-448-18",
+      "n_schedules": 0,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "권미리",
+      "department": "영상의학과",
+      "external_id": "KBSMC-240-18",
+      "n_schedules": 8,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "권헌주",
+      "department": "영상의학과",
+      "external_id": "KBSMC-241-18",
+      "n_schedules": 4,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "김명섭",
+      "department": "영상의학과",
+      "external_id": "KBSMC-245-18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민철",
+      "department": "영상의학과",
+      "external_id": "KBSMC-265-18",
+      "n_schedules": 6,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "김병수",
+      "department": "영상의학과",
+      "external_id": "KBSMC-450-18",
+      "n_schedules": 8,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "김준성",
+      "department": "영상의학과",
+      "external_id": "KBSMC-457-18",
+      "n_schedules": 0,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "김준호",
+      "department": "영상의학과",
+      "external_id": "KBSMC-526-18",
+      "n_schedules": 2,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "김지나",
+      "department": "영상의학과",
+      "external_id": "KBSMC-250-18",
+      "n_schedules": 6,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "노명호",
+      "department": "영상의학과",
+      "external_id": "KBSMC-251-18",
+      "n_schedules": 6,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "문주희",
+      "department": "영상의학과",
+      "external_id": "KBSMC-252-18",
+      "n_schedules": 4,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "박승현",
+      "department": "영상의학과",
+      "external_id": "KBSMC-459-18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박희진",
+      "department": "영상의학과",
+      "external_id": "KBSMC-253-18",
+      "n_schedules": 6,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "윤인영",
+      "department": "영상의학과",
+      "external_id": "KBSMC-257-18",
+      "n_schedules": 2,
+      "n_date_schedules": 4,
+      "notes": ""
+    },
+    {
+      "name": "이경훈",
+      "department": "영상의학과",
+      "external_id": "KBSMC-411-18",
+      "n_schedules": 6,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "이민희",
+      "department": "영상의학과",
+      "external_id": "KBSMC-531-18",
+      "n_schedules": 0,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "이영래",
+      "department": "영상의학과",
+      "external_id": "KBSMC-258-18",
+      "n_schedules": 10,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "장민재",
+      "department": "영상의학과",
+      "external_id": "KBSMC-466-18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장윤진",
+      "department": "영상의학과",
+      "external_id": "KBSMC-397-18",
+      "n_schedules": 0,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "최윤정",
+      "department": "영상의학과",
+      "external_id": "KBSMC-259-18",
+      "n_schedules": 0,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "한아리",
+      "department": "영상의학과",
+      "external_id": "KBSMC-452-18",
+      "n_schedules": 4,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "함수연",
+      "department": "영상의학과",
+      "external_id": "KBSMC-261-18",
+      "n_schedules": 12,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "홍현표",
+      "department": "영상의학과",
+      "external_id": "KBSMC-263-18",
+      "n_schedules": 2,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "권재우",
+      "department": "외과",
+      "external_id": "KBSMC-210-19",
+      "n_schedules": 6,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "김기윤",
+      "department": "외과",
+      "external_id": "KBSMC-404-19",
+      "n_schedules": 8,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "김은영",
+      "department": "외과",
+      "external_id": "KBSMC-211-19",
+      "n_schedules": 7,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "김형욱",
+      "department": "외과",
+      "external_id": "KBSMC-212-19",
+      "n_schedules": 9,
+      "n_date_schedules": 59,
+      "notes": ""
+    },
+    {
+      "name": "김흥대",
+      "department": "외과",
+      "external_id": "KBSMC-213-19",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "류창학",
+      "department": "외과",
+      "external_id": "KBSMC-214-19",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "박용래",
+      "department": "외과",
+      "external_id": "KBSMC-217-19",
+      "n_schedules": 0,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "박찬흔",
+      "department": "외과",
+      "external_id": "KBSMC-220-19",
+      "n_schedules": 4,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "손병호",
+      "department": "외과",
+      "external_id": "KBSMC-222-19",
+      "n_schedules": 4,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "신준호",
+      "department": "외과",
+      "external_id": "KBSMC-226-19",
+      "n_schedules": 6,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "윤지섭",
+      "department": "외과",
+      "external_id": "KBSMC-228-19",
+      "n_schedules": 9,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "이관호",
+      "department": "외과",
+      "external_id": "KBSMC-232-19",
+      "n_schedules": 8,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "이성열",
+      "department": "외과",
+      "external_id": "KBSMC-233-19",
+      "n_schedules": 5,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "이재준",
+      "department": "외과",
+      "external_id": "KBSMC-405-19",
+      "n_schedules": 8,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "이지연",
+      "department": "외과",
+      "external_id": "KBSMC-236-19",
+      "n_schedules": 12,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "정경욱",
+      "department": "외과",
+      "external_id": "KBSMC-237-19",
+      "n_schedules": 9,
+      "n_date_schedules": 69,
+      "notes": ""
+    },
+    {
+      "name": "박주성",
+      "department": "외과",
+      "external_id": "KBSMC-481-19",
+      "n_schedules": 0,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "유갑일반",
+      "department": "외과",
+      "external_id": "KBSMC-499-19",
+      "n_schedules": 7,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "외과",
+      "external_id": "KBSMC-500-19",
+      "n_schedules": 8,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "이수하",
+      "department": "외과",
+      "external_id": "KBSMC-527-19",
+      "n_schedules": 4,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "김민균",
+      "department": "응급의학과",
+      "external_id": "KBSMC-418-20",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나지웅",
+      "department": "응급의학과",
+      "external_id": "KBSMC-201-20",
+      "n_schedules": 2,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "신동혁",
+      "department": "응급의학과",
+      "external_id": "KBSMC-202-20",
+      "n_schedules": 4,
+      "n_date_schedules": 4,
+      "notes": ""
+    },
+    {
+      "name": "윤경성",
+      "department": "응급의학과",
+      "external_id": "KBSMC-209-20",
+      "n_schedules": 0,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "이장희",
+      "department": "응급의학과",
+      "external_id": "KBSMC-205-20",
+      "n_schedules": 4,
+      "n_date_schedules": 4,
+      "notes": ""
+    },
+    {
+      "name": "정지용",
+      "department": "응급의학과",
+      "external_id": "KBSMC-208-20",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최필조",
+      "department": "응급의학과",
+      "external_id": "KBSMC-206-20",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상국",
+      "department": "응급의학과",
+      "external_id": "KBSMC-207-20",
+      "n_schedules": 4,
+      "n_date_schedules": 4,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "응급의학과",
+      "external_id": "KBSMC-502-20",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재선",
+      "department": "이비인후과",
+      "external_id": "KBSMC-408-21",
+      "n_schedules": 6,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "변하영",
+      "department": "이비인후과",
+      "external_id": "KBSMC-196-21",
+      "n_schedules": 0,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "이경철",
+      "department": "이비인후과",
+      "external_id": "KBSMC-192-21",
+      "n_schedules": 4,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "이길준",
+      "department": "이비인후과",
+      "external_id": "KBSMC-453-21",
+      "n_schedules": 7,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "이상혁",
+      "department": "이비인후과",
+      "external_id": "KBSMC-193-21",
+      "n_schedules": 7,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "진성민",
+      "department": "이비인후과",
+      "external_id": "KBSMC-194-21",
+      "n_schedules": 7,
+      "n_date_schedules": 30,
+      "notes": ""
+    },
+    {
+      "name": "홍석진",
+      "department": "이비인후과",
+      "external_id": "KBSMC-195-21",
+      "n_schedules": 6,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "이비인후과",
+      "external_id": "KBSMC-503-21",
+      "n_schedules": 1,
+      "n_date_schedules": 1,
+      "notes": ""
+    },
+    {
+      "name": "석보금",
+      "department": "입원의학과",
+      "external_id": "KBSMC-187-22",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정가연",
+      "department": "입원의학과",
+      "external_id": "KBSMC-188-22",
+      "n_schedules": 12,
+      "n_date_schedules": 112,
+      "notes": ""
+    },
+    {
+      "name": "조용균2",
+      "department": "입원의학과",
+      "external_id": "KBSMC-511-22",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나윤주",
+      "department": "재활의학과",
+      "external_id": "KBSMC-477-23",
+      "n_schedules": 10,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "박철현",
+      "department": "재활의학과",
+      "external_id": "KBSMC-183-23",
+      "n_schedules": 6,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "윤경재",
+      "department": "재활의학과",
+      "external_id": "KBSMC-184-23",
+      "n_schedules": 8,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "이용택",
+      "department": "재활의학과",
+      "external_id": "KBSMC-185-23",
+      "n_schedules": 9,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "재활의학과",
+      "external_id": "KBSMC-504-23",
+      "n_schedules": 5,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "김은수",
+      "department": "정신건강의학과",
+      "external_id": "KBSMC-182-24",
+      "n_schedules": 7,
+      "n_date_schedules": 57,
+      "notes": ""
+    },
+    {
+      "name": "김준형",
+      "department": "정신건강의학과",
+      "external_id": "KBSMC-406-24",
+      "n_schedules": 7,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "신동원",
+      "department": "정신건강의학과",
+      "external_id": "KBSMC-177-24",
+      "n_schedules": 12,
+      "n_date_schedules": 75,
+      "notes": ""
+    },
+    {
+      "name": "신영철",
+      "department": "정신건강의학과",
+      "external_id": "KBSMC-178-24",
+      "n_schedules": 2,
+      "n_date_schedules": 4,
+      "notes": ""
+    },
+    {
+      "name": "오강섭",
+      "department": "정신건강의학과",
+      "external_id": "KBSMC-179-24",
+      "n_schedules": 7,
+      "n_date_schedules": 56,
+      "notes": ""
+    },
+    {
+      "name": "전상원",
+      "department": "정신건강의학과",
+      "external_id": "KBSMC-180-24",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "조성준",
+      "department": "정신건강의학과",
+      "external_id": "KBSMC-181-24",
+      "n_schedules": 5,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "정신건강의학과",
+      "external_id": "KBSMC-505-24",
+      "n_schedules": 11,
+      "n_date_schedules": 80,
+      "notes": ""
+    },
+    {
+      "name": "박세진",
+      "department": "정형외과",
+      "external_id": "KBSMC-168-25",
+      "n_schedules": 12,
+      "n_date_schedules": 57,
+      "notes": ""
+    },
+    {
+      "name": "박윤수",
+      "department": "정형외과",
+      "external_id": "KBSMC-169-25",
+      "n_schedules": 6,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "박재형",
+      "department": "정형외과",
+      "external_id": "KBSMC-170-25",
+      "n_schedules": 5,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "손동욱",
+      "department": "정형외과",
+      "external_id": "KBSMC-171-25",
+      "n_schedules": 5,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "신헌규",
+      "department": "정형외과",
+      "external_id": "KBSMC-172-25",
+      "n_schedules": 7,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "안지현",
+      "department": "정형외과",
+      "external_id": "KBSMC-173-25",
+      "n_schedules": 6,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "홍석우",
+      "department": "정형외과",
+      "external_id": "KBSMC-174-25",
+      "n_schedules": 5,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "송원준",
+      "department": "중환자의학과",
+      "external_id": "KBSMC-163-26",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심영보",
+      "department": "중환자의학과",
+      "external_id": "KBSMC-165-26",
+      "n_schedules": 12,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "최선영",
+      "department": "중환자의학과",
+      "external_id": "KBSMC-164-26",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원술",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-154-27",
+      "n_schedules": 12,
+      "n_date_schedules": 146,
+      "notes": ""
+    },
+    {
+      "name": "김현일",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-473-27",
+      "n_schedules": 12,
+      "n_date_schedules": 94,
+      "notes": ""
+    },
+    {
+      "name": "김형철",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-474-27",
+      "n_schedules": 0,
+      "n_date_schedules": 94,
+      "notes": ""
+    },
+    {
+      "name": "박환진",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-155-27",
+      "n_schedules": 12,
+      "n_date_schedules": 146,
+      "notes": ""
+    },
+    {
+      "name": "서병성",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-156-27",
+      "n_schedules": 11,
+      "n_date_schedules": 134,
+      "notes": ""
+    },
+    {
+      "name": "서은혜",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-426-27",
+      "n_schedules": 12,
+      "n_date_schedules": 146,
+      "notes": ""
+    },
+    {
+      "name": "안준호",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-161-27",
+      "n_schedules": 12,
+      "n_date_schedules": 146,
+      "notes": ""
+    },
+    {
+      "name": "이원철",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-157-27",
+      "n_schedules": 0,
+      "n_date_schedules": 94,
+      "notes": ""
+    },
+    {
+      "name": "정진숙",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-158-27",
+      "n_schedules": 12,
+      "n_date_schedules": 146,
+      "notes": ""
+    },
+    {
+      "name": "조성민",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-162-27",
+      "n_schedules": 12,
+      "n_date_schedules": 100,
+      "notes": ""
+    },
+    {
+      "name": "최백용",
+      "department": "직업환경의학과",
+      "external_id": "KBSMC-465-27",
+      "n_schedules": 12,
+      "n_date_schedules": 146,
+      "notes": ""
+    },
+    {
+      "name": "권민정",
+      "department": "진단검사의학과",
+      "external_id": "KBSMC-148-28",
+      "n_schedules": 6,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "김지아",
+      "department": "진단검사의학과",
+      "external_id": "KBSMC-413-28",
+      "n_schedules": 4,
+      "n_date_schedules": 4,
+      "notes": ""
+    },
+    {
+      "name": "박민승",
+      "department": "진단검사의학과",
+      "external_id": "KBSMC-152-28",
+      "n_schedules": 0,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "박효순",
+      "department": "진단검사의학과",
+      "external_id": "KBSMC-149-28",
+      "n_schedules": 8,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "우희연",
+      "department": "진단검사의학과",
+      "external_id": "KBSMC-150-28",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은혜",
+      "department": "진단검사의학과",
+      "external_id": "KBSMC-151-28",
+      "n_schedules": 2,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "최유정",
+      "department": "진단검사의학과",
+      "external_id": "KBSMC-529-28",
+      "n_schedules": 2,
+      "n_date_schedules": 2,
+      "notes": ""
+    },
+    {
+      "name": "김학수",
+      "department": "치과",
+      "external_id": "KBSMC-144-29",
+      "n_schedules": 7,
+      "n_date_schedules": 89,
+      "notes": ""
+    },
+    {
+      "name": "서종철",
+      "department": "치과",
+      "external_id": "KBSMC-145-29",
+      "n_schedules": 8,
+      "n_date_schedules": 87,
+      "notes": ""
+    },
+    {
+      "name": "이동주",
+      "department": "치과",
+      "external_id": "KBSMC-146-29",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "최원식",
+      "department": "치과",
+      "external_id": "KBSMC-147-29",
+      "n_schedules": 8,
+      "n_date_schedules": 93,
+      "notes": ""
+    },
+    {
+      "name": "김원석",
+      "department": "피부과",
+      "external_id": "KBSMC-141-30",
+      "n_schedules": 7,
+      "n_date_schedules": 57,
+      "notes": ""
+    },
+    {
+      "name": "이가영",
+      "department": "피부과",
+      "external_id": "KBSMC-142-30",
+      "n_schedules": 7,
+      "n_date_schedules": 69,
+      "notes": ""
+    },
+    {
+      "name": "최영준",
+      "department": "피부과",
+      "external_id": "KBSMC-143-30",
+      "n_schedules": 5,
+      "n_date_schedules": 65,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "피부과",
+      "external_id": "KBSMC-507-30",
+      "n_schedules": 5,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "김수정",
+      "department": "핵의학과",
+      "external_id": "KBSMC-139-31",
+      "n_schedules": 0,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "김영환",
+      "department": "핵의학과",
+      "external_id": "KBSMC-140-31",
+      "n_schedules": 12,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "구동회",
+      "department": "혈액종양내과",
+      "external_id": "KBSMC-135-32",
+      "n_schedules": 11,
+      "n_date_schedules": 64,
+      "notes": ""
+    },
+    {
+      "name": "김어진",
+      "department": "혈액종양내과",
+      "external_id": "KBSMC-136-32",
+      "n_schedules": 11,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "이소흔",
+      "department": "혈액종양내과",
+      "external_id": "KBSMC-528-32",
+      "n_schedules": 5,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "이윤규",
+      "department": "혈액종양내과",
+      "external_id": "KBSMC-137-32",
+      "n_schedules": 4,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "길현일",
+      "department": "호흡기내과",
+      "external_id": "KBSMC-131-33",
+      "n_schedules": 7,
+      "n_date_schedules": 59,
+      "notes": ""
+    },
+    {
+      "name": "김보근",
+      "department": "호흡기내과",
+      "external_id": "KBSMC-433-33",
+      "n_schedules": 6,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "권오정",
+      "department": "호흡기내과",
+      "external_id": "KBSMC-395-33",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "송재욱",
+      "department": "호흡기내과",
+      "external_id": "KBSMC-132-33",
+      "n_schedules": 12,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "임성용",
+      "department": "호흡기내과",
+      "external_id": "KBSMC-133-33",
+      "n_schedules": 8,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "임시영",
+      "department": "호흡기내과",
+      "external_id": "KBSMC-134-33",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "강두영",
+      "department": "심장혈관흉부외과",
+      "external_id": "KBSMC-111-34",
+      "n_schedules": 5,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "김민수",
+      "department": "심장혈관흉부외과",
+      "external_id": "KBSMC-113-34",
+      "n_schedules": 12,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "오태윤",
+      "department": "심장혈관흉부외과",
+      "external_id": "KBSMC-114-34",
+      "n_schedules": 12,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "윤승환",
+      "department": "심장혈관흉부외과",
+      "external_id": "KBSMC-456-34",
+      "n_schedules": 3,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "정의석",
+      "department": "심장혈관흉부외과",
+      "external_id": "KBSMC-120-34",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "진모란",
+      "department": "심장혈관흉부외과",
+      "external_id": "KBSMC-524-34",
+      "n_schedules": 3,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "강정규",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-278-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정현",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-279-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고승숙",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-282-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권칠훈",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-283-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권혜수",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-284-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경애",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-285-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석균",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-286-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김슬기",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-287-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승엽",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-290-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영은",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-291-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유경",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-292-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤지",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-293-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정진",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-294-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지민",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-295-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철중",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-297-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현숙",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-298-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김화영",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-299-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류채연",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-300-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문정화",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-301-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박미숙",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-302-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용우",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-303-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박해원",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-304-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현애",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-305-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서유진",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-306-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손영순",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-307-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오병길",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-308-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오선학",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-309-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오수파",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-310-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오원자",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-311-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤경은",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-312-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건우",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-313-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선진",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-314-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤영",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-315-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지훈",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-316-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임전주",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-317-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장유수",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-318-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장지원",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-319-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장희윤",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-320-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전희연",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-321-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성훈",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-322-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유정",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-323-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은미",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-324-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주영",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-325-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현숙",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-326-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조유선",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-327-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차경수",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-328-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최두석",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-329-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은숙",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-330-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은완",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-331-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최인영",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-332-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하나래",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-333-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한우진",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-334-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성우",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-335-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황규원",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-336-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황상현",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-337-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소영",
+      "department": "서울건진센터",
+      "external_id": "KBSMC-393-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고창옥",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-338-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽상미",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-339-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽옥기",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-340-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구동현",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-341-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선복",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-343-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소림",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-344-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소영",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-345-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수련",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-346-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유나",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-347-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은신",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-348-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김줄리",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-349-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태규",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-350-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍경",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-351-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나혜경",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-352-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성원",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-353-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문인숙",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-354-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문찬수",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-355-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민청기",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-356-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세준",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-357-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용란",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-359-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서순봉",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-360-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "석은영",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-361-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송용희",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-362-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신연교",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-363-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안은주",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-364-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양주영",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-365-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오미영",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-366-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오윤진",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-367-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유정림",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-368-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤은경",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-369-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이미숙",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-370-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성희",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-371-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은선",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-373-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정옥",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-374-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지애",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-375-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-376-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임영채",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-377-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임지영",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-378-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장민영",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-379-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장승훈",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-380-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경순",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-381-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성욱",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-382-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정여진",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-383-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해원",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-384-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조경은",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-385-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영준",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-386-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영진",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-387-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조혜민",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-388-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주철근",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-389-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지미현",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-390-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황정원",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-391-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황혜경",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-392-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정철",
+      "department": "수원건진센터",
+      "external_id": "KBSMC-394-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강현주",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-104-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김예진",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-463-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원술",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-87-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유진",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-428-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종민",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-88-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진라",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-105-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현일",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-475-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형철",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-476-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박미정",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-106-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박환진",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-96-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서명원",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-464-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서병성",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-97-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서은혜",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-427-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안준호",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-99-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원지인",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-107-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원철",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-100-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한명",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-90-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정선아",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-94-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주연",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-92-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진숙",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-101-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성민",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-102-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지정익",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-93-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한복순",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-103-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최백용",
+      "department": "예방건진센터",
+      "external_id": "KBSMC-485-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

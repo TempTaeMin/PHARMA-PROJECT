@@ -1,0 +1,207 @@
+{
+  "hospital_code": "HUIMYUNG",
+  "hospital_name": "희명병원",
+  "status": "partial",
+  "doctors": [
+    {
+      "name": "최백희",
+      "department": "가정의학과",
+      "external_id": "HUIMYUNG-9462927f89",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김혁준",
+      "department": "신경외과",
+      "external_id": "HUIMYUNG-626be4b1e2",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "신정호",
+      "department": "신경외과",
+      "external_id": "HUIMYUNG-e5b54f7f70",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "최한결",
+      "department": "정형외과",
+      "external_id": "HUIMYUNG-5fd884a7ef",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "안병국",
+      "department": "정형외과",
+      "external_id": "HUIMYUNG-9db53ddd5e",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "이병진",
+      "department": "일반외과",
+      "external_id": "HUIMYUNG-1b06c5476b",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "현일광",
+      "department": "외과",
+      "external_id": "HUIMYUNG-23eaeb83b2",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "이준영",
+      "department": "내과",
+      "external_id": "HUIMYUNG-0fd4f05847",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "양우인",
+      "department": "내과",
+      "external_id": "HUIMYUNG-8a4ec40a77",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "황인준",
+      "department": "내과",
+      "external_id": "HUIMYUNG-515d4d0f64",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "조익선",
+      "department": "내과",
+      "external_id": "HUIMYUNG-f0a29a68bb",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김진희",
+      "department": "산부인과",
+      "external_id": "HUIMYUNG-751c49c3bb",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김병주",
+      "department": "마취통증의학과",
+      "external_id": "HUIMYUNG-f9c5e17823",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "박장미",
+      "department": "영상의학과",
+      "external_id": "HUIMYUNG-c805ea3dc0",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "오정화",
+      "department": "영상의학과",
+      "external_id": "HUIMYUNG-4ce964c854",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김시내",
+      "department": "진단검사의학과",
+      "external_id": "HUIMYUNG-c5d02ea2e5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "신형균",
+      "department": "건강증진센터",
+      "external_id": "HUIMYUNG-bdc0366954",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김용관",
+      "department": "응급센터",
+      "external_id": "HUIMYUNG-25f466695f",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김진호",
+      "department": "응급센터",
+      "external_id": "HUIMYUNG-d4d550d468",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "이재성",
+      "department": "응급센터",
+      "external_id": "HUIMYUNG-db64c9afda",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "성민국",
+      "department": "응급센터",
+      "external_id": "HUIMYUNG-dfb02137fc",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "변재민",
+      "department": "응급센터",
+      "external_id": "HUIMYUNG-9bb3440b19",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "김동휘",
+      "department": "응급센터",
+      "external_id": "HUIMYUNG-8a0a82681d",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "이재훈",
+      "department": "흉부외과",
+      "external_id": "HUIMYUNG-5bea5ffad9",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    },
+    {
+      "name": "박신후",
+      "department": "심장혈관흉부외과",
+      "external_id": "HUIMYUNG-a68ef1e285",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 희명병원은 월간 진료시간표를 이미지 파일(JPG)로만 게시하여 의사별 요일 스케줄 자동 수집이 불가합니다. 현재 월 진료시간표는 공지사항(https://hmhp.co.kr:41329/new/sub/sub07-01.php)에서 'YYYY년 MM월 진료시간/진료일정표' 게시물로 확인하거나 병원(02-804-0002)에 직접 문의해 주세요."
+    }
+  ]
+}

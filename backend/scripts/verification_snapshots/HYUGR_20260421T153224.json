@@ -1,0 +1,727 @@
+{
+  "hospital_code": "HYUGR",
+  "hospital_name": "한양대학교구리병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김지은",
+      "department": "감염내과",
+      "external_id": "HYUGR-2081699-111170",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "김태은",
+      "department": "감염내과",
+      "external_id": "HYUGR-2257156-111170",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이창범",
+      "department": "내분비대사내과",
+      "external_id": "HYUGR-1975413-111140",
+      "n_schedules": 5,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "유성훈",
+      "department": "내분비대사내과",
+      "external_id": "HYUGR-2167648-111140",
+      "n_schedules": 7,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "홍상모",
+      "department": "내분비대사내과",
+      "external_id": "HYUGR-2206115-111140",
+      "n_schedules": 5,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "임정아",
+      "department": "내분비대사내과",
+      "external_id": "HYUGR-2266195-111140",
+      "n_schedules": 5,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "이혜순",
+      "department": "류마티스내과",
+      "external_id": "HYUGR-1990951-111190",
+      "n_schedules": 5,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "방소영",
+      "department": "류마티스내과",
+      "external_id": "HYUGR-2081851-111190",
+      "n_schedules": 5,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "주영빈",
+      "department": "류마티스내과",
+      "external_id": "HYUGR-2216060-111190",
+      "n_schedules": 5,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "염종훈",
+      "department": "마취통증의학과",
+      "external_id": "HYUGR-1956874-112110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조상윤",
+      "department": "마취통증의학과",
+      "external_id": "HYUGR-1961611-112110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심재항",
+      "department": "마취통증의학과",
+      "external_id": "HYUGR-2011277-112110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오미경",
+      "department": "마취통증의학과",
+      "external_id": "HYUGR-2137498-112110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형준",
+      "department": "마취통증의학과",
+      "external_id": "HYUGR-2226234-112110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신진섭",
+      "department": "마취통증의학과",
+      "external_id": "HYUGR-1565193-112110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "마취통증의학과",
+      "external_id": "HYUGR-1565208-112110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민호",
+      "department": "안과",
+      "external_id": "HYUGR-2117068-111300",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "홍은희",
+      "department": "안과",
+      "external_id": "HYUGR-2216017-111300",
+      "n_schedules": 4,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "황선진",
+      "department": "안과",
+      "external_id": "HYUGR-2226416-111300",
+      "n_schedules": 4,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "윤주영",
+      "department": "안과",
+      "external_id": "HYUGR-2246296-111300",
+      "n_schedules": 4,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "홍림경",
+      "department": "안과",
+      "external_id": "HYUGR-2246884-111300",
+      "n_schedules": 3,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "박동우",
+      "department": "영상의학과",
+      "external_id": "HYUGR-1956970-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용수",
+      "department": "영상의학과",
+      "external_id": "HYUGR-1952883-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유정아",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2086451-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유경",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2147002-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍수진",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2178326-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영서",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2167189-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김응태",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2177368-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지훈",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2206187-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배소희",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2216969-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이남주",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2206244-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신가혜",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2206259-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은실",
+      "department": "영상의학과",
+      "external_id": "HYUGR-2256920-112120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한준",
+      "department": "외과",
+      "external_id": "HYUGR-2137010-111210",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김민규",
+      "department": "외과",
+      "external_id": "HYUGR-2107534-111210",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "김형석",
+      "department": "외과",
+      "external_id": "HYUGR-2187179-111210",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "이준호",
+      "department": "외과",
+      "external_id": "HYUGR-2187183-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박예종",
+      "department": "외과",
+      "external_id": "HYUGR-2256202-111210",
+      "n_schedules": 3,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "조유정",
+      "department": "외과",
+      "external_id": "HYUGR-2206134-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현일",
+      "department": "외과",
+      "external_id": "HYUGR-2206149-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최광우",
+      "department": "외과",
+      "external_id": "HYUGR-2246281-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성환",
+      "department": "외과",
+      "external_id": "HYUGR-2226397-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민홍",
+      "department": "외과",
+      "external_id": "HYUGR-2246846-111210",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진영",
+      "department": "외과",
+      "external_id": "HYUGR-2256638-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전병준",
+      "department": "외과",
+      "external_id": "HYUGR-2256623-111210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강보승",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2017610-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최혁중",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2067200-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창선",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2127175-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신현구",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2187198-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희경",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2216074-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준기",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2206957-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소윤",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2246702-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심진석",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2246717-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지은",
+      "department": "응급의학과",
+      "external_id": "HYUGR-2256968-112180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승환",
+      "department": "이비인후과",
+      "external_id": "HYUGR-1985205-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "정진혁",
+      "department": "이비인후과",
+      "external_id": "HYUGR-2036417-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지용배",
+      "department": "이비인후과",
+      "external_id": "HYUGR-2090226-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정선민",
+      "department": "이비인후과",
+      "external_id": "HYUGR-2216112-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서희원",
+      "department": "이비인후과",
+      "external_id": "HYUGR-2236098-111310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승훈",
+      "department": "재활의학과",
+      "external_id": "HYUGR-2050227-112170",
+      "n_schedules": 0,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "장성호",
+      "department": "재활의학과",
+      "external_id": "HYUGR-2057566-112170",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재현",
+      "department": "재활의학과",
+      "external_id": "HYUGR-2187217-112170",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤여준",
+      "department": "재활의학과",
+      "external_id": "HYUGR-2246315-112170",
+      "n_schedules": 0,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "김대호",
+      "department": "정신건강의학과",
+      "external_id": "HYUGR-2017643-111330",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준호",
+      "department": "정신건강의학과",
+      "external_id": "HYUGR-2027344-111330",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선철",
+      "department": "정신건강의학과",
+      "external_id": "HYUGR-2216237-111330",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤진웅",
+      "department": "정신건강의학과",
+      "external_id": "HYUGR-2246262-111330",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박기철",
+      "department": "정형외과",
+      "external_id": "HYUGR-1996084-111240",
+      "n_schedules": 0,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "소재완",
+      "department": "정형외과",
+      "external_id": "HYUGR-2246535-111240",
+      "n_schedules": 0,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "김성재",
+      "department": "정형외과",
+      "external_id": "HYUGR-2256260-111240",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영석",
+      "department": "정형외과",
+      "external_id": "HYUGR-2216127-111240",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정규성",
+      "department": "정형외과",
+      "external_id": "HYUGR-2236265-111240",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영훈",
+      "department": "정형외과",
+      "external_id": "HYUGR-2197032-111240",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현준",
+      "department": "정형외과",
+      "external_id": "HYUGR-2246301-111240",
+      "n_schedules": 3,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "박진식",
+      "department": "정형외과",
+      "external_id": "HYUGR-1565978-111240",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장태원",
+      "department": "직업환경의학과",
+      "external_id": "HYUGR-2167451-111500",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형두",
+      "department": "직업환경의학과",
+      "external_id": "HYUGR-2256221-111500",
+      "n_schedules": 0,
+      "n_date_schedules": 4,
+      "notes": ""
+    },
+    {
+      "name": "박일규",
+      "department": "진단검사의학과",
+      "external_id": "HYUGR-1956912-112140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백은정",
+      "department": "진단검사의학과",
+      "external_id": "HYUGR-2117364-112140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배미현",
+      "department": "진단검사의학과",
+      "external_id": "HYUGR-2177349-112140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종은",
+      "department": "진단검사의학과",
+      "external_id": "HYUGR-2197047-112140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박원희",
+      "department": "치과",
+      "external_id": "HYUGR-2007077-111350",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤영",
+      "department": "치과",
+      "external_id": "HYUGR-2117072-111350",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지은",
+      "department": "치과",
+      "external_id": "HYUGR-2266214-111350",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정수",
+      "department": "피부과",
+      "external_id": "HYUGR-2036637-111280",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서현민",
+      "department": "피부과",
+      "external_id": "HYUGR-2177320-111280",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "핵의학과",
+      "external_id": "HYUGR-2110355-112160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수진",
+      "department": "핵의학과",
+      "external_id": "HYUGR-1561528-112160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정혜",
+      "department": "혈액종양내과",
+      "external_id": "HYUGR-2007024-111160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원영웅",
+      "department": "혈액종양내과",
+      "external_id": "HYUGR-2117053-111160",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

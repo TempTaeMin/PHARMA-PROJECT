@@ -101,14 +101,9 @@ class AsanCrawler:
         return [{"code": k, "name": v} for k, v in sorted(dept_map.items())]
 
     async def crawl_doctor_list(self, department: str = None) -> list[dict]:
-        """1차 경량 크롤링: 교수 이름 + ID 목록
+        """1차 경량 크롤링: 교수 이름 + ID 목록 (staff_id 기준 dedup)"""
+        seen: dict[str, dict] = {}
 
-        staffBaseInfoList.do 페이지에서 추출.
-        fnDrDetail onclick에서 drEmpId, p.doctor_name에서 이름.
-        """
-        all_doctors = []
-
-        # 진료과 목록 동적 수집
         all_depts = await self._discover_departments()
 
         targets = (
@@ -126,13 +121,11 @@ class AsanCrawler:
                     html = resp.text
                     soup = BeautifulSoup(html, "html.parser")
 
-                    # 카드 기반 추출: li 안에 p.doctor_name + fnDrDetail
                     cards = soup.select("li:has(p.doctor_name)")
                     for card in cards:
                         name_el = card.select_one("p.doctor_name")
                         name = name_el.get_text(strip=True) if name_el else ""
 
-                        # fnDrDetail에서 ID 추출
                         staff_id = ""
                         for a in card.select("a[onclick*=fnDrDetail]"):
                             m = re.search(r"fnDrDetail\('([A-Za-z0-9+/=]+)'", a.get("onclick", ""))
@@ -143,7 +136,13 @@ class AsanCrawler:
                         if not staff_id or not name:
                             continue
 
-                        all_doctors.append({
+                        if staff_id in seen:
+                            existing = seen[staff_id]
+                            if dept_name and dept_name != existing["department"] and dept_name not in existing["_extra_depts"]:
+                                existing["_extra_depts"].append(dept_name)
+                            continue
+
+                        seen[staff_id] = {
                             "staff_id": staff_id,
                             "external_id": staff_id,
                             "name": name,
@@ -151,14 +150,20 @@ class AsanCrawler:
                             "dept_code": dept_code,
                             "specialty": "",
                             "profile_url": f"{BASE_URL}/asan/staff/base/staffBaseInfoDetail.do?drEmpId={staff_id}&searchHpCd={dept_code}",
-                        })
+                            "_extra_depts": [],
+                        }
 
                     logger.info(f"[AMC] {dept_name}: {len(cards)}명 발견")
 
                 except Exception as e:
                     logger.error(f"[AMC] {dept_name} 목록 크롤링 실패: {e}")
 
-        return all_doctors
+        result = []
+        for d in seen.values():
+            extras = d.pop("_extra_depts")
+            d["notes"] = f"복수 진료과: {', '.join(extras)}" if extras else ""
+            result.append(d)
+        return result
 
     async def crawl_doctor_schedule(self, staff_id: str) -> dict:
         """2차 상세 크롤링: 교수 상세 페이지에서 진료시간표 추출"""
@@ -312,26 +317,33 @@ class AsanCrawler:
         return schedules
 
     async def crawl_doctors(self, department: str = None):
-        """전체 크롤링 (목록 + 상세)"""
+        """전체 크롤링 (목록 + 상세). 상세는 Semaphore 로 병렬화."""
+        import asyncio
         from app.schemas.schemas import CrawlResult, CrawledDoctor
 
         doc_list = await self.crawl_doctor_list(department)
-        all_doctors = []
+        sem = asyncio.Semaphore(8)
 
-        for d in doc_list:
-            try:
-                detail = await self.crawl_doctor_schedule(d["staff_id"])
-                all_doctors.append(CrawledDoctor(
-                    name=detail.get("name") or d.get("name", ""),
-                    department=detail.get("department") or d.get("department", ""),
-                    position=detail.get("position", ""),
-                    specialty=detail.get("specialty") or d.get("specialty", ""),
-                    profile_url=detail.get("profile_url", ""),
-                    external_id=d["staff_id"],
-                    schedules=detail.get("schedules", []),
-                ))
-            except Exception as e:
-                logger.error(f"[AMC] 교수 크롤링 실패 {d.get('name', '')}: {e}")
+        async def fetch_one(d):
+            async with sem:
+                try:
+                    detail = await self.crawl_doctor_schedule(d["staff_id"])
+                    return CrawledDoctor(
+                        name=detail.get("name") or d.get("name", ""),
+                        department=detail.get("department") or d.get("department", ""),
+                        position=detail.get("position", ""),
+                        specialty=detail.get("specialty") or d.get("specialty", ""),
+                        profile_url=detail.get("profile_url", ""),
+                        external_id=d["staff_id"],
+                        notes=d.get("notes", ""),
+                        schedules=detail.get("schedules", []),
+                    )
+                except Exception as e:
+                    logger.error(f"[AMC] 교수 크롤링 실패 {d.get('name', '')}: {e}")
+                    return None
+
+        results = await asyncio.gather(*(fetch_one(d) for d in doc_list))
+        all_doctors = [r for r in results if r is not None]
 
         return CrawlResult(
             hospital_code=self.hospital_code,

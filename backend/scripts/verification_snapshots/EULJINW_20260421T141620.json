@@ -1,0 +1,1071 @@
+{
+  "hospital_code": "EULJINW",
+  "hospital_name": "노원을지대학교병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "한지혜",
+      "department": "가정의학과",
+      "external_id": "EULJINW-ABPAAA-203110",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준혁",
+      "department": "가정의학과",
+      "external_id": "EULJINW-ABPAAA-20210165",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한건희",
+      "department": "가정의학과",
+      "external_id": "EULJINW-ABPAAA-20250176",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "라연주",
+      "department": "감염내과",
+      "external_id": "EULJINW-ABBLAA-20250001",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민경완",
+      "department": "내분비내과",
+      "external_id": "EULJINW-ABBEAA-964136",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한경아",
+      "department": "내분비내과",
+      "external_id": "EULJINW-ABBEAA-974038",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진택",
+      "department": "내분비내과",
+      "external_id": "EULJINW-ABBEAA-209055",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효정",
+      "department": "내분비내과",
+      "external_id": "EULJINW-ABBEAA-205150",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경연",
+      "department": "내분비내과",
+      "external_id": "EULJINW-ABBEAA-20150338",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양혜원",
+      "department": "내분비내과",
+      "external_id": "EULJINW-ABBEAA-20250842",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허진욱",
+      "department": "류마티스내과",
+      "external_id": "EULJINW-ABBHAA-205176",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신정민",
+      "department": "류마티스내과",
+      "external_id": "EULJINW-ABBHAA-20230286",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강효석",
+      "department": "마취통증의학과",
+      "external_id": "EULJINW-ABVAAA-206098",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임태하",
+      "department": "마취통증의학과",
+      "external_id": "EULJINW-ABVAAA-201045",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재우",
+      "department": "마취통증의학과",
+      "external_id": "EULJINW-ABVAAA-210076",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현정",
+      "department": "마취통증의학과",
+      "external_id": "EULJINW-ABVAAA-20180110",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장혜원",
+      "department": "마취통증의학과",
+      "external_id": "EULJINW-ABVAAA-20190266",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조혜연",
+      "department": "마취통증의학과",
+      "external_id": "EULJINW-ABVAAA-20231169",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강수정",
+      "department": "마취통증의학과",
+      "external_id": "EULJINW-ABVAAA-20260034",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안용찬",
+      "department": "방사선종양학과",
+      "external_id": "EULJINW-ABXAAA-20260094",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은경",
+      "department": "병리과",
+      "external_id": "EULJINW-ABYAAA-944370",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호정",
+      "department": "병리과",
+      "external_id": "EULJINW-ABYAAA-203260",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유탁근",
+      "department": "비뇨의학과",
+      "external_id": "EULJINW-ABMAAA-944359",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정윤",
+      "department": "비뇨의학과",
+      "external_id": "EULJINW-ABMAAA-202106",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재덕",
+      "department": "비뇨의학과",
+      "external_id": "EULJINW-ABMAAA-20190558",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준호",
+      "department": "비뇨의학과",
+      "external_id": "EULJINW-ABMAAA-20201553",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혁달",
+      "department": "비뇨의학과",
+      "external_id": "EULJINW-ABMAAA-20220684",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대운",
+      "department": "산부인과",
+      "external_id": "EULJINW-ABDBAA-206182",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권용순",
+      "department": "산부인과",
+      "external_id": "EULJINW-ABDBAA-20180564",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은주",
+      "department": "산부인과",
+      "external_id": "EULJINW-ABDBAA-202104",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽재영",
+      "department": "산부인과",
+      "external_id": "EULJINW-ABDBAA-20180565",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권소정",
+      "department": "산부인과",
+      "external_id": "EULJINW-ABDBAA-20210369",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서민지",
+      "department": "산부인과",
+      "external_id": "EULJINW-ABDBAA-20250175",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민경희",
+      "department": "성형외과",
+      "external_id": "EULJINW-ABIAAA-209222",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동락",
+      "department": "성형외과",
+      "external_id": "EULJINW-ABIAAA-20230804",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이두형",
+      "department": "성형외과",
+      "external_id": "EULJINW-ABIAAA-20250276",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "은병욱",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-212283",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서지영",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-207067",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은혜",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-20170319",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오은혜",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-20240165",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손세정",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-20201260",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광훈",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-20250173",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송의숙",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-20250172",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신윤호",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-20260252",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안정은",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-20260251",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진화",
+      "department": "소아청소년과",
+      "external_id": "EULJINW-ABCAAA-20260430",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영숙",
+      "department": "소화기내과",
+      "external_id": "EULJINW-ABBBAA-964044",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안상봉",
+      "department": "소화기내과",
+      "external_id": "EULJINW-ABBBAA-210059",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성결",
+      "department": "소화기내과",
+      "external_id": "EULJINW-ABBBAA-20220235",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박광범",
+      "department": "소화기내과",
+      "external_id": "EULJINW-ABBBAA-20230353",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민영",
+      "department": "소화기내과",
+      "external_id": "EULJINW-ABBBAA-20230352",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권오근",
+      "department": "소화기내과",
+      "external_id": "EULJINW-ABBBAA-20220990",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병건",
+      "department": "신경과",
+      "external_id": "EULJINW-ABOAAA-984015",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정주",
+      "department": "신경과",
+      "external_id": "EULJINW-ABOAAA-206089",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강규식",
+      "department": "신경과",
+      "external_id": "EULJINW-ABOAAA-210070",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이웅우",
+      "department": "신경과",
+      "external_id": "EULJINW-ABOAAA-20150203",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유일한",
+      "department": "신경과",
+      "external_id": "EULJINW-ABOAAA-20210163",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤소정",
+      "department": "신경과",
+      "external_id": "EULJINW-ABOAAA-20240274",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남오",
+      "department": "신경과",
+      "external_id": "EULJINW-ABOAAA-20240167",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강희인",
+      "department": "신경외과",
+      "external_id": "EULJINW-ABGAAA-944350",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승진",
+      "department": "신경외과",
+      "external_id": "EULJINW-ABGAAA-944349",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재훈",
+      "department": "신경외과",
+      "external_id": "EULJINW-ABGAAA-206096",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배인석",
+      "department": "신경외과",
+      "external_id": "EULJINW-ABGAAA-20200124",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "좌철수",
+      "department": "신경외과",
+      "external_id": "EULJINW-ABGAAA-20210091",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소영",
+      "department": "신장내과",
+      "external_id": "EULJINW-ABBFAA-203106",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정순",
+      "department": "신장내과",
+      "external_id": "EULJINW-ABBFAA-20250737",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태욱",
+      "department": "신장내과",
+      "external_id": "EULJINW-ABBFAA-20250178",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주언",
+      "department": "신장내과",
+      "external_id": "EULJINW-ABBFAA-20260035",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재웅",
+      "department": "심장내과",
+      "external_id": "EULJINW-ABBCAA-944574",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지영",
+      "department": "심장내과",
+      "external_id": "EULJINW-ABBCAA-210075",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상민",
+      "department": "심장내과",
+      "external_id": "EULJINW-ABBCAA-20201552",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은선",
+      "department": "심장내과",
+      "external_id": "EULJINW-ABBCAA-20220237",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현영",
+      "department": "심장내과",
+      "external_id": "EULJINW-ABBCAA-20251383",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박만실",
+      "department": "심장혈관흉부외과",
+      "external_id": "EULJINW-ABHAAA-944353",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신제균",
+      "department": "심장혈관흉부외과",
+      "external_id": "EULJINW-ABHAAA-20230321",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준",
+      "department": "심장혈관흉부외과",
+      "external_id": "EULJINW-ABHAAA-20240778",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종석",
+      "department": "안과",
+      "external_id": "EULJINW-ABJAAA-201208",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성진",
+      "department": "안과",
+      "external_id": "EULJINW-ABJAAA-203097",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은혜",
+      "department": "안과",
+      "external_id": "EULJINW-ABJAAA-20200121",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승현",
+      "department": "안과",
+      "external_id": "EULJINW-ABJAAA-20210161",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배기웅",
+      "department": "안과",
+      "external_id": "EULJINW-ABJAAA-20230123",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최윤선",
+      "department": "영상의학과",
+      "external_id": "EULJINW-ABWBAA-964213",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우정주",
+      "department": "영상의학과",
+      "external_id": "EULJINW-ABWBAA-203219",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안진경",
+      "department": "영상의학과",
+      "external_id": "EULJINW-ABWBAA-203084",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양승부",
+      "department": "영상의학과",
+      "external_id": "EULJINW-ABWBAA-20230642",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백성모",
+      "department": "영상의학과",
+      "external_id": "EULJINW-ABWBAA-20160564",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유창현",
+      "department": "영상의학과",
+      "external_id": "EULJINW-ABWBAA-20250177",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정민선",
+      "department": "영상의학과",
+      "external_id": "EULJINW-ABWBAA-20250762",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동희",
+      "department": "외과",
+      "external_id": "EULJINW-ABEBAA-200270",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진완",
+      "department": "외과",
+      "external_id": "EULJINW-ABEBAA-20170359",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민성",
+      "department": "외과",
+      "external_id": "EULJINW-ABEBAA-20130217",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최종호",
+      "department": "외과",
+      "external_id": "EULJINW-ABEBAA-20202115",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽희용",
+      "department": "외과",
+      "external_id": "EULJINW-ABEBAA-20170360",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주호",
+      "department": "외과",
+      "external_id": "EULJINW-ABEBAA-20191030",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조광현",
+      "department": "응급의학과",
+      "external_id": "EULJINW-ABTAAA-205009",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김덕호",
+      "department": "응급의학과",
+      "external_id": "EULJINW-ABTAAA-20180114",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동욱",
+      "department": "응급의학과",
+      "external_id": "EULJINW-ABTAAA-20201064",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신지경",
+      "department": "응급의학과",
+      "external_id": "EULJINW-ABTAAA-20230034",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤용식",
+      "department": "응급의학과",
+      "external_id": "EULJINW-ABTAAA-20250498",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최종원",
+      "department": "응급의학과",
+      "external_id": "EULJINW-ABTAAA-20250858",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성수",
+      "department": "응급의학과",
+      "external_id": "EULJINW-ABTAAA-20260356",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심현준",
+      "department": "이비인후과",
+      "external_id": "EULJINW-ABKAAA-206004",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안용휘",
+      "department": "이비인후과",
+      "external_id": "EULJINW-ABKAAA-211047",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정아라",
+      "department": "이비인후과",
+      "external_id": "EULJINW-ABKAAA-20200125",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "두전강",
+      "department": "이비인후과",
+      "external_id": "EULJINW-ABKAAA-20220241",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현정",
+      "department": "재활의학과",
+      "external_id": "EULJINW-ABQAAA-994209",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강윤주",
+      "department": "재활의학과",
+      "external_id": "EULJINW-ABQAAA-207063",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최효선",
+      "department": "재활의학과",
+      "external_id": "EULJINW-ABQAAA-20200122",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효정",
+      "department": "재활의학과",
+      "external_id": "EULJINW-ABQAAA-20260179",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김의중",
+      "department": "정신건강의학과",
+      "external_id": "EULJINW-ABNAAA-202177",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이규영",
+      "department": "정신건강의학과",
+      "external_id": "EULJINW-ABNAAA-207236",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방수영",
+      "department": "정신건강의학과",
+      "external_id": "EULJINW-ABNAAA-20130239",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재원",
+      "department": "정신건강의학과",
+      "external_id": "EULJINW-ABNAAA-20170113",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용식",
+      "department": "정신건강의학과",
+      "external_id": "EULJINW-ABNAAA-20190578",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재훈",
+      "department": "정신건강의학과",
+      "external_id": "EULJINW-ABNAAA-20240169",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최남홍",
+      "department": "정형외과",
+      "external_id": "EULJINW-ABFDAA-964240",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임태강",
+      "department": "정형외과",
+      "external_id": "EULJINW-ABFDAA-20140149",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진우",
+      "department": "정형외과",
+      "external_id": "EULJINW-ABFDAA-20180111",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손희중",
+      "department": "정형외과",
+      "external_id": "EULJINW-ABFDAA-20220239",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성주",
+      "department": "정형외과",
+      "external_id": "EULJINW-ABFDAA-20220240",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양기원",
+      "department": "족부족관절정형외과",
+      "external_id": "EULJINW-ABFCAA-201089",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문숙인",
+      "department": "진단검사의학과",
+      "external_id": "EULJINW-ABZAAA-20240662",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정아",
+      "department": "치과",
+      "external_id": "EULJINW-ABUAAA-20160383",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장미화",
+      "department": "치과",
+      "external_id": "EULJINW-ABUAAA-20221437",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고수진",
+      "department": "치과",
+      "external_id": "EULJINW-ABUAAA-206165",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현경",
+      "department": "피부과",
+      "external_id": "EULJINW-ABLAAA-209051",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한태영",
+      "department": "피부과",
+      "external_id": "EULJINW-ABLAAA-210073",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재은",
+      "department": "피부과",
+      "external_id": "EULJINW-ABLAAA-20190131",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진소영",
+      "department": "핵의학과",
+      "external_id": "EULJINW-ABWZAA-20150603",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공수정",
+      "department": "혈액종양내과",
+      "external_id": "EULJINW-ABBGAA-974329",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현엽",
+      "department": "혈액종양내과",
+      "external_id": "EULJINW-ABBGAA-20250588",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연주",
+      "department": "호흡기알레르기내과",
+      "external_id": "EULJINW-ABBDAA-20210167",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상훈",
+      "department": "호흡기알레르기내과",
+      "external_id": "EULJINW-ABBDAA-201169",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

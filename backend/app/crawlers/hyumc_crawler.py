@@ -4,6 +4,8 @@
 스케줄: HTML /seoul/scheduleMonthmethod.do (AJAX, 월간 달력)
 """
 import re
+import asyncio
+import random
 import logging
 import httpx
 from datetime import datetime, timedelta
@@ -36,42 +38,55 @@ class HyumcCrawler:
         self.hospital_code = "HYUMC"
         self.hospital_name = "한양대병원"
         self.headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "ko-KR,ko;q=0.9",
+            "Referer": f"{BASE_URL}/seoul/main/main.do",
         }
         self._cached_data = None
 
     async def get_departments(self) -> list[dict]:
         return [{"code": code, "name": name} for code, name in HYUMC_DEPARTMENTS.items()]
 
-    async def _fetch_dept_doctors(self, client: httpx.AsyncClient, seq: str, dept_nm: str) -> list[dict]:
-        """진료과별 의사 목록 HTML 파싱"""
-        try:
-            resp = await client.get(
-                f"{BASE_URL}/seoul/mediteam/mediofCent.do",
-                params={
-                    "action": "detailList",
-                    "searchCondition1": "seqMediteam",
-                    "searchCommonSeq": seq,
-                    "searchKeyword": dept_nm,
-                    "userTab1": "mediteam",
-                    "searchCondition2": "all",
-                    "currentPageNo": "1",
-                    "recordCountPerPage": "200",
-                },
-            )
-            resp.raise_for_status()
-            html = resp.text
-        except Exception as e:
-            logger.error(f"[HYUMC] {dept_nm} 의사 목록 실패: {e}")
-            return []
-
-        doctors = []
-        # <a class="namea" ... onclick="viewDoctor('doctCd', 'mediofCd')">이름</a>
+    async def _fetch_dept_doctors(self, client: httpx.AsyncClient, seq: str, dept_nm: str, max_retries: int = 3) -> list[dict]:
+        """진료과별 의사 목록 HTML 파싱. 빈 응답은 rate limit 으로 간주하고 재시도."""
         name_pattern = re.compile(
             r'class="namea"[^>]*onclick="viewDoctor\s*\(\s*\'(\d+)\'\s*,\s*\'(\d+)\'\s*\)[^"]*"[^>]*>\s*([^<]+)',
         )
+        has_any_pattern = re.compile(r'class="namea"')
 
+        html = ""
+        for attempt in range(max_retries + 1):
+            try:
+                resp = await client.get(
+                    f"{BASE_URL}/seoul/mediteam/mediofCent.do",
+                    params={
+                        "action": "detailList",
+                        "searchCondition1": "seqMediteam",
+                        "searchCommonSeq": seq,
+                        "searchKeyword": dept_nm,
+                        "userTab1": "mediteam",
+                        "searchCondition2": "all",
+                        "currentPageNo": "1",
+                        "recordCountPerPage": "200",
+                    },
+                )
+                resp.raise_for_status()
+                html = resp.text
+            except Exception as e:
+                if attempt >= max_retries:
+                    logger.error(f"[HYUMC] {dept_nm} 의사 목록 실패: {e}")
+                    return []
+                await asyncio.sleep((2 ** attempt) + random.uniform(0.5, 1.5))
+                continue
+
+            if has_any_pattern.search(html) or attempt >= max_retries:
+                break
+            delay = (2 ** attempt) + random.uniform(0.5, 1.5)
+            logger.info(f"[HYUMC] {dept_nm} 빈 응답 — {delay:.1f}s 후 재시도 ({attempt+1}/{max_retries})")
+            await asyncio.sleep(delay)
+
+        doctors = []
         seen = set()
         for m in name_pattern.finditer(html):
             doct_cd = m.group(1)
@@ -224,37 +239,81 @@ class HyumcCrawler:
                 logger.warning(f"[HYUMC] 월별 스케줄 실패 ({y}-{m}, {doct_cd}): {e}")
         return all_date_schedules
 
+    async def _fetch_schedule_and_date(
+        self, client: httpx.AsyncClient, doct_cd: str, mediof_cd: str, name: str, months: int = 3,
+    ) -> tuple[list[dict], list[dict]]:
+        """주간 + 날짜별 스케줄 단일 경로 — 월0 응답에서 weekly 재사용. (4회→3회 API)"""
+        now = datetime.now()
+        weekly: list[dict] = []
+        all_date_schedules: list[dict] = []
+        for i in range(months):
+            target = now + timedelta(days=i * 30)
+            y, m = target.year, target.month
+            api_month = m - 1 if m > 1 else 12
+            api_year = y if m > 1 else y - 1
+            try:
+                resp = await client.get(
+                    f"{BASE_URL}/seoul/scheduleMonthmethod.do",
+                    params={
+                        "doctCd": doct_cd, "mediofCd": mediof_cd,
+                        "year": str(api_year), "month": str(api_month), "doctNm": name,
+                    },
+                )
+                resp.raise_for_status()
+                scheds, date_scheds = self._parse_schedule_html(resp.text, y, m)
+                if i == 0:
+                    weekly = scheds
+                all_date_schedules.extend(date_scheds)
+            except Exception as e:
+                logger.warning(f"[HYUMC] 스케줄 실패 ({y}-{m}, {doct_cd}): {e}")
+        return weekly, all_date_schedules
+
     async def _fetch_all(self) -> list[dict]:
+        import asyncio
+
         if self._cached_data is not None:
             return self._cached_data
 
-        all_doctors = {}
+        all_doctors: dict[str, dict] = {}
 
         async with httpx.AsyncClient(headers=self.headers, timeout=60, follow_redirects=True) as client:
+            # 1단계: 모든 부서에서 의사 메타데이터 수집 (dedup)
             for seq, dept_nm in HYUMC_DEPARTMENTS.items():
                 docs = await self._fetch_dept_doctors(client, seq, dept_nm)
                 for doc in docs:
                     doct_cd = doc["doct_cd"]
                     if doct_cd in all_doctors:
                         continue
-
-                    schedules = await self._fetch_schedule(
-                        client, doct_cd, doc["mediof_cd"], doc["name"]
-                    )
-                    date_schedules = await self._fetch_monthly_schedule(
-                        client, doct_cd, doc["mediof_cd"], doc["name"]
-                    )
-                    ext_id = f"HYUMC-{doct_cd}"
+                    ext_id = f"HYUMC-{doct_cd}-{doc['mediof_cd']}"
                     all_doctors[doct_cd] = {
                         "staff_id": ext_id, "external_id": ext_id,
                         "name": doc["name"], "department": doc["dept_nm"],
                         "position": doc.get("position", ""),
                         "specialty": "",
                         "profile_url": f"{BASE_URL}/seoul/mediteam/mediofCent.do?action=detailView&doctCd={doct_cd}&mediofCd={doc['mediof_cd']}",
-                        "notes": "", "schedules": schedules,
-                        "date_schedules": date_schedules,
+                        "notes": "", "schedules": [],
+                        "date_schedules": [],
                         "_doct_cd": doct_cd, "_mediof_cd": doc["mediof_cd"],
                     }
+
+            # 2단계: 의사별 스케줄 + 월별 스케줄 병렬 수집 (rate limit 회피)
+            sem = asyncio.Semaphore(3)
+
+            async def fetch_one(doc_dict):
+                doct_cd = doc_dict["_doct_cd"]
+                mediof_cd = doc_dict["_mediof_cd"]
+                name = doc_dict["name"]
+                async with sem:
+                    try:
+                        sched, date_sched = await self._fetch_schedule_and_date(
+                            client, doct_cd, mediof_cd, name,
+                        )
+                        doc_dict["schedules"] = sched
+                        doc_dict["date_schedules"] = date_sched
+                    except Exception as e:
+                        logger.warning(f"[HYUMC] {name} 스케줄 실패: {e}")
+
+            await asyncio.gather(*(fetch_one(d) for d in all_doctors.values()))
 
         result = list(all_doctors.values())
         logger.info(f"[HYUMC] 총 {len(result)}명")
@@ -268,7 +327,12 @@ class HyumcCrawler:
         return [{k: d[k] for k in ("staff_id", "external_id", "name", "department", "position", "specialty", "profile_url", "notes")} for d in data]
 
     async def crawl_doctor_schedule(self, staff_id: str) -> dict:
-        """개별 교수 진료시간 + 날짜별 스케줄 조회"""
+        """개별 교수 조회 — external_id 에서 mediof_cd 를 파싱해 스케줄 API 만 호출.
+
+        규칙 #7 준수: `_fetch_all()` 또는 전체 진료과 순회 금지.
+        external_id 포맷: `HYUMC-{doct_cd}-{mediof_cd}`
+        구 포맷(`HYUMC-{doct_cd}`)은 mediof_cd 가 없어 스케줄 API 호출 불가 → 빈 값 반환 + 재동기화 안내.
+        """
         _keys = ("staff_id", "name", "department", "position", "specialty", "profile_url", "notes", "schedules", "date_schedules")
         empty = {"staff_id": staff_id, "name": "", "department": "", "position": "",
                  "specialty": "", "profile_url": "", "notes": "", "schedules": [], "date_schedules": []}
@@ -280,31 +344,29 @@ class HyumcCrawler:
             return empty
 
         prefix = "HYUMC-"
-        doct_cd = staff_id.replace(prefix, "") if staff_id.startswith(prefix) else staff_id
+        if not staff_id.startswith(prefix):
+            return empty
+        tail = staff_id[len(prefix):]
+        parts = tail.split("-", 1)
+        if len(parts) != 2 or not parts[1]:
+            logger.warning(f"[HYUMC] 구 포맷 external_id {staff_id} — 스케줄 API 호출 불가. 병원 재동기화 필요.")
+            return empty
+        doct_cd, mediof_cd = parts[0], parts[1]
 
-        async with httpx.AsyncClient(headers=self.headers, timeout=60, follow_redirects=True) as client:
-            for seq, dept_nm in HYUMC_DEPARTMENTS.items():
-                docs = await self._fetch_dept_doctors(client, seq, dept_nm)
-                for doc in docs:
-                    if doc["doct_cd"] == doct_cd:
-                        schedules = await self._fetch_schedule(
-                            client, doct_cd, doc["mediof_cd"], doc["name"]
-                        )
-                        date_schedules = await self._fetch_monthly_schedule(
-                            client, doct_cd, doc["mediof_cd"], doc["name"]
-                        )
-                        ext_id = f"HYUMC-{doct_cd}"
-                        return {
-                            "staff_id": ext_id, "name": doc["name"],
-                            "department": doc["dept_nm"],
-                            "position": doc.get("position", ""),
-                            "specialty": "",
-                            "profile_url": f"{BASE_URL}/seoul/mediteam/mediofCent.do?action=detailView&doctCd={doct_cd}&mediofCd={doc['mediof_cd']}",
-                            "notes": "", "schedules": schedules,
-                            "date_schedules": date_schedules,
-                        }
+        async with httpx.AsyncClient(headers=self.headers, timeout=30, follow_redirects=True) as client:
+            try:
+                schedules, date_schedules = await self._fetch_schedule_and_date(
+                    client, doct_cd, mediof_cd, "",
+                )
+            except Exception as e:
+                logger.error(f"[HYUMC] 개별 조회 실패 {staff_id}: {e}")
+                return empty
 
-        return empty
+        return {
+            "staff_id": staff_id, "name": "", "department": "", "position": "", "specialty": "",
+            "profile_url": f"{BASE_URL}/seoul/mediteam/mediofCent.do?action=detailView&doctCd={doct_cd}&mediofCd={mediof_cd}",
+            "notes": "", "schedules": schedules, "date_schedules": date_schedules,
+        }
 
     async def crawl_doctors(self, department: str = None):
         from app.schemas.schemas import CrawlResult, CrawledDoctor

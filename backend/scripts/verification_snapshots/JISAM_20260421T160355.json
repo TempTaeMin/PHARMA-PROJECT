@@ -1,0 +1,719 @@
+{
+  "hospital_code": "JISAM",
+  "hospital_name": "효산의료재단 지샘병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이정호",
+      "department": "가정의학과",
+      "external_id": "JISAM-226",
+      "n_schedules": 11,
+      "n_date_schedules": 138,
+      "notes": ""
+    },
+    {
+      "name": "조영규",
+      "department": "가정의학과",
+      "external_id": "JISAM-342",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "강의규",
+      "department": "가정의학과",
+      "external_id": "JISAM-225",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "한혜정",
+      "department": "가정의학과",
+      "external_id": "JISAM-324",
+      "n_schedules": 7,
+      "n_date_schedules": 89,
+      "notes": ""
+    },
+    {
+      "name": "김혜원",
+      "department": "감염내과",
+      "external_id": "JISAM-228",
+      "n_schedules": 5,
+      "n_date_schedules": 62,
+      "notes": ""
+    },
+    {
+      "name": "변은경",
+      "department": "내분비내과",
+      "external_id": "JISAM-230",
+      "n_schedules": 10,
+      "n_date_schedules": 124,
+      "notes": ""
+    },
+    {
+      "name": "박지윤",
+      "department": "내분비내과",
+      "external_id": "JISAM-330",
+      "n_schedules": 6,
+      "n_date_schedules": 76,
+      "notes": ""
+    },
+    {
+      "name": "백승혜",
+      "department": "마취통증의학과",
+      "external_id": "JISAM-234",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "송창근",
+      "department": "마취통증의학과",
+      "external_id": "JISAM-235",
+      "n_schedules": 9,
+      "n_date_schedules": 112,
+      "notes": ""
+    },
+    {
+      "name": "길호영",
+      "department": "마취통증의학과",
+      "external_id": "JISAM-346",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임강미",
+      "department": "마취통증의학과",
+      "external_id": "JISAM-365",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "유은정",
+      "department": "방사선종양학과",
+      "external_id": "JISAM-237",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "양기화",
+      "department": "병리과",
+      "external_id": "JISAM-238",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "박석산",
+      "department": "비뇨의학과",
+      "external_id": "JISAM-240",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "황영희",
+      "department": "산부인과",
+      "external_id": "JISAM-242",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "정진화",
+      "department": "산부인과",
+      "external_id": "JISAM-244",
+      "n_schedules": 5,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "배순환",
+      "department": "소아청소년과",
+      "external_id": "JISAM-245",
+      "n_schedules": 10,
+      "n_date_schedules": 123,
+      "notes": ""
+    },
+    {
+      "name": "배설희",
+      "department": "소아청소년과",
+      "external_id": "JISAM-367",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "최창원",
+      "department": "소화기내과",
+      "external_id": "JISAM-247",
+      "n_schedules": 5,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "노영욱",
+      "department": "소화기내과",
+      "external_id": "JISAM-249",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "홍승권",
+      "department": "소화기내과",
+      "external_id": "JISAM-250",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "이현정",
+      "department": "소화기내과",
+      "external_id": "JISAM-251",
+      "n_schedules": 4,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "안혜신",
+      "department": "소화기내과",
+      "external_id": "JISAM-345",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "민다니엘",
+      "department": "순환기내과",
+      "external_id": "JISAM-252",
+      "n_schedules": 5,
+      "n_date_schedules": 62,
+      "notes": ""
+    },
+    {
+      "name": "김병호",
+      "department": "순환기내과",
+      "external_id": "JISAM-253",
+      "n_schedules": 5,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "성강주",
+      "department": "신경과",
+      "external_id": "JISAM-254",
+      "n_schedules": 11,
+      "n_date_schedules": 136,
+      "notes": ""
+    },
+    {
+      "name": "장지완",
+      "department": "신경과",
+      "external_id": "JISAM-321",
+      "n_schedules": 10,
+      "n_date_schedules": 116,
+      "notes": ""
+    },
+    {
+      "name": "박종혁",
+      "department": "신경외과",
+      "external_id": "JISAM-256",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "원근수",
+      "department": "신경외과",
+      "external_id": "JISAM-344",
+      "n_schedules": 6,
+      "n_date_schedules": 73,
+      "notes": ""
+    },
+    {
+      "name": "김준학",
+      "department": "신경외과",
+      "external_id": "JISAM-355",
+      "n_schedules": 7,
+      "n_date_schedules": 88,
+      "notes": ""
+    },
+    {
+      "name": "김여송",
+      "department": "신경외과",
+      "external_id": "JISAM-353",
+      "n_schedules": 6,
+      "n_date_schedules": 75,
+      "notes": ""
+    },
+    {
+      "name": "이재원",
+      "department": "신장내과",
+      "external_id": "JISAM-259",
+      "n_schedules": 6,
+      "n_date_schedules": 76,
+      "notes": ""
+    },
+    {
+      "name": "박혜상",
+      "department": "신장내과",
+      "external_id": "JISAM-340",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "김정화",
+      "department": "안과",
+      "external_id": "JISAM-260",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "신은용",
+      "department": "알레르기내과",
+      "external_id": "JISAM-261",
+      "n_schedules": 8,
+      "n_date_schedules": 98,
+      "notes": ""
+    },
+    {
+      "name": "서재승",
+      "department": "영상의학과",
+      "external_id": "JISAM-262",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "이예리",
+      "department": "영상의학과",
+      "external_id": "JISAM-264",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "윤성종",
+      "department": "영상의학과",
+      "external_id": "JISAM-265",
+      "n_schedules": 10,
+      "n_date_schedules": 126,
+      "notes": ""
+    },
+    {
+      "name": "전용식",
+      "department": "영상의학과",
+      "external_id": "JISAM-266",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영진",
+      "department": "영상의학과",
+      "external_id": "JISAM-267",
+      "n_schedules": 6,
+      "n_date_schedules": 76,
+      "notes": ""
+    },
+    {
+      "name": "윤소연",
+      "department": "영상의학과",
+      "external_id": "JISAM-333",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "정덕현",
+      "department": "외과",
+      "external_id": "JISAM-269",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "김창현",
+      "department": "외과",
+      "external_id": "JISAM-270",
+      "n_schedules": 6,
+      "n_date_schedules": 78,
+      "notes": ""
+    },
+    {
+      "name": "곽봉준",
+      "department": "외과",
+      "external_id": "JISAM-368",
+      "n_schedules": 5,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "장여구",
+      "department": "유방갑상선외과",
+      "external_id": "JISAM-335",
+      "n_schedules": 6,
+      "n_date_schedules": 76,
+      "notes": ""
+    },
+    {
+      "name": "정휘철",
+      "department": "응급의학과",
+      "external_id": "JISAM-272",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "조범규",
+      "department": "응급의학과",
+      "external_id": "JISAM-273",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "신황진",
+      "department": "응급의학과",
+      "external_id": "JISAM-274",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "박성훈",
+      "department": "응급의학과",
+      "external_id": "JISAM-275",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "윤정민",
+      "department": "응급의학과",
+      "external_id": "JISAM-277",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "김동희",
+      "department": "응급의학과",
+      "external_id": "JISAM-278",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "김성택",
+      "department": "응급의학과",
+      "external_id": "JISAM-279",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "노병주",
+      "department": "응급의학과",
+      "external_id": "JISAM-309",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "오지선",
+      "department": "응급의학과",
+      "external_id": "JISAM-310",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "이순형",
+      "department": "응급의학과",
+      "external_id": "JISAM-325",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "배재종",
+      "department": "응급의학과",
+      "external_id": "JISAM-332",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "송민석",
+      "department": "응급의학과",
+      "external_id": "JISAM-339",
+      "n_schedules": 14,
+      "n_date_schedules": 182,
+      "notes": ""
+    },
+    {
+      "name": "김동규",
+      "department": "응급의학과",
+      "external_id": "JISAM-347",
+      "n_schedules": 11,
+      "n_date_schedules": 143,
+      "notes": ""
+    },
+    {
+      "name": "강제구",
+      "department": "이비인후·두경부외과",
+      "external_id": "JISAM-281",
+      "n_schedules": 5,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "김용래",
+      "department": "재활의학과",
+      "external_id": "JISAM-284",
+      "n_schedules": 9,
+      "n_date_schedules": 106,
+      "notes": ""
+    },
+    {
+      "name": "이윤주",
+      "department": "정신건강의학과",
+      "external_id": "JISAM-285",
+      "n_schedules": 9,
+      "n_date_schedules": 114,
+      "notes": ""
+    },
+    {
+      "name": "차승균",
+      "department": "정형외과",
+      "external_id": "JISAM-286",
+      "n_schedules": 5,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "신재준",
+      "department": "정형외과",
+      "external_id": "JISAM-287",
+      "n_schedules": 6,
+      "n_date_schedules": 73,
+      "notes": ""
+    },
+    {
+      "name": "박광희",
+      "department": "정형외과",
+      "external_id": "JISAM-288",
+      "n_schedules": 6,
+      "n_date_schedules": 72,
+      "notes": ""
+    },
+    {
+      "name": "김태진",
+      "department": "정형외과",
+      "external_id": "JISAM-289",
+      "n_schedules": 6,
+      "n_date_schedules": 73,
+      "notes": ""
+    },
+    {
+      "name": "배인탁",
+      "department": "정형외과",
+      "external_id": "JISAM-354",
+      "n_schedules": 6,
+      "n_date_schedules": 75,
+      "notes": ""
+    },
+    {
+      "name": "안종민",
+      "department": "직업환경의학과",
+      "external_id": "JISAM-323",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "황진미",
+      "department": "진단검사의학과",
+      "external_id": "JISAM-316",
+      "n_schedules": 9,
+      "n_date_schedules": 112,
+      "notes": ""
+    },
+    {
+      "name": "강철순",
+      "department": "치과",
+      "external_id": "JISAM-292",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "장미연",
+      "department": "치과",
+      "external_id": "JISAM-293",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "류소영",
+      "department": "치과",
+      "external_id": "JISAM-348",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정호",
+      "department": "통합면역클리닉",
+      "external_id": "JISAM-294",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "장성환",
+      "department": "한의과",
+      "external_id": "JISAM-350",
+      "n_schedules": 10,
+      "n_date_schedules": 121,
+      "notes": ""
+    },
+    {
+      "name": "이시내",
+      "department": "핵의학과",
+      "external_id": "JISAM-297",
+      "n_schedules": 10,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "김은경",
+      "department": "혈액종양내과",
+      "external_id": "JISAM-299",
+      "n_schedules": 8,
+      "n_date_schedules": 100,
+      "notes": ""
+    },
+    {
+      "name": "이홍기",
+      "department": "혈액종양내과",
+      "external_id": "JISAM-300",
+      "n_schedules": 8,
+      "n_date_schedules": 100,
+      "notes": ""
+    },
+    {
+      "name": "이지연",
+      "department": "혈액종양내과",
+      "external_id": "JISAM-301",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이보희",
+      "department": "혈액종양내과",
+      "external_id": "JISAM-302",
+      "n_schedules": 8,
+      "n_date_schedules": 100,
+      "notes": ""
+    },
+    {
+      "name": "이대희",
+      "department": "혈액종양내과",
+      "external_id": "JISAM-298",
+      "n_schedules": 5,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "지영석",
+      "department": "혈액종양내과",
+      "external_id": "JISAM-318",
+      "n_schedules": 8,
+      "n_date_schedules": 100,
+      "notes": ""
+    },
+    {
+      "name": "천종호",
+      "department": "혈액종양내과",
+      "external_id": "JISAM-366",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신정아",
+      "department": "호흡기내과",
+      "external_id": "JISAM-304",
+      "n_schedules": 5,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "정나리",
+      "department": "호흡기내과",
+      "external_id": "JISAM-305",
+      "n_schedules": 9,
+      "n_date_schedules": 113,
+      "notes": ""
+    },
+    {
+      "name": "이규성",
+      "department": "호흡기내과",
+      "external_id": "JISAM-349",
+      "n_schedules": 11,
+      "n_date_schedules": 138,
+      "notes": ""
+    },
+    {
+      "name": "이두연",
+      "department": "심장혈관흉부외과",
+      "external_id": "JISAM-338",
+      "n_schedules": 6,
+      "n_date_schedules": 73,
+      "notes": ""
+    },
+    {
+      "name": "박찬범",
+      "department": "심장혈관흉부외과",
+      "external_id": "JISAM-356",
+      "n_schedules": 5,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "최현일",
+      "department": "생활케어센터",
+      "external_id": "JISAM-361",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영규",
+      "department": "일반(국가)검진센터",
+      "external_id": "JISAM-362",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "박종훈",
+      "department": "일반(국가)검진센터",
+      "external_id": "JISAM-363",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    }
+  ]
+}

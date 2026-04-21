@@ -1,0 +1,183 @@
+{
+  "hospital_code": "ANSEONG",
+  "hospital_name": "경기도의료원 안성병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이희우",
+      "department": "내과",
+      "external_id": "ANSEONG-60-A551",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허재형",
+      "department": "내과",
+      "external_id": "ANSEONG-60-A368",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조숙경",
+      "department": "내과",
+      "external_id": "ANSEONG-60-im3b",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정환",
+      "department": "내과",
+      "external_id": "ANSEONG-60-a368",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고진영",
+      "department": "재활의학과",
+      "external_id": "ANSEONG-61-rm11",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "강봉수",
+      "department": "신경과",
+      "external_id": "ANSEONG-62-a368",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "장영록",
+      "department": "신경외과",
+      "external_id": "ANSEONG-128-A415",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "정경태",
+      "department": "정형외과",
+      "external_id": "ANSEONG-63-6655",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "송상헌",
+      "department": "정형외과",
+      "external_id": "ANSEONG-63-9987",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "백영기",
+      "department": "외과",
+      "external_id": "ANSEONG-64-A713",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "정인욱",
+      "department": "가정의학과",
+      "external_id": "ANSEONG-101-00",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김대연",
+      "department": "가정의학과",
+      "external_id": "ANSEONG-101-a368",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "오창수",
+      "department": "비뇨의학과(피부과)",
+      "external_id": "ANSEONG-66-9481",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김백남",
+      "department": "소아청소년과",
+      "external_id": "ANSEONG-68-pd14",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이동훈",
+      "department": "소아청소년과",
+      "external_id": "ANSEONG-68-A375",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김도형",
+      "department": "진단검사의학과",
+      "external_id": "ANSEONG-69-000",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김성배",
+      "department": "치과",
+      "external_id": "ANSEONG-70-a368",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "노경민",
+      "department": "산부인과",
+      "external_id": "ANSEONG-71-9480",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "강한솔",
+      "department": "영상의학과",
+      "external_id": "ANSEONG-72-0000",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "배성재",
+      "department": "영상의학과",
+      "external_id": "ANSEONG-72-002",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "손형민",
+      "department": "응급의학과",
+      "external_id": "ANSEONG-73-0000",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "허은주",
+      "department": "응급의학과",
+      "external_id": "ANSEONG-73-a368",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 진료시간표가 홈페이지에 게시되어 있지 않거나 파싱에 실패했습니다. 병원에 직접 문의해 주세요."
+    }
+  ]
+}

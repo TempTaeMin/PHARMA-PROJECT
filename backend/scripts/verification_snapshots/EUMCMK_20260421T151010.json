@@ -1,0 +1,1495 @@
+{
+  "hospital_code": "EUMCMK",
+  "hospital_name": "이대목동병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이상화",
+      "department": "가정의학과",
+      "external_id": "EUMCMK-1001146",
+      "n_schedules": 2,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "심경원",
+      "department": "가정의학과",
+      "external_id": "EUMCMK-1002555",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "이솔",
+      "department": "가정의학과",
+      "external_id": "EUMCMK-1016170",
+      "n_schedules": 4,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "최희정",
+      "department": "감염내과",
+      "external_id": "EUMCMK-1002068",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "김정한",
+      "department": "감염내과",
+      "external_id": "EUMCMK-1017756",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "배지연",
+      "department": "감염내과",
+      "external_id": "EUMCMK-1009840",
+      "n_schedules": 3,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "이민경",
+      "department": "감염내과",
+      "external_id": "EUMCMK-1022640",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "김진우",
+      "department": "구강악안면외과",
+      "external_id": "EUMCMK-1007956",
+      "n_schedules": 3,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "박정현",
+      "department": "구강악안면외과",
+      "external_id": "EUMCMK-1007330",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "윤다미",
+      "department": "구강악안면외과",
+      "external_id": "EUMCMK-1017834",
+      "n_schedules": 5,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "구강악안면외과",
+      "external_id": "EUMCMK-9002809",
+      "n_schedules": 11,
+      "n_date_schedules": 125,
+      "notes": ""
+    },
+    {
+      "name": "성연아",
+      "department": "내분비내과",
+      "external_id": "EUMCMK-1001270",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "이혜진",
+      "department": "내분비내과",
+      "external_id": "EUMCMK-1003215",
+      "n_schedules": 4,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "홍영선",
+      "department": "내분비내과",
+      "external_id": "EUMCMK-1001981",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "이지수",
+      "department": "류마티스내과",
+      "external_id": "EUMCMK-1001838",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "백인운",
+      "department": "류마티스내과",
+      "external_id": "EUMCMK-1017799",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김원중",
+      "department": "마취통증의학과/통증클리닉",
+      "external_id": "EUMCMK-1005160",
+      "n_schedules": 6,
+      "n_date_schedules": 74,
+      "notes": ""
+    },
+    {
+      "name": "유승희",
+      "department": "마취통증의학과/통증클리닉",
+      "external_id": "EUMCMK-1009161",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "최용주",
+      "department": "마취통증의학과/통증클리닉",
+      "external_id": "EUMCMK-1011398",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강보경",
+      "department": "마취통증의학과/통증클리닉",
+      "external_id": "EUMCMK-1011367",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은경",
+      "department": "마취통증의학과/통증클리닉",
+      "external_id": "EUMCMK-1002998",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유은영",
+      "department": "마취통증의학과/통증클리닉",
+      "external_id": "EUMCMK-1003744",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우식",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1001063",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "이동현",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1001822",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "김청수",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1017212",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김승협",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1014606",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "김완석",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1017016",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "고영휘",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1022509",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "윤현석",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1006317",
+      "n_schedules": 3,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "신태영",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1015225",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "류호영",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1013920",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김명수",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1017015",
+      "n_schedules": 5,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "신정현",
+      "department": "비뇨의학과",
+      "external_id": "EUMCMK-1017407",
+      "n_schedules": 4,
+      "n_date_schedules": 63,
+      "notes": ""
+    },
+    {
+      "name": "전종관",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1020711",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "김영주",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1001589",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "박선화",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1008949",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "허영민",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1008641",
+      "n_schedules": 3,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "산부인과",
+      "external_id": "EUMCMK-9002820",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경아",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1003083",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "김윤환",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1004333",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김미경",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1005697",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "김보라",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1009334",
+      "n_schedules": 4,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "이제연",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1006966",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "이주혜",
+      "department": "산부인과",
+      "external_id": "EUMCMK-1009747",
+      "n_schedules": 3,
+      "n_date_schedules": 64,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "산부인과",
+      "external_id": "EUMCMK-9002829",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강소라",
+      "department": "성형외과",
+      "external_id": "EUMCMK-1002366",
+      "n_schedules": 3,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "박진우",
+      "department": "성형외과",
+      "external_id": "EUMCMK-1014594",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "조정목",
+      "department": "성형외과",
+      "external_id": "EUMCMK-1020873",
+      "n_schedules": 2,
+      "n_date_schedules": 20,
+      "notes": ""
+    },
+    {
+      "name": "이미경",
+      "department": "성형외과",
+      "external_id": "EUMCMK-1011390",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "성형외과",
+      "external_id": "EUMCMK-9002823",
+      "n_schedules": 2,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "유경하",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1001176",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은애",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1001615",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "유은선",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1001705",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "조수진",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1003812",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "조혜경",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1005983",
+      "n_schedules": 4,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "최선아",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1014588",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "강수진",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1023370",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "허호민",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1023572",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "류재휘",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1020812",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "황혜수",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1020813",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "홍기택",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1020814",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "최정은",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-1009033",
+      "n_schedules": 5,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "소아청소년과",
+      "external_id": "EUMCMK-9002822",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선영",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1001518",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "정혜경",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1002327",
+      "n_schedules": 4,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1003746",
+      "n_schedules": 4,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "정의선",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1008998",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "금지영",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1016155",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "최나령",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1020929",
+      "n_schedules": 5,
+      "n_date_schedules": 59,
+      "notes": ""
+    },
+    {
+      "name": "정재윤",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1021479",
+      "n_schedules": 5,
+      "n_date_schedules": 56,
+      "notes": ""
+    },
+    {
+      "name": "배세련",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1017804",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "윤민주",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1011324",
+      "n_schedules": 4,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "유선아",
+      "department": "소화기내과",
+      "external_id": "EUMCMK-1011088",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "노영학",
+      "department": "수부외과",
+      "external_id": "EUMCMK-1004768",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권기환",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1002135",
+      "n_schedules": 3,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "서혜선",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1023551",
+      "n_schedules": 5,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "강인숙",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1004709",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "박준범",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1005641",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "김경진",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1006549",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김문현",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1023934",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "정소담",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1011430",
+      "n_schedules": 4,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1021886",
+      "n_schedules": 4,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "이승우",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-1016165",
+      "n_schedules": 5,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "순환기내과",
+      "external_id": "EUMCMK-9003036",
+      "n_schedules": 1,
+      "n_date_schedules": 3,
+      "notes": ""
+    },
+    {
+      "name": "박기덕",
+      "department": "신경과",
+      "external_id": "EUMCMK-1001047",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "이향운",
+      "department": "신경과",
+      "external_id": "EUMCMK-1002576",
+      "n_schedules": 2,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "김건하",
+      "department": "신경과",
+      "external_id": "EUMCMK-1005420",
+      "n_schedules": 3,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "김병수",
+      "department": "신경과",
+      "external_id": "EUMCMK-1019362",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "신동우",
+      "department": "신경과",
+      "external_id": "EUMCMK-1016157",
+      "n_schedules": 4,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "장윤경",
+      "department": "신경과",
+      "external_id": "EUMCMK-1008977",
+      "n_schedules": 5,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "황성은",
+      "department": "신경과",
+      "external_id": "EUMCMK-1016193",
+      "n_schedules": 4,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "이찬영",
+      "department": "신경과",
+      "external_id": "EUMCMK-1009470",
+      "n_schedules": 4,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "이승아",
+      "department": "신경과",
+      "external_id": "EUMCMK-1009151",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "박효진",
+      "department": "신경과",
+      "external_id": "EUMCMK-1024126",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "황승균",
+      "department": "신경외과",
+      "external_id": "EUMCMK-1001966",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "조용재",
+      "department": "신경외과",
+      "external_id": "EUMCMK-1002354",
+      "n_schedules": 3,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "양나래",
+      "department": "신경외과",
+      "external_id": "EUMCMK-1006132",
+      "n_schedules": 4,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김영구",
+      "department": "신경외과",
+      "external_id": "EUMCMK-1012984",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "남택민",
+      "department": "신경외과",
+      "external_id": "EUMCMK-1020983",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김승정",
+      "department": "신장내과",
+      "external_id": "EUMCMK-1002381",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "이신아",
+      "department": "신장내과",
+      "external_id": "EUMCMK-1006984",
+      "n_schedules": 5,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "유미정",
+      "department": "신장내과",
+      "external_id": "EUMCMK-1016164",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "박정준",
+      "department": "심장혈관흉부외과",
+      "external_id": "EUMCMK-1002107",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "신수민",
+      "department": "심장혈관흉부외과",
+      "external_id": "EUMCMK-1017895",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "임기환",
+      "department": "안과",
+      "external_id": "EUMCMK-1001437",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "한경은",
+      "department": "안과",
+      "external_id": "EUMCMK-1006441",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "조수창",
+      "department": "안과",
+      "external_id": "EUMCMK-1012509",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "서울",
+      "department": "안과",
+      "external_id": "EUMCMK-1005601",
+      "n_schedules": 4,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "김현진",
+      "department": "안과",
+      "external_id": "EUMCMK-1005645",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "정현지",
+      "department": "안과",
+      "external_id": "EUMCMK-1011105",
+      "n_schedules": 1,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "조영주",
+      "department": "알레르기내과",
+      "external_id": "EUMCMK-1001113",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "심지수",
+      "department": "알레르기내과",
+      "external_id": "EUMCMK-1013004",
+      "n_schedules": 4,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "이희성",
+      "department": "외과",
+      "external_id": "EUMCMK-1006213",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "박대준",
+      "department": "외과",
+      "external_id": "EUMCMK-1013394",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김나루",
+      "department": "외과",
+      "external_id": "EUMCMK-1007881",
+      "n_schedules": 3,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "김용일",
+      "department": "외과",
+      "external_id": "EUMCMK-1001455",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "정순섭",
+      "department": "외과",
+      "external_id": "EUMCMK-1002203",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "남진훈",
+      "department": "외과",
+      "external_id": "EUMCMK-1012827",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "남수민",
+      "department": "외과",
+      "external_id": "EUMCMK-1022778",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "전시열",
+      "department": "외과",
+      "external_id": "EUMCMK-1024124",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "김지선",
+      "department": "외과",
+      "external_id": "EUMCMK-1024125",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "문병인",
+      "department": "외과",
+      "external_id": "EUMCMK-1001396",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "임우성",
+      "department": "외과",
+      "external_id": "EUMCMK-1003928",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "이준우",
+      "department": "외과",
+      "external_id": "EUMCMK-1005404",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "권형주",
+      "department": "외과",
+      "external_id": "EUMCMK-1005848",
+      "n_schedules": 3,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "김현구",
+      "department": "외과",
+      "external_id": "EUMCMK-1006403",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "우주현",
+      "department": "외과",
+      "external_id": "EUMCMK-1006937",
+      "n_schedules": 2,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "이장희",
+      "department": "외과",
+      "external_id": "EUMCMK-1022145",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "황현욱",
+      "department": "외과",
+      "external_id": "EUMCMK-1019361",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "홍수지",
+      "department": "외과",
+      "external_id": "EUMCMK-1011080",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "홍근",
+      "department": "외과",
+      "external_id": "EUMCMK-1003806",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "김향경",
+      "department": "외과",
+      "external_id": "EUMCMK-1019049",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "변성완",
+      "department": "이비인후-두경부외과",
+      "external_id": "EUMCMK-1001993",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "김한수",
+      "department": "이비인후-두경부외과",
+      "external_id": "EUMCMK-1003784",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "이호윤",
+      "department": "이비인후-두경부외과",
+      "external_id": "EUMCMK-1014595",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "정수연",
+      "department": "이비인후-두경부외과",
+      "external_id": "EUMCMK-1007513",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "김소정",
+      "department": "이비인후-두경부외과",
+      "external_id": "EUMCMK-1007452",
+      "n_schedules": 4,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "윤주현",
+      "department": "이비인후-두경부외과",
+      "external_id": "EUMCMK-1009716",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "이비인후-두경부외과",
+      "external_id": "EUMCMK-9002811",
+      "n_schedules": 2,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "배하석",
+      "department": "재활의학과",
+      "external_id": "EUMCMK-1001982",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "김정환",
+      "department": "재활의학과",
+      "external_id": "EUMCMK-1022637",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "유재두",
+      "department": "정형외과",
+      "external_id": "EUMCMK-1001535",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "윤병호",
+      "department": "정형외과",
+      "external_id": "EUMCMK-1016158",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "이영",
+      "department": "정형외과",
+      "external_id": "EUMCMK-1022634",
+      "n_schedules": 4,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "권지은",
+      "department": "정형외과",
+      "external_id": "EUMCMK-1014389",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "박인",
+      "department": "정형외과",
+      "external_id": "EUMCMK-1007611",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "박기태",
+      "department": "정형외과",
+      "external_id": "EUMCMK-1022638",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "변준우",
+      "department": "정형외과",
+      "external_id": "EUMCMK-1022639",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "김성택",
+      "department": "정형외과",
+      "external_id": "EUMCMK-1022635",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "이경은",
+      "department": "종양내과",
+      "external_id": "EUMCMK-1003308",
+      "n_schedules": 5,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "조정민",
+      "department": "종양내과",
+      "external_id": "EUMCMK-1013917",
+      "n_schedules": 5,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "함아롱",
+      "department": "종양내과",
+      "external_id": "EUMCMK-1008797",
+      "n_schedules": 5,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "최경희",
+      "department": "직업환경의학과",
+      "external_id": "EUMCMK-1003710",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허정원",
+      "department": "진단검사의학과",
+      "external_id": "EUMCMK-1002419",
+      "n_schedules": 2,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "소민경",
+      "department": "진단검사의학과",
+      "external_id": "EUMCMK-1005742",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김민지",
+      "department": "치과교정과",
+      "external_id": "EUMCMK-1005204",
+      "n_schedules": 7,
+      "n_date_schedules": 83,
+      "notes": ""
+    },
+    {
+      "name": "김혜령",
+      "department": "치과교정과",
+      "external_id": "EUMCMK-1022645",
+      "n_schedules": 8,
+      "n_date_schedules": 84,
+      "notes": ""
+    },
+    {
+      "name": "전민지",
+      "department": "치과교정과",
+      "external_id": "EUMCMK-1022615",
+      "n_schedules": 2,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "치과교정과",
+      "external_id": "EUMCMK-9002807",
+      "n_schedules": 11,
+      "n_date_schedules": 134,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "치과보존과",
+      "external_id": "EUMCMK-9002804",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "선민지",
+      "department": "치과보철과",
+      "external_id": "EUMCMK-1022636",
+      "n_schedules": 7,
+      "n_date_schedules": 86,
+      "notes": ""
+    },
+    {
+      "name": "정다정",
+      "department": "치과보철과",
+      "external_id": "EUMCMK-1022644",
+      "n_schedules": 8,
+      "n_date_schedules": 100,
+      "notes": ""
+    },
+    {
+      "name": "일반의(권수민)",
+      "department": "치과보철과",
+      "external_id": "EUMCMK-9003385",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의(정진우)",
+      "department": "치과보철과",
+      "external_id": "EUMCMK-9003398",
+      "n_schedules": 7,
+      "n_date_schedules": 87,
+      "notes": ""
+    },
+    {
+      "name": "일반의(전예림)",
+      "department": "치과보철과",
+      "external_id": "EUMCMK-9003407",
+      "n_schedules": 7,
+      "n_date_schedules": 84,
+      "notes": ""
+    },
+    {
+      "name": "방은경",
+      "department": "치과치주과",
+      "external_id": "EUMCMK-1003633",
+      "n_schedules": 7,
+      "n_date_schedules": 83,
+      "notes": ""
+    },
+    {
+      "name": "최희선",
+      "department": "치과치주과",
+      "external_id": "EUMCMK-1017822",
+      "n_schedules": 6,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "일반의(오현정)",
+      "department": "치과치주과",
+      "external_id": "EUMCMK-9003372",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의(이은총)",
+      "department": "치과치주과",
+      "external_id": "EUMCMK-9003394",
+      "n_schedules": 8,
+      "n_date_schedules": 96,
+      "notes": ""
+    },
+    {
+      "name": "일반의(유시원)",
+      "department": "치과치주과",
+      "external_id": "EUMCMK-9003405",
+      "n_schedules": 8,
+      "n_date_schedules": 90,
+      "notes": ""
+    },
+    {
+      "name": "최혜영",
+      "department": "피부과",
+      "external_id": "EUMCMK-1001331",
+      "n_schedules": 3,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "변지연",
+      "department": "피부과",
+      "external_id": "EUMCMK-1005609",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "이희라",
+      "department": "피부과",
+      "external_id": "EUMCMK-1019341",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김지영",
+      "department": "핵의학과/핵의학클리닉",
+      "external_id": "EUMCMK-1019359",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "이규형",
+      "department": "혈액내과",
+      "external_id": "EUMCMK-1019616",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "이석",
+      "department": "혈액내과",
+      "external_id": "EUMCMK-1001808",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "문영철",
+      "department": "혈액내과",
+      "external_id": "EUMCMK-1002748",
+      "n_schedules": 4,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "박영훈",
+      "department": "혈액내과",
+      "external_id": "EUMCMK-1015451",
+      "n_schedules": 5,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "황도유",
+      "department": "혈액내과",
+      "external_id": "EUMCMK-1024351",
+      "n_schedules": 4,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "한재준",
+      "department": "혈액내과",
+      "external_id": "EUMCMK-1022642",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "이세원",
+      "department": "혈액내과",
+      "external_id": "EUMCMK-1005698",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "천은미",
+      "department": "호흡기내과",
+      "external_id": "EUMCMK-1001707",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "박소정",
+      "department": "호흡기내과",
+      "external_id": "EUMCMK-1013008",
+      "n_schedules": 2,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "신윤영",
+      "department": "호흡기내과",
+      "external_id": "EUMCMK-1015364",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "황윤정",
+      "department": "호흡기내과",
+      "external_id": "EUMCMK-1011076",
+      "n_schedules": 4,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "일반의",
+      "department": "호흡기내과",
+      "external_id": "EUMCMK-9002978",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

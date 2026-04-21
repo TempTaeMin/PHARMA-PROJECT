@@ -1,0 +1,519 @@
+{
+  "hospital_code": "AYSAM",
+  "hospital_name": "안양샘병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "곽정임",
+      "department": "가정의학과",
+      "external_id": "AYSAM-fmclinic-9",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은영",
+      "department": "가정의학과",
+      "external_id": "AYSAM-fmclinic-13",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤소정",
+      "department": "가정의학과",
+      "external_id": "AYSAM-fmclinic-220",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주영",
+      "department": "감염내과",
+      "external_id": "AYSAM-ifmedical-131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임경리",
+      "department": "감염내과",
+      "external_id": "AYSAM-ifmedical-269",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장전호",
+      "department": "난임부인과",
+      "external_id": "AYSAM-igymedical-163",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강영수",
+      "department": "난임부인과",
+      "external_id": "AYSAM-igymedical-238",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜숙",
+      "department": "내분비내과",
+      "external_id": "AYSAM-edmedical-37",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤정",
+      "department": "내분비내과",
+      "external_id": "AYSAM-edmedical-38",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오지민",
+      "department": "류마티스내과",
+      "external_id": "AYSAM-rmmedical-40",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신은용",
+      "department": "알레르기내과",
+      "external_id": "AYSAM-almedical-109",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강주성",
+      "department": "소아청소년과",
+      "external_id": "AYSAM-pedmedical-174",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오은영",
+      "department": "소아청소년과",
+      "external_id": "AYSAM-pedmedical-176",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현정",
+      "department": "소화기내과",
+      "external_id": "AYSAM-gimedical-69",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종섭",
+      "department": "소화기내과",
+      "external_id": "AYSAM-gimedical-273",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정숙희",
+      "department": "소화기내과",
+      "external_id": "AYSAM-gimedical-139",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영태",
+      "department": "소화기내과",
+      "external_id": "AYSAM-gimedical-143",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박병선",
+      "department": "소화기내과",
+      "external_id": "AYSAM-gimedical-248",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서일우",
+      "department": "순환기내과",
+      "external_id": "AYSAM-cmedical-144",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용복",
+      "department": "순환기내과",
+      "external_id": "AYSAM-cmedical-150",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우정",
+      "department": "신경과",
+      "external_id": "AYSAM-numedical-77",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석호",
+      "department": "신경과",
+      "external_id": "AYSAM-numedical-134",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진희",
+      "department": "신경과",
+      "external_id": "AYSAM-numedical-239",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "반광현",
+      "department": "신경과",
+      "external_id": "AYSAM-numedical-242",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동희",
+      "department": "신장내과",
+      "external_id": "AYSAM-nmedical-267",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유아",
+      "department": "신장내과",
+      "external_id": "AYSAM-nmedical-277",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지연",
+      "department": "정신건강의학과",
+      "external_id": "AYSAM-npdmedical-263",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상한",
+      "department": "재활의학과",
+      "external_id": "AYSAM-rhmedical-170",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박문현",
+      "department": "한방과",
+      "external_id": "AYSAM-km-175",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정애",
+      "department": "혈액종양내과",
+      "external_id": "AYSAM-homedical-235",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성주명",
+      "department": "혈액종양내과",
+      "external_id": "AYSAM-homedical-94",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이대희",
+      "department": "혈액종양내과",
+      "external_id": "AYSAM-homedical-30",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하은실",
+      "department": "호흡기내과",
+      "external_id": "AYSAM-pmmedical-130",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은경",
+      "department": "호흡기내과",
+      "external_id": "AYSAM-pmmedical-129",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인우",
+      "department": "응급의학과",
+      "external_id": "AYSAM-emd-91",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구재은",
+      "department": "응급의학과",
+      "external_id": "AYSAM-emd-95",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍창선",
+      "department": "응급의학과",
+      "external_id": "AYSAM-emd-241",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나준호",
+      "department": "응급의학과",
+      "external_id": "AYSAM-emd-257",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성태영",
+      "department": "응급의학과",
+      "external_id": "AYSAM-emd-258",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장지은",
+      "department": "응급의학과",
+      "external_id": "AYSAM-emd-259",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소영",
+      "department": "응급의학과",
+      "external_id": "AYSAM-emd-261",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허재민",
+      "department": "응급의학과",
+      "external_id": "AYSAM-emd-271",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤여경",
+      "department": "직업환경의학과",
+      "external_id": "AYSAM-oem-236",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민석",
+      "department": "직업환경의학과",
+      "external_id": "AYSAM-oem-274",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효정",
+      "department": "직업환경의학과",
+      "external_id": "AYSAM-oem-252",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상욱",
+      "department": "진단검사의학과",
+      "external_id": "AYSAM-lm-253",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문종언",
+      "department": "뇌신경외과",
+      "external_id": "AYSAM-brainns-245",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황승현",
+      "department": "유방갑상선외과",
+      "external_id": "AYSAM-btsurgery-145",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전순호",
+      "department": "심장혈관흉부외과",
+      "external_id": "AYSAM-cs-243",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성진",
+      "department": "외과",
+      "external_id": "AYSAM-gsr-169",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성원",
+      "department": "외과",
+      "external_id": "AYSAM-gsr-219",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형우",
+      "department": "외과",
+      "external_id": "AYSAM-gsr-222",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성훈",
+      "department": "외과",
+      "external_id": "AYSAM-gsr-268",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최인재",
+      "department": "신경외과",
+      "external_id": "AYSAM-ns-92",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양상미",
+      "department": "신경외과",
+      "external_id": "AYSAM-ns-240",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진경",
+      "department": "마취통증의학과",
+      "external_id": "AYSAM-ane-166",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주연희",
+      "department": "마취통증의학과",
+      "external_id": "AYSAM-ane-43",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정다운",
+      "department": "마취통증의학과",
+      "external_id": "AYSAM-ane-251",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최창익",
+      "department": "마취통증의학과",
+      "external_id": "AYSAM-ane-264",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오정인",
+      "department": "이비인후과",
+      "external_id": "AYSAM-ent-82",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심주섭",
+      "department": "이비인후과",
+      "external_id": "AYSAM-ent-104",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조현옥",
+      "department": "치과",
+      "external_id": "AYSAM-den-256",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김부영",
+      "department": "치과",
+      "external_id": "AYSAM-den-275",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손다혜",
+      "department": "병리과",
+      "external_id": "AYSAM-ap-52",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -488,16 +488,19 @@ class KbsmcCrawler:
     # ─── 전체 크롤링 ───
 
     async def _fetch_all(self) -> list[dict]:
-        """전체 진료과별 의료진 크롤링 후 캐시"""
+        """전체 진료과별 의료진 크롤링 후 캐시. 의사별 스케줄은 병렬 fetch."""
+        import asyncio
+
         if self._cached_data is not None:
             return self._cached_data
 
         depts = await self._fetch_departments()
-        all_doctors = {}  # ext_id → doctor dict
+        all_doctors = {}
 
         async with httpx.AsyncClient(
             headers=self.headers, timeout=60, follow_redirects=True,
         ) as client:
+            # 1단계: 모든 부서에서 의사 메타데이터 수집 (dedup)
             for dept in depts:
                 docs = await self._fetch_dept_doctors(
                     client, dept["code"], dept["name"]
@@ -512,19 +515,32 @@ class KbsmcCrawler:
                                 if existing.get("specialty") else doc["specialty"]
                             )
                         continue
-
-                    # 개별 스케줄 조회
-                    md_idx = doc.get("_md_idx", "")
-                    mp_idx = doc.get("_mp_idx", dept["code"])
-                    if md_idx:
-                        schedules = await self._fetch_doctor_schedule(client, md_idx, mp_idx)
-                        doc["schedules"] = schedules
-                        date_schedules = await self._fetch_monthly_schedule(client, md_idx, mp_idx)
-                        doc["date_schedules"] = date_schedules
-                    else:
-                        doc["date_schedules"] = []
-
+                    if "_mp_idx" not in doc or not doc.get("_mp_idx"):
+                        doc["_mp_idx"] = dept["code"]
+                    doc.setdefault("schedules", [])
+                    doc.setdefault("date_schedules", [])
                     all_doctors[ext_id] = doc
+
+            # 2단계: 의사별 스케줄 + 월별 스케줄 병렬 fetch
+            sem = asyncio.Semaphore(8)
+
+            async def fetch_one(doc):
+                md_idx = doc.get("_md_idx", "")
+                if not md_idx:
+                    return
+                mp_idx = doc.get("_mp_idx", "")
+                async with sem:
+                    try:
+                        sched, date_sched = await asyncio.gather(
+                            self._fetch_doctor_schedule(client, md_idx, mp_idx),
+                            self._fetch_monthly_schedule(client, md_idx, mp_idx),
+                        )
+                        doc["schedules"] = sched
+                        doc["date_schedules"] = date_sched
+                    except Exception as e:
+                        logger.warning(f"[KBSMC] {doc.get('name','')} 스케줄 실패: {e}")
+
+            await asyncio.gather(*(fetch_one(d) for d in all_doctors.values()))
 
         result = list(all_doctors.values())
         logger.info(f"[KBSMC] 총 {len(result)}명")

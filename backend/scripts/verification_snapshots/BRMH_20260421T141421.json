@@ -1,0 +1,1415 @@
+{
+  "hospital_code": "BRMH",
+  "hospital_name": "서울특별시 보라매병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "신기철",
+      "department": "류마티스내과",
+      "external_id": "BRMH-258",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "류마티스내과",
+      "external_id": "BRMH-263",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대식",
+      "department": "공공의학과",
+      "external_id": "BRMH-216",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상원",
+      "department": "감염내과",
+      "external_id": "BRMH-172",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오홍상",
+      "department": "감염내과",
+      "external_id": "BRMH-488",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동훈",
+      "department": "감염내과",
+      "external_id": "BRMH-484",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사",
+      "department": "감염내과",
+      "external_id": "BRMH-203",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한가람",
+      "department": "마취통증의학과",
+      "external_id": "BRMH-511",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종성",
+      "department": "가정의학과",
+      "external_id": "BRMH-157",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오범조",
+      "department": "가정의학과",
+      "external_id": "BRMH-159",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한수정",
+      "department": "가정의학과",
+      "external_id": "BRMH-470",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용호",
+      "department": "가정의학과",
+      "external_id": "BRMH-544",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이가희",
+      "department": "내분비대사내과",
+      "external_id": "BRMH-227",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상완",
+      "department": "내분비대사내과",
+      "external_id": "BRMH-236",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문민경",
+      "department": "내분비대사내과",
+      "external_id": "BRMH-242",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노은",
+      "department": "내분비대사내과",
+      "external_id": "BRMH-514",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송영신",
+      "department": "내분비대사내과",
+      "external_id": "BRMH-435",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사1",
+      "department": "내분비대사내과",
+      "external_id": "BRMH-252",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전혜원",
+      "department": "산부인과",
+      "external_id": "BRMH-336",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이택상",
+      "department": "산부인과",
+      "external_id": "BRMH-338",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병재",
+      "department": "산부인과",
+      "external_id": "BRMH-345",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황규리",
+      "department": "산부인과",
+      "external_id": "BRMH-347",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선민",
+      "department": "산부인과",
+      "external_id": "BRMH-349",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태훈",
+      "department": "산부인과",
+      "external_id": "BRMH-352",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이다용",
+      "department": "산부인과",
+      "external_id": "BRMH-445",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "산부인과",
+      "external_id": "BRMH-357",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지웅",
+      "department": "성형외과",
+      "external_id": "BRMH-361",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준호",
+      "department": "성형외과",
+      "external_id": "BRMH-363",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재우",
+      "department": "성형외과",
+      "external_id": "BRMH-473",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현",
+      "department": "비뇨의학과",
+      "external_id": "BRMH-317",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손환철",
+      "department": "비뇨의학과",
+      "external_id": "BRMH-321",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조민철",
+      "department": "비뇨의학과",
+      "external_id": "BRMH-324",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유상준",
+      "department": "비뇨의학과",
+      "external_id": "BRMH-332",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정규환",
+      "department": "비뇨의학과",
+      "external_id": "BRMH-550",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배호영",
+      "department": "비뇨의학과",
+      "external_id": "BRMH-489",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "비뇨의학과",
+      "external_id": "BRMH-335",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지은",
+      "department": "소아청소년과",
+      "external_id": "BRMH-367",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성용",
+      "department": "소아청소년과",
+      "external_id": "BRMH-369",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진아",
+      "department": "소아청소년과",
+      "external_id": "BRMH-373",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한미선",
+      "department": "소아청소년과",
+      "external_id": "BRMH-170",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오경진",
+      "department": "소아청소년과",
+      "external_id": "BRMH-176",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안빈",
+      "department": "소아청소년과",
+      "external_id": "BRMH-503",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜진",
+      "department": "소아청소년과",
+      "external_id": "BRMH-504",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최호정",
+      "department": "소아청소년과",
+      "external_id": "BRMH-496",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강혜민",
+      "department": "소아청소년과",
+      "external_id": "BRMH-497",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지은",
+      "department": "소아청소년과",
+      "external_id": "BRMH-498",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소화기영양임상강사",
+      "department": "소아청소년과",
+      "external_id": "BRMH-456",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반1",
+      "department": "소아청소년과",
+      "external_id": "BRMH-179",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상현",
+      "department": "순환기내과",
+      "external_id": "BRMH-339",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우영",
+      "department": "순환기내과",
+      "external_id": "BRMH-340",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서재빈",
+      "department": "순환기내과",
+      "external_id": "BRMH-341",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김학령",
+      "department": "순환기내과",
+      "external_id": "BRMH-342",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임우현",
+      "department": "순환기내과",
+      "external_id": "BRMH-343",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조현승",
+      "department": "순환기내과",
+      "external_id": "BRMH-422",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현정",
+      "department": "순환기내과",
+      "external_id": "BRMH-549",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조해찬",
+      "department": "순환기내과",
+      "external_id": "BRMH-519",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성준",
+      "department": "순환기내과",
+      "external_id": "BRMH-546",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사",
+      "department": "순환기내과",
+      "external_id": "BRMH-344",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손영제",
+      "department": "신경외과",
+      "external_id": "BRMH-370",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성배",
+      "department": "신경외과",
+      "external_id": "BRMH-372",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍노아",
+      "department": "신경외과",
+      "external_id": "BRMH-374",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변윤환",
+      "department": "신경외과",
+      "external_id": "BRMH-477",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정미",
+      "department": "신경외과",
+      "external_id": "BRMH-455",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임춘수",
+      "department": "신장내과",
+      "external_id": "BRMH-376",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오윤규",
+      "department": "신장내과",
+      "external_id": "BRMH-377",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정표",
+      "department": "신장내과",
+      "external_id": "BRMH-378",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정환",
+      "department": "신장내과",
+      "external_id": "BRMH-379",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사1",
+      "department": "신장내과",
+      "external_id": "BRMH-380",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍윤호",
+      "department": "신경과",
+      "external_id": "BRMH-350",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권형민",
+      "department": "신경과",
+      "external_id": "BRMH-351",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구대림",
+      "department": "신경과",
+      "external_id": "BRMH-355",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정한영",
+      "department": "신경과",
+      "external_id": "BRMH-491",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김률",
+      "department": "신경과",
+      "external_id": "BRMH-476",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남기웅",
+      "department": "신경과",
+      "external_id": "BRMH-358",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승민",
+      "department": "신경과",
+      "external_id": "BRMH-547",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "신경과",
+      "external_id": "BRMH-418",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지원",
+      "department": "소화기내과",
+      "external_id": "BRMH-200",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지봉",
+      "department": "소화기내과",
+      "external_id": "BRMH-207",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용진",
+      "department": "소화기내과",
+      "external_id": "BRMH-213",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원",
+      "department": "소화기내과",
+      "external_id": "BRMH-222",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강현우",
+      "department": "소화기내과",
+      "external_id": "BRMH-225",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수환",
+      "department": "소화기내과",
+      "external_id": "BRMH-233",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤석",
+      "department": "소화기내과",
+      "external_id": "BRMH-548",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주세경",
+      "department": "소화기내과",
+      "external_id": "BRMH-259",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동현",
+      "department": "소화기내과",
+      "external_id": "BRMH-264",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지현",
+      "department": "소화기내과",
+      "external_id": "BRMH-522",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광우",
+      "department": "소화기내과",
+      "external_id": "BRMH-406",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주성",
+      "department": "소화기내과",
+      "external_id": "BRMH-528",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장희준",
+      "department": "소화기내과",
+      "external_id": "BRMH-325",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보경",
+      "department": "소화기내과",
+      "external_id": "BRMH-474",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사",
+      "department": "소화기내과",
+      "external_id": "BRMH-331",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문현종",
+      "department": "심장혈관흉부외과",
+      "external_id": "BRMH-322",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재성",
+      "department": "심장혈관흉부외과",
+      "external_id": "BRMH-323",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오세진",
+      "department": "심장혈관흉부외과",
+      "external_id": "BRMH-328",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "옥유정",
+      "department": "심장혈관흉부외과",
+      "external_id": "BRMH-330",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재화",
+      "department": "심장혈관흉부외과",
+      "external_id": "BRMH-510",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성윤",
+      "department": "알레르기내과",
+      "external_id": "BRMH-541",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안지윤",
+      "department": "안과",
+      "external_id": "BRMH-383",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신주영",
+      "department": "안과",
+      "external_id": "BRMH-384",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경민",
+      "department": "안과",
+      "external_id": "BRMH-385",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성환",
+      "department": "안과",
+      "external_id": "BRMH-446",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장연지",
+      "department": "안과",
+      "external_id": "BRMH-534",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤은유",
+      "department": "안과",
+      "external_id": "BRMH-525",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "안과",
+      "external_id": "BRMH-387",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이시욱",
+      "department": "재활의학과",
+      "external_id": "BRMH-275",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정세희",
+      "department": "재활의학과",
+      "external_id": "BRMH-277",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박명우",
+      "department": "재활의학과",
+      "external_id": "BRMH-516",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "재활의학과",
+      "external_id": "BRMH-280",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정희연",
+      "department": "정신건강의학과",
+      "external_id": "BRMH-283",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준영",
+      "department": "정신건강의학과",
+      "external_id": "BRMH-286",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유소영",
+      "department": "정신건강의학과",
+      "external_id": "BRMH-401",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전소연",
+      "department": "정신건강의학과",
+      "external_id": "BRMH-515",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노경진",
+      "department": "정신건강의학과",
+      "external_id": "BRMH-458",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신지윤",
+      "department": "정신건강의학과",
+      "external_id": "BRMH-506",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "정신건강의학과",
+      "external_id": "BRMH-300",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효진",
+      "department": "중환자진료부",
+      "external_id": "BRMH-315",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서경석",
+      "department": "외과",
+      "external_id": "BRMH-421",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인목",
+      "department": "외과",
+      "external_id": "BRMH-201",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허승철",
+      "department": "외과",
+      "external_id": "BRMH-204",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황기태",
+      "department": "외과",
+      "external_id": "BRMH-209",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임창섭",
+      "department": "외과",
+      "external_id": "BRMH-212",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안혜성",
+      "department": "외과",
+      "external_id": "BRMH-215",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한동석",
+      "department": "외과",
+      "external_id": "BRMH-218",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채영준",
+      "department": "외과",
+      "external_id": "BRMH-220",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신루미",
+      "department": "외과",
+      "external_id": "BRMH-223",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤경철",
+      "department": "외과",
+      "external_id": "BRMH-226",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤중기",
+      "department": "외과",
+      "external_id": "BRMH-521",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천종호",
+      "department": "외과",
+      "external_id": "BRMH-408",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진선",
+      "department": "외과",
+      "external_id": "BRMH-439",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은아",
+      "department": "외과",
+      "external_id": "BRMH-517",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오문영",
+      "department": "외과",
+      "external_id": "BRMH-537",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤원건",
+      "department": "외과",
+      "external_id": "BRMH-509",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영호",
+      "department": "이비인후과",
+      "external_id": "BRMH-250",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권택균",
+      "department": "이비인후과",
+      "external_id": "BRMH-261",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민현",
+      "department": "이비인후과",
+      "external_id": "BRMH-266",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대우",
+      "department": "이비인후과",
+      "external_id": "BRMH-267",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍승노",
+      "department": "이비인후과",
+      "external_id": "BRMH-271",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남동우",
+      "department": "이비인후과",
+      "external_id": "BRMH-545",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허진",
+      "department": "이비인후과",
+      "external_id": "BRMH-551",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진아",
+      "department": "이비인후과",
+      "external_id": "BRMH-457",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사(두경부)",
+      "department": "이비인후과",
+      "external_id": "BRMH-538",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반",
+      "department": "이비인후과",
+      "external_id": "BRMH-274",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재협",
+      "department": "정형외과",
+      "external_id": "BRMH-182",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조현철",
+      "department": "정형외과",
+      "external_id": "BRMH-185",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장문종",
+      "department": "정형외과",
+      "external_id": "BRMH-190",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태우",
+      "department": "정형외과",
+      "external_id": "BRMH-193",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배기정",
+      "department": "정형외과",
+      "external_id": "BRMH-196",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승준",
+      "department": "정형외과",
+      "external_id": "BRMH-197",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선형",
+      "department": "정형외과",
+      "external_id": "BRMH-440",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이요한",
+      "department": "정형외과",
+      "external_id": "BRMH-202",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조민준",
+      "department": "정형외과",
+      "external_id": "BRMH-205",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강태훈",
+      "department": "정형외과",
+      "external_id": "BRMH-466",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지수",
+      "department": "정형외과",
+      "external_id": "BRMH-478",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사",
+      "department": "정형외과",
+      "external_id": "BRMH-208",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조소연",
+      "department": "피부과",
+      "external_id": "BRMH-257",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지수",
+      "department": "피부과",
+      "external_id": "BRMH-508",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심혜영",
+      "department": "치과",
+      "external_id": "BRMH-244",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호",
+      "department": "치과",
+      "external_id": "BRMH-249",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한윤식",
+      "department": "치과",
+      "external_id": "BRMH-251",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유진",
+      "department": "치과",
+      "external_id": "BRMH-427",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "치과신환",
+      "department": "치과",
+      "external_id": "BRMH-464",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유경",
+      "department": "핵의학과",
+      "external_id": "BRMH-282",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오소원",
+      "department": "핵의학과",
+      "external_id": "BRMH-285",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최인실",
+      "department": "혈액종양내과",
+      "external_id": "BRMH-288",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진수",
+      "department": "혈액종양내과",
+      "external_id": "BRMH-292",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기환",
+      "department": "혈액종양내과",
+      "external_id": "BRMH-296",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진현",
+      "department": "혈액종양내과",
+      "external_id": "BRMH-299",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박송이",
+      "department": "혈액종양내과",
+      "external_id": "BRMH-480",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권소연",
+      "department": "혈액종양내과",
+      "external_id": "BRMH-500",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김덕겸",
+      "department": "호흡기내과",
+      "external_id": "BRMH-306",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허은영",
+      "department": "호흡기내과",
+      "external_id": "BRMH-308",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정규",
+      "department": "호흡기내과",
+      "external_id": "BRMH-310",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현우",
+      "department": "호흡기내과",
+      "external_id": "BRMH-314",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박희문",
+      "department": "호흡기내과",
+      "external_id": "BRMH-436",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "형권형",
+      "department": "호흡기내과",
+      "external_id": "BRMH-499",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사",
+      "department": "호흡기내과",
+      "external_id": "BRMH-437",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}
