@@ -10,7 +10,7 @@ import Memos from './pages/Memos';
 import NotificationPanel from './components/NotificationPanel';
 
 const NAV = [
-  { id: 'dashboard', label: '대시보드', icon: LayoutDashboard },
+  { id: 'dashboard', label: '일정 확인', icon: LayoutDashboard },
   { id: 'schedule', label: '월간 일정', icon: CalendarDays },
   { id: 'my-doctors', label: '내 교수', icon: Star },
   { id: 'memos', label: '메모/회의록', icon: FileText },
@@ -116,7 +116,7 @@ export default function App() {
               </button>
             )}
             <h2 style={{ fontFamily: 'Manrope', fontSize: 17, fontWeight: 700, letterSpacing: '-.02em', color: 'var(--t1)' }}>
-              {NAV.find(n => n.id === page)?.label || '대시보드'}
+              {NAV.find(n => n.id === page)?.label || '일정 확인'}
             </h2>
           </div>
           <button onClick={() => { setNotifOpen(true); loadNotifs(); }} style={{
@@ -130,7 +130,7 @@ export default function App() {
         </header>
         <div style={{ padding: isMobile ? '12px 10px' : '20px 24px' }}>
           {page === 'dashboard' && <Dashboard onNavigate={navTo} />}
-          {page === 'schedule' && <Schedule />}
+          {page === 'schedule' && <Schedule onNavigate={navTo} />}
           {page === 'my-doctors' && <MyDoctors onNavigate={navTo} initialDoctorId={pageProps.doctorId} />}
           {page === 'memos' && <Memos initialFilters={pageProps.filters || {}} />}
           {page === 'browse' && <BrowseDoctors onNavigate={navTo} />}
@@ -138,7 +138,7 @@ export default function App() {
         </div>
       </main>
 
-      <NotificationPanel open={notifOpen} onClose={() => setNotifOpen(false)} notifications={notifications} onRefresh={loadNotifs} />
+      <NotificationPanel open={notifOpen} onClose={() => setNotifOpen(false)} notifications={notifications} onRefresh={loadNotifs} onNavigate={navTo} />
     </div>
   );
 }

@@ -1,4 +1,6 @@
 """의료진/교수 관리 API"""
+import uuid
+from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
@@ -7,10 +9,52 @@ from app.models.connection import get_db
 from app.models.database import Doctor, Hospital, DoctorSchedule, DoctorDateSchedule, VisitLog
 from app.schemas.schemas import (
     DoctorBase, DoctorResponse, DoctorWithSchedule,
+    DoctorUpdate, DoctorScheduleCreate, DoctorDateScheduleCreate,
     VisitLogCreate, VisitLogResponse,
 )
 
 router = APIRouter(prefix="/api/doctors", tags=["의료진 관리"])
+
+
+# 슬롯 → 기본 시간 매핑 (사용자 입력 누락 시 폴백)
+_SLOT_DEFAULT_TIMES = {
+    "morning": ("09:00", "12:00"),
+    "afternoon": ("13:00", "17:00"),
+    "evening": ("18:00", "21:00"),
+}
+
+
+def _doctor_to_response_dict(doctor: Doctor, *, hospital_name: str | None = None) -> dict:
+    """Doctor → DoctorResponse dict + hospital_name + linked record 정보 합성.
+
+    linked_doctor 가 selectinload 으로 로딩되어 있을 때만 linked 정보를 채움.
+    로딩 안 된 경우 추가 쿼리는 하지 않음 (N+1 회피).
+    """
+    base = DoctorResponse.model_validate(doctor).model_dump()
+    base["hospital_name"] = hospital_name if hospital_name is not None else (
+        doctor.hospital.name if doctor.hospital else None
+    )
+
+    # linked_doctor 가 있고 이미 로딩됐으면 정보 합성
+    linked = None
+    try:
+        linked = doctor.linked_doctor  # relationship lazy access
+    except Exception:
+        linked = None
+    if linked is not None:
+        base["linked_doctor_name"] = linked.name
+        base["linked_doctor_department"] = linked.department
+        try:
+            base["linked_hospital_name"] = linked.hospital.name if linked.hospital else None
+        except Exception:
+            base["linked_hospital_name"] = None
+        base["linked_doctor_is_active"] = bool(linked.is_active)
+    else:
+        base["linked_doctor_name"] = None
+        base["linked_doctor_department"] = None
+        base["linked_hospital_name"] = None
+        base["linked_doctor_is_active"] = None
+    return base
 
 
 @router.get("/", summary="의료진 목록")
@@ -19,11 +63,25 @@ async def list_doctors(
     department: str = None,
     visit_grade: str = None,
     my_only: bool = False,
+    status: str = "active",  # "active" (기본) | "inactive" | "all"
     db: AsyncSession = Depends(get_db),
 ):
     """등록된 의료진 목록을 조회합니다.
-    my_only=true: 내 교수만 (visit_grade A/B)"""
-    query = select(Doctor).options(selectinload(Doctor.hospital)).where(Doctor.is_active == True)
+
+    - my_only=true: 내 교수만 (visit_grade A/B)
+    - status='active': 활성 의사만 (기본). 비활성 의사 잘못 클릭 등으로 보였으면 안 됨.
+    - status='inactive': 이직/퇴직 처리된 의사만 (복원 UI 용).
+    - status='all': 모두 (관리자 시나리오).
+    """
+    query = select(Doctor).options(
+        selectinload(Doctor.hospital),
+        selectinload(Doctor.linked_doctor).selectinload(Doctor.hospital),
+    )
+    if status == "active":
+        query = query.where(Doctor.is_active == True)
+    elif status == "inactive":
+        query = query.where(Doctor.is_active == False)
+    # status == "all" 이면 필터 없음
     if my_only:
         query = query.where(Doctor.visit_grade.in_(["A", "B"]))
     if hospital_id:
@@ -35,13 +93,7 @@ async def list_doctors(
 
     result = await db.execute(query)
     doctors = result.scalars().all()
-    return [
-        {
-            **DoctorResponse.model_validate(d).model_dump(),
-            "hospital_name": d.hospital.name if d.hospital else None,
-        }
-        for d in doctors
-    ]
+    return [_doctor_to_response_dict(d) for d in doctors]
 
 
 @router.get("/{doctor_id}", summary="의료진 상세 (일정 포함)")
@@ -53,6 +105,7 @@ async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
             selectinload(Doctor.schedules),
             selectinload(Doctor.date_schedules),
             selectinload(Doctor.hospital),
+            selectinload(Doctor.linked_doctor).selectinload(Doctor.hospital),
         )
         .where(Doctor.id == doctor_id)
     )
@@ -62,7 +115,6 @@ async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=404, detail="의료진을 찾을 수 없습니다.")
 
     # 날짜별 스케줄: 오늘 이후만
-    from datetime import datetime
     today_str = datetime.now().strftime("%Y-%m-%d")
     date_scheds = [
         {"id": ds.id, "schedule_date": ds.schedule_date, "time_slot": ds.time_slot,
@@ -73,18 +125,22 @@ async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
     ]
     date_scheds.sort(key=lambda x: (x["schedule_date"], x["time_slot"]))
 
-    return {
-        **DoctorResponse.model_validate(doctor).model_dump(),
-        "schedules": [s.__dict__ for s in doctor.schedules if s.is_active],
-        "date_schedules": date_scheds,
-        "hospital_name": doctor.hospital.name if doctor.hospital else None,
-    }
+    response = _doctor_to_response_dict(doctor)
+    response["schedules"] = [s.__dict__ for s in doctor.schedules if s.is_active]
+    response["date_schedules"] = date_scheds
+    return response
 
 
 @router.post("/", summary="의료진 등록", response_model=DoctorResponse)
 async def create_doctor(data: DoctorBase, db: AsyncSession = Depends(get_db)):
-    """담당 의료진을 등록합니다."""
-    doctor = Doctor(**data.model_dump())
+    """담당 의료진을 등록합니다. source 미지정 시 'manual' 기본,
+    external_id 미지정 시 MANUAL-{8자리} 자동 발급."""
+    payload = data.model_dump(exclude_unset=True)
+    if not payload.get("source"):
+        payload["source"] = "manual"
+    if payload["source"] == "manual" and not payload.get("external_id"):
+        payload["external_id"] = f"MANUAL-{uuid.uuid4().hex[:8].upper()}"
+    doctor = Doctor(**payload)
     db.add(doctor)
     await db.commit()
     await db.refresh(doctor)
@@ -95,21 +151,181 @@ async def create_doctor(data: DoctorBase, db: AsyncSession = Depends(get_db)):
 async def update_doctor(
     doctor_id: int, data: dict, db: AsyncSession = Depends(get_db)
 ):
-    """의료진 정보를 수정합니다 (방문등급, 메모 등)."""
+    """의료진 정보를 수정합니다 (방문등급, 메모, 비활성화 사유 등).
+
+    is_active=False 로 전환 시 deactivated_at 자동 설정,
+    deactivated_reason 같이 보내면 함께 저장 ('transferred' | 'retired' | 'mistake' 등).
+    True 로 복귀 시 deactivated_* 자동 클리어.
+    """
     query = select(Doctor).where(Doctor.id == doctor_id)
     result = await db.execute(query)
     doctor = result.scalar_one_or_none()
     if not doctor:
         raise HTTPException(status_code=404, detail="의료진을 찾을 수 없습니다.")
 
-    allowed_fields = {"visit_grade", "memo", "is_active", "department", "position"}
+    allowed_fields = {
+        "visit_grade", "memo", "is_active", "department", "position",
+        "deactivated_reason", "linked_doctor_id",
+    }
+    was_active = doctor.is_active
+    old_link_id = doctor.linked_doctor_id
+    new_link_id_in_payload = "linked_doctor_id" in data
+
     for key, value in data.items():
         if key in allowed_fields:
             setattr(doctor, key, value)
 
+    # is_active 전환에 따라 deactivated_* 자동 관리
+    if was_active and doctor.is_active is False:
+        doctor.deactivated_at = datetime.utcnow()
+        if not doctor.deactivated_reason:
+            doctor.deactivated_reason = "manual"
+    elif doctor.is_active is True:
+        doctor.deactivated_at = None
+        doctor.deactivated_reason = None
+
+    # linked_doctor_id 양방향 처리:
+    # - 새 상대 record 도 자기를 가리키게 set (이미 가리키고 있으면 그대로)
+    # - 옛 상대 record 가 자기를 가리키고 있었으면 unset
+    if new_link_id_in_payload:
+        new_link_id = doctor.linked_doctor_id
+        if old_link_id and old_link_id != new_link_id:
+            old_target = (await db.execute(
+                select(Doctor).where(Doctor.id == old_link_id)
+            )).scalar_one_or_none()
+            if old_target and old_target.linked_doctor_id == doctor.id:
+                old_target.linked_doctor_id = None
+        if new_link_id and new_link_id != doctor.id:
+            new_target = (await db.execute(
+                select(Doctor).where(Doctor.id == new_link_id)
+            )).scalar_one_or_none()
+            if new_target and new_target.linked_doctor_id != doctor.id:
+                new_target.linked_doctor_id = doctor.id
+
     await db.commit()
     await db.refresh(doctor)
     return DoctorResponse.model_validate(doctor)
+
+
+# ─── 수동 진료 일정 입력 ───
+@router.post("/{doctor_id}/schedules", summary="진료시간(주간) 수동 입력 — 기존 수동 일정 대체")
+async def replace_manual_schedules(
+    doctor_id: int,
+    items: list[DoctorScheduleCreate],
+    db: AsyncSession = Depends(get_db),
+):
+    """수동 입력 주간 진료시간. 기존 source='manual' 행은 모두 교체.
+    크롤러가 등록한 행(source='crawler')은 건드리지 않는다.
+    """
+    doctor = (await db.execute(select(Doctor).where(Doctor.id == doctor_id))).scalar_one_or_none()
+    if not doctor:
+        raise HTTPException(404, "의료진을 찾을 수 없습니다.")
+
+    # 기존 수동 행 삭제
+    existing = (await db.execute(
+        select(DoctorSchedule).where(
+            DoctorSchedule.doctor_id == doctor_id,
+            DoctorSchedule.source == "manual",
+        )
+    )).scalars().all()
+    for row in existing:
+        await db.delete(row)
+
+    saved: list[DoctorSchedule] = []
+    for it in items:
+        start = it.start_time
+        end = it.end_time
+        if not start or not end:
+            d_start, d_end = _SLOT_DEFAULT_TIMES.get(it.time_slot, ("", ""))
+            start = start or d_start
+            end = end or d_end
+        row = DoctorSchedule(
+            doctor_id=doctor_id,
+            day_of_week=it.day_of_week,
+            time_slot=it.time_slot,
+            start_time=start,
+            end_time=end,
+            location=it.location or "",
+            source="manual",
+            crawled_at=datetime.utcnow(),
+        )
+        db.add(row)
+        saved.append(row)
+
+    await db.commit()
+    return {"replaced": len(existing), "saved": len(saved)}
+
+
+@router.post("/{doctor_id}/date-schedules", summary="날짜별 진료시간 수동 입력 — 같은 날짜 수동 행 대체")
+async def add_manual_date_schedules(
+    doctor_id: int,
+    items: list[DoctorDateScheduleCreate],
+    db: AsyncSession = Depends(get_db),
+):
+    """특정 날짜의 진료시간을 수동 추가. 같은 날짜의 source='manual' 기존 행은 교체."""
+    doctor = (await db.execute(select(Doctor).where(Doctor.id == doctor_id))).scalar_one_or_none()
+    if not doctor:
+        raise HTTPException(404, "의료진을 찾을 수 없습니다.")
+
+    target_dates = {it.schedule_date for it in items}
+
+    # 같은 날짜의 기존 manual 행 삭제
+    existing = (await db.execute(
+        select(DoctorDateSchedule).where(
+            DoctorDateSchedule.doctor_id == doctor_id,
+            DoctorDateSchedule.source == "manual",
+            DoctorDateSchedule.schedule_date.in_(target_dates),
+        )
+    )).scalars().all()
+    for row in existing:
+        await db.delete(row)
+
+    saved: list[DoctorDateSchedule] = []
+    for it in items:
+        start = it.start_time
+        end = it.end_time
+        if not start or not end:
+            d_start, d_end = _SLOT_DEFAULT_TIMES.get(it.time_slot, ("", ""))
+            start = start or d_start
+            end = end or d_end
+        row = DoctorDateSchedule(
+            doctor_id=doctor_id,
+            schedule_date=it.schedule_date,
+            time_slot=it.time_slot,
+            start_time=start,
+            end_time=end,
+            location=it.location or "",
+            status=it.status or "진료",
+            source="manual",
+            crawled_at=datetime.utcnow(),
+        )
+        db.add(row)
+        saved.append(row)
+
+    await db.commit()
+    return {"replaced": len(existing), "saved": len(saved)}
+
+
+@router.delete("/{doctor_id}/schedules/{schedule_id}", summary="수동 진료시간 행 삭제")
+async def delete_manual_schedule(
+    doctor_id: int,
+    schedule_id: int,
+    db: AsyncSession = Depends(get_db),
+):
+    """수동(source='manual') 진료시간 행만 삭제 가능. 크롤러 행은 보호."""
+    row = (await db.execute(
+        select(DoctorSchedule).where(
+            DoctorSchedule.id == schedule_id,
+            DoctorSchedule.doctor_id == doctor_id,
+        )
+    )).scalar_one_or_none()
+    if not row:
+        raise HTTPException(404, "진료시간을 찾을 수 없습니다.")
+    if row.source != "manual":
+        raise HTTPException(400, "크롤러로 수집된 진료시간은 삭제할 수 없습니다.")
+    await db.delete(row)
+    await db.commit()
+    return {"deleted": schedule_id}
 
 
 # --- 방문 기록 ---
@@ -117,8 +333,21 @@ async def update_doctor(
 async def create_visit_log(
     doctor_id: int, data: VisitLogCreate, db: AsyncSession = Depends(get_db)
 ):
-    """방문 기록을 등록합니다."""
-    visit = VisitLog(doctor_id=doctor_id, **data.model_dump(exclude={"doctor_id"}))
+    """방문 기록을 등록합니다. doctor/hospital snapshot 도 함께 저장."""
+    # 의사·병원 정보 로드 (snapshot 용)
+    doctor = (await db.execute(
+        select(Doctor).options(selectinload(Doctor.hospital)).where(Doctor.id == doctor_id)
+    )).scalar_one_or_none()
+    if not doctor:
+        raise HTTPException(404, "의료진을 찾을 수 없습니다.")
+
+    visit = VisitLog(
+        doctor_id=doctor_id,
+        **data.model_dump(exclude={"doctor_id"}),
+        doctor_name_snapshot=doctor.name,
+        doctor_dept_snapshot=doctor.department,
+        hospital_name_snapshot=doctor.hospital.name if doctor.hospital else None,
+    )
     db.add(visit)
     await db.commit()
     await db.refresh(visit)
@@ -151,13 +380,12 @@ async def update_visit_log(
     if not visit:
         raise HTTPException(404, "방문 기록을 찾을 수 없습니다.")
 
-    allowed = {"status", "product", "notes", "next_action", "visit_date"}
+    allowed = {"status", "product", "notes", "post_notes", "next_action", "visit_date"}
     for key, value in data.items():
         if key not in allowed:
             continue
         if key == "visit_date" and isinstance(value, str):
-            from datetime import datetime as _dt
-            value = _dt.fromisoformat(value.replace("Z", "+00:00"))
+            value = datetime.fromisoformat(value.replace("Z", "+00:00"))
         setattr(visit, key, value)
 
     await db.commit()

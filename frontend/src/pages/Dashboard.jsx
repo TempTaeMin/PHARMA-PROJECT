@@ -3,10 +3,14 @@ import { Plus, X, Sparkles, RefreshCw } from 'lucide-react';
 import DailySchedule from '../components/DailySchedule';
 import AddEventBottomSheet from '../components/AddEventBottomSheet';
 import SelectDoctorForMeeting from '../components/SelectDoctorForMeeting';
+import SelectVisitDate from '../components/SelectVisitDate';
 import DoctorScheduleHintPopup from '../components/DoctorScheduleHintPopup';
 import SelectMeetingTime from '../components/SelectMeetingTime';
 import VisitDetailModal from '../components/VisitDetailModal';
 import PersonalEventEditor from '../components/PersonalEventEditor';
+import AcademicEventCreateModal from '../components/AcademicEventCreateModal';
+import WorkTypeChooser from '../components/WorkTypeChooser';
+import WorkAnnouncementEditor from '../components/WorkAnnouncementEditor';
 import { useMonthCalendar } from '../hooks/useMonthCalendar';
 import { memoApi, visitApi } from '../api/client';
 
@@ -22,9 +26,12 @@ export default function Dashboard({ onNavigate }) {
   const [view, setView] = useState({ year: now.getFullYear(), month: now.getMonth() });
 
   // ─ 일정 추가 플로우 state ─
-  // null | 'category' | 'select-doctor' | 'hint-popup' | 'select-time'
+  // null | 'category' | 'select-doctor' | 'select-date' | 'hint-popup' | 'select-time'
   const [flowStep, setFlowStep] = useState(null);
   const [flowDoctor, setFlowDoctor] = useState(null);
+  // 일정 추가 흐름에서 사용할 방문 날짜. 기본값은 일정확인에서 선택한 날짜이지만
+  // SelectVisitDate 모달에서 사용자가 변경 가능.
+  const [flowDate, setFlowDate] = useState(null);
 
   // ─ 방문 완료 처리 state ─
   const [completing, setCompleting] = useState(null);
@@ -66,8 +73,15 @@ export default function Dashboard({ onNavigate }) {
     if (key === 'professor') {
       setFlowStep('select-doctor');
     } else if (key === 'personal') {
-      setFlowStep('personal-event');
+      setFlowStep('personal-type');
+    } else if (key === 'etc') {
+      setFlowStep('academic-event');
     }
+  };
+
+  const handleSelectPersonalType = (type) => {
+    if (type === 'event') setFlowStep('personal-event');
+    else if (type === 'announcement') setFlowStep('work-announcement');
   };
 
   const handleSubmitPersonal = async ({ dateStr, timeHHMM, title, notes }) => {
@@ -78,8 +92,22 @@ export default function Dashboard({ onNavigate }) {
     closeFlow();
   };
 
+  const handleSubmitAnnouncement = async ({ dateStr, title, content }) => {
+    const dt = `${dateStr}T00:00:00`;
+    await visitApi.createAnnouncement({ visit_date: dt, title, notes: content });
+    refresh();
+    handleSelectDate(dateStr);
+    closeFlow();
+  };
+
   const handlePickDoctor = (doctor) => {
     setFlowDoctor(doctor);
+    setFlowDate(selected); // 일정확인에서 선택한 날짜를 기본값으로
+    setFlowStep('select-date');
+  };
+
+  const handleConfirmDate = (dateStr) => {
+    setFlowDate(dateStr);
     setFlowStep('hint-popup');
   };
 
@@ -97,15 +125,16 @@ export default function Dashboard({ onNavigate }) {
   const closeFlow = () => {
     setFlowStep(null);
     setFlowDoctor(null);
+    setFlowDate(null);
   };
 
   // ─ 완료/취소 액션 ─
   const openComplete = (visit) => {
     setCompleting(visit);
     setCompleteStatus('');
-    setRawMemo(visit.notes || '');
-    setMemoId(null);
-    setAiResult(null);
+    setRawMemo(visit.post_notes || '');
+    setMemoId(visit.memo_id || null);
+    setAiResult(visit.ai_summary || null);
     setAiError(null);
   };
 
@@ -121,10 +150,10 @@ export default function Dashboard({ onNavigate }) {
   const submitComplete = async () => {
     if (!completeStatus || !completing) return;
     try {
-      // 1) visit_logs 상태/메모 업데이트 (raw_memo를 notes에도 미러링)
+      // 1) visit_logs 상태/사후 메모 업데이트. 사전 메모(notes)는 보존.
       await actions.updateVisit(completing, {
         status: completeStatus,
-        notes: rawMemo || null,
+        post_notes: rawMemo || null,
       });
       // 2) 메모가 아직 저장 전이면 원본만이라도 저장 (AI 정리는 선택)
       if (!memoId && rawMemo.trim()) {
@@ -262,26 +291,50 @@ export default function Dashboard({ onNavigate }) {
         onBack={closeFlow}
         onSelect={handlePickDoctor}
       />
+      <SelectVisitDate
+        open={flowStep === 'select-date'}
+        doctor={flowDoctor}
+        initialDate={flowDate || selected}
+        onBack={() => setFlowStep('select-doctor')}
+        onConfirm={handleConfirmDate}
+      />
       <DoctorScheduleHintPopup
         open={flowStep === 'hint-popup'}
         doctor={flowDoctor}
-        selectedDate={selected}
-        onClose={() => setFlowStep('select-doctor')}
+        selectedDate={flowDate || selected}
+        onClose={() => setFlowStep('select-date')}
         onConfirm={handleConfirmHint}
       />
       <SelectMeetingTime
         open={flowStep === 'select-time'}
         doctor={flowDoctor}
-        initialDate={selected}
+        initialDate={flowDate || selected}
         todayStr={todayStr}
         onBack={() => setFlowStep('hint-popup')}
         onConfirm={handleConfirmTime}
+      />
+      <WorkTypeChooser
+        open={flowStep === 'personal-type'}
+        onClose={closeFlow}
+        onSelect={handleSelectPersonalType}
       />
       <PersonalEventEditor
         open={flowStep === 'personal-event'}
         initialDate={selected}
         onClose={closeFlow}
         onSubmit={handleSubmitPersonal}
+      />
+      <WorkAnnouncementEditor
+        open={flowStep === 'work-announcement'}
+        initialDate={selected}
+        onClose={closeFlow}
+        onSubmit={handleSubmitAnnouncement}
+      />
+      <AcademicEventCreateModal
+        open={flowStep === 'academic-event'}
+        initialDate={selected}
+        onClose={closeFlow}
+        onCreated={() => { refresh(); }}
       />
 
       {/* ── Visit Detail / Edit Modal ── */}
@@ -339,12 +392,30 @@ export default function Dashboard({ onNavigate }) {
               ))}
             </div>
 
+            {completing.notes && (
+              <div style={{
+                marginBottom: 12,
+                padding: '10px 12px', borderRadius: 8,
+                background: 'var(--bg-2)', border: '1px dashed var(--bd-s)',
+              }}>
+                <div style={{
+                  fontSize: 10, fontWeight: 800, letterSpacing: '.06em',
+                  color: 'var(--t3)', marginBottom: 4, fontFamily: 'Manrope',
+                }}>
+                  사전 메모 (방문 전 작성)
+                </div>
+                <div style={{ fontSize: 12, color: 'var(--t2)', lineHeight: 1.5, whiteSpace: 'pre-wrap' }}>
+                  {completing.notes}
+                </div>
+              </div>
+            )}
+
             <div style={{
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               marginBottom: 6,
             }}>
               <label style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 600 }}>
-                원본 메모 <span style={{ color: 'var(--t4, #9ca3af)', fontWeight: 500 }}>· 자유 입력</span>
+                결과 메모 <span style={{ color: 'var(--t4, #9ca3af)', fontWeight: 500 }}>· 자유 입력</span>
               </label>
               <button
                 onClick={handleAiOrganize}

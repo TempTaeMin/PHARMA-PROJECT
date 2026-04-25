@@ -167,7 +167,7 @@ async def my_visits(
         .where(
             or_(
                 Doctor.visit_grade.in_(["A", "B", "C"]),
-                VisitLog.category == "personal",
+                VisitLog.category.in_(["personal", "announcement"]),
             ),
             VisitLog.visit_date >= start,
             VisitLog.visit_date <= end,
@@ -198,8 +198,10 @@ async def my_visits(
             "status": v.status,
             "product": v.product,
             "notes": v.notes,
+            "post_notes": v.post_notes,
             "next_action": v.next_action,
             "ai_summary": _parse_ai(m.ai_summary) if m else None,
+            "memo_id": m.id if m else None,
         }
         for v, d, h, m in rows
     ]

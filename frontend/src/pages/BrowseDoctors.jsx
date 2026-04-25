@@ -285,8 +285,14 @@ export default function BrowseDoctors({ onNavigate }) {
     !hospitalSearchQ || h.name?.includes(hospitalSearchQ) || h.code?.toLowerCase().includes(hospitalSearchQ.toLowerCase())
   );
 
-  // 지역별 그룹핑
-  const REGION_ORDER = ['서울', '경기', '인천'];
+  // 지역별 그룹핑 — 광역시도 전체 (factory.py _HOSPITAL_REGION 의 모든 값 포함)
+  const REGION_ORDER = [
+    '서울', '경기', '인천',
+    '강원', '충북', '충남', '대전', '세종',
+    '전북', '전남', '광주',
+    '경북', '경남', '대구', '울산', '부산',
+    '제주',
+  ];
   const groupedHospitals = {};
   REGION_ORDER.forEach(r => { groupedHospitals[r] = []; });
   filteredHospitals.forEach(h => {

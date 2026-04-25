@@ -356,32 +356,48 @@ function TimelineRow({ item, isNextUp, onComplete, onCancel, onOpenDetail }) {
 
 function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail }) {
   const isPlanned = visit.status === '예정';
-  const isPersonal = visit.category === 'personal' || !visit.doctor_name;
+  const isAnnouncement = visit.category === 'announcement';
+  const isPersonal = visit.category === 'personal' || (!visit.doctor_name && !isAnnouncement);
+  const cardBorder = isAnnouncement
+    ? '#fde68a'
+    : (isNextUp ? theme.accent : 'var(--bd-s)');
+  const cardBg = isAnnouncement ? '#fffbeb' : 'var(--bg-1)';
+  const badgeLabel = isAnnouncement
+    ? 'NOTICE'
+    : (isPersonal ? '업무' : (isNextUp ? 'NEXT UP' : theme.label));
+  const badgeBg = isAnnouncement
+    ? '#fef3c7'
+    : (isPersonal ? 'var(--ac-d)' : (isNextUp ? '#0369a1' : theme.bg));
+  const badgeColor = isAnnouncement
+    ? '#b45309'
+    : (isPersonal ? 'var(--ac)' : (isNextUp ? '#fff' : theme.c));
   return (
     <div
-      onClick={() => !isPersonal && onOpenDetail?.(visit)}
+      onClick={() => onOpenDetail?.(visit)}
       style={{
         padding: '12px 14px', borderRadius: 12,
-        background: 'var(--bg-1)',
-        border: `1px solid ${isNextUp ? theme.accent : 'var(--bd-s)'}`,
+        background: cardBg,
+        border: `1px solid ${cardBorder}`,
         boxShadow: isNextUp ? `0 4px 14px ${theme.accent}22` : '0 1px 4px rgba(0,0,0,.03)',
-        cursor: isPersonal ? 'default' : 'pointer',
+        cursor: 'pointer',
       }}
     >
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
         <span style={{
           padding: '2px 7px', borderRadius: 5,
           fontSize: 9, fontWeight: 800, letterSpacing: '.05em',
-          background: isPersonal ? 'var(--ac-d)' : (isNextUp ? '#0369a1' : theme.bg),
-          color: isPersonal ? 'var(--ac)' : (isNextUp ? '#fff' : theme.c),
+          background: badgeBg,
+          color: badgeColor,
           fontFamily: "'Manrope'",
         }}>
-          {isPersonal ? 'PERSONAL' : (isNextUp ? 'NEXT UP' : theme.label)}
+          {badgeLabel}
         </span>
-        {!isPersonal && isNextUp && <span style={{ fontSize: 10, color: '#b91c1c', fontWeight: 700 }}>곧 시작</span>}
+        {!isPersonal && !isAnnouncement && isNextUp && <span style={{ fontSize: 10, color: '#b91c1c', fontWeight: 700 }}>곧 시작</span>}
       </div>
       <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--t1)', marginBottom: 3 }}>
-        {isPersonal ? (visit.title || '내 일정') : visit.doctor_name}
+        {isAnnouncement
+          ? (visit.title || '업무공지')
+          : (isPersonal ? (visit.title || '내 일정') : visit.doctor_name)}
       </div>
       {!isPersonal && (
         <div style={{ fontSize: 11, color: 'var(--t3)' }}>
@@ -417,7 +433,7 @@ function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail 
           </div>
         );
       })()}
-      {isPlanned && !isPersonal && (
+      {isPlanned && !isPersonal && !isAnnouncement && (
         <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
           <button
             onClick={(e) => { e.stopPropagation(); onComplete?.(visit); }}

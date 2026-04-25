@@ -20,6 +20,164 @@
 
 ---
 
+## 2026-04-26 세션(2) — UX 보강: 일정 흐름 / 학회 필터 / 비활성·복원 / 이직 매칭 / 탐색 수리
+
+### 배경
+의사 라이프사이클 1~3단계 구현(같은 날 1차 세션) 직후 사용자 피드백을 빠르게 흡수해 5월 검증 전 UX 빈틈을 메움. 7개 작은~중간 단위 변경이 한 세션에서 묶여 들어감.
+
+### 변경 내역
+
+#### 1. 일정 추가 흐름에 날짜 변경 단계 추가
+- 일정확인 → + → 내 의료진 방문 → 의사 선택 → **★ 날짜 선택(신규 SelectVisitDate)** → 진료시간표 참고 → 시간 선택
+- `Dashboard.flowStep` 에 `'select-date'` 단계 추가, `flowDate` state 도입 (초기값 `selected`).
+- 신규 `frontend/src/components/SelectVisitDate.jsx`: 월간 캘린더, 의사의 정규 진료 요일 점 표시, 휴진/특이일 색상 구분, 4가지 안내 메시지.
+- `DoctorScheduleHintPopup.jsx` 헤더 아래 **"선택한 방문일" 박스** 추가 + `[변경]` 버튼 (정상 진료일 파란색, 비정기/휴진 주황색). `onClose` 가 자동으로 캘린더 단계로 복귀.
+
+#### 2. 학회 화면 기간 필터 확장 + 과거 Pin 가드
+- `Conferences.jsx`: `MONTH_OPTIONS=[3,6,12]` → `RANGE_PRESETS` (지난 1년 / 지난 3개월 / **앞으로 3개월(기본)** / 앞으로 6개월 / 직접 선택).
+- state `months:int` → `range:{presetKey, from, to}`. `useCachedApi` 키 통합 `academic-range:${from}:${to}`. `academicApi.list({ start_from, start_to })` 단일 사용 (백엔드 그대로).
+- 직접 선택 시 `<input type="date" />` 두 개 inline.
+- 백엔드 `POST /academic-events/{id}/pin` 에 `start_date < today AND not is_pinned` 차단 (HTTP 400 "이미 종료된 학회는 새로 등록할 수 없습니다").
+- `AcademicEventModal.jsx` 의 pin 버튼: 과거 학회면 disabled + "이미 종료된 학회 (등록 불가)" 라벨 + 안내 캡션. 이미 pinned 인 과거 학회는 unpin 정상 노출.
+
+#### 3. 비활성/복원 UI
+- `GET /api/doctors/?status=active|inactive|all` 파라미터 추가.
+- `MyDoctors.jsx` 헤더에 `📁 비활성/이직·퇴직 보기` 토글. 비활성 view 진입 시 안내 박스 + 카드별 사유 뱃지(이직/퇴직/오인 등록/auto-missing) + 처리일 + `↩ 복원` 버튼. 복원 시 `is_active=true` 로 PATCH (백엔드 `deactivated_*` 자동 클리어).
+- `useCachedApi` 키 `my-doctors:${view}` 로 분리 (prefix invalidate 호환).
+
+#### 4. 이직 후보 자동 매칭 알림
+- `factory.py` 에 `_HOSPITAL_GROUPS` 재단/네트워크 매핑 (KU/CMC/HALLYM/EUMC/HYUMC/PAIK/SCH/SAMSUNG/ASAN/SEVERANCE/CHA/CAU/JNUH/KNUH/PNUH/WKUH 16개) + `get_hospital_group(code)`.
+- `crawl_service.detect_transfer_candidate(db, new_doctor)` — 신규 등록 의사 ↔ 같은 이름+같은 진료과+다른 병원의 비활성 의사 매칭. 같은 재단이면 score=150 ("강함, 같은 재단"), 다른 재단이면 score=50 ("보통", 동명이인 안내). 1순위 후보만 알림 broadcast.
+- `save_crawl_result` 와 `sync_hospital` 의 신규 등록 path 양쪽에 호출.
+- `NotificationPanel.jsx` 에 `doctor_transfer_candidate` 알림 타입 — 옛/새 record 비교 카드 + `[✓ 예, 같은 사람이에요] / [아니오]` CTA. 예 → `PATCH /doctors/{new_id}` 로 `linked_doctor_id` set, 아니오 → 알림 dismiss.
+- `PATCH /api/doctors/{id}` 가 `linked_doctor_id` 변경 시 양방향 자동 set/unset (옛 상대가 자기를 가리키고 있었으면 끊고, 새 상대도 자기를 가리키게 set).
+- 자동 link 절대 없음 — 사용자 명시 클릭이 있어야만 link.
+
+#### 5. 활성 의사 카드/상세에 "이전 병원" 라벨
+- `_doctor_to_response_dict` 가 `linked_doctor` selectinload 결과로 `linked_doctor_name / linked_doctor_department / linked_hospital_name / linked_doctor_is_active` 합성. list/detail 두 응답에 모두 적용 (eager-load 라 N+1 회피).
+- MyDoctors 활성 카드에 `← {linked_hospital_name} 에서 옮겨오심` 작은 라벨 (이름 아래).
+- MyDoctors 상세에 강조 박스 (`↩ 이전 병원 이력 / {병원} {진료과} {이름} 에서 옮겨오심 / 과거 방문 기록은 비활성 의료진 보기에서 확인`).
+
+#### 6. BrowseDoctors region 그룹핑 수리
+- `REGION_ORDER` 가 `['서울','경기','인천']` 만이라 신규 25개 (부산/대전/경남/충북/대구/광주/전북/강원/울산) 가 모두 "기타" 로 빠지던 문제. **광역시도 17개 전체로 확장**.
+- 그러나 사용자 카드 클릭 시 빈 결과가 뜨는 또 다른 문제: 4/24~25 에 추가한 25개 병원이 factory.py 의 `_DEDICATED_CRAWLERS` 에는 등록됐지만 `hospitals` DB 테이블에 INSERT 가 안 됐음.
+- 신규 `backend/scripts/seed_hospitals.py` — `_DEDICATED_CRAWLERS` + `_HOSPITAL_REGION` 으로 hospitals 테이블 upsert. 이미 있는 row 는 region 만 보강, 누락된 row 는 INSERT. 향후 신규 크롤러 추가 시 재실행 가능.
+- 실행 결과 `inserted=25, region_updated=0, skipped=120` → DB hospitals 121 → 146.
+
+### 핵심 신규 파일
+- `frontend/src/components/SelectVisitDate.jsx`
+- `backend/scripts/seed_hospitals.py`
+
+### 핵심 수정 파일
+- backend: `app/api/doctors.py`, `app/api/crawl.py`, `app/api/academic.py`, `app/services/crawl_service.py`, `app/crawlers/factory.py`
+- frontend: `pages/Dashboard.jsx`, `pages/Conferences.jsx`, `pages/MyDoctors.jsx`, `pages/BrowseDoctors.jsx`, `components/AcademicEventModal.jsx`, `components/DoctorScheduleHintPopup.jsx`, `components/NotificationPanel.jsx`, `api/client.js`
+
+### 검증
+- frontend `npm run build` 통과 (1.38~1.41s)
+- backend `from app.api import ...` 모두 통과
+- `seed_hospitals.py` 실행: `inserted=25` 확인
+- 이직 후보 알림 / 양방향 linked / 비활성-복원 등 운영 시나리오는 5월 첫째 주 검증 묶음에 포함
+
+### 비범위 (의도적 미포함)
+- 자동 link (사용자 클릭 없이 자동 연결) — 데이터 사고 위험
+- `is_pinned → academic_event_pins` 분리 — 다중 사용자 도입 시점에 묶기로 결정
+- 옛 record 의 visit/memo 통합 타임라인 — 1차에선 비활성 view 에서 별도 조회, 추후 옵션
+
+### 8. 신규 25개 병원 로고 자동 수집
+- 25개 신규 크롤러 작성 시 sub-agent 에 SKILL.md "병원 로고 자동 수집 가이드" 지시 누락 → `frontend/public/hospital-logos/` 에 신규 25개 로고 전부 부재. 교수 탐색 카드가 🏥 이모지 폴백.
+- 신규 `backend/scripts/fetch_logos.py` — SKILL.md 3단계 절차 자동화: Google favicon (sz=128, 48px 임계) → 홈페이지 HTML 의 `<img class="logo">` 추출 → 폴백.
+- 결과: **21/25 수집 성공**.
+  - 성공(21): DAMC/KOSIN/DCMC/DKUH/GNAH/UUH/KNUH/KNUHCG/JNUH/JNUHHS/PAIKBS/PNUH/PNUYH/YUMC/DSMC/SCWH/CBNUH/CUH/MIZMEDI/WKUH/GNUH2
+  - 실패(4 — 이모지 폴백): **CHNUH** (cnuh.co.kr 비표준 헤더 + logo 응답 HTML), **YWMC** (Liferay JS redirect, 본 HTML 비어있음), **KYUH** (헤더 logo 패턴 매칭 실패), **JBUH** (메인 페이지에 ISMS 로고만 노출)
+- KOSIN 은 사이즈 작음(27x30, footer 로고). 일단 두고 추후 보강 그룹 (`project_hospital_logos.md`) 에 묶음.
+- 향후: 메모리 `project_hospital_logos.md` (기존 14곳 저해상도 + SCHBC 누락) + 본 4곳 + KOSIN 재수집을 한꺼번에 수동 처리 예정.
+
+---
+
+## 2026-04-26 세션 — 의사 라이프사이클 + 로컬 병원 수동 등록 (Phase 1~3 일괄)
+
+### 배경
+2026-04-25 25개 대학병원 크롤러 1차 commit 후, 사용자가 두 가지 데이터 라이프사이클 빈틈을 지적: ① 전임의/전문의가 1년 단위로 타 병원 이직·퇴직할 때 DB 가 어떻게 처리되는지, ② 크롤러가 다루지 않는 로컬 병원을 사용자가 수동 등록하고 관리하려면 어떻게 해야 하는지. 5월 첫째 주 운영 검증 전에 모든 변경분이 들어가 있어야 한다는 요청에 따라 plan 의 1·2·3 단계를 한 세션에서 일괄 구현.
+
+### 결정
+- **이직/퇴직 처리**: 전역 Person 모델은 한국 의료환경(라이센스 번호 미노출)에서 오인식 위험이 커서 도입하지 않음. 병원별 별도 record 유지 + soft 비활성화 + VisitLog/VisitMemo 의사·병원명 snapshot 보존. 같은 사람을 두 record 로 묶고 싶으면 사용자가 명시적으로 라벨링(`linked_doctor_id`, 1차엔 컬럼만 두고 UI 후속).
+- **로컬 병원 수동 등록**: 기존 Hospital/Doctor 테이블 재사용 + `source` 컬럼('crawler'|'manual')로 출처 구분. 크롤러 sync 가 `source='manual'` record 는 건드리지 않도록 가드. 신규 endpoint 로 진료시간 수기 입력 채널 제공.
+- **자동 누락 감지**: 크롤링 결과에 없는 의사를 즉시 비활성화하면 일시적 네트워크 오류로 오삭제 위험. **2회 연속 누락 시에만** 자동 비활성화. 내 교수(visit_grade∈A/B/C) 는 자동 비활성화 대신 알림으로 사용자 확인.
+
+### DB 변경 (alembic 미사용 — `scripts/migrate_doctor_lifecycle.py` ALTER TABLE 패턴)
+| 테이블 | 추가 컬럼 |
+|--------|----------|
+| `hospitals` | `source` (default 'crawler'), `region` (factory.py 백필 120행) |
+| `doctors` | `source`, `deactivated_at`, `deactivated_reason`, `linked_doctor_id` (self-FK), `missing_count` |
+| `doctor_schedules` / `doctor_date_schedules` | `source` (수동/크롤러 구분, 수동 입력 시 크롤러 행과 분리 관리) |
+| `visit_logs` / `visits_memo` | `doctor_name_snapshot`, `doctor_dept_snapshot`, `hospital_name_snapshot` (의사 비활성/삭제 시에도 방문 히스토리 보존) |
+
+추가 정책 — 모델 정의의 `ondelete` 명시:
+- `DoctorSchedule.doctor_id` / `DoctorDateSchedule.doctor_id` / `ScheduleChange.doctor_id` → `CASCADE`
+- `VisitLog.doctor_id` / `VisitMemo.doctor_id` → `SET NULL` (이미 nullable 유지)
+- ORM 레벨 cascade("all, delete-orphan") 도 schedules/date_schedules 에 추가
+- SQLite ALTER TABLE 로는 기존 FK 정책 변경 불가 → 새 테이블에만 적용. 기존 무결성은 ORM cascade + 운영상 hard delete 회피로 보강.
+
+backfill: VisitLog 12행 / VisitMemo 6행 의 의사·병원명 snapshot, Hospital region 120행.
+
+### 백엔드
+- `app/services/crawl_service.py`:
+  - `_find_doctor` 와 sync 로직에 `Doctor.source == 'crawler'` 가드 추가 → 수동 의사는 매칭 대상 제외.
+  - 신규 `_handle_missing_doctors(db, hospital, matched_ids)` — 매칭 안 된 기존 의사의 `missing_count++`, 임계값(`MISSING_THRESHOLD=2`) 초과 시 자동 비활성화 또는 알림.
+  - 매칭 성공 시 `missing_count=0`, `deactivated_reason='auto-missing'` 자동 해제.
+  - `crawl_my_doctors` 에 `source='crawler'` 가드 추가 — 수동 의사는 외부 크롤러로 가져올 수 없음.
+- `app/api/crawl.py`:
+  - `sync_hospital` / `register_doctor` 에서도 `source='crawler'` 매칭 가드 적용.
+  - sync 결과에 `missing_total`, `auto_deactivated`, `missing_alerts` 필드 추가.
+- `app/api/doctors.py`:
+  - `PATCH /api/doctors/{id}` 에 `deactivated_reason` / `linked_doctor_id` 처리. is_active 전환에 따라 `deactivated_at` 자동 set/clear.
+  - **신규 `POST /api/doctors/{id}/schedules`** — 수동 주간 진료시간 입력. 기존 `source='manual'` 행 통째로 교체, 크롤러 행 보호.
+  - **신규 `POST /api/doctors/{id}/date-schedules`** — 날짜별 수동 입력. 같은 날짜 manual 행 교체.
+  - **신규 `DELETE /api/doctors/{id}/schedules/{schedule_id}`** — manual 행만 삭제 허용.
+  - `POST /api/doctors/{id}/visits` 가 의사·병원명 snapshot 같이 저장.
+  - 응답에 `source`, `deactivated_at`, `deactivated_reason`, `linked_doctor_id` 노출.
+- `app/api/hospitals.py`:
+  - `POST /api/hospitals/` 에서 source 미지정 시 `'manual'` 기본, code 미지정 시 `MANUAL_{8자리}` 자동 발급. 중복 code 409.
+- `app/api/visits.py`:
+  - VisitMemo 신규 생성 시 의사·병원명 snapshot 채움.
+- `app/schemas/schemas.py`:
+  - `HospitalBase`/`DoctorBase` 에 `source`, `region` 옵션. `DoctorResponse` 에 `deactivated_*` 노출. `DoctorScheduleCreate`/`DoctorDateScheduleCreate`/`DoctorUpdate` 신규 스키마.
+- `app/notifications`: 새 알림 타입 `doctor_auto_missing` — `_broadcast_doctor_missing()` 가 broadcast.
+
+### 프론트엔드
+- **신규 컴포넌트** `frontend/src/components/ManualDoctorModal.jsx` — 3단계 모달 (병원 선택/등록 → 의사 정보 → 주간 진료시간 12 체크박스 + 시간/장소). 저장 시 `hospitalApi.create` → `doctorApi.create` → `doctorApi.replaceManualSchedules` 순차 호출.
+- `frontend/src/pages/MyDoctors.jsx`:
+  - 헤더에 `+ 수동 등록` 버튼.
+  - 의사 카드에 `source==='manual'` 시 `[수동]` 뱃지 (등급 뱃지 옆).
+  - 의사 상세 카드의 "내 교수 해제" 옆에 `이직/퇴직 처리` 버튼 추가.
+  - 인라인 모달 — 사유 선택(`이직`/`퇴직`/`오인 등록`) → `PATCH /doctors/{id}` 로 `is_active=false` + `deactivated_reason` 설정. 처리 후에도 visit/memo 는 snapshot 으로 보존됨을 안내.
+- `frontend/src/components/NotificationPanel.jsx`:
+  - `doctor_auto_missing` 타입 등록 (UserMinus 아이콘, 라벨 "교수 누락"). `schedule_change` 탭에 묶어 표시.
+  - 알림 카드에 `이직/퇴직 처리하기` CTA 버튼 → `onNavigate('my-doctors', { initialDoctorId })`.
+- `frontend/src/api/client.js`:
+  - `doctorApi.replaceManualSchedules`, `addDateSchedules`, `deleteSchedule` 추가.
+
+### 검증
+- 백엔드 import 정상 (`from app.api import doctors, hospitals, visits, crawl, notifications`).
+- 신규 endpoint 라우터 등록 확인 (`/api/doctors/{id}/schedules`, `/date-schedules`, `/schedules/{id}`).
+- 마이그레이션 실행: 15개 컬럼 추가 + 138 행 backfill 성공.
+- 프론트 빌드 OK (`vite build` 1.35s, 1752 modules, 437kB → 113kB gzip).
+- 운영 시나리오 검증은 5월 첫째 주 통합 검증 단계에서 수행:
+  1. 수동 의사 등록 → 크롤러 sync 시 건드리지 않음
+  2. 임의 의사를 크롤링 응답에서 제거 → 2회 후 auto-missing
+  3. 내 교수 누락 시 알림만 발생, 활성 유지
+  4. 의사 비활성 → 과거 visit/memo 의 snapshot 정상 노출
+
+### 비범위 (의도적으로 미포함)
+- **전역 Person 모델**: 라이센스 번호 없이 이름 매칭은 위험 → linked_doctor_id 수동 라벨링만 컬럼 둠 (UI 는 후속).
+- **수동 의사 ↔ 크롤러 의사 자동 통합**: 사용자가 수동 등록한 의사가 추후 크롤링 대상에 진입해도 자동 매칭 안 함 (필요 시 수동 처리).
+- **로컬 병원 학회 매칭**: academic_events 의 강사 매칭은 별도 흐름.
+
+### 다음 단계 (5월 첫째 주 검증 + 배포)
+신규 25개 크롤러 + 의사 라이프사이클/수동 등록 변경분을 함께 운영 환경에서 검증. CHNUH 격주 4명 notes 보완, MIZMEDI 강남 504 안정화 모니터링도 함께. 검증 통과 시 배포.
+
+---
+
 ## 2026-04-25 세션 — 25개 대학병원 크롤러 1차 마무리 (재확인 3개 + sandbox 차단 우회)
 
 ### 배경

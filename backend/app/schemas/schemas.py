@@ -11,10 +11,13 @@ class HospitalBase(BaseModel):
     address: Optional[str] = None
     phone: Optional[str] = None
     website: Optional[str] = None
+    region: Optional[str] = None
+    source: Optional[str] = None  # "crawler" | "manual"; POST 에서 미지정 시 'manual'
 
 class HospitalResponse(HospitalBase):
     id: int
     crawler_type: Optional[str] = None
+    source: Optional[str] = "crawler"
     is_active: bool
     class Config:
         from_attributes = True
@@ -29,6 +32,8 @@ class DoctorBase(BaseModel):
     specialty: Optional[str] = None
     visit_grade: Optional[str] = None
     memo: Optional[str] = None
+    external_id: Optional[str] = None  # 수동 등록 시 비우면 서버가 MANUAL-{uuid8} 발급
+    source: Optional[str] = None  # "crawler" | "manual"; POST 에서 미지정 시 'manual'
 
 class DoctorResponse(DoctorBase):
     id: int
@@ -36,8 +41,41 @@ class DoctorResponse(DoctorBase):
     photo_url: Optional[str] = None
     notes: Optional[str] = None
     is_active: bool
+    source: Optional[str] = "crawler"
+    deactivated_at: Optional[datetime] = None
+    deactivated_reason: Optional[str] = None
+    linked_doctor_id: Optional[int] = None
     class Config:
         from_attributes = True
+
+
+class DoctorUpdate(BaseModel):
+    """PATCH /api/doctors/{id} 입력 — 명시적 스키마. dict 입력도 허용."""
+    visit_grade: Optional[str] = None
+    memo: Optional[str] = None
+    is_active: Optional[bool] = None
+    department: Optional[str] = None
+    position: Optional[str] = None
+    deactivated_reason: Optional[str] = None  # is_active=False 일 때 사유 라벨링
+    linked_doctor_id: Optional[int] = None  # 이직 시 새 record 와 연결
+
+
+# --- 수동 진료 일정 입력 ---
+class DoctorScheduleCreate(BaseModel):
+    day_of_week: int  # 0=월 ~ 5=토 (6=일은 거의 없지만 허용)
+    time_slot: str  # "morning" | "afternoon" | "evening"
+    start_time: Optional[str] = None  # "09:00"; 미지정 시 slot 기본값
+    end_time: Optional[str] = None
+    location: Optional[str] = None
+
+
+class DoctorDateScheduleCreate(BaseModel):
+    schedule_date: str  # "YYYY-MM-DD"
+    time_slot: str  # "morning" | "afternoon"
+    start_time: Optional[str] = None
+    end_time: Optional[str] = None
+    location: Optional[str] = None
+    status: Optional[str] = "진료"
 
 
 # --- Schedule ---
@@ -107,6 +145,7 @@ class VisitLogCreate(BaseModel):
     status: str
     product: Optional[str] = None
     notes: Optional[str] = None
+    post_notes: Optional[str] = None
     next_action: Optional[str] = None
 
 class VisitLogResponse(VisitLogCreate):
@@ -121,6 +160,13 @@ class PersonalEventCreate(BaseModel):
     title: Optional[str] = None
     notes: Optional[str] = None
     status: Optional[str] = "예정"
+
+
+class AnnouncementCreate(BaseModel):
+    """업무공지 등록 스키마. 팀원 공유는 추후 확장."""
+    visit_date: datetime
+    title: str
+    notes: Optional[str] = None
 
 
 # --- Academic Organizer ---
@@ -230,3 +276,4 @@ class VisitMemoResponse(BaseModel):
 
 class SummarizeRequest(BaseModel):
     template_id: Optional[int] = None
+    raw_memo: Optional[str] = None  # 서버 DB 값 대신 사용할 원본 메모(미저장 상태 지원)

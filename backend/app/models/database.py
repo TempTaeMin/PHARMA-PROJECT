@@ -22,7 +22,9 @@ class Hospital(Base):
     address = Column(String(500))
     phone = Column(String(50))
     website = Column(String(500))
+    region = Column(String(32))  # 서울/경기/부산 등 (factory.py 의 _HOSPITAL_REGION 백필)
     crawler_type = Column(String(50))  # 크롤러 어댑터 타입
+    source = Column(String(16), default="crawler", nullable=False)  # "crawler" | "manual"
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
@@ -45,14 +47,27 @@ class Doctor(Base):
     visit_grade = Column(String(1), nullable=True, default=None)  # A/B/C=내교수, None=탐색용
     memo = Column(Text)  # MR 개인 메모
     notes = Column(Text)  # 크롤링 특이사항 (여러 병원 진료, 복수 소속 등)
+    source = Column(String(16), default="crawler", nullable=False)  # "crawler" | "manual"
+    deactivated_at = Column(DateTime, nullable=True)
+    deactivated_reason = Column(String(32), nullable=True)
+    # "transferred" | "retired" | "auto-missing" | "manual" | "mistake"
+    linked_doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=True)
+    # 이직 후 새 record 와 명시적 연결 (사용자 라벨링)
+    missing_count = Column(Integer, default=0, nullable=False)
+    # 크롤링 결과 누락 횟수. 2회 연속 누락 시 자동 비활성화 후보.
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     hospital = relationship("Hospital", back_populates="doctors")
-    schedules = relationship("DoctorSchedule", back_populates="doctor")
-    date_schedules = relationship("DoctorDateSchedule", back_populates="doctor")
+    schedules = relationship(
+        "DoctorSchedule", back_populates="doctor", cascade="all, delete-orphan"
+    )
+    date_schedules = relationship(
+        "DoctorDateSchedule", back_populates="doctor", cascade="all, delete-orphan"
+    )
     visit_logs = relationship("VisitLog", back_populates="doctor")
+    linked_doctor = relationship("Doctor", remote_side="Doctor.id", foreign_keys=[linked_doctor_id])
 
 
 class DoctorSchedule(Base):
@@ -60,12 +75,13 @@ class DoctorSchedule(Base):
     __tablename__ = "doctor_schedules"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=False)
+    doctor_id = Column(Integer, ForeignKey("doctors.id", ondelete="CASCADE"), nullable=False)
     day_of_week = Column(Integer, nullable=False)  # 0=월 ~ 6=일
     time_slot = Column(String(20))  # "morning", "afternoon", "evening"
     start_time = Column(String(10))  # "09:00"
     end_time = Column(String(10))  # "12:00"
     location = Column(String(200))  # 진료실 위치
+    source = Column(String(16), default="crawler", nullable=False)  # "crawler" | "manual"
     is_active = Column(Boolean, default=True)
     crawled_at = Column(DateTime, default=datetime.utcnow)
     created_at = Column(DateTime, default=datetime.utcnow)
@@ -79,13 +95,14 @@ class DoctorDateSchedule(Base):
     __tablename__ = "doctor_date_schedules"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=False)
+    doctor_id = Column(Integer, ForeignKey("doctors.id", ondelete="CASCADE"), nullable=False)
     schedule_date = Column(String(10), nullable=False)  # "2026-04-08"
     time_slot = Column(String(20))  # "morning", "afternoon"
     start_time = Column(String(10))
     end_time = Column(String(10))
     location = Column(String(200))
     status = Column(String(20), default="진료")  # "진료", "휴진", "대진"
+    source = Column(String(16), default="crawler", nullable=False)  # "crawler" | "manual"
     crawled_at = Column(DateTime, default=datetime.utcnow)
     created_at = Column(DateTime, default=datetime.utcnow)
 
@@ -97,7 +114,7 @@ class ScheduleChange(Base):
     __tablename__ = "schedule_changes"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=False)
+    doctor_id = Column(Integer, ForeignKey("doctors.id", ondelete="CASCADE"), nullable=False)
     change_type = Column(String(50))  # "휴진", "대진", "시간변경", "추가"
     original_day = Column(Integer)
     original_time_slot = Column(String(20))
@@ -115,14 +132,19 @@ class VisitLog(Base):
     __tablename__ = "visit_logs"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=True)
+    doctor_id = Column(Integer, ForeignKey("doctors.id", ondelete="SET NULL"), nullable=True)
     visit_date = Column(DateTime, nullable=False)
     status = Column(String(20))  # "성공", "부재", "거절", "예정"
     product = Column(String(200))  # 디테일링 제품
-    notes = Column(Text)  # 방문 메모
+    notes = Column(Text)  # 사전 메모 (교수 방문) / 단일 메모 (업무·공지)
+    post_notes = Column(Text)  # 결과 메모 (교수 방문 전용, 완료 후 추가)
     next_action = Column(Text)  # 다음 액션
-    category = Column(String(20), default='professor')  # 'professor' | 'personal' | 'etc'
+    category = Column(String(20), default='professor')  # 'professor' | 'personal' | 'announcement' | 'etc'
     title = Column(String(200))  # 개인 일정 제목 등
+    # 의사 record 가 사라져도 누구를 만났는지 보존하기 위한 snapshot
+    doctor_name_snapshot = Column(String(100), nullable=True)
+    doctor_dept_snapshot = Column(String(200), nullable=True)
+    hospital_name_snapshot = Column(String(200), nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
     doctor = relationship("Doctor", back_populates="visit_logs")
@@ -167,6 +189,7 @@ class AcademicEvent(Base):
     event_code = Column(String(100))  # 교육코드 (KMA)
     detail_url_external = Column(String(500))  # 비고에 기재된 외부 상세 URL (학회 자체 페이지 등)
     lectures_json = Column(Text)  # 강의 프로그램 JSON: [{time,title,lecturer,affiliation}]
+    is_pinned = Column(Boolean, default=False, index=True)  # 내 일정 등록(Pin). 단일 사용자 한정 플래그.
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
@@ -208,14 +231,18 @@ class VisitMemo(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, default=1, nullable=False)
-    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=True)
-    visit_log_id = Column(Integer, ForeignKey("visit_logs.id"), nullable=True)
+    doctor_id = Column(Integer, ForeignKey("doctors.id", ondelete="SET NULL"), nullable=True)
+    visit_log_id = Column(Integer, ForeignKey("visit_logs.id", ondelete="SET NULL"), nullable=True)
     template_id = Column(Integer, ForeignKey("memo_templates.id"), nullable=True)
     visit_date = Column(DateTime)
     memo_type = Column(String(20), default="visit")  # "visit" | "meeting" | "note"
     title = Column(String(300))
     raw_memo = Column(Text, nullable=False)
     ai_summary = Column(Text)  # JSON string
+    # 의사 record 가 사라져도 보존되는 snapshot
+    doctor_name_snapshot = Column(String(100), nullable=True)
+    doctor_dept_snapshot = Column(String(200), nullable=True)
+    hospital_name_snapshot = Column(String(200), nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 

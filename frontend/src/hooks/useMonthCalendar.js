@@ -134,12 +134,20 @@ export function useMonthCalendar(year, month) {
   }, [refresh]);
 
   const updateVisit = useCallback(async (visit, patch) => {
-    await visitApi.update(visit.doctor_id, visit.id, patch);
+    if (visit.doctor_id) {
+      await visitApi.update(visit.doctor_id, visit.id, patch);
+    } else {
+      await visitApi.updateFlat(visit.id, patch);
+    }
     refresh();
   }, [refresh]);
 
   const cancelPlanned = useCallback(async (visit) => {
-    await visitApi.remove(visit.doctor_id, visit.id);
+    if (visit.doctor_id) {
+      await visitApi.remove(visit.doctor_id, visit.id);
+    } else {
+      await visitApi.removeFlat(visit.id);
+    }
     refresh();
   }, [refresh]);
 

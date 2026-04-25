@@ -7,7 +7,13 @@ from sqlalchemy import select, func
 from app.crawlers.factory import get_crawler, list_supported_hospitals
 from app.models.connection import get_db
 from app.models.database import Hospital, Doctor, DoctorSchedule, DoctorDateSchedule, CrawlLog
-from app.services.crawl_service import crawl_my_doctors, _sync_schedules, _sync_date_schedules
+from app.services.crawl_service import (
+    crawl_my_doctors,
+    _sync_schedules,
+    _sync_date_schedules,
+    _handle_missing_doctors,
+    detect_transfer_candidate,
+)
 
 _DEPT_CLEAN_RE = re.compile(r"일반$")
 def _clean_dept(name: str) -> str:
@@ -163,6 +169,7 @@ async def sync_hospital(
     created = 0
     updated = 0
     schedules_saved = 0
+    matched_ids: set[int] = set()
 
     for d in raw_list:
         ext_id = d.get("external_id") or d.get("staff_id", "")
@@ -174,13 +181,14 @@ async def sync_hospital(
         if d.get("department"):
             d["department"] = _clean_dept(d["department"])
 
-        # 기존 교수 찾기 (external_id 또는 이름+진료과)
+        # 기존 교수 찾기 (external_id 또는 이름+진료과). source='manual' 은 매칭 제외.
         existing = None
         if ext_id:
             r = await db.execute(
                 select(Doctor).where(
                     Doctor.hospital_id == hospital.id,
                     Doctor.external_id == ext_id,
+                    Doctor.source == "crawler",
                 )
             )
             existing = r.scalar_one_or_none()
@@ -191,6 +199,7 @@ async def sync_hospital(
                     Doctor.hospital_id == hospital.id,
                     Doctor.name == name,
                     Doctor.department == d.get("department", ""),
+                    Doctor.source == "crawler",
                 )
             )
             existing = r.scalar_one_or_none()
@@ -213,6 +222,13 @@ async def sync_hospital(
                 existing.notes = d["notes"]
             existing.is_active = True
             existing.updated_at = datetime.utcnow()
+            # 누락 카운터 리셋 + auto-missing 자동 비활성화 해제
+            if existing.missing_count:
+                existing.missing_count = 0
+            if existing.deactivated_reason == "auto-missing":
+                existing.deactivated_reason = None
+                existing.deactivated_at = None
+            matched_ids.add(existing.id)
             updated += 1
 
             # 스케줄 동기화
@@ -233,10 +249,15 @@ async def sync_hospital(
                 external_id=ext_id,
                 visit_grade=None,
                 notes=d.get("notes", ""),
+                source="crawler",
             )
             db.add(new_doc)
             await db.flush()
+            matched_ids.add(new_doc.id)
             created += 1
+
+            # 이직 후보 감지 — 같은 이름+진료과 비활성 의사 있으면 알림
+            await detect_transfer_candidate(db, new_doc)
 
             # 스케줄 저장
             if schedules:
@@ -244,6 +265,9 @@ async def sync_hospital(
                 schedules_saved += len(schedules)
             if date_schedules:
                 await _sync_date_schedules(db, new_doc.id, date_schedules)
+
+    # 누락 의사 감지 + 자동 비활성/알림
+    missing_summary = await _handle_missing_doctors(db, hospital, matched_ids)
 
     # 크롤링 로그
     log = CrawlLog(
@@ -264,6 +288,7 @@ async def sync_hospital(
         "created": created,
         "updated": updated,
         "schedules_saved": schedules_saved,
+        **missing_summary,
     }
 
 
@@ -395,13 +420,14 @@ async def register_doctor(
         except Exception:
             pass
 
-    # 이미 등록된 교수인지 확인
+    # 이미 등록된 교수인지 확인 (수동 등록은 매칭 제외 — 별개 record 로 유지)
     existing = None
     if external_id:
         r = await db.execute(
             select(Doctor).where(
                 Doctor.hospital_id == hospital.id,
                 Doctor.external_id == external_id,
+                Doctor.source == "crawler",
             )
         )
         existing = r.scalar_one_or_none()
@@ -412,6 +438,7 @@ async def register_doctor(
                 Doctor.hospital_id == hospital.id,
                 Doctor.name == name,
                 Doctor.department == data.get("department", ""),
+                Doctor.source == "crawler",
             )
         )
         existing = r.scalar_one_or_none()

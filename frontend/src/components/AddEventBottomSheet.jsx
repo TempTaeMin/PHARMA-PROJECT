@@ -1,9 +1,8 @@
-import { UserCog, GraduationCap, MoreHorizontal, ChevronRight } from 'lucide-react';
+import { Briefcase, GraduationCap, BookOpen, ChevronRight } from 'lucide-react';
 
 /**
  * + 버튼을 누르면 아래에서 올라오는 바텀시트.
- * 3개 카테고리(개인 일정 / 교수님 미팅 / 기타) 중 선택.
- * 현재는 "교수님 미팅"만 활성.
+ * 3개 카테고리(업무 일정 / 내 의료진 방문 / 학회 일정) 중 선택.
  */
 export default function AddEventBottomSheet({ open, onClose, onSelectCategory }) {
   if (!open) return null;
@@ -11,24 +10,24 @@ export default function AddEventBottomSheet({ open, onClose, onSelectCategory })
   const items = [
     {
       key: 'personal',
-      label: '개인 일정',
-      sub: '연차, 반차, 개인 약속',
-      icon: UserCog,
+      label: '업무 일정',
+      sub: '연차, 반차, 내부 회의, 보고',
+      icon: Briefcase,
       disabled: false,
     },
     {
       key: 'professor',
-      label: '교수님 미팅',
-      sub: '내 의료진 방문 일정',
+      label: '내 의료진 방문',
+      sub: '담당 교수 방문 일정',
       icon: GraduationCap,
       disabled: false,
     },
     {
       key: 'etc',
-      label: '기타',
-      sub: '보고, 내부 회의, 학회',
-      icon: MoreHorizontal,
-      disabled: true,
+      label: '학회 일정',
+      sub: '학회, 심포지엄, 연수강좌',
+      icon: BookOpen,
+      disabled: false,
     },
   ];
 

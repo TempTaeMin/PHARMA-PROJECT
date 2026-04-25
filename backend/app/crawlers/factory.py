@@ -389,6 +389,42 @@ _HOSPITAL_REGION = {
 }
 
 
+# 같은 재단/네트워크 그룹 — 의사 이직 매칭 시 같은 그룹이면 강한 시그널.
+# 단일 병원만 있는 재단은 그룹 등록 안 함 (자기 자신과만 매칭).
+_HOSPITAL_GROUPS: dict[str, list[str]] = {
+    "KU":        ["KUANAM", "KUGURO", "KUANSAN"],
+    "CMC":       ["CMCSEOUL", "CMCEP", "CMCYD", "CMCSV", "CMCIC", "CMCBC", "CMCUJB"],
+    "HALLYM":    ["HALLYM", "HALLYMKN", "HALLYMHG", "HALLYMDT"],
+    "EUMC":      ["EUMCMK", "EUMCSL"],
+    "HYUMC":     ["HYUMC", "HYUGR"],
+    "PAIK":      ["SGPAIK", "ISPAIK", "UPAIK", "PAIKBS"],
+    "SCH":       ["SCHBC", "SCHMC"],
+    "SAMSUNG":   ["SMC", "KBSMC", "SCWH"],
+    "ASAN":      ["AMC", "GNAH"],
+    "SEVERANCE": ["SEVERANCE", "GANSEV", "YONGIN", "YWMC"],
+    "CHA":       ["CHAGN", "CHABD", "CHAIS"],
+    "CAU":       ["CAU", "CAUGM"],
+    "JNUH":      ["JNUH", "JNUHHS"],
+    "KNUH":      ["KNUH", "KNUHCG"],
+    "PNUH":      ["PNUH", "PNUYH"],
+    "WKUH":      ["WKUH", "WMCSB"],
+}
+
+# 역방향 인덱스: 병원코드 → 그룹키
+_CODE_TO_GROUP: dict[str, str] = {
+    code: group_key
+    for group_key, codes in _HOSPITAL_GROUPS.items()
+    for code in codes
+}
+
+
+def get_hospital_group(hospital_code: str | None) -> str | None:
+    """같은 재단 그룹 키 반환. 그룹 미등록이면 None."""
+    if not hospital_code:
+        return None
+    return _CODE_TO_GROUP.get(hospital_code.upper())
+
+
 def list_supported_hospitals() -> list[dict]:
     """지원하는 병원 목록 반환 (지역 정보 포함)"""
     hospitals = [

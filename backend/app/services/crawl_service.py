@@ -6,6 +6,7 @@
 3. 진료 일정 → DoctorSchedule UPSERT
 4. 변경 감지 → ScheduleChange 기록
 5. 크롤링 로그 → CrawlLog 기록
+6. 누락 의사 감지 → missing_count++, 2회 누락 시 자동 비활성/알림
 """
 import logging
 from datetime import datetime
@@ -15,6 +16,11 @@ from app.models.database import Hospital, Doctor, DoctorSchedule, DoctorDateSche
 from app.schemas.schemas import CrawlResult, CrawledDoctor
 
 logger = logging.getLogger(__name__)
+
+
+# 크롤링 결과에서 N회 연속 누락된 의사를 자동 비활성화하는 임계값.
+# 1회 누락은 네트워크/페이지 오류로 흔히 발생하므로 보호.
+MISSING_THRESHOLD = 2
 
 # 진료과명 정리용 패턴: "가정의학과일반" → "가정의학과"
 import re
@@ -40,17 +46,26 @@ async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict
     saved = 0
     updated = 0
     changes_detected = 0
+    matched_ids: set[int] = set()
 
     for crawled_doc in crawl_result.doctors:
         # 진료과명 정리
         crawled_doc.department = _clean_department(crawled_doc.department)
 
-        # 기존 교수 찾기 (external_id 또는 이름+진료과)
+        # 기존 교수 찾기 (external_id 또는 이름+진료과). source='manual' 은 매칭 제외.
         existing = await _find_doctor(db, hospital.id, crawled_doc)
 
         if existing:
             # 기존 교수 업데이트
             _update_doctor_info(existing, crawled_doc)
+            # 누락 카운터 리셋 + 자동 비활성화 해제
+            if existing.missing_count:
+                existing.missing_count = 0
+            if existing.deactivated_reason == "auto-missing" and not existing.is_active:
+                existing.is_active = True
+                existing.deactivated_reason = None
+                existing.deactivated_at = None
+            matched_ids.add(existing.id)
 
             # 일정 변경 감지 + 업데이트
             ch = await _sync_schedules(db, existing.id, crawled_doc.schedules)
@@ -70,9 +85,14 @@ async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict
                 photo_url=crawled_doc.photo_url,
                 external_id=crawled_doc.external_id,
                 visit_grade="B",  # 기본 등급
+                source="crawler",
             )
             db.add(new_doc)
             await db.flush()
+            matched_ids.add(new_doc.id)
+
+            # 이직 후보 감지 — 같은 이름+진료과 비활성 의사 있으면 알림
+            await detect_transfer_candidate(db, new_doc)
 
             # 일정 등록
             for s in crawled_doc.schedules:
@@ -101,6 +121,9 @@ async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict
                 db.add(date_sched)
             saved += 1
 
+    # 누락 의사 감지 + 자동 비활성/알림
+    missing_summary = await _handle_missing_doctors(db, hospital, matched_ids)
+
     # 크롤링 로그 저장
     crawl_log = CrawlLog(
         hospital_code=crawl_result.hospital_code,
@@ -120,6 +143,7 @@ async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict
         "updated": updated,
         "changes": changes_detected,
         "total_crawled": len(crawl_result.doctors),
+        **missing_summary,
     }
     logger.info(f"크롤링 결과 저장: {summary}")
     return summary
@@ -129,10 +153,12 @@ async def crawl_my_doctors(db: AsyncSession) -> dict:
     """등록된 '내 교수'들의 진료일정만 크롤링합니다."""
     from app.crawlers.factory import get_crawler
 
-    # 내 교수만 (visit_grade A/B/C + external_id 있는 교수만 크롤링 가능)
+    # 내 교수만 (visit_grade A/B/C + external_id 있는 교수만 크롤링 가능).
+    # 수동 등록 의사(source='manual')는 외부 크롤러로 가져올 수 없으므로 제외.
     result = await db.execute(
         select(Doctor)
         .where(Doctor.is_active == True)
+        .where(Doctor.source == "crawler")
         .where(Doctor.visit_grade.in_(["A", "B", "C"]))
         .where(Doctor.external_id != None)
         .where(Doctor.external_id != "")
@@ -221,12 +247,16 @@ async def _get_hospital_by_code(db: AsyncSession, code: str) -> Hospital | None:
 
 
 async def _find_doctor(db: AsyncSession, hospital_id: int, crawled: CrawledDoctor) -> Doctor | None:
-    """external_id 또는 이름+진료과로 기존 교수 찾기"""
+    """external_id 또는 이름+진료과로 기존 교수 찾기.
+
+    source='manual' 의사는 크롤러 매칭 대상에서 제외 — 수동 입력 보호.
+    """
     if crawled.external_id:
         result = await db.execute(
             select(Doctor).where(
                 Doctor.hospital_id == hospital_id,
                 Doctor.external_id == crawled.external_id,
+                Doctor.source == "crawler",
             )
         )
         doc = result.scalar_one_or_none()
@@ -240,11 +270,172 @@ async def _find_doctor(db: AsyncSession, hospital_id: int, crawled: CrawledDocto
                 Doctor.hospital_id == hospital_id,
                 Doctor.name == crawled.name,
                 Doctor.department == crawled.department,
+                Doctor.source == "crawler",
             )
         )
         return result.scalar_one_or_none()
 
     return None
+
+
+async def _handle_missing_doctors(
+    db: AsyncSession, hospital: Hospital, matched_ids: set[int]
+) -> dict:
+    """이번 크롤링에서 매칭 안 된 기존 source='crawler' 의사들 처리.
+
+    - missing_count += 1
+    - missing_count >= MISSING_THRESHOLD 면:
+        * visit_grade ∈ {A,B,C} (내 교수): 알림만 발송, 활성 유지
+        * 그 외: is_active=False, deactivated_reason='auto-missing'
+    """
+    result = await db.execute(
+        select(Doctor).where(
+            Doctor.hospital_id == hospital.id,
+            Doctor.source == "crawler",
+            Doctor.is_active == True,
+        )
+    )
+    all_active = result.scalars().all()
+    missing = [d for d in all_active if d.id not in matched_ids]
+
+    auto_deactivated = 0
+    notifications_queued = 0
+
+    for doc in missing:
+        doc.missing_count = (doc.missing_count or 0) + 1
+        if doc.missing_count < MISSING_THRESHOLD:
+            continue
+
+        if doc.visit_grade in ("A", "B", "C"):
+            # 내 교수: 자동 비활성화 대신 알림
+            await _broadcast_doctor_missing(doc, hospital)
+            notifications_queued += 1
+        else:
+            doc.is_active = False
+            doc.deactivated_reason = "auto-missing"
+            doc.deactivated_at = datetime.utcnow()
+            auto_deactivated += 1
+
+    if auto_deactivated or notifications_queued:
+        logger.info(
+            f"[누락 감지] {hospital.code}: 자동 비활성 {auto_deactivated}명 / 알림 {notifications_queued}명"
+        )
+
+    return {
+        "missing_total": len(missing),
+        "auto_deactivated": auto_deactivated,
+        "missing_alerts": notifications_queued,
+    }
+
+
+async def detect_transfer_candidate(db: AsyncSession, new_doctor: Doctor) -> None:
+    """새로 등록되는 의사가 비활성된 의사와 매칭되면 알림 발송.
+
+    매칭 조건:
+    - 같은 이름 + 같은 진료과 + 다른 병원 + is_active=False
+    - 같은 재단 그룹이면 강한 매칭 (점수 +100), 아니면 약한 매칭 (점수 50).
+    가장 점수 높은 1명만 알림. 이미 linked_doctor_id 가 있으면 skip.
+    """
+    if not new_doctor.name or not new_doctor.department or not new_doctor.hospital_id:
+        return
+    if new_doctor.linked_doctor_id:
+        # 이미 다른 record 와 link 되어 있으면 추가 알림 불필요
+        return
+
+    from sqlalchemy.orm import selectinload as _sel
+    from app.crawlers.factory import get_hospital_group
+
+    # 비활성 의사 후보 검색
+    result = await db.execute(
+        select(Doctor)
+        .options(_sel(Doctor.hospital))
+        .where(
+            Doctor.name == new_doctor.name,
+            Doctor.department == new_doctor.department,
+            Doctor.is_active == False,  # noqa: E712
+            Doctor.id != new_doctor.id,
+            Doctor.hospital_id != new_doctor.hospital_id,
+        )
+    )
+    candidates = result.scalars().all()
+    if not candidates:
+        return
+
+    # 새 의사 hospital 정보 (alarm 메시지용)
+    new_hospital = (await db.execute(
+        select(Hospital).where(Hospital.id == new_doctor.hospital_id)
+    )).scalar_one_or_none()
+    new_group = get_hospital_group(new_hospital.code if new_hospital else None)
+
+    # score 계산
+    best = None
+    best_score = 0
+    for cand in candidates:
+        cand_code = cand.hospital.code if cand.hospital else None
+        cand_group = get_hospital_group(cand_code)
+        score = 50  # 같은 이름 + 같은 진료과 기본
+        if new_group and cand_group and new_group == cand_group:
+            score += 100  # 같은 재단 그룹: 강한 시그널
+        if score > best_score:
+            best = cand
+            best_score = score
+
+    if not best:
+        return
+
+    same_group = best_score >= 150
+    try:
+        from app.notifications.manager import notification_manager
+        msg = (
+            f"{best.hospital.name if best.hospital else ''} {best.name} 교수님이 "
+            f"{new_hospital.name if new_hospital else ''}에 새로 등장했습니다. "
+            f"이직 맞나요?"
+            + (" (같은 재단)" if same_group else "")
+        )
+        await notification_manager.broadcast({
+            "type": "doctor_transfer_candidate",
+            "data": {
+                "new_doctor_id": new_doctor.id,
+                "new_doctor_name": new_doctor.name,
+                "new_hospital_name": new_hospital.name if new_hospital else None,
+                "new_department": new_doctor.department,
+                "old_doctor_id": best.id,
+                "old_doctor_name": best.name,
+                "old_hospital_name": best.hospital.name if best.hospital else None,
+                "old_department": best.department,
+                "same_group": same_group,
+                "score": best_score,
+                "message": msg,
+            },
+            "created_at": datetime.utcnow().isoformat(),
+            "read": False,
+        })
+    except Exception as e:
+        logger.warning(f"[이직 후보 알림 실패] {new_doctor.name}: {e}")
+
+
+async def _broadcast_doctor_missing(doctor: Doctor, hospital: Hospital) -> None:
+    """내 교수 누락 알림. NotificationPanel 의 doctor_auto_missing 타입."""
+    try:
+        from app.notifications.manager import notification_manager
+        await notification_manager.broadcast({
+            "type": "doctor_auto_missing",
+            "data": {
+                "doctor_id": doctor.id,
+                "doctor_name": doctor.name,
+                "hospital_code": hospital.code,
+                "hospital_name": hospital.name,
+                "department": doctor.department,
+                "visit_grade": doctor.visit_grade,
+                "missing_count": doctor.missing_count,
+                "message": f"{hospital.name} {doctor.name} 교수님이 최근 크롤링에서 보이지 않습니다. 이직/퇴직 여부를 확인해 주세요.",
+            },
+            "created_at": datetime.utcnow().isoformat(),
+            "read": False,
+        })
+    except Exception as e:
+        # 알림 실패해도 크롤링 자체는 계속 진행
+        logger.warning(f"[알림 실패] {doctor.name}: {e}")
 
 
 def _update_doctor_info(doctor: Doctor, crawled: CrawledDoctor):

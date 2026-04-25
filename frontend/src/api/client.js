@@ -30,6 +30,19 @@ export const doctorApi = {
   get: (id) => request(`/api/doctors/${id}`),
   create: (data) => request('/api/doctors/', { method: 'POST', body: JSON.stringify(data) }),
   update: (id, data) => request(`/api/doctors/${id}`, { method: 'PATCH', body: JSON.stringify(data) }),
+  // 수동 진료시간 입력 — 기존 source='manual' 행을 통째로 교체
+  replaceManualSchedules: (doctorId, items) =>
+    request(`/api/doctors/${doctorId}/schedules`, {
+      method: 'POST',
+      body: JSON.stringify(items),
+    }),
+  addDateSchedules: (doctorId, items) =>
+    request(`/api/doctors/${doctorId}/date-schedules`, {
+      method: 'POST',
+      body: JSON.stringify(items),
+    }),
+  deleteSchedule: (doctorId, scheduleId) =>
+    request(`/api/doctors/${doctorId}/schedules/${scheduleId}`, { method: 'DELETE' }),
 };
 
 // ─── Visits ───
@@ -42,6 +55,14 @@ export const visitApi = {
     request(`/api/doctors/${doctorId}/visits/${visitId}`, { method: 'DELETE' }),
   createPersonal: (data) =>
     request('/api/visits/personal', { method: 'POST', body: JSON.stringify(data) }),
+  createAnnouncement: (data) =>
+    request('/api/visits/announcement', { method: 'POST', body: JSON.stringify(data) }),
+  removeFlat: (visitId) =>
+    request(`/api/visits/${visitId}`, { method: 'DELETE' }),
+  updateFlat: (visitId, data) =>
+    request(`/api/visits/${visitId}`, { method: 'PATCH', body: JSON.stringify(data) }),
+  aiSummarize: (visitId, payload = {}) =>
+    request(`/api/visits/${visitId}/ai-summarize`, { method: 'POST', body: JSON.stringify(payload) }),
 };
 
 // ─── Crawling ───
@@ -89,7 +110,17 @@ export const academicApi = {
     return request(`/api/academic-events/upcoming?${params.toString()}`);
   },
   unclassified: () => request('/api/academic-events/unclassified'),
+  mySchedule: ({ start_date, end_date }) =>
+    request(`/api/academic-events/my-schedule?start=${start_date}&end=${end_date}`),
+  myLecturers: (months = 1) =>
+    request(`/api/academic-events/my-lecturers?months=${months}`),
+  eventsForDoctor: (doctorId, start, end) =>
+    request(`/api/academic-events/for-doctor/${doctorId}?start=${start}&end=${end}`),
   getById: (id) => request(`/api/academic-events/${id}`),
+  create: (data) => request('/api/academic-events', { method: 'POST', body: JSON.stringify(data) }),
+  delete: (id) => request(`/api/academic-events/${id}`, { method: 'DELETE' }),
+  pin: (id) => request(`/api/academic-events/${id}/pin`, { method: 'POST' }),
+  unpin: (id) => request(`/api/academic-events/${id}/pin`, { method: 'DELETE' }),
   sync: () => request('/api/academic-events/sync', { method: 'POST' }),
   updateEventDepartments: (id, departments) =>
     request(`/api/academic-events/${id}/departments`, {
