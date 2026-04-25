@@ -1,0 +1,151 @@
+{
+  "hospital_code": "PAIKBS",
+  "dept_count": 75,
+  "sample_dept": [
+    "가정의학과",
+    "간이식 간담췌외과"
+  ],
+  "doctor_count": 7,
+  "doctors": [
+    {
+      "external_id": "PAIKBS-157",
+      "name": "박태진",
+      "department": "가정의학과",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ]
+    },
+    {
+      "external_id": "PAIKBS-158",
+      "name": "이가영",
+      "department": "가정의학과",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ]
+    },
+    {
+      "external_id": "PAIKBS-159",
+      "name": "김진승",
+      "department": "가정의학과",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ]
+    },
+    {
+      "external_id": "PAIKBS-2218",
+      "name": "현정현",
+      "department": "가정의학과",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ]
+    },
+    {
+      "external_id": "PAIKBS-143",
+      "name": "최창수",
+      "department": "간이식 간담췌외과",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ]
+    }
+  ]
+}

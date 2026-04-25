@@ -34,7 +34,7 @@ TIMETABLE_URL = f"{BASE_URL}/html/?pmode=medtm&spag=medtimetbl&smode=timetbl&pse
 TIME_RANGES = {"morning": ("09:00", "12:00"), "afternoon": ("13:00", "17:00")}
 DAY_MAP = {"월": 0, "화": 1, "수": 2, "목": 3, "금": 4, "토": 5}
 # 스케줄로 인정할 셀 텍스트 키워드 (빈 문자열/휴진 계열 + 외래 아닌 활동 제외)
-WORK_TEXTS = ("진료", "격주", "검진", "왕진", "외래", "클리닉")
+WORK_TEXTS = ("진료", "격주", "검진", "외래", "클리닉")
 SKIP_TEXTS = ("휴진", "", "-", "x", "X", "OFF", "off")
 
 

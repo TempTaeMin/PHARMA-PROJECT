@@ -1,0 +1,1839 @@
+{
+  "hospital_code": "PNUYH",
+  "hospital_name": "양산부산대학교병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이상엽",
+      "department": "가정의학과",
+      "external_id": "PNUYH-FMC-2005166",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영혜",
+      "department": "가정의학과",
+      "external_id": "PNUYH-FMC-2006102",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은주",
+      "department": "가정의학과",
+      "external_id": "PNUYH-FMC-2009096",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영인",
+      "department": "가정의학과",
+      "external_id": "PNUYH-FMC-2014083",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정인",
+      "department": "가정의학과",
+      "external_id": "PNUYH-FMC-2015159",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이새롬",
+      "department": "가정의학과",
+      "external_id": "PNUYH-FMC-2014152",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권력준",
+      "department": "가정의학과",
+      "external_id": "PNUYH-FMC-2018245",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손수민",
+      "department": "가정의학과",
+      "external_id": "PNUYH-FMC-2017186",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김슬기",
+      "department": "감염내과",
+      "external_id": "PNUYH-IDC-2017178",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현정",
+      "department": "감염내과",
+      "external_id": "PNUYH-IDC-2026219",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강양호",
+      "department": "내분비대사내과",
+      "external_id": "PNUYH-EDC-2008324",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동원",
+      "department": "내분비대사내과",
+      "external_id": "PNUYH-EDC-2009462",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민진",
+      "department": "내분비대사내과",
+      "external_id": "PNUYH-EDC-2020271",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강아름",
+      "department": "내분비대사내과",
+      "external_id": "PNUYH-EDC-2016071",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배지현",
+      "department": "내분비대사내과",
+      "external_id": "PNUYH-EDC-2018266",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주연",
+      "department": "내분비대사내과",
+      "external_id": "PNUYH-EDC-2020139",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승희",
+      "department": "내분비대사내과",
+      "external_id": "PNUYH-EDC-2019322",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "소민욱",
+      "department": "류마티스내과",
+      "external_id": "PNUYH-RHC-2013193",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안은영",
+      "department": "류마티스내과",
+      "external_id": "PNUYH-RHC-2009110",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "기용간",
+      "department": "방사선종양학과",
+      "external_id": "PNUYH-RO-2015404",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주지현",
+      "department": "방사선종양학과",
+      "external_id": "PNUYH-RO-2180287",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경효",
+      "department": "방사선종양학과",
+      "external_id": "PNUYH-RO-2025469",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상일",
+      "department": "방사선종양학과",
+      "external_id": "PNUYH-RO-2025398",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지연",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2004237",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동훈",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2009298",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나주영",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2190121",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현정",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2010217",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정희",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2006088",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황청수",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2012101",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소영",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2015125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신소현",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2019307",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준영",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2190161",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정세진",
+      "department": "병리과",
+      "external_id": "PNUYH-PA-2190153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성우",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-URC-2008224",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남종길",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-URC-2009467",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승수",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-URC-2006084",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송원훈",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-URC-2019002",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이단비",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-URC-2019311",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재연",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-URC-2020174",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의사",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-URC-BBBBBBB",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나용진",
+      "department": "산부인과",
+      "external_id": "PNUYH-OBGYNC-1920041",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김휘곤",
+      "department": "산부인과",
+      "external_id": "PNUYH-OBGYNC-2008253",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송용중",
+      "department": "산부인과",
+      "external_id": "PNUYH-OBGYNC-2910034",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강기주",
+      "department": "산부인과",
+      "external_id": "PNUYH-OBGYNC-2024434",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현주",
+      "department": "산부인과",
+      "external_id": "PNUYH-OBGYNC-2025293",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남수봉",
+      "department": "성형외과",
+      "external_id": "PNUYH-PRSC-2006242",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재우",
+      "department": "성형외과",
+      "external_id": "PNUYH-PRSC-2011219",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정렬",
+      "department": "성형외과",
+      "external_id": "PNUYH-PRSC-ZD13025",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수봉",
+      "department": "신장내과",
+      "external_id": "PNUYH-NC-2004235",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동원",
+      "department": "신장내과",
+      "external_id": "PNUYH-NC-2005167",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김일영",
+      "department": "신장내과",
+      "external_id": "PNUYH-NC-2010556",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병현",
+      "department": "외과",
+      "external_id": "PNUYH-NC-2015199",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김서린",
+      "department": "신장내과",
+      "external_id": "PNUYH-NC-2009534",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "예병민",
+      "department": "신장내과",
+      "external_id": "PNUYH-NC-2014078",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지은",
+      "department": "안과",
+      "external_id": "PNUYH-EC-2008329",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안정효",
+      "department": "안과",
+      "external_id": "PNUYH-EC-2014205",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "안과",
+      "external_id": "PNUYH-EC-2019001",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승민",
+      "department": "안과",
+      "external_id": "PNUYH-EC-2016164",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문상우",
+      "department": "안과",
+      "external_id": "PNUYH-EC-2022434",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민승",
+      "department": "안과",
+      "external_id": "PNUYH-EC-2018255",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정도희",
+      "department": "안과",
+      "external_id": "PNUYH-EC-2026536",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백승국",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2008945",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "추기석",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2008321",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태언",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2011451",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남경진",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2008112",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백혜진",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2025681",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정희석",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2014212",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장주연",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2009129",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노지은",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2011138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류화성",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2012125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이계영",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2910456",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정보라",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2024454",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세경",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2008198",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하지영",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2025457",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최윤영",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2009181",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승민",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-ZD13043",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성일",
+      "department": "영상의학과",
+      "external_id": "PNUYH-RAD-2026118",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상수",
+      "department": "외과",
+      "external_id": "PNUYH-GSC-2011196",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승주",
+      "department": "외과",
+      "external_id": "PNUYH-GSC-2019063",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강석경",
+      "department": "외과",
+      "external_id": "PNUYH-GSC-2017176",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유석",
+      "department": "외과",
+      "external_id": "PNUYH-GSC-2021139",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이일우",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-2002310",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진춘",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-2008320",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성의숙",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-2016082",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현민",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-2007078",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문수진",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-2014208",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민형",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-2020291",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지환",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-2014115",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석현",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-ZD13009",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석환",
+      "department": "이비인후과",
+      "external_id": "PNUYH-ENTC-2011166",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허성영",
+      "department": "정신건강의학과",
+      "external_id": "PNUYH-MHC-2120060",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지운",
+      "department": "정신건강의학과",
+      "external_id": "PNUYH-MHC-2017165",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현석",
+      "department": "정신건강의학과",
+      "external_id": "PNUYH-MHC-2026540",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정섭",
+      "department": "정형외과",
+      "external_id": "PNUYH-BJC-2006241",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신원철",
+      "department": "정형외과",
+      "external_id": "PNUYH-BJC-2012167",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우승훈",
+      "department": "정형외과",
+      "external_id": "PNUYH-BJC-2014249",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강석웅",
+      "department": "정형외과",
+      "external_id": "PNUYH-BJC-2018780",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배정연",
+      "department": "정형외과",
+      "external_id": "PNUYH-BJC-2010268",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상민",
+      "department": "정형외과",
+      "external_id": "PNUYH-BJC-2012192",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도민욱",
+      "department": "정형외과",
+      "external_id": "PNUYH-BJC-2015130",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경백",
+      "department": "정형외과",
+      "external_id": "PNUYH-BJC-2019292",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정기선",
+      "department": "혈액종양내과",
+      "external_id": "PNUYH-HOC-2016107",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오상보",
+      "department": "혈액종양내과",
+      "external_id": "PNUYH-HOC-2008131",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재준",
+      "department": "혈액종양내과",
+      "external_id": "PNUYH-HOC-2009081",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방수연",
+      "department": "혈액종양내과",
+      "external_id": "PNUYH-HOC-2016367",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정훈",
+      "department": "혈액종양내과",
+      "external_id": "PNUYH-HOC-2023343",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전영경",
+      "department": "혈액종양내과",
+      "external_id": "PNUYH-HOC-2017196",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤자경",
+      "department": "혈액종양내과",
+      "external_id": "PNUYH-HOC-2025166",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철식",
+      "department": "혈액종양내과",
+      "external_id": "PNUYH-HOC-2024487",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강동묵",
+      "department": "직업환경의학과",
+      "external_id": "PNUYH-OEMC-2800034",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영기",
+      "department": "직업환경의학과",
+      "external_id": "PNUYH-OEMC-2800222",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세영",
+      "department": "직업환경의학과",
+      "external_id": "PNUYH-OEMC-2018141",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은수",
+      "department": "직업환경의학과",
+      "external_id": "PNUYH-OEMC-2016376",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기훈",
+      "department": "직업환경의학과",
+      "external_id": "PNUYH-OEMC-2025459",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장철훈",
+      "department": "진단검사의학과",
+      "external_id": "PNUYH-CP-2002465",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인숙",
+      "department": "진단검사의학과",
+      "external_id": "PNUYH-CP-2012673",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현지",
+      "department": "진단검사의학과",
+      "external_id": "PNUYH-CP-2008142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오승환",
+      "department": "진단검사의학과",
+      "external_id": "PNUYH-CP-2190122",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선민",
+      "department": "진단검사의학과",
+      "external_id": "PNUYH-CP-2009261",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인교",
+      "department": "치과",
+      "external_id": "PNUYH-DSC-1842463",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경훈",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2003247",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태균",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2010227",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지욱",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2010564",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변경조",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2010565",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희영",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2007040",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜진",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2007157",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세연",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2018107",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤정필",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-ZD13038",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손홍식",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2015141",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지민",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2021338",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유영민",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2017189",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현수",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2018264",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장은정",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2015247",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신호진",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2014234",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재원",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2020065",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성윤정",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2021341",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김중연",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2021611",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유준아",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2017191",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주연",
+      "department": "마취통증의학과",
+      "external_id": "PNUYH-PC-2009083",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병수",
+      "department": "피부과",
+      "external_id": "PNUYH-DMC-2010226",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고현창",
+      "department": "피부과",
+      "external_id": "PNUYH-DMC-2011487",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김훈수",
+      "department": "피부과",
+      "external_id": "PNUYH-DMC-2015401",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신기혁",
+      "department": "피부과",
+      "external_id": "PNUYH-DMC-2014075",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정수",
+      "department": "피부과",
+      "external_id": "PNUYH-DMC-2020292",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성장",
+      "department": "핵의학과",
+      "external_id": "PNUYH-NM-2008336",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수은",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMIC-2004493",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조교진",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMIC-2014157",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전종근",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMEC-2009290",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유석동",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMEC-2009116",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남상욱",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNSNC-9800147",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤진",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNSNC-2010261",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공주현",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNSNC-2009171",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류수영",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNSNC-2009091",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임선희",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PRHC-2023241",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상돈",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-PURC-2960005",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재민",
+      "department": "비뇨의학과",
+      "external_id": "PNUYH-PURC-2400098",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재우",
+      "department": "성형외과",
+      "external_id": "PNUYH-PPSC-2011219",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김해영",
+      "department": "외과",
+      "external_id": "PNUYH-PIMGHC-2001149",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이연주",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMGHC-2012150",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강아영",
+      "department": "외과",
+      "external_id": "PNUYH-PIMGHC-2018244",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수홍",
+      "department": "외과",
+      "external_id": "PNUYH-PIMGHC-2013198",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한솔",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMGHC-2025169",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송지연",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMNC-2013115",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임선희",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMNC-2023241",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형두",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PTSPHC-2003248",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성시찬",
+      "department": "심장혈관흉부외과",
+      "external_id": "PNUYH-PTSPHC-2003249",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형태",
+      "department": "심장혈관흉부외과",
+      "external_id": "PNUYH-PTSPHC-2009287",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최광호",
+      "department": "심장혈관흉부외과",
+      "external_id": "PNUYH-PTSPHC-2013201",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고훈",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PTSPHC-2016150",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변정희",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PTSPHC-2014255",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜림",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PTSPHC-2025498",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안정효",
+      "department": "안과",
+      "external_id": "PNUYH-PEC-2014205",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "안과",
+      "external_id": "PNUYH-PEC-2019001",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동선",
+      "department": "안과",
+      "external_id": "PNUYH-PEC-2025270",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성수",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMAC-2019177",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우성일",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMAC-2026468",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김해영",
+      "department": "외과",
+      "external_id": "PNUYH-PGSC-2001149",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수홍",
+      "department": "외과",
+      "external_id": "PNUYH-PGSC-2013198",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강아영",
+      "department": "외과",
+      "external_id": "PNUYH-PGSC-2018244",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성의숙",
+      "department": "이비인후과",
+      "external_id": "PNUYH-PENTC-2016082",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현민",
+      "department": "이비인후과",
+      "external_id": "PNUYH-PENTC-2007078",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민형",
+      "department": "이비인후과",
+      "external_id": "PNUYH-PENTC-2020291",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문수진",
+      "department": "이비인후과",
+      "external_id": "PNUYH-PENTC-2014208",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김석현",
+      "department": "이비인후과",
+      "external_id": "PNUYH-PENTC-ZD13009",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석환",
+      "department": "이비인후과",
+      "external_id": "PNUYH-PENTC-2011166",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지환",
+      "department": "이비인후과",
+      "external_id": "PNUYH-PENTC-2014115",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수연",
+      "department": "재활의학과",
+      "external_id": "PNUYH-PRMC-2011231",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지훈",
+      "department": "정신건강의학과",
+      "external_id": "PNUYH-PMHC-2008333",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최범성",
+      "department": "정신건강의학과",
+      "external_id": "PNUYH-PMHC-2016073",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배정연",
+      "department": "정형외과",
+      "external_id": "PNUYH-POSBJC-2010268",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영아",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PCCMC-2016081",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정은",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PCCMC-2018256",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지용",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PCCMC-2012614",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반의사",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PGDC-AAAAAAA",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성시찬",
+      "department": "심장혈관흉부외과",
+      "external_id": "PNUYH-PLUGUP-2003249",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최광호",
+      "department": "심장혈관흉부외과",
+      "external_id": "PNUYH-PLUGUP-2013201",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고현창",
+      "department": "피부과",
+      "external_id": "PNUYH-PDMC-2011487",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정수",
+      "department": "피부과",
+      "external_id": "PNUYH-PDMC-2020292",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임영탁",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMBC-1910119",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재민",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMBC-2025178",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양유진",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMBC-2015250",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성식",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PIMBC-2006182",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변신연",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNBC-2008254",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이나래",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNBC-2011142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성희",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNBC-2015156",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정문희",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNBC-2015153",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재현",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PNBC-2026177",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전종근",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PGMC-2009290",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유석동",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PGMC-2009116",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전종근",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-FDC-2009290",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전종근",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PRDC-2009290",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대성",
+      "department": "신경과",
+      "external_id": "PNUYH-PRDC-2004492",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남상욱",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PRDC-9800147",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상원",
+      "department": "신경외과",
+      "external_id": "PNUYH-PRDC-2003246",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재혁",
+      "department": "신경과",
+      "external_id": "PNUYH-PRDC-2009284",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신진홍",
+      "department": "신경과",
+      "external_id": "PNUYH-PRDC-2012148",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재우",
+      "department": "성형외과",
+      "external_id": "PNUYH-PRDC-2011219",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이연주",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PRDC-2012150",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오승환",
+      "department": "진단검사의학과",
+      "external_id": "PNUYH-PRDC-2190122",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수연",
+      "department": "재활의학과",
+      "external_id": "PNUYH-PRDC-2011231",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수용",
+      "department": "순환기내과",
+      "external_id": "PNUYH-PRDC-2009122",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고훈",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PRDC-2016150",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성수",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PRDC-2019177",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배정연",
+      "department": "정형외과",
+      "external_id": "PNUYH-PRDC-2010268",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고현창",
+      "department": "피부과",
+      "external_id": "PNUYH-PRDC-2011487",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최범성",
+      "department": "정신건강의학과",
+      "external_id": "PNUYH-PRDC-2016073",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임선희",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PRDC-2023241",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유석동",
+      "department": "소아청소년과",
+      "external_id": "PNUYH-PRDC-2009116",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "안과",
+      "external_id": "PNUYH-PRDC-2019001",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

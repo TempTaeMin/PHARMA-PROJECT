@@ -1,0 +1,3143 @@
+{
+  "hospital_code": "SNUBH",
+  "hospital_name": "분당서울대병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "국제(통합진료)",
+      "department": "국제진료센터",
+      "external_id": "SNUBH-IHC01",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원재",
+      "department": "국제진료센터",
+      "external_id": "SNUBH-66110",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승연A",
+      "department": "국제진료센터",
+      "external_id": "SNUBH-66290",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재익",
+      "department": "국제진료센터",
+      "external_id": "SNUBH-88324",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권주성",
+      "department": "국제진료센터",
+      "external_id": "SNUBH-66380",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기헌",
+      "department": "가정의학과",
+      "external_id": "SNUBH-65570",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배우경",
+      "department": "가정의학과",
+      "external_id": "SNUBH-65597",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "화C: 피로클리닉"
+    },
+    {
+      "name": "이기혁",
+      "department": "가정의학과",
+      "external_id": "SNUBH-65700",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정세영",
+      "department": "가정의학과",
+      "external_id": "SNUBH-65982",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜진",
+      "department": "가정의학과",
+      "external_id": "SNUBH-65977",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구혜연",
+      "department": "가정의학과",
+      "external_id": "SNUBH-66180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "목C: 비만 클리닉; 2월-4월까지 휴진"
+    },
+    {
+      "name": "송파도",
+      "department": "가정의학과",
+      "external_id": "SNUBH-88342",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정은",
+      "department": "가정의학과",
+      "external_id": "SNUBH-88341",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜인",
+      "department": "가정의학과",
+      "external_id": "SNUBH-83114",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "금연 클리닉(목요일)비만 클리닉(금요일): 일반 진료 및 예방접종 진료 불가"
+    },
+    {
+      "name": "일반(변준혁)",
+      "department": "가정의학과",
+      "external_id": "SNUBH-FMF67",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반(신세훈)",
+      "department": "가정의학과",
+      "external_id": "SNUBH-FMF68",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍빈",
+      "department": "감염내과",
+      "external_id": "SNUBH-01046",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "황열은 인터넷 예약 불가능 ,전화 예약 요망, 18세이상 예약가능"
+    },
+    {
+      "name": "김의석",
+      "department": "감염내과",
+      "external_id": "SNUBH-01216",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "황열은 인터넷 예약 불가능 ,전화 예약 요망"
+    },
+    {
+      "name": "송경호",
+      "department": "감염내과",
+      "external_id": "SNUBH-65470",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "황열은 인터넷 예약 불가능 ,전화 예약 요망"
+    },
+    {
+      "name": "문송미",
+      "department": "감염내과",
+      "external_id": "SNUBH-66212",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "황열은 인터넷 예약불가능, 전화 예약 요망"
+    },
+    {
+      "name": "최승진",
+      "department": "감염내과",
+      "external_id": "SNUBH-66275",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "황열은 인터넷 예약 불가능, 전화 예약 요망"
+    },
+    {
+      "name": "장학철",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-89984",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "목 기준 매주 1, 3주 휴진"
+    },
+    {
+      "name": "최성희",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-00891",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임수",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-01294",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문재훈",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-65663",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "암센터 목(오후) 진료 / 금(오전) 기준 2/4주 격주 진료"
+    },
+    {
+      "name": "김민주",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-65986",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "수요일 기준 2/4주 오전 진료(IME)"
+    },
+    {
+      "name": "오태정",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-65832",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화 오후 : 1형인슐린펌프클리닉(2/4주); 화요일 기준 1/3주 오후 진료"
+    },
+    {
+      "name": "공성혜",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-66101",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "월 오후 1주 / 3주 진료 : 부갑상선 클리닉수 오전 : 골다공증 클리닉; 월 기준 1/3주 오전 GIME 진료"
+    },
+    {
+      "name": "문준호",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-66211",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "금 오후 : 1형/임신당뇨병 클리닉; 목 기준 오후 1/3주 진료"
+    },
+    {
+      "name": "임상강사2",
+      "department": "내분비대사내과",
+      "external_id": "SNUBH-IME41",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광일",
+      "department": "노인병내과",
+      "external_id": "SNUBH-01214",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C: 혈관노화금 (오후) : 심장혈관센터 진료"
+    },
+    {
+      "name": "최정연",
+      "department": "노인병내과",
+      "external_id": "SNUBH-66157",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤종",
+      "department": "류마티스내과",
+      "external_id": "SNUBH-01169",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "신환진료, 격주 진료; 류마티스내과 진료:화수 오전.월수 오후 ,금요일 격주 진료"
+    },
+    {
+      "name": "강은하",
+      "department": "류마티스내과",
+      "external_id": "SNUBH-01277",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하유정",
+      "department": "류마티스내과",
+      "external_id": "SNUBH-65784",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "금 오후 하유정(관절초음파)"
+    },
+    {
+      "name": "표정윤",
+      "department": "류마티스내과",
+      "external_id": "SNUBH-88055",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화 오전 표정윤(관절초음파)"
+    },
+    {
+      "name": "임상강사(류마티스)",
+      "department": "류마티스내과",
+      "external_id": "SNUBH-IMJ09",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "월 오후 임상강사(류마티스)관절초음파"
+    },
+    {
+      "name": "최은주",
+      "department": "마취통증의학과",
+      "external_id": "SNUBH-65787",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "마취통증의학과 수요일 오전,오후 진료"
+    },
+    {
+      "name": "이준희",
+      "department": "마취통증의학과",
+      "external_id": "SNUBH-88256",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이평복",
+      "department": "마취통증의학과",
+      "external_id": "SNUBH-01202",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "통증센터 진료: 월( 오전, 오후) 목(오전, 오후)"
+    },
+    {
+      "name": "남상건",
+      "department": "마취통증의학과",
+      "external_id": "SNUBH-65509",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장민혜",
+      "department": "마취통증의학과",
+      "external_id": "SNUBH-88076",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "화요일 오전- 일요일 기준 1주차만 진료 제외금요일 오후- 일요일 기준 2주차만 진료 제외"
+    },
+    {
+      "name": "민병훈",
+      "department": "마취통증의학과",
+      "external_id": "SNUBH-88353",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "목요일 오후-일요일 기준 2주차, 4주차 진료"
+    },
+    {
+      "name": "김재성",
+      "department": "방사선종양학과",
+      "external_id": "SNUBH-00850",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인아",
+      "department": "방사선종양학과",
+      "external_id": "SNUBH-00996",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김규보",
+      "department": "방사선종양학과",
+      "external_id": "SNUBH-66239",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄근용",
+      "department": "방사선종양학과",
+      "external_id": "SNUBH-65702",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송창훈",
+      "department": "방사선종양학과",
+      "external_id": "SNUBH-65839",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전승혁",
+      "department": "방사선종양학과",
+      "external_id": "SNUBH-66445",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변석수",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-00985",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성규",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-01075",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "암센터 수요일 오전 교차진료 가능고환 관련질환, 고환/부고환종양, 소아환자, 여성배뇨장애, 발기부전, 성병, 전립선염 진료예약불가화요일->CYSTO(방광내시경)불가!!"
+    },
+    {
+      "name": "정성진",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-65424",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "소아환자, 정계정맥류, 정관수술, 정관문합술, 음낭수종 예약불가 예정인원보다 초과예약 절대 불가"
+    },
+    {
+      "name": "이상철",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-65667",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "암센터 월요일 오전 교차진료 가능★★ [방광내시경] 슬롯은 진료과에서만 예약 및 변경가능방광암, 고환관련질환, 고환/부고환종양, 결석, 혈뇨 예약불가"
+    },
+    {
+      "name": "오종진",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-01084",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "암센터 금요일 오전 교차진료 가능소아, 요로결석, 정계정맥류, 정관복원술 진료불가방광암, 요관암 확진 시 신초진 당일예약 가능★★ [방광내시경/BCG_항암] 슬롯은 진료과에서만 예약 및 변경가능"
+    },
+    {
+      "name": "이학민",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-65828",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "암센터 화요일 오후 교차진료 가능신장암 불가, 소아 및 외국인 진료 불가결석, 방광염, 정계정맥류, 성기보형물 관련질환 불가"
+    },
+    {
+      "name": "김형준",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-66280",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "암센터 수요일 오후 교차진료 가능.소아환자 예약불가!!"
+    },
+    {
+      "name": "송상헌",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-66341",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "암센터 금요일 오후 교차진료 가능남성질환, 특히 호르몬 replace 또는 남성수술 관련 예약불가!!소아-수술이 필요한 경우 예약불가"
+    },
+    {
+      "name": "일반의",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-URF07",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "1. 진료과에서만 예약가능, 병동 및 응급실, 원무과등 예약불가2. 비뇨기과 수술 후 주치의 처방이 있는 치료 환자만 예약 가능"
+    },
+    {
+      "name": "정연수",
+      "department": "비뇨의학과",
+      "external_id": "SNUBH-66438",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서창석",
+      "department": "산부인과",
+      "external_id": "SNUBH-00830",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용범",
+      "department": "산부인과",
+      "external_id": "SNUBH-01201",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "목오전 암센터 교차진료 가능"
+    },
+    {
+      "name": "지병철",
+      "department": "산부인과",
+      "external_id": "SNUBH-00976",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정렬",
+      "department": "산부인과",
+      "external_id": "SNUBH-01158",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C :난임 ,가임력 보존 클리닉 (금오전) : 난임, 가임력 이외 해당 질환도 진료 가능; 폐경기 진료 불가"
+    },
+    {
+      "name": "노재홍",
+      "department": "산부인과",
+      "external_id": "SNUBH-65561",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "월오후 ,수오후 암센터 교차진료 가능"
+    },
+    {
+      "name": "오경준",
+      "department": "산부인과",
+      "external_id": "SNUBH-65588",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C :조산 예방 클리닉 (목오후) ,해당환자만 진료 가능; 부인과 질환 불가 .산과파트 의료진 교차진료 불가"
+    },
+    {
+      "name": "서동훈",
+      "department": "산부인과",
+      "external_id": "SNUBH-65758",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "월 ,금 오전 암센터 교차진료 가능"
+    },
+    {
+      "name": "김슬기",
+      "department": "산부인과",
+      "external_id": "SNUBH-65797",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C :난임 ,가임력 보존 클리닉 (월오후 ) : 난임, 가임력 이외 해당 질환도 진료 가능; 폐경기 불가"
+    },
+    {
+      "name": "박지윤",
+      "department": "산부인과",
+      "external_id": "SNUBH-01218",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C:  고위험임신 클리닉 ((월오전); 부인과 질환 불가 ,정상 임신 불가 ,산과 파트 의료진 교차 진료 불가"
+    },
+    {
+      "name": "김현지",
+      "department": "산부인과",
+      "external_id": "SNUBH-66216",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "산과 파트 의료진 교차진료 불가 ,부인과 질환 불가 ,정상임신 진료 불가 ,임신준비 (산전검사)진료 불가"
+    },
+    {
+      "name": "홍연희",
+      "department": "산부인과",
+      "external_id": "SNUBH-66334",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C :난임 ,가임력 보존 클리닉 (화오후) : 난임, 가임력 이외 해당 질환도 진료 가능; 폐경기 진료불가 ,골다공증 진료 불가"
+    },
+    {
+      "name": "노준호",
+      "department": "산부인과",
+      "external_id": "SNUBH-66437",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "수 오전  암센터 진료"
+    },
+    {
+      "name": "정영미",
+      "department": "산부인과",
+      "external_id": "SNUBH-66436",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "산과 파트 의료진 교차진료 불가 ,부인과 질환 불가 ,정상임신 진료 불가 ,임신준비 (산전검사)진료 불가 * 태아복잡 심장 기형은 진료 제외"
+    },
+    {
+      "name": "정다은",
+      "department": "산부인과",
+      "external_id": "SNUBH-88321",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "부인과질환 불가, 임신준비 (산전검사 )불가"
+    },
+    {
+      "name": "김기동",
+      "department": "산부인과",
+      "external_id": "SNUBH-65589",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "부인 종양"
+    },
+    {
+      "name": "허찬영",
+      "department": "성형외과",
+      "external_id": "SNUBH-01035",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "유방재건, 유방성형 클리닉"
+    },
+    {
+      "name": "은석찬",
+      "department": "성형외과",
+      "external_id": "SNUBH-65437",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "희귀 피부암 수술클리닉; 수부관련 예약 시 진료과 확인 후 진료 예약 가능"
+    },
+    {
+      "name": "김백규",
+      "department": "성형외과",
+      "external_id": "SNUBH-01249",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "구순구개열클리닉"
+    },
+    {
+      "name": "김백규(구순구개열 클리닉)",
+      "department": "성형외과",
+      "external_id": "SNUBH-PS026",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재훈",
+      "department": "성형외과",
+      "external_id": "SNUBH-65697",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "- 림프부종 진료과 확인후 예약가능"
+    },
+    {
+      "name": "명유진",
+      "department": "성형외과",
+      "external_id": "SNUBH-66031",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종호",
+      "department": "성형외과",
+      "external_id": "SNUBH-66236",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "비골골절만 있는 경우 진료불가"
+    },
+    {
+      "name": "김종호(욕창클리닉)",
+      "department": "성형외과",
+      "external_id": "SNUBH-PS018",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "욕창클리닉"
+    },
+    {
+      "name": "박규형",
+      "department": "성형외과",
+      "external_id": "SNUBH-66387",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박규형(림프부종클리닉)",
+      "department": "성형외과",
+      "external_id": "SNUBH-PS030",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "림프부종 환자만 진료예약 가능"
+    },
+    {
+      "name": "일반의",
+      "department": "성형외과",
+      "external_id": "SNUBH-PS031",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김나영",
+      "department": "소화기내과",
+      "external_id": "SNUBH-00970",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정숙향",
+      "department": "소화기내과",
+      "external_id": "SNUBH-01032",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진욱",
+      "department": "소화기내과",
+      "external_id": "SNUBH-00971",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화 오후: 알코올 간질환 특수클리닉목 오전: 암센터 진료"
+    },
+    {
+      "name": "황진혁",
+      "department": "소화기내과",
+      "external_id": "SNUBH-01108",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "화 오전: 암센터 진료"
+    },
+    {
+      "name": "박영수",
+      "department": "소화기내과",
+      "external_id": "SNUBH-65664",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신철민",
+      "department": "소화기내과",
+      "external_id": "SNUBH-01293",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "2026.02.23~2026.04.24: 휴직"
+    },
+    {
+      "name": "김재환",
+      "department": "소화기내과",
+      "external_id": "SNUBH-65681",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "수 오전: 암센터 진료"
+    },
+    {
+      "name": "윤혁",
+      "department": "소화기내과",
+      "external_id": "SNUBH-65756",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "월오전/ 수오후/ 목오전 염증성 장질환 클리닉"
+    },
+    {
+      "name": "장은선",
+      "department": "소화기내과",
+      "external_id": "SNUBH-65607",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종찬A",
+      "department": "소화기내과",
+      "external_id": "SNUBH-66026",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "금 오전: 암센터 진료"
+    },
+    {
+      "name": "최광현",
+      "department": "소화기내과",
+      "external_id": "SNUBH-66099",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민경",
+      "department": "소화기내과",
+      "external_id": "SNUBH-66426",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최용훈",
+      "department": "소화기내과",
+      "external_id": "SNUBH-66383",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전유경",
+      "department": "소화기내과",
+      "external_id": "SNUBH-66272",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화 오후, 둘째주 토 오전: 염증성 장질환 클리닉(염증성 장질환 클리닉으로 해당 환자만 예약 가능)"
+    },
+    {
+      "name": "정광록",
+      "department": "소화기내과",
+      "external_id": "SNUBH-66384",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "월 오전: 항암 클리닉"
+    },
+    {
+      "name": "이호경",
+      "department": "소화기내과",
+      "external_id": "SNUBH-88053",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진주",
+      "department": "소화기내과",
+      "external_id": "SNUBH-66381",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "화 오후: 암센터 진료"
+    },
+    {
+      "name": "박남영",
+      "department": "소화기내과",
+      "external_id": "SNUBH-66382",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사",
+      "department": "소화기내과",
+      "external_id": "SNUBH-IMGF1",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채인호",
+      "department": "순환기내과",
+      "external_id": "SNUBH-65796",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "연태진",
+      "department": "순환기내과",
+      "external_id": "SNUBH-01200",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "수오후:신초진전용슬롯"
+    },
+    {
+      "name": "조구영",
+      "department": "순환기내과",
+      "external_id": "SNUBH-00974",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C :희귀난치 심근질환; 수오후:신초진전용슬롯"
+    },
+    {
+      "name": "서정원",
+      "department": "순환기내과",
+      "external_id": "SNUBH-65411",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤창환",
+      "department": "순환기내과",
+      "external_id": "SNUBH-65550",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C:말초혈관클리닉; 수오후:신초진전용슬롯"
+    },
+    {
+      "name": "오일영",
+      "department": "순환기내과",
+      "external_id": "SNUBH-65610",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤연이",
+      "department": "순환기내과",
+      "external_id": "SNUBH-65665",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진주",
+      "department": "순환기내과",
+      "external_id": "SNUBH-01245",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영진",
+      "department": "순환기내과",
+      "external_id": "SNUBH-65783",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강시혁",
+      "department": "순환기내과",
+      "external_id": "SNUBH-65823",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최홍미",
+      "department": "순환기내과",
+      "external_id": "SNUBH-66160",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "장기연수: 2024.12.16~2026.06.15"
+    },
+    {
+      "name": "황인창",
+      "department": "순환기내과",
+      "external_id": "SNUBH-66057",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "순환기내과",
+      "external_id": "SNUBH-66130",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조형원",
+      "department": "순환기내과",
+      "external_id": "SNUBH-66213",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전기현",
+      "department": "순환기내과",
+      "external_id": "SNUBH-66129",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤민재",
+      "department": "순환기내과",
+      "external_id": "SNUBH-66378",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지석",
+      "department": "순환기내과",
+      "external_id": "SNUBH-66379",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민정",
+      "department": "순환기내과",
+      "external_id": "SNUBH-66425",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진아",
+      "department": "순환기내과",
+      "external_id": "SNUBH-88343",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사(순환기)",
+      "department": "순환기내과",
+      "external_id": "SNUBH-CVCF1",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경석",
+      "department": "신경과",
+      "external_id": "SNUBH-00980",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "신초진 예약불가"
+    },
+    {
+      "name": "배희준",
+      "department": "신경과",
+      "external_id": "SNUBH-01050",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한문구",
+      "department": "신경과",
+      "external_id": "SNUBH-01069",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종민",
+      "department": "신경과",
+      "external_id": "SNUBH-00979",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C:보톡스 클리닉"
+    },
+    {
+      "name": "윤창호",
+      "department": "신경과",
+      "external_id": "SNUBH-01309",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화(오후), 수(오후), 인지치료 슬롯은 진료과에서만 예약가능"
+    },
+    {
+      "name": "김범준",
+      "department": "신경과",
+      "external_id": "SNUBH-65759",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영호",
+      "department": "신경과",
+      "external_id": "SNUBH-65732",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준순",
+      "department": "신경과",
+      "external_id": "SNUBH-66182",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "목(오전): 희귀질환 클리닉 진료시 일반 환자 예약가능; 두통 클리닉(금오전): 신환,초진 두통진료는 금요일 오전으로만 예약가능"
+    },
+    {
+      "name": "김준엽",
+      "department": "신경과",
+      "external_id": "SNUBH-66164",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우진",
+      "department": "신경과",
+      "external_id": "SNUBH-66218",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도연",
+      "department": "신경과",
+      "external_id": "SNUBH-66193",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김낙훈",
+      "department": "신경과",
+      "external_id": "SNUBH-88169",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "편정민",
+      "department": "신경과",
+      "external_id": "SNUBH-88253",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신채원",
+      "department": "신경과",
+      "external_id": "SNUBH-88254",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C:보톡스 클리닉"
+    },
+    {
+      "name": "김종욱",
+      "department": "신경과",
+      "external_id": "SNUBH-88262",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진아",
+      "department": "신경과",
+      "external_id": "SNUBH-88352",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "금오전 루게릭병-근육병-희귀말초신경병 클리닉"
+    },
+    {
+      "name": "이은지",
+      "department": "신경과",
+      "external_id": "SNUBH-88367",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신경과(일반)",
+      "department": "신경과",
+      "external_id": "SNUBH-NNR77",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지수",
+      "department": "신경과",
+      "external_id": "SNUBH-00818",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정윤",
+      "department": "신경과",
+      "external_id": "SNUBH-65785",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "편두통 신환, 초진 진료는 금(오전) 편두통 슬롯만 가능"
+    },
+    {
+      "name": "최정윤(치료)",
+      "department": "신경과",
+      "external_id": "SNUBH-DNR06",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "금요일 오후 격주 진료(진료과에서만 예약가능)"
+    },
+    {
+      "name": "최정윤(전정강화)",
+      "department": "신경과",
+      "external_id": "SNUBH-DNR07",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "금요일 오후는 격주진료(진료과에서만 예약가능)"
+    },
+    {
+      "name": "권오기",
+      "department": "신경외과",
+      "external_id": "SNUBH-00984",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재용",
+      "department": "신경외과",
+      "external_id": "SNUBH-01074",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "목 오후:암센터"
+    },
+    {
+      "name": "방재승",
+      "department": "신경외과",
+      "external_id": "SNUBH-01281",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한정호",
+      "department": "신경외과",
+      "external_id": "SNUBH-65557",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "반승필",
+      "department": "신경외과",
+      "external_id": "SNUBH-65899",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황기환",
+      "department": "신경외과",
+      "external_id": "SNUBH-66059",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "금 오전:암센터"
+    },
+    {
+      "name": "이시운",
+      "department": "신경외과",
+      "external_id": "SNUBH-66102",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "모야모야(이시운)",
+      "department": "신경외과",
+      "external_id": "SNUBH-NNS10",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영덕",
+      "department": "신경외과",
+      "external_id": "SNUBH-66235",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지소영",
+      "department": "신경외과",
+      "external_id": "SNUBH-66434",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강호",
+      "department": "신경외과",
+      "external_id": "SNUBH-66386",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상효",
+      "department": "신경외과",
+      "external_id": "SNUBH-88037",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "모야모야(이상효)",
+      "department": "신경외과",
+      "external_id": "SNUBH-NNS11",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성승빈",
+      "department": "신경외과",
+      "external_id": "SNUBH-88242",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장재훈",
+      "department": "신경외과",
+      "external_id": "SNUBH-88361",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현승재",
+      "department": "신경외과",
+      "external_id": "SNUBH-01172",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화(오전), 목(오후), 토 오전(격주) 척추센터 진료토요일 기준 2,4주 목 암센터 진료"
+    },
+    {
+      "name": "이재구",
+      "department": "신경외과",
+      "external_id": "SNUBH-89952",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "금요일 기준 1,3,5주 암센터 오전 진료 / 수요일(오전/오후), 금(오전) 2,4주 척추센터 진료"
+    },
+    {
+      "name": "다학제(뇌종양)",
+      "department": "신경외과",
+      "external_id": "SNUBH-CCCG1",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기정",
+      "department": "신경외과",
+      "external_id": "SNUBH-65267",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "금요일:종양,공동증,혈관(희귀질환 클리닉)"
+    },
+    {
+      "name": "홍광의",
+      "department": "신경외과",
+      "external_id": "SNUBH-88270",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나기영",
+      "department": "신장내과",
+      "external_id": "SNUBH-00972",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C:복막투석 - 복막투석 환자만 예약 가능"
+    },
+    {
+      "name": "진호준",
+      "department": "신장내과",
+      "external_id": "SNUBH-01047",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세중",
+      "department": "신장내과",
+      "external_id": "SNUBH-01244",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C: 희귀 신장 질환 클리닉"
+    },
+    {
+      "name": "정종철",
+      "department": "신장내과",
+      "external_id": "SNUBH-66058",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C:신장이식 클리닉"
+    },
+    {
+      "name": "박석우",
+      "department": "신장내과",
+      "external_id": "SNUBH-66274",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C: 신장이식 클리닉"
+    },
+    {
+      "name": "신장내과(전문의)",
+      "department": "신장내과",
+      "external_id": "SNUBH-IMN14",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박계현",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-00913",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C: 대동맥질환"
+    },
+    {
+      "name": "제형곤",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-01280",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준성",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-01305",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재항",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-65935",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장형우",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-65934",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임재홍",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-66433",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정준철",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-66277",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상윤",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-66385",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김관민",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-01059",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "폐암,식도암"
+    },
+    {
+      "name": "조석기",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-01170",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "폐암, 식도암; 1동 폐센터 : 목요일 오후 진료"
+    },
+    {
+      "name": "전재현",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-65897",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "1동 폐센터 : 목요일 오전 진료"
+    },
+    {
+      "name": "정우현",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-66162",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "1동 페센터 -> 월요일 오후 진료"
+    },
+    {
+      "name": "이준석",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-66333",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "1동 페센터 ->수요일 오전 진료"
+    },
+    {
+      "name": "손정우",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNUBH-88241",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태우",
+      "department": "안과",
+      "external_id": "SNUBH-00987",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C: 녹내장"
+    },
+    {
+      "name": "현준영",
+      "department": "안과",
+      "external_id": "SNUBH-01113",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C: 각막"
+    },
+    {
+      "name": "우세준",
+      "department": "안과",
+      "external_id": "SNUBH-01306",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C1: 황반변성, C2:포도막, C3:희귀 유전성망막질환 클리닉(월)"
+    },
+    {
+      "name": "이은지",
+      "department": "안과",
+      "external_id": "SNUBH-65612",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "<소아환자(40개월이전) 화,목(9시30분이전), 수(2시이전) 예약>"
+    },
+    {
+      "name": "박상준",
+      "department": "안과",
+      "external_id": "SNUBH-65829",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주광식",
+      "department": "안과",
+      "external_id": "SNUBH-01186",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "희귀 유전성망막질환 클리닉(금); 25.9.1~26.8.31 장기연수"
+    },
+    {
+      "name": "김민석",
+      "department": "안과",
+      "external_id": "SNUBH-66217",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "26.1.12~27.1.11 장기연수"
+    },
+    {
+      "name": "전현선",
+      "department": "안과",
+      "external_id": "SNUBH-65945",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "금요일 오후 : 렌즈 클리닉 (소아굴절교정, 원추각막렌즈, 공막렌즈)"
+    },
+    {
+      "name": "최용제",
+      "department": "안과",
+      "external_id": "SNUBH-88247",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송재신",
+      "department": "안과",
+      "external_id": "SNUBH-88333",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현영",
+      "department": "안과",
+      "external_id": "SNUBH-82995",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석재",
+      "department": "안과",
+      "external_id": "SNUBH-88366",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지원",
+      "department": "안과",
+      "external_id": "SNUBH-83075",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유종인",
+      "department": "안과",
+      "external_id": "SNUBH-83076",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남주",
+      "department": "안과",
+      "external_id": "SNUBH-65567",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C: 소아 클리닉"
+    },
+    {
+      "name": "양희경",
+      "department": "안과",
+      "external_id": "SNUBH-65699",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "* 수요일 오전 : 성인만 예약가능(소아예약금지)"
+    },
+    {
+      "name": "김동현",
+      "department": "안과",
+      "external_id": "SNUBH-66388",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "* 월요일 오후: 성인만 예약 가능(소아 예약 금지)"
+    },
+    {
+      "name": "이한얼",
+      "department": "안과",
+      "external_id": "SNUBH-83079",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장윤석",
+      "department": "알레르기면역내과",
+      "external_id": "SNUBH-01215",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C: 천식 및 알레르기질환. 조영제 부작용 및 수술전 평가 예약불가"
+    },
+    {
+      "name": "김세훈",
+      "department": "알레르기면역내과",
+      "external_id": "SNUBH-65553",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백선영",
+      "department": "알레르기면역내과",
+      "external_id": "SNUBH-88237",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "수술전 평가 가능, 조영제 전처치 가능"
+    },
+    {
+      "name": "윤창진",
+      "department": "영상의학과",
+      "external_id": "SNUBH-01160",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재환",
+      "department": "영상의학과",
+      "external_id": "SNUBH-65995",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "2026-04-09 ~2026-04-16 국외학회"
+    },
+    {
+      "name": "김건영",
+      "department": "영상의학과",
+      "external_id": "SNUBH-66238",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "2026-04-11~2026-04-13 국외학회 2026-04-16~2026-04-19 국외학회"
+    },
+    {
+      "name": "이종호",
+      "department": "영상의학과",
+      "external_id": "SNUBH-66287",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "2026-04-04~2026-04-10 국외학회"
+    },
+    {
+      "name": "이준우",
+      "department": "영상의학과",
+      "external_id": "SNUBH-01143",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2026-04-16 연가2026-04-17 국내학회2026-04-19~2026-04-22 연가"
+    },
+    {
+      "name": "이영준",
+      "department": "영상의학과",
+      "external_id": "SNUBH-65736",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "2026-04-15~2026-04-19 국외학회2026-04-28 연가"
+    },
+    {
+      "name": "지충근",
+      "department": "영상의학과",
+      "external_id": "SNUBH-66237",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김여주",
+      "department": "영상의학과",
+      "external_id": "SNUBH-66361",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "2026-04-17~2026-04-18 국내학회"
+    },
+    {
+      "name": "김영준",
+      "department": "영상의학과",
+      "external_id": "SNUBH-66442",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정철규",
+      "department": "영상의학과",
+      "external_id": "SNUBH-65573",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최상일",
+      "department": "영상의학과",
+      "external_id": "SNUBH-65281",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성일",
+      "department": "영상의학과",
+      "external_id": "SNUBH-65473",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "진료 위치 : 1동 1층 초음파 진단실; 2026-04-15~2026-04-17 연가"
+    },
+    {
+      "name": "한호성",
+      "department": "외과",
+      "external_id": "SNUBH-88286",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "인터넷 예약 불가, 신초진 예약 불가"
+    },
+    {
+      "name": "이태승",
+      "department": "외과",
+      "external_id": "SNUBH-00975",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "하지정맥류 및 하지부종, 저린감 및 통증을 동반한 혈관질환 예약 불가금(오후):심장혈관센타 외래진료"
+    },
+    {
+      "name": "김덕우",
+      "department": "외과",
+      "external_id": "SNUBH-65471",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "화(오후),금(오후):암센타 외래진료"
+    },
+    {
+      "name": "조재영",
+      "department": "외과",
+      "external_id": "SNUBH-01278",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "췌장질환 예약 불가월(오전):암센타 외래진료"
+    },
+    {
+      "name": "이해원",
+      "department": "외과",
+      "external_id": "SNUBH-01999",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C : 간이식 클리닉; 월(오후),목(오후):암센타 외래진료"
+    },
+    {
+      "name": "박형섭",
+      "department": "외과",
+      "external_id": "SNUBH-65826",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "하지정맥류:수요일 오후만 진료"
+    },
+    {
+      "name": "김태한",
+      "department": "외과",
+      "external_id": "SNUBH-66430",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "수(오후):암센타 외래진료"
+    },
+    {
+      "name": "박영석",
+      "department": "외과",
+      "external_id": "SNUBH-66030",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "비만클리닉; 월(오전),수(오전):암센타 외래진료"
+    },
+    {
+      "name": "신홍경",
+      "department": "외과",
+      "external_id": "SNUBH-88202",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "인터넷 예약 불가"
+    },
+    {
+      "name": "양희범",
+      "department": "외과",
+      "external_id": "SNUBH-66161",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "소아외과:0~17세 예약가능, 금(오전):공용진료센타 외래진료"
+    },
+    {
+      "name": "이보람",
+      "department": "외과",
+      "external_id": "SNUBH-66234",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "월(오전):암센타 외래진료"
+    },
+    {
+      "name": "안홍민",
+      "department": "외과",
+      "external_id": "SNUBH-66276",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "목(오후):공용진료센타 외래진료, 금(오전):암센타 외래진료"
+    },
+    {
+      "name": "정진솔",
+      "department": "외과",
+      "external_id": "SNUBH-88295",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "월(오후):공용진료센타 외래진료"
+    },
+    {
+      "name": "전동재",
+      "department": "외과",
+      "external_id": "SNUBH-88347",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "비만클리닉; 탈장은 교수님과 상의후 수술 여부 결정되며 타병원으로 전원될 수 있음(상급종합병원 구조전환 적합질환자 관리 차원)"
+    },
+    {
+      "name": "박예송",
+      "department": "외과",
+      "external_id": "SNUBH-66431",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "화(오후):암센타 외래진료"
+    },
+    {
+      "name": "유미라",
+      "department": "외과",
+      "external_id": "SNUBH-88239",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "금(오후):암센타 외래진료"
+    },
+    {
+      "name": "임승연",
+      "department": "외과",
+      "external_id": "SNUBH-88359",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "혈관외과(전문의)",
+      "department": "외과",
+      "external_id": "SNUBH-GS025",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "화/수 의료진 변경"
+    },
+    {
+      "name": "외과치료",
+      "department": "외과",
+      "external_id": "SNUBH-GS006",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "당뇨창상(족)",
+      "department": "외과",
+      "external_id": "SNUBH-GS015",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "당뇨창상 클리닉(외과,정형외과,성형외과 협진); 진료의: 이경민(OS), 이태승(GS), 김종호(PS) 교수님"
+    },
+    {
+      "name": "강성범",
+      "department": "외과",
+      "external_id": "SNUBH-01033",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤유석",
+      "department": "외과",
+      "external_id": "SNUBH-01247",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은규",
+      "department": "외과",
+      "external_id": "SNUBH-01279",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준영",
+      "department": "외과",
+      "external_id": "SNUBH-65622",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서윤석",
+      "department": "외과",
+      "external_id": "SNUBH-65772",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "단일공 복강경, 로봇 수술 클리닉[화 오후], 전이위암클리닉(복막전이)[목 오후], 비만수술클리닉[목 오후]"
+    },
+    {
+      "name": "오흥권",
+      "department": "외과",
+      "external_id": "SNUBH-65730",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신희철",
+      "department": "외과",
+      "external_id": "SNUBH-65971",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "젊은 유방암 클리닉 : (목기준) 둘째주 목요일 1) 예약 가능 진단명 : 침윤성 유방암 (0기암 제외)2) 나이 : 35세 이하 젊은 유방암3) 진료협력센터, 암센터 신환예약실 통해 예약"
+    },
+    {
+      "name": "유형원",
+      "department": "외과",
+      "external_id": "SNUBH-65972",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유방외과(전문의)",
+      "department": "외과",
+      "external_id": "SNUBH-CGS03",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "전문의 순환근무, 의료진 선택불가"
+    },
+    {
+      "name": "윤경확",
+      "department": "외과",
+      "external_id": "SNUBH-66432",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강소현",
+      "department": "외과",
+      "external_id": "SNUBH-88057",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "2026.03.03~ 분만휴가 2026.06 진료재개"
+    },
+    {
+      "name": "오정훈",
+      "department": "외과",
+      "external_id": "SNUBH-88346",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이자경",
+      "department": "외과",
+      "external_id": "SNUBH-88238",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "토요일 기준 1,3,5주 목요일 오전진료"
+    },
+    {
+      "name": "윤예나",
+      "department": "외과",
+      "external_id": "SNUBH-88358",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤석민",
+      "department": "외과",
+      "external_id": "SNUBH-83031",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구자원",
+      "department": "이비인후과",
+      "external_id": "SNUBH-00986",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정훈",
+      "department": "이비인후과",
+      "external_id": "SNUBH-01052",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최병윤",
+      "department": "이비인후과",
+      "external_id": "SNUBH-01307",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C: 유소아 난청클리닉, 소이증클리닉"
+    },
+    {
+      "name": "소아성인인공와우(최병윤)",
+      "department": "이비인후과",
+      "external_id": "SNUBH-OL058",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상욱",
+      "department": "이비인후과",
+      "external_id": "SNUBH-66440",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "외래처치(차원재)",
+      "department": "이비인후과",
+      "external_id": "SNUBH-OL046",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성우",
+      "department": "이비인후과",
+      "external_id": "SNUBH-66163",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "외래처치(조성우)",
+      "department": "이비인후과",
+      "external_id": "SNUBH-OL047",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장문영",
+      "department": "이비인후과",
+      "external_id": "SNUBH-66439",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지정연",
+      "department": "이비인후과",
+      "external_id": "SNUBH-01308",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사(두경부)",
+      "department": "이비인후과",
+      "external_id": "SNUBH-OL053",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사(이과)",
+      "department": "이비인후과",
+      "external_id": "SNUBH-OL023",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "일반진료",
+      "department": "이비인후과",
+      "external_id": "SNUBH-OL001",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우진",
+      "department": "이비인후과",
+      "external_id": "SNUBH-65590",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "두경부종양"
+    },
+    {
+      "name": "차원재",
+      "department": "이비인후과",
+      "external_id": "SNUBH-66062",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "두경부 종양"
+    },
+    {
+      "name": "외래처치(정우진)",
+      "department": "이비인후과",
+      "external_id": "SNUBH-OL015",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "외래처치(지정연)",
+      "department": "이비인후과",
+      "external_id": "SNUBH-COL08",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원석",
+      "department": "재활의학과",
+      "external_id": "SNUBH-65735",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "1동 1층 노인의료센터 교차 가능"
+    },
+    {
+      "name": "장원기",
+      "department": "재활의학과",
+      "external_id": "SNUBH-66222",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "1동 1층 노인의료센터 교차 가능"
+    },
+    {
+      "name": "백남종",
+      "department": "재활의학과",
+      "external_id": "SNUBH-00829",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임재영",
+      "department": "재활의학과",
+      "external_id": "SNUBH-01135",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류주석",
+      "department": "재활의학과",
+      "external_id": "SNUBH-01040",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "금(오전) 척추센터 진료"
+    },
+    {
+      "name": "범재원",
+      "department": "재활의학과",
+      "external_id": "SNUBH-66063",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "월(오후) 관절연부클리닉"
+    },
+    {
+      "name": "양은주",
+      "department": "재활의학과",
+      "external_id": "SNUBH-65578",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "화(오전) 암센터 진료"
+    },
+    {
+      "name": "서지현",
+      "department": "재활의학과",
+      "external_id": "SNUBH-66390",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오세현",
+      "department": "재활의학과",
+      "external_id": "SNUBH-83087",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한지원",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-65669",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "월,수 (오전) : 뇌신경센터 진료월 (오후) : 정신건강의학과 진료"
+    },
+    {
+      "name": "오대종",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-88350",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유정",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-83009",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "화(오전), 수(오후) : 뇌신경센터 진료"
+    },
+    {
+      "name": "유희정",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-00978",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "1동 2층 정신건강의학과 교차 가능- 화(오후), 수(오후)"
+    },
+    {
+      "name": "한재현",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-88250",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "1동 2층 정신건강의학과 교차가능 - 월(오후),금(오전,오후)"
+    },
+    {
+      "name": "NP인지(최유정)",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-NNP15",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "1동1층 노인의료센터 교차가능 - 금(오전)화(오전): 우울,불안환자 초진(인지장애 초진 예약금지)수(오후): 인지장애 초진(우울,불안 초진 예약금지)"
+    },
+    {
+      "name": "김기웅",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-00914",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C1: 유전성 치매클리닉 C2: 경도인지장애*치매클리닉"
+    },
+    {
+      "name": "윤인영",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-01037",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C1:수면장애, C2: 스트레스"
+    },
+    {
+      "name": "하태현",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-65279",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C1: 기분장애 클리닉 C2: 불안장애 클리닉"
+    },
+    {
+      "name": "김의태",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-01110",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C1: 조현병클리닉, C2: 초발 정신증 클리닉"
+    },
+    {
+      "name": "박혜연",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-65901",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화 오후, 수, 금 오전: 어지럼증센터 진료"
+    },
+    {
+      "name": "명우재",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-65900",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화 오후: 통증센터 진료"
+    },
+    {
+      "name": "김서영",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-88251",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍정경",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-88249",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "화 오전: 암센터 진료"
+    },
+    {
+      "name": "문선영",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-88351",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강봉진",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-89111",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "신초진 예약 불가."
+    },
+    {
+      "name": "정신건강의학과일반",
+      "department": "정신건강의학과",
+      "external_id": "SNUBH-NP000",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구경회",
+      "department": "정형외과",
+      "external_id": "SNUBH-89935",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "2주째 금요일만 진료/토요일 기준:고관절-성인 진료[수술하지 않고 재진진료만 가능]"
+    },
+    {
+      "name": "오주한",
+      "department": "정형외과",
+      "external_id": "SNUBH-01034",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장종범",
+      "department": "정형외과",
+      "external_id": "SNUBH-01092",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C: 무릎관절 스포츠 의학"
+    },
+    {
+      "name": "공현식",
+      "department": "정형외과",
+      "external_id": "SNUBH-01248",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박문석",
+      "department": "정형외과",
+      "external_id": "SNUBH-01217",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "월: 뇌성마비 & 소아 정형"
+    },
+    {
+      "name": "박문석(뇌성마비/고관절)",
+      "department": "정형외과",
+      "external_id": "SNUBH-JOS15",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용석",
+      "department": "정형외과",
+      "external_id": "SNUBH-01019",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C: 무릎관절 스포츠 의학"
+    },
+    {
+      "name": "이영균",
+      "department": "정형외과",
+      "external_id": "SNUBH-65559",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성기혁",
+      "department": "정형외과",
+      "external_id": "SNUBH-01185",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경민",
+      "department": "정형외과",
+      "external_id": "SNUBH-65682",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경민(족부변형클리닉)",
+      "department": "정형외과",
+      "external_id": "SNUBH-JOS14",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "2.4주 진료[수요일 기준]"
+    },
+    {
+      "name": "정현장",
+      "department": "정형외과",
+      "external_id": "SNUBH-66103",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "-목요일 오후 : 1.3.5주 [토요일기준]"
+    },
+    {
+      "name": "김용성",
+      "department": "정형외과",
+      "external_id": "SNUBH-66131",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "-월요일 오후 :  암센터 진료-수요일 오전/목요일 오후 격주[2.4주/토요일 기준] : 관절센터 진료"
+    },
+    {
+      "name": "김진각",
+      "department": "정형외과",
+      "external_id": "SNUBH-65936",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "진료과  확인후 예약가능"
+    },
+    {
+      "name": "박정위",
+      "department": "정형외과",
+      "external_id": "SNUBH-66181",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍완기",
+      "department": "정형외과",
+      "external_id": "SNUBH-88348",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상강사(족부)",
+      "department": "정형외과",
+      "external_id": "SNUBH-JOS12",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "6월 개설예정"
+    },
+    {
+      "name": "임상강사(슬관절1)",
+      "department": "정형외과",
+      "external_id": "SNUBH-JOS06",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "5월 개설예정"
+    },
+    {
+      "name": "임상강사(수부)",
+      "department": "정형외과",
+      "external_id": "SNUBH-JRCFF",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "6월 개설예정"
+    },
+    {
+      "name": "임상강사(견관절)",
+      "department": "정형외과",
+      "external_id": "SNUBH-JRCFA",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "9월 개설예정"
+    },
+    {
+      "name": "염진섭",
+      "department": "정형외과",
+      "external_id": "SNUBH-00981",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C:경추"
+    },
+    {
+      "name": "김호중",
+      "department": "정형외과",
+      "external_id": "SNUBH-01171",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "화: 척추변형 및 재수술 클리닉금: 소아변형 및 측만증 클리닉"
+    },
+    {
+      "name": "박상민",
+      "department": "정형외과",
+      "external_id": "SNUBH-65827",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권오상",
+      "department": "정형외과",
+      "external_id": "SNUBH-88362",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "C: 경추"
+    },
+    {
+      "name": "내과일반",
+      "department": "종합내과",
+      "external_id": "SNUBH-IMZ00",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "의료공백으로 인해 휴진"
+    },
+    {
+      "name": "이양진",
+      "department": "치과",
+      "external_id": "SNUBH-65436",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤필영",
+      "department": "치과",
+      "external_id": "SNUBH-65346",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이남기",
+      "department": "치과",
+      "external_id": "SNUBH-65525",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효정",
+      "department": "치과",
+      "external_id": "SNUBH-65592",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최태현",
+      "department": "치과",
+      "external_id": "SNUBH-66107",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지영",
+      "department": "치과",
+      "external_id": "SNUBH-66345",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종희",
+      "department": "치과",
+      "external_id": "SNUBH-66346",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김근서",
+      "department": "치과",
+      "external_id": "SNUBH-66281",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "장기연수(2026.4~2027.03)"
+    },
+    {
+      "name": "구정귀",
+      "department": "치과",
+      "external_id": "SNUBH-66282",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신보경",
+      "department": "치과",
+      "external_id": "SNUBH-88257",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장문정",
+      "department": "치과",
+      "external_id": "SNUBH-89784",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미연",
+      "department": "치과",
+      "external_id": "SNUBH-89533",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소현",
+      "department": "치과",
+      "external_id": "SNUBH-89986",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백형진",
+      "department": "치과",
+      "external_id": "SNUBH-88354",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선아(보철일반)",
+      "department": "치과",
+      "external_id": "SNUBH-DS055",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진원(구강외과일반)",
+      "department": "치과",
+      "external_id": "SNUBH-DS054",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지윤(보존일반)",
+      "department": "치과",
+      "external_id": "SNUBH-DS053",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신종원(치주일반)",
+      "department": "치과",
+      "external_id": "SNUBH-DS057",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권정현(구강외과일반)",
+      "department": "치과",
+      "external_id": "SNUBH-DS061",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송승민(보철일반)",
+      "department": "치과",
+      "external_id": "SNUBH-DS059",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신강민(치주일반)",
+      "department": "치과",
+      "external_id": "SNUBH-DS062",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강희(보존일반)",
+      "department": "치과",
+      "external_id": "SNUBH-DS060",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "치과일반",
+      "department": "치과",
+      "external_id": "SNUBH-DS000",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "스케일링",
+      "department": "치과",
+      "external_id": "SNUBH-DS003",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤상웅",
+      "department": "피부과",
+      "external_id": "SNUBH-01109",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "C:레이저"
+    },
+    {
+      "name": "허창훈",
+      "department": "피부과",
+      "external_id": "SNUBH-65277",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "C:레이저  C1:피부외과(피부 종양)"
+    },
+    {
+      "name": "최종원",
+      "department": "피부과",
+      "external_id": "SNUBH-01173",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "C: 레이저 (제외: 보톡스 주사 및 미용, 성형 레이저 예약 불가)"
+    },
+    {
+      "name": "나정임",
+      "department": "피부과",
+      "external_id": "SNUBH-01251",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "C:레이저"
+    },
+    {
+      "name": "신정원",
+      "department": "피부과",
+      "external_id": "SNUBH-66061",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "C:레이저, C1:피부외과(피부종양, 흉터 수술)"
+    },
+    {
+      "name": "김보리",
+      "department": "피부과",
+      "external_id": "SNUBH-66340",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "C1:피부외과(피부양성 종양), C: 레이저"
+    },
+    {
+      "name": "김민수",
+      "department": "피부과",
+      "external_id": "SNUBH-83034",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "1) 소아환자(15세미만) 예약 불가2) 피부외과적 질환은 진료 예약 불가   (피부외과적 시술 및 레이저 치료 안함)   수요일 오전: 레이저(CO2, 브이빔) 및 진료 후 처치, 시술 전용"
+    },
+    {
+      "name": "피부일반1",
+      "department": "피부과",
+      "external_id": "SNUBH-DM001",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "화요일 오전 일반크리닉: 진료과에서만 예약 가능; 4/20일이후 피부일반1 목요일 오후에만 진료 개설됨.(월요일 오전, 금요일 오후 진료 삭제)"
+    },
+    {
+      "name": "이호영",
+      "department": "핵의학과",
+      "external_id": "SNUBH-01252",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "진료위치는 가정의학과 외래 3번방"
+    },
+    {
+      "name": "이원우",
+      "department": "핵의학과",
+      "external_id": "SNUBH-01038",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송요성",
+      "department": "핵의학과",
+      "external_id": "SNUBH-66039",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방수미",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-65368",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지현",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-01213",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "목 오후 : 외래진료 및 노인암 다학제"
+    },
+    {
+      "name": "이근욱",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-01123",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "목요일 격주 2,4주(토요일기준)"
+    },
+    {
+      "name": "김유정",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-65552",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "금요일 오전 격주 2,4주(토요일기준)"
+    },
+    {
+      "name": "이정옥",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-65609",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진원",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-65695",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "목요일 오후 격주 1,3,5주(토요일기준)"
+    },
+    {
+      "name": "김세현",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-65728",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "목요일 오전 격주 2,4주(토요일기준)"
+    },
+    {
+      "name": "김지원",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-65821",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "수요일 오후 격주 2,4주(토요일기준)"
+    },
+    {
+      "name": "이지윤",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-66027",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유쾌한",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-88345",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서경진",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-66100",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "목요일 오후 격주 2,4주(토요일기준)"
+    },
+    {
+      "name": "김상아",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-66210",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은희",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-66273",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "수요일 오후 격주 1,3,5주(토요일기준)"
+    },
+    {
+      "name": "강민수",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-66427",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "목요일 오전 격주 1,3,5주(토요일기준)"
+    },
+    {
+      "name": "서정민",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-66428",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "금요일 오전 격주 1,3,5주(토요일기준)"
+    },
+    {
+      "name": "박우찬",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-88167",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "수요일 오후 격주 1,3,5주(토요일기준)"
+    },
+    {
+      "name": "채희정",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-66429",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "목요일 오후 격주 1,3,5주(토요일기준)"
+    },
+    {
+      "name": "이종석",
+      "department": "혈액종양내과",
+      "external_id": "SNUBH-89983",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "C1: 폐암 C2: 폐암"
+    },
+    {
+      "name": "이춘택",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-89934",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "1동 폐센터 : 수(오전) 진료"
+    },
+    {
+      "name": "김연욱",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-66159",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "1동 폐센터:화,목(오전), 진료"
+    },
+    {
+      "name": "다학제(폐암)",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-CCCG4",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재호",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-00973",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영재",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-65549",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종선",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-01157",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "화요일 오후: 폐섬유증/간질성폐질환 클리닉"
+    },
+    {
+      "name": "이연주",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-01246",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "C: 중환자 클리닉"
+    },
+    {
+      "name": "임성윤",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-66097",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권병수",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-66098",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "장기연수 : 2025.8.11(월)~2026.8.10(월)"
+    },
+    {
+      "name": "송명진",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-66158",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형준",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-66214",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이예진",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-66233",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주동현",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-66332",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황현택",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-88182",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지은",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-88223",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황아름",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-88344",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상(호흡기)",
+      "department": "호흡기내과",
+      "external_id": "SNUBH-RCF02",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": "수오후 : 조예린 임상강사"
+    }
+  ]
+}

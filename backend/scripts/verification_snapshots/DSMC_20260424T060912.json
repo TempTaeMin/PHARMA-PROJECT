@@ -1,0 +1,1334 @@
+{
+  "hospital_code": "DSMC",
+  "hospital_name": "계명대학교동산병원",
+  "status": "success",
+  "doctor_count": 264,
+  "dept_count": 42,
+  "sample_doctors": [
+    {
+      "name": "김대현",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "생활습관병, 건강증진, 노인병, 노화방지, 금연클리닉",
+      "profile_url": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=162",
+      "photo_url": "https://dongsan.dsmc.or.kr:49870/data/doctor/김대현.jpg",
+      "external_id": "DSMC-162",
+      "notes": "근무: 동산병원, 대구동산병원",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": [
+        {
+          "schedule_date": "2026-04-24",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-27",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-28",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-01",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-04",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-05",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-08",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-11",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-12",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-15",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-18",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-19",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-22",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-25",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-26",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-29",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-01",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-02",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-05",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-08",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-09",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-12",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-15",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-16",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-19",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-22",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-23",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-26",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-29",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-30",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-03",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-06",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-07",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-10",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-13",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-14",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-17",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-20",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-21",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-24",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        }
+      ]
+    },
+    {
+      "name": "서영성",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "생활습관병, 건강증진, 해외여행, 비만, 비만대사수술상담",
+      "profile_url": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=128",
+      "photo_url": "https://dongsan.dsmc.or.kr:49870/data/doctor/서영성 교수님.jpg",
+      "external_id": "DSMC-128",
+      "notes": "근무: 동산병원, 대구동산병원",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": [
+        {
+          "schedule_date": "2026-04-24",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-27",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-28",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-28",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-29",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-30",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-01",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-04",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-05",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-05",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-06",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-07",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-08",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-11",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-12",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-12",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-13",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-14",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-15",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-18",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-19",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-19",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-20",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-21",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-22",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-25",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-26",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-26",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-27",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-28",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-29",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-01",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-02",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-02",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-03",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-04",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-05",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-08",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-09",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-09",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-10",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-11",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-12",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-15",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-16",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-16",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-17",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-18",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-19",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-22",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-23",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-23",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-24",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-25",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-26",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-29",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-30",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-30",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-01",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-02",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-03",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-06",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-07",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-07",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-08",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-09",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-10",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-13",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-14",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-14",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-15",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-16",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-17",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-20",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-21",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-21",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-22",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-23",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-24",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        }
+      ]
+    },
+    {
+      "name": "홍승완",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "생활습관병, 건강증진, 금연클리닉, 해외여행, 노인의학, 일반진료, 기타 건강관련 상담",
+      "profile_url": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=237",
+      "photo_url": "https://dongsan.dsmc.or.kr:49870/data/doctor/홍승완 교수.jpg",
+      "external_id": "DSMC-237",
+      "notes": "근무: 동산병원, 대구동산병원",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": [
+        {
+          "schedule_date": "2026-04-29",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-30",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-06",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-07",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-13",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-14",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-20",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-21",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-27",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-05-28",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-03",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-04",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-10",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-11",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-17",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-18",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-24",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-06-25",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-01",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-02",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-08",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-09",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-15",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-16",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-22",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-07-23",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        }
+      ]
+    }
+  ],
+  "doctors_with_schedules": 256,
+  "doctors_with_date_schedules": 256,
+  "depts": [
+    "가정의학과",
+    "간담췌외과",
+    "감염내과",
+    "건강증진센터",
+    "내분비대사내과",
+    "노인골절 치유센터",
+    "대장항문외과",
+    "류마티스내과",
+    "마취통증의학과",
+    "방사선종양학과",
+    "병리과",
+    "비뇨의학과",
+    "산부인과",
+    "성형외과",
+    "소아외과",
+    "소아청소년과",
+    "소화기내과",
+    "신경과",
+    "신경외과",
+    "신장내과",
+    "심장내과",
+    "심장혈관흉부외과",
+    "안과",
+    "알레르기내과",
+    "영상의학과",
+    "외상·중환자외과",
+    "위장관외과",
+    "유방내분비외과",
+    "유전·희귀질환센터",
+    "응급의학과",
+    "이비인후과",
+    "이식혈관외과",
+    "재활의학과",
+    "정신건강의학과",
+    "정형외과",
+    "직업환경의학과",
+    "진단검사의학과",
+    "치과",
+    "피부과",
+    "핵의학과",
+    "혈액종양내과",
+    "호흡기내과"
+  ]
+}

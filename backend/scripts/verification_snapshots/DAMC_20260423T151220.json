@@ -1,0 +1,1387 @@
+{
+  "hospital_code": "DAMC",
+  "hospital_name": "동아대학교병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박주성",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "골다공증, 갱년기, 만성피로, 신경성질환, 가족상담",
+      "external_id": "DAMC-93773",
+      "n_schedules": 5,
+      "n_date_schedules": 65,
+      "notes": "2026년 04월 24일부터 2026년 04월 26일까지 출장 입니다."
+    },
+    {
+      "name": "한성호",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "노인의학, 노화방지, 비만, 임상영양, 통합의학",
+      "external_id": "DAMC-05115",
+      "n_schedules": 5,
+      "n_date_schedules": 65,
+      "notes": "2026년 04월 23일부터 2026년 04월 27일까지 출장 입니다."
+    },
+    {
+      "name": "박영진",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "건강증진, 종합건강검진, 생활습관병, 금연, 노인의학, 비만치료",
+      "external_id": "DAMC-09164",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 26일까지 출장 입니다."
+    },
+    {
+      "name": "신보경",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "임상영양, 비만, 노인의학, 건강검진, 암 치료 후 건강증진 * 건강증진센터 진료 : 목요일 오전",
+      "external_id": "DAMC-24011",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 26일까지 출장 입니다."
+    },
+    {
+      "name": "이호진",
+      "department": "감염내과",
+      "position": "교수",
+      "specialty": "감염질환, 불명열, 폐외결핵, HIV감염, 해외여행 전후 상담, 예방접종, 면역저하자 감염",
+      "external_id": "DAMC-10011",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "박찬호",
+      "department": "내분비내과",
+      "position": "교수",
+      "specialty": "당뇨, 갑상선, 골다공증, 부신, 뇌하수체, 고지혈증, 비만",
+      "external_id": "DAMC-23462",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "이성원",
+      "department": "류마티스내과",
+      "position": "교수",
+      "specialty": "류마티스관절염, 루푸스, 경피증, 통풍, 강직성척추염, 퇴행성관절염(골관절염), 베체트, 섬유근통증후군, 항인지질항체증후군, 혈관염, 염증성근염, 건선관절염, 쇼그렌증후군, 기타관절질환및자가면역질환",
+      "external_id": "DAMC-02468",
+      "n_schedules": 6,
+      "n_date_schedules": 78,
+      "notes": ""
+    },
+    {
+      "name": "이상엽",
+      "department": "류마티스내과",
+      "position": "교수",
+      "specialty": "류마티스관절염,루푸스,경피증,통풍,강직성척추염,퇴행성관절염(골관절염),베체트,항인지질항체증후군,혈관염,염증성근염,건선관절염,쇼그렌증후군,기타관절질환 및 자가면역질환, 면역관절질환, 각종 희귀면역질환 및 산정특례질환 *금요일(오후): 초음파시술",
+      "external_id": "DAMC-11221",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "박준용",
+      "department": "류마티스내과",
+      "position": "교수",
+      "specialty": "류마티스관절염,루푸스,경피증,통풍,강직성척추염,퇴행성관절염(골관절염),베체트,섬유근통증후군,항인지질항체증후군,혈관염,염증성근염,건선관절염,쇼그렌증후군,기타관절질환및자가면역질환",
+      "external_id": "DAMC-23237",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "이승철",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "통증관리, 중환자관리",
+      "external_id": "DAMC-05113",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "최소론",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "안 ‧ 이비인후과, 외래마취",
+      "external_id": "DAMC-08580",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상융",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "통증관리, 뇌신경마취",
+      "external_id": "DAMC-17166",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "정찬종",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "소아마취, 외래마취, 이식마취",
+      "external_id": "DAMC-91791",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태영",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "흉곽마취",
+      "external_id": "DAMC-24253",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영민",
+      "department": "방사선종양학과",
+      "position": "교수",
+      "specialty": "뇌종양, 두경부암, 간암, 비뇨기암, 부인암, 방사선수술",
+      "external_id": "DAMC-04114",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김성민",
+      "department": "방사선종양학과",
+      "position": "교수",
+      "specialty": "폐암, 흉부종양, 유방암, 간암, 소아암, 방사선수술",
+      "external_id": "DAMC-23246",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": "2026년 04월 23일부터 2026년 04월 25일까지 출장 입니다."
+    },
+    {
+      "name": "이형식",
+      "department": "방사선종양학과",
+      "position": "교수",
+      "specialty": "유방암, 소화기암, 방사선수술",
+      "external_id": "DAMC-92762",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "나서희",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "신장·산부인과·비뇨생식기병리, 분자병리",
+      "external_id": "DAMC-93768",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노미숙",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "폐병리, 소화기병리, 심혈관병리, 안병리, 정밀분석의료",
+      "external_id": "DAMC-96370",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민경",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "혈액병리, 내분비병리, 연부조직, 근골격계병리, 정밀분석의료",
+      "external_id": "DAMC-16446",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한송희",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "소화기병리, 간담도췌병리, 뇌종양병리, 세포병리, 분자병리",
+      "external_id": "DAMC-18581",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종혁",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "외과병리, 세포병리, 법의병리",
+      "external_id": "DAMC-25504",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태효",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "전립선, 종양, 로봇수술, 복강경",
+      "external_id": "DAMC-10187",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 23일부터 2026년 04월 25일까지 휴진 입니다."
+    },
+    {
+      "name": "김수동",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "로봇수술, 전립선, 종양, 남성의학",
+      "external_id": "DAMC-11670",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "이기수",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "요로결석, 비뇨기계종양, 복강경, 로봇수술, 전립선",
+      "external_id": "DAMC-15214",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 26일까지 휴진 입니다."
+    },
+    {
+      "name": "최동원",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "배뇨장애, 신경인성방광, 결석, 전립선, 요로감염",
+      "external_id": "DAMC-24130",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "고혁준",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "전립선, 방광 ,종양, 로봇수술, 복강경, 결석, 요로감염",
+      "external_id": "DAMC-21625",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "박정우",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "부인종양, 복강경수술, 로봇수술, 골반장기탈출증",
+      "external_id": "DAMC-13704",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "오소라",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "고위험산모, 정상산모, 로봇수술, 복강경수술, 일반부인과",
+      "external_id": "DAMC-19586",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "복강경수술, 로봇수술, 일반부인과, 정상임신",
+      "external_id": "DAMC-22680",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이은현",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "복강경수술, 로봇수술, 부인종양, 골반장기탈출증",
+      "external_id": "DAMC-25123",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "일반의사",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "부인과",
+      "external_id": "DAMC-71112",
+      "n_schedules": 10,
+      "n_date_schedules": 132,
+      "notes": ""
+    },
+    {
+      "name": "이근철",
+      "department": "성형외과",
+      "position": "교수",
+      "specialty": "유방 성형 및 재건, 미용성형, 안면 윤곽 및 골절, 미세 재건 성형, 피부암",
+      "external_id": "DAMC-23304",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이동민",
+      "department": "성형외과",
+      "position": "교수",
+      "specialty": "안면외상, 양성종양, 사지재건, 만성창상, 욕창, 당뇨발, 미용성형, 피부암",
+      "external_id": "DAMC-23243",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "박태서",
+      "department": "성형외과",
+      "position": "교수",
+      "specialty": "안면외상 및 재건",
+      "external_id": "DAMC-25343",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "정진아",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "소아알레르기(천식, 아토피피부염, 알레르기비염), 호흡기질환",
+      "external_id": "DAMC-02476",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이영석",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "소아심장",
+      "external_id": "DAMC-03439",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김묘징",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "고위험신생아, 미숙아, 미숙아 조기중재",
+      "external_id": "DAMC-08578",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "이선영",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "고위험신생아, 미숙아, 미숙아 조기중재",
+      "external_id": "DAMC-23241",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "2026년 04월 21일부터 2026년 04월 25일까지 휴진 입니다."
+    },
+    {
+      "name": "조재구",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "고위험신생아, 미숙아, 미숙아 조기중재",
+      "external_id": "DAMC-23479",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노명환",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "담석, 담도암, 췌장암, 췌장염",
+      "external_id": "DAMC-97746",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "이종훈",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "대장암, 대장용종, 염증성 장질환, 과민성 장증후군",
+      "external_id": "DAMC-02470",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 25일까지 출장 입니다."
+    },
+    {
+      "name": "백양현",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "※해외연수(~26.5.31) 간암, 간경변, 간염, 간질환",
+      "external_id": "DAMC-10188",
+      "n_schedules": 4,
+      "n_date_schedules": 32,
+      "notes": "2026년 03월 14일부터 2026년 05월 31일까지 휴진 입니다."
+    },
+    {
+      "name": "이종윤",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "대장암, 대장용종, 염증성 장질환, 과민성 장증후군",
+      "external_id": "DAMC-20240",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "고명석",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "위암, 식도암, 치료내시경",
+      "external_id": "DAMC-21236",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 25일까지 출장 입니다."
+    },
+    {
+      "name": "김영대",
+      "department": "순환기내과",
+      "position": "교수",
+      "specialty": "심부전, 심근경색, 심근질환, 관상동맥질환",
+      "external_id": "DAMC-23256",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "박태호",
+      "department": "순환기내과",
+      "position": "교수",
+      "specialty": "순환기, 판막질환, 폐동맥 고혈압",
+      "external_id": "DAMC-04116",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "박종성",
+      "department": "순환기내과",
+      "position": "교수",
+      "specialty": "순환기, 부정맥(두근거림, 실신, 심장마비, 인공심박기)",
+      "external_id": "DAMC-10706",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "박경일",
+      "department": "순환기내과",
+      "position": "교수",
+      "specialty": "관상동맥질환(가슴통증), 고혈압, 노인성 고혈압, 여성심장",
+      "external_id": "DAMC-11219",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "조용락",
+      "department": "순환기내과",
+      "position": "교수",
+      "specialty": "순환기, 말초혈관, 대동맥",
+      "external_id": "DAMC-13702",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "김재우",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "파킨슨병, 치매 ★초진은 예약만 가능",
+      "external_id": "DAMC-21631",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "차재관",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "뇌졸중, 두통, 어지럼증, 혈관성 치매 [문의]뇌혈관센터 (051)240-5570",
+      "external_id": "DAMC-97749",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천상명",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "파킨슨병, 이상운동장애, 수면장애",
+      "external_id": "DAMC-07197",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "김대현",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "뇌졸중, 두통, 어지럼증, 경동맥질환, 뇌졸중검진 [문의]뇌혈관센터 (051)240-5570",
+      "external_id": "DAMC-10191",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종국",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "신경근육질환, 자가면역질환, 두통, 실신",
+      "external_id": "DAMC-11222",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 24일까지 출장 입니다."
+    },
+    {
+      "name": "김기욱",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "뇌종양, 뇌정위수술, 뇌하수체 종양, 전이성 뇌종양, 노발리스 방사선 수술 [문의]신경외과 (051)240-5240",
+      "external_id": "DAMC-22442",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "송영진",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "두개저뇌종양, 악성 뇌종양, 뇌하수체 종양, 뇌정위외과, 노발리스 방사선 수술 [문의]신경외과 (051)240-5240",
+      "external_id": "DAMC-05112",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "권영민",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "목디스크 및 협착증, 허리디스크 및 협착증, 척추종양, 감염성 척추질환 [문의]척추센터 (051)240-5450",
+      "external_id": "DAMC-10707",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재형",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "뇌혈관중재술(동맥류 코일색전술 및 급성기 뇌졸중 시술), 미세뇌혈관질환(뇌동맥류 클립결찰술, 동정맥기형) 수술 [문의]뇌혈관센터 (051)240-5570",
+      "external_id": "DAMC-12192",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성경수",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "뇌종양, 뇌정위수술, 뇌하수체 종양, 노발리스 방사선 수술 [문의]신경외과 (051)240-5240",
+      "external_id": "DAMC-19154",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "사구체질환, 당뇨신장병",
+      "external_id": "DAMC-93771",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "안원석",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "영양 및 지방 대사, 전해질장애, 혈관석회화",
+      "external_id": "DAMC-03435",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이수미",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "신부전, 사구체질환, 다낭신",
+      "external_id": "DAMC-14152",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "양동은",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "만성신부전, 투석, 신이식",
+      "external_id": "DAMC-24123",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이혜정",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "급성신부전, 만성신부전, 신대체요법",
+      "external_id": "DAMC-24185",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "조광조",
+      "department": "심장혈관흉부외과",
+      "position": "교수",
+      "specialty": "혈관 및 대동맥 질환, 성인심장질환 [문의]심혈관센터 (051)240-5190",
+      "external_id": "DAMC-96468",
+      "n_schedules": 2,
+      "n_date_schedules": 21,
+      "notes": "2026년 04월 23일부터 2026년 05월 13일까지 휴진 입니다."
+    },
+    {
+      "name": "정상석",
+      "department": "심장혈관흉부외과",
+      "position": "교수",
+      "specialty": "폐암, 폐질환, 식도질환, 종격동질환",
+      "external_id": "DAMC-20433",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "이정훈",
+      "department": "심장혈관흉부외과",
+      "position": "교수",
+      "specialty": "폐암, 폐, 흉막, 종격동질환, 흉부외상, 흉벽기형, 다한증, 식도",
+      "external_id": "DAMC-20587",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "안희배",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "성형안과, 눈물길, 안와질환, 안외상",
+      "external_id": "DAMC-01543",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "정우진",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "망막, 유리체, 포도막",
+      "external_id": "DAMC-08184",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "진상욱",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "녹내장, 백내장, 신경안과",
+      "external_id": "DAMC-16512",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "안성현",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "망막, 유리체, 포도막, 백내장",
+      "external_id": "DAMC-23464",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김남영",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "성형안과, 눈물길, 안와질환, 안외상",
+      "external_id": "DAMC-22682",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "남영희",
+      "department": "알레르기내과",
+      "position": "교수",
+      "specialty": "천식, 만성기침, 알레르기성비염, 두드러기, 아토피피부염, 약물 및 기타 알레르기",
+      "external_id": "DAMC-14653",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "최순섭",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "신경, 두경부 영상의학",
+      "external_id": "DAMC-22684",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강명진",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "뇌혈관중재치료, 신경, 두경부 영상의학",
+      "external_id": "DAMC-06130",
+      "n_schedules": 10,
+      "n_date_schedules": 132,
+      "notes": ""
+    },
+    {
+      "name": "권희진",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "복부영상",
+      "external_id": "DAMC-08186",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강은주",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "흉부 및 심장영상의학",
+      "external_id": "DAMC-12193",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상현",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "뇌혈관중재술, 신경, 두경부영상의학",
+      "external_id": "DAMC-17167",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최홍조",
+      "department": "외과",
+      "position": "교수",
+      "specialty": "대장항문외과, 외과종양학(대장암), 복강경 대장수술, 항문직장생리질환",
+      "external_id": "DAMC-23478",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 25일까지 휴진 입니다."
+    },
+    {
+      "name": "김민찬",
+      "department": "외과",
+      "position": "교수",
+      "specialty": "위장관 외과, 복강경 및 로봇위수술, 비만대사수술, 항역류수술",
+      "external_id": "DAMC-02474",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 23일부터 2026년 04월 25일까지 출장 입니다."
+    },
+    {
+      "name": "박기재",
+      "department": "외과",
+      "position": "교수",
+      "specialty": "대장항문외과, 복강경 대장수술, 대장암",
+      "external_id": "DAMC-03436",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김성흔",
+      "department": "외과",
+      "position": "교수",
+      "specialty": "갑상선내분비외과, 탈장, 로봇수술",
+      "external_id": "DAMC-03655",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "노영훈",
+      "department": "외과",
+      "position": "교수",
+      "specialty": "간담도췌장, 복강경",
+      "external_id": "DAMC-08575",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "정진우",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "외상학, 중환자의학",
+      "external_id": "DAMC-11669",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재훈",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "소생의학, 응급영상",
+      "external_id": "DAMC-13174",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권인호",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "환경응급, 응급영상",
+      "external_id": "DAMC-16602",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지은",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "재난의학, 중환자의학",
+      "external_id": "DAMC-20244",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유리",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "임상독성학, 응급의학",
+      "external_id": "DAMC-21237",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강명구",
+      "department": "이비인후과",
+      "position": "교수",
+      "specialty": "중이염, 진주종, 선천성 진주종, 난청",
+      "external_id": "DAMC-94714",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "배우용",
+      "department": "이비인후과",
+      "position": "교수",
+      "specialty": "축농증, 알레르기, 후각장애, 비종양, 비강암, 미각장애, 코골이, 수면무호흡",
+      "external_id": "DAMC-05591",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "이동근",
+      "department": "이비인후과",
+      "position": "교수",
+      "specialty": "갑상선암, 구강경유 로봇 갑상선 수술, 후두암, 음성질환, 구강암, 침샘종양, 두경부종양",
+      "external_id": "DAMC-18186",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "정동원",
+      "department": "이비인후과",
+      "position": "교수",
+      "specialty": "코성형, 부비동염, 비염, 수면무호흡, 코골이, 후각장애",
+      "external_id": "DAMC-24283",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "박헌수",
+      "department": "이비인후과",
+      "position": "교수",
+      "specialty": "갑상선암, 두경부암, 음성장애, 인후두 역류성질환, 안면외상, 경부림프절클리닉",
+      "external_id": "DAMC-96455",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "일반의사",
+      "department": "일반내과",
+      "position": "교수",
+      "specialty": "일반내과",
+      "external_id": "DAMC-71100",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "이경우",
+      "department": "재활의학과",
+      "position": "교수",
+      "specialty": "뇌혈관질환 재활치료, 뇌졸중/심장 재활치료 뇌졸중, 근전도, 림프부종, 통증",
+      "external_id": "DAMC-02475",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "이종화",
+      "department": "재활의학과",
+      "position": "교수",
+      "specialty": "뇌졸중/심장 재활치료 근골격계질환, 족부의학, 의지, 보조기, 뇌·척수손상, 근전도, 심장, 호흡재활",
+      "external_id": "DAMC-08579",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "김민아",
+      "department": "재활의학과",
+      "position": "교수",
+      "specialty": "뇌졸중/심장 재활치료 뇌졸중, 심장, 호흡, 삼킴장애, 근골격계질환",
+      "external_id": "DAMC-24188",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "김성환",
+      "department": "정신건강의학과",
+      "position": "교수",
+      "specialty": "일반정신의학",
+      "external_id": "DAMC-07195",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "정신건강의학과",
+      "position": "교수",
+      "specialty": "우울장애, 불안장애, 노인정신질환",
+      "external_id": "DAMC-23239",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": ""
+    },
+    {
+      "name": "전덕인",
+      "department": "정신건강의학과",
+      "position": "교수",
+      "specialty": "성인ADHD, 우울증, 조울병, 스트레스",
+      "external_id": "DAMC-25478",
+      "n_schedules": 10,
+      "n_date_schedules": 132,
+      "notes": ""
+    },
+    {
+      "name": "김철홍",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "견-주관절(어깨,팔꿈치 관절)질환 및 스포츠손상",
+      "external_id": "DAMC-22683",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "이명진",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "족부, 족관절, 당뇨족, 스포츠손상",
+      "external_id": "DAMC-04113",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김현준",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "고관절, 고관절 골절",
+      "external_id": "DAMC-10709",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "정성윤",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "수부, 손목 ,팔꿈치질환, 상지골절, 말초신경수술, 상지종양",
+      "external_id": "DAMC-22436",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 25일까지 출장 입니다."
+    },
+    {
+      "name": "김정신",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "무릎관절, 관절내시경, 스포츠손상, 로봇인공관절수술, 하지종양 * 신경종은 과로 문의 부탁드립니다.",
+      "external_id": "DAMC-25093",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "정진헌",
+      "department": "중환자의학과",
+      "position": "교수",
+      "specialty": "신경계중환자, 뇌졸중 [문의]뇌혈관센터 (051)240-5570",
+      "external_id": "DAMC-17616",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김래영",
+      "department": "중환자의학과",
+      "position": "교수",
+      "specialty": "",
+      "external_id": "DAMC-22430",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김가연",
+      "department": "중환자의학과",
+      "position": "교수",
+      "specialty": "",
+      "external_id": "DAMC-22431",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강호",
+      "department": "중환자의학과",
+      "position": "교수",
+      "specialty": "외과계 중환자치료, 쇽(shock)",
+      "external_id": "DAMC-23480",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심정용",
+      "department": "중환자의학과",
+      "position": "교수",
+      "specialty": "중환자치료",
+      "external_id": "DAMC-25190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정일",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "직업병, 직업-질환 관련성 평가 특수건강진단 전문의",
+      "external_id": "DAMC-98619",
+      "n_schedules": 5,
+      "n_date_schedules": 65,
+      "notes": ""
+    },
+    {
+      "name": "김병권",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "환경의학, 중금속 노출평가",
+      "external_id": "DAMC-09162",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "조성식",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "직업병, 환경의학, 유해물질 노출평가, 직업-질환 관련성 평가, 직무스트레스, 직장인 수면장애 특수건강진단 전문의",
+      "external_id": "DAMC-19157",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "이제니",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "위장관내시경, 내과전문의(세부전공:소화기내과)",
+      "external_id": "DAMC-25153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수연",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "영상의학",
+      "external_id": "DAMC-26033",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경희",
+      "department": "진단검사의학과",
+      "position": "교수",
+      "specialty": "수혈의학, 수혈관리실",
+      "external_id": "DAMC-02473",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우광숙",
+      "department": "진단검사의학과",
+      "position": "교수",
+      "specialty": "임상미생물",
+      "external_id": "DAMC-11775",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인화",
+      "department": "진단검사의학과",
+      "position": "교수",
+      "specialty": "진단면역, 이식면역, 분자유전, 유전자검사, 유전상담 * 화오후 : 유방센터 진료 (2,4주) * 목오후 : 어린이센터 진료 (2,4주)",
+      "external_id": "DAMC-23247",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철훈",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "턱얼굴교정(양악)수술,임플란트 및 치조골 이식, 턱관절, 구강악안면 질환 수술(외상, 종양, 발치 등) ※ 금요일 오후 예약환자만 진료",
+      "external_id": "DAMC-02464",
+      "n_schedules": 5,
+      "n_date_schedules": 65,
+      "notes": "2026년 04월 21일부터 2026년 04월 24일까지 휴진 입니다."
+    },
+    {
+      "name": "김복주",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "턱얼굴교정(양악)수술,임플란트 및 치조골 이식, 턱관절, 구강악안면 질환 수술(외상, 종양, 발치 등) ※ 월요일 오후 초진 진료 없음",
+      "external_id": "DAMC-13705",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "김정한",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "턱얼굴교정(양악)수술,임플란트 및 치조골 이식, 턱관절, 구강악안면 질환 수술(외상, 종양, 발치 등) ※ 매달 첫째주 목요일 오전 진료 없음 ※ 목요일 오후 초진 진료 없음(단 첫째주 목요일 오후 초진 진료 있음)",
+      "external_id": "DAMC-21233",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "강선우",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "임플란트 보철, 전치부 심미보철, 고정성 보철, 총의치 및 국소 보철, 악안면 재건을 위한 보철",
+      "external_id": "DAMC-23465",
+      "n_schedules": 5,
+      "n_date_schedules": 65,
+      "notes": ""
+    },
+    {
+      "name": "전영미",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "성인교정, 소아교정, 심미교정, 치주-보철교정, 악교정수술전·후교정, 안면기형교정, 보존치료 ※ 둘째 주 토요일 오전진료 가능",
+      "external_id": "DAMC-01084",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "윤정호",
+      "department": "피부과",
+      "position": "교수",
+      "specialty": "알러지, 피부 종양 ※ 금요일(오후) : 재진 환자만 예약 가능",
+      "external_id": "DAMC-21231",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김기호",
+      "department": "피부과",
+      "position": "교수",
+      "specialty": "탈모, 건선, 백반증, 혈관종, 색소점질환 * 매달 첫째주 목요일 오후 1시반~3시 : 켈로이드 및 여드름 흉터 시술,사마귀 * 화요일 : 전선중점 진료 * 월요일 오후 화요일 오후 : 피부 알레르기 진단진료, 문제 손발바닥, 접촉성 피부염 진단치료",
+      "external_id": "DAMC-24187",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "강도영",
+      "department": "핵의학과",
+      "position": "교수",
+      "specialty": "갑상선암, 갑상선항진증, 방사성동위원소치료(전이성 뼈암, 전립선암)",
+      "external_id": "DAMC-00562",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "정영진",
+      "department": "핵의학과",
+      "position": "교수",
+      "specialty": "갑상선암, 갑상선항진증, 방사성동위원소치료(전이성 뼈암, 전립선암)",
+      "external_id": "DAMC-12641",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "전성민",
+      "department": "핵의학과",
+      "position": "교수",
+      "specialty": "갑상선암, 갑상선항진증, 방사성동위원소치료(전이성 뼈암, 전립선암)",
+      "external_id": "DAMC-24128",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김성현",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "혈액(급성 및 만성 백혈병, 다발골수종, 기타혈액암, 빈혈, 혈판감소증, 조혈모세포이식, CAR T-세포치료)",
+      "external_id": "DAMC-04117",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "오성용",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "종양(위암, 간담췌암, 대장암), 혈액(림프종)",
+      "external_id": "DAMC-08183",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "이수이",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "종양(유방암, 폐암, 두경부암)",
+      "external_id": "DAMC-10189",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "혈액(다발골수종, 림프종, 급성 및 만성 림프구성 백혈병, 기타혈액암, 빈혈, 혈소판감소증, 조혈모세포이식, CAR T-세포치료)",
+      "external_id": "DAMC-14163",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "허석재",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "종양(위암, 대장암, 췌장암, 담도암, 비뇨기암), 첨단재생세포치료",
+      "external_id": "DAMC-20586",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "엄수정",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "폐암, 만성 폐쇄성 폐질환",
+      "external_id": "DAMC-09586",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김인수",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "폐암, 폐결절",
+      "external_id": "DAMC-20241",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "2026년 04월 24일부터 2026년 04월 24일까지 휴진 입니다."
+    },
+    {
+      "name": "강보형",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "결핵, 비결핵, 간질성 폐질환",
+      "external_id": "DAMC-15186",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2026년 03월 01일부터 2026년 07월 31일까지 휴진 입니다."
+    },
+    {
+      "name": "이혁",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "만성 폐쇄성 폐질환, 폐결핵, 폐렴, 호흡곤란, 만성기침, 기타 호흡기질환",
+      "external_id": "DAMC-26034",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    }
+  ]
+}

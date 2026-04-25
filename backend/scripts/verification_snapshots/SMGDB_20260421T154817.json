@@ -1,0 +1,231 @@
+{
+  "hospital_code": "SMGDB",
+  "hospital_name": "서울특별시 동부병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김윤이",
+      "department": "내과",
+      "external_id": "SMGDB-내과-김윤이",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "삼성제일병원 서울아산병원 알레르기내과"
+    },
+    {
+      "name": "이창욱",
+      "department": "내과",
+      "external_id": "SMGDB-내과-이창욱",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "삼성제일병원 내과전문의, 의학박사"
+    },
+    {
+      "name": "이보라",
+      "department": "내과",
+      "external_id": "SMGDB-내과-이보라",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "혜민병원 진료과장"
+    },
+    {
+      "name": "유연화",
+      "department": "내과",
+      "external_id": "SMGDB-내과-유연화",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "을지대학교 의과대학 내과 외래교수, 대한소화관운동학회 신진연구자상 2013"
+    },
+    {
+      "name": "김선민",
+      "department": "내과",
+      "external_id": "SMGDB-내과-김선민",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "한림병원 진료과장"
+    },
+    {
+      "name": "소윤섭",
+      "department": "외과",
+      "external_id": "SMGDB-외과-소윤섭",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "서울의료원 외과 고려대의대 외래교수"
+    },
+    {
+      "name": "조익행",
+      "department": "외과",
+      "external_id": "SMGDB-외과-조익행",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "서울의료원 외과 현 고려대의대 외래교수"
+    },
+    {
+      "name": "강동하",
+      "department": "정형외과",
+      "external_id": "SMGDB-정형외과-강동하",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "서울적십자병원 현 고려대의대 외래교수"
+    },
+    {
+      "name": "김현정",
+      "department": "정형외과",
+      "external_id": "SMGDB-정형외과-김현정",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "아주대의대 정형외과 교수"
+    },
+    {
+      "name": "신훈범",
+      "department": "산부인과",
+      "external_id": "SMGDB-산부인과-신훈범",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "경희대학교 의과대학 외래교수"
+    },
+    {
+      "name": "염혜원",
+      "department": "소아청소년과",
+      "external_id": "SMGDB-소아청소년과-염혜원",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "이화여자대학병원 소아소화기 영양분과 임상조교수"
+    },
+    {
+      "name": "김현주",
+      "department": "소아청소년과",
+      "external_id": "SMGDB-소아청소년과-김현주",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "아주의대 의학유전학과 명예교수 전 대한의학유전학회 회장 현 한국희귀질환재단 이사장"
+    },
+    {
+      "name": "이수환",
+      "department": "비뇨기과",
+      "external_id": "SMGDB-비뇨기과-이수환",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "원자력병원 전립선비대 레이저기화수술 Preceplor Trainer"
+    },
+    {
+      "name": "김성수",
+      "department": "비뇨기과",
+      "external_id": "SMGDB-비뇨기과-김성수",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "한전의료재단 한일병원 서울대학교 분당서울대병원 비뇨기과 임상강사"
+    },
+    {
+      "name": "이평원",
+      "department": "신경과",
+      "external_id": "SMGDB-신경과-이평원",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "삼성서울병원 신경과 현 성균관의대 삼성서울병원 외래조교수"
+    },
+    {
+      "name": "오세미",
+      "department": "신경과",
+      "external_id": "SMGDB-신경과-오세미",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "삼성서울병원 신경과 전문의 삼성서울병원 신경과 뇌졸중, 두통 전임의 수료 성균관의대 삼성서울병원 외래조교수"
+    },
+    {
+      "name": "김영신",
+      "department": "가정의학과",
+      "external_id": "SMGDB-가정의학과-김영신",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "경희대학교 부속병원"
+    },
+    {
+      "name": "김혜지",
+      "department": "가정의학과",
+      "external_id": "SMGDB-가정의학과-김혜지",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "경희의료원"
+    },
+    {
+      "name": "임지원",
+      "department": "안과",
+      "external_id": "SMGDB-안과-임지원",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "춘천성심병원 조교수"
+    },
+    {
+      "name": "유영설",
+      "department": "이비인후과",
+      "external_id": "SMGDB-이비인후과-유영설",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "고려대학교 부속병원 현 고려대의대 외래교수"
+    },
+    {
+      "name": "최선아",
+      "department": "정신건강의학과",
+      "external_id": "SMGDB-정신건강의학과-최선아",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "국립서울병원"
+    },
+    {
+      "name": "김성아",
+      "department": "치과",
+      "external_id": "SMGDB-치과-김성아",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "김성아치과의원 원장"
+    },
+    {
+      "name": "양지연",
+      "department": "치과",
+      "external_id": "SMGDB-치과-양지연",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "예사랑치과 원장"
+    },
+    {
+      "name": "김귀숙",
+      "department": "건강관리과",
+      "external_id": "SMGDB-건강관리과-김귀숙",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "고려대의대, 순천향의대 순천향의대 외래교수"
+    },
+    {
+      "name": "한미애",
+      "department": "마취통증의학과",
+      "external_id": "SMGDB-마취통증의학과-한미애",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "서울대학병원 임상조교수, 인제대학교 서울백병원 부교수, 근로복지공단 자문의사"
+    },
+    {
+      "name": "이계숙",
+      "department": "진단검사의학과",
+      "external_id": "SMGDB-진단검사의학과-이계숙",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "한림의대 강남삼성병원 교수 현 한림의대외래교수"
+    },
+    {
+      "name": "권양숙",
+      "department": "영상의학과",
+      "external_id": "SMGDB-영상의학과-권양숙",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "한국보훈병원 서울의료원 건강검진센터"
+    },
+    {
+      "name": "이창준",
+      "department": "영상의학과",
+      "external_id": "SMGDB-영상의학과-이창준",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "국립의료원 진료부장 건양대학교 병원 임상교수"
+    }
+  ]
+}

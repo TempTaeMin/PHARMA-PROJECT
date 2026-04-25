@@ -1,0 +1,4660 @@
+{
+  "hospital_code": "GNAH",
+  "hospital_name": "강릉아산병원",
+  "status": "success",
+  "crawled_at": "2026-04-23T15:17:25.080716",
+  "doctor_count": 148,
+  "weekly_schedule_total": 395,
+  "date_schedule_total": 0,
+  "doctors": [
+    {
+      "name": "오미경",
+      "department": "가정의학과",
+      "position": "",
+      "specialty": "질병예방, 노인의학, 가족주치의, 기능의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=104&sch_depart_code=FM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-104",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "채은혜",
+      "department": "가정의학과",
+      "position": "",
+      "specialty": "만성질환관리, 건강검진 이상소견, 비만, 해외 유학/연수 신검",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=271&sch_depart_code=FM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-271",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "송은희",
+      "department": "감염내과",
+      "position": "",
+      "specialty": "감염질환, 불명열, 성인예방접종, 해외여행클리닉, 폐외결핵, 에이즈",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=52&sch_depart_code=INF&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-52",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김진엽",
+      "department": "내분비내과",
+      "position": "",
+      "specialty": "당뇨, 갑상선질환, 골다공증, 뇌하수체, 부신 질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=31&sch_depart_code=END&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-31",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "심명숙",
+      "department": "내분비내과",
+      "position": "",
+      "specialty": "당뇨, 갑상선질환, 골다공증, 지질대사 이상",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=32&sch_depart_code=END&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-32",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김원준",
+      "department": "내분비내과",
+      "position": "임상부교수",
+      "specialty": "당뇨, 갑상선질환, 골다공증",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=33&sch_depart_code=END&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-33",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김하영",
+      "department": "내분비내과",
+      "position": "",
+      "specialty": "당뇨병,갑상선,골다공증,부신질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=177&sch_depart_code=END&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-177",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김성수",
+      "department": "류마티스내과",
+      "position": "",
+      "specialty": "류마티스관절염, 퇴행성관절염, 루프스, 골다공증, 통풍, 강직성척추염, 자가면역질환, 관절염클리닉(금오전)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=29&sch_depart_code=RH&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-29",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김보영",
+      "department": "류마티스내과",
+      "position": "",
+      "specialty": "류마티스관절염, 퇴행성관절염, 관절초음파, 루푸스, 골다공증, 통풍, 강직성척추염, 자가면역질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=30&sch_depart_code=RH&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-30",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "성규완",
+      "department": "마취통증의학과",
+      "position": "",
+      "specialty": "흉부외과마취, 성형외과마취, 회복관리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=138&sch_depart_code=ANS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-138",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김영기",
+      "department": "마취통증의학과",
+      "position": "",
+      "specialty": "통증치료, 정형외과마취",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=136&sch_depart_code=ANS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-136",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김성수",
+      "department": "마취통증의학과",
+      "position": "",
+      "specialty": "비뇨의학과마취, 안과마취, 치과마취, 로봇수술마취, 출장마취",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=137&sch_depart_code=ANS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-137",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "정화성",
+      "department": "마취통증의학과",
+      "position": "",
+      "specialty": "이비인후과마취, 외과마취",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=140&sch_depart_code=ANS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-140",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "정의균",
+      "department": "마취통증의학과",
+      "position": "",
+      "specialty": "신경외과마취, 정형외과마취, 회복관리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=141&sch_depart_code=ANS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-141",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김진선",
+      "department": "마취통증의학과",
+      "position": "",
+      "specialty": "산부인과마취, 정형외과마취, 회복관리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=142&sch_depart_code=ANS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-142",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "유병우",
+      "department": "마취통증의학과",
+      "position": "전담교수",
+      "specialty": "정형외과마취",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=253&sch_depart_code=ANS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-253",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이재호",
+      "department": "마취통증의학과",
+      "position": "전담교수",
+      "specialty": "일반외과마취",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=304&sch_depart_code=ANS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-304",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "최원식",
+      "department": "방사선종양학과",
+      "position": "",
+      "specialty": "뇌암, 폐암, 흉선종, 상부위장관암, 간췌담도암 및 관련 전이암",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=122&sch_depart_code=RO&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-122",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "신성수",
+      "department": "방사선종양학과",
+      "position": "",
+      "specialty": "유방암, 하부위장관암, 비뇨기암",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=121&sch_depart_code=RO&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-121",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정인혜",
+      "department": "방사선종양학과",
+      "position": "",
+      "specialty": "두경부암, 부인암, 림프종, 육종, 기타 암, 전이암",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=124&sch_depart_code=RO&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-124",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "안우상",
+      "department": "방사선종양학과",
+      "position": "",
+      "specialty": "종양 방사선치료, 3차원 입체조형, 방사선치료, 세기변조 방사선치료, 영상유도 방사선치료",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=123&sch_depart_code=RO&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-123",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "엄대운",
+      "department": "병리과",
+      "position": "",
+      "specialty": "림프망내계병리, 소화기병리(간, 담도)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=149&sch_depart_code=DP&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-149",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "강길현",
+      "department": "병리과",
+      "position": "",
+      "specialty": "심폐병리, 비뇨생식기병리, 신장병리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=148&sch_depart_code=DP&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-148",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "노병주",
+      "department": "병리과",
+      "position": "",
+      "specialty": "두경부병리, 분자병리, 내분비병리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=161&sch_depart_code=DP&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-161",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "임샤론",
+      "department": "병리과",
+      "position": "",
+      "specialty": "유방병리, 산부인과병리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=150&sch_depart_code=DP&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-150",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김성진",
+      "department": "비뇨의학과",
+      "position": "",
+      "specialty": "전립선암, 로봇수술, PSA(전립선암표지자)이상소견, 요로결석, 전립선비대, 요실금, 여성골반장기탈출",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=99&sch_depart_code=URO&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-99",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박종연",
+      "department": "비뇨의학과",
+      "position": "",
+      "specialty": "비뇨기종양(신장암, 방광암, 전립선암, 고환암), 로봇수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=98&sch_depart_code=URO&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-98",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김한권",
+      "department": "비뇨의학과",
+      "position": "",
+      "specialty": "남성의학, 소아비뇨의학, 배뇨장애, 요로결석",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=97&sch_depart_code=URO&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-97",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "남욱",
+      "department": "비뇨의학과",
+      "position": "",
+      "specialty": "비뇨기종양(전립선암, 방광암, 요로상피암, 신장암, 고환암, 부신종양), PSA 이상소견, 로봇수술, 혈뇨, 배뇨장애",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=101&sch_depart_code=URO&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-101",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이상욱",
+      "department": "산부인과",
+      "position": "",
+      "specialty": "골반내시경, 이상임신, 부인종양, 부인과내분비(폐경, 월경장애), 로봇수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=164&sch_depart_code=OBY&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-164",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "손우석",
+      "department": "산부인과",
+      "position": "",
+      "specialty": "부인암, 골반내시경(산모예약불가)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=162&sch_depart_code=OBY&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-162",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이상수",
+      "department": "산부인과",
+      "position": "",
+      "specialty": "이상임신, 부인종양",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=163&sch_depart_code=OBY&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-163",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "주다혜",
+      "department": "산부인과",
+      "position": "",
+      "specialty": "고위험임신, 태아정밀진단(수 오후 : 정밀초음파클리닉),부인암예약불가, 로봇수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=165&sch_depart_code=OBY&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-165",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이영재",
+      "department": "산부인과",
+      "position": "",
+      "specialty": "부인암,골반내시경,부인종양,일반부인과, 로봇수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=190&sch_depart_code=OBY&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-190",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "유성철",
+      "department": "성형외과",
+      "position": "",
+      "specialty": "눈꺼풀 및 코 성형, 유방성형 및 재건, 악안면 미용성형 및 안면 기형치료, 주름 및 피부노화치료, 흉터레이저 치료",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=85&sch_depart_code=PS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-85",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김영휘",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "소아심장질환, 선천적 심장병, 소아심장 중재적 시술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=212&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-212",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김봉성",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "천식, 아토피피부염, 알레르기비염, 식품알레르기, 약물알레르기, 두드러기, 호흡기질환, 혈액질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=41&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-41",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박기영",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "소화기질환, 소아영양, 소아내시경, 신장질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=42&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-42",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "진현승",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "신생아, 소아중환자, 미숙아, 신생아집중치료",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=43&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-43",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정민희",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "소아신경, 두통, 소아발달장애",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=44&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-44",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김윤명",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "해외 연수중 ('26.1.1 ~ 12.31)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=46&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-46",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "도현정",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "신생아, 미숙아클리닉,예방접종,신생아집중치료실",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=196&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-196",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "오성희",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "신생아, 미숙아클리닉,예방접종,신생아집중치료실",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=199&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-199",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김기수",
+      "department": "소아청소년과",
+      "position": "",
+      "specialty": "신생아",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=272&sch_depart_code=PED&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-272",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "천갑진",
+      "department": "소화기내과",
+      "position": "",
+      "specialty": "간질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=1&sch_depart_code=GI&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-1",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이상진",
+      "department": "소화기내과",
+      "position": "",
+      "specialty": "위식도질환, 치료내시경, 위암전문진료",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=5&sch_depart_code=GI&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-5",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박종규",
+      "department": "소화기내과",
+      "position": "",
+      "specialty": "위식도 질환, 치료내시경, 위암 전문진료",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=6&sch_depart_code=GI&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-6",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "서현일",
+      "department": "소화기내과",
+      "position": "",
+      "specialty": "대장질환, 염증성장질환, 치료내시경",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=7&sch_depart_code=GI&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-7",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이윤형",
+      "department": "소화기내과",
+      "position": "",
+      "specialty": "췌장, 담낭, 담도질환, 췌담도내시경",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=240&sch_depart_code=GI&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-240",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "서명숙",
+      "department": "소화기내과",
+      "position": "",
+      "specialty": "대장질환, 염증성장질환, 치료내시경,위대장내시경",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=10&sch_depart_code=GI&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-10",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이성구",
+      "department": "소화기내과",
+      "position": "진료교수",
+      "specialty": "췌장.담낭. 담도질환. 췌담도 내시경",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=282&sch_depart_code=GI&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-282",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이태영",
+      "department": "소화기내과",
+      "position": "",
+      "specialty": "소화기질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=266&sch_depart_code=GI&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-266",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "장우영",
+      "department": "신경과",
+      "position": "",
+      "specialty": "이상운동질환, 파킨슨병, 보톡스, 유전성운동질환 , 파킨슨 (떨림)클리닉 ->목요일 클리닉(인터넷예약불가, 전화예약가능), 퇴행성 뇌질환클리닉 ->금요일 클리닉(인터넷예약불가, 전화예약가능), 화요일 오후 ->보톡스 클리닉(진료아님 문의답변 불가능)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=48&sch_depart_code=NR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-48",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김종성",
+      "department": "신경과",
+      "position": "",
+      "specialty": "뇌졸중, 치매, 두통",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=246&sch_depart_code=NR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-246",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "조광덕",
+      "department": "신경과",
+      "position": "",
+      "specialty": "뇌졸중(뇌출혈, 뇌경색), 치매검진예방클리닉(월오후,금오전)인터넷예약불가→전화예약",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=47&sch_depart_code=NR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-47",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박계원",
+      "department": "신경과",
+      "position": "",
+      "specialty": "이상운동질환, 파킨슨병, 인지기능저하, 파킨슨클리닉 -> 목요일(인터넷예약불가, 전화예약가능), 보톡스 클리닉-> 화요일 오후(진료아님 문의답변불가능)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=281&sch_depart_code=NR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-281",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이정규",
+      "department": "신경과",
+      "position": "",
+      "specialty": "뇌졸중, 뇌혈관질환, 뇌혈관/경동맥협착",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=312&sch_depart_code=NR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-312",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "유승훈",
+      "department": "신경외과",
+      "position": "",
+      "specialty": "뇌혈관(뇌출혈, 경색), 혈관내수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=80&sch_depart_code=NS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-80",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "양구현",
+      "department": "신경외과",
+      "position": "",
+      "specialty": "뇌동맥류, 성인두통, 성인모야모야병, 뇌동정맥기형, 뇌동정맥루, 뇌혈관질환, 뇌출혈, 뇌손상(혈관내수술,개두술), 뇌종양",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=205&sch_depart_code=NS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-205",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김민수",
+      "department": "신경외과",
+      "position": "",
+      "specialty": "뇌종양, 암성통증, 신경인성통증, 두경부통증, 기능성뇌질환, 운동장애 (파킨슨병, 수전증, 안면경련 등)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=207&sch_depart_code=NS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-207",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "노성우",
+      "department": "신경외과",
+      "position": "",
+      "specialty": "퇴행성 요추질환, 요추디스크, 요추협착증",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=296&sch_depart_code=NS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-296",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "장선우",
+      "department": "신경외과",
+      "position": "",
+      "specialty": "퇴행성 척추질환 (경추, 흉추, 요추), 최소침습 내시경수술, 골다공증성 척추 골절, 척추 외상, 척추 감염, 척추(척수) 종양, 외상성 뇌질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=297&sch_depart_code=NS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-297",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "송경일",
+      "department": "신장내과",
+      "position": "",
+      "specialty": "신장질환, 당뇨병성 신증, 투석, 고혈압",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=166&sch_depart_code=NPH&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-166",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "윤성빈",
+      "department": "신장내과",
+      "position": "",
+      "specialty": "신부전, 고혈압, 투석, 신장이식",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=257&sch_depart_code=NPH&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-257",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정상식",
+      "department": "심장내과",
+      "position": "",
+      "specialty": "관상동맥질환(협심증, 심근경색증), 말초혈관질환, 고혈압, 부정맥, 심박동기",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=17&sch_depart_code=CV&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-17",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "우영민",
+      "department": "심장내과",
+      "position": "임상부교수",
+      "specialty": "관상동맥질환(협심증, 심근경색증), 말초혈관질환, 대동맥질환, 고혈압, 심부전, 부정맥",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=291&sch_depart_code=CV&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-291",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박한빛",
+      "department": "심장내과",
+      "position": "조교수",
+      "specialty": "관상동맥질환(협심증, 심근경색증), 구조적 심질환(심박중격결손, 난원공개존증, 대동맥관개존증), 심부전, 고혈압",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=214&sch_depart_code=CV&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-214",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이기환",
+      "department": "심장내과",
+      "position": "임상조교수",
+      "specialty": "관상동맥질환(협심증, 심근경색증), 말초혈관질환, 심부전, 부정맥",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=277&sch_depart_code=CV&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-277",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이승한",
+      "department": "심장내과",
+      "position": "임상조교수",
+      "specialty": "관상동맥질환, 고혈압, 심부전, 부정맥",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=292&sch_depart_code=CV&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-292",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "백다영",
+      "department": "심장내과",
+      "position": "임상전임강사",
+      "specialty": "고혈압, 판막질환, 심부전, 부정맥, 심초음파이상, 폐동맥고혈압",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=285&sch_depart_code=CV&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-285",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최형우",
+      "department": "심장내과",
+      "position": "임상강사",
+      "specialty": "관상동맥질환(협심증, 심근경색증), 고혈압, 판막질환, 심부전, 부정맥",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=313&sch_depart_code=CV&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-313",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "조원철",
+      "department": "심장혈관흉부외과",
+      "position": "",
+      "specialty": "심장질환, 대동맥 및 혈관질환, 하지정맥류, 동정맥루조성술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=68&sch_depart_code=CS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-68",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박종빈",
+      "department": "심장혈관흉부외과",
+      "position": "",
+      "specialty": "성인심장질환, 대동맥질환, 말초동맥 및 버거씨병, 하지정맥류, 동정맥루조성술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=66&sch_depart_code=CS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-66",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "유동곤",
+      "department": "심장혈관흉부외과",
+      "position": "",
+      "specialty": "폐암, 식도암, 흉강경수술, 하지정맥류",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=67&sch_depart_code=CS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-67",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이한필",
+      "department": "심장혈관흉부외과",
+      "position": "",
+      "specialty": "폐암, 식도암 및 식도질환, 흉강경수술, 종격동종양, 흉곽기형, 다한증",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=223&sch_depart_code=CS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-223",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최우석",
+      "department": "심장혈관흉부외과",
+      "position": "",
+      "specialty": "하지정맥류, 말초동맥질환, 동정맥루조성술, 흉부외상, 늑골골절",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=310&sch_depart_code=CS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-310",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이충현",
+      "department": "안과",
+      "position": "",
+      "specialty": "성형안과, 사시, 소아안과, 녹내장, 안구건조, 결막",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=86&sch_depart_code=OPH&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-86",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김유정",
+      "department": "안과",
+      "position": "",
+      "specialty": "망막, 황반변성, 백내장, 안과일반질환 (타 병원에서 백내장 수술 후 내원 시 백내장 관련 진단서, 자문의뢰서, 소견서 등 발급불가)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=88&sch_depart_code=OPH&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-88",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최경준",
+      "department": "안과",
+      "position": "임상조교수",
+      "specialty": "망막, 황반변성, 백내장, 안과질환일반 (타 병원에서 백내장 수술 후 내원 시 백내장 관련 진단서, 자문의뢰서, 소견서 등 발급불가)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=221&sch_depart_code=OPH&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-221",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "유영상",
+      "department": "알레르기내과",
+      "position": "",
+      "specialty": "천식, 알레르기비염, 만성기침, 만성두드러기, 조영제 및 약물알레르기, 음식알레르기,아나필락시스, 알레르기면역치료",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=220&sch_depart_code=ALG&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-220",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최수정",
+      "department": "영상의학과",
+      "position": "과장",
+      "specialty": "근골격계영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=130&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-130",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "정승문",
+      "department": "영상의학과",
+      "position": "",
+      "specialty": "소화기 및 비뇨생식영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=126&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-126",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "박만수",
+      "department": "영상의학과",
+      "position": "",
+      "specialty": "뇌신경영상의학, 두경부영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=127&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-127",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "나동규",
+      "department": "영상의학과",
+      "position": "",
+      "specialty": "갑상선영상의학, 갑상선종양진단/고주파치료, 두경부영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=128&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-128",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "안재홍",
+      "department": "영상의학과",
+      "position": "",
+      "specialty": "복부영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=131&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-131",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "조영종",
+      "department": "영상의학과",
+      "position": "",
+      "specialty": "중재적영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=134&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-134",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "윤가영",
+      "department": "영상의학과",
+      "position": "",
+      "specialty": "유방영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=135&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-135",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "한병희",
+      "department": "영상의학과",
+      "position": "",
+      "specialty": "복부, 소아영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=191&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-191",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이수현",
+      "department": "영상의학과",
+      "position": "전담교수",
+      "specialty": "흉부 영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=300&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-300",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "유여진",
+      "department": "영상의학과",
+      "position": "전담교수",
+      "specialty": "유방영상의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=309&sch_depart_code=DR&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-309",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "유창식",
+      "department": "외과",
+      "position": "",
+      "specialty": "대장암, 직장암, 염증성 장질환, 복강경수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=222&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-222",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김지훈",
+      "department": "외과",
+      "position": "",
+      "specialty": "위암, 비만수술, 당뇨대사수술, 위식도역류수술, 위장관기질종양, 복강경탈장수술, 로봇수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=60&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-60",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최건무",
+      "department": "외과",
+      "position": "",
+      "specialty": "간담도, 췌장질환, 소아탈장",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=57&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-57",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "장혁재",
+      "department": "외과",
+      "position": "",
+      "specialty": "간담도, 췌장질환, 신장이식, 성인탈장(목: 탈장클리닉), 로봇수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=58&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-58",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "곽재영",
+      "department": "외과",
+      "position": "",
+      "specialty": "대장암, 직장암, 복강경수술, 로봇수술, 대장항문질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=61&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-61",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "양관모",
+      "department": "외과",
+      "position": "",
+      "specialty": "대장암, 직장암, 복강경수술, 로봇수술, 대장항문질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=64&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-64",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "윤광현",
+      "department": "외과",
+      "position": "",
+      "specialty": "유방질환, 갑상선질환 (월 오전 : 유방암 클리닉, 월 오후 유방 양성 종양 클리닉, 목 오전 : 갑상선암 클리닉), 로봇수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=63&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-63",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "윤경원",
+      "department": "외과",
+      "position": "",
+      "specialty": "유방질환 (수 오전 : 유방암 클리닉)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=62&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-62",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "마충현",
+      "department": "외과",
+      "position": "",
+      "specialty": "간암, 췌장암, 담낭암, 담도암, 담석증, 담낭질환, 복강경 로봇 수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=168&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-168",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정윤태",
+      "department": "외과",
+      "position": "",
+      "specialty": "외상,외과적응급질환,외과중환자관리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=197&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-197",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박정윤",
+      "department": "외과",
+      "position": "임상조교수",
+      "specialty": "외상, 외과적 응급질환, 외과중환자관리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=233&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-233",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "조준회",
+      "department": "외과",
+      "position": "임상조교수",
+      "specialty": "외상,외과적응급질환,외과중환자관리",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=279&sch_depart_code=GS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-279",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "강희동",
+      "department": "응급의학과",
+      "position": "",
+      "specialty": "중환자의학, 응급초음파",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=111&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-111",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "오세현",
+      "department": "응급의학과",
+      "position": "",
+      "specialty": "중독, 환경응급의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=110&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-110",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "정상구",
+      "department": "응급의학과",
+      "position": "",
+      "specialty": "중환자의학, 외상학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=112&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-112",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이유진",
+      "department": "응급의학과",
+      "position": "",
+      "specialty": "현장응급처치교육",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=115&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-115",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "허석진",
+      "department": "응급의학과",
+      "position": "",
+      "specialty": "소아응급",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=117&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-117",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "박인준",
+      "department": "응급의학과",
+      "position": "",
+      "specialty": "응급의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=118&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-118",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이기헌",
+      "department": "응급의학과",
+      "position": "전문의",
+      "specialty": "소생술, 외상학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=198&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-198",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "권재화",
+      "department": "응급의학과",
+      "position": "전문의",
+      "specialty": "중환자의학, 환자초음파",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=228&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-228",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김대곤",
+      "department": "응급의학과",
+      "position": "전문의",
+      "specialty": "심폐소생술, 응급의료체계",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=311&sch_depart_code=EM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-311",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "송용진",
+      "department": "이비인후과",
+      "position": "",
+      "specialty": "두경부종양,갑상선종양, 중이염수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=90&sch_depart_code=ENT&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-90",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박정미",
+      "department": "이비인후과",
+      "position": "",
+      "specialty": "해외 연수중 ('26.1.1 ~ 12.31)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=180&sch_depart_code=ENT&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-180",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "여남경",
+      "department": "이비인후과",
+      "position": "",
+      "specialty": "코성형, 부비동염, 알레르기성비염",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=92&sch_depart_code=ENT&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-92",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이종철",
+      "department": "이비인후과",
+      "position": "",
+      "specialty": "두경부암,갑상선암,난청,이명,어지럼,중이염(귀질환 : 15세이상부터 진료가능)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=94&sch_depart_code=ENT&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-94",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이영이",
+      "department": "일반내과",
+      "position": "촉탁의(입원전담전문의)",
+      "specialty": "입원의학, 일반내과, 호스피스, 노인의학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=235&sch_depart_code=GIM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-235",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김예진",
+      "department": "일반내과",
+      "position": "촉탁의(입원전담전문의)",
+      "specialty": "내과학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=236&sch_depart_code=GIM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-236",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "황동욱",
+      "department": "일반내과",
+      "position": "촉탁의(ICU전담전문의)",
+      "specialty": "가정의학과",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=303&sch_depart_code=GIM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-303",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "정유진",
+      "department": "일반내과",
+      "position": "촉탁의(입원전담전문의)",
+      "specialty": "흉부외과",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=305&sch_depart_code=GIM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-305",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "구정회",
+      "department": "재활의학과",
+      "position": "",
+      "specialty": "뇌졸중, 척수손상, 말초신경질환, 근골격계질환, 암환자재활(림프부종), 스포츠재활",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=103&sch_depart_code=RM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-103",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "송선홍",
+      "department": "재활의학과",
+      "position": "",
+      "specialty": "뇌졸중, 척추손상, 뇌성마비, 요통, 관절염, 인지언어장애, 스포츠손상재활",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=102&sch_depart_code=RM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-102",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "홍유진",
+      "department": "정신건강의학과",
+      "position": "",
+      "specialty": "불안우울장애, 노인정신장애, 정신분열증, 공황장애클리닉(매주 화 오후), 수면클리닉(매주 수 오전)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=54&sch_depart_code=PSY&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-54",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "백상빈",
+      "department": "정신건강의학과",
+      "position": "",
+      "specialty": "정신분열증, 소아청소년장애, 불안장애, 정신치료, 소아청소년클리닉(1, 3 ,5주 목 오전, 매주 금 오후), 정신치료클리닉(2, 4주 목 오전, 매주 목 오후)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=53&sch_depart_code=PSY&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-53",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최영준",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "무릎인공관절 수술, 관절경 수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=69&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-69",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김정환",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "척추질환, 허리디스크 및 척추외상",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=70&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-70",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "황재광",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "성인 골반, 고관절 질환, 고관절 인공 관절 수술, 소아(하지)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=71&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-71",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이기원",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "어깨(관절,상완 및 쇄골)질환,인공관절, 관절경 수술",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=72&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-72",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "배주열",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "수부, 손목질환 및 외상, 미세접합, 주관절 및 외상, 팔꿈치 질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=76&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-76",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최신우",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "수부,손목, 팔꿈치 질환 및 외상, 미세접합, 소아(상지)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=77&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-77",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박재우",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "척추질환(경추, 요추, 측만증)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=187&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-187",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정구민",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "척추 내시경 수술, 척추 질환(목, 허리)",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=299&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-299",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "라호종",
+      "department": "정형외과",
+      "position": "",
+      "specialty": "무릎 스포츠 손상, 무릎 퇴행성 관절염, 무릎 안짱다리/바깥짱 다리 교정, 하지 골절 및 외상",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=307&sch_depart_code=OS&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-307",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "차충환",
+      "department": "진단검사의학과",
+      "position": "",
+      "specialty": "진단혈액",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=147&sch_depart_code=LM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-147",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김정욱",
+      "department": "진단검사의학과",
+      "position": "",
+      "specialty": "임상화학, 진단미생물학",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=146&sch_depart_code=LM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-146",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "유창승",
+      "department": "진단검사의학과",
+      "position": "임상부교수",
+      "specialty": "임상미생물, 수혈의학, 조직적합성검사",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=234&sch_depart_code=LM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-234",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "차민상",
+      "department": "치과",
+      "position": "",
+      "specialty": "보철치료, 틀니, 특수의치, 심미수복(충치), 임플란트, 신경치료",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=119&sch_depart_code=DNT&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-119",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이상운",
+      "department": "치과",
+      "position": "",
+      "specialty": "구강 및 턱질환, 턱뼈골절수술, 임플란트",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=120&sch_depart_code=DNT&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-120",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "양인섭",
+      "department": "피부과",
+      "position": "전담교수",
+      "specialty": "대상포진, 피부진균증, 아토피 피부염, 건선, 피부건조증, 두드러기, 사마귀, 피부암, 피부조직검사",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=302&sch_depart_code=DER&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-302",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이효상",
+      "department": "핵의학과",
+      "position": "",
+      "specialty": "일반핵의학, 방사선 동위원소 검사",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=151&sch_depart_code=NM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-151",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "신언우",
+      "department": "핵의학과",
+      "position": "",
+      "specialty": "일반핵의학, 방사선 동위원소 검사",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=288&sch_depart_code=NM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-288",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "안용철",
+      "department": "혈액종양내과",
+      "position": "",
+      "specialty": "백혈병, 골수이형성증후군, 림프종, 다발골수종, 기타 혈액질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=27&sch_depart_code=ONC&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-27",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김문호",
+      "department": "혈액종양내과",
+      "position": "",
+      "specialty": "췌장암, 담도암, 간암, 육종, 피부암",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=28&sch_depart_code=ONC&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-28",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "안희준",
+      "department": "혈액종양내과",
+      "position": "",
+      "specialty": "폐암, 두경부암, 식도암",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=26&sch_depart_code=ONC&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-26",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "오호석",
+      "department": "혈액종양내과",
+      "position": "",
+      "specialty": "대장암, 위암, 유방암",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=25&sch_depart_code=ONC&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-25",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "하석훈",
+      "department": "혈액종양내과",
+      "position": "",
+      "specialty": "비뇨기암, 부인암, 암 평생건강 클리닉, 호스피스, 유방암, 기타암(중추신경계종양, 신경내분비종양 등), 기타 혈액질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=209&sch_depart_code=ONC&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-209",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정복현",
+      "department": "호흡기내과",
+      "position": "",
+      "specialty": "결핵성폐질환, 만성폐쇄성폐질환, 폐암",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=12&sch_depart_code=PLM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-12",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김미혜",
+      "department": "호흡기내과",
+      "position": "",
+      "specialty": "중환자질환, 만성폐쇄성폐질환, 호흡재활",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=13&sch_depart_code=PLM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-13",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "장윤실",
+      "department": "호흡기내과",
+      "position": "전담교수",
+      "specialty": "폐암, 간질성폐질환, 결핵, 만성폐쇄성폐질환 및 각종 호흡기질환",
+      "profile_url": "https://www.gnah.co.kr/kor/CMS/DoctorMgr/view.do?mCode=MN092&doctor_seq=284&sch_depart_code=PLM&docMode=viewMode",
+      "photo_url": null,
+      "external_id": "GNAH-284",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    }
+  ]
+}

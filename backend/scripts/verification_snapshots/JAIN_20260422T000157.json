@@ -1,0 +1,271 @@
+{
+  "hospital_code": "JAIN",
+  "hospital_name": "더자인병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김병헌",
+      "department": "정형외과",
+      "external_id": "JAIN-3",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "경태현",
+      "department": "정형외과",
+      "external_id": "JAIN-143",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장준혁",
+      "department": "정형외과",
+      "external_id": "JAIN-167",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재욱",
+      "department": "정형외과",
+      "external_id": "JAIN-131",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정화재",
+      "department": "정형외과",
+      "external_id": "JAIN-54",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고용",
+      "department": "신경외과",
+      "external_id": "JAIN-99",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고용",
+      "department": "신경외과",
+      "external_id": "JAIN-125",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "봉호진",
+      "department": "신경외과",
+      "external_id": "JAIN-70",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍창의",
+      "department": "신경외과",
+      "external_id": "JAIN-122",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성의현",
+      "department": "신경과",
+      "external_id": "JAIN-132",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유준상",
+      "department": "신경과",
+      "external_id": "JAIN-152",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병철",
+      "department": "외과",
+      "external_id": "JAIN-104",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용준",
+      "department": "외과",
+      "external_id": "JAIN-165",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민석",
+      "department": "심장내과",
+      "external_id": "JAIN-151",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송희태",
+      "department": "소화기내과",
+      "external_id": "JAIN-130",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤민성",
+      "department": "소화기내과",
+      "external_id": "JAIN-127",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상학",
+      "department": "소화기내과",
+      "external_id": "JAIN-154",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임소진",
+      "department": "신장내과",
+      "external_id": "JAIN-76",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채문희",
+      "department": "신장내과",
+      "external_id": "JAIN-128",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동연",
+      "department": "호흡기내과",
+      "external_id": "JAIN-101",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민응기",
+      "department": "산부인과",
+      "external_id": "JAIN-108",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서재경",
+      "department": "응급센터",
+      "external_id": "JAIN-114",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤형식",
+      "department": "응급센터",
+      "external_id": "JAIN-110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선근",
+      "department": "응급센터",
+      "external_id": "JAIN-146",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성민",
+      "department": "응급센터",
+      "external_id": "JAIN-57",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서민수",
+      "department": "재활의학과",
+      "external_id": "JAIN-166",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성훈",
+      "department": "마취통증의학과",
+      "external_id": "JAIN-100",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄현식",
+      "department": "마취통증의학과",
+      "external_id": "JAIN-159",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대식",
+      "department": "영상의학과",
+      "external_id": "JAIN-11",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현혜란",
+      "department": "영상의학과",
+      "external_id": "JAIN-106",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김아람",
+      "department": "진단검사의학과",
+      "external_id": "JAIN-164",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현수정",
+      "department": "가정의학과",
+      "external_id": "JAIN-162",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조인래",
+      "department": "비뇨의학과",
+      "external_id": "JAIN-168",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "hospital_code": "SNMC",
+  "hospital_name": "서울특별시 서남병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김형욱",
+      "department": "가정의학과",
+      "external_id": "SNMC-111-48",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성진",
+      "department": "가정의학과",
+      "external_id": "SNMC-195-48",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용대",
+      "department": "감염내과",
+      "external_id": "SNMC-263-62",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심은진",
+      "department": "내분비내과",
+      "external_id": "SNMC-27-37",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은정",
+      "department": "마취통증의학과 · 통증클리닉",
+      "external_id": "SNMC-92-34",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정민",
+      "department": "마취통증의학과 · 통증클리닉",
+      "external_id": "SNMC-265-34",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형욱",
+      "department": "노인진료센터",
+      "external_id": "SNMC-111-50",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성진",
+      "department": "노인진료센터",
+      "external_id": "SNMC-195-50",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강한나",
+      "department": "병리과",
+      "external_id": "SNMC-213-60",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강현",
+      "department": "비뇨의학과",
+      "external_id": "SNMC-221-43",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전선희",
+      "department": "산부인과",
+      "external_id": "SNMC-114-55",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민경",
+      "department": "소아청소년과",
+      "external_id": "SNMC-181-53",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박병규",
+      "department": "소아청소년과",
+      "external_id": "SNMC-217-53",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민정",
+      "department": "소화기내과",
+      "external_id": "SNMC-49-33",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤기철",
+      "department": "소화기내과",
+      "external_id": "SNMC-247-33",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성규",
+      "department": "소화기내과",
+      "external_id": "SNMC-268-33",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한철주",
+      "department": "소화기내과",
+      "external_id": "SNMC-275-33",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고종훈",
+      "department": "순환기내과",
+      "external_id": "SNMC-232-36",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권주영",
+      "department": "신경과",
+      "external_id": "SNMC-38-40",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤영신",
+      "department": "신경과",
+      "external_id": "SNMC-64-40",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천가영",
+      "department": "신장내과",
+      "external_id": "SNMC-216-38",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손민정",
+      "department": "신장내과",
+      "external_id": "SNMC-266-38",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준석",
+      "department": "심장혈관흉부외과",
+      "external_id": "SNMC-257-66",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영규",
+      "department": "외과",
+      "external_id": "SNMC-249-54",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권수경",
+      "department": "외과",
+      "external_id": "SNMC-272-54",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전병두",
+      "department": "이비인후과",
+      "external_id": "SNMC-256-59",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영후",
+      "department": "인공관절센터",
+      "external_id": "SNMC-101-57",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주영",
+      "department": "재활의학과",
+      "external_id": "SNMC-51-42",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인식",
+      "department": "재활의학과",
+      "external_id": "SNMC-231-42",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장영수",
+      "department": "정형외과",
+      "external_id": "SNMC-81-41",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석현",
+      "department": "정형외과",
+      "external_id": "SNMC-235-41",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조기현",
+      "department": "정형외과",
+      "external_id": "SNMC-273-41",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이광현",
+      "department": "정형외과",
+      "external_id": "SNMC-274-41",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이우천",
+      "department": "정형외과",
+      "external_id": "SNMC-276-41",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정채림",
+      "department": "진단검사의학과",
+      "external_id": "SNMC-42-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소영",
+      "department": "치과",
+      "external_id": "SNMC-269-58",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노창석",
+      "department": "호흡기내과",
+      "external_id": "SNMC-229-39",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인경",
+      "department": "호흡기내과",
+      "external_id": "SNMC-218-39",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주현",
+      "department": "호흡기내과",
+      "external_id": "SNMC-259-39",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

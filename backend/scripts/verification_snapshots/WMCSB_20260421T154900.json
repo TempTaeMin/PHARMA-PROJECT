@@ -1,0 +1,367 @@
+{
+  "hospital_code": "WMCSB",
+  "hospital_name": "원광대학교산본병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "손영우",
+      "department": "소화기내과",
+      "external_id": "WMCSB-1-78",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정정화",
+      "department": "소화기내과",
+      "external_id": "WMCSB-1-65",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진영",
+      "department": "소화기내과",
+      "external_id": "WMCSB-1-130",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허솔미",
+      "department": "소화기내과",
+      "external_id": "WMCSB-1-139",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박우행",
+      "department": "소화기내과",
+      "external_id": "WMCSB-1-162",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재범",
+      "department": "순환기내과",
+      "external_id": "WMCSB-2-160",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고성준",
+      "department": "호흡기내과",
+      "external_id": "WMCSB-3-26",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민혜숙",
+      "department": "신장내과",
+      "external_id": "WMCSB-4-4",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성연",
+      "department": "신장내과",
+      "external_id": "WMCSB-4-141",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차선아",
+      "department": "내분비내과",
+      "external_id": "WMCSB-5-32",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손일홍",
+      "department": "신경과",
+      "external_id": "WMCSB-6-58",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한선정",
+      "department": "신경과",
+      "external_id": "WMCSB-6-9",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준엽",
+      "department": "신경과",
+      "external_id": "WMCSB-6-129",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종화",
+      "department": "소아청소년과",
+      "external_id": "WMCSB-7-59",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강등현",
+      "department": "정신건강의학과",
+      "external_id": "WMCSB-8-12",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이다경",
+      "department": "가정의학과",
+      "external_id": "WMCSB-9-158",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석윤",
+      "department": "외과",
+      "external_id": "WMCSB-10-46",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수진",
+      "department": "외과",
+      "external_id": "WMCSB-10-22",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변제훈",
+      "department": "신경외과",
+      "external_id": "WMCSB-11-13",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상수",
+      "department": "정형외과",
+      "external_id": "WMCSB-12-154",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하대호",
+      "department": "정형외과",
+      "external_id": "WMCSB-12-79",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오성균",
+      "department": "정형외과",
+      "external_id": "WMCSB-12-69",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기선",
+      "department": "정형외과",
+      "external_id": "WMCSB-12-151",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노덕영",
+      "department": "산부인과",
+      "external_id": "WMCSB-14-131",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세희",
+      "department": "산부인과",
+      "external_id": "WMCSB-14-124",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤장호",
+      "department": "비뇨의학과",
+      "external_id": "WMCSB-15-125",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조정규",
+      "department": "이비인후과",
+      "external_id": "WMCSB-16-96",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재윤",
+      "department": "마취통증의학과",
+      "external_id": "WMCSB-17-45",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김교상",
+      "department": "마취통증의학과",
+      "external_id": "WMCSB-17-24",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유선",
+      "department": "마취통증의학과",
+      "external_id": "WMCSB-17-60",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권명애",
+      "department": "영상의학과",
+      "external_id": "WMCSB-18-104",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최연우",
+      "department": "영상의학과",
+      "external_id": "WMCSB-18-110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차소연",
+      "department": "영상의학과",
+      "external_id": "WMCSB-18-126",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용태",
+      "department": "영상의학과",
+      "external_id": "WMCSB-18-132",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤귀현",
+      "department": "진단검사의학과",
+      "external_id": "WMCSB-19-3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재규",
+      "department": "응급의학과",
+      "external_id": "WMCSB-20-75",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영관",
+      "department": "응급의학과",
+      "external_id": "WMCSB-20-47",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤우용",
+      "department": "응급의학과",
+      "external_id": "WMCSB-20-153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나원일",
+      "department": "응급의학과",
+      "external_id": "WMCSB-20-155",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서준영",
+      "department": "응급의학과",
+      "external_id": "WMCSB-20-156",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성혜영",
+      "department": "응급의학과",
+      "external_id": "WMCSB-20-157",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민집",
+      "department": "응급의학과",
+      "external_id": "WMCSB-20-161",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박광열",
+      "department": "응급의학과",
+      "external_id": "WMCSB-20-163",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양진규",
+      "department": "재활의학과",
+      "external_id": "WMCSB-22-112",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김옥준",
+      "department": "치과(보훈)",
+      "external_id": "WMCSB-27-146",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,727 @@
+{
+  "hospital_code": "WILLS",
+  "hospital_name": "윌스기념병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "장재원",
+      "department": "척추센터",
+      "external_id": "WILLS-139",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황진섭",
+      "department": "척추센터",
+      "external_id": "WILLS-31",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김준영",
+      "department": "척추센터",
+      "external_id": "WILLS-33",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김재건",
+      "department": "척추센터",
+      "external_id": "WILLS-27",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한방상",
+      "department": "척추센터",
+      "external_id": "WILLS-235",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한상엽",
+      "department": "척추센터",
+      "external_id": "WILLS-268",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정한",
+      "department": "척추센터",
+      "external_id": "WILLS-429",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상협",
+      "department": "척추센터",
+      "external_id": "WILLS-475",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용은",
+      "department": "척추센터",
+      "external_id": "WILLS-408",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박춘근",
+      "department": "척추센터",
+      "external_id": "WILLS-1",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선호",
+      "department": "척추센터",
+      "external_id": "WILLS-607",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안재범",
+      "department": "척추센터",
+      "external_id": "WILLS-608",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안강희",
+      "department": "척추센터",
+      "external_id": "WILLS-636",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한규",
+      "department": "척추센터",
+      "external_id": "WILLS-632",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤임준",
+      "department": "척추센터",
+      "external_id": "WILLS-631",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심정보",
+      "department": "척추센터",
+      "external_id": "WILLS-703",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원재",
+      "department": "척추센터",
+      "external_id": "WILLS-702",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤창호",
+      "department": "척추센터",
+      "external_id": "WILLS-730",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신희권",
+      "department": "척추센터",
+      "external_id": "WILLS-731",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "맹대현",
+      "department": "척추센터",
+      "external_id": "WILLS-712",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서소운",
+      "department": "척추센터",
+      "external_id": "WILLS-296",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강기운",
+      "department": "척추센터",
+      "external_id": "WILLS-596",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김천경",
+      "department": "척추센터",
+      "external_id": "WILLS-690",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조선준",
+      "department": "척추센터",
+      "external_id": "WILLS-603",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진미",
+      "department": "척추센터",
+      "external_id": "WILLS-325",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전현주",
+      "department": "척추센터",
+      "external_id": "WILLS-435",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양수현",
+      "department": "척추센터",
+      "external_id": "WILLS-458",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안민기",
+      "department": "척추센터",
+      "external_id": "WILLS-681",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주형",
+      "department": "척추센터",
+      "external_id": "WILLS-23",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노정현",
+      "department": "척추센터",
+      "external_id": "WILLS-215",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재연",
+      "department": "척추센터",
+      "external_id": "WILLS-581",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영준",
+      "department": "척추센터",
+      "external_id": "WILLS-634",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지선",
+      "department": "척추센터",
+      "external_id": "WILLS-415",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "김준",
+      "department": "비뇨의학과",
+      "external_id": "WILLS-641",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "황태현",
+      "department": "비뇨의학과",
+      "external_id": "WILLS-728",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "박소영",
+      "department": "치매센터",
+      "external_id": "WILLS-606",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "박건우",
+      "department": "치매센터",
+      "external_id": "WILLS-679",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "강희경",
+      "department": "치매센터",
+      "external_id": "WILLS-707",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방상흠",
+      "department": "혈관센터",
+      "external_id": "WILLS-709",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종민",
+      "department": "호흡기내과",
+      "external_id": "WILLS-683",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이종서",
+      "department": "척추변형센터",
+      "external_id": "WILLS-727",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양성철",
+      "department": "관절센터",
+      "external_id": "WILLS-16",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이중명",
+      "department": "관절센터",
+      "external_id": "WILLS-285",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병우",
+      "department": "관절센터",
+      "external_id": "WILLS-14",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동욱",
+      "department": "관절센터",
+      "external_id": "WILLS-554",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양화열",
+      "department": "관절센터",
+      "external_id": "WILLS-467",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동호",
+      "department": "관절센터",
+      "external_id": "WILLS-602",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조형기",
+      "department": "관절센터",
+      "external_id": "WILLS-626",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현우",
+      "department": "관절센터",
+      "external_id": "WILLS-688",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상원",
+      "department": "뇌신경센터",
+      "external_id": "WILLS-442",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박건우",
+      "department": "뇌신경센터",
+      "external_id": "WILLS-557",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "박소영",
+      "department": "뇌신경센터",
+      "external_id": "WILLS-605",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "강희경",
+      "department": "뇌신경센터",
+      "external_id": "WILLS-704",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김신승",
+      "department": "소화기센터",
+      "external_id": "WILLS-450",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안성민",
+      "department": "소화기센터",
+      "external_id": "WILLS-699",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나재원",
+      "department": "소화기센터",
+      "external_id": "WILLS-609",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이대영",
+      "department": "소화기센터",
+      "external_id": "WILLS-718",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "백남현",
+      "department": "소화기센터",
+      "external_id": "WILLS-583",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방상흠",
+      "department": "영상진단센터",
+      "external_id": "WILLS-705",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이중명",
+      "department": "인공관절센터",
+      "external_id": "WILLS-201",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병우",
+      "department": "인공관절센터",
+      "external_id": "WILLS-289",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양성철",
+      "department": "인공관절센터",
+      "external_id": "WILLS-291",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동욱",
+      "department": "인공관절센터",
+      "external_id": "WILLS-422",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양화열",
+      "department": "인공관절센터",
+      "external_id": "WILLS-469",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동호",
+      "department": "인공관절센터",
+      "external_id": "WILLS-601",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조형기",
+      "department": "인공관절센터",
+      "external_id": "WILLS-624",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현우",
+      "department": "인공관절센터",
+      "external_id": "WILLS-687",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주영",
+      "department": "산부인과",
+      "external_id": "WILLS-623",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고동완",
+      "department": "응급의학과",
+      "external_id": "WILLS-336",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전광훈",
+      "department": "응급의학과",
+      "external_id": "WILLS-604",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경훈",
+      "department": "응급의학과",
+      "external_id": "WILLS-436",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용헌",
+      "department": "응급의학과",
+      "external_id": "WILLS-445",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주민",
+      "department": "응급의학과",
+      "external_id": "WILLS-633",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하승민",
+      "department": "응급의학과",
+      "external_id": "WILLS-686",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차기문",
+      "department": "소아청소년과",
+      "external_id": "WILLS-701",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주용현",
+      "department": "외과",
+      "external_id": "WILLS-721",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한준",
+      "department": "진단검사의학과",
+      "external_id": "WILLS-598",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김신승",
+      "department": "건강증진센터",
+      "external_id": "WILLS-312",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하주형",
+      "department": "인공신장센터",
+      "external_id": "WILLS-425",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이승화",
+      "department": "심혈관센터",
+      "external_id": "WILLS-504",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "문재현",
+      "department": "심혈관센터",
+      "external_id": "WILLS-722",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민형",
+      "department": "뇌혈관센터",
+      "external_id": "WILLS-463",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "오근",
+      "department": "뇌혈관센터",
+      "external_id": "WILLS-640",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이상원",
+      "department": "뇌혈관센터",
+      "external_id": "WILLS-150",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승화",
+      "department": "혈관중재시술센터",
+      "external_id": "WILLS-462",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "문재현",
+      "department": "혈관중재시술센터",
+      "external_id": "WILLS-723",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박건우",
+      "department": "파킨슨센터",
+      "external_id": "WILLS-592",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "격주 근무"
+    },
+    {
+      "name": "이상원",
+      "department": "파킨슨센터",
+      "external_id": "WILLS-593",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박춘근",
+      "department": "파킨슨센터",
+      "external_id": "WILLS-595",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주용현",
+      "department": "중환자의학과",
+      "external_id": "WILLS-720",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

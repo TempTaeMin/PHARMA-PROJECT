@@ -1,0 +1,239 @@
+{
+  "hospital_code": "SSHH",
+  "hospital_name": "서울성심병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이송",
+      "department": "정형외과",
+      "external_id": "SSHH-m0173293",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경태",
+      "department": "정형외과",
+      "external_id": "SSHH-m0154669",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진학",
+      "department": "정형외과",
+      "external_id": "SSHH-m0195936",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지형",
+      "department": "정형외과",
+      "external_id": "SSHH-m0113694",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정수",
+      "department": "정형외과",
+      "external_id": "SSHH-m0132263",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배대경",
+      "department": "정형외과",
+      "external_id": "SSHH-m0161837",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용호",
+      "department": "정형외과",
+      "external_id": "SSHH-m0145018",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정종서",
+      "department": "정형외과",
+      "external_id": "SSHH-m0176139",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영국",
+      "department": "정형외과",
+      "external_id": "SSHH-m0196764",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "왕성호",
+      "department": "내과",
+      "external_id": "SSHH-m0170894",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김의창",
+      "department": "내과",
+      "external_id": "SSHH-m0145592",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장효정",
+      "department": "내과",
+      "external_id": "SSHH-m0154150",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한준길",
+      "department": "외과",
+      "external_id": "SSHH-m0193634",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이홍기",
+      "department": "외과",
+      "external_id": "SSHH-m0199326",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한태현",
+      "department": "산부인과",
+      "external_id": "SSHH-m0129966",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박언준",
+      "department": "산부인과",
+      "external_id": "SSHH-산부인과-박언준",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤희",
+      "department": "소아청소년과",
+      "external_id": "SSHH-m0171548",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노미리",
+      "department": "소아청소년과",
+      "external_id": "SSHH-소아청소년과-노미리",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동규",
+      "department": "신경과",
+      "external_id": "SSHH-m0119643",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송지영",
+      "department": "정신건강의학과",
+      "external_id": "SSHH-m0126278",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이가은",
+      "department": "영상의학과",
+      "external_id": "SSHH-m0165295",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강규석",
+      "department": "치과",
+      "external_id": "SSHH-m0126878",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인자",
+      "department": "진단검사의학과",
+      "external_id": "SSHH-m0120196",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지미경",
+      "department": "병리과",
+      "external_id": "SSHH-m0118918",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용현",
+      "department": "마취통증의학과",
+      "external_id": "SSHH-m0190421",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선희",
+      "department": "마취통증의학과",
+      "external_id": "SSHH-m0194703",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장원",
+      "department": "마취통증의학과",
+      "external_id": "SSHH-m0179659",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신옥영",
+      "department": "마취통증의학과",
+      "external_id": "SSHH-마취통증의학과-신옥영",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보람",
+      "department": "마취통증의학과",
+      "external_id": "SSHH-m0180439",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

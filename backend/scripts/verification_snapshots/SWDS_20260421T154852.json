@@ -1,0 +1,423 @@
+{
+  "hospital_code": "SWDS",
+  "hospital_name": "수원덕산병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김성호",
+      "department": "간담췌외과",
+      "external_id": "SWDS-203",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재욱",
+      "department": "내과",
+      "external_id": "SWDS-233",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장인석",
+      "department": "뇌신경외과",
+      "external_id": "SWDS-210",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박신호",
+      "department": "뇌신경외과",
+      "external_id": "SWDS-226",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서유석",
+      "department": "류마티스내과",
+      "external_id": "SWDS-176",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대희",
+      "department": "마취통증의학과",
+      "external_id": "SWDS-177",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤두균",
+      "department": "마취통증의학과",
+      "external_id": "SWDS-222",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종석",
+      "department": "마취통증의학과",
+      "external_id": "SWDS-225",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장용수",
+      "department": "부인과",
+      "external_id": "SWDS-218",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정문수",
+      "department": "비뇨의학과",
+      "external_id": "SWDS-223",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜영",
+      "department": "신경과",
+      "external_id": "SWDS-192",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오주희",
+      "department": "신경과",
+      "external_id": "SWDS-209",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정원",
+      "department": "소화기내과",
+      "external_id": "SWDS-207",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강진형",
+      "department": "소화기내과",
+      "external_id": "SWDS-191",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용재",
+      "department": "소화기내과",
+      "external_id": "SWDS-202",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유상용",
+      "department": "순환기내과",
+      "external_id": "SWDS-224",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조대열",
+      "department": "순환기내과",
+      "external_id": "SWDS-208",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장지홍",
+      "department": "순환기내과",
+      "external_id": "SWDS-204",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재욱",
+      "department": "신장내과",
+      "external_id": "SWDS-182",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영대",
+      "department": "산과",
+      "external_id": "SWDS-198",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민지",
+      "department": "산과",
+      "external_id": "SWDS-205",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영광",
+      "department": "소아청소년과",
+      "external_id": "SWDS-206",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박제연",
+      "department": "성형외과",
+      "external_id": "SWDS-170",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정국현",
+      "department": "위장관외과",
+      "external_id": "SWDS-181",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종규",
+      "department": "유방·갑상선외과",
+      "external_id": "SWDS-175",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용석",
+      "department": "이비인후과",
+      "external_id": "SWDS-230",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤희원",
+      "department": "영상의학과",
+      "external_id": "SWDS-211",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승주",
+      "department": "영상의학과",
+      "external_id": "SWDS-212",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정은",
+      "department": "영상의학과",
+      "external_id": "SWDS-214",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종욱",
+      "department": "영상의학과",
+      "external_id": "SWDS-195",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지영",
+      "department": "영상의학과",
+      "external_id": "SWDS-227",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강정묵",
+      "department": "예방의학과",
+      "external_id": "SWDS-196",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철",
+      "department": "응급의학과",
+      "external_id": "SWDS-186",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성모",
+      "department": "응급의학과",
+      "external_id": "SWDS-215",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한솔",
+      "department": "응급의학과",
+      "external_id": "SWDS-216",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하일우",
+      "department": "응급의학과",
+      "external_id": "SWDS-187",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유경원",
+      "department": "응급의학과",
+      "external_id": "SWDS-217",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황기상",
+      "department": "응급의학과",
+      "external_id": "SWDS-185",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황순호",
+      "department": "정형외과",
+      "external_id": "SWDS-180",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박혁",
+      "department": "정형외과",
+      "external_id": "SWDS-174",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지의",
+      "department": "정형외과",
+      "external_id": "SWDS-171",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권승철",
+      "department": "정형외과",
+      "external_id": "SWDS-179",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정선호",
+      "department": "정신건강의학과",
+      "external_id": "SWDS-194",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지호",
+      "department": "재활의학과",
+      "external_id": "SWDS-200",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임재형",
+      "department": "진단검사의학과",
+      "external_id": "SWDS-169",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조범석",
+      "department": "직업환경의학과",
+      "external_id": "SWDS-201",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권영준",
+      "department": "척추신경외과",
+      "external_id": "SWDS-173",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성빈",
+      "department": "척추신경외과",
+      "external_id": "SWDS-221",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정창준",
+      "department": "치과",
+      "external_id": "SWDS-172",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현민",
+      "department": "치과",
+      "external_id": "SWDS-178",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송정섭",
+      "department": "호흡기내과",
+      "external_id": "SWDS-229",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류정률",
+      "department": "핵의학과",
+      "external_id": "SWDS-219",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

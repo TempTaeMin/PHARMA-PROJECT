@@ -1,0 +1,687 @@
+{
+  "hospital_code": "BCSEJONG",
+  "hospital_name": "부천세종병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김수연",
+      "department": "가정의학과",
+      "external_id": "BCSEJONG-2230000000-20070114",
+      "n_schedules": 7,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "이영비",
+      "department": "가정의학과",
+      "external_id": "BCSEJONG-2230000000-20110022",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하영은",
+      "department": "감염내과",
+      "external_id": "BCSEJONG-2010000010-20180068",
+      "n_schedules": 3,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "김종화",
+      "department": "내분비내과",
+      "external_id": "BCSEJONG-2010500000-20030046",
+      "n_schedules": 8,
+      "n_date_schedules": 64,
+      "notes": ""
+    },
+    {
+      "name": "정수진",
+      "department": "내분비내과",
+      "external_id": "BCSEJONG-2010500000-20070082",
+      "n_schedules": 8,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "권현미",
+      "department": "류마티스내과",
+      "external_id": "BCSEJONG-2011100000-20190071",
+      "n_schedules": 2,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "민경범",
+      "department": "마취통증의학과",
+      "external_id": "BCSEJONG-2090000000-20240208",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종광",
+      "department": "마취통증의학과",
+      "external_id": "BCSEJONG-2090000000-20240633",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤태균",
+      "department": "마취통증의학과",
+      "external_id": "BCSEJONG-2090000000-20180052",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종현",
+      "department": "마취통증의학과",
+      "external_id": "BCSEJONG-2090000000-20030013",
+      "n_schedules": 12,
+      "n_date_schedules": 110,
+      "notes": ""
+    },
+    {
+      "name": "박재영",
+      "department": "병리과",
+      "external_id": "BCSEJONG-2210000000-20170645",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안동현",
+      "department": "비뇨의학과",
+      "external_id": "BCSEJONG-2150000000-20240671",
+      "n_schedules": 8,
+      "n_date_schedules": 73,
+      "notes": ""
+    },
+    {
+      "name": "권대휘",
+      "department": "산부인과",
+      "external_id": "BCSEJONG-2100000000-20210010",
+      "n_schedules": 8,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "김진범",
+      "department": "산부인과",
+      "external_id": "BCSEJONG-2100000000-20230594",
+      "n_schedules": 4,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "김성호",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20120034",
+      "n_schedules": 2,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20210002",
+      "n_schedules": 2,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "김정윤",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20190172",
+      "n_schedules": 3,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "반지은",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20240071",
+      "n_schedules": 3,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "방지석",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20160165",
+      "n_schedules": 3,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "임동진",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20260029",
+      "n_schedules": 2,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "장소익",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20120035",
+      "n_schedules": 4,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "정현",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20210006",
+      "n_schedules": 1,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "최은영",
+      "department": "소아청소년과",
+      "external_id": "BCSEJONG-2110000000-20160105",
+      "n_schedules": 3,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "권용수",
+      "department": "소화기내과",
+      "external_id": "BCSEJONG-2010300000-20250593",
+      "n_schedules": 5,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김정하",
+      "department": "소화기내과",
+      "external_id": "BCSEJONG-2010300000-20250298",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오경환",
+      "department": "소화기내과",
+      "external_id": "BCSEJONG-2010300000-20220052",
+      "n_schedules": 5,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "이준덕",
+      "department": "소화기내과",
+      "external_id": "BCSEJONG-2010300000-20250293",
+      "n_schedules": 4,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "하정민",
+      "department": "소화기내과",
+      "external_id": "BCSEJONG-2010300000-20240575",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오미영",
+      "department": "신경과",
+      "external_id": "BCSEJONG-2020000000-20190417",
+      "n_schedules": 9,
+      "n_date_schedules": 72,
+      "notes": ""
+    },
+    {
+      "name": "박정언",
+      "department": "신경외과",
+      "external_id": "BCSEJONG-2060000000-20190558",
+      "n_schedules": 7,
+      "n_date_schedules": 57,
+      "notes": ""
+    },
+    {
+      "name": "조태구",
+      "department": "신경외과",
+      "external_id": "BCSEJONG-2060000000-20000055",
+      "n_schedules": 7,
+      "n_date_schedules": 59,
+      "notes": ""
+    },
+    {
+      "name": "강재영",
+      "department": "신장내과",
+      "external_id": "BCSEJONG-2010700000-19990217",
+      "n_schedules": 7,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김제상",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20230595",
+      "n_schedules": 5,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김치훈",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20170090",
+      "n_schedules": 6,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "김호연",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20240030",
+      "n_schedules": 6,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "박상원",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20150006",
+      "n_schedules": 5,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "박윤지",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20220417",
+      "n_schedules": 4,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "박하욱",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20200258",
+      "n_schedules": 5,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "박영선",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20260030",
+      "n_schedules": 5,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "배대환",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20240442",
+      "n_schedules": 5,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "이명묵",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20160014",
+      "n_schedules": 2,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "이의재",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20200069",
+      "n_schedules": 5,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "이현종",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20100026",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임달수",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-19980010",
+      "n_schedules": 5,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "장덕현",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20210007",
+      "n_schedules": 6,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "정지현",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20170077",
+      "n_schedules": 5,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "최영진",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20120036",
+      "n_schedules": 6,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "최원석",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-20180069",
+      "n_schedules": 5,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "홍석근",
+      "department": "심장내과",
+      "external_id": "BCSEJONG-2010400000-19930004",
+      "n_schedules": 5,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "김동중",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20240258",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동진",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20140024",
+      "n_schedules": 1,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "김용진",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20160253",
+      "n_schedules": 1,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "김응래",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20180070",
+      "n_schedules": 1,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "김은채",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20260051",
+      "n_schedules": 1,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "손봉연",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20210418",
+      "n_schedules": 1,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "염상윤",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20180389",
+      "n_schedules": 2,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "이희문",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20180112",
+      "n_schedules": 1,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "이창하",
+      "department": "심장혈관흉부외과",
+      "external_id": "BCSEJONG-2070000000-20040061",
+      "n_schedules": 1,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "위석범",
+      "department": "일반내과",
+      "external_id": "BCSEJONG-2010800000-20250487",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경민",
+      "department": "영상의학과",
+      "external_id": "BCSEJONG-2160000000-20180433",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박찬영",
+      "department": "영상의학과",
+      "external_id": "BCSEJONG-2160000000-20220502",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상아",
+      "department": "영상의학과",
+      "external_id": "BCSEJONG-2160000000-20180513",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지훈",
+      "department": "영상의학과",
+      "external_id": "BCSEJONG-2160000000-20240682",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지희",
+      "department": "외과",
+      "external_id": "BCSEJONG-2040000000-20240598",
+      "n_schedules": 6,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "이준서",
+      "department": "외과",
+      "external_id": "BCSEJONG-2040000000-20240513",
+      "n_schedules": 6,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "이태현",
+      "department": "외과",
+      "external_id": "BCSEJONG-2040000000-20000168",
+      "n_schedules": 6,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "김민웅",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20240078",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김인준",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20240275",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주찬",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20260001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박명희",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20160021",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤태진",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20230072",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤창준",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20230405",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장용훈",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20250297",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하소영",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20150016",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최세원",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20250273",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성심",
+      "department": "응급의학과",
+      "external_id": "BCSEJONG-2280000000-20260011",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한재덕",
+      "department": "재활의학과",
+      "external_id": "BCSEJONG-2220000000-20120041",
+      "n_schedules": 6,
+      "n_date_schedules": 50,
+      "notes": ""
+    },
+    {
+      "name": "우은송",
+      "department": "정신건강의학과",
+      "external_id": "BCSEJONG-2030000000-20200466",
+      "n_schedules": 7,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "최지원",
+      "department": "정형외과",
+      "external_id": "BCSEJONG-2050000000-20250071",
+      "n_schedules": 6,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "송봉규",
+      "department": "중환자의학과",
+      "external_id": "BCSEJONG-2410000000-20100032",
+      "n_schedules": 11,
+      "n_date_schedules": 101,
+      "notes": ""
+    },
+    {
+      "name": "양내리",
+      "department": "진단검사의학과",
+      "external_id": "BCSEJONG-2200000000-20190100",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차도신",
+      "department": "치과",
+      "external_id": "BCSEJONG-2240000000-19990205",
+      "n_schedules": 6,
+      "n_date_schedules": 51,
+      "notes": ""
+    },
+    {
+      "name": "조광현",
+      "department": "피부과",
+      "external_id": "BCSEJONG-2140000000-20180073",
+      "n_schedules": 1,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "김계수",
+      "department": "호흡기내과",
+      "external_id": "BCSEJONG-2010600000-20040086",
+      "n_schedules": 8,
+      "n_date_schedules": 71,
+      "notes": ""
+    },
+    {
+      "name": "정지훈",
+      "department": "영상의학과",
+      "external_id": "BCSEJONG-2180000000-20240682",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

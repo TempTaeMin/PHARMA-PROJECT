@@ -1,0 +1,1943 @@
+{
+  "hospital_code": "YONGIN",
+  "hospital_name": "용인세브란스병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "류하은",
+      "department": "가정의학과",
+      "external_id": "YONGIN-644-f5111ceea45a",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박병진",
+      "department": "가정의학과",
+      "external_id": "YONGIN-644-b095c76d83b1",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종희",
+      "department": "가정의학과",
+      "external_id": "YONGIN-644-ac32f532b5e4",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조아라",
+      "department": "가정의학과",
+      "external_id": "YONGIN-644-92bf20cd7153",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노승윤",
+      "department": "간담췌외과",
+      "external_id": "YONGIN-16009-2044984226a4",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박수형",
+      "department": "간담췌외과",
+      "external_id": "YONGIN-16009-4c8dad5e60c9",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최문석",
+      "department": "간담췌외과",
+      "external_id": "YONGIN-16009-c247db06854a",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용찬",
+      "department": "감염내과",
+      "external_id": "YONGIN-748-7c62aece30bb",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박윤수",
+      "department": "감염내과",
+      "external_id": "YONGIN-748-2312e779eac5",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안상민",
+      "department": "감염내과",
+      "external_id": "YONGIN-748-1d0757c27d2a",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이초록",
+      "department": "갑상선내분비외과",
+      "external_id": "YONGIN-16017-1e47058ad439",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허준",
+      "department": "갑상선내분비외과",
+      "external_id": "YONGIN-16017-1d18b6e7a706",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양현우",
+      "department": "구강악안면외과",
+      "external_id": "YONGIN-16041-2da7c28e0be7",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승원",
+      "department": "구강악안면외과",
+      "external_id": "YONGIN-16041-361e90932ac7",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽인선",
+      "department": "내분비내과",
+      "external_id": "YONGIN-275-218068767c33",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경민",
+      "department": "내분비내과",
+      "external_id": "YONGIN-275-514ceb46e157",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철식",
+      "department": "내분비내과",
+      "external_id": "YONGIN-275-fe83563fe1a5",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박석원",
+      "department": "내분비내과",
+      "external_id": "YONGIN-275-5ede6528ec2f",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍원정",
+      "department": "내분비내과",
+      "external_id": "YONGIN-275-911367620f98",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김남규",
+      "department": "대장항문외과",
+      "external_id": "YONGIN-16075-b18a9d712828",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태형",
+      "department": "대장항문외과",
+      "external_id": "YONGIN-16075-29456fd39a88",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종민",
+      "department": "대장항문외과",
+      "external_id": "YONGIN-16075-7196f9d747bc",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지혜",
+      "department": "대장항문외과",
+      "external_id": "YONGIN-16075-1d2ccbe29e74",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하장우",
+      "department": "류마티스내과",
+      "external_id": "YONGIN-16081-2a5013ec97d2",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태림",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-ef47edde0347",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "노고운",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-c0406f4c016e",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "라세희",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-52f02189a315",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "민나현",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-2f7d05c550ee",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박수정",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-9f34c2cabb9e",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박원선",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-ee04944b91f5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "반소영",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-1539a2466c3b",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "백지원",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-ecc874d1f8cd",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "서이준",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-c288b2caf505",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "서재희",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-6f94ee6193fa",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "양시준",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-e645c063b4f4",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오송이",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-1cbc5d225ee1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "윤경봉",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-fc0c5fce5379",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤진",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-57f86f57630f",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "주향미",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-f085a8822065",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "최수연",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-10568f4b606e",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "태나영",
+      "department": "마취통증의학과",
+      "external_id": "YONGIN-291-913726a3e547",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김준원",
+      "department": "방사선종양학과",
+      "external_id": "YONGIN-16095-306ee869a22a",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태형",
+      "department": "방사선종양학과",
+      "external_id": "YONGIN-16095-53ef75b4643e",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박광우",
+      "department": "방사선종양학과",
+      "external_id": "YONGIN-16095-86f7342507b8",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "변화경",
+      "department": "방사선종양학과",
+      "external_id": "YONGIN-16095-16c86267e71c",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "석재연",
+      "department": "병리과",
+      "external_id": "YONGIN-16103-702eb89bcd63",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "송지선",
+      "department": "병리과",
+      "external_id": "YONGIN-16103-ed8944c22eca",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "신은아",
+      "department": "병리과",
+      "external_id": "YONGIN-16103-fc9b4e1f9c20",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "장미",
+      "department": "병리과",
+      "external_id": "YONGIN-16103-4e8686cf04bf",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "최윤정",
+      "department": "병리과",
+      "external_id": "YONGIN-16103-cd145c1475be",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김종찬",
+      "department": "비뇨의학과",
+      "external_id": "YONGIN-288-835cd09e2591",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진우",
+      "department": "비뇨의학과",
+      "external_id": "YONGIN-288-14e12c07c7dd",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전진형",
+      "department": "비뇨의학과",
+      "external_id": "YONGIN-288-ed73a5467a2c",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김완영",
+      "department": "산부인과",
+      "external_id": "YONGIN-279-12c4c6927659",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김혜인",
+      "department": "산부인과",
+      "external_id": "YONGIN-279-5ff630541e56",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주현",
+      "department": "산부인과",
+      "external_id": "YONGIN-279-fdd7e46d82f6",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "어경진",
+      "department": "산부인과",
+      "external_id": "YONGIN-279-3e9db53c520b",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이다혜",
+      "department": "산부인과",
+      "external_id": "YONGIN-279-4b7aad15ec8d",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장진범",
+      "department": "산부인과",
+      "external_id": "YONGIN-279-85108beed23c",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허혜원",
+      "department": "산부인과",
+      "external_id": "YONGIN-279-66d8e0515213",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백우열",
+      "department": "성형외과",
+      "external_id": "YONGIN-287-2dd2491e6e83",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "정복기",
+      "department": "성형외과",
+      "external_id": "YONGIN-287-715036a733a5",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정희선",
+      "department": "성형외과",
+      "external_id": "YONGIN-287-a261de93023c",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한우연",
+      "department": "성형외과",
+      "external_id": "YONGIN-287-c2fa02089bb0",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경민",
+      "department": "소아감염면역과",
+      "external_id": "YONGIN-26520-416434ebd365",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은별",
+      "department": "소아내분비과",
+      "external_id": "YONGIN-26523-73c46e4ec694",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강훈철",
+      "department": "소아신경과",
+      "external_id": "YONGIN-26525-ce3e675e77a4",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "구청모",
+      "department": "소아신경과",
+      "external_id": "YONGIN-26525-2d9eacf436bc",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동석",
+      "department": "소아신경과",
+      "external_id": "YONGIN-26525-8b46a56bf7b5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이하늘",
+      "department": "소아신경과",
+      "external_id": "YONGIN-26525-1764f6a335d5",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황준규",
+      "department": "소아신경과",
+      "external_id": "YONGIN-26525-6c55ea0377df",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "류병원",
+      "department": "소아심장과",
+      "external_id": "YONGIN-26524-7ce2b354ca6f",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "호인걸",
+      "department": "소아외과",
+      "external_id": "YONGIN-16151-bce30c4853a5",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공도연",
+      "department": "소아응급",
+      "external_id": "YONGIN-26527-742fda8746f3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박경화",
+      "department": "소아응급",
+      "external_id": "YONGIN-26527-25d17b94ced6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김민정",
+      "department": "소아호흡기 알레르기과",
+      "external_id": "YONGIN-26521-92f0c1185ff5",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용주",
+      "department": "소아호흡기 알레르기과",
+      "external_id": "YONGIN-26521-11e81dc63641",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김연지",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-86833a36dbb9",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김자경",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-56dae812b6db",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재각",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-21eeab08c92f",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박지훈",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-37d098f50af8",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박해준",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-9e7fdad37b60",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이세준",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-aa33c0ce3fad",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임태섭",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-74eb6573e554",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임현철",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-b989dff0d49e",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전혜연",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-9529409dc0b9",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주원",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-45291dd4f078",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허철웅",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-2e24b6c219c2",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현혜경",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-e29ced070b67",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황가영",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-8c5d30fa742f",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "황진호",
+      "department": "소화기내과",
+      "external_id": "YONGIN-272-b803b3acbb52",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤중",
+      "department": "신경과",
+      "external_id": "YONGIN-281-2a4343eaf5dc",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진권",
+      "department": "신경과",
+      "external_id": "YONGIN-281-dc44951ff818",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백민렬",
+      "department": "신경과",
+      "external_id": "YONGIN-281-1fcd864e35b7",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "염정연",
+      "department": "신경과",
+      "external_id": "YONGIN-281-6624adb7bc8a",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유준상",
+      "department": "신경과",
+      "external_id": "YONGIN-281-05d3bd9686c9",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원우",
+      "department": "신경과",
+      "external_id": "YONGIN-281-31ece0b71477",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전민영",
+      "department": "신경과",
+      "external_id": "YONGIN-281-f143e713a876",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정석종",
+      "department": "신경과",
+      "external_id": "YONGIN-281-1834e9c30af3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "정승호",
+      "department": "신경과",
+      "external_id": "YONGIN-281-d5c2927b7a39",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜윤",
+      "department": "신경과",
+      "external_id": "YONGIN-281-adad4145e0ba",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍지만",
+      "department": "신경과",
+      "external_id": "YONGIN-281-64035349c104",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박세준",
+      "department": "신경외과",
+      "external_id": "YONGIN-16184-8c779bc818a3",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신준재",
+      "department": "신경외과",
+      "external_id": "YONGIN-16184-179fffec6916",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유선준",
+      "department": "신경외과",
+      "external_id": "YONGIN-16184-bca9335f083f",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재환",
+      "department": "신경외과",
+      "external_id": "YONGIN-16184-e5c62ca030aa",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장창기",
+      "department": "신경외과",
+      "external_id": "YONGIN-16184-41fe264572f5",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조광천",
+      "department": "신경외과",
+      "external_id": "YONGIN-16184-0c8e36591888",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진동규",
+      "department": "신경외과",
+      "external_id": "YONGIN-16184-8e8618c3e33c",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재현",
+      "department": "신생아과",
+      "external_id": "YONGIN-26519-312d9a9510b1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "장욱",
+      "department": "신생아과",
+      "external_id": "YONGIN-26519-a343f7069418",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고예은",
+      "department": "신장내과",
+      "external_id": "YONGIN-274-d4d4af9f1a07",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤해룡",
+      "department": "신장내과",
+      "external_id": "YONGIN-274-1b1cb2e2dc44",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정은",
+      "department": "신장내과",
+      "external_id": "YONGIN-274-c51fcf3d5698",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정혜진",
+      "department": "신장내과",
+      "external_id": "YONGIN-274-1355e71c0719",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "주영수",
+      "department": "신장내과",
+      "external_id": "YONGIN-274-7be735f714f8",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민관",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-d56644ac5b0a",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상용",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-4ceca99730de",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세원",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-bb52c6a018fe",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용철",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-0672c5535f26",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노지웅",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-d2df1bca2cce",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박제욱",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-92a76c5b8b22",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배성아",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-aeb3b5bf3b71",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양필성",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-6fe8675e0fc9",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이오현",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-ee54d4859170",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임소민",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-b7ca5afc4f99",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임의",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-f078de65d870",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인현",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-96daf59e3733",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조덕규",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-06063ff845ed",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조상윤",
+      "department": "심장내과",
+      "external_id": "YONGIN-276-ca131f6c81ff",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희석",
+      "department": "안과",
+      "external_id": "YONGIN-284-d7c506b0a5dd",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문인희",
+      "department": "안과",
+      "external_id": "YONGIN-284-37a5913558a3",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "설동헌",
+      "department": "안과",
+      "external_id": "YONGIN-284-34159fd3316c",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상엽",
+      "department": "안과",
+      "external_id": "YONGIN-284-d32bf63b3292",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이승민",
+      "department": "안과",
+      "external_id": "YONGIN-284-1aabb8e420ab",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임수현",
+      "department": "안과",
+      "external_id": "YONGIN-284-9f3612435e31",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전제휘",
+      "department": "안과",
+      "external_id": "YONGIN-284-b1e70d0bbb26",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지용우",
+      "department": "안과",
+      "external_id": "YONGIN-284-c82633cdf46b",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고경희",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-858219f43900",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김동규",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-a13ecc0b8ee0",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김미선",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-3b4b8d460dd6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김성원",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-ca3282c40683",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김승형",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-aa7512d4b9d5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김은경",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-4a20f4204bd6",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준휘",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-cfdd0f93ab79",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박채정",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-8371d995dd93",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "신현주",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-f19ddd28316c",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이승수",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-b6cd92f53a63",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이시은",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-47d3b089168c",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주연",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-0bf207ef9ac7",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "정수윤",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-7df639c3089a",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "황신혜",
+      "department": "영상의학과",
+      "external_id": "YONGIN-292-2179617308f3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "방휘재",
+      "department": "위장관외과",
+      "external_id": "YONGIN-16248-ca2cac61d1dd",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주흥",
+      "department": "유방외과",
+      "external_id": "YONGIN-16253-8c6144166558",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백승호",
+      "department": "유방외과",
+      "external_id": "YONGIN-16253-8da461cc0d96",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준상",
+      "department": "유방외과",
+      "external_id": "YONGIN-16253-6152718449ed",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고영상",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-05a5fa9fec93",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "고재욱",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-53f82c4beb18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "공성식",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-2b5d1462d3f9",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이경원",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-84659f57ffa9",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이인혜",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-efb6f9f85438",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이준배",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-e67911495ad5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "임재관",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-4eee3a8e9f04",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "하상현",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-177be1296839",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "황윤정",
+      "department": "응급의학과",
+      "external_id": "YONGIN-913-30e6073cb57d",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "강주완",
+      "department": "이비인후과",
+      "external_id": "YONGIN-283-f9547885f0d4",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주현",
+      "department": "이비인후과",
+      "external_id": "YONGIN-283-9426dac70f06",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손은진",
+      "department": "이비인후과",
+      "external_id": "YONGIN-283-e126a9272176",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승호",
+      "department": "이비인후과",
+      "external_id": "YONGIN-283-b551f0300508",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은창",
+      "department": "이비인후과",
+      "external_id": "YONGIN-283-13cdbf26e0a9",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허영균",
+      "department": "이비인후과",
+      "external_id": "YONGIN-283-24c69811c311",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정현",
+      "department": "이식혈관중환자외과",
+      "external_id": "YONGIN-16277-062538476474",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "임승혁",
+      "department": "이식혈관중환자외과",
+      "external_id": "YONGIN-16277-554db8f72945",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최미정",
+      "department": "이식혈관중환자외과",
+      "external_id": "YONGIN-16277-6d65ca270650",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "오지영",
+      "department": "임상유전과",
+      "external_id": "YONGIN-26546-2a1b518340f9",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "경태영",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-ae69eb3965ea",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "곽지원",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-de8d61f556bd",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김성우",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-8f065d5ffe9d",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김정아",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-9450a3e5521e",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김현종",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-028c46ce9a3e",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "남유주",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-c961a72bd3b5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박경미",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-c9ae1b28bf46",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박나리",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-ab43121ec6bd",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "송송이",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-4435857fbd96",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "신아름",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-1acd22f924f1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "양지훈",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-0f04ab1090c0",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이수현",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-e186878764f3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이은혜",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-bacdd272eb8f",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이지현",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-07a7cc78d3f8",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "장예진",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-27e8942bb40e",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "조계희",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-e4caf1fe4a32",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "천화영",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-4bfd307b4d1c",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "최은아",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-e2fbc8a6b5e6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "한태환",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-d2c264984bfb",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "한희연",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-a382f3abaf2c",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "홍원기",
+      "department": "입원의학과",
+      "external_id": "YONGIN-16288-7389fcc2f0b2",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김나영",
+      "department": "재활의학과",
+      "external_id": "YONGIN-285-3424a3b2856c",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승기",
+      "department": "재활의학과",
+      "external_id": "YONGIN-285-1be58218b767",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태임",
+      "department": "재활의학과",
+      "external_id": "YONGIN-285-3f96a9cd3f0f",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우정",
+      "department": "정신건강의학과",
+      "external_id": "YONGIN-289-a9f03dac24e6",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희연",
+      "department": "정신건강의학과",
+      "external_id": "YONGIN-289-2e6c589e83b9",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재섭",
+      "department": "정신건강의학과",
+      "external_id": "YONGIN-289-67ec32a48177",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진영",
+      "department": "정신건강의학과",
+      "external_id": "YONGIN-289-634a8a47b7ef",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박혜윤",
+      "department": "정신건강의학과",
+      "external_id": "YONGIN-289-4d6c90a21cea",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고일현",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-bbb1b1b56f9e",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남후",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-836db1b58f3c",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형식",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-8cc79849c4a0",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박섭리",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-75b53241b6c0",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준영",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-4af1e77df9ce",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진오",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-c5d4e6e916e5",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박훈",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-50a6ca3765c6",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤여권",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-cefd9758404c",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정광호",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-b0c2f005366b",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현덕",
+      "department": "정형외과",
+      "external_id": "YONGIN-280-097afa17b7c8",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김희정",
+      "department": "진단검사의학과",
+      "external_id": "YONGIN-293-abbb6fce02c1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박용정",
+      "department": "진단검사의학과",
+      "external_id": "YONGIN-293-1f5924f7d431",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "유경희",
+      "department": "진단검사의학과",
+      "external_id": "YONGIN-293-22d1edb8b23d",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "최승준",
+      "department": "진단검사의학과",
+      "external_id": "YONGIN-293-38c099fba01c",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "이경진",
+      "department": "치과수복클리닉",
+      "external_id": "YONGIN-16364-5f4589b5af41",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이화정",
+      "department": "치과수복클리닉",
+      "external_id": "YONGIN-16364-9265fcb063bd",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한웅기",
+      "department": "치과수복클리닉",
+      "external_id": "YONGIN-16364-f3a28a87d6bc",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김제민",
+      "department": "피부과",
+      "external_id": "YONGIN-282-2176111a44ad",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지희",
+      "department": "피부과",
+      "external_id": "YONGIN-282-20032e003b4d",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오상호",
+      "department": "피부과",
+      "external_id": "YONGIN-282-d29deb13ed9f",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현정",
+      "department": "핵의학과",
+      "external_id": "YONGIN-16375-c12210a91c64",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용휴",
+      "department": "핵의학과",
+      "external_id": "YONGIN-16375-87f014126cce",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수정",
+      "department": "혈액종양내과",
+      "external_id": "YONGIN-16386-12f0533c1d95",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정현",
+      "department": "혈액종양내과",
+      "external_id": "YONGIN-16386-c9f8cf19b2b8",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오지수",
+      "department": "혈액종양내과",
+      "external_id": "YONGIN-16386-800a3e5de1fe",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍문기",
+      "department": "혈액종양내과",
+      "external_id": "YONGIN-16386-71ac8a4e8d48",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽세현",
+      "department": "호흡기·알레르기내과",
+      "external_id": "YONGIN-16387-57063e2e27ea",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성렬",
+      "department": "호흡기·알레르기내과",
+      "external_id": "YONGIN-16387-a52e6eba414c",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은영",
+      "department": "호흡기·알레르기내과",
+      "external_id": "YONGIN-16387-d2ab2c27c035",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은혜",
+      "department": "호흡기·알레르기내과",
+      "external_id": "YONGIN-16387-35b98b00eef8",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최지수",
+      "department": "호흡기·알레르기내과",
+      "external_id": "YONGIN-16387-158c456546e1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "김학주",
+      "department": "흉부외과",
+      "external_id": "YONGIN-286-f4148858a4ba",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성준",
+      "department": "흉부외과",
+      "external_id": "YONGIN-286-95578d48c51b",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서지원",
+      "department": "흉부외과",
+      "external_id": "YONGIN-286-b69c4d171f56",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영민",
+      "department": "용인세브란스헬스체크업",
+      "external_id": "YONGIN-26473-3561493388b0",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박미진",
+      "department": "용인세브란스헬스체크업",
+      "external_id": "YONGIN-26473-a5e5e09b2580",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "박은혜",
+      "department": "용인세브란스헬스체크업",
+      "external_id": "YONGIN-26473-cb5f6ece8e04",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    },
+    {
+      "name": "허성은",
+      "department": "용인세브란스헬스체크업",
+      "external_id": "YONGIN-26473-a8beca5a557e",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 홈페이지에 진료시간표가 게시되어 있지 않습니다. 외래 가능 시간은 병원에 직접 문의해 주세요."
+    }
+  ]
+}

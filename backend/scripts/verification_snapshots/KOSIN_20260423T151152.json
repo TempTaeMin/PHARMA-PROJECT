@@ -1,0 +1,5600 @@
+{
+  "hospital_code": "KOSIN",
+  "hospital_name": "고신대학교복음병원",
+  "status": "success",
+  "crawled_at": "2026-04-23T15:11:52.471787",
+  "doctor_count": 194,
+  "doctors": [
+    {
+      "name": "김부경",
+      "department": "내분비내과",
+      "position": "교수",
+      "specialty": "비만, 당뇨병, 갑상선, 골다공증, 뇌하수체, 부신",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=44",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c872e0bc202cb356b91c17a5b55625be0.png",
+      "external_id": "KOSIN-44",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박성우",
+      "department": "내분비내과",
+      "position": "교수",
+      "specialty": "당뇨병,갑상선,골다공증",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=45",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_eec56f4d5a8da5cf2880a60be58472590.png",
+      "external_id": "KOSIN-45",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이상욱",
+      "department": "간담췌내과",
+      "position": "교수",
+      "specialty": "간,담도,췌장 질환(간암, 간경화증, 급,만성 간염)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=36",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c31ec64df15c99d5a2a8a6fc2fe24c690.png",
+      "external_id": "KOSIN-36",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김구상",
+      "department": "두경부갑상선 내분비외과",
+      "position": "교수",
+      "specialty": "로봇갑상선수술(경구,액와), 갑상선암, 고주파열치료, 조직검사, 세침검사, 고주파열치료클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=186",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_6491d494b1ed2a5776f27b3a686f69ad0.png",
+      "external_id": "KOSIN-186",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정만홍",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "폐암,천식,기관지염,결핵,폐렴,만성폐쇄성폐질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=182",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_56e2e3de600b316e4a2defb4dcba47fa0.png",
+      "external_id": "KOSIN-182",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "신성훈",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "위암, 대장암, 두경부암, 폐암, 간담도암, 유방암, 비뇨기암 등의 항암 약물치료 항암환자 클리닉 : 매주 월, 금 오전",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=178",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d969fc5339dab33d50b8b26ab5d57a4f0.png",
+      "external_id": "KOSIN-178",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김희영",
+      "department": "핵의학과",
+      "position": "교수",
+      "specialty": "갑상선암 방사성동위원소 치료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=177",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a21aa2e5f641b7462265fa224dd55cee0.png",
+      "external_id": "KOSIN-177",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김희진",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "치과보존과 일반질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=169",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_159b185ff7b3225875d4996c8d8eac750.jpg",
+      "external_id": "KOSIN-169",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김미향",
+      "department": "진단검사의학과",
+      "position": "교수",
+      "specialty": "진단검사의학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=165",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_4c4beaa2f3009596007ba1e88317eb5f0.png",
+      "external_id": "KOSIN-165",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김정원",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "신경독성학, 직업성 알레르기 질환(천식, 피부),직업성 암, 직업병 산재보상, 업무적합성 평가",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=161",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_b0f55eb36e6b59281a8fa001d54e68320.png",
+      "external_id": "KOSIN-161",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "권영호",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "수부, 주관절, 흉곽출구증후군",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=156",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c3c2e91724fdc41714d27ad84797be530.png",
+      "external_id": "KOSIN-156",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정주원",
+      "department": "응급외과",
+      "position": "교수",
+      "specialty": "응급외과",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=145",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_01c227afc1c25a1ce0219509e92df08d0.png",
+      "external_id": "KOSIN-145",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "계여곤",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "응급의학과",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=140",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_6af27587bf5f7dd010c5ac55b112cbc80.png",
+      "external_id": "KOSIN-140",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "정원길",
+      "department": "완화의학과",
+      "position": "교수",
+      "specialty": "호스피스 완화의료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=134",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_b756cf5486e743e2763ee808db4e24ce0.png",
+      "external_id": "KOSIN-134",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "조영덕",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "신경계, 심혈관계",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=126",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a49410d583da7907f0a79ce2976ac1530.png",
+      "external_id": "KOSIN-126",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "임학",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "신장질환, 사구체질환, 신증후군, 만성신부전(만성콩팥병), 혈액투석, 복막투석, 신장이식(생체이식, 혈액형불일치이식, 뇌사이식)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=107",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_9eba14d8b11f37bf45f2aac4220ad74b0.png",
+      "external_id": "KOSIN-107",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "조혁래",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "뇌종양, 두개저종양, 삼차신경통, 안면경련",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=102",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_3e7465cbbe995a2a4d760c3c0f1f882b0.png",
+      "external_id": "KOSIN-102",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "유봉구",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "뇌졸중,치매,두통, 뇌졸중•치매 클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=96",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_43f9bb1afb3d7ff913e203eb24ffe8400.png",
+      "external_id": "KOSIN-96",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "홍유라",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "신생아 및 미숙아질환, 예방접종",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=82",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_81cc823a74919a2dfff32895c7b705160.png",
+      "external_id": "KOSIN-82",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "류현열",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "요로종양,전립선,신장이식, 종양클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=69",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ff7267ca05500ef2938935ef33f07bac0.png",
+      "external_id": "KOSIN-69",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "서광일",
+      "department": "간담췌내과",
+      "position": "교수",
+      "specialty": "간염, 지방간, 간경화, 간암, 간부전, 간이식",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=37",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_67c3bfbe36c3c4fe74abaf9de49779410.png",
+      "external_id": "KOSIN-37",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "신동훈",
+      "department": "간담도췌장외과 · 이식외과",
+      "position": "교수",
+      "specialty": "간, 담도, 췌장, 이식외과, 복강경수술, 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=32",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d645ababcc08ce8b52dbeffff19fe74d0.png",
+      "external_id": "KOSIN-32",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김희규",
+      "department": "알레르기내과",
+      "position": "교수",
+      "specialty": "만성기침, 기관지천식, 알레르기 비염, 아토피 피부염, 식품알레르기, 급만성 두드러기, 혈관부종, 접촉성 피부염, 약물 알레르기, 호산구증가증, 각종 알레르기 질환, 면역결핍질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=29",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_71b2afd3ea9aed245612b9deda26e9ec0.png",
+      "external_id": "KOSIN-29",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "장민수",
+      "department": "피부과",
+      "position": "교수",
+      "specialty": "여드름/주사, 건선, 손·발톱색소질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=23",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c8531b8e8e17c9e12364a43746a74eb10.png",
+      "external_id": "KOSIN-23",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김호찬",
+      "department": "정신건강의학과",
+      "position": "교수",
+      "specialty": "공황장애, 불안장애, 기분장애, 정신치료, 낮병동(조현병, 기분장애), 재발방지클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=22",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c08d84e708ef9dbedcca1c57048901b60.png",
+      "external_id": "KOSIN-22",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "심영주",
+      "department": "재활의학과",
+      "position": "교수",
+      "specialty": "소아재활, 림프부종 재활, 암재활",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=21",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_634521f5298b5cd9991fba16eaaaecfd0.png",
+      "external_id": "KOSIN-21",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정성의",
+      "department": "유방외과",
+      "position": "교수",
+      "specialty": "유방암, 로봇유방수술, Young age 유방암, 유방양성질환 *화요일 오후 출장시 진료가 어려울 수 있습니다.",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=19",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_12e105cc66865425e3b0f7e0325641680.png",
+      "external_id": "KOSIN-19",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "윤기영",
+      "department": "위장관외과",
+      "position": "교수",
+      "specialty": "위장, 복강경 위장관 수술(위암, 위장관 기질 종양)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=17",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_22ac6e6ff7fe85ab6b55e8807a148f6f0.png",
+      "external_id": "KOSIN-17",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이상준",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "망막(황반변성, 망막박리, 망막전막, 황반원공,당뇨망막증), 포도막(홍채섬모체염,포도막염), 유리체(유리체출혈, 유리체 혼탁), 백내장, 인공수정체탈구",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=16",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_fc72f5efd30a72020c7cf54b8a454dbe0.png",
+      "external_id": "KOSIN-16",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박성달",
+      "department": "심장혈관 흉부외과",
+      "position": "교수",
+      "specialty": "일반흉부, 폐암, 종격동종양",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=15",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ebe51e38c4e65d7eecac6909a011de040.png",
+      "external_id": "KOSIN-15",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "차태준",
+      "department": "심장내과(순환기내과)",
+      "position": "교수",
+      "specialty": "고혈압,협심증,심부전,부정맥,임상심장전기생리학, 침습적심장학,세포심장학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=14",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_17632cb957684a6e7476fb0c37a0001c0.png",
+      "external_id": "KOSIN-14",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박선자",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "용종(선종), 종양의 내시경적 시술(용종절제술, 지혈술, 스텐트삽입, 이물질제거), 소화기암, 진행성암환자 항암치료, 검사목적의 내시경(위, 대장, 캡슐, 소장), 위 및 대장의 상피하병변(내시경초음파), 위장관 말초림프종, 기능성소화불량, 과민성장증후군, 소화성 궤양",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=12",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_95fe29db7bbe326a84a785229d257e460.png",
+      "external_id": "KOSIN-12",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박진형",
+      "department": "성형외과",
+      "position": "교수",
+      "specialty": "유방재건, 미세수술, 미용",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=9",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a67eb4798ab11d45a7d7ccdf36c8d7380.png",
+      "external_id": "KOSIN-9",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최종순",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "비타민고용량요법, 암의 보완통합요법, 자율신경실조증 만성피로클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=3",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_0158a7844f98c7556a07fe0d4caf88210.png",
+      "external_id": "KOSIN-3",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박종빈",
+      "department": "피부과",
+      "position": "교수",
+      "specialty": "피부종양, 피부암, 알레르기피부질환, 대상포진",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=173",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_89e13a340e48599e0be49db9a3d3b85d0.png",
+      "external_id": "KOSIN-173",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "서고은",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "구강악안면외과 일반질환(구강내 종양,감염,외상,임플란트,매복치,턱관절 질환 및 기타 치과 질환)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=170",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_4a0b961f641387ec27d4d62a45aa66280.png",
+      "external_id": "KOSIN-170",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정지현",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "직업성 질환, 특수건강진단, 업무관련성 평가, 업무적합성 평가",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=162",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_4b4bf6645d2ba921327e9f66466c78a90.png",
+      "external_id": "KOSIN-162",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이상신",
+      "department": "정신건강의학과",
+      "position": "교수",
+      "specialty": "자문조정정신의학, 정신신체의학, 암환자정신건강클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=153",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_037dc961e5b905999d1c970d633ab30b0.png",
+      "external_id": "KOSIN-153",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김영식",
+      "department": "응급외과",
+      "position": "교수",
+      "specialty": "응급수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=146",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_487f3bd2a9a287491e73b942e198963f0.png",
+      "external_id": "KOSIN-146",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "공섬김",
+      "department": "완화의학과",
+      "position": "교수",
+      "specialty": "소아혈액종양질환(백혈병, 림프종, 고형종양, 혈관종, 골수부전, 조혈모세포이식, 빈혈, 혈우병, 자반증, 출혈성질환), 소아청소년 완화의료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=135",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_1ac7a39e30f6c93b45dc91b444b03ac50.png",
+      "external_id": "KOSIN-135",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "허진도",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "근골격계 영상의학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=127",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_83a5fe63a7cb35615e9b7bd09bc2bdd40.png",
+      "external_id": "KOSIN-127",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이승욱",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "녹내장(시신경유두부종, 시신경유두함몰, 시신경손상), 백내장",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=121",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ab92177343a17ada0fabdc3a8c2e51020.png",
+      "external_id": "KOSIN-121",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김종인",
+      "department": "심장혈관 흉부외과",
+      "position": "교수",
+      "specialty": "일반흉부, 폐기종, 기흉, 폐암, 식도암, 종격동종양, 다한증, 흉부외상, 하지정맥류",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=115",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_07eceb539752d60bdcd395d0c93ada5f0.png",
+      "external_id": "KOSIN-115",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "허정호",
+      "department": "심장내과(순환기내과)",
+      "position": "교수",
+      "specialty": "심혈관 중재시술, 심부전 심근경색, 협심증, 고혈압, 심장재활, 부정맥 흉통 클리닉, 고혈압 클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=111",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_664c0721522f63d23a143d41ee33462a0.png",
+      "external_id": "KOSIN-111",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정연순",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "다낭콩팥병클리닉, 신장이식, 만성콩팥병, 급성신손상, 당뇨병성콩팥병, 사구체신염(혈뇨, 단백뇨), 요로감염 다낭콩팥병클리닉 진료시간: 매주 목요일 오후",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=108",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a08b3a23fb759fdb23f88b646fd797f80.png",
+      "external_id": "KOSIN-108",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박정현",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "뇌혈관 중재적 수술치료, 뇌동맥류, 뇌혈관기형",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=103",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_b98c18caf8a8568e9a9dd27192b5db1b0.png",
+      "external_id": "KOSIN-103",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "박무인",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "삼킴장애, 아칼라지아(식도이완불능증), 내시경 근절개술(POEM, POET), 위식도역류질환, 기능성소화불량증, 변비, 과민성장증후군, 소화성궤양, 헬리코박터 및 상부소화기질환, 소화기암, 진행성암환자의 항암치료, 검사목적의 내시경(위, 대장, 캡슐, 소장), 용종(선종), 종양의 내시경적 시술(용종절제술, 지혈술, 스텐트삽입, 이물질제거)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=88",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_64f5a8f41ae50b0049b7323ba10b37d80.png",
+      "external_id": "KOSIN-88",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "황현용",
+      "department": "진단검사의학과",
+      "position": "교수",
+      "specialty": "진단검사의학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=81",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_efc900ce0aae235dc5ddb1f29949af2e0.png",
+      "external_id": "KOSIN-81",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "정소학",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "근골격계종양, 고관절, 대퇴부",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=80",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a1e19ef4cb926745ee39cd844b3441730.png",
+      "external_id": "KOSIN-80",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최성",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "전립선, 여성비뇨기, 종양, 전립선클리닉, 요실금클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=70",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_58e00561894a5ad1c78423ca832699870.png",
+      "external_id": "KOSIN-70",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최영일",
+      "department": "간담도췌장외과 · 이식외과",
+      "position": "교수",
+      "specialty": "간이식, 간담도, 혈관, 복강경수술, 로봇수술 간담췌클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=33",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c813fcc3be3a165808693040e21a751a0.png",
+      "external_id": "KOSIN-33",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "공은희",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "비만, 임상영양, 금연, 성인예방접종",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=30",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_daf3d88373fb1e052f7885e79f52f5810.png",
+      "external_id": "KOSIN-30",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "장태원",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "폐암,천식,만성기관지염,결핵,폐렴,만성폐쇄성폐질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=26",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_b64931dfdfadee65b5cacfdab340a34f0.png",
+      "external_id": "KOSIN-26",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이호섭",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "다발골수종, 악성림프종, 급성백혈병, 만성백혈병, 골수형성이상증후군, 재생불량성빈혈 등 혈액암 및 혈액질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=24",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_bc0c62e67de613e83bedb9734b16809d0.png",
+      "external_id": "KOSIN-24",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "서경원",
+      "department": "위장관외과",
+      "position": "교수",
+      "specialty": "비만대사수술, 위암수술, 탈장수술, 외과대사영양학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=18",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e65b889a0e091cc75538c8ac4e0dfdf80.png",
+      "external_id": "KOSIN-18",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이은미",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "위암, 대장암, 유방암, 담낭암, 췌장암, 난소암, 자궁암 등의 항암 약물치료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=179",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_11b5f250faab2409121a48fcbec146ed0.png",
+      "external_id": "KOSIN-179",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "서기석",
+      "department": "피부과",
+      "position": "교수",
+      "specialty": "피부암, 무좀 및 진균성질환, 모발질환, 수포성질환 및 결체조직질환, 혈관질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=174",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_11606150ea4b512642884b59637d5f810.png",
+      "external_id": "KOSIN-174",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "강은숙",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "치과 보철과 일반질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=171",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_2d4e9d8b6058aa587b585be26ea43b990.png",
+      "external_id": "KOSIN-171",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이운형",
+      "department": "진단검사의학과",
+      "position": "교수",
+      "specialty": "진단의학검사실",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=166",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_210835f59254417df777f6813383ecc00.png",
+      "external_id": "KOSIN-166",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "배현숙",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "직업성질환, 특수건강진단, 업무관련성평가, 업무적합성평가",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=163",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e844da2d54232ffa29cd4b4fa4c94bf30.png",
+      "external_id": "KOSIN-163",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김현석",
+      "department": "정신건강의학과",
+      "position": "교수",
+      "specialty": "소아청소년정신의학 (ADHD, 틱장애, 자폐스펙트럼장애, 지적장애, 소아청소년 기분장애/불안장애 등) 성인기의 소아청소년정신장애 (성인 ADHD, 성인 발달/지적장애) 및 보호자 교육 : 매주 목요일 오후",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=154",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_305d96054f5b77fd549c2683094200ac0.png",
+      "external_id": "KOSIN-154",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "권재환",
+      "department": "이비인후 갑상선 두경부외과",
+      "position": "교수",
+      "specialty": "중이수술, 난청, 이명, 어지럼증, 귀의 염증, 삼출성 중이염, 만성 중이염, 고막질환, 소아 귀 질환, 인공와우이식,선천성 이개질환, 귓볼 켈로이드, 중이 진주종, 비과:축농증, 비성형, 안면재건, 안와골절, 비골골절, 코피, 산재 특별 진찰",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=148",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_5fa2db6fb0a5c2fc906c48fa7a3f61c30.png",
+      "external_id": "KOSIN-148",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "임호섭",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "응급의학과",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=142",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d1f713a5832066d8ab967e75bab24fca0.png",
+      "external_id": "KOSIN-142",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김구상",
+      "department": "유방외과",
+      "position": "교수",
+      "specialty": "로봇유방암수술, 유전성 유방암, 입체정위생검",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=138",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_8c1afb7d07016ac6e4bc015e9d002e1d0.png",
+      "external_id": "KOSIN-138",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "오경승",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "복부 영상의학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=128",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_f921bab33cf291053cf0142cdc3052710.png",
+      "external_id": "KOSIN-128",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김창주",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "소아안과, 사시, 복시, 근시, 성형안과, 신경안과(시신경염, 시신경병증) 안종양, 안외상, 눈물길",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=122",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_9f591bc5be7d550e93299447d8b1b8b40.png",
+      "external_id": "KOSIN-122",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "임성일",
+      "department": "심장내과(순환기내과)",
+      "position": "교수",
+      "specialty": "부정맥, 급사 및 실신, 허혈성 심질환, 심부전",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=112",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_716e6d5e04da6cb41b8564de843aa4aa0.png",
+      "external_id": "KOSIN-112",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "신호식",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "신장이식, 투석, 신부전, 사구체신염, 당뇨병성 콩팥병, 노인성 콩팥질환, 요로감염 신장이식클리닉 진료시간: 매주 금요일 오전",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=109",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ac4dd86b28153f21b696188cc0549dd70.png",
+      "external_id": "KOSIN-109",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "문원",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "크론병, 궤양성대장염, 베체트장염",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=89",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_f51f6ec48c320aba7db2a49f3b7d49c30.png",
+      "external_id": "KOSIN-89",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이정현",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "성장클리닉(성조숙증, 저신장), 내분비대사질환(고신장, 사춘기 지연, 갑상선질환, 당뇨병, 저혈당, 비만, 칼슘 및 인 대사 장애, 기타 영양 장애)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=84",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_bf1abb66937bfe90de4cc9b2cf200cba0.png",
+      "external_id": "KOSIN-84",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김택상",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "비뇨기종양, 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=71",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_f7874f17eb057b2f6cefc45b5a839ef60.png",
+      "external_id": "KOSIN-71",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "문형환",
+      "department": "간담도췌장외과 · 이식외과",
+      "position": "교수",
+      "specialty": "간, 담도, 췌장, 이식, 혈관, 복강경수술, 로봇수술 희귀질환 클리닉 : 매주 수요일 오후",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=34",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_459bb4bf7d1d84d69a3030767342ac5d0.png",
+      "external_id": "KOSIN-34",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "강지훈",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "자율신경주사, 만성두통, 암 경험자 평생 건강 관리, 성인예방 접종, 노인의학 근골격계 통증클리닉, 금연 클리닉, 유전체 기반 비만 클리닉, 만성피로 클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=31",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_8cb7bbc7bcef5715dac93be426580f3e0.png",
+      "external_id": "KOSIN-31",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "옥철호",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "폐암, 천식, 만성기관지염, 결핵, 폐렴, 만성폐쇄성 폐질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=25",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_bd3ea23f1e09f3720dbc0da469cb64700.png",
+      "external_id": "KOSIN-25",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김다정",
+      "department": "혈액종양내과",
+      "position": "교수",
+      "specialty": "림프종, 다발성 골수종, 백혈병, 골수이형성증후군, 재생불량성빈혈 등의 혈액암 및 혈액질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=180",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_b9f6b85ee8da04efaa6524a21a10437d0.png",
+      "external_id": "KOSIN-180",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김민경",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "치주과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=172",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_3351a6f5309a5ae2a8f242d390422fac0.png",
+      "external_id": "KOSIN-172",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "양다해",
+      "department": "진단검사의학과",
+      "position": "교수",
+      "specialty": "진단검사의학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=167",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e6dba8b1afa6318deb77d09fb0d019400.png",
+      "external_id": "KOSIN-167",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김창수",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "목 디스크, 허리 디스크, 척추관협착증 등의 척추질환, 척추종양, 척추측만증을 포함한 척추기형, 척추외상",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=157",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_27b3a5738fe007cd03707ca86d2da9b60.png",
+      "external_id": "KOSIN-157",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이형신",
+      "department": "이비인후 갑상선 두경부외과",
+      "position": "교수",
+      "specialty": "두경부 종양(갑상선암, 구강암, 비인두암, 후두암, 설암, 침샘암, 이하선암) 성대 보톡스, 성대 필러",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=149",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c72eec72279a2dd1ec90840b26ece9290.png",
+      "external_id": "KOSIN-149",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김슬기",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "응급의학과",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=143",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_acb6b5e024d1b6a56ef98afe594df7e20.png",
+      "external_id": "KOSIN-143",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "조성호",
+      "department": "심장혈관 흉부외과",
+      "position": "교수",
+      "specialty": "성인심장질환, 판막질환, 관상동맥우회술, 성인 선천성 심질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=116",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e4a1c12f837d1d452fd385b15a571d6c0.png",
+      "external_id": "KOSIN-116",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김봉준",
+      "department": "심장내과(순환기내과)",
+      "position": "교수",
+      "specialty": "심부전, 폐고혈압",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=113",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_447b6944cc508d1fd71dc747bcbf448e0.png",
+      "external_id": "KOSIN-113",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김성은",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "위, 식도, 십지이장의 용종(선종), 종양의 내시경적 시술, 식도이완불능증, 내시경 근절개술(POEM), 위식도역류질환, 헬리코박터파일로리균 관련질환(위말트림프종포함), 위루술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=90",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_770dfcf39b207f183a818305d4be34430.png",
+      "external_id": "KOSIN-90",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "연규민",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "소아신경질환(뇌전증, 편두통, 발달지연, 뇌염, 뇌수막염, 신경근질환, 열성경련) 희귀질환 클리닉 : 매주 금요일 오후",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=85",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_67676268bfda81db9200fcf775ffed9e0.png",
+      "external_id": "KOSIN-85",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "강수환",
+      "department": "비뇨의학과",
+      "position": "교수",
+      "specialty": "로봇수술, 비뇨기암, 결석",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=72",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a9b370ea570b51961744cc03c4e5035b0.png",
+      "external_id": "KOSIN-72",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김예나",
+      "department": "신장내과",
+      "position": "교수",
+      "specialty": "만성 콩팥질환, 급성 콩팥손상, 사구체 신염, 신장이식",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=13",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_afe8137855e3f511e3f3473fa5ff71ac0.png",
+      "external_id": "KOSIN-13",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "성설화",
+      "department": "피부과",
+      "position": "교수",
+      "specialty": "피부가려움증, 아토피피부염, 알레르기피부질환, 백반증, 건선",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=175",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_0de91aa69d7303a48d6371d1e23d531c0.png",
+      "external_id": "KOSIN-175",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최현지",
+      "department": "진단검사의학과",
+      "position": "교수",
+      "specialty": "진단검사의학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=168",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_14e0f4d61aadf0a9898492ffa6104b930.png",
+      "external_id": "KOSIN-168",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "전공의",
+      "department": "정신건강의학과",
+      "position": "교수",
+      "specialty": "정신건강의학과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=155",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e4c66676d9b321e42d5fc945e85eb2b70.jpg",
+      "external_id": "KOSIN-155",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김주연",
+      "department": "이비인후 갑상선 두경부외과",
+      "position": "교수",
+      "specialty": "부비동 내시경 수술, 코성형술, 코골이 및 수면무호흡 질환, 코골이, 알레르기, 수면 무호흡증, 코피, 코성형 클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=150",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_3f4050ca41be61ca57f10848ff607de90.png",
+      "external_id": "KOSIN-150",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김기현",
+      "department": "위장관외과",
+      "position": "교수",
+      "specialty": "복강경 위장관 수술(위암, 위장관 기질 종양), 대사비만수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=136",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_9df16d486d28f1b546434ea7bd231ad10.png",
+      "external_id": "KOSIN-136",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "강희",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "흉부영상의학",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=129",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_fefb2af8a6a8286a3d27b197d70b33920.png",
+      "external_id": "KOSIN-129",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "최길순",
+      "department": "알레르기내과",
+      "position": "교수",
+      "specialty": "천식 및 비염, 아토피 피부염, 만성 두드러기, 약물 알레르기 및 각종 알레르기 질환, 호산구 관련 질환.",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=124",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_cd5d2439c864071851a6943fd11c6e2e0.png",
+      "external_id": "KOSIN-124",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김수진",
+      "department": "심장내과(순환기내과)",
+      "position": "교수",
+      "specialty": "관상동맥질환, 협심증, 심부전, 고혈압, 여성심장",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=114",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_601f93da13e26eba011f97975eabba1c0.png",
+      "external_id": "KOSIN-114",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김도연",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "경추 및 요추 디스크, 협착증, 전방전위증, 척추종양, 척추변형, 두부외상, 척추외상",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=105",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d813d736e0cc35639a50123ed247dfc40.png",
+      "external_id": "KOSIN-105",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "조지훈",
+      "department": "간담도췌장외과 · 이식외과",
+      "position": "교수",
+      "specialty": "간, 담도, 췌장, 이식, 혈관, 복강경수술, 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=35",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_88cfd12270478b04cb1d4853160707f60.png",
+      "external_id": "KOSIN-35",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김재현",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "대장암 클리닉 , 검사목적의 내시경(위, 대장, 캡슐, 소장), 용종(선종), 종양의 내시경적 시술(대장폴립절제술위주), 유전성 대장폴립증후군, 대변이식치료, 기타 소화기질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=11",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d1f74871ebd783605628d9b6381c2b080.png",
+      "external_id": "KOSIN-11",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김윤홍",
+      "department": "위장관외과",
+      "position": "교수",
+      "specialty": "위장관외과 일반진료, 복강경, 위암, 위장관 기질 종양, 대사비만수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=137",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_8fd5b217e51507ebbe7fed5fbdefd5fb0.png",
+      "external_id": "KOSIN-137",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이해영",
+      "department": "심장혈관 흉부외과",
+      "position": "교수",
+      "specialty": "대동맥질환, 말초혈관질환, 정맥질환, 흉부외상, 성인심장질환, 체외막산소화장치, 하지정맥류",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=117",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e2b1dcececd8f4878976d614187413af0.png",
+      "external_id": "KOSIN-117",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정경원",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "치료 내시경 (조기 식도암, 조기 위/대장암), 아칼라지아 (POEM), 위암, 식도암, 용종, 기능성 소화기질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=91",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_981499be4bd64c3ce2691fa568c95e140.png",
+      "external_id": "KOSIN-91",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이형석",
+      "department": "성형외과",
+      "position": "교수",
+      "specialty": "피부암, 유방재건, 두경부재건, 눈성형, 소아성형, 당뇨발, 욕창",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=77",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a1aa49b0483ed909bc80bcb156a009e90.png",
+      "external_id": "KOSIN-77",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이정욱",
+      "department": "간담췌내과",
+      "position": "교수",
+      "specialty": "췌장·담도계 질환(담석증, 담낭염, 담관염, 담관암, 급·만성 췌장염, 췌장암, 췌장낭종)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=39",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_f4d305c2d20859d17ecfd94225489f190.png",
+      "external_id": "KOSIN-39",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "공섬김",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "소아혈액종양질환(백혈병, 림프종, 고형종양, 혈관종, 골수부전, 조혈모세포이식, 빈혈, 혈우병, 자반증, 출혈성질환), 소아청소년 완화의료 희귀질환 클리닉 : 매주 금요일 오후",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=10",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_8dd617b3425c13829678af03724985010.png",
+      "external_id": "KOSIN-10",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "고택용",
+      "department": "심장혈관 흉부외과",
+      "position": "교수",
+      "specialty": "폐암, 종격동종양, 흉강경 및 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=118",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_7c88865843799d4178057e61795531980.png",
+      "external_id": "KOSIN-118",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "심용우",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "뇌혈관질환, 뇌수두증, 뇌종양, 뇌혈관중재치료, 뇌동맥류, 뇌혈관기형, 두부외상",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=106",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d7e19e160e2dbf995eadba85be313a320.png",
+      "external_id": "KOSIN-106",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이명훈",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "검사목적의 내시경(위,대장), 일반 소화기 진료, 치료내시경 (조기 위, 대장암), 위암, 기능성 소화불량, 과민성 장증후군",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=95",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a88e6305ab40efd2143d350efa2670b40.png",
+      "external_id": "KOSIN-95",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김지연",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "족부(발,발목) 질환 및 외상, 당뇨발 및 창상(고압산소치료)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=158",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_4c0b6417ced4937dbb26b5cc5e9d40770.png",
+      "external_id": "KOSIN-158",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최윤정",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "검사목적의 내시경(위,대장), 소화성궤양, 용종",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=92",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c9b349914cabc3e30fd7c314bd5013ae0.png",
+      "external_id": "KOSIN-92",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정호중",
+      "department": "재활의학과",
+      "position": "교수",
+      "specialty": "척수손상 재활, 경직치료 재활",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=228",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_abd06f8768525240161c674cbd6118280.jpg",
+      "external_id": "KOSIN-228",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김영준",
+      "department": "이비인후 갑상선 두경부외과",
+      "position": "교수",
+      "specialty": "두경부 종양(구강암, 비인두암, 후두암, 설암, 갑상선암, 침샘암, 이하선암), 인후통, 편도, 성대, 혀마름, 임파선 비대, 목의 혹, 입술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=151",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c1f5f639cbf76e8ca722bcf7f074b3630.png",
+      "external_id": "KOSIN-151",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "윤종혁",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "인터벤션",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=131",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_737622d568dfa2d3a6ba1fc25e17cc280.png",
+      "external_id": "KOSIN-131",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "오지현",
+      "department": "알레르기내과",
+      "position": "교수",
+      "specialty": "만성기침, 천식 및 비염, 아토피 피부염, 만성 두드러기, 약물 알레르기 및 각종 알레르기 질환, 호산구 관련 질환 등",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=125",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_bae5454f5e406018662cac79030529250.png",
+      "external_id": "KOSIN-125",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "장희경",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "소화기질환의 병리, 종양병리, 면역병리, 분자병리",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=65",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_10ee4e6125485ee9f6555c1987b7689e0.png",
+      "external_id": "KOSIN-65",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "박경란",
+      "department": "방사선종양학과",
+      "position": "교수",
+      "specialty": "유방암, 간담췌암, 뇌종양, 방사선수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=62",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_dcadbfb0a73d2fe266ef02fd4fedafad0.png",
+      "external_id": "KOSIN-62",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김경한",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "뇌신경마취, 정맥마취",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=56",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_79330bb7ec4a0ffff730f3c3863877ac0.png",
+      "external_id": "KOSIN-56",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김근태",
+      "department": "류마티스내과",
+      "position": "교수",
+      "specialty": "류마티스관절염, 강직척추염, 건선관절염, 전신홍반루푸스, 통풍, 골관절염, 섬유근통, 혈관염, 베체트병 관절초음파클리닉, 희귀질환 클리닉 : 매주 금요일 오전",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=54",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_cfc31f3c13538f2964665eab0cb715450.png",
+      "external_id": "KOSIN-54",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "안병권",
+      "department": "대장항문외과",
+      "position": "교수",
+      "specialty": "대장암, 직장암, 대장직장클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=48",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_dbc8fc84320bb4d1e0c50a7fe22c20c70.png",
+      "external_id": "KOSIN-48",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "진솔",
+      "department": "감염내과",
+      "position": "교수",
+      "specialty": "원내 감염, 에이즈, 여행자 감염, 면역저하자 감염",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=42",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ef12d286136642bf581ac3fad2b03ebc0.png",
+      "external_id": "KOSIN-42",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "심대무",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "척추질환, 척추 비수술적 치료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=159",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d76129145c4bfb794e0842ee63e967190.png",
+      "external_id": "KOSIN-159",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "손민영",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "검사목적의 내시경(위,대장), 소화성궤양, 용종",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=93",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_202dc05260fde6d9b0ac8b211e8573a70.png",
+      "external_id": "KOSIN-93",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최소윤",
+      "department": "소아청소년과",
+      "position": "교수",
+      "specialty": "소아소화기영양분과 (소아소화기질환(위장관, 간담췌장), 소아염증성장질환(크론병, 궤양성대장염), 영양 질환, 비만, 저체중, 소아위장관내시경) 희귀질환 클리닉 : 매주 금요일 오전",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=87",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_73ebb008b688c8b01edef8f851a7559b0.png",
+      "external_id": "KOSIN-87",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "권정미",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=132",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c8b0e95467a8fe3749b30d3dd578b3950.png",
+      "external_id": "KOSIN-132",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김범수",
+      "department": "핵의학과",
+      "position": "교수",
+      "specialty": "갑상선암 방사성동위원소 치료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=190",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_1eca52a977060e5eadb143138c2dbf220.png",
+      "external_id": "KOSIN-190",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "오현철",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "근골격계 산업재해 특별진찰, 사업장 보건관리, 업무관련성평가",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=164",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_eb4ede11562d4416acb612afccc06b500.png",
+      "external_id": "KOSIN-164",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김대환",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "응급의학과",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=144",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e22dfb484be11d4bdac0639a0739353b0.png",
+      "external_id": "KOSIN-144",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김명국",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "뇌졸중, 두통, 어지럼증, 수면장애",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=97",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_98692b35c522d00b79d6ef64959e9e820.png",
+      "external_id": "KOSIN-97",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김윤수",
+      "department": "성형외과",
+      "position": "교수",
+      "specialty": "유방재건(자가조직/임플란트), 유방암 수술 후 재건 및 반대측 유방 성형, 안면 골절 및 외상, 피부종양, 상처 치료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=79",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_987430462bf3f6b4a32cea887303b1490.png",
+      "external_id": "KOSIN-79",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "천봉권",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "종양병리",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=66",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e85d7e23981b0f0dcca68f9b1d4ce4610.jpg",
+      "external_id": "KOSIN-66",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "류시정",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "통증관리",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=57",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_9715656684f818a971a9f6f285e5dfef0.png",
+      "external_id": "KOSIN-57",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김윤경",
+      "department": "류마티스내과",
+      "position": "교수",
+      "specialty": "류마티스 관절염. 강직성 척추염. 루푸스. 통풍, 퇴행성 관절염, 섬유근육통. 혈관염. 베체트병 관절 초음파클리닉, 희귀질환 클리닉 : 매주 금요일 오후",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=55",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_4bc175aa484de3bddbc3a275e25de8a20.png",
+      "external_id": "KOSIN-55",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이승현",
+      "department": "대장항문외과",
+      "position": "교수",
+      "specialty": "대장암, 직장암, 대장항문질환, 복강경수술, 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=49",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_acb30f55e004cec9a8a61b8eb055e6020.png",
+      "external_id": "KOSIN-49",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이수진",
+      "department": "감염내과",
+      "position": "교수",
+      "specialty": "원내 감염, 에이즈, 여행자 감염, 면역저하자 감염",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=43",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ed9499a78974d286917ca1fd93a2da260.png",
+      "external_id": "KOSIN-43",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "마선영",
+      "department": "방사선종양학과",
+      "position": "교수",
+      "specialty": "유방암, 부인과종양, 하부소화기종양",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=5",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_262cc48770893f879fd14a3d298bacaf0.png",
+      "external_id": "KOSIN-5",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최한용",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=133",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_2df817fcae985063705765a32d204bf60.png",
+      "external_id": "KOSIN-133",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "권수경",
+      "department": "내분비내과",
+      "position": "교수",
+      "specialty": "내분비내과(당뇨, 갑상선, 호르몬) 질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=234",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_0fe5055f773b23480efe3b2b7f2e06d50.png",
+      "external_id": "KOSIN-234",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김민정",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "파킨슨병, 이상운동질환, 파킨슨병 클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=98",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_5df4f9272305adff1916b9be5de83e4d0.png",
+      "external_id": "KOSIN-98",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김영옥",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "산부인과병리",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=67",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_bfd9e0ba1102f0cfa0545c79eb4b8f3d0.png",
+      "external_id": "KOSIN-67",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이승훈",
+      "department": "대장항문외과",
+      "position": "교수",
+      "specialty": "대장암, 직장암, 복강경수술, 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=50",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d472689df28060b28a01cea0dc6d55aa0.jpg",
+      "external_id": "KOSIN-50",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박태훈",
+      "department": "내분비내과",
+      "position": "교수",
+      "specialty": "당뇨병,갑상선,골다공증,뇌하수체,부신",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=46",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ce83472cc980f8c794d5461dab18a7060.png",
+      "external_id": "KOSIN-46",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김두식",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "통증기전연구, 만성통증치료,암성통증관리",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=4",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c7a515f9603ba6b09787c06593d3c2a50.png",
+      "external_id": "KOSIN-4",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "최진혁",
+      "department": "유방외과",
+      "position": "교수",
+      "specialty": "유방암, 로봇유방수술, 입체정위생검, 유방양성질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=139",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_75d93c598de60435958e41078f0955ea0.png",
+      "external_id": "KOSIN-139",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "유제상",
+      "department": "암성통증센터",
+      "position": "교수",
+      "specialty": "방사선치료(두경부암, 폐암, 흉선암, 식도암, 비뇨기암, 림프종, 혈액암, 피부암, 근골격계종양), 온열치료, 고압산소치료, 암성통증조절",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=209",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_1490a4b1e5533fb97e0e7a42db5b7d190.png",
+      "external_id": "KOSIN-209",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김태화",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "중증 호흡기 감염질환, 호흡부전, 중환자 호흡재활",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=204",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_7112bf6e1ca5d8e8be17e88ffb6695c40.jpg",
+      "external_id": "KOSIN-204",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이진형",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "뇌졸중, 뇌혈관질환, 신경중재치료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=99",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_8a2f5502f9cdd3aabb77341b6ef240d40.png",
+      "external_id": "KOSIN-99",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "오선주",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "근골격계병리, 일반병리",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=68",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c3527183159bbdd3a8c81714220926d40.jpeg",
+      "external_id": "KOSIN-68",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "유제상",
+      "department": "방사선종양학과",
+      "position": "교수",
+      "specialty": "두경부암, 폐암, 흉선암, 식도암, 비뇨기암, 림프종, 혈액암, 피부암, 근골격계종양, 특수방사선치료, 고식적방사선치료 암성통증센터 진료 : 월요일 오전, 금요일 오전/오후",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=64",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_466f3572e1f75ec482b5520f709252390.png",
+      "external_id": "KOSIN-64",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김주덕",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "심폐마취",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=58",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_128b1d2438462148aac04db6071207d30.png",
+      "external_id": "KOSIN-58",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "문예진",
+      "department": "대장항문외과",
+      "position": "교수",
+      "specialty": "대장암, 직장암, 대장항문질환, 복강경수술, 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=51",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_92534a42e1fb27a4e3c06377ba77d6200.png",
+      "external_id": "KOSIN-51",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이태화",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "부인암, 부인종양, 자궁근종, 내시경수술, 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=8",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a25b523dc9e2b59b1b103641151104d50.png",
+      "external_id": "KOSIN-8",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "전향배",
+      "department": "재활의학과",
+      "position": "교수",
+      "specialty": "뇌신경재활, 척추손상재활, 근골격계",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=235",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_df6ffbb50eb619e0d51e86d5cc019c320.png",
+      "external_id": "KOSIN-235",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "강철민",
+      "department": "두경부갑상선 내분비외과",
+      "position": "교수",
+      "specialty": "갑상선암 수술, 갑상선 조직검사(세침흡인검사, 중심침생검), 갑상성결절의 비수술적치료(에탄올주입술,고주파절제술)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=232",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a70efb4bbf81645a1061e5a1151d235e0.png",
+      "external_id": "KOSIN-232",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "강철민",
+      "department": "유방외과",
+      "position": "교수",
+      "specialty": "유방암 일반/로봇수술, 유방 미세석회 조직검사(입체정위생검), 양성유방질환의 비수술적치료(진공보조흡인절제-맘모톰)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=229",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a57352ff746140aca5e7ab20bfdf7dbd0.png",
+      "external_id": "KOSIN-229",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김미수",
+      "department": "암성통증센터",
+      "position": "교수",
+      "specialty": "고용량 비타민치료, 면역치료, 암성통증조절",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=208",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_912057310146802188b2b57c73ab77430.jpeg",
+      "external_id": "KOSIN-208",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "허소영",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "근전도검사",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=198",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_591713f050a47e002223e75cc2affe3e0.jpg",
+      "external_id": "KOSIN-198",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "정형주",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "이식마취",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=60",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_7fc3137d9d51977d3374871ce99fcbd90.png",
+      "external_id": "KOSIN-60",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "조수민",
+      "department": "간담췌내과",
+      "position": "교수",
+      "specialty": "간염, 지방간, 간경화, 간암, 간부전, 간이식",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=40",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_3c9f982a9a17d2cfa0b03d351af631230.png",
+      "external_id": "KOSIN-40",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "전병준",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "다발성경화증, 시신경척수염, 말초신경병, 근육병 희귀질환 클리닉 : 매주 목요일 오전",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=100",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_da4e716b63ff83292f06a4045d3a10fa0.png",
+      "external_id": "KOSIN-100",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "강동희",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "급만성통증의학, 암성통증, 부위마취, 대사비만수술마취, 신체감정",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=59",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_9d9d4e8b405ef6e62a043c48499cb66d0.png",
+      "external_id": "KOSIN-59",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "나주영",
+      "department": "신경과",
+      "position": "교수",
+      "specialty": "두통, 어지럼 어지럼 클리닉 : 매주 수요일 오후 , 두통 클리닉 : 매주 목요일 오후",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=187",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_3ffa67a98fef61bbf51c3a768fd15a720.png",
+      "external_id": "KOSIN-187",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김지욱",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "통증관리, 중환자의학, 뇌신경마취, 산과마취",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=61",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_548fdc22cc33c77df2ab628e44eadc880.png",
+      "external_id": "KOSIN-61",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박은주",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "기능의학, 임상영양학, 고용량비타민요법, 금연, 비만",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=219",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_9b37ed5452723ae5d222cf8d1da6d5bb0.png",
+      "external_id": "KOSIN-219",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이진호",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=213",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_de5a5f01b017d1872be5a6b3bd04f2b90.jpg",
+      "external_id": "KOSIN-213",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김신동",
+      "department": "안과",
+      "position": "교수",
+      "specialty": "망막, 일반안과질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=205",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_6083874fdf566df66469c904e24983eb0.jpg",
+      "external_id": "KOSIN-205",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "정우혁",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "검사목적의 내시경",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=225",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_020de45ff4bb38ad6a24584bca5d0d710.jpg",
+      "external_id": "KOSIN-225",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김혜지",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "응급의학과",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=220",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_46205f5b91c923bff1733b365570ed2d0.png",
+      "external_id": "KOSIN-220",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "임성경",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "검사목적의 내시경",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=226",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ac9b403bf70190c33be58813aba885650.jpg",
+      "external_id": "KOSIN-226",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "장리라",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "검사목적의 내시경",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=227",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_649a0c7f74e69a855448e861a244b35c0.jpg",
+      "external_id": "KOSIN-227",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김태윤",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "호흡기내과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=184",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a5009bba1943e8154b05dd1cad85e18c0.jpg",
+      "external_id": "KOSIN-184",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이송현",
+      "department": "소화기내과",
+      "position": "교수",
+      "specialty": "검사목적의 내시경 (위, 대장, 캡슐), 용종 (선종) 및 종양의 내시경적 시술 (용종 절제술), 일반 소화기 진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=221",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_cf8a55f9f6f39bbfbe8f8090dca982c60.jpg",
+      "external_id": "KOSIN-221",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "전공의",
+      "department": "성형외과",
+      "position": "교수",
+      "specialty": "성형외과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=224",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_1bb425cbf303e504db7c4820168f25710.jpg",
+      "external_id": "KOSIN-224",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김동영",
+      "department": "이비인후 갑상선 두경부외과",
+      "position": "교수",
+      "specialty": "고난도 부비동 수술, 부비동 종양, 부비동 질환, 알레르기 비염, 후각장애, 수면무호흡질환, 코피, 기능적 코성형, 비골골절, 편도질환",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=222",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_17771a66864484e51d22b174d5b8db120.png",
+      "external_id": "KOSIN-222",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김도섭",
+      "department": "호흡기내과",
+      "position": "교수",
+      "specialty": "호흡기내과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=217",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_98ef0334d9d2d307545d7cd25556f47b0.jpg",
+      "external_id": "KOSIN-217",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박귀애",
+      "department": "완화의학과",
+      "position": "교수",
+      "specialty": "호스피스 완화의료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=215",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_3fd412fdd44954e15be23ee9d2f2a9f40.jpg",
+      "external_id": "KOSIN-215",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "전공의",
+      "department": "류마티스내과",
+      "position": "교수",
+      "specialty": "류마티스내과 일반 진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=212",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_d6a690b1157f5adc0f464f23c119ae5d0.jpg",
+      "external_id": "KOSIN-212",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "전공의",
+      "department": "내분비내과",
+      "position": "교수",
+      "specialty": "내분비내과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=210",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_9af5b9cfa39bc2324c0e262dd0156ba80.jpg",
+      "external_id": "KOSIN-210",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "박소영",
+      "department": "응급의학과",
+      "position": "교수",
+      "specialty": "응급의학과",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=207",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_c8b4c7dc80e7e804c45887ef996273300.jpg",
+      "external_id": "KOSIN-207",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "신영경",
+      "department": "영상의학과",
+      "position": "교수",
+      "specialty": "",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=206",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_77c190d4c9d2b266378f467fcbd958a60.png",
+      "external_id": "KOSIN-206",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "김미수",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "가정의학, 기능의학, 비만영양대사, 만성피로클리닉, 금연클리닉, 성인예방접종, 건강증진",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=203",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a6d941801841ecffec5710a12dfef4320.png",
+      "external_id": "KOSIN-203",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "우혜문",
+      "department": "치과",
+      "position": "교수",
+      "specialty": "보존과 일반질환 (충치치료, 근관치료, 치아 외상, 치아 재식, 치아 이식, 미세현미경 치료, 암환자 치과치료, 전신질환자 치과치료 및 기타 치과 질환)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=202",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_1a792090b36b290ed53c80c86b9c5cb00.png",
+      "external_id": "KOSIN-202",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "허재준",
+      "department": "간담췌내과",
+      "position": "교수",
+      "specialty": "췌장•담도계 질환(담석증, 담낭염, 담관염, 담관암, 급•만성 췌장염, 췌장암, 췌장낭종)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=195",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_107218432c5ff8664c4e8b4afe3c6a3d0.png",
+      "external_id": "KOSIN-195",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "전요한",
+      "department": "병리과",
+      "position": "교수",
+      "specialty": "일반병리",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=188",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_73788321978bacd82c521a735af5ea6c0.jpg",
+      "external_id": "KOSIN-188",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "전공의",
+      "department": "알레르기내과",
+      "position": "교수",
+      "specialty": "알레르기내과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=101",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_962ac807ed95321c4205613cafac85a30.jpg",
+      "external_id": "KOSIN-101",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "오영림",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "고위험임신, 월경이상, 미혼여성 청소년 클리닉",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=76",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_71b755aa450b83eba998086a478305080.png",
+      "external_id": "KOSIN-76",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "전공의",
+      "department": "이비인후 갑상선 두경부외과",
+      "position": "교수",
+      "specialty": "이비인후 갑상선 두경부외과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=236",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_4ab2925476400c2fcf1ff4c1b8bbff810.jpg",
+      "external_id": "KOSIN-236",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "윤항구",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "모체태아의학, 고위험 임신, 조산, 산부인과 질환 로봇 수술센터",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=7",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_b4b3dcdd74cb986f9eae45332d934b5b0.png",
+      "external_id": "KOSIN-7",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "강태경",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "부인종양, 부인과 내분비학(월경이상,폐경,다낭성 난소증후군), 내시경수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=75",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_9052f063365ae4962c55720ff8c7dc3e0.png",
+      "external_id": "KOSIN-75",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "전공의",
+      "department": "정형외과",
+      "position": "교수",
+      "specialty": "정형외과 일반진료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=160",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_6132dedf28c2f1431ed1226e9cad30a50.jpg",
+      "external_id": "KOSIN-160",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김은택",
+      "department": "산부인과",
+      "position": "교수",
+      "specialty": "부인질환(심부자궁내막증, 자궁근종, 난소종양, 자궁탈출증), 부인종양, 부인암, 부인암 유전상담, 폐경, 로봇수술, 내시경수술(부인암 분과전문의)",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=74",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_a939be1a9817da28d92c5eef65bbb2810.png",
+      "external_id": "KOSIN-74",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "이수용",
+      "department": "방사선종양학과",
+      "position": "교수",
+      "specialty": "고식적 방사선 치료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=231",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_e373435258c3b9f82a1fe319cce78be60.png",
+      "external_id": "KOSIN-231",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "김종헌",
+      "department": "마취통증의학과",
+      "position": "교수",
+      "specialty": "뇌신경마취",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=199",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_ebe8dd829f018070513d61fa4d35948a0.png",
+      "external_id": "KOSIN-199",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이상길",
+      "department": "직업환경의학과",
+      "position": "교수",
+      "specialty": "",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=197",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_1002dcebcb1bf7689e27aab54c17062a0.png",
+      "external_id": "KOSIN-197",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "오영도",
+      "department": "간담도췌장외과 · 이식외과",
+      "position": "교수",
+      "specialty": "간담췌외과 일반진료, 복강경수술, 로봇수술",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=196",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_72a38b24945b330a58d376b067edbb1d0.png",
+      "external_id": "KOSIN-196",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    },
+    {
+      "name": "이학수",
+      "department": "신경외과",
+      "position": "교수",
+      "specialty": "뇌동맥류, 뇌혈관기형, 뇌혈관내 수술, 급성 뇌경색 신경중재치료, 자발성 뇌출혈, 외상성 뇌출혈, 신경계 중환자치료",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=191",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_b277a578bd9be5fd9d3adaf2a830c83a0.jpg",
+      "external_id": "KOSIN-191",
+      "notes": "",
+      "schedules": [
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": []
+    },
+    {
+      "name": "전공의",
+      "department": "간담췌내과",
+      "position": "교수",
+      "specialty": "",
+      "profile_url": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?idx=41",
+      "photo_url": "https://www.kosinmed.or.kr/uploaded/board/staff/l_07b034a4454c660360f0e12ad9e0c9c80.jpg",
+      "external_id": "KOSIN-41",
+      "notes": "",
+      "schedules": [],
+      "date_schedules": []
+    }
+  ]
+}

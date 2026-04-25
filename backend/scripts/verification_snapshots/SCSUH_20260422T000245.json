@@ -1,0 +1,135 @@
+{
+  "hospital_code": "SCSUH",
+  "hospital_name": "신천연합병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "남준철",
+      "department": "신경과",
+      "external_id": "SCSUH-56",
+      "n_schedules": 10,
+      "n_date_schedules": 13,
+      "notes": "순천향대학교 학사\n순천향의과대학원 의학석사\n순천향의과대학원 의학박사\n순천향대학병원 인턴\n순천향대학병원 외과 전공의 및 전임의\n전)평택굿모닝병원 병원 외과과장\n\n대한외과학회 정회원, 유방암학회 정회원, 대한종양외과학회 정회원"
+    },
+    {
+      "name": "정인혜",
+      "department": "신경외과",
+      "external_id": "SCSUH-52",
+      "n_schedules": 11,
+      "n_date_schedules": 11,
+      "notes": "가천의대부속 길병원 신경과 전공의\n서울아산병원 말초신경파트 전임의\n국립암센터 신경과 전임의\n평택굿모닝병원 신경과 과장\n\n대한신경과학회\n대한임상신경생리학회\n2013 임상신경생리 전문의 취득\n대한신경근육질환학회"
+    },
+    {
+      "name": "이슬기",
+      "department": "부인과",
+      "external_id": "SCSUH-40",
+      "n_schedules": 8,
+      "n_date_schedules": 10,
+      "notes": "﻿순천향대학교 의과대학 졸업\n순천향대학병원 인턴수료\n순천향대학병원 전공의 수료\n산부인과 전문의\n전)미즈웰 산부인과 의원\n전)라벨비 산부인과의원 원장\n전)서울강북삼성병원 서울검진센터 검진의\n현)신천연합병원 산부인과 과장\n﻿"
+    },
+    {
+      "name": "배수성",
+      "department": "치과",
+      "external_id": "SCSUH-63",
+      "n_schedules": 11,
+      "n_date_schedules": 15,
+      "notes": "전북대학교 치의학전문대학원\n중앙보훈병원 통합치의학과 레지던트\n통합치의학과 전문의\n현) 신쳔연합병원 치과 과장\n\n대한통합치의학회 정회원\n대한심미치과학회 정회원"
+    },
+    {
+      "name": "오경중",
+      "department": "영상의학과",
+      "external_id": "SCSUH-65",
+      "n_schedules": 11,
+      "n_date_schedules": 14,
+      "notes": "서울대학교 의과대학교 졸업\n서울대학교 영상의학과 전공의 수료 전문의 취득\n인천사랑병원 영상의학과장\n현대 유비스 병원 영상의학과장\n인천의료원 영상의학과장\n박애병원 영상의학과장"
+    },
+    {
+      "name": "홍미정",
+      "department": "마취통증의학과",
+      "external_id": "SCSUH-36",
+      "n_schedules": 10,
+      "n_date_schedules": 10,
+      "notes": "충남대학교 의과대학 졸업\n한국보훈병원 전공의\n전) 성남병원 마취과장\n전) 새한병원 마취과장\n전) 단원병원 마취과장\n현) 신천연합병원 마취통증의학과 과장\n\n통증학회회원\n정맥마취회원"
+    },
+    {
+      "name": "윤창은",
+      "department": "진단검사의학과",
+      "external_id": "SCSUH-16",
+      "n_schedules": 8,
+      "n_date_schedules": 11,
+      "notes": "경북대학교 의과대학 졸업\n원자력병원 인턴 수료\n원자력병원 진단검사의학과 레지던트 수료\n진단검사의학과 전문의\n대한진단검사의학회 정회원\n대한검진의학회 정회원\n대한수혈학회 정회원\n현)신천연합병원 진단검사의학과 과장"
+    },
+    {
+      "name": "임수영",
+      "department": "응급의학과",
+      "external_id": "SCSUH-17",
+      "n_schedules": 14,
+      "n_date_schedules": 18,
+      "notes": "계명대학교 의과대학 졸업\n내과전문의\n현)신천연합병원 응급의학과 과장"
+    },
+    {
+      "name": "공두경",
+      "department": "응급의학과",
+      "external_id": "SCSUH-55",
+      "n_schedules": 14,
+      "n_date_schedules": 18,
+      "notes": "응급의학과 전문의\n인제대학교 의학과\n인제대학교 상계백병원 레지던트 수료\n前)홍익병원 과장\n前)원자력병원 과장\n前)한도병원 과장\n現)신천연합병원 과장"
+    },
+    {
+      "name": "배하은",
+      "department": "응급의학과",
+      "external_id": "SCSUH-76",
+      "n_schedules": 14,
+      "n_date_schedules": 18,
+      "notes": "고려대학교 의학전문대학원 의학과\n고려대학교 구로병원 인턴 수료\n고려대학교 구로병원 응급의학과 레지던트 수료\n전)홍익병원 응급의학과 과장\n현)신천연합병원 응급의학과 과장"
+    },
+    {
+      "name": "김아영",
+      "department": "응급의학과",
+      "external_id": "SCSUH-78",
+      "n_schedules": 14,
+      "n_date_schedules": 18,
+      "notes": "응급의학과 전문의\n고려대학교 의과대학 졸업\n고려대학교 구로병원 응급의학과 전공의 수료\n\n대한응급의학회 정회원"
+    },
+    {
+      "name": "신민철",
+      "department": "응급의학과",
+      "external_id": "SCSUH-77",
+      "n_schedules": 14,
+      "n_date_schedules": 18,
+      "notes": "경희대학교 의과대학 졸업\n경희대학교 의과대학 경희의료원 인턴 수료\n경희대학교 의과대학 경희의료원 응급의학과 레지던트 수료\n응급의학과 전문의\n대한 응급의학회 정회원\n대한 임상독성학회 정회원\n현)신천연합병원 응급의학과 과"
+    },
+    {
+      "name": "하성호",
+      "department": "가정의학과",
+      "external_id": "SCSUH-70",
+      "n_schedules": 10,
+      "n_date_schedules": 12,
+      "notes": "서울대학교 의과대학 졸업\n서울대학교병원 가정의학과 전공의 수료 및 전문의 취득\n前)청주의료원 가정의학과 과장 및 교육수련부장\n前)단국대학교 건강증진센터 임상교수\n前)인천광역시의료원 건강증진센터 센터장 및 교육수련부장\n前)경기도의료원 의정부병원장\n現)신천연합병원 건강증진센터 센터장 / 가정의학과장"
+    },
+    {
+      "name": "장창현",
+      "department": "정신건강의학과",
+      "external_id": "SCSUH-41",
+      "n_schedules": 8,
+      "n_date_schedules": 11,
+      "notes": "한양대학교 의학과\n한양대학교병원 인턴 수료\n한양대학교병원 정신건강의학과 레지던트 수료\n전) 아주대병원 정신건강의학과 전임의\n전) 함께하는정신과의원 진료원장\n전) 정신과 순회진료(느티나무의원, 살림의원, 원진녹색병원)\n현) 전진상의원 정신건강의학과 진료봉사\n\n학회:\n대한신경정신의학회 정회원\n국제 EMDR 협회 공인 1단계 트레이닝 수료\n대한맥락행동과학연구회 정회원\n대한정서인지행동의학회 평생회원\n논문 :\nJang CH, Ahn DH, Lee JI. The Quality of Life and Related Psychosocial Factors of Schizophrenia Patients Registered in Community Mental Health Center. Korean Journal of Biological Psychiatry. 2014 Feb; 21(1):28-35.\nJang CH, Choi JH, Park SC. A Case of Clozapine-Resistant Sch"
+    },
+    {
+      "name": "이종필",
+      "department": "신경외과(세부)",
+      "external_id": "SCSUH-57",
+      "n_schedules": 10,
+      "n_date_schedules": 11,
+      "notes": "경북대학교 의학과 졸업\n한림대학교 인턴 수료\n한림대학교 레지던트 수료\n전)한림대학교 전임의"
+    },
+    {
+      "name": "나현진",
+      "department": "통증의료센터",
+      "external_id": "SCSUH-72",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "관동대학교 의학과\n명지병원 인턴 수료\n명지병원 레지던트 수료\n전)느티나무의료복지사회적 협동조합 의원 원장\n전)관악정다운의료복지사회적협동조합 정다운우리의원 재택센터장"
+    }
+  ]
+}

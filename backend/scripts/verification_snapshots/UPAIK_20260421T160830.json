@@ -1,0 +1,175 @@
+{
+  "hospital_code": "UPAIK",
+  "hospital_name": "의정부백병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "곽성진",
+      "department": "내과",
+      "external_id": "UPAIK-1-1",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "소속: 제1 내과"
+    },
+    {
+      "name": "정도영",
+      "department": "내과",
+      "external_id": "UPAIK-1-2",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "소속: 제2 내과"
+    },
+    {
+      "name": "양재현",
+      "department": "내과",
+      "external_id": "UPAIK-1-3",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "소속: 제3 내과"
+    },
+    {
+      "name": "강건욱",
+      "department": "내과",
+      "external_id": "UPAIK-1-4",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "소속: 제5 내과"
+    },
+    {
+      "name": "우돈희",
+      "department": "외과",
+      "external_id": "UPAIK-2-1",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경준",
+      "department": "정형외과",
+      "external_id": "UPAIK-3-1",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "소속: 제2 정형외과"
+    },
+    {
+      "name": "김경훈",
+      "department": "신경외과",
+      "external_id": "UPAIK-4-1",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상준",
+      "department": "신경과",
+      "external_id": "UPAIK-5-1",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상욱",
+      "department": "피부비뇨기과",
+      "external_id": "UPAIK-6-1",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백지선",
+      "department": "통증의학과",
+      "external_id": "UPAIK-7-1",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구남훈",
+      "department": "치과",
+      "external_id": "UPAIK-9-1",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "소속: 제1 치과"
+    },
+    {
+      "name": "임수헌",
+      "department": "치과",
+      "external_id": "UPAIK-9-2",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "소속: 제2 치과"
+    },
+    {
+      "name": "이방원",
+      "department": "산부인과",
+      "external_id": "UPAIK-10-1",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양성관",
+      "department": "가정의학과",
+      "external_id": "UPAIK-11-1",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정우",
+      "department": "응급의학과",
+      "external_id": "UPAIK-12-1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상희",
+      "department": "응급의학과",
+      "external_id": "UPAIK-12-2",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박기영",
+      "department": "응급의학과",
+      "external_id": "UPAIK-12-3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박삼열",
+      "department": "응급의학과",
+      "external_id": "UPAIK-12-4",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전영",
+      "department": "마취과",
+      "external_id": "UPAIK-13-1",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지우",
+      "department": "영상의학과",
+      "external_id": "UPAIK-14-1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승원",
+      "department": "진단검사의학과",
+      "external_id": "UPAIK-15-1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

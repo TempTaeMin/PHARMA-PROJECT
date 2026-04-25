@@ -1,0 +1,2588 @@
+{
+  "hospital_code": "JNUH",
+  "hospital_name": "전남대학교병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "강경은",
+      "department": "가정의학과",
+      "position": "가정의학과",
+      "specialty": "만성질환 및 건강위험요인관리, 금연, 비만, 암생존자 평생관리클리닉",
+      "external_id": "JNUH-FM-FM00017",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희준",
+      "department": "간담췌외과",
+      "position": "간담췌외과",
+      "specialty": "복강경 췌장/ 담도 수술, 췌장암, 담도암, 양성 담도 질환",
+      "external_id": "JNUH-GSL-GE00065",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은규",
+      "department": "간담췌외과",
+      "position": "간담췌외과",
+      "specialty": "담낭질환(복강경 담낭절제술), 간질환, 담도계질환",
+      "external_id": "JNUH-GSL-GE00057",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오채영",
+      "department": "간담췌외과",
+      "position": "간담췌외과",
+      "specialty": "담낭 질환, 복강경 수술",
+      "external_id": "JNUH-GSL-GE00098",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유성열",
+      "department": "간담췌외과",
+      "position": "간담췌외과",
+      "specialty": "담낭질환, 복강경 수술, 로봇수술",
+      "external_id": "JNUH-GSL-GE00100",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정숙인",
+      "department": "감염내과",
+      "position": "감염내과",
+      "specialty": "감염병, 열병, 바이러스 질환, HIV감염증, 전염병, 예방접종",
+      "external_id": "JNUH-IMD-ID00015",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경화",
+      "department": "감염내과",
+      "position": "감염내과",
+      "specialty": "감염병, 열병, 바이러스 질환, HIV감염증, 전염병, 예방접종",
+      "external_id": "JNUH-IMD-ID00018",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "감염내과",
+      "position": "감염내과",
+      "specialty": "감염병, 열병, 바이러스 질환, HIV감염증, 전염병, 예방접종",
+      "external_id": "JNUH-IMD-ID00024",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해성",
+      "department": "감염내과",
+      "position": "감염내과",
+      "specialty": "감염질환",
+      "external_id": "JNUH-IMD-ID00035",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민지",
+      "department": "감염내과",
+      "position": "감염내과",
+      "specialty": "감염병, 열병, 바이러스질환, 예방접종",
+      "external_id": "JNUH-IMD-ID00032",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신성운",
+      "department": "감염내과",
+      "position": "감염내과",
+      "specialty": "감염질환",
+      "external_id": "JNUH-IMD-ID00028",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장미옥",
+      "department": "감염내과",
+      "position": "감염내과",
+      "specialty": "감염병, 열병, 바이러스 질환, 전염병, 예방접종",
+      "external_id": "JNUH-IMD-ID00019",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박홍주",
+      "department": "구강악안면외과",
+      "position": "구강악안면외과",
+      "specialty": "구강암, 구순구개열, 임플란트",
+      "external_id": "JNUH-OMS-DN00041",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "국민석",
+      "department": "구강악안면외과",
+      "position": "구강악안면외과",
+      "specialty": "양악수술, 턱관절, 임플란트",
+      "external_id": "JNUH-OMS-DN00077",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승곤",
+      "department": "구강악안면외과",
+      "position": "구강악안면외과",
+      "specialty": "악안면외상, 구강악안면 감염, 악안면종양, 임플란트, 악교정수술",
+      "external_id": "JNUH-OMS-DN01716",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류재영",
+      "department": "구강악안면외과",
+      "position": "구강악안면외과",
+      "specialty": "구강암, 양악수술, 임플란트",
+      "external_id": "JNUH-OMS-DN03737",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정동진",
+      "department": "내분비대사내과",
+      "position": "내분비대사내과",
+      "specialty": "당뇨병, 골다공증, 갑상선, 부갑상선, 부신질환, 기타 내분비질환",
+      "external_id": "JNUH-IME-ED00003",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조동혁",
+      "department": "내분비대사내과",
+      "position": "내분비대사내과",
+      "specialty": "당뇨병, 골다공증, 갑상선, 부갑상선, 부신질환, 기타 내분비질환",
+      "external_id": "JNUH-IME-ED00016",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진욱",
+      "department": "내분비대사내과",
+      "position": "내분비대사내과",
+      "specialty": "당뇨병, 비만, 기타 내분비질환",
+      "external_id": "JNUH-IME-ED00018",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김빛나",
+      "department": "내분비대사내과",
+      "position": "내분비대사내과",
+      "specialty": "당뇨병, 골다공증, 갑상선, 부갑상선, 부신질환, 기타 내분비질환",
+      "external_id": "JNUH-IME-ED00041",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조진성",
+      "department": "내분비외과",
+      "position": "내분비외과",
+      "specialty": "갑상선암",
+      "external_id": "JNUH-GSE-ES00019",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권용빈",
+      "department": "내분비외과",
+      "position": "내분비외과",
+      "specialty": "갑상선암,유방질환,로봇수술",
+      "external_id": "JNUH-GSE-ES00039",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강민구",
+      "department": "노년내과",
+      "position": "노년내과",
+      "specialty": "노인병, 노쇠, 근감소증, 노인 수술전 평가",
+      "external_id": "JNUH-IMK-ME00520",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주재균",
+      "department": "대장항문외과",
+      "position": "대장항문외과",
+      "specialty": "대장암, 직장암, 대장/직장 양성질환, 직장탈출증, 항문질환, 크론병, 궤양성대장염",
+      "external_id": "JNUH-GSA-GE00023",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽한덕",
+      "department": "대장항문외과",
+      "position": "대장항문외과",
+      "specialty": "대장암, 직장암, 직장탈출증 (복강경/로봇 수술)",
+      "external_id": "JNUH-GSA-GE00083",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정준성",
+      "department": "대장항문외과",
+      "position": "대장항문외과",
+      "specialty": "대장암,직장암,대장/직장 양성질환, 직장탈출증,항문질환",
+      "external_id": "JNUH-GSA-GE00093",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이신석",
+      "department": "류마티스내과",
+      "position": "류마티스내과",
+      "specialty": "류마티스관절염, 전신홍반루프스, 쇼그렌병, 섬유근통, 베체트병, 강직성척추염, 기타류마티스질환",
+      "external_id": "JNUH-IMR-RH00008",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용욱",
+      "department": "류마티스내과",
+      "position": "류마티스내과",
+      "specialty": "류마티스관절염, 전신홍반루프스, 강직성척추염, 기타류마티스질환",
+      "external_id": "JNUH-IMR-RH00013",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박동진",
+      "department": "류마티스내과",
+      "position": "류마티스내과",
+      "specialty": "류마티스관절염, 전신성홍반성루프스, 기타 류마티스질환",
+      "external_id": "JNUH-IMR-RH00020",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지현",
+      "department": "류마티스내과",
+      "position": "류마티스내과",
+      "specialty": "류마티스관절염, 퇴행성관절염, 통풍, 전신홍반루푸스, 쇼그렌증후군, 혈관염, 강직성척추염",
+      "external_id": "JNUH-IMR-RH00025",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박기정",
+      "department": "류마티스내과",
+      "position": "류마티스내과",
+      "specialty": "류마티스질환",
+      "external_id": "JNUH-IMR-RH00028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성은",
+      "department": "류마티스내과",
+      "position": "류마티스내과",
+      "specialty": "류마티스 관절염, 퇴행성 관절염, 통풍, 전신홍반 루푸스, 쇼그렌 증후군, 혈관염, 강직성 척추염",
+      "external_id": "JNUH-IMR-RH00027",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤명하",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "항암제로 인한 말초신경증 통증, 암성통증, 대상포진후 신경통, 기타 통증치료",
+      "external_id": "JNUH-AN-AN00006",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽상현",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "중환자의학, 심폐마취",
+      "external_id": "JNUH-AN-AN00009",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성욱",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "마취, 중환자의학, 마취약리학",
+      "external_id": "JNUH-AN-AN00016",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정일",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "통증의학, 부위마취",
+      "external_id": "JNUH-AN-AN00019",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배홍범",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "마취, 중환자의학",
+      "external_id": "JNUH-AN-AN00045",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성태",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "뇌신경마취, 중환자의학",
+      "external_id": "JNUH-AN-AN00020",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형곤",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "부위마취, 암성통증",
+      "external_id": "JNUH-AN-AN00047",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성헌",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "마취, 마취약리학",
+      "external_id": "JNUH-AN-AN00530",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김웅모",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "암성통증, 신경병증성통증, 마취, 통증 관리",
+      "external_id": "JNUH-AN-AN00046",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정민",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "심폐마취, 이식마취",
+      "external_id": "JNUH-AN-AN00548",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장은아",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "마취, 중환자의학",
+      "external_id": "JNUH-AN-AN00549",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강동호",
+      "department": "마취통증의학과",
+      "position": "마취통증의학과",
+      "specialty": "요하지통, 근골격계통증, 대상포진후 신경통, 신경병증성통증.",
+      "external_id": "JNUH-AN-AN00563",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안성자",
+      "department": "방사선종양학과",
+      "position": "방사선종양학과",
+      "specialty": "유방암, 폐종양",
+      "external_id": "JNUH-TR-RT00007",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남택근",
+      "department": "방사선종양학과",
+      "position": "방사선종양학과",
+      "specialty": "소화기계종양, 비뇨기계종양",
+      "external_id": "JNUH-TR-RT00008",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재욱",
+      "department": "방사선종양학과",
+      "position": "방사선종양학과",
+      "specialty": "두경부종양, 뇌종양, 식도암, 간암, 소아종양, 간담췌종양",
+      "external_id": "JNUH-TR-RT00013",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김옥준",
+      "department": "병리과",
+      "position": "병리과",
+      "specialty": "구강병리",
+      "external_id": "JNUH-PA-AP00017",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유덕",
+      "department": "병리과",
+      "position": "병리과",
+      "specialty": "심폐병리, 혈액병리, 두경부병리, 분자병리",
+      "external_id": "JNUH-PA-AP00037",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성순",
+      "department": "병리과",
+      "position": "병리과",
+      "specialty": "신장병리, 비뇨기병리",
+      "external_id": "JNUH-PA-AP00161",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김나임",
+      "department": "병리과",
+      "position": "병리과",
+      "specialty": "산부인과병리, 세포병리",
+      "external_id": "JNUH-PA-AP00165",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영",
+      "department": "병리과",
+      "position": "병리과",
+      "specialty": "구강병리",
+      "external_id": "JNUH-PA-AP00160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "병리과",
+      "position": "병리과",
+      "specialty": "혈액병리",
+      "external_id": "JNUH-PA-AP00231",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강택원",
+      "department": "비뇨의학과",
+      "position": "비뇨의학과",
+      "specialty": "비뇨기종양, 혈뇨",
+      "external_id": "JNUH-UR-UR00027",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선옥",
+      "department": "비뇨의학과",
+      "position": "비뇨의학과",
+      "specialty": "배뇨장애, 전립선비대증, 홀렙수술, 로봇수술, 요실금/골반장기탈출증, 과민성방광, 방광통/간질성방광염, 소아비뇨, 잠복고환, 음낭수종, 정계정맥류, 여성성기능장애",
+      "external_id": "JNUH-UR-UR00030",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오경진",
+      "department": "비뇨의학과",
+      "position": "비뇨의학과",
+      "specialty": "요로결석 (신장, 요관), 비뇨내시경수술, 로봇수술, 전립선비대증(방광결석), 신낭종, 수신증",
+      "external_id": "JNUH-UR-UR00023",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정호석",
+      "department": "비뇨의학과",
+      "position": "비뇨의학과",
+      "specialty": "남성의학, 전립선암, 신장암, 신우요관암, 방광암, 부신종양, 로봇수술",
+      "external_id": "JNUH-UR-UR00219",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유성현",
+      "department": "비뇨의학과",
+      "position": "비뇨의학과",
+      "specialty": "전립선비대증, 로봇수술, 전립선암, 방광암, 신장암, 신우 요관암, 부신종양, 비뇨기 손상재건, 요도협착",
+      "external_id": "JNUH-UR-UR00229",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철홍",
+      "department": "산부인과",
+      "position": "산부인과",
+      "specialty": "자궁근종, 자궁선근증, 자궁내막증, 난소종양, 자궁경부상피내종양, 골반장기탈출증, 요실금, 골반통/월경통, 부정출혈, 복강경수술",
+      "external_id": "JNUH-OG-OG00040",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조문경",
+      "department": "산부인과",
+      "position": "산부인과",
+      "specialty": "가임기종양, 양성종양, 자궁근종, 불임, 갱년기노화관리, 골다공증, 월경이상, 시험관아기, 자궁기형, 종양 비수술적치료, 자궁내시경, 골반통, 부정출혈, 다낭성난소, 여성 호르몬치료, 자궁경부암예방백신, 자궁내막증, 월경통, 자궁선근종",
+      "external_id": "JNUH-OG-OG00048",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종운",
+      "department": "산부인과",
+      "position": "산부인과",
+      "specialty": "모체태아의학",
+      "external_id": "JNUH-OG-OG00046",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류현경",
+      "department": "산부인과",
+      "position": "산부인과",
+      "specialty": "자궁내막증, 가임기 종양, 자궁근종, 양성종양, 갱년기노화관리, 월경이상, 자궁기형, 자궁내시경, 부정출혈, 다낭성난소, 여성 호르몬치료, 자궁경부암예방백신, 월경통",
+      "external_id": "JNUH-OG-OG00230",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태영",
+      "department": "산부인과",
+      "position": "산부인과",
+      "specialty": "자궁근종, 양성종양, 자궁질탈출, 골반저완화, 자궁경부암예방백신",
+      "external_id": "JNUH-OG-OG00236",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최명균",
+      "department": "산부인과",
+      "position": "산부인과",
+      "specialty": "정상임신, 고위험임신, 태아학, 조산",
+      "external_id": "JNUH-OG-OG00242",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방희영",
+      "department": "산부인과",
+      "position": "산부인과",
+      "specialty": "정상임신, 조기분만진통, 질염, 유농증, 자궁경부암 예방백신",
+      "external_id": "JNUH-OG-OG00244",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허우회",
+      "department": "성형외과",
+      "position": "성형외과",
+      "specialty": "모반, 안면외상, 레이저치료, 욕창, 화상",
+      "external_id": "JNUH-PS-PS00175",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광석",
+      "department": "성형외과",
+      "position": "성형외과",
+      "specialty": "선천기형, 두경부 및 사지 재건",
+      "external_id": "JNUH-PS-PS00009",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황재하",
+      "department": "성형외과",
+      "position": "성형외과",
+      "specialty": "안면외상, 욕창, 당뇨족, 미용성형",
+      "external_id": "JNUH-PS-PS00010",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준호",
+      "department": "성형외과",
+      "position": "성형외과",
+      "specialty": "안면외상, 수부재건, 미용성형, 레이저치료",
+      "external_id": "JNUH-PS-PS00172",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동완",
+      "department": "성형외과",
+      "position": "성형외과",
+      "specialty": "흉터성형, 안면외상, 미용성형, 레이저치료",
+      "external_id": "JNUH-PS-PS00176",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승현",
+      "department": "성형외과",
+      "position": "성형외과",
+      "specialty": "흉터성형, 안면외상, 미용성형, 레이저치료, 탈모",
+      "external_id": "JNUH-PS-PS00179",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주연",
+      "department": "소아외과",
+      "position": "소아외과",
+      "specialty": "소아외과 질환, 소아복강경수술 (어린이병원)",
+      "external_id": "JNUH-GSC-PU00018",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "국훈",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "혈액종양, 조혈모세포이식, 면역질환, 소아희귀질환",
+      "external_id": "JNUH-PED-PE00005",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김찬종",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "소아내분비, 성장클리닉, 성조숙증",
+      "external_id": "JNUH-PED-PE00028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영옥",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "소아신경, 뇌전증, 두통, 발달지연",
+      "external_id": "JNUH-PED-PE00045",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백희조",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "혈액종양, 조혈모세포이식, 소아청소년완화의료",
+      "external_id": "JNUH-PED-PE00069",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송은송",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "신생아, 조산아, 고위험신생아",
+      "external_id": "JNUH-PED-PE00047",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조화진",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "선천성심장병, 부정맥, 가와사키병, 심부전, 심도자술, 중환자",
+      "external_id": "JNUH-PED-PE00523",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양은미",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "소아신장질환 (신증후군, 신염, 선천성 신기형, 유전성 신질환), 소아요로질환 (배뇨장애, 야뇨증)",
+      "external_id": "JNUH-PED-PE00528",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최인수",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "선천성심장병, 부정맥, 가와사키병, 심부전, 심도자술, 중환자",
+      "external_id": "JNUH-PED-PE00548",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황인지",
+      "department": "소아청소년과",
+      "position": "소아청소년과",
+      "specialty": "신생아, 조산아, 고위험신생아",
+      "external_id": "JNUH-PED-PE00555",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "염증성 장질환, 궤양성대장염, 크론병, 만성장염, 장결핵, 베체트장염, 대장 용종 및 종양. 소장질환",
+      "external_id": "JNUH-IMG-GI00006",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박창환",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "췌장, 급만성췌장염, 췌장암, 췌장질환, 췌장낭종, 담도계질환, 담석, 담낭암, 담낭염, 담관염, 담도암, 담낭용종, 황달, 팽대부암",
+      "external_id": "JNUH-IMG-GI00042",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선영",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "조기 위암, 식도암, 위식도 역류질환, 역류성 식도염, 소화불량증, 과민성장증후군, 변비, 위용종, 위선종과 위암에 대한 치료내시경, 점막하종양, 식도이완불능증, 염증성장질환, 대장용종과 조기 대장암 치료내시경",
+      "external_id": "JNUH-IMG-GI00037",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은애",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "췌장, 급만성췌장염, 췌장암, 췌장질환, 췌장낭종, 담도계질환, 담석, 담낭암, 담낭염, 담관염, 담도암, 담낭용종, 황달, 팽대부암",
+      "external_id": "JNUH-IMG-GI00104",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "염증성 장질환, 궤양성대장염, 크론병, 장결핵, 베체트장염, 대장질환, 대장암, 직장암, 대장용종과 조기대장암 치료내시경, 소장질환",
+      "external_id": "JNUH-IMG-GI00127",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤재현",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "간염, 간경변, 간세포암종, 지방간, 바이러스성 간염, 급성간부전, 간성 혼수, 복수, 정맥류 출혈, 문맥 고혈압, 간이식, 양성 간종양",
+      "external_id": "JNUH-IMG-GI00130",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진원",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "조기 위암, 식도암, 위식도 역류질환, 역류성 식도염, 소화불량증, 과민성장증후군, 변비, 위용종, 위선종과 위암에 대한 치료내시경, 점막하종양, 염증성장질환, 대장용종과 조기 대장암 치료내시경",
+      "external_id": "JNUH-IMG-GI00175",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임채준",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "상하부 종양 및 위장관, 간기능이상 질환",
+      "external_id": "JNUH-IMG-GI00185",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배찬중",
+      "department": "소화기내과",
+      "position": "소화기내과",
+      "specialty": "상하부 종양 및 위장관, 간기능이상 질환",
+      "external_id": "JNUH-IMG-GI00193",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안영근",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "협심증, 심근경색증, 동맥경화증",
+      "external_id": "JNUH-IMC-CV00030",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주한",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "허혈성심질환, 관상동맥질환, 심근경색, 협심증",
+      "external_id": "JNUH-IMC-CV00031",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍영준",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "협심증, 심근경색증, 혈관내초음파, 고혈압, 이상지질혈증, 동맥경화증",
+      "external_id": "JNUH-IMC-CV00032",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김계훈",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "판막, 심부전, 고혈압, 동맥경화",
+      "external_id": "JNUH-IMC-CV00040",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형욱",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "부정맥, 돌연사, 실신, 심전기생리학",
+      "external_id": "JNUH-IMC-CV00041",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤남식",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "부정맥, 실신, 돌연심장사, 심방세동, 심박동기",
+      "external_id": "JNUH-IMC-CV00043",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤현주",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "심부전판막질환,고혈압,여성심장,폐고혈압,항암제심독성",
+      "external_id": "JNUH-IMC-CV00044",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심두선",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "관상동맥질환, 고혈압, 동맥경화증, 고지혈증",
+      "external_id": "JNUH-IMC-CV00048",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기홍",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "부정맥, 실신, 심전기생리학, 심방세동, 심장장치이식",
+      "external_id": "JNUH-IMC-CV00108",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조재영",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "심부전, 판막질환, 심근증, 고혈압, 동맥경화, 고지혈증, 심장이식, 인공심장이식",
+      "external_id": "JNUH-IMC-CV00109",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민철",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "협심증, 심근경색증, 고위험 관상동맥 중재술, 중환자의학, 체외순환보조술(에크모)",
+      "external_id": "JNUH-IMC-CV00125",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현대용",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "허혈성심질환, 관상동맥질환, 심근경색, 협심증",
+      "external_id": "JNUH-IMC-CV00140",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조경훈",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "협심증, 심근경색증, 이상지질혈증(고지혈증), 동맥경화증",
+      "external_id": "JNUH-IMC-CV00126",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안준호",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "협심증, 심근경색증, 대동맥질환, 심장혈관 중재시술, 대동맥 중재시술",
+      "external_id": "JNUH-IMC-CV00145",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승헌",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "심장혈관 증재시술, 심근경색증, 협심증",
+      "external_id": "JNUH-IMC-CV00131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오석",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "협심증, 심근경색증, 이상지질혈증(고지혈증), 동맥경화증",
+      "external_id": "JNUH-IMC-CV00152",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유리",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "부정맥, 실신, 돌연사, 선천성부정맥증후군",
+      "external_id": "JNUH-IMC-CV00160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임용환",
+      "department": "순환기내과",
+      "position": "순환기내과",
+      "specialty": "협심증, 심근경색증, 순환기계 중환자의학, 체외순환보조술",
+      "external_id": "JNUH-IMC-CV00150",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김병채",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "치매, 신경퇴행질환, 뇌졸중",
+      "external_id": "JNUH-NR-NR00011",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박만석",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "뇌졸중, 두통",
+      "external_id": "JNUH-NR-NR00017",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승한",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "어지럼증, 안구운동장애, 뇌졸중, 두통",
+      "external_id": "JNUH-NR-NR00018",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성민",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "파킨슨병, 떨림, 실조증, 이상운동질환, 치매",
+      "external_id": "JNUH-NR-NR00022",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준태",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "뇌졸중, 두통, 어지럼증, 치매",
+      "external_id": "JNUH-NR-NR00021",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남태승",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "말초신경 및 근육질환, 신경계 면역질환 및 유전질환",
+      "external_id": "JNUH-NR-NR00024",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최강호",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "뇌졸중, 치매, 퇴행성 신경질환, 두통",
+      "external_id": "JNUH-NR-NR00207",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강경욱",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "뇌전증, 수면장애, 수면무호흡증, 코골이, 두통, 일반신경학",
+      "external_id": "JNUH-NR-NR00217",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조수현",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "치매, 퇴행성 신경질환",
+      "external_id": "JNUH-NR-NR00225",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재명",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "어지럼증, 안구운동장애, 뇌졸중, 두통",
+      "external_id": "JNUH-NR-NR00224",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "뇌졸중, 중환자의학, 수면장애",
+      "external_id": "JNUH-NR-NR00228",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이학로",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "파킨슨병, 떨림, 이상운동질환, 치매",
+      "external_id": "JNUH-NR-NR00231",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강유리",
+      "department": "신경과",
+      "position": "신경과",
+      "specialty": "신경면역질환 (시신경척수염, 다발성경화증, MOG항체질환, 중증근무력증, CIDP, 길랑바레증후군, 근육염)",
+      "external_id": "JNUH-NR-NR00230",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태선",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "뇌동맥류, 허혈성 뇌혈관질환, 경동맥 협착",
+      "external_id": "JNUH-NS-NS00019",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정길",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "척추 및 척추질환(경추,흉추,요추), 척추변형, 척추종양",
+      "external_id": "JNUH-NS-NS00025",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주성필",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "뇌동맥류, 모야모야병, 허혈성 뇌혈관질환, 자발성지주막하출혈, 뇌동정맥 기형",
+      "external_id": "JNUH-NS-NS00041",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한문수",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "척수 및 척추질환 (경추,흉추,요추)",
+      "external_id": "JNUH-NS-NS00239",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유섭",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "뇌동맥류, 경동맥협착, 뇌혈관질환(뇌출혈), 뇌동정맥 기형",
+      "external_id": "JNUH-NS-NS00227",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류한승",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "두부외상, 두개골성형술",
+      "external_id": "JNUH-NS-NS00238",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍종환",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "척추 외상, 척추 골다공증성 골절, 척추 내시경 수술, 두부 외상, 신경중환자",
+      "external_id": "JNUH-NS-NS00242",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용준",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "뇌혈관 질환, 수두증, 두개골성형술",
+      "external_id": "JNUH-NS-NS00247",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지호",
+      "department": "신경외과",
+      "position": "신경외과",
+      "specialty": "척수 및 척추질환 (경추,흉추,요추)",
+      "external_id": "JNUH-NS-NS00248",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김남호",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "신장질환",
+      "external_id": "JNUH-IMN-KD00004",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수완",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "만성신부전, 혈액투석, 복막투석, 신장이식, 사구체신염, 신증후군, 고혈압, 당뇨병성신증",
+      "external_id": "JNUH-IMN-KD00007",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "마성권",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "신장질환",
+      "external_id": "JNUH-IMN-KD00032",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배은희",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "고혈압, 사구체신염, 신증후군, 만성신부전, 혈액투석, 복막투석, 신장이식, 당뇨병성신병증, 신낭종",
+      "external_id": "JNUH-IMN-KD00031",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창성",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "신장질환, 투석, 신장이식, 희귀질환",
+      "external_id": "JNUH-IMN-KD00064",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최홍상",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "단백뇨, 혈뇨, 사구체신염, 신증후군, 고혋압, 당뇨병성신증, 만성신부전, 급성신부전, 혈액투석, 복막투석",
+      "external_id": "JNUH-IMN-KD00073",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서상헌",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "단백뇨, 사구체신염, 신증후군, 당뇨병성신증, 급성신손상, 만성콩팥병, 신대치요법",
+      "external_id": "JNUH-IMN-KD00086",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송수현",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "단백뇨, 혈뇨, 고혈압성신증, 당뇨병성신증, 사구체신염, 만성신부전, 혈액투석, 복막투석, 신낭종",
+      "external_id": "JNUH-IMN-KD00088",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박혜진",
+      "department": "신장내과",
+      "position": "신장내과",
+      "specialty": "단백뇨, 혈뇨, 급성신부전, 만성신부전, 투석, 신낭종",
+      "external_id": "JNUH-IMN-KD00098",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤경철",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "백내장, 각막, 안구건조증 및 눈꺼풀질환",
+      "external_id": "JNUH-EY-OP00033",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상우",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "녹내장, 백내장",
+      "external_id": "JNUH-EY-OP00035",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허환",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "사시, 신경안과, 소아안과",
+      "external_id": "JNUH-EY-OP00051",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성미선",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "녹내장, 백내장",
+      "external_id": "JNUH-EY-OP00166",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤현정",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "전안부,백내장,성형안과",
+      "external_id": "JNUH-EY-OP00179",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박도희",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "망막, 포도막, 유리체",
+      "external_id": "JNUH-EY-OP00187",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종훈",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "녹내장, 백내장",
+      "external_id": "JNUH-EY-OP00188",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "국경윤",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "망막, 포도막, 유리체, 황반질환",
+      "external_id": "JNUH-EY-OP00189",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현지",
+      "department": "안과",
+      "position": "안과",
+      "specialty": "각막, 결막, 안구건조, 백내장",
+      "external_id": "JNUH-EY-OP00190",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고영일",
+      "department": "알레르기면역내과",
+      "position": "알레르기면역내과",
+      "specialty": "천식, 알레르기 비염 및 결막염, 만성기침, 두드러기 및 혈관부종, 접촉피부염, 과민폐렴, 호산구폐질환, 호산구증가증, 음식물알레르기, 약물알레르기, 곤충알레르기, Latex알레르기, 아나필락시스, 아토피피부염, 면역결핍질환, 알레르겐면역요법",
+      "external_id": "JNUH-IMA-AD00003",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심다운",
+      "department": "알레르기면역내과",
+      "position": "알레르기면역내과",
+      "specialty": "천식, 알레르기 비염 및 결막염, 만성기침, 두드러기 및 혈관부종, 접촉피부염, 과민폐렴, 호산구폐질환, 호산구증가증, 음식물알레르기, 약물알레르기, 아나필락시스, 아토피피부염, 면역결핍질환, 알레르겐면역요법",
+      "external_id": "JNUH-IMA-AD00011",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유지은",
+      "department": "알레르기면역내과",
+      "position": "알레르기면역내과",
+      "specialty": "알레르기 질환",
+      "external_id": "JNUH-IMA-AD00012",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤현",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "흉부 · 심장영상의학",
+      "external_id": "JNUH-DR-RD00014",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤웅",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "뇌신경계, 신경중재",
+      "external_id": "JNUH-DR-RD00073",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신상수",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "복부, 비뇨생식기계영상의학, 고주파열치료",
+      "external_id": "JNUH-DR-RD00028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허숙희",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "비뇨생식기 영상의학, 복부 영상의학, 소아 영상의학",
+      "external_id": "JNUH-DR-RD00048",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박일우",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "",
+      "external_id": "JNUH-DR-RD00258",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형욱",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "인터벤션영상의학",
+      "external_id": "JNUH-DR-RD00232",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임효순",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "유방영상의학",
+      "external_id": "JNUH-DR-RD00047",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤영",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "소아 및 신경두경부 영상의학",
+      "external_id": "JNUH-DR-RD00247",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백병현",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "신경두경부 및 신경중재",
+      "external_id": "JNUH-DR-RD00248",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병찬",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "인터벤션 영상의학, 혈관 영상의학",
+      "external_id": "JNUH-DR-RD00252",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효재",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "유방영상의학",
+      "external_id": "JNUH-DR-RD00262",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박찬",
+      "department": "영상의학과",
+      "position": "영상의학과",
+      "specialty": "인터벤션 영상의학, 혈관 영상의학",
+      "external_id": "JNUH-DR-RD00265",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정철",
+      "department": "외상외과",
+      "position": "외상외과",
+      "specialty": "외상",
+      "external_id": "JNUH-GSI-TR00001",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영권",
+      "department": "외상외과",
+      "position": "외상외과",
+      "specialty": "외상외과, 중환자의학",
+      "external_id": "JNUH-GSI-TR00008",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박윤철",
+      "department": "외상외과",
+      "position": "외상외과",
+      "specialty": "중증 외상",
+      "external_id": "JNUH-GSI-TR00006",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장현석",
+      "department": "외상외과",
+      "position": "외상외과",
+      "specialty": "외상",
+      "external_id": "JNUH-GSI-TR00012",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정의성",
+      "department": "외상외과",
+      "position": "외상외과",
+      "specialty": "외상",
+      "external_id": "JNUH-GSI-TR00011",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노현석",
+      "department": "외상외과",
+      "position": "외상외과",
+      "specialty": "복부외상",
+      "external_id": "JNUH-GSI-TR00014",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김호군",
+      "department": "위장관외과",
+      "position": "위장관외과",
+      "specialty": "위암, 위양성종양, 비만대사수술, 소화성궤양의 수술적치료, 역류성질환의 수술적치료, 복경경수술",
+      "external_id": "JNUH-GSS-GE00040",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허탁",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "응급의학",
+      "external_id": "JNUH-EM-EM00013",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전병조",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "전문심장구조술(ACLS), 임상독물학(Clinical Toxicology), 전문외상구조술(ATLS), 중환자의학",
+      "external_id": "JNUH-EM-EM00016",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문정미",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "전문심폐소생술, 중독학, 전문외상처치",
+      "external_id": "JNUH-EM-EM00017",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경운",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "통합심정지후치료(Integrated post-cardiac arrest care),경피심폐보조술(Percutaneous cardiopulmonary support)",
+      "external_id": "JNUH-EM-EM00014",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류현호",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "재난의학, 응급의료체계, 심폐소생",
+      "external_id": "JNUH-EM-EM00027",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병국",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "심폐소생술, 소생 후 치료",
+      "external_id": "JNUH-EM-EM00026",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용훈",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "체외막산소화, 통합심정지후치료, 환경의학",
+      "external_id": "JNUH-EM-EM00054",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성민",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "응급의료체계, 외상, 재난, 고압의학",
+      "external_id": "JNUH-EM-EM00058",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용수",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "외상 및 응급의학",
+      "external_id": "JNUH-EM-EM00061",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동훈",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "심폐소생술, 심폐소생 후 뇌소생술",
+      "external_id": "JNUH-EM-EM00062",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유진",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "심폐소생술 재난의학 응급의료시스템",
+      "external_id": "JNUH-EM-EM00063",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형연",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "중증외상",
+      "external_id": "JNUH-EM-EM00053",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정호",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "응급의료서비스체계, 응급중환자",
+      "external_id": "JNUH-EM-EM00074",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동기",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "응급의학, 중환자의학, 응급의료시스템, 외상",
+      "external_id": "JNUH-EM-EM00068",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유석진",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "기본 및 전문 소생술, 소생 후 치료",
+      "external_id": "JNUH-EM-EM00069",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이다해",
+      "department": "응급의학과",
+      "position": "응급의학과",
+      "specialty": "",
+      "external_id": "JNUH-EM-EM00075",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임상철",
+      "department": "이비인후과",
+      "position": "이비인후과",
+      "specialty": "부비동종양, 뇌기저부암, 비인두암, 상악동암, 무후각",
+      "external_id": "JNUH-EN-EN00007",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조형호",
+      "department": "이비인후과",
+      "position": "이비인후과",
+      "specialty": "중이염, 난청(인공와우이식, 보청기), 이명, 종양성귀질환, 소아이비인후과",
+      "external_id": "JNUH-EN-EN00048",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동훈",
+      "department": "이비인후과",
+      "position": "이비인후과",
+      "specialty": "부비동종양, 뇌기저부암, 비인두암, 상악동암, 비염",
+      "external_id": "JNUH-EN-EN00212",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성수",
+      "department": "이비인후과",
+      "position": "이비인후과",
+      "specialty": "난청, 돌발성난청, 어지러움, 메니에르, 전정신경영, 중이염",
+      "external_id": "JNUH-EN-EN00222",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양형채",
+      "department": "이비인후과",
+      "position": "이비인후과",
+      "specialty": "코골이, 비부비동질환, 코성형 및 안면부외상",
+      "external_id": "JNUH-EN-EN00221",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김홍찬",
+      "department": "이비인후과",
+      "position": "이비인후과",
+      "specialty": "이명, 메니에르, 중이염, 난청(귀 질환 위주)",
+      "external_id": "JNUH-EN-EN00235",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성충만",
+      "department": "이비인후과",
+      "position": "이비인후과",
+      "specialty": "코골이, 수면무호흡, 비부비동질환, 코성형 및 안면부외상",
+      "external_id": "JNUH-EN-EN00238",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최수진나",
+      "department": "이식혈관외과",
+      "position": "이식혈관외과",
+      "specialty": "신장이식, 간이식, 혈액투석용 동정맥루, 혈관질환, 소아외과질환, 탈장",
+      "external_id": "JNUH-GSV-PU00008",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호균",
+      "department": "이식혈관외과",
+      "position": "이식혈관외과",
+      "specialty": "신장이식, 투석용 동정맥루, 말초혈관질환, 복부대동맥류, 복부혈관질환, 심부정맥혈전증, 정맥류, 성인탈장",
+      "external_id": "JNUH-GSV-PU00011",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효신",
+      "department": "이식혈관외과",
+      "position": "이식혈관외과",
+      "specialty": "간암, 간이식",
+      "external_id": "JNUH-GSV-PU00017",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정홍성",
+      "department": "이식혈관외과",
+      "position": "이식혈관외과",
+      "specialty": "투석용 동정맥루, 혈관질환, 성인탈장",
+      "external_id": "JNUH-GSV-PU00015",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소라",
+      "department": "이식혈관외과",
+      "position": "이식혈관외과",
+      "specialty": "간이식, 신장이식",
+      "external_id": "JNUH-GSV-PU00023",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최인성",
+      "department": "재활의학과",
+      "position": "재활의학과",
+      "specialty": "뇌신경재활, 연하재활(성인), 인지재활, 전기진단의학",
+      "external_id": "JNUH-RH-RM00021",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한재영",
+      "department": "재활의학과",
+      "position": "재활의학과",
+      "specialty": "심장 호흡재활, 통증근골격재활, 의지보조기, 노인재활",
+      "external_id": "JNUH-RH-RM00019",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형규",
+      "department": "재활의학과",
+      "position": "재활의학과",
+      "specialty": "척수재활, 통증근골격재활, 근전도전기진단의학, 노인재활",
+      "external_id": "JNUH-RH-RM00105",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송민근",
+      "department": "재활의학과",
+      "position": "재활의학과",
+      "specialty": "전기진단의학(수술중 신경계감시), 뇌신경재활(외상성)",
+      "external_id": "JNUH-RH-RM00107",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재형",
+      "department": "재활의학과",
+      "position": "재활의학과",
+      "specialty": "관절재활, 척추재활, 뇌신경재활, 통증재활",
+      "external_id": "JNUH-RH-RM00020",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신일선",
+      "department": "정신건강의학과",
+      "position": "정신건강의학과",
+      "specialty": "노인정신의학",
+      "external_id": "JNUH-NP-PY00011",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재민",
+      "department": "정신건강의학과",
+      "position": "정신건강의학과",
+      "specialty": "우울증, 기분장애, 알코올 및 중독정신의학",
+      "external_id": "JNUH-NP-PY00012",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성완",
+      "department": "정신건강의학과",
+      "position": "정신건강의학과",
+      "specialty": "조현병, 청년정신건강, 정신증고위험군, 조현정동장애, 지역사회정신의학",
+      "external_id": "JNUH-NP-PY00019",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주연",
+      "department": "정신건강의학과",
+      "position": "정신건강의학과",
+      "specialty": "발달장애, 주의력결핍과잉행동장애, 틱장애, 아동청소년우울증",
+      "external_id": "JNUH-NP-PY05606",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유승형",
+      "department": "정신건강의학과",
+      "position": "정신건강의학과",
+      "specialty": "기분장애,불안장애,수면장애",
+      "external_id": "JNUH-NP-PY05622",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강희주",
+      "department": "정신건강의학과",
+      "position": "정신건강의학과",
+      "specialty": "우울장애, 양극성장애, 정신신체의학",
+      "external_id": "JNUH-NP-PY05603",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주완",
+      "department": "정신건강의학과",
+      "position": "정신건강의학과",
+      "specialty": "강박장애, 외상후스트레스장애, 수면장애",
+      "external_id": "JNUH-NP-PY05615",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하연",
+      "department": "정신건강의학과",
+      "position": "정신건강의학과",
+      "specialty": "물질중독장애, 불안장애, 조현병",
+      "external_id": "JNUH-NP-PY05627",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성택",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "소아정형외과학, 골 및 연부조직 종양학",
+      "external_id": "JNUH-OS-OS00013",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근배",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "족부 족관절의 외상, 족부 족관절 관절염, 스포츠 손상, 족부변형 기형.",
+      "external_id": "JNUH-OS-OS00019",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서형연",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "디스크, 척추질환, 협착증, 전방전위증, 황색인대 골화증, 척추 변형/기형, 측만증, 후만증, 척추/척수 종양, 척추골절",
+      "external_id": "JNUH-OS-OS00048",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명선",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "어깨 관절 질환 (충돌증후군, 관절염, 회전근개 파열, 견쇄관절염 등) 팔꿈치 관절 질환(주근관 증후군, 관절염, 관절 불안정성, 인대손상 등) 손목의 질환(관절염, 건초염, 삼각섬유연골복합체 손상, 손목 인대 손상 등) 손의 질환(수근관 증후군, 듀피트렌 구축, 탄발지 등) 상지의 외상",
+      "external_id": "JNUH-OS-OS00095",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성규",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "디스크, 척추질환, 협착증, 전방전위증, 황색인대 골화증, 척추 변형/기형, 측만증, 후만증, 척추/척수 종양, 척추골절",
+      "external_id": "JNUH-OS-OS00525",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건우",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "족부 및 발목관절 질환, 하지 외상",
+      "external_id": "JNUH-OS-OS00564",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성민",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "소아정형, 소아•청소년 평발/성장 클리닉, 사지연장클리닉(프리사이스, 키크기 수술), 골•연부조직 종양",
+      "external_id": "JNUH-OS-OS00600",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임준혁",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "어깨 관절 질환 (충돌증후군, 관절염, 회전근개 파열, 견쇄관절염 등) 팔꿈치 관절 질환(주근관 증후군, 관절염, 관절 불안정성, 인대손상 등) 손목의 질환(관절염, 건초염, 삼각섬유연골복합체 손상, 손목 인대 손상 등) 손의 질환(수근관 증후군, 듀피트렌 구축, 탄발지 등) 상지의 외상",
+      "external_id": "JNUH-OS-OS00608",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성명진",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "척추외상, 하지외상, 추간판탈출증, 척추관협착증, 전방전위증, 황색인대 골화증, 척수신경병증",
+      "external_id": "JNUH-OS-OS00629",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종은",
+      "department": "정형외과",
+      "position": "정형외과",
+      "specialty": "족부 및 발목관절 질환, 하지 외상",
+      "external_id": "JNUH-OS-OS00624",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박원주",
+      "department": "직업환경의학과",
+      "position": "직업환경의학과",
+      "specialty": "직업병 및 환경성질환, 근로자건강증진",
+      "external_id": "JNUH-OEM-IM00057",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조승현",
+      "department": "직업환경의학과",
+      "position": "직업환경의학과",
+      "specialty": "직업병 및 환경성 질환, 근로자 건강증진, 항공전문의사",
+      "external_id": "JNUH-OEM-IM00063",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신명근",
+      "department": "진단검사의학과",
+      "position": "진단검사의학과",
+      "specialty": "진단혈액학, 세포유전학, 분자유전학, 유세포분석",
+      "external_id": "JNUH-LM-CP00011",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수현",
+      "department": "진단검사의학과",
+      "position": "진단검사의학과",
+      "specialty": "임상미생물학, 분자유전학",
+      "external_id": "JNUH-LM-CP00017",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "기승정",
+      "department": "진단검사의학과",
+      "position": "진단검사의학과",
+      "specialty": "진단면역학, 분자유전학",
+      "external_id": "JNUH-LM-CP00012",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현정",
+      "department": "진단검사의학과",
+      "position": "진단검사의학과",
+      "specialty": "임상화학, 특수화학, 현장검사",
+      "external_id": "JNUH-LM-CP00208",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현우",
+      "department": "진단검사의학과",
+      "position": "진단검사의학과",
+      "specialty": "진단면역학, 분자유전학, 조직적합성",
+      "external_id": "JNUH-LM-CP00210",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주헌",
+      "department": "진단검사의학과",
+      "position": "진단검사의학과",
+      "specialty": "진단혈액학, 임상화학, 진단면역학, 수혈의학",
+      "external_id": "JNUH-LM-CP00216",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임하진",
+      "department": "진단검사의학과",
+      "position": "진단검사의학과",
+      "specialty": "진단혈액학, 수혈의학",
+      "external_id": "JNUH-LM-CP00217",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권용준",
+      "department": "진단검사의학과",
+      "position": "진단검사의학과",
+      "specialty": "임상미생물학, 분자유전학",
+      "external_id": "JNUH-LM-CP00219",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정일",
+      "department": "통증클리닉",
+      "position": "통증클리닉",
+      "specialty": "통증의학, 부위마취",
+      "external_id": "JNUH-PAIN-AN00019",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형곤",
+      "department": "통증클리닉",
+      "position": "통증클리닉",
+      "specialty": "부위마취, 암성통증",
+      "external_id": "JNUH-PAIN-AN00047",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김웅모",
+      "department": "통증클리닉",
+      "position": "통증클리닉",
+      "specialty": "암성통증, 신경병증성통증, 마취, 통증 관리",
+      "external_id": "JNUH-PAIN-AN00046",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성진",
+      "department": "피부과",
+      "position": "피부과",
+      "specialty": "탈모, 여드름, 가려움증, 건선, 습진, 소아 및 직업피부질환",
+      "external_id": "JNUH-DM-DE00004",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지범",
+      "department": "피부과",
+      "position": "피부과",
+      "specialty": "여드름, 주사, 수포질환, 건선, 혈관종, 피부종양, 손발톱질환",
+      "external_id": "JNUH-DM-DE00007",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤숙정",
+      "department": "피부과",
+      "position": "피부과",
+      "specialty": "흑색종, 피부암, 피부양성종양, 색소질환, 모반 등",
+      "external_id": "JNUH-DM-DE00011",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송호천",
+      "department": "핵의학과",
+      "position": "핵의학과",
+      "specialty": "핵의학, 분자영상, 갑상선질환, 방사성동위원소 치료",
+      "external_id": "JNUH-NM-NM00007",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김자혜",
+      "department": "핵의학과",
+      "position": "핵의학과",
+      "specialty": "일반핵의학, 신경핵의학, 심장핵의학, 종양핵의학, 갑상선질환, 방사성동위원소 치료",
+      "external_id": "JNUH-NM-NM00026",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조상건",
+      "department": "핵의학과",
+      "position": "핵의학과",
+      "specialty": "일반핵의학, 심장핵의학, 종양핵의학, 갑상선질환, 방사성동위원소 치료",
+      "external_id": "JNUH-NM-NM00028",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박기성",
+      "department": "핵의학과",
+      "position": "핵의학과",
+      "specialty": "일반핵의학, 갑상선질환, 방사성동위원소 치료",
+      "external_id": "JNUH-NM-NM00032",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배우균",
+      "department": "혈액종양내과",
+      "position": "혈액종양내과",
+      "specialty": "위암, 직장암, 간암, 담관암, 담도암 췌장암, 신장암, 요관암, 방광암, 전립선암, 신경내분비종양",
+      "external_id": "JNUH-IMH-HD00028",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황준일",
+      "department": "혈액종양내과",
+      "position": "혈액종양내과",
+      "specialty": "위암, 대장암, 직장암, 간암, 담관암, 담도암, 췌장암, 위장관기질종양",
+      "external_id": "JNUH-IMH-HD00051",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심현정",
+      "department": "혈액종양내과",
+      "position": "혈액종양내과",
+      "specialty": "두경부암, 유방암, 흑색종",
+      "external_id": "JNUH-IMH-HD00025",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송가영",
+      "department": "혈액종양내과",
+      "position": "혈액종양내과",
+      "specialty": "다발골수종, 급성림프구성백혈병, 림프종, 골수섬유증, 골수증식성질환",
+      "external_id": "JNUH-IMH-HD00066",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미희",
+      "department": "혈액종양내과",
+      "position": "혈액종양내과",
+      "specialty": "급성골수성백혈병, 골수이형성증후군, 재생불량성빈혈, 만성골수성백혈병, 골수섬유증, 골수증식성질환",
+      "external_id": "JNUH-IMH-HD00067",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성철",
+      "department": "호흡기내과",
+      "position": "호흡기내과",
+      "specialty": "만성폐쇄성폐질환",
+      "external_id": "JNUH-IMP-PD00019",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유일",
+      "department": "호흡기내과",
+      "position": "호흡기내과",
+      "specialty": "만성폐쇄성폐질환, 금연치료, 폐렴, 호흡기질환",
+      "external_id": "JNUH-IMP-PD00022",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권용수",
+      "department": "호흡기내과",
+      "position": "호흡기내과",
+      "specialty": "결핵 및 비결핵항산균폐질환, 기관지확장증",
+      "external_id": "JNUH-IMP-PD00040",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신홍준",
+      "department": "호흡기내과",
+      "position": "호흡기내과",
+      "specialty": "간질성폐질환",
+      "external_id": "JNUH-IMP-PD00051",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태옥",
+      "department": "호흡기내과",
+      "position": "호흡기내과",
+      "specialty": "중환자관리, 호흡기질환",
+      "external_id": "JNUH-IMP-PD00054",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고보건",
+      "department": "호흡기내과",
+      "position": "호흡기내과",
+      "specialty": "감염성 폐질환, 간질성 폐질환, 폐쇄성 폐질환",
+      "external_id": "JNUH-IMP-PD00059",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준영",
+      "department": "호흡기내과",
+      "position": "호흡기내과",
+      "specialty": "호흡기질환",
+      "external_id": "JNUH-IMP-PD00067",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤창석",
+      "department": "호흡기내과",
+      "position": "호흡기내과",
+      "specialty": "호흡기, 중환자 의학",
+      "external_id": "JNUH-IMP-PD00066",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인석",
+      "department": "심장혈관 흉부외과",
+      "position": "심장혈관 흉부외과",
+      "specialty": "ECMO, 심실보조 장치, 심장이식, 선천성 심장병",
+      "external_id": "JNUH-CS-CS00033",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이교선",
+      "department": "심장혈관 흉부외과",
+      "position": "심장혈관 흉부외과",
+      "specialty": "성인심장, 대동맥수술, 관상동맥우회술, 심장이식, 심실보조장치, 심장종양, 심낭질환",
+      "external_id": "JNUH-CS-CS00534",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정요천",
+      "department": "심장혈관 흉부외과",
+      "position": "심장혈관 흉부외과",
+      "specialty": "판막수술, 부정맥수술, 최소절개수술",
+      "external_id": "JNUH-CS-CS00538",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도완",
+      "department": "심장혈관 흉부외과",
+      "position": "심장혈관 흉부외과",
+      "specialty": "흉부외상, 중환자 질환 (중증외상 및 중환자의학, 체외순환보조술(ECMO))",
+      "external_id": "JNUH-CS-CS00536",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ],
+  "crawled_at": "2026-04-23T20:54:17.620621"
+}

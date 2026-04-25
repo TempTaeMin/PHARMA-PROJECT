@@ -1,0 +1,327 @@
+{
+  "hospital_code": "SARANG",
+  "hospital_name": "안산사랑의병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이길재",
+      "department": "정형외과",
+      "external_id": "SARANG-4752a8248c",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "고난이도 관절경 수술(어깨 회전근개 파열, 팔꿈치 테니스 엘보, 손목 삼각섬유연골 결합체 손상, 무릎 연골판 연골손상, 발목인대 및 연골손상) 인공관절 수술(무릎, 고관절, 어깨, 팔꿈치, 발목) 고난이도 외상 및…"
+    },
+    {
+      "name": "고한상",
+      "department": "정형외과",
+      "external_id": "SARANG-4011a981a5",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "척추(spine) 경추, 흉추, 요추 퇴행성 질환(디스크, 협착증) 경추, 흉추, 요추의 외상 최소 침습 및 내시경 디스크 수술 및 시술 척추 수술 및 비수술적 치료"
+    },
+    {
+      "name": "김동욱",
+      "department": "정형외과",
+      "external_id": "SARANG-d7e22f2e32",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "스포츠손상 (어깨회전근개파열, 테니스엘보, 무릎연골판손상 등) 관절경 및 미세절개 수술 (회전근개봉합술, 연골판봉합술, 테니스엘보 등 힘줄 인대 수술) 줄기세포치료 (골수추출농축액 관절강내치료, 슬관절 연골재생치료)…"
+    },
+    {
+      "name": "김성현",
+      "department": "정형외과",
+      "external_id": "SARANG-6bb74e1a10",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "스포츠손상 : 어깨회전근개파열, 테니스엘보, 무릎 연골 및 연골관 손상, 무릎전후방십자인대 재건 관절결수술 : 회전근개봉합술, 무릎열골관봉합술, 테니스엘보, 손목 삼각섬유연골 복합체 손상, 발목인대 및 연골손상 줄기…"
+    },
+    {
+      "name": "김현우",
+      "department": "신경외과",
+      "external_id": "SARANG-62201800f6",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "외상성 뇌질환 자발성 뇌출혈 및 뇌경색 경추 및 요추부 퇴행성질환(협착증, 디스크탈출증) 최소침습 척추수술"
+    },
+    {
+      "name": "한석길",
+      "department": "신경과",
+      "external_id": "SARANG-24c9f06750",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "신경과 전반 뇌졸중(급성기/혈전제거술) 경동맥협착증 치매, 파킨슨병 두통, 어지럼증 신경통, 신경근육질환, 뇌전증"
+    },
+    {
+      "name": "김민주",
+      "department": "신경과",
+      "external_id": "SARANG-86a439d276",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "뇌신경 수면 뇌전증 뇌졸중(뇌혈관질환 중풍) 두통 어지러움증 치매질환 근육병 파킨슨병 말초신경질환 척수염"
+    },
+    {
+      "name": "이미나",
+      "department": "신경과",
+      "external_id": "SARANG-573ce4c774",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "뇌졸중 뇌전증 두통, 어지럼 치매, 파킨슨 말초신경병, 신경근육 질환"
+    },
+    {
+      "name": "오재천",
+      "department": "영상의학과",
+      "external_id": "SARANG-0bf9c64472",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "뇌신경계 및 뇌혈관 심혈관계 근골격계 유방 및 갑상선 상하 복부 초음파 진단"
+    },
+    {
+      "name": "신윤상",
+      "department": "영상의학과",
+      "external_id": "SARANG-df3a171690",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "뇌신경계 및 뇌혈관,심혈관계 유방 및 갑상선 상하복부 초음파진단"
+    },
+    {
+      "name": "김진겸",
+      "department": "영상의학과",
+      "external_id": "SARANG-c95147dad8",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김나희",
+      "department": "영상의학과",
+      "external_id": "SARANG-a05efd4288",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "일반방사선학 초음파 CT, MRI 유방 및 갑상선 초음파 진단"
+    },
+    {
+      "name": "이용일",
+      "department": "영상의학과",
+      "external_id": "SARANG-858656f3dc",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "일반방사선 초음파 CT, MRI"
+    },
+    {
+      "name": "이명환",
+      "department": "영상의학과",
+      "external_id": "SARANG-a0e08140ae",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "신경두경부 영상의학"
+    },
+    {
+      "name": "이승현",
+      "department": "영상의학과",
+      "external_id": "SARANG-f2d83ce109",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "흉부심장 영상의학"
+    },
+    {
+      "name": "이두인",
+      "department": "외과",
+      "external_id": "SARANG-46806f8760",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "최소침습 복강경 수술(담낭,맹장,탈장 / 단일공 복강경 수술), 간.담도.담낭 질환 및 수술, 복강경 근치적 악성종양 수술 (개복하지 않는 위암, 대장암, 간, 담도, 췌장암) 수술, 고난이도 복강경 수술 및 재수술…"
+    },
+    {
+      "name": "임진혁",
+      "department": "외과",
+      "external_id": "SARANG-c30b79e18b",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "최소침습 복강경 수술(담낭, 충수돌기염, 탈장 / 단일공 복강경 수술) 간, 담도, 담낭 질환 및 수술 외과계 응급질환(복막염, 위궤양 천공, 소장 및 대장 천공)"
+    },
+    {
+      "name": "차건영",
+      "department": "내과",
+      "external_id": "SARANG-590e1f155f",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "소화기(상부위장관, 대장, 간췌담도) 순환기(고혈압, 협심증) 호흡기(천식, 기관지염, 결핵) 내분비(당뇨, 갑상선)"
+    },
+    {
+      "name": "임영희",
+      "department": "내과",
+      "external_id": "SARANG-3b0be7c723",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "알레르기질환(천식, 비염,아토피피부염, 두드러기, 음식 및 약물 알레르기) 호흡기질환(만성기침,만성 폐쇄성 폐질환, 폐결핵,폐암조기진단 등) 호산구 및 기생충관련질환 금연치료, 면역치료 고혈압, 당뇨, 고지혈, 갑상…"
+    },
+    {
+      "name": "이경록",
+      "department": "내과",
+      "external_id": "SARANG-6ace7d5cc2",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "위·대장 질환 일반내시경, 담도내시경 췌장질환 조기 위암 점막 박리술 PCD(경피적 농양배액술) ERCP (내시경 역행 췌담관 조영술)"
+    },
+    {
+      "name": "박치영",
+      "department": "내과",
+      "external_id": "SARANG-b7781a5db6",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "위 / 대장 내시경 치료내시경 위, 대장 질환 간, 담낭, 췌장 질환 내과질환 전반 (고혈압, 당뇨, 갑상선, 천식, 폐렴)"
+    },
+    {
+      "name": "박혜연",
+      "department": "소화기내과",
+      "external_id": "SARANG-79a7613ef9",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "소화기(상부위장관, 대장, 간췌담도) 순환기(고혈압, 협심증, 심부전) 호흡기(천식, 기관지염, 결핵) 내분비(당뇨, 갑상선)"
+    },
+    {
+      "name": "고은정",
+      "department": "내과",
+      "external_id": "SARANG-ccad7aae2d",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "혈액투석(신장질환, 혈액투석, 급만성요로감염) 순환기(고혈압, 협심증, 심부전) 호흡기(천식, 기관지염, 결핵) 내분비(당뇨병, 갑상선질환)"
+    },
+    {
+      "name": "고윤정",
+      "department": "내과",
+      "external_id": "SARANG-77e76b99e4",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "[신장질환] 혈뇨, 단백뇨, 산염기/전해질이상 급성/만성 신부전, 혈액투석 방광염, 신우신염 [일반내과질환] 고혈압, 고지혈증, 당뇨, 갑상선질환"
+    },
+    {
+      "name": "최성민",
+      "department": "내과",
+      "external_id": "SARANG-2365179f74",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "소화기 (상부위장관, 대장, 간췌담도 질환) 순환기 (고혈압, 고지혈증, 협심증, 심부전) 호흡기 (천식, 만성폐쇄성폐질환, 결핵) 내분비 (당뇨, 갑상선 질환)"
+    },
+    {
+      "name": "정영진",
+      "department": "심장내과",
+      "external_id": "SARANG-376821710e",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유민형",
+      "department": "심장내과",
+      "external_id": "SARANG-83719ea93b",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": "관상동맥중재적 시술, 허혈성 심질환(협심증, 심근경색), 부정맥, 심부전, 고혈압, 이상지질혈증, 당뇨병, 말초혈관질환 ​"
+    },
+    {
+      "name": "박지현",
+      "department": "마취통증의학과",
+      "external_id": "SARANG-79c129a123",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "일반마취 척추마취 노인마취, 소아마취 상완신경총마취"
+    },
+    {
+      "name": "서동혁",
+      "department": "마취통증의학과",
+      "external_id": "SARANG-47abdef19b",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "일반마취 척추마취 노인마취, 소아마취 상완신경총마취"
+    },
+    {
+      "name": "한세희",
+      "department": "마취통증의학과",
+      "external_id": "SARANG-159e8acb41",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "일반마취, 척추마취, 상완신경총마취"
+    },
+    {
+      "name": "한성민",
+      "department": "응급의학과",
+      "external_id": "SARANG-c130507953",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "중환자의학, 중독학, 외상학, 소생의학, 재난의학"
+    },
+    {
+      "name": "배준일",
+      "department": "응급의학과",
+      "external_id": "SARANG-2c114807ab",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "중환자의학, 소생의학, 응급초음파, 독성의학, 외상학, 소아응급"
+    },
+    {
+      "name": "박재상",
+      "department": "응급의학과",
+      "external_id": "SARANG-cb61f9370a",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "응급의학, 중환자의학, 소생의학"
+    },
+    {
+      "name": "정수한",
+      "department": "응급의학과",
+      "external_id": "SARANG-871e1c91ec",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "중환자의학, 외상학, 소생의학, 중독학"
+    },
+    {
+      "name": "김민수",
+      "department": "응급의학과",
+      "external_id": "SARANG-eba7186323",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "중환자의학, 소생의학, 응급초음파, 독성의학, 외상학"
+    },
+    {
+      "name": "이학진",
+      "department": "응급의학과",
+      "external_id": "SARANG-a5b62e71f1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "응급의학, 소생학, 독성학"
+    },
+    {
+      "name": "정대호",
+      "department": "응급의학과",
+      "external_id": "SARANG-e2d77eb367",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "응급의학, 중환자의학, 소생의학, 외상학"
+    },
+    {
+      "name": "최경호",
+      "department": "진단검사의학과",
+      "external_id": "SARANG-a15f2298e7",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "유전학, 혈액학, 임상화학, 면역학, 감염관리학"
+    },
+    {
+      "name": "진기홍",
+      "department": "부인과",
+      "external_id": "SARANG-31368c5c88",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "일반 부인과 질환 갱년기 미혼 여성 질환 유방 및 부인암 검진 여성 배뇨 장애 임신 및 피임상담"
+    },
+    {
+      "name": "김형철",
+      "department": "영상의학과",
+      "external_id": "SARANG-e87c0664b5",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "투석혈관 개통술 정맥혈전증 치료 및 스텐트 삽입술 자궁근종/골반울혈증후군 색전술 정계정맥류 색전술 전립선비대증 색전술 말초동맥 재개통술 각종 낭종치료 및 배액관 관리 중심정맥관 삽입"
+    }
+  ]
+}

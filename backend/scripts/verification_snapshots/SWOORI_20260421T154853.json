@@ -1,0 +1,511 @@
+{
+  "hospital_code": "SWOORI",
+  "hospital_name": "포천우리병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "장진",
+      "department": "정형외과",
+      "external_id": "SWOORI-1-jangjin",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김승환",
+      "department": "제2정형외과",
+      "external_id": "SWOORI-1-kimsh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김응식",
+      "department": "정형외과",
+      "external_id": "SWOORI-1-kimes",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "강전형",
+      "department": "정형외과",
+      "external_id": "SWOORI-1-kangjh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "고영록",
+      "department": "정형외과",
+      "external_id": "SWOORI-1-koyr",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "최원준",
+      "department": "정형외과",
+      "external_id": "SWOORI-1-choiwj",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "박재우",
+      "department": "신경외과",
+      "external_id": "SWOORI-2-parkjw",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "박상필",
+      "department": "신경외과",
+      "external_id": "SWOORI-2-parksp",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "유승호",
+      "department": "신경외과",
+      "external_id": "SWOORI-2-yoush",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "민태균",
+      "department": "외과",
+      "external_id": "SWOORI-3-mintg",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김성수",
+      "department": "외과",
+      "external_id": "SWOORI-3-kimss",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "이상호",
+      "department": "외과",
+      "external_id": "SWOORI-3-leesh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "정일영",
+      "department": "신경과",
+      "external_id": "SWOORI-4-jungiy",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김홍직",
+      "department": "신경과",
+      "external_id": "SWOORI-4-kimhj",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "신동한",
+      "department": "소아청소년과",
+      "external_id": "SWOORI-5-shindh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "원연경",
+      "department": "소아청소년과",
+      "external_id": "SWOORI-5-wonyk",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "강혜리",
+      "department": "소아청소년과",
+      "external_id": "SWOORI-5-kanghr",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김태우",
+      "department": "소아청소년과",
+      "external_id": "SWOORI-5-kimtw",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "박정식",
+      "department": "소화기내과",
+      "external_id": "SWOORI-6-parkjs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "양동진",
+      "department": "소화기내과",
+      "external_id": "SWOORI-6-yangdj",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "전부석",
+      "department": "소화기내과",
+      "external_id": "SWOORI-6-jeonbs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김상우",
+      "department": "소화기내과",
+      "external_id": "SWOORI-6-kimsw",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "박양태",
+      "department": "소화기내과",
+      "external_id": "SWOORI-6-parkyt",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김기성",
+      "department": "신장내과",
+      "external_id": "SWOORI-7-kimgs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "노경우",
+      "department": "신장내과",
+      "external_id": "SWOORI-7-nokw",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "조성태",
+      "department": "순환기내과",
+      "external_id": "SWOORI-8-chost",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "황태연",
+      "department": "순환기내과",
+      "external_id": "SWOORI-8-1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김창환",
+      "department": "호흡기내과",
+      "external_id": "SWOORI-9-kimcwhan",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "고유상",
+      "department": "호흡기내과",
+      "external_id": "SWOORI-9-goys",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "이유리",
+      "department": "가정의학과",
+      "external_id": "SWOORI-10-leeyr",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "신재훈",
+      "department": "가정의학과",
+      "external_id": "SWOORI-10-shinjh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "공성호",
+      "department": "이비인후과",
+      "external_id": "SWOORI-11-kongsh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "이유리",
+      "department": "이비인후과",
+      "external_id": "SWOORI-11-1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "천상훈",
+      "department": "산부인과",
+      "external_id": "SWOORI-12-chunsh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "손형심",
+      "department": "산부인과",
+      "external_id": "SWOORI-12-sonhs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "남정수",
+      "department": "비뇨의학과",
+      "external_id": "SWOORI-13-namjs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "손형심",
+      "department": "비뇨의학과",
+      "external_id": "SWOORI-13-sonhs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "장가연",
+      "department": "피부과",
+      "external_id": "SWOORI-14-janggy",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "안지혜",
+      "department": "피부과",
+      "external_id": "SWOORI-14-anjh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "윤원상",
+      "department": "영상의학과",
+      "external_id": "SWOORI-15-yoonws",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "주해리",
+      "department": "영상의학과",
+      "external_id": "SWOORI-15-joohr",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "성영제",
+      "department": "영상의학과",
+      "external_id": "SWOORI-15-sungyj",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "권혁",
+      "department": "영상의학과",
+      "external_id": "SWOORI-15-kwonh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "홍상숙",
+      "department": "진단검사의학과",
+      "external_id": "SWOORI-16-hongss",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "정채일",
+      "department": "마취통증의학과",
+      "external_id": "SWOORI-17-jungci",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김용진",
+      "department": "구강악안면외과",
+      "external_id": "SWOORI-18-kimyj",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "정철희",
+      "department": "구강악안면외과",
+      "external_id": "SWOORI-18-jungch",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "윤소영",
+      "department": "보존과",
+      "external_id": "SWOORI-19-yoonsy",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김희균",
+      "department": "치과보존과",
+      "external_id": "SWOORI-19-kimhk",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김태경",
+      "department": "치과보철과",
+      "external_id": "SWOORI-20-kimtk",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "김현섭",
+      "department": "치과보철과",
+      "external_id": "SWOORI-20-kimhs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "조은한",
+      "department": "보철과",
+      "external_id": "SWOORI-20-choeh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "남창희",
+      "department": "소아치과",
+      "external_id": "SWOORI-21-namch",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "남윤형",
+      "department": "통합치의학과",
+      "external_id": "SWOORI-22-namyh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "준비중",
+      "department": "통합치의학과",
+      "external_id": "SWOORI-22-준비중",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "이한성",
+      "department": "응급의학과",
+      "external_id": "SWOORI-23-leehs",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "최힘찬",
+      "department": "응급의학과",
+      "external_id": "SWOORI-23-choihc",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "윤병호",
+      "department": "응급의학과",
+      "external_id": "SWOORI-23-yoonbh",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "나호원",
+      "department": "응급의학과",
+      "external_id": "SWOORI-23-nahowon",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "정만수",
+      "department": "응급의학과",
+      "external_id": "SWOORI-23-jungms",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "문용석",
+      "department": "응급의학과",
+      "external_id": "SWOORI-23-moonys",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "조창희",
+      "department": "응급의학과",
+      "external_id": "SWOORI-23-choch",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    },
+    {
+      "name": "박규태",
+      "department": "응급의학과",
+      "external_id": "SWOORI-23-parkgt",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "※ 포천우리병원은 홈페이지에 주간 진료시간표를 텍스트가 아닌 이미지로만 제공합니다. 요일별 진료 가능 시간은 대표번호 1800-9356 또는 홈페이지를 통해 확인해 주세요."
+    }
+  ]
+}

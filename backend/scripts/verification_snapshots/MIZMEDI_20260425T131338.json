@@ -1,0 +1,639 @@
+{
+  "hospital_code": "MIZMEDI",
+  "hospital_name": "미즈메디병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이소연",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-837",
+      "n_schedules": 7,
+      "n_date_schedules": 77,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n서울대학교병원 산부인과 비뇨부인 분과 전임의\n\r\n\n서울대학교병원 산부인과 전공의 수료\n\r\n\n제일병원 인턴 수료\n\r\n\n전북대학교 의학전문대학원 의무석사\n\r\n\n폐경전문과정 이수 (2023년)\n\r\n\nUAE-Sheikh Khalifa Specialty Hospital Locum Doctor; Specialist Physician (2021년)\n\r\n\n지도전문의교육 수료 (2021년)\n\r\n\n국제학술지 연구 논문 발표 표창장 (2021년)\n\r\n\nIntuitive Surgical Robotic Surgery Training Course (2019,2020년)\n\r\n\n임산부 약물상담 전문가 과정 이수 (2018년)\n\n[학회/논문]\n대한 산부인과학회 정회원\n\r\n\n대한 비뇨부인과학회 정회원\n\r\n\n대한 비뇨부인과학회 – 최우수 구연상 (2019년)\n\r\n\n대한 폐경학회 정회원\n\r\n\r\n\nAnterior repair versus no anterior repair for anterior vaginal wall prolapse resolved under simulated apical support at the time of uterosacral ligament suspension\r\nInternational Urogynecology Journal 31, 2043-2049\n\r\n\nFactors associated with unsuccessful pessary fitting and reasons for discontinuation in Korean women with pelvic organ prolapse\r\nObstetrics & Gynecology Science 65 (1), 94-99\n\r\n\nPosterior repair versus no posterior repair for posterior vaginal wall prolapse resolved under simulated apical support at the time of native tissue apical suspension\r\nInternational Urogynecology Journal 32, 2203-2209\n\r\n\nAnatomic Criterion for Clinically Relevant Apical Prolapse in Urogynecology Populations\r\nUrogynecology 29 (11), 860-864\n\r\n\nThe Diagnostic Accuracy of a Retrograde Voiding Trial for Restoration of Spontaneous Voiding Function after Prolapse and Urinary Incontinence Surgery\r\nJournal of Minimally Invasive Gynecology\n\r\n\nGG03: Development of a prediction model for bothersome stress urinary incontinence after prolapse surgery\r\n대한산부인과학회 학술발"
+    },
+    {
+      "name": "남승철",
+      "department": "마취통증의학과",
+      "external_id": "MIZMEDI-23",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n전 강남 미즈메디병원 마취과장\r\n\n전 삼성제일 병원 마취과장\r\n\n세브란스병원 마취통증의학과 전공의 수료\r\n\n충남대학교 의과대학 졸업 / 마취통증의학과 전문의\n\n[학회/논문]\n대한 마취통증의학과학회 정회원\r\n\n대학 통증학회 정회원\r\n\n대한 산과 마취학회 정회원\r\n\r\n\n2004 World Congress of Anesthesiology\r\n\n2003 대한산부인과 개원의 협의회 추계학술 대회 : 부인과 외래 수술시 안전한 마취 방법\r\n\n2003 EUA(유럽마취과학회)"
+    },
+    {
+      "name": "이정원",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-281",
+      "n_schedules": 7,
+      "n_date_schedules": 75,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n前)미즈메디 로봇수술센터장\r\n\n現)가톨릭대학교 산부인과학 교실 외래 부교수\r\n\n前)미즈메디병원 산부인과 주임과장\r\n\n前)가톨릭대학교 인천성모병원 산부인과 임상조교수 \r\n\n前)가톨릭대학교 여의도성모병원 산부인과 임상강사 \r\n\n前)가톨릭대학교 서울성모병원 산부인과 임상강사\r\n\n가톨릭의과대학 졸업\n\n[학회/논문]\n대한 산부인과학회 정회원\r\n\n대한 부인종양학회 정회원\r\n\n대한 암학회 정회원\r\n\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n2011 Aggressive angiomyxoma of the vulva treated by using a gonadotropin-releasing hormone agonist: a case report｜Lee CW, Yoon JH, Park DC, Lee SJ.｜Eur J Gynaecol Oncol.2011; 32(6): 686-8.\r\n\n2011 Synchronous clear cell adenocarcinoma of the cervix and endometrioid carcinoma of the endometrium｜ Park ST, Song MJ, Lee CW, Lee AW, Hur SY, Park JS.｜Eur J Gynaecol Oncol.2011;32(5):573-5.\n\r\n\n2011 Cervical adenoid basal carcinoma associated with invasive squamous cell carcinoma: a report of rare co-existence and review of literature ｜Viriyapak B, Park ST, Lee AW, Park JS, Lee CW, Song MJ, Hur SY.｜World J Surg Oncol.2011 Oct 18; 9: 132.\r\n\n2011 Residual tumor after the salvage surgery is the major risk factors for primary treatment failure in malignant ovarian germ cell tumors: a retrospective study of single institution｜Lee CW, Song MJ, Park ST, Ki EY, Lee SJ, Lee KH, Ryu KS, Park JS, Hur SY. ｜World J Surg Oncol. 2011 Oct 11; 9: 123.｜\r\n\n2011 Cell-mediated immune response to human papillomavirus 16 E7 peptide pools in patients with cervical neoplasia｜ Lee YS, Lee CW, Song MJ, Ho EM, Kim CJ, Park TC, Kim TG, Park JS. ｜Acta Obstet Gynecol Scand. 2011; 90(12): 1350-6.2011\n\r\n\n2019 제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표\r\n\n외 다수"
+    },
+    {
+      "name": "심정인",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-800",
+      "n_schedules": 6,
+      "n_date_schedules": 27,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n성균관대학교 삼성서울병원 부인종양학 전임의\r\n\n강남차병원 산부인과 전공의\r\n\n한양대학교병원 인턴\r\n\n건국대학교 의학전문대학원 졸업\n\n[학회/논문]\n대한산부인과학회 정회원\r\n\n대한부인종양학회 정회원\r\n\n Combination effect of poly (ADP-ribose) polymerase inhibitor and DNA demethylating agents for treatment of epithelial ovarian cancer. Gynecol Oncol. 2022;165(2):270-80.\r\n\nImpact of no residual disease on postoperative computed tomography on survival in patients with optimally debulked advanced high-grade serous ovarian cancer during upfront surgery. Gynecol Oncol. 2022.\r\n\n Clinical experience of uterine smooth muscle tumor of uncertain malignant potential in two gynecological centers: Oncological and obstetrical aspects. Eur J Obstet Gynecol Reprod Biol. 2020;246:7-13.\r\n\nA comparison of surgical outcomes between robot and laparoscopy-assisted adenomyomectomy. Medicine (Baltimore). 2019;98(18):e15466.\r\n\nGlobal gene expression analysis of cell-free RNA in amniotic fluid from women destined to develop preeclampsia. Medicine (Baltimore). 2019;98(3):e13971."
+    },
+    {
+      "name": "노은비(난임)",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-798",
+      "n_schedules": 8,
+      "n_date_schedules": 94,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n현) 미즈메디병원 산부인과 진료과장\r\n\n서울라헬여성의원 진료부 원장\r\n\n세브란스병원 불임 및 생식내분비 임상강사 \r\n\n세브란스병원 산부인과 전공의 \r\n\n세브란스병원 인턴\r\n\n연세대학교 의과대학 의학과\n\n[학회/논문]\n진료실에서 AMH 설명하기, 2020 대한산부인과 의사회 제 10회 추계학술대회 강의\r\n\nVarious endometrial preparation methods for freezing embryo transfer, 2017년 제 29차 대한보조생식학회 학술대회 강의\r\n\n2015. In vitro fertilization outcome in women with diminished ovarian reserve The 4th World Congress of International Society for Fertility Preservation\r\n\n2015. Postoperative levonorgestrel-releasing intrauterine system after gonadotropin-releasing hormone agonist treatment for preventing endometriotic cyst recurrence: prospective study scientific meeting Korean society of obstetrics and gynecology 101th scientific meeting\r\n\n2015. Effects of Korean red ginseng extract on breast cells and breast cancer cells NAMSAnnual meeting 2015 \r\n\n2015. Associations between dietary calcium intake with prevalence of metabolic syndrome and changes in bone mineral density among Korean population the 10th European Congress on Menopause and Andropause 2015 \r\n\n2015. Effects of Korean red ginseng extracts on endometrium in postmenopausal women ESHRE Annual meeting 2015\r\n\n2015. Decreased bone mineral density is associated with coronary atherosclerosis in healthy postmenopausal women Obstetrics & Gynecology Science \r\n\n2014. The comparison of cervical elongation with uterine prolapse: clinical comparison The American Urogynecologic Society and the International Urogynecological Associationannual Scientific Meeting The"
+    },
+    {
+      "name": "문주영",
+      "department": "소아청소년과",
+      "external_id": "MIZMEDI-732",
+      "n_schedules": 6,
+      "n_date_schedules": 64,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n더와이즈황병원 소아청소년과 과장근무\n\r\n\n에이치플러스 양지병원 소아청소년과 과장 근무\n\r\n\n경희의료원 소아청소년과 레지던트 근무\n\r\n\n경희의료원 인턴\n\r\n\n경희대학교 의과대학 의과대학부 졸업\n\n[학회/논문]\n-"
+    },
+    {
+      "name": "이은혜",
+      "department": "영상의학과",
+      "external_id": "MIZMEDI-117",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n국립 경찰병원 진료부 과장\r\n\n진단방사선과 전문의\r\n\n서울대학교 의과대학 졸업\n\n[학회/논문]\n동경 게이오 대학병원 방문연구원(1996.10~1997.08)"
+    },
+    {
+      "name": "김기영",
+      "department": "비뇨의학과",
+      "external_id": "MIZMEDI-135",
+      "n_schedules": 7,
+      "n_date_schedules": 82,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n현)미즈메디병원 비뇨의학과 주임과장 \r\n\n2007~현재 미즈메디병원 비뇨의학과 재직\r\n\n한양대학교 의과대학 비뇨의학과 외래교수\r\n\n한양대학교 의과대학 비뇨의학과 전임의, 임상강사\r\n\n한양대학교 의과대학원 졸업\r\n\n한양대학교 의과대학 졸업\n\n[학회/논문]\n대한 비뇨기과학회 정회원\r\n\n대한 배뇨장애 요실금학회 정회원\r\n\n대한 불임학회 정회원\r\n\n대한 남성과학회 정회원\r\n\n대한 전립선학회 정회원\r\n\n2022 제82차 대한생식의학회 춘계학술대회 연자발표 \nSperm DNA fragmentation testing : Where do we stand?\r\n\n2017 제69차 대한비뇨기과학회 우수연제발표상 비수련부분 \n비폐쇄성무정자증 환자에서 수술현미경이 미세다중 고환조직 정자채취수술의 정자추출률에 미치는 영향\r\n\n2010 대한생식의학회 학술상 수상\n미세술기를 이용한 정계정맥류 절제술이 정자 핵 내 DNA integrity에 미치는 효과"
+    },
+    {
+      "name": "라지영",
+      "department": "소아청소년과",
+      "external_id": "MIZMEDI-808",
+      "n_schedules": 7,
+      "n_date_schedules": 65,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n안산 한도병원 소아청소년과 과장\r\n\n광주 서광병원 소아청소년과 원장\r\n\n광주 중앙병원 소아과 과장\r\n\n소아과 전문의 시험 전국 수석 (2002년)\r\n\n전남대학교병원 소아과 레지던트\r\n\n전남대학교 의학과 박사과정 수료\r\n\n전남대학교 의학과 석사학위 취득\r\n\n전남대학교 의과대학 졸업\n\n[학회/논문]\n대한 소아청소년과학회 정회원\r\n\n대한 소아알레르기 및 호흡기학회 정회원\r\n\n미숙아, 저체중출생아에서 두부 초음파에 의한 신경 발달 예후의 예측(2000)"
+    },
+    {
+      "name": "이화정",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-796",
+      "n_schedules": 7,
+      "n_date_schedules": 17,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n현)미즈메디병원 산부인과 진료과장\r\n\n고려대학교 안암병원 임상조교수 대우\r\n\n연세대학교 신촌 세브란스 병원 부인종양 분과 전임의\r\n\n제일병원 산부인과 전공의 수료\r\n\n제일병원 인턴\r\n\n전북대학교 의학전문대학원 의무석사\r\n\nUniversity of Washington, 분자생물학 학사\n\n[학회/논문]\nErgonomic-friendly total laparoscopic hysterectomy versus conventional laparoscopic hysterectomy for preinvasive cervical disease,2020 대한산부인과학회 학술대회\r\n\nEfficacy of luteal estrogen administration and an early follicular Gonadotropin-releasing hormone antagonist priming protocol in,Obstetrics & Gynecology Science, 2017.12.19 \r\n\nRobotic single-port myomectomy with da Vinci SP,2019 대한산부인과로봇수술학회\r\n\nSingle-port endometrial cancer surgical staging- The first experience with da Vinci SP system,2019대한부인종양학회 춘계학술대회\r\n\nImpact of learning curve on the survival of abdominal or minimally invasive radical hysterectomy for early stage cervical cancer,2019 Asian Society of Gynecologic Oncology\r\n\nSingle site robot-assisted myomectomy with da Vinci SP system: Techniques using GelPOINT Mini Advanced Access Platform,2019 Asian Robotic Gynecology Congress \r\n\nThe first single-port robot-assisted radical trachelectomy and sentinel lymph node mapping with da Vinci SP system and PINPOINT,2019 대한산부인과내시경수술학회"
+    },
+    {
+      "name": "박용수",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-38",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n현) 미즈메디병원 병원장\r\n\n전) 미즈메디병원 기조실장\r\n\n전) 미즈메디병원 산부인과 과장\r\n\n전) 미즈메디병원 교육수련부장(2010.2-2013.1)\r\n\n전) 미즈메디병원 진료부장(2007.11-2010.1)\r\n\n전) 미즈메디병원 산부인과 주임과장(2006-2007)\r\n\n경기도 모자보건센터 근무\r\n\n고려대학교 의과대학 석사\r\n\n고려대학교병원 산부인과(최우수 전공의 수상)\r\n\n1992 고려대학교 의과대학 졸업\n\n[학회/논문]\n1999 석사논문;폐경 여성에서 호르몬 보충요법이 골밀도와 혈청지질 및 지단백질치에 미치는 영향에 관한 연구, 고려대학교 의학석사\r\n\n1998 상피성 난소암환자의 치료에서 CP (cyclophosphamide, cisplatin ) 와 CAP ( cyclophosphamide , doxorubicin , cisplatin ) 복합항암요법의 효용성에 관한 비교 연구 (A Comparative study of Cyclophophamide and Cisplatin with or without Doxorubicin in Ovarian Carcinoma) 대한산부인과학회\r\n\n2000 방사선조사 이후 자궁경관 및 자궁내막에 발생한 악성 혼합뮬러씨 종양 1 예, 대한 산부인과학회\r\n\n1998 Klinefelter 증후군의 산전진단 1 예, 대한산부인과학회\r\n\n1998 자궁경을 이용한 자궁격제거술시 발생한 공기 색전증 1례, 대한산부내시경학회\r\n\n2000 복식 전자궁적출술과 질식 전자궁 적출술 및 골반경하 질식 전자궁 적출술의 비교, 대한산부내시경학회\r\n\n1999 골반경을 이용한 자궁부속기 종괴의 처치, 대한산부내시경학회\r\n\n2005 Complications of Laparoscopy, 고려대학교 산부인과 연수강좌\r\n\n2006 \"Interesting cases of Ectopic pregnancy\", 서울 고대구로병원 [부인과내시경집담회]\r\n\n부인과 피부과학 진료지침 공동역자(2018,가본의학)"
+    },
+    {
+      "name": "서보름",
+      "department": "진단검사의학과",
+      "external_id": "MIZMEDI-204",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n연세대학교 세브란스병원 레지던트\r\n\n서울위생병원 인턴\r\n\n연세대학교대학원 의과대학\r\n\n연세대학교 의과대학"
+    },
+    {
+      "name": "신형옥",
+      "department": "영상의학과",
+      "external_id": "MIZMEDI-207",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n이화여자대학교의료원 목동병원 레지던트\r\n\n이화여자대학교의료원 목동병원 인턴\r\n\n이화여자대학교대학원 의과대학 졸업\r\n\n이화여자대학교 의과대학 졸업\r\n\n이화여자대학교 의과대학 졸업"
+    },
+    {
+      "name": "이영란",
+      "department": "영상의학과",
+      "external_id": "MIZMEDI-55",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n고려대학교 의과대학 영상의학과 외래 부교수\r\n\n전) 청주한국병원 영상의학과 과장\r\n\n고려대학교 의과대학 석, 박사 과정\r\n\n고려대학교 영상의학과 전공의 과정수료\n\n[학회/논문]\n대한영상의학회 정회원, 평생회원\r\n\n대한 유방영상의학회 정회원"
+    },
+    {
+      "name": "이수정",
+      "department": "소아청소년과",
+      "external_id": "MIZMEDI-804",
+      "n_schedules": 9,
+      "n_date_schedules": 95,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n오산한국병원 소아청소년과 과장\r\n\n아주대병원 소아청소년 성장비만센터 진료 전문의\r\n\n아주대학교 소아청소년과 소아내분비 분과 임상강사\r\n\n가천의료재단 길병원 소아청소년과 전공의, 인턴\r\n\n가천대학교 의학전문대학원 의학과 석사\r\n\n서울대학교 식품영양학/생명과학 학사\n\n[학회/논문]\n대한소아청소년과학회 정회원\r\n\n대한소아내분비학회 정회원\r\n\n아시아태평양 소아내분비학회(APPES) 정회원"
+    },
+    {
+      "name": "오혜림",
+      "department": "심장내과",
+      "external_id": "MIZMEDI-263",
+      "n_schedules": 7,
+      "n_date_schedules": 83,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n안양샘병원 순환기내과 과장\r\n\n동부시립병원 순환기내과 과장\r\n\n삼성서울병원 순환기내과 전임의\r\n\n경희의료원 순환기내과 전임의\r\n\n경희의료원 레지던트\r\n\n경희의료원 인턴\r\n\n경희대학교 의과대학 대학원 박사\r\n\n경희대학교 의과대학 졸업"
+    },
+    {
+      "name": "박하나",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-792",
+      "n_schedules": 7,
+      "n_date_schedules": 79,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n서울아산병원 산부인과 외래교수\r\n\n곽여성병원 산부인과 진료원장\r\n\n중앙대학교병원 산부인과 임상조교수\r\n\n서울아산병원 모체태아의학 임상강사\r\n\n서울아산병원 산부인과 전공의 수료\r\n\n가톨릭중앙의료원 인턴 수료\r\n\n울산대학교 의과대학 의학석사\r\n\n전남대학교 의과대학 의학과\n\n[학회/논문]\n대한 산부인과학회 정회원\r\n\n대한 산부인과 초음파학회 정회원\r\n\n대한 산부인과 모체태아의학회 정회원\r\n\n2015.10 미국 Memorial Sloan-Kettering Cancer center 연수\r\n\n2016.10.22 제19차 대한산부인과 초음파학회 우수연구상\r\n\n2017.11.04 제20차 대한산부인과 초음파학회 우수포스터상\r\n\n2018.10 28th World Congress on Ultrasound in Obstetrics and Gynecology Singapore 구연발표 \r\n\n태아심장박동모니터링 제1판 공저(2020, 가본의학)"
+    },
+    {
+      "name": "이수연",
+      "department": "소화기내과",
+      "external_id": "MIZMEDI-196",
+      "n_schedules": 6,
+      "n_date_schedules": 64,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n소화기내과 분과 전문의 자격취득\r\n\n소화기내시경 세부전문의 자격취득\r\n\n서울백병원 소화기내과 외래강사\r\n\n서울백병원 소화기내과 임상강사\r\n\n가톨릭 중앙의료원 내과 레지던트\r\n\n가톨릭중앙의료원 인턴\r\n\n조선대학교 의과대학 졸업\n\n[학회/논문]\n대한소화기내시경 학회 평생회원\r\n\n대한헬리코박터 및 상부위장관 연구학회 평생회원"
+    },
+    {
+      "name": "오은숙",
+      "department": "내분비내과",
+      "external_id": "MIZMEDI-36",
+      "n_schedules": 9,
+      "n_date_schedules": 106,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n미즈메디병원 교육수련부장(2017.9-2018.12)\r\n\n미즈메디병원 과장\r\n\n2008.8~2009.7 미국 클리브랜드, Case Western 대학, 임신성 당뇨병 클리닉 연수\r\n\n2009.8-2010.7 미국 클리브랜드, 클리브랜드 클리닉, 인슐린 저항성 임상연구센타 연수\r\n\n전 가톨릭의대 내분비대사 내과 강사\r\n\n가톨릭대학교 의학박사\r\n\n가톨릭대학교 의과대학 졸업 / 내분비대사 내과분과전문의\n\n[학회/논문]\n대한 당뇨병학회 정회원\r\n\n대한 내분비학회 정회원\r\n\n대한 골대사학회 정회원\r\n\n대한 노화방지 의학회 정회원\r\n\n2015 International Conference on Diabetes and Metabolism 임신중 경구혈당강하제의 사용에 대한 강의발표\r\n\n2011 International Conference on Diabetes and Metabolism 임신중 태아 대사프로그램의 발생에 대한 강의발표\r\n\n2010 미국 당뇨병 학회, 구연발표 (Metabolic inflammation manifests in first trimester of pregnancy in obese women.)\r\n\n2009 대한 당뇨병학회 논문게재, 2009년 우수논문상 수상 (한국 여성의 정상 임신과 임신성 당대사 이상에서 아디포카인의 변화)\r\n\n2004 미국당뇨병학회 임신성당뇨 관련 초록 발표\r\n\n2003 대한내과학회 골다공증 관련 초록 발표\r\n\n2002 유럽당뇨병학회 임신성 당뇨관련 초록발표"
+    },
+    {
+      "name": "장은희",
+      "department": "내분비내과",
+      "external_id": "MIZMEDI-277",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n안산 한도병원 내분비내과 과장\r\n\n여의도성모병원 내분비내과 전임의\r\n\n가톨릭 중앙의료원 내과 전공의\r\n\n가톨릭 중앙의료원 인턴\r\n\n가톨릭의대 대학원 의과대학 석박사\r\n\n가톨릭의대 의과대학 졸업\n\n[학회/논문]\n대한 내과학회 정회원\r\n\n대한 내분비학회 정회원\r\n\n대한 당뇨병학회 정회원\r\n\n대한 골대사학회 정회원"
+    },
+    {
+      "name": "최혜윤",
+      "department": "내분비내과",
+      "external_id": "MIZMEDI-240",
+      "n_schedules": 10,
+      "n_date_schedules": 108,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n현) 미즈메디병원 내과 주임과장\r\n\n고려대학교 구로병원 임상강사\r\n\n고려대학교병원 전공의\r\n\n고려대학교병원 인턴\r\n\n고려대학교 대학원 의과대학 박사\r\n\n고려대학교 대학원 의과대학 석사\r\n\n고려대학교 의과대학 졸업\n\n[학회/논문]\n대한 내과학회 정회원\r\n\n대한 내분비학회 정회원\r\n\n대한 당뇨병학회 정회원\r\n\nImplications of Pericardial, Visceral and Subcutaneous Adipose Tissue on Vascular Inflammation Measured Using 18FDG-PET/CT.\r\nHong HC1, Hwang SY2, Park S3, Ryu JY1, Choi HY1, Yoo HJ1, Seo JA1, Kim SG1, Kim NH1, Baik SH1, Choi DS1, Kim S3, Choi KM1.\r\nPLoS One. 2015 Aug 13;10(8)\r\n\r\n\nImplication of circulating irisin levels with brown adipose tissue and sarcopenia in humans.\r\nChoi HY1, Kim S, Park JW, Lee NS, Hwang SY, Huh JY, Hong HC, Yoo HJ, Baik SH, Youn BS, Mantzoros CS, Choi KM.\r\nJ Clin Endocrinol Metab. 2014 Aug;99(8):2778-85.\r\n\r\n\r\n\nSalsalate and Adiponectin Improve Palmitate-Induced Insulin Resistance via Inhibition of Selenoprotein P through the AMPK-FOXO1α Pathway.\r\nJung TW1, Choi HY, Lee SY, Hong HC, Yang SJ, Yoo HJ, Youn BS, Baik SH, Choi KM.\r\nPLoS One. 2013 Jun 18;8(6)\r\n\r\n\nEffects of a combined aerobic and resistance exercise program on C1q/TNF-related protein-3 (CTRP-3) and CTRP-5 levels.\r\nChoi HY1, Park JW, Lee N, Hwang SY, Cho GJ, Hong HC, Yoo HJ, Hwang TG, Kim SM, Baik SH, Park KS, Youn BS, Choi KM.\r\nDiabetes Care. 2013 Oct;36(10):3321-7\r\n\r\n\r\n\n젊은 남성에서 버디키아리 증후군에 합병된 다발성 골다공증성 압박골절 1예\r\n김선화, 양태언, 최병광, 류혜진, 서지아, 최경묵, 김난희, 김신곤, 백세현, 최동섭, 최혜윤\r\n대한내분비학회지. 2012\r\n\r\n\r\n\nHyperprolactinemia-Associated Breast Uptake of Radioiodine Following 131I Postablation Scan in Differentiated Thyroid Cance"
+    },
+    {
+      "name": "채정혜",
+      "department": "마취통증의학과",
+      "external_id": "MIZMEDI-115",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n전) 세정병원 마취과장\r\n\n연세의료원 마취과 전문의 수료\r\n\n연세의료원 인턴 수료\r\n\n영남대학교 의과대학 졸업"
+    },
+    {
+      "name": "김정열",
+      "department": "마취통증의학과",
+      "external_id": "MIZMEDI-708",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n미즈메디병원 마취통증의학과 과장\r\n\n세브란스병원 인턴 / 레지던트 \r\n\n연세대학교 의과대학 졸업\n\n[학회/논문]\n대한마취통증의학회 정회원\r\n\n대한산과마취학회 정회원\r\n\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)"
+    },
+    {
+      "name": "김민균",
+      "department": "소아청소년과",
+      "external_id": "MIZMEDI-243",
+      "n_schedules": 7,
+      "n_date_schedules": 64,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n미즈메디병원 소아청소년과 과장\r\n\n미국 의사고시(USMLE certificate) 취득\r\n\n미즈메디병원 소아청소년과 전문의\r\n\n제일병원 레지던트\r\n\n분당차병원 인턴\r\n\nCHA 의과학대학교 졸업\n\n[학회/논문]\n대한소아청소년과학회 정회원\r\n\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)"
+    },
+    {
+      "name": "이성하",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-222",
+      "n_schedules": 7,
+      "n_date_schedules": 70,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n현)미즈메디병원 산부인과(부인과) 분과장\r\n\n전)미즈메디병원 산부인과 복강경센터 센터장\r\n\n현)가톨릭대학교 서울성모병원 산부인과 외래 부교수\r\n\n전)가톨릭대학교 서울성모병원 산부인과 부인종양 임상강사 \r\n\n가톨릭중앙의료원 서울성모병원 종양분과 전임의\r\n\n가톨릭중앙의료원 레지던트\r\n\n인하대학병원 인턴\r\n\n가톨릭대학교 의과대학 석사\r\n\n조선대학교 의과대학 졸업\n\n[학회/논문]\n대한 부인종양 콜포스코피 학회 정회원\r\n\n부인과 피부과학 진료지침 대표역자(2018,가본의학)\r\n\n대한산부인과의사회(간선제) 제 40차 추계학술대회발표 -2018 새로운 STD검사의 치료가이드라인-\r\n\n2019 제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표\r\n\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)"
+    },
+    {
+      "name": "장영건",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-48",
+      "n_schedules": 6,
+      "n_date_schedules": 70,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n전) 미즈메디병원 병원장\r\n\n제주한라병원 산부인과 과장\r\n\nS중앙병원 산부인과 과장\r\n\n미즈메디병원 기조실장\r\n\n삼성제일병원 산부인과 과장\r\n\n강남미즈메디병원 산부인과 과장\r\n\n신촌세브란스병원 레지던트\r\n\n신촌세브란스병원 인턴\r\n\n연세대학교 의과대학 졸업\n\n[학회/논문]\n부인과 피부과학 진료지침 공동역자(2018,가본의학)"
+    },
+    {
+      "name": "이유진(난임)",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-258",
+      "n_schedules": 8,
+      "n_date_schedules": 94,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n연세대학교 의과대학 산부인과학 교실 외래교수\r\n\n연세대학교 의과대학 세브란스병원 전공의\r\n\n연세대학교 의과대학 세브란스병원 인턴\r\n\n단국대학교 의과대학 졸업\n\n[학회/논문]\n대한 산부인과 학회 정회원\r\n\n대한 생식의학회 정회원\r\n\n대한 폐경학회 정회원\r\n\n대한 자궁내막증학회 정회원\r\n\n2017 [저서] \n외국인 진료를 위한 의사의 진료실 영어 - 임신,출산,난임 (2017,가본의학, 이유경, 이유진)\r\n\n2015년 비뇨부인과학회 최우수 논문상 수상\n\r\n· The significance and factors related to bladder outlet obstruction in pelvic floor dysfunction in preoperative urodynamic studies: A retrospective cohort study \n\r\n· Obstet Gynecol Sci. 2014 Jan;57(1):59-65.\r\n\n2013.03 The ON-Q pain management system in elective gynecology oncologic surgery: Management of postoperative surgical site pain compared to intravenous patient-controlled analgesia \n\r\n· Obstet Gynecol Sci. 2013 Mar;56(2):93-101.\r\n\n2012.06 A case of perivascular epithelioid cell tumor of the uterus \n\r\n· Korean J Obstet Gynecol. 2012 Jun;55(6):433-436.\r\n\n부인과 피부과학 진료지침 공동역자(2018,가본의학)"
+    },
+    {
+      "name": "김성훈",
+      "department": "내분비내과",
+      "external_id": "MIZMEDI-793",
+      "n_schedules": 10,
+      "n_date_schedules": 99,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n연세대학교 원주의과대학 내과교수\r\n\n단국의대 제일병원 내과 교수\r\n\n성균관의대, 관동의대 내과 교수\r\n\n제일병원 내분비내과 \r\n\n하버드의대 조슬린 당뇨병 센터 박사후 연구원\r\n\n삼성서울병원 내분비-대사 내과 전임의 \r\n\n경희의대 부속병원 내과 전공의\r\n\n경희대학교 대학원 의학과 (박사)\r\n\n경희대학교 의과대학 (의학사)\n\n[학회/논문]\n대한당뇨병학회 부회장\r\n\n대한당뇨병학회 당뇨병 유전학 연구회 회장 (2021.01-)\r\n\n대한당뇨병학회 평의원\r\n\n대한내분비학회 평의원\r\n\n대한비만학회 연구위원회 이사 (2013.01~2014.12)\r\n\n대한내분비학회 보험위원회 간사 (2006-2010)\r\n\n대한내과학회 교육위원회 간사 (2013.12~2016.12)\r\n\n대한당뇨병학회 임신성 당뇨병 연구회 회원 (2007.06~)\r\n\nMember, American Diabetes Association (ADA)\r\n\nMember, European Association for the Study of Diabetes (EASD)\r\n\nAssociation of aryl hydrocarbon receptor transactivating activity, a potential biomarker for persistent organic pollutants, with the risk of gestational diabetes mellitus. Park S, Chon S, Park SY, Yun S, Baik SH, Woo JT, Rhee SY, Pak YK, Kim SH Sci Rep. 2021 Feb 4;11(1):3185. doi: 10.1038/s41598-021-82794-0.\r\n\nSelf-Management Mobile Virtual Reality Program for Women with Gestational Diabetes. Int J Environ Res Public Health. Kim SH, Kim HJ, Shin G. 2021 Feb 5;18(4):1539. doi: 10.3390/ijerph18041539.\r\n\nPregnancy Outcomes of Women Additionally Diagnosed as Gestational Diabetes by the International Association of the Diabetes and Pregnancy Study Groups Criteria. Kim MH, Kwak SH, Kim SH, Hong JS, Chung HR, Choi SH, Kim MY, Jang HC. Diabetes Metab J. 2019 Dec;43(6):766-775. doi: 10.4093/dmj.2018.0192. \r\n\nMaternal and neonatal outcomes in Korean women with type 2 diabetes. Jang HJ, Kim HS, Kim SH. Korean J Intern Med 2018;33:1143-1149 \r\n\nDietary Patterns and Th"
+    },
+    {
+      "name": "이승용",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-714",
+      "n_schedules": 7,
+      "n_date_schedules": 74,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n더와이즈황병원 과장 역임\r\n\n강남성심병원 인턴, 레지던트 수료\r\n\n한림대학교 의과대학 졸업\n\n[학회/논문]\n대한산부인과 학회\r\n\n2019 제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표\r\n\n제 22차 대한산부인과초음파학회 추계학술대회- 이미지 콘테스트 발표"
+    },
+    {
+      "name": "김소윤",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-710",
+      "n_schedules": 7,
+      "n_date_schedules": 81,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n이화여자대학교 의학석사\r\n\n지도전문의 자격 취득\r\n\n미국 산부인과 초음파사 자격증 (RDMS) 취득 \r\n\n미국 태아 심장 초음파사 자격증 (RDCS) 취득\r\n\n대한의학유전학회 5기 의학유전학 (ECMGG) 기초 및 임상응용과정 이수 \r\n\n대한 산부인과학회, 건강한 여성재단 – 인도네시아 파푸아지역 사회공헌활동 \r\n\n제일병원 주산기과 전임의\r\n\n제일병원 산부인과 전공의 \r\n\n제일병원 인턴\r\n\n건양대학교 의과대학\n\n[학회/논문]\n대한 산부인과학회 정회원\r\n\n대한 산부인과 초음파학회 정회원\r\n\n한국모자보건학회 - 구연부문 대상 (2018년)\r\n\n대한의학유전학회 - 구연부문 우수상 (2018년)\r\n\n2019 제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표\r\n\n제 22차 대한산부인과초음파학회 추계학술대회- 이미지 콘테스트 발표\r\n\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n태아평가·관리위원회 심포지엄 이수(2021)\r\n\nPotential applications of ChatGPT in obstetrics and gynecology in Korea: a review article - Obstet Gynecol Science(January ,2024)"
+    },
+    {
+      "name": "김민형",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-709",
+      "n_schedules": 6,
+      "n_date_schedules": 68,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n미즈메디병원 산과 분과장\n\r\n\n제일병원 산부인과 주산기과 전임의\r\n\n제일병원 산부인과 전공의\r\n\n단국대의대 부교수\r\n\n성균관대학교 의과대학원 박사\r\n\n전남대학교 의과대학원 석사\n\n[학회/논문]\n대한의학유전학회 임상유전학인증의\r\n\n대한모체태아의학회 국제협력위원장\r\n\n대한 의학유전학회 학술위원\r\n\n대한 모자보건학회 학술위원\r\n\n대한 산부인과학회 정회원\r\n\r\n\n제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표, 2019년\r\n\n초청연자:International Joint Conference on Genetics & Medicine, 2018년\r\n\n대한산부인과학술지 모체태아의학 최우수 논문상, 2015년\r\n\n제 100차 대한산부인과학술대회 최우수 구연상, 2014년\r\n\n제 22차 대한산부인과초음파학회 추계학술대회- 이미지 콘테스트 발표\r\n\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n태아평가·관리위원회 심포지엄 이수(2021)"
+    },
+    {
+      "name": "황은주",
+      "department": "가정의학과",
+      "external_id": "MIZMEDI-801",
+      "n_schedules": 9,
+      "n_date_schedules": 108,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n미즈메디병원 가정의학과 진료과장\r\n\n현진해내과의원 부원장\r\n\n한신메디피아 검진센터 가정의학과 과장\r\n\n강남 을지대학교병원 가정의학과 과장 및 검진센터장\r\n\n노원 을지대학교병원 건강검진센터 진료교수\r\n\n강남세브란스병원 레지던트\r\n\n강남세브란스병원 인턴\r\n\n연세대학교 원주의과대학 의학과\n\n[학회/논문]\n대한가정의학회 회원\r\n\n대한골다공증학회 회원"
+    },
+    {
+      "name": "김현희",
+      "department": "외과",
+      "external_id": "MIZMEDI-813",
+      "n_schedules": 11,
+      "n_date_schedules": 94,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n유방질환 분과전문의\r\n\n연세항맥병원 외과과장\r\n\n국립암센터 유방외과 전임의\r\n\n순천향대학교 서울병원 외과 전공의\r\n\n전주예수병원 인턴\r\n\n충남대학교 의학전문대학원\n\n[학회/논문]\n대한외과초음파학회 인증의\r\n\n대한외과학회 정회원\r\n\n한국유방암학회 정회원\r\n\n대한내분비외과학회 정회원 \r\n\nSentinel Lymph Node Biopsy in Breast Cancer Patients With Pathological Complete Response in the Axillary Lymph Node After Neoadjuvant Chemotherapy. J Breast Cancer. 2021 Dec;24(6):531-541.\r\n\nEffect of Age on Laparoscopic Surgery and Postoperative Chemotherapy in Elderly Patients With Colorectal Cancer. Ann Coloproctol. 2020 Aug;36(4):229-242."
+    },
+    {
+      "name": "안상희",
+      "department": "소아청소년과",
+      "external_id": "MIZMEDI-93",
+      "n_schedules": 9,
+      "n_date_schedules": 86,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n전) 봄빛병원 소아과 과장\r\n\n삼성제일병원 전임의\r\n\n서울아산병원 전공의\r\n\n원광대학교 의과대학 졸업 / 소아과 전문의\n\n[학회/논문]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)"
+    },
+    {
+      "name": "정은하",
+      "department": "소화기내과",
+      "external_id": "MIZMEDI-734",
+      "n_schedules": 6,
+      "n_date_schedules": 57,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n서울성모병원 소화기내과 임상강사\n\r\n\n가톨릭중앙의료원 내과 전공의\n\r\n\n가톨릭중앙의료원 인턴\n\r\n\n전북대학교 의학전문대학원\n\r\n\n소화기내시경 세부전문의\n\r\n\n서울성모병원 소화기내과 외래교원\n\n[학회/논문]\nSafety of Endoscopy in Peritoneal Dialysis Patients Clinical and Translational Gastroenterology 12(7):p e00379, July 2021.\n\r\n\n대한내과학회 평생회원\n\r\n\n대한소화기내시경 학회 평생회원"
+    },
+    {
+      "name": "박준혁",
+      "department": "소화기내과",
+      "external_id": "MIZMEDI-805",
+      "n_schedules": 6,
+      "n_date_schedules": 65,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n한솔병원 소화기내과 진료과장\r\n\n가톨릭대학교 의정부성모병원 전임의\r\n\n원자력병원 전공의\r\n\n목동힘찬병원 봉직의\r\n\n순천향대학교 부천병원 인턴\r\n\n조선대학교 의학전문대학원 의학과\r\n\n서강대학교 생명과학 졸업\n\n[학회/논문]\n대한내과학회 정회원\r\n\n대한소아내시경학회 평생회원\r\n\n대한간학회 평생회원\r\n\r\n\nFatal Renal Subcapsular Hematoma after Transcatheter Arterial Chemoembolization in Patients with Hepatocellular Carcinoma\n\r\nJunHyukPark1,HeeYeonKim1,SooLimLee2,YooDongWon2,\nYoungMiKu2,ChangWookKim1\r\nDepartment of Internal Medicine1andRadiology2,UijeongbuSt.Mary'sHospital,CollegeofMedicine,TheCatholicUniversityofKorea,Seoul,Korea\r\n\r\n\nA case of bradycardia caused by pulling the basket impacted by AOV during ERCP\r\nSang-Woo Kim, Hyung-Keun Kim, Hyun-Ho Choi, Sang-Woo Kim, Sung-Soo Kim, Hiun-Suk Chae, Jeong-Hyeon Park, Seoung-Hun Lee, Hye-Young Park, Jun-Hyuk Park \r\nDivision of Gastroenterology, Department of Internal Medicine, Uijeongbu St. Mary’s Hospital, College of Medicine, The Catholic University of Korea, Cheonbo-ro 271, Uijeongbu-si, Kyunggi-do, 11765, Republic of Korea.\r\n\r\n\nEndoscopic Double Pigtail Stent Insertion in the Patient with Acute Pancreatitis Resulting from Afferent Loop Syndrome\r\n\r\n\nPresenter : Jeong-Hyeon Park Co-authors : Hyung-Keun Kim, Sang-Woo Kim, Seoung-Hun Lee, Hye-Young Park, Jun-Hyuk Park, Hyun-Ho Choi, Sang-Woo Kim, Sung-Soo Kim, Hiun-Suk Chae\r\nInternal Medicine, Uijeongbu St. Mary’s Hospital, College of Medicine, Korea, Republic of"
+    },
+    {
+      "name": "전진동",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-136",
+      "n_schedules": 6,
+      "n_date_schedules": 57,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n현)미즈메디병원 진료부장\n\r\n\n미즈메디병원 산부인과 주임과장\r\n\n대한산부인과학회 심사위원\r\n\n연세대학교 의과대학 산부인과학교실 외래교수\r\n\n연세대학교 의과대학 전임의\r\n\n신촌세브란스병원 전공의\r\n\n연세대학교 의과대학 졸업 / 산부인과 전문의\n\n[학회/논문]\n대한 태아의학회 정회원\r\n\n대한 산부인과 초음파학회 정회원\r\n\n부인과 피부과학 진료지침 공동역자(2018, 가본의학)\r\n\n진통 중 초음파학-난산과 제왕절개술의 예측\n- 공동역자(2018, 가본의학)\r\n\n똑똑한 임신, 건강한 출산 공동저자(2014, 매일 경제)\r\n\n제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표(2019)\r\n\n제 22차 대한산부인과초음파학회 추계학술대회- 이미지 콘테스트 발표\r\n\n20th World Congress on Ultrasound in Obstetrics and Gynecology – 2010, Prague, Czech\r\n\nSociety for Maternal-Fetal Medicine (SMFM) 31st Annual Meeting 2011. San Francisco, California\r\n\n21st FIGO World Congress of Gynecology and Obstetrics 2015. Vancouver, Canada\r\n\nSMFM’s 39th Annual Pregnancy Meeting 2019. Las Vegas. Nevada"
+    },
+    {
+      "name": "임선정",
+      "department": "소아청소년과",
+      "external_id": "MIZMEDI-174",
+      "n_schedules": 9,
+      "n_date_schedules": 81,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n가톨릭대학교 강남성모병원 소아과 전임의\r\n\n가톨릭대학교 강남성모병원 인턴, 레지던트\r\n\n가톨릭대학교 의학과 졸업\r\n\nUniversity of California, Irvine졸업"
+    },
+    {
+      "name": "이유경",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-71",
+      "n_schedules": 6,
+      "n_date_schedules": 68,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n한양대학교 의과대학 졸업/산부인과 전문의\r\n\n한양대학교 서울 부속병원 수련의/전공의\r\n\n한양대학교 대학원 의과대학 석사/박사 학위 취득\r\n\n미국 U.C. Davis Medical Center 산부인과 연수(2013)\r\n\n미국의사자격증 취득(ECFMG)\r\n\n한양대학교 산부인과 외래 조교수\r\n\n대한산부인과학회 국제협력위원회 위원(2021~)\r\n\n중앙대학교 산부인과학 교실 외래 교수(2017, 2018,2019,2020~)\r\n\n태아 심장초음파(fetal echocardiography workshop) 워크샵 수료\r\n\n대한 모체 태아의학회 정회원 (분만 진통 연구회 2015, 2016, 2017,2018,2019~)\r\n\n글로벌 헬스케어를 위한 의학 용어 과정 수료(2015)\r\n\n보건인력개발원-국제 진료 근무자를 위한 외국어 회화 과정 수료(건강검진별 영어 & 진료과목별 영어 -2015)\r\n\n의료통역 강사 과정 수료(2015)- 보건복지부 인력 개발원\r\n\n신생아 소생술 workshop 수료(대한 신생아 학회)(18차,19차)\r\n\n태아평가·관리위원회 심포지엄 이수(2021)\n\n[학회/논문]\n2025 대한산부인과학회 OGS 최우수의학상 수상 \n\r\n\n미국 진단 초음파 협회 정회원(AIUM)\r\n\n제3회 태아 안녕 평가 심포지엄(2016)\r\n: 태아 심박동 모니터링(EFM)의 분류기준과 가이드라인 update, 연자발표\r\n\n[저서] 똑똑한 임신, 건강한 출산 공동저자(2014, 매일 경제)\r\n\n[저서] 외국인 진료를 위한 의사의 진료실 영어 - 임신과 출산-\r\n\n[저서] 제 2판) [외국인 진료를 위한 의사의 진료실 영어-임신,출산,난임] (2017, 가본의학, 이유경, 이유진)\r\n\n[발표] 제1회 이화-미즈메디 심포지엄 (2017) Intrapartum ultrasonography(분만실 진통 중 초음파)(2017)\r\n\n[저서] 진통 중 초음파학-난산과 제왕절개술의 예측- 대표역자 (2018,가본의학)\r\n\n부인과 피부과학 진료지침 대표역자(2018,가본의학)\r\n\n대한산부인과의사회(직선제) 제 6차 추계학술대회 초청연자 발표 - 증가하는 백일해 예방을 위한 Tdap Guideline 업데이트 -\r\n\n2019 제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표\r\n\n[저서]임신,육아를 영어로 생각하기(2019,가본의학)\r\n\n제 22차 대한산부인과초음파학회 추계학술대회- 이미지 \n콘테스트 발표\r\n\n[저서]태아심장박동모니터링-김광준 외 공동저자(2020): \nPotential applications of ChatGPT in obstetrics and gynecology in Korea: a review article - Obstet Gynecol Science(January, 2024) \r\n\n이대서울병원 이대엄마아기병원 심포지엄 초청 연자 (주제 : AI Tools for Doctors: Practical Skills for Clinicians, 2025)\n\r\n\n2025 대한산부인과학회 추계 학술대회 초청연자: 의사를 위한 AI 리터"
+    },
+    {
+      "name": "이주현",
+      "department": "소화기내과",
+      "external_id": "MIZMEDI-806",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n인제대학교 서울백병원 건강증진센터 진료교수\r\n\n인제대학교 서울백병원 소화기내과 진료교수\r\n\n분당서울대학교병원 전임의\r\n\n동국대학교 일산병원 레지던트\r\n\n동국대학교 일산병원 인턴\r\n\n동국대학교 의과대학\n\n[학회/논문]\n대한소화기학회 회원\r\n\n대한소화기내시경학회 회원"
+    },
+    {
+      "name": "곽주화",
+      "department": "외과",
+      "external_id": "MIZMEDI-799",
+      "n_schedules": 11,
+      "n_date_schedules": 98,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n유방질환 세부전문의\r\n\n서울성심병원 외과장\r\n\n국립암센터 유방센터 임상강사\r\n\n국군수도병원 외과 전문의\r\n\n일본 도쿄 고마고메병원 연수\r\n\n삼성서울병원 외과 레지던트\r\n\n이화여자대학교의료원 목동병원 인턴\r\n\n충남대학교 의과대학 졸업\n\n[학회/논문]\n대한외과학회 평생회원\r\n\n한국유방암학회 정회원\r\n\n대한내분비외과학회 정회원\r\n\n대한외과초음파학회 정회원\r\n\r\n\nThe Sentinel Lymph Node Biopsy Using Indocyanine Green Fluorescence Plus Radioisotope Method Compared With the Radioisotope-Only Method for Breast Cancer Patients After Neoadjuvant Chemotherapy: A Prospective, Randomized, Open-Label, Single-Center Phase 2 Trial - Annals of Surgical Oncology (ASO, 2019 Aug;26(8):2409-2416) SCI. \r\n\nOutcomes of pancreaticoduodenectomy in the patients with metastatic cancer - Korean Journal of Hepato-Biliary-Pancreatic Surgery (KJHBPS, 2014 Nov;18(4):147-51)\r\n\nDo we have to save ipsilateral arm in sentinel lymph node biopsy only group?: Prospectively Pilot study - Global Breast Cancer Conference (GBCC, 2019)\r\n\nWhat happened to clinically node positive breast cancer patients who showed conversion into pN0 after neoadjuvant chemotherapy? : Single center for 10 years - San Antonio Breast Cancer Symposium (SABCS, 2018)\r\n\nReview of 500 cases of single incision laparoscopic cholecystectomy) - The European Association of Endoscopic Surgery (EAES, 2013)"
+    },
+    {
+      "name": "윤병엽",
+      "department": "마취통증의학과",
+      "external_id": "MIZMEDI-816",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n아인병원 마취과장(아인병원)\r\n\n바오로 통증클리닉 원장\r\n\n인천의료원 마취통증의학과 과장\r\n\n서울대학교병원 인턴 및 레지던트\n\n[학회/논문]\n대한마취통증의학회 정회원\r\n\n 대한산과마취학회 정회원"
+    },
+    {
+      "name": "박그믐",
+      "department": "소아청소년과",
+      "external_id": "MIZMEDI-817",
+      "n_schedules": 10,
+      "n_date_schedules": 92,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n아주대학교병원 임상강사(소아청소년과 소아알레르기 호흡기분과)\r\n\n가천대 길병원 레지던트\r\n\n가천대 길병원 인턴\r\n\n경상의학전문대학원 의학과 석사\r\n\n한양대학교 생화학과 석사\r\n\n한양대학교 생화학 및 분자생물학과 학사\n\n[학회/논문]\n-"
+    },
+    {
+      "name": "오정미",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-177",
+      "n_schedules": 6,
+      "n_date_schedules": 71,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n제 19차 신생아 소생술 workshop 수료(대한 신생아 학회)\r\n\n이화여자대학교 의과대학 산부인과 외래조교수\r\n\n삼성서울병원 산부인과 주산기분과 전임의\r\n\n삼성제일병원 산부인과 주산기분과 전임의\r\n\n삼성제일병원 산부인과 수련의\r\n\n고려대학교 대학원 의과대학 박사 학위 취득\r\n\n이화여자대학교 대학원 의과대학 석사 학위 취득\r\n\n이화여자대학교 의과대학 의학과졸업\n\n[학회/논문]\n2019 제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표\r\n\n제 22차 대한산부인과초음파학회 추계학술대회- 이미지 콘테스트 발표"
+    },
+    {
+      "name": "임하정",
+      "department": "국민건강검진센터",
+      "external_id": "MIZMEDI-811",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\nGC 녹십자 아이메드 산부인과 과장\r\n\n이대서울병원 건강증진센터 산부인과 임상부교수\r\n\n제일병원 건강증진센터 산부인과 과장\r\n\n미즈메디병원 산부인과 진료과장\r\n\n삼성제일병원 주산기분과 전임의\r\n\n삼성제일병원 산부인과 전공의\r\n\n고려대학교 의과대학원 산부인과학 석사\r\n\n이화여자대학교 의과대학 졸업\n\n[학회/논문]\n대한산부인과학회 정회원\r\n\n대한산부인과 초음파학회 회원\r\n\n대한폐경학회 회원\r\n\n불임환자 치료를 위한 자궁 강내 인공수정의 예후 인자(Obstetrics & Gynecology Science 발행년도: 2006)\r\n\n다운증후군의 산전진단을 위한 초음파를 이용한 선별검사 (Obstetrics & Gynecology Science 발행년도: 2004)\r\n\n자연적으로 임신된 쌍둥이 임신에서 단일융모막성이 주산기 결과에 주는 영향 (Obstetrics & Gynecology Science 2004)\r\n\n조산 예측을 위한 IGFBP-1 (Insulin-like GrowthFactor-binding Protein-1)의 유용성에 대한 연구 (Obstetrics & Gynecology Science 2003)\r\n\n산전 진단된 선천성낭종성폐기형의 임신 결과 (Obstetrics & Gynecology Science 2003)\r\n\n양수과다증 산모에서 태아기형 빈도 및 주산기 예후 (Obstetrics & Gynecology Science 2002)\r\n\n난소갑상선종의 임상적 다양성 (Obstetrics & Gynecology Science 2002) \r\n\n입원을 요하는 중증 난소과자극 증후군 (Severe ovarian hyperstimulation syndrome) 환자에서 난자 채취시의예방적 albumin 투여가 임상 경과에 미치는 영향 (Obstetrics & Gynecology Science 2002)"
+    },
+    {
+      "name": "박우리",
+      "department": "국민건강검진센터",
+      "external_id": "MIZMEDI-838",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n복음내과의원 부원장\r\n\n서울아산병원 전임의 (내분비수료)\r\n\n충북대학교병원 레지던트\r\n\n충북대학교병원 인턴\r\n\n충북대학교 의학부 (석사)\r\n\n충북대학교 의학부 (학사)\n\n[학회/논문]\n-"
+    },
+    {
+      "name": "우재연",
+      "department": "외과",
+      "external_id": "MIZMEDI-839",
+      "n_schedules": 9,
+      "n_date_schedules": 91,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n유방질환 세부전문의\r\n\n국립암센터 유방외과 전임의\r\n\n한림대학교 강남성심병원 외과 전공의\r\n\n한림대학교 강남성심병원 인턴\r\n\n강원대학교 의학전문대학원\n\n[학회/논문]\n대한외과학회 정회원\r\n\n한국유방암학회 정회원\r\n\n대한내분비외과학회 정회원\r\n\n대한외과초음파학회 정회원\r\n\nComparison of concordance of tumor size measured using ultrasonography, magnetic resonance imaging, and pathology in breast cancer. Journal of Surgical Ultrasound.\r\n\nA Practical Guide to Breast Cancer Treatment. Springer Nature. 2023\r\n\nThe Accuracy of Prediction Models in Burn Patients. Journal of Korean Burn Society, 2021, 1-6.3"
+    },
+    {
+      "name": "김원지",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-848",
+      "n_schedules": 7,
+      "n_date_schedules": 79,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n성균관대학교 삼성서울병원 부인종양학 전임의\r\n\n삼성서울병원 산부인과 전공의 (최우수 전공의 수상)\r\n\n삼성서울병원 인턴\r\n\n성균관대학교 의학전문대학원 의무석사\r\n\n서울대학교 생명과학부 학사\r\n\nIntuitive da Vinci Robotic Surgery Training Course, Virtual Didactic\r\n - Myomectomy Surgeon-Led Procedure (2024)\n\n[학회/논문]\n대한산부인과학회 정회원\r\n\n대한산부인과학회 최우수 구연상 (부인종양학, 2023)\r\n\n대한부인종양학회 정회원\r\n\n대한산부인과내시경학회 정회원\r\n\n2023 삼성서울병원 산부인과 연수강좌 연자\r\n\nComparison of RNA-Seq and microarray in the prediction of protein expression and survival prediction, Front Genet. 2024;15:1342021\r\n\nInitial experience with the enhanced recovery after surgery (ERAS) protocols in gynecologic surgery at an urban academic tertiary medical center, Gland Surg. 2024;13(1):19-31\r\n\nComparison of goserelin and leuprorelin for ovarian protection during chemotherapy in young patients with breast cancer. Breast Cancer Res Treat. 2023;198(2):231-237\r\n\nMirror Hands and Feet with Ulnar Dimelia of Twin Pregnancy: Detection of a De Novo Duplication on Chromosome 2q35 Involving the Indian Hedgehog Locus, perinatology. 2023;34(2):99-104\r\n\nAnticancer effect of the antipsychotic agent penfluridol on epithelial ovarian cancer, J Gynecol Oncol. 2025 Mar;36(2):e28"
+    },
+    {
+      "name": "박소은",
+      "department": "소아청소년과",
+      "external_id": "MIZMEDI-850",
+      "n_schedules": 5,
+      "n_date_schedules": 54,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n차의과학대학교 강남차병원 조교수\r\n\n소아내분비세부전문의\r\n\n서울대병원 소아청소년과 내분비대사분과 연구강사\r\n\n서울대병원 소아청소년과 내분비대사분과 임상강사\r\n\n서울대병원 소아청소년과 레지던트\r\n\n이화의료원 인턴\r\n\r\n\n서울대학교 의과대학 박사수료\r\n\n서울대학교 의과대학 석사\r\n\n이화여자대학교 의과대학 학사\n\n[학회/논문]\n대한소아내분비학회 정회원\r\n\n대한소아청소년과학회 정회원\r\n\n대한비만학회 정회원\r\n\n전)대한소아내분비학회 보건위원"
+    },
+    {
+      "name": "김태연(난임)",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-854",
+      "n_schedules": 8,
+      "n_date_schedules": 14,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n서울라헬여성의원 진료부 원장 \r\n\n서울대학교병원 산부인과 생식내분비 전임의 \r\n\n서울대학교병원 산부인과 전공의\r\n\n한양대학교병원 인턴 \r\n\n한양대학교 의학전문대학원\n\n[학회/논문]\n대한산부인과학회 정회원 \r\n\n대한산부인과내분비학회 정회원 \r\n\n대한생식의학회 정회원 \r\n\n대한보조생식학회 정회원 \r\n\n대한폐경학회 정회원 \r\n\n2020, TY Kim, MJ Jeon, Risk factors for vaginal mesh erosion after sacrocolpopexy in Korean women, PLoS ONE \r\n\n2021, M Lee, SG Joo, TY Kim, EH Yoo, MJ Jeon, Long-term outcomes after sacrocolpopexy with or without transobturator tape, International Urogynecology Journal"
+    },
+    {
+      "name": "김문영",
+      "department": "류마티스내과",
+      "external_id": "MIZMEDI-855",
+      "n_schedules": 10,
+      "n_date_schedules": 115,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n이화여자대학교 의학 학사\r\n\n이화여자대학교 생리학 석박사(통합)\r\n\n순천향대학교 부천병원 인턴\r\n\nUniversity of California Davis, College of Biological Sciences 박사후연구원\r\n\n을지대학교 의과대학 약리학 조교수\r\n\n아주대학교병원 내과 레지던트\r\n\n가톨릭대학교 서울성모병원 류마티스내과 임상강사\r\n\n가톨릭대학교 인천성모병원 류마티스내과 임상진료조교수\r\n\n가톨릭대학교 인천성모병원 류마티스내과 임상조교수\n\n[학회/논문]\n대한 내과학회\r\n\n대한 류마티스학회"
+    },
+    {
+      "name": "강지용",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-856",
+      "n_schedules": 7,
+      "n_date_schedules": 71,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n연세대학교 의과대학 졸업\r\n\n연세대학교 세브란스병원 인턴 수료\r\n\n연세대학교 세브란스병원 산부인과 전공의 수료\r\n\n전) 오월희망 산부인과의원 진료과장\r\n\n세브란스병원 외래교수\n\n[학회/논문]\n대한산부인과학회 정회원\r\n\n대한비뇨부인과학회 정회원\r\n\n대한산부인과내분비학회 정회원\r\n\nClinical Usefulness of Fluorescence in Situ Hybridization (FISH) in the Diagnosis of Genetic disease\r\n\nClinical Significance of Isolated Enlargement of the Cisterna Magna on Prenatal Sonography\r\n\nClinical Outcome of Fetal Mild Ventriculomegaly\r\n\n긴장성 요실금 환자에 있어서 요역동학검사 지표와 비만과의 연관성에 대한 연구"
+    },
+    {
+      "name": "이기석",
+      "department": "외과",
+      "external_id": "MIZMEDI-857",
+      "n_schedules": 8,
+      "n_date_schedules": 86,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n외과 전문의\r\n\n대장항문외과 분과 전문의 \r\n\n대장내시경 인증의\r\n\n아주대학교병원 응급중환자외과 촉탁의\r\n\n부천세종병원 외과 과장\r\n\n인하병원 임상연구의\r\n\n국립암센터 대장암센터 전임의 \r\n\n인하병원 대장항문외과 전임의\r\n\n인하병원 인턴/레지던트\r\n\n인하대학교 의과대학/대학원 (석사) 졸업\n\n[학회/논문]\n대한외과학회\r\n\n대한대장항문학회\r\n\n대한암학회\r\n\n대한내시경로봇외과학회\r\n\n대한정맥학회\r\n\n대한외과초음파학회\r\n\n급성 충수염 진단에 있어 복부 초음파 검사와 진단 점수 시스템의 결합 효과 : 대한외과학회지 제51권 제5호 pp 714-721, 1996\r\n\n중복 중합 효소 연쇄 반응법을 이용한 결핵성 경부 임파절염의 진단 : 대한외과학회지 제52권 제6호 pp 796-804, 1997\r\n\n세침 흡인 세포 검사와 중복 중합 효소 연쇄 반응법을 이용한 결핵성 경부 임파절염의 진단 : 대한외과학회지 제 57권 제1호 pp 27-33,1999"
+    },
+    {
+      "name": "정홍규",
+      "department": "외과",
+      "external_id": "MIZMEDI-858",
+      "n_schedules": 9,
+      "n_date_schedules": 98,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n세란병원 유방.갑상선 클리닉 과장\r\n\n외과 유방질환 세부전문의\r\n\n순천향대학교병원 유방 · 갑상선 센터 임상조교수 \r\n\n순천향대학교병원 유방 · 갑상선 센터 임상강사\r\n\n외과 전문의\r\n\n순천향대학교병원 외과 전공의\r\n\n순천향대학교병원 수련의 \r\n\n순천향대학교 의과대학 졸업\n\n[학회/논문]\n한국유방암학회 \r\n\n대한내분비외과학회\r\n\n대한외과초음파학회\r\n\n대한외과학회\r\n\n2016 Global Breast Cancer Conference(국제유방암학회) Young Investigator Award(젊은연구자상) 수상\r\n\n2016 Sanfrancisco, American Society of Clinical Oncology, Cancer Survivorship Symposium 초청 포스터 발표 (Development of second primary cancer in Korean breast cancer survivors)\r\n\n2014 한국유방건강재단 일반연구과제 학술연구비 지원사업 선정\r\n\n[저서]\r\n\n유방암 경험자 건강관리 가이드 (유방암 경험자용, 의료진용) 국립암센터 발행, 공동저자\r\n\n[논문]\r\n\nDevelopment of second primary cancer in Korean breast cancer survivors. (Ann Surg Treat Res. 2017 Dec;93(6):287-292) SCI\r\n\nTrabecular Tumor of the Thyroid Gland, a Diagnostic Challenge in Fine-Needle Aspiration Cytology: Case Report. (J Pathol Transl Med. 2018 Jul;52(4):252-256.)\r\n\nLaparoscopic versus Open Appendectomy in Pregnancy .(Journal of Minimally Invasive Surgery 2010 ;Vol.13 No.2:56-58) \r\n\n십이지장 간질성 종양의 외과적 치료.(국내석사학위논문 순천향대학교, 2010)"
+    },
+    {
+      "name": "최정란",
+      "department": "소화기내과",
+      "external_id": "MIZMEDI-859",
+      "n_schedules": 6,
+      "n_date_schedules": 65,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n조선대학교 의과대학 졸업\r\n\n중앙보훈병원 인턴\r\n\n중앙보훈병원 내과 전공의\r\n\n강남세브란스병원 소화기내과 임상강사\r\n\n굿모닝병원 내과 과장\r\n\n울산대병원 소화기내과 촉탁의\r\n\n희명병원 내과 과장\r\n\n소화기내시경 세부전문의 자격 취득\n\n[학회/논문]\n대한내과학회 평생회원\r\n\n대한소화기내시경학회 평생회원\r\n\n대한임상초음파학회 평생회원\r\n\n담도를 침범한 간세포암에서 TACE 및 short course RTx 시행후 발생한 bronchobiliary fistula의 경험 1예/Journal of liver cancer/2013;13:173-177\r\n\n빅데이터 시각에서 본 단일기관의 위장관 블로그 분석/Korean J Gastroenterol 2014, Vol.63 No.6,pp.361-365 (Analysis of a Blog for Gastrointestinal Disease in the View Point of the Big Data:A Sinlge Institutional Study)\r\n\nMagnetic compression anastomosis for treatment of benign biliary stricture/Digestive Endoscopy/2015 Jan;27(2);239-49\r\n\nTumor necrosis factor 길항제 치료 실패 후 methotrexate로 관해 유도와 유지 치료가 가능했던 크론병 1예/Korean J Gastroenterol 2015, Vol.66,no.4,pp.234-236"
+    },
+    {
+      "name": "이선주",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-860",
+      "n_schedules": 7,
+      "n_date_schedules": 80,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n전북대학교 의과대학 의학과\r\n\n울산대학교 의과대학 의학석사 \r\n\n카톨릭중앙의료원 인턴 수료\r\n\n서울아산병원 산부인과 전공의 수료 \r\n\n서울아산병원 모체태아의학 임상강사\r\n\n아란태산부인과 진료원장\n\n[학회/논문]\n대한 산부인과학회 정회원\r\n\n대한 모체태아의학회 정회원\r\n\n대한 산부인과 초음파학회 정회원 \r\n\n대한 산부인과내분비학회 정회원\r\n\n대한 폐경학회 정회원"
+    },
+    {
+      "name": "오수진",
+      "department": "내분비내과",
+      "external_id": "MIZMEDI-861",
+      "n_schedules": 7,
+      "n_date_schedules": 77,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n충남대학교 의과대학 졸업\r\n\n가톨릭중앙의료원 인턴\r\n\n가톨릭중앙의료원 내과 레지던트\r\n\n의정부성모병원 내분비내과 임상강사\r\n\n의정부성모병원 내분비내과 임상조교수\r\n\n김포우리병원 내분비내과 과장\n\n[학회/논문]\n대한내과학회 정회원\r\n\n대한내분비학회 정회원\r\n\n대한당뇨병학회 정회원\r\n\nAngiotensin II Inhibits Insulin Binding to Endothelial Cells Diabetes Metab J. 2011 Jun;35(3):243-7"
+    },
+    {
+      "name": "남승현(난임)",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-864",
+      "n_schedules": 11,
+      "n_date_schedules": 96,
+      "notes": "[캠퍼스] 강서\n\n[약력]\n한림대학교 의과대학 졸업\r\n\n고려대학교 안암병원 수련\r\n\n고려대학교 안암병원 임상강사\r\n\n전)서울미즈여성병원 진료원장\n\n[학회/논문]\n대한산부인과학회 정회원\r\n\n대한생식의학회 정회원\r\n\n대한 보조생식학회 정회원\r\n\n대한생식면역학회 정회원\r\n\n대한자궁내막증학회 정회원\r\n\n가임력보존학회 정회원\r\n\n대한자궁내시경학회 정회원\r\n\nTrisomy 12p Syndrome Presenting with Fetal Growth Restriction and Polyhydramnios January 2020Perinatology 31(2):85\r\n\nEffect of oxytocin injection on fetal heart rate based on multifractal analysis Chaos, Solitons & Fractals Volume 148, July 2021, 111045\r\n\nDeterminants of spontaneous preterm labor and birth including gastroesophageal reflux disease and periodontitis 2019대한산부인과학회 추계학술대회\r\n\nMultifractal detrended fluctuation analysis of fetal heart rate before and during oxytocin injection 2020 모체태아의학회 추계 학술대회\r\n\nImportance and significance of fertile sparing surgery in borderline ovarian tumors. ESGO2019\r\n\nA rare case of an umbilical artery traveling out of the cord in preeclampsia with fetal growth restriction 2020 대한산부인과학회 추계\r\n\nAssociation between PCOS and Endometriosis by Comorbiditiy analysis : the National Health Insurance Service- National Sample Cohort Study.2022대한생식의학회 춘계학술대회 \r\n\nRisk of Cardiocerebrovascular diseases is Increased in Women with Polycystic Ovary Syndrome 2022 대한내분비학회 29차"
+    },
+    {
+      "name": "김경철",
+      "department": "가정의학과",
+      "external_id": "MIZMEDI-283",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n연세의대 의과대학 졸업 (MD)\r\n\n연세대 보건대학 석사 (MPH) \r\n\n연세대 노화과학 박사 (PhD) \r\n\n강남세브란스 가정의학 전공의/전임의/전문의\r\n\n보스턴 Tufts 대학 영양 유전학 연수 (2006-2008)\r\n\n전) 강서미즈메디병원 가정의학과장, 검진센터장\r\n\n전) 차의과학대학 차움 병원 안티에이징 센터, 교수\r\n\n전) 테라젠이텍스 바이오 연구소 부사장 \r\n\n현) 국가생명윤리위원회 유전자 전문위원\r\n\n현) 연세의대 의생명시스템 정보학과 겸임교수\n\n[학회/논문]\n[저서]\r\n\n- 유전체, 다가온 미래의학 (메디게이트뉴스) \r\n\n- Nutrition, Exercise and Epigenetics: Ageing Interventions : Chapter 1 - Nutritional Epigenetics and Aging, 김경철, 최상운 등 (2015)\r\n\n - 의사들을 위한 알기 쉬운 유전자 검사 해석 (총론), 김경철 (2015)\r\n\r\n\n[논문] (최근 3년)\r\n\n- The Association between Dehydroepiandrosterone sulfate (DHEA-S) and Bone mineral density (BMD) in healthy Korean women and men.(2017)\r\n\n- High calcium-magnesium ratio in hair is associated with coronary artery calcification in middle-aged and elderly individuals.(2017)\r\n\n- A Methylation Profile of Circulating Cell Free DNA for the Early Detection of Gastric Cancer and the Effects after Surgical Resection.(2016)\r\n\n- An Association between variants ofRUNX2, ADIPOQ and Vertebral Fracture in Korean Postmenopausal Women.(2015)\r\n\n- Circulating cell-free DNA as a promising biomarker in patients with gastric cancer: diagnostic validity and significant reduction of cfDNA after surgical resection.(2014)\r\n\r\n\n[학회]\r\n\n- 대한종합건강관리학회 홍보이사\r\n\n- 대한폐경학회 대외협혁위원장\r\n\n- 임상건강증진학회 정보이사\r\n\r\n\n[국제학회]\r\n\n- WONCA (Jeju) : Oral presentation : Cancer Epigenetcis and Nutrition (2012)\r\n\n- Keystone conference (Sweden)poster presentation: Comparison of gastric cancer patient’s pre and post operative circulating fr"
+    },
+    {
+      "name": "전종식",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-3",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n강남미즈메디 병원 부원장(1995~2018)\r\n\n현 강남미즈메디 병원 진료원장\r\n\n연세대학교 의과대학졸업\r\n\n연세대학교 의과대학 산부인과 전문의\r\n\n연세대학교 의과대학 산부인과 임상교수\r\n\n강남세브란스 진료교수\r\n\n복강경 및 자궁내시경수술 (자궁근종, 용종, 난소물혹)\r\n\n25년간 10,000여 건 이상의 수술 경험\n\n[학회/논문]\n대한 산부인과 학회\r\n\n대한 산부인과 내시경학회 정회원\r\n\n대한 폐경학회 정회원\r\n\n대한 산부인과 내시경학회 연수강좌 강연 2003년\r\n'복강경 수술 중 합병증 예방'\r\n\n미즈메디 심포지엄 불임 연구 강좌 강연 1999년\r\n'무정자증의 진단'\r\n\n산모들을 위한 가이드 북, 일본 최대 온라인마켓 1위\r\n'초보 엄마-아빠를 위한 임신, 출산' 감수\r\n\n의학잡지 Medical Review 기고\r\n-폐경기 여성에서 호르몬 치료 기간\r\n\n산부인과 학회 다수 논문 발표"
+    },
+    {
+      "name": "김주희",
+      "department": "외과",
+      "external_id": "MIZMEDI-190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n관동대학교 의과대학 졸업\r\n\n연세대학교 의과대학 대학원 석사 \r\n\n신촌 세브란스 병원 인턴,전공의 수료\r\n\n신촌 세브란스 병원 전임의 수료\r\n\n외과 전문의\r\n\n유방암 인정의\n\n[학회/논문]\n대한 외과 학회 평생회원\r\n\n한국 유방암 학회 평생회원\r\n\nJoo-Hee Kim Seho Park, Seokmo Kim, Byeong-Woo Park, Kyong Sik Lee. Clinicopathological Characteristics and Prognostic Factors of Papillary Carcinoma of the Breast. J Breast Cancer 2008;11:77-82.\r\n\nJoo-Hee Kim, Seho Park, Jaseung Koo, Byeong-Woo Park, Kyong Sik Lee. Clinicopathological Characteristics of Male Breast Cancer. Yonsei Med J 2008;49:978-86.\r\n\nB.-W. Park, J.-W. Oh, J.-H. Kim, S.H. Park, K.-S. Kim, J.H. Kim & K. S. Lee. Preoperative CA 15-3 and CEA serum levels as predictor for breast cancer outcomes. Ann Oncol. 2008;19:675-81.\r\n\nSeho Park, Min Kyu Heo, Mi Jeong Lee, Joo-hee Kim, Byeong-Woo Park. Changes of Coregulators, MAP Kinase Activity and p27/kip1 with Estrogen or Antiestrogen Treatment in Breast Cancer Cell Line. J Breast Cancer 2008;11: 56-63.\r\n\nJae-Won Oh, Seho Park, Joo-Hee Kim, Ja-Seung Koo, Ho Hur, Woo-Ick Yang, Byeong-Woo Park, Kyong-Sik Lee Clinical Analysis of Medullary Carcinoma of the Breast J Breast Cancer 2009;12: 47-53.\r\n\nHo Hur, Young Jai Ahn, Seho Park, Joo-Hee Kim, Ja Seung Koo, Byeong Woo Park. Clinicopathologic Characteristics of Apocrine Breast Carcinoma. J Korean Surg Soc 2009;77:43-49.\r\n\nSeho Park, Jaseung Koo, Joo-Hee Kim, Woo Ick Yang, Byeong-Woo Park, Kyong Sik Lee. Clinicopathological characteristics of mucinous carcinoma of the breast in Korea: comparison with invasive ductal carcino"
+    },
+    {
+      "name": "국가건강검진",
+      "department": "",
+      "external_id": "MIZMEDI-178",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남"
+    },
+    {
+      "name": "김희정",
+      "department": "외과",
+      "external_id": "MIZMEDI-160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n부산대학교 의과대학 졸업\r\n\n외과 전문의\r\n\n서울대 의과대학 의학박사\r\n\n서울대병원 외과 전공의\r\n\n서울대병원/삼성의료원 외과 전임의\r\n\n전 서울대병원 유방센터 외래초빙교수\r\n\n강남 미즈메디병원 과장\n\n[학회/논문]\nPolymorphisms in the estrogen receptor-alpha gene and breast cancer risk. Cancer Letters 178 (2002) 175-180\r\n\nNeogenin expression may be inversely correlated to the tumorigenicity of human breast cancer. BMC Cancer 5 (2005) 154\r\n\n대한 외과학회 평생회원, 한국 유방암학회 평생회원"
+    },
+    {
+      "name": "이미란",
+      "department": "영상의학과",
+      "external_id": "MIZMEDI-238",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n고려대학교 의과대학졸업, 의학대학원 박사\r\n\n고려대학교 의료원 수련의, 전공의, 전임의\r\n\n한림대학교 춘천성심병원 전임강사\r\n\n을지대학교 대전을지대학병원 조교수\r\n\n경희대학교 경희의료원 조교수\r\n\n서울의료원 과장\r\n\n강서미즈메디병원 과장\n\n[학회/논문]\n대한 영상의학과 회원\r\n\n대한 유방영상의학과 정회원\r\n\n대한 유방검진학회 평생회원\r\n\n대한 초음파학회 정회원\r\n\n대한 갑상선영상연구회 회원\r\n\n전 한국영상품질관리원 검사위원"
+    },
+    {
+      "name": "문선임",
+      "department": "가정의학과",
+      "external_id": "MIZMEDI-12",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n연세대학교 의과대학 졸업(1996년)\r\n\n가정의학과 전문의\r\n\n영동세브란스병원 전임의\r\n\n영동세브란스병원 외래교수\n\n[학회/논문]\n대한가정의학회 정회원\r\n\n대한노화방지의학회 정회원\r\n\n2003 대한가정의학회\r\n\n2003 대한노화방지의학회\r\n\n2003 미국 노화방지의학회"
+    },
+    {
+      "name": "변현근",
+      "department": "비뇨의학과",
+      "external_id": "MIZMEDI-272",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n비뇨의학과 전문의\r\n\n연세대학교 의과대학 졸업\r\n\n연세대학교 원주세브란스기독병원 수련의\r\n\n연세대학교 원주세브란스기독병원 전공의\r\n\n강서미즈메디병원 비뇨의학과\n\n[학회/논문]\nThe 30th Korean Society for Assisted Reproduction Conference\nThe 9th Korea-Japan ART Conference\nEvaluation and management of male infertility\r\n\nKorean Journal Urology 2012 Nov;53(11):774-778\nRelationships between Prostate-Specific Antigen, Prostate Volume, and Components of Metabolic Syndrome in Healthy Korean Men\r\n\nKorean Journal Urology 2013;54:207-208\nPenile Epidermal Cyst in a Patient With Augmentation Penoplasty\r\n\nKorean Journal Urology Oncology 2010 vol8(2) pp.82-84\nMalignant Mesothelioma Arising from Epididymis\r\n\nUrology Journal 2014;11:1980-3\nClinical application of computed tomography on prostate volume estimation in patients with lower urinary tract symptoms"
+    },
+    {
+      "name": "배우리",
+      "department": "가정의학과",
+      "external_id": "MIZMEDI-231",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n연세대학교 의과대학 의학과 졸업\r\n\n강남세브란스병원 가정의학과 전공의 수료\r\n\n강남세브란스병원 가정의학과 임상강사\r\n\n연세대학교 대학원 의학 석사\r\n\n전 메디스캔 헬스케어 외래센터 가정의학과 과장"
+    },
+    {
+      "name": "노성일",
+      "department": "",
+      "external_id": "MIZMEDI-9",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n연세대학교 의과대학 졸업 / 산부인과 전문의\r\n\n연세대학교 의과대학 세브란스병원 인턴\r\n\nOhio State University 산부인과 생식 내분비학 fellow\r\n\nEastern Virginia Medical School 산부인과 생식 내분비학 fellow\r\n\n前 연세대학교 의과대학 산부인과학교실 외래 교수\r\n\n성삼의료재단 미즈메디병원 이사장\r\n\n서울대학교 의학연구원 인구의학연구소 특별객원연구원\n\n[학회/논문]\n1986 시험관 아기 성공(국내 두번째)\r\n\n1988 배아 동결 보존법 성공 (동양 최초) \r\n\n1991 자궁벽을 통한 배아 이식술 성공 (세계 최초)\r\n\n1994 자궁경 수술법 도입(국내 최초)\r\n\n1999 태아 줄기세포 확립: Embryonal Germ cell line (국내 최초)\n\r\n\r\n\n2001 Miz-hES 배아줄기세포주를 미국 NIH 에 등록\n\r\n\r\n\n2002 과학기술부 21세기 Frontier 연구 개발사업 \n\r\n -세포응용연구분야 연구비수혜 14억 4천만원 \n\r\n 미국 국립 보건원 (NIH) 줄기세포 연구비 수혜 51 만불\r\n\r\n\n2004 미국 국립 보건원(NIH) 줄기세포 연구비 수혜 82 만불 \n\r\n (세계 6개 center중 하나로 지정됨)"
+    },
+    {
+      "name": "최규용",
+      "department": "소화기내과",
+      "external_id": "MIZMEDI-727",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n대한소화기학회 상임고문 (2014~현재)\r\n\n대한내시경학회 자문위원 (2014~현재)\r\n\n아시아 태평양 소화기내시경학회 평의원(한국대표 2명 중 한 명) (2006~현재)\r\n\n대한종합건강관리학회 고문 (2012~현재)\r\n\n성균관대학부속 강북삼성병원 소화기내과 명예교수 (2016~현재)\r\n\n성균관대학부속 강북삼성병원 소화기센터장 (2014~2019)\r\n\n가톨릭의대 서울성모병원 소화기교수 (2014)\r\n\n대한종합건강관리학회 부회장\r\n\n대한소화기학회 회장\r\n\n가톨릭의대 서울성모병원 건강증진센터장겸직\r\n\n세계 이중풍선소장경연구회 국제조직위원 세계 총7명의 대륙대표 중 한 명(아시아대표) (2006~2008)\r\n\n일본 소화기내시경 학술지 국제편집위원 (2004~2012)\r\n\n대한소화기내시경학회 이사장\r\n\n가톨릭의대내과(9개병원) 소화기학과 총괄과장\r\n\n대한장연구학회 초대 회장\r\n\n미국뉴욕 마운트시나이메디칼센터 소화기연수(연구위원)"
+    },
+    {
+      "name": "임정애",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-730",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n現 강남 미즈메디 대표원장\r\n\n이화여자대학교 의과대학 졸업\r\n\n가톨릭의대 인턴, 산부인과 레지던트 \r\n\n가톨릭의대 대학원 졸업\r\n\n가톨릭의대 성모병원산부인과 전임강사 \r\n\n임정애산부인과 원장 \r\n\n서울지구병원 산부인과 자문의\r\n\n산부인과 의학박사 학위취득\r\n\n국군지구병원 및 청와대 자문의\r\n\n의료법인정애재단이사장, 매이저병원 원장 \r\n\n한국부인암재단 이사 \r\n\n우먼스웰스 편집위원 \r\n\n現 가톨릭의과대학 산부인과 외래교수\r\n\n現 경산복지재단 이사 및 장학재단 운영 위원"
+    },
+    {
+      "name": "신동혁",
+      "department": "가정의학과",
+      "external_id": "MIZMEDI-720",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n연세대학교 원주의과대학 졸업\r\n\n강남 세브란스병원 가정의학과 전문의\r\n\n전) 녹십자 아이메드 가정의학과장\r\n\n현) 연세대학교 강남세브란스 외래교수\r\n\n대한 갱년기학회 학술이사\r\n\n대한 골다공증학회 부총무\r\n\n대한 기능의학회 학술이사\r\n\n대한 만성피로학회 학술이사\r\n\n세가회 통합의학연구회 회장"
+    },
+    {
+      "name": "박수경",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-715",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n이화여자대학교 의과대학 졸업\r\n\n이화여자대학교 의학 석사\r\n\n이화여자대학교 산부인과 전공의 수료\n\n[학회/논문]\n대한 산부인과 학회 정회원\r\n\n대한주산기학회 정회원\r\n\n대한폐경학회 정회원"
+    },
+    {
+      "name": "윤인경",
+      "department": "영상의학과",
+      "external_id": "MIZMEDI-722",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n경북대학교 의학전문대학원\r\n\n가톨릭대학교의료원 인턴\r\n\n가톨릭대학교의료원 영상의학과\r\n\n서울성모병원 임상강사\r\n\n여의도성모병원 건강검진센터"
+    },
+    {
+      "name": "김지현",
+      "department": "소화기내과",
+      "external_id": "MIZMEDI-719",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n이화여자대학교 의과대학 졸업\r\n\n한림대학교 강남성심병원 인턴\r\n\n한림대학교 강남성심병원 내과전공의\r\n\n이화여자대학교 외래 강사\r\n\n강서 미즈메디병원 내과 과장, 소화기센터장\n\n[학회/논문]\n대한 내과학회 평생회원\r\n\n대한 소화기내시경학회 회원"
+    },
+    {
+      "name": "정난주",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-721",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n가톨릭 의대졸\r\n\n가톨릭 의대부속 강남 성모병원 인턴 레지던트 \r\n\n가톨릭 의대 부속 강남 성모병원 산부인과임상강사\r\n\n강남 차병원 \r\n\n정산부인과\r\n\n청담 우리들병원\r\n\n통영e 좋은병원"
+    },
+    {
+      "name": "김준현",
+      "department": "성형외과",
+      "external_id": "MIZMEDI-726",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n현 상계백병원 성형외과 외래교수\r\n\n상계백병원 성형외과 수련의 전문의\r\n\n한양대학교 의과대학 의학과 졸업\r\n\n한양대학교 인턴 수석\r\n\nChang Gung Memorial Hospital Craniofacial Center 연수\n\n[학회/논문]\n대한성형외과학회 종신회원\r\n\n대한미용성형외과학회 정회원\r\n\n대한두개안면성형외과학회 정회원\r\n\n대한비만학회 정회원\r\n\n대한화상학회 정회원\r\n\n대한창상획회 정회원\r\n\n라봄성형외과 원장 역임"
+    },
+    {
+      "name": "윤현진",
+      "department": "소화기내과",
+      "external_id": "MIZMEDI-723",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n소화기내과 분과 전문의\r\n\n소화기내시경 세부 전문의\r\n\n신장투석 전문의\r\n\n심장 초음파 인증의\r\n\n연세대 원주의과대학\r\n\n연세대 의학대학원\r\n\n원주 세브란스 기독병원 인턴 및 내과 전공의\r\n\n연세의료원 신촌 세브란스병원 신장내과 전임의\r\n\n순천향대학 서울병원 소화기내과 전임의\r\n\n강릉동인병원 신장내과 과장 및 혈액투석실 센터장\r\n\n서울송도병원 내과 과장 및 심장초음파\r\n\n우리원영상의학과 내과 과장 및 심장초음파\r\n\n강남민클리닉 소화기내과 과장\r\n\n강남지인병원 소화기내과 과장\n\n[학회/논문]\n소화기내과 분과 전문의\r\n\n소화기내시경 세부 전문의\r\n\n신장투석 전문의\r\n\n심장 초음파 인증의\r\n\n대한내과학회 평생 회원\r\n\n대한고혈압학회 평생 회원\r\n\n대한소화기학회 정회원\r\n\n대한내시경학회 정회원\r\n\n대한신장학회 정회원\r\n\n대한심초음파학회 정회원"
+    },
+    {
+      "name": "정승혜",
+      "department": "영상의학과",
+      "external_id": "MIZMEDI-729",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남\n\n[약력]\n경희대학교 의과대학 졸업\r\n\n경희대학병원 영상의학 전공의\r\n\n전 삼성서울병원 임상교수\r\n\n현 미즈메디 영상의학과 과장\r\n\r\n\r\n\n경희대학교 의과대학 졸업\r\n\n경희대학병원 영상의학 전공의\r\n\n전 삼성서울병원 임상교수\r\n\n현 미즈메디 영상의학과 과장\n\n[학회/논문]\n대한 유방방사선과학 연구회 회원\r\n\n태아영상연구회 회원\r\n\n대한영상의학회 평생회원\r\n\n대한초음파의학회 평생회원\r\n\n한국 영상품질관리원 검사위원\r\n\n1997 미국유방영상세미나(Seminar of Breast Imaging)\r\n\n2000 미국 초음파학회(AIUM)\r\n\n2002 미국 초음파학회(AIUM)\r\n\n2004 유럽 초음파학회(ISUOG)\r\n\n2008 미국 초음파학회(AIUM)"
+    },
+    {
+      "name": "이태순",
+      "department": "산부인과",
+      "external_id": "MIZMEDI-731",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[캠퍼스] 강남"
+    }
+  ]
+}

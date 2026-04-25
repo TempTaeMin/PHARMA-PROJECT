@@ -1,0 +1,471 @@
+{
+  "hospital_code": "HANDOH",
+  "hospital_name": "한도병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "최재현",
+      "department": "소화기내과",
+      "external_id": "HANDOH-0001_-72",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1266 / 진료일정 : 매주 수요일 오후 휴진"
+    },
+    {
+      "name": "하민수",
+      "department": "소화기내과",
+      "external_id": "HANDOH-0001_-108",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1264 / 진료일정 : 토요일 격주 휴무 / 격주 목요일 오후 휴진"
+    },
+    {
+      "name": "한봉준",
+      "department": "소화기내과",
+      "external_id": "HANDOH-0001_-74",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1717 / 진료일정 : 격주 금요일 오후 휴진 / 토요일 격주 휴진"
+    },
+    {
+      "name": "옥태진",
+      "department": "소화기내과",
+      "external_id": "HANDOH-0001_-79",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1296 / 진료일정 : 토요일 격주 휴무 / 격주 금요일 오후 휴진"
+    },
+    {
+      "name": "이세희",
+      "department": "소화기내과",
+      "external_id": "HANDOH-0001_-106",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1263 / 진료일정 : 토요일 격주 휴무 / 격주 수요일 오후 휴진"
+    },
+    {
+      "name": "류한석",
+      "department": "소화기내과",
+      "external_id": "HANDOH-0001_-78",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1276 / 진료일정 : 토요일 격주 휴무 / 격주 수요일 오후 휴진"
+    },
+    {
+      "name": "김동률",
+      "department": "신장내과",
+      "external_id": "HANDOH-0003_-22",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1692 / 진료일정 : 매월 격주 목요일 오후/ 토요일 휴진 (목요일, 토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "안준모",
+      "department": "신장내과",
+      "external_id": "HANDOH-0003_-90",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1692 / 진료일정 : 매월 격주 수요일 오후 / 토요일 휴진 (수요일, 토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "양주영",
+      "department": "심장내과",
+      "external_id": "HANDOH-0002_-34",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1208 / 진료일정 : 매주 금요일 오후 휴진 / 토요일 격주 휴진 (토요일 진료는 문의바랍니다.)"
+    },
+    {
+      "name": "윤광석",
+      "department": "심장내과",
+      "external_id": "HANDOH-0002_-28",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1650 / 진료일정 : 매주 목요일 오후 휴진 / 토요일 진료는 전화문의바랍니다"
+    },
+    {
+      "name": "강재호",
+      "department": "심장내과",
+      "external_id": "HANDOH-0002_-95",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1237 / 진료일정 : 매주 수요일 오후, 토요일 진료는 전화문의바랍니다."
+    },
+    {
+      "name": "김흥석",
+      "department": "심장내과",
+      "external_id": "HANDOH-0002_-102",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1208 / 진료일정 : 매주 화요일 오후 휴진 / 토요일 진료는 전화문의바랍니다."
+    },
+    {
+      "name": "이범석",
+      "department": "외과",
+      "external_id": "HANDOH-0004_-6",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1142 / 진료일정 : 매월 격주 수요일 오후 / 토요일 휴진 (토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "이성하",
+      "department": "외과",
+      "external_id": "HANDOH-0004_-115",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1114"
+    },
+    {
+      "name": "김승현",
+      "department": "신경외과",
+      "external_id": "HANDOH-0005_-58",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1236 / 진료일정 : 매월 격주 수요일 오후 휴진, 토요일 격주 휴진 (수요일, 토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "양동준",
+      "department": "신경외과",
+      "external_id": "HANDOH-0005_-83",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1148 / 진료일정 : 격주 금요일 오후, 격주 토요일 휴진 (금요일, 토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "박해기",
+      "department": "신경외과",
+      "external_id": "HANDOH-0005_-65",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1330 / 진료일정 : 격주 금요일 휴진/격주 토요일 휴진 (금요일, 토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "김재헌",
+      "department": "신경외과",
+      "external_id": "HANDOH-0005_-116",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1114 / 진료일정 : 격주 목요일 휴진/격주 토요일 휴진"
+    },
+    {
+      "name": "이호민",
+      "department": "정형외과",
+      "external_id": "HANDOH-0006_-103",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1114 / 진료일정 : 매월 셋째, 넷째 수요일 오후 휴진 / 토요일은 전화문의 바랍니다"
+    },
+    {
+      "name": "김근수",
+      "department": "정형외과",
+      "external_id": "HANDOH-0006_-97",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1114 / 진료일정 : 매월 첫째, 셋째 목요일 오후 휴진 / 토요일은 전화 문의 바랍니다"
+    },
+    {
+      "name": "박형철",
+      "department": "정형외과",
+      "external_id": "HANDOH-0006_-107",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8010-1114 / 진료일정 : 월 2회 오후 휴진 미정 / 토요일 전화 문의"
+    },
+    {
+      "name": "강정호",
+      "department": "심장혈관 흉부외과",
+      "external_id": "HANDOH-0007_-3",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031) 8040-1135 / 진료일정 : 매월 첫째주, 셋째쭈 금요일 오후 휴진 / 격주 토요일 휴진"
+    },
+    {
+      "name": "김나희",
+      "department": "신경과",
+      "external_id": "HANDOH-0008_-86",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8010-1114 / 진료일정 : 매주 수요일 오후 / 토요일 격주 휴진 (토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "권유석",
+      "department": "신경과",
+      "external_id": "HANDOH-0008_-69",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8010-1114 / 진료일정 : 매주 목요일 오후 / 토요일 격주 휴진 (토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "천우창",
+      "department": "신경과",
+      "external_id": "HANDOH-0008_-113",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1114 / 진료일정 : 매 주 토요일 오후 휴진"
+    },
+    {
+      "name": "박성훈",
+      "department": "산부인과",
+      "external_id": "HANDOH-0009_-31",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1666 / 진료일정 : 매월 셋째주 토요일 휴진"
+    },
+    {
+      "name": "송준혁",
+      "department": "소아청소년과",
+      "external_id": "HANDOH-0010_-118",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1114 / 진료일정 : 첫째주 셋째주 토요일 휴진 / 둘째주 넷째주 수요일 오후 휴진"
+    },
+    {
+      "name": "이준호",
+      "department": "비뇨의학과",
+      "external_id": "HANDOH-0011_-75",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8010-1114 / 진료일정 : 4주째 목요일 휴진 / 매월 격주 토요일 휴진 ( 토요일  진료는 문의 바랍니다. )"
+    },
+    {
+      "name": "황진태",
+      "department": "재활의학과",
+      "external_id": "HANDOH-0012_-94",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1269 / 진료일정 : 매월 격주 금요일 오후, 토요일 휴진 (금요일 오후, 토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "제의진",
+      "department": "마취통증의학과",
+      "external_id": "HANDOH-0013_-71",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1233"
+    },
+    {
+      "name": "박형주",
+      "department": "마취통증의학과",
+      "external_id": "HANDOH-0013_-114",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1114"
+    },
+    {
+      "name": "정우헌",
+      "department": "마취통증의학과",
+      "external_id": "HANDOH-0013_-92",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1233"
+    },
+    {
+      "name": "김형근",
+      "department": "응급의학과",
+      "external_id": "HANDOH-0014_-12",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1119"
+    },
+    {
+      "name": "김지윤",
+      "department": "응급의학과",
+      "external_id": "HANDOH-0014_-10",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1119"
+    },
+    {
+      "name": "주신용",
+      "department": "응급의학과",
+      "external_id": "HANDOH-0014_-15",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1119"
+    },
+    {
+      "name": "민현석",
+      "department": "응급의학과",
+      "external_id": "HANDOH-0014_-17",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1119"
+    },
+    {
+      "name": "정회환",
+      "department": "응급의학과",
+      "external_id": "HANDOH-0014_-24",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1119"
+    },
+    {
+      "name": "강환석",
+      "department": "응급의학과",
+      "external_id": "HANDOH-0014_-33",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1119"
+    },
+    {
+      "name": "조두호",
+      "department": "응급의학과",
+      "external_id": "HANDOH-0014_-117",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1114"
+    },
+    {
+      "name": "김성일",
+      "department": "응급의학과",
+      "external_id": "HANDOH-0014_-81",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1119"
+    },
+    {
+      "name": "최종덕",
+      "department": "영상의학과",
+      "external_id": "HANDOH-0015_-87",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1146"
+    },
+    {
+      "name": "김세영",
+      "department": "영상의학과",
+      "external_id": "HANDOH-0015_-51",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1146"
+    },
+    {
+      "name": "한철희",
+      "department": "영상의학과",
+      "external_id": "HANDOH-0015_-64",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1146"
+    },
+    {
+      "name": "심주경",
+      "department": "영상의학과",
+      "external_id": "HANDOH-0015_-91",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1146"
+    },
+    {
+      "name": "손은섭",
+      "department": "진단검사의학과",
+      "external_id": "HANDOH-0016_-105",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최계령",
+      "department": "진단검사의학과",
+      "external_id": "HANDOH-0016_-4",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031) 8040-1181"
+    },
+    {
+      "name": "이준석",
+      "department": "안과",
+      "external_id": "HANDOH-0018_-56",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1668 / 진료일정 : 격주 수요일 오전 휴진, 매주 수요일 오후 휴진/ 격주 토요일 휴진 *수요일 토요일 진료는 문의바랍니다 !"
+    },
+    {
+      "name": "오세원",
+      "department": "치과",
+      "external_id": "HANDOH-0019_-100",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1334 / 진료일정 : 매주 월요일, 토요일 휴진"
+    },
+    {
+      "name": "전소라",
+      "department": "치과",
+      "external_id": "HANDOH-0019_-73",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1334 / 진료일정 : 토요일 (구강)검진 가능합니다."
+    },
+    {
+      "name": "류인선",
+      "department": "이비인후과",
+      "external_id": "HANDOH-0020_-63",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1214 / 진료일정 : 격주 수요일 오후 휴진 / 셋째주 토요일 휴진 (*월요일, 토요일 진료는 문의 바랍니다.)"
+    },
+    {
+      "name": "한주영",
+      "department": "내분비내과",
+      "external_id": "HANDOH-0021_-110",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1234 / 진료일정 : 매주 금요일 오후 휴진 / 격주 토요일 휴진"
+    },
+    {
+      "name": "최재화",
+      "department": "호흡기내과",
+      "external_id": "HANDOH-0024_-101",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1176 / 진료일정 : 격주 목요일 오후 휴진 / 격주 토요일 휴진"
+    },
+    {
+      "name": "이탄",
+      "department": "종합건강증진센터",
+      "external_id": "HANDOH-0017_-42",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1345"
+    },
+    {
+      "name": "천준호",
+      "department": "종합건강증진센터",
+      "external_id": "HANDOH-0017_-93",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1345"
+    },
+    {
+      "name": "윤경현",
+      "department": "종합건강증진센터",
+      "external_id": "HANDOH-0017_-80",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1345"
+    },
+    {
+      "name": "박상준",
+      "department": "종합건강증진센터",
+      "external_id": "HANDOH-0017_-109",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임지영",
+      "department": "종합건강증진센터",
+      "external_id": "HANDOH-0017_-112",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1324"
+    },
+    {
+      "name": "우성일",
+      "department": "정신건강의학과",
+      "external_id": "HANDOH-0027_-111",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": "전화번호 : 031-8040-1645 / 진료일정 : 매주 수요일 오후, 토요일 휴진"
+    }
+  ]
+}

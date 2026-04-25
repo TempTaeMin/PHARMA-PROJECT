@@ -1,0 +1,183 @@
+{
+  "hospital_code": "BCWOORI",
+  "hospital_name": "부천우리병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "한상훤",
+      "department": "내과",
+      "external_id": "BCWOORI-46f9d973db",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오유석",
+      "department": "내과",
+      "external_id": "BCWOORI-52a57785f5",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송준철",
+      "department": "내과",
+      "external_id": "BCWOORI-9abff85503",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권도형",
+      "department": "내과",
+      "external_id": "BCWOORI-02d40f28f3",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황주철",
+      "department": "내과",
+      "external_id": "BCWOORI-70025cc45a",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이건우",
+      "department": "내과",
+      "external_id": "BCWOORI-682ca3fc1b",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신용은",
+      "department": "정형외과",
+      "external_id": "BCWOORI-590daa5359",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진혁",
+      "department": "정형외과",
+      "external_id": "BCWOORI-7ef47780e9",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구강빈",
+      "department": "신경외과",
+      "external_id": "BCWOORI-bf08a29f42",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진재현",
+      "department": "신경과",
+      "external_id": "BCWOORI-f73f3ef22d",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유리",
+      "department": "신경과",
+      "external_id": "BCWOORI-5770a2db7f",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현호",
+      "department": "외과",
+      "external_id": "BCWOORI-1f55719e17",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정세빈",
+      "department": "비뇨의학과",
+      "external_id": "BCWOORI-67e5094f4a",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우소영",
+      "department": "산부인과",
+      "external_id": "BCWOORI-753d60561b",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재민",
+      "department": "가정의학과",
+      "external_id": "BCWOORI-94bfe3208d",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민원식",
+      "department": "이비인후과",
+      "external_id": "BCWOORI-b346673dc5",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승철",
+      "department": "응급실",
+      "external_id": "BCWOORI-db74c545fa",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전진욱",
+      "department": "응급실",
+      "external_id": "BCWOORI-33aab556fc",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태윤",
+      "department": "영상의학과",
+      "external_id": "BCWOORI-80b776e00c",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송동훈",
+      "department": "영상의학과",
+      "external_id": "BCWOORI-96765c518f",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김덕현",
+      "department": "진단검사의학과",
+      "external_id": "BCWOORI-823ad77009",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전우재",
+      "department": "마취통증의학과",
+      "external_id": "BCWOORI-6cbd3d4c57",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

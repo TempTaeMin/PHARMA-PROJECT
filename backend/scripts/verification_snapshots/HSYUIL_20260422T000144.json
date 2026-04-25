@@ -1,0 +1,47 @@
+{
+  "hospital_code": "HSYUIL",
+  "hospital_name": "화성유일병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "고은정",
+      "department": "",
+      "external_id": "HSYUIL-9bbb83170a",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형도",
+      "department": "",
+      "external_id": "HSYUIL-8f6a71c7d1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서민우",
+      "department": "",
+      "external_id": "HSYUIL-eaefd58429",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍승수",
+      "department": "",
+      "external_id": "HSYUIL-e42db769b0",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최창식",
+      "department": "",
+      "external_id": "HSYUIL-e3c8645b36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

@@ -20,6 +20,456 @@
 
 ---
 
+## 2026-04-25 세션 — 25개 대학병원 크롤러 1차 마무리 (재확인 3개 + sandbox 차단 우회)
+
+### 배경
+4/24 정찰에서 sub-agent sandbox DNS 차단으로 정찰 자체가 막혔던 3개(MIZMEDI, WKUH, GNUH2)가 미시작 상태였다. 사용자 확인 결과 IP 차단이 아니라 Claude Code 의 격리된 sub-agent 네트워크에서만 차단되는 것이었고, 메인 컨텍스트는 정상 응답함을 확인. **메인에서 정찰을 마쳐 정보 패키지로 sub-agent 에 넘기는** 회피 전략으로 일괄 구현 완료.
+
+### 처리 내역
+| 코드 | 병원 | 도메인/플랫폼 | 의사 | 진료과 | verdict | 시간 |
+|------|------|----------------|------|--------|---------|------|
+| MIZMEDI | 미즈메디병원 | mizmedi.com — JSON API (`POST /wweb/main/doctor/list`, `POST /intro/other/reserve/able/popup/list`) | 79 | 14 | OK | 26.9s |
+| WKUH | 원광대학교병원 | wkuh.org — 정부공공 CMS (`/main/mc_medicalpart/medipart.do` → `doctor.do?sh_mp_part_code=…` → `doctorProfile.do?d_num=…`) | 155 | 38 | OK | 8.4s |
+| GNUH2 | 경상국립대학교병원 | gnuh.co.kr — `/gnuh/treat/{list,docList}.do?rbsIdx=…`. **httpx/aiohttp 둘 다 비표준 헤더 거부 → curl subprocess 사용** | 188 | 46 | OK | 58.4s |
+
+합계 **422명** 추가 (총 등록 병원: 138 → 141).
+
+### 구현 메모
+- **MIZMEDI**: 정적 HTML 이 아닌 JSON API. 강서(`locationType=2`/wweb)·강남(`locationType=1`/sweb) 두 분원을 통합 처리, location 에 `강서`/`강남` 라벨. 강남 캠퍼스 `able/popup/list` API 가 504 timeout 빈발 → 그쪽 `date_schedules` 가 비는 경우 잦음(빈% 41.8 의 주원인). 의사 메타는 `POST /intro/popup/doctor/info` 폴백 정상.
+- **WKUH**: `jbuh_crawler.py` 와 매우 유사한 정부공공 CMS 패턴. profile 페이지에 **현재월+다음2개월 캘린더 한꺼번에** 들어 있어 별도 월 네비 호출 불필요. 외래(sche1)/암센터(sche4)/심뇌혈관(sche3) 등 sche 코드별 location 매핑, **인공신장실(sche2)·소아심장검사(sche6)** 는 EXCLUDE.
+- **GNUH2**: 서버가 비표준 응답 헤더 `Referrer Policy:` (공백, 표준은 `Referrer-Policy`)를 보내 httpx 의 strict h11 파서가 `RemoteProtocolError`. **aiohttp 도 같은 이유로 실패** (`Invalid header token`). 결국 `asyncio.create_subprocess_exec('curl', ...)` 로 우회. WAF 활성 — 정상 브라우저 UA + Referer 필수. 진주 본원만 수집(창원경상은 `gnuch.co.kr` 별도, 본 크롤러 범위 외).
+
+### sandbox 차단 우회 패턴 (이번 세션의 교훈)
+sub-agent 네트워크에서 DNS 가 막힐 때 회피 절차:
+1. 메인 컨텍스트에서 `httpx.get()` / `curl` 로 정상 응답 확인
+2. **메인이 추출한 핵심 endpoint URL + 응답 샘플(헤더/HTML 단편)을 sub-agent 프롬프트에 패키지로 동봉**
+3. sub-agent 가 어떤 라이브러리·헤더·SSL 설정을 써야 하는지 미리 명시 (verify=False, http2 비활성, curl subprocess 등)
+이번에 GNUH2 의 비표준 헤더 함정을 메인이 미리 발견하지 못했다면 sub-agent 가 시간 낭비할 뻔했음.
+
+### 검증
+- 모든 크롤러: `crawl_doctor_schedule()` 가 `_fetch_all()` 호출 안 함, 1명 조회 0.27~9s.
+- 스냅샷: `backend/scripts/verification_snapshots/{MIZMEDI,WKUH,GNUH2}_20260425T1313*.json`.
+- factory 등록 region: MIZMEDI=서울, WKUH=전북, GNUH2=경남.
+
+### 4/25 일일 합계 (3 세션 통합)
+- **신규 11개 코드 등록** (PAIKBS 1개 등록 + 신규 10개): PAIKBS, SCWH, CBNUH, CHNUH, YWMC, CUH, KYUH, JBUH, MIZMEDI, WKUH, GNUH2
+- **추가 의사**: 2,180명 / **진료과**: 435개과
+- **총 등록 병원**: 130 → 141 (+11)
+- **4/24 정찰 25개 대학병원 100% 구현 완료**. PNUYH/JNUHHS 처럼 공유 인프라로 흡수된 코드 포함.
+
+### 다음 단계 (5월 첫째 주)
+- 운영 환경 에러 검증 → 배포. CHNUH 격주 4명 보완, MIZMEDI 강남 캠퍼스 504 안정화 모니터링, GNUH2 curl subprocess 의존성 검토(다른 병원 영향 없음).
+
+---
+
+## 2026-04-25 세션 — 25개 대학병원 크롤러 Phase 2 (SPA/playwright 분류 3개)
+
+### 배경
+4/24 정찰에서 CUH(조선대), KYUH(건양대), JBUH(전북대) 3곳을 SPA/playwright 후보로 분류했었다. 실측 결과 **셋 모두 정적 HTML 로 처리 가능**해 playwright 없이 httpx + BeautifulSoup 만으로 완성. Phase 1 정찰의 SPA 의심이 과추정이었음을 확인.
+
+### 처리 내역
+| 코드 | 병원 | 도메인/플랫폼 | 의사 | 진료과 | verdict | 시간 |
+|------|------|----------------|------|--------|---------|------|
+| CUH | 조선대학교병원 | hosp.chosun.ac.kr — 정적 (`/medi_depart/?type=doctor&catename=…` 진료과 카드) | 174 | 32 | OK | 2.0s |
+| KYUH | 건양대학교병원 | kyuh.ac.kr — 정적 jsp (`/prog/treatment/view.do?deptCd=…`, `/prog/doctor/homepage.do?...`) | 169 | 34 | OK | 60.0s |
+| JBUH | 전북대학교병원 | jbuh.co.kr — 정적 (`/prog/mdcl/main/sub01_01_01/viewStf.do?mdclCd=…`) | 239 | 42 | OK | 17.6s |
+
+합계 **582명** 추가 (총 등록 병원: 135 → 138).
+
+### 구현 메모
+- **CUH**: 정찰 단계의 9.5kB shell 은 인트로 페이지였고 실제 사이트는 `/main`. **catename 파라미터를 URL 인코딩하지 않으면 "선택된 진료과가 존재하지 않습니다" 알림 페이지(448B)** 가 반환되는 함정 — 향후 사이트 변경 모니터링 필요. `external_id = CUH-{mn}-{dt_idx}`. 스케줄 마크는 빈 `<span class="work2">` (마크 자체가 진료 신호). `<p class="time_p">` 의 비고 텍스트(예: `금(오전)-내시경`)에서 EXCLUDE 키워드+요일 슬롯 정규식으로 자동 제외.
+- **KYUH**: 198kB no tables 정찰 결과는 캐러셀/배너로 부피만 컸을 뿐 실제는 정적 jsp. 3단계 표준 구조(`treatment/list.do` → `treatment/view.do` → `doctor/homepage.do`). 각 의사별 homepage 1회씩 호출하느라 전체 60초 — 진료과별 일괄 조회가 안 되는 구조.
+- **JBUH**: 정찰 7kB shell 은 `/main.do` 로 redirect 하는 게이트웨이였고 본 페이지는 정적. 진료과별 의료진 + 시간표가 인라인 (`viewStf.do`). 다중 캠퍼스(본관/암센터/어린이병원/응급센터/노인센터/강내치료/호흡기센터) 의사 5명에 SNUH 패턴(`notes` 에 location 별 일정 요약) 적용.
+
+### 검증
+- 모든 크롤러: `crawl_doctor_schedule()` 가 `_fetch_all()` 호출 안 함, 1명 조회 0.7~2.1s.
+- 스냅샷: `backend/scripts/verification_snapshots/{CUH,KYUH,JBUH}_20260425T1244*.json`.
+- factory 등록: region: CUH=광주, KYUH=대전, JBUH=전북.
+- 빈 스케줄 의사 비율 24~33% 는 응급/병리/마취/진단검사 등 외래 미시행 진료과 비중 — 정상 범위.
+
+### Phase 1 정찰 → 구현 전환 결과
+- **정적(httpx) 19개 완료**: DAMC, KOSIN, DCMC, DKUH, GNAH, UUH, KNUH+KNUHCG, JNUH+JNUHHS, PAIKBS, PNUH+PNUYH, YUMC, DSMC, SCWH, CBNUH, CHNUH, YWMC, **CUH, KYUH, JBUH**
+- ⏳ **재확인 필요 3개 미시작**: MIZMEDI, WKUH(원광대), GNUH2(경상국립) — sandbox DNS 차단으로 정찰 자체 미완
+
+### 이번 세션에서 하지 않은 것
+- 재확인 필요 3개(MIZMEDI/WKUH/GNUH2): DNS 차단 해소 필요 → 별도 세션
+- CHNUH 격주 notes 4명 미반영 보완: 별도 마이너 패치
+
+---
+
+## 2026-04-25 세션 — 25개 대학병원 크롤러 Phase 1 마무리 (PAIKBS 등록 + 4개 신규)
+
+### 배경
+4/24 세션에서 정찰만 끝낸 25개 대학병원 중, 4/24 새벽 작성된 PAIKBS(인제대학교 부산백병원) 가 factory 미등록 상태로 멈춰 있었다. 이번 세션에서 PAIKBS 등록을 마무리하고, 남은 정적 사이트 4개(SCWH, CBNUH, CHNUH, YWMC) 를 일괄 작성해 Phase 1 정적 크롤러 구간을 종료.
+
+### 처리 내역
+| 코드 | 병원 | 도메인/플랫폼 | 의사 | 진료과 | verdict | 시간 |
+|------|------|----------------|------|--------|---------|------|
+| PAIKBS | 인제대학교 부산백병원 | paik.ac.kr/busan (sgpaik/ispaik 와 동일 플랫폼) | 360 | 75 | OK | 2.5s |
+| SCWH | 삼성창원병원 | smc.skku.edu — **신규 인프라** (KBSMC/SMC 와 별도) | 176 | 34 | OK | 10.0s |
+| CBNUH | 충북대학교병원 | cbnuh.or.kr (eGovFramework, `/prog/doctor/main/...`) | 192 | 46 | OK | 3.1s |
+| CHNUH | 충남대학교병원 | cnuh.co.kr (`/prog/cnuhTreatment/...`, `<span>가능</span>` 마크) | 260 | 34 | WARN | 4.3s |
+| YWMC | 원주세브란스기독병원 | ywmc.or.kr (Liferay, 통합 `treatment_schedule` + 진료과별 `/doc`) | 188 | 40 | OK | 5.3s |
+
+합계 **1,176명** 의사 신규 추가 (총 등록 병원 수: 130 → 135).
+
+### 구현 메모
+- **SCWH**: 도메인이 `smc.skku.edu` 라 KBSMC/SMC 인프라 공유로 의심했으나 실측 결과 별도 시스템(`/smc/medical/medView.do`, POST 폼 기반). KBSMC 형 `<span class="on">` 마크 + 당월 `<span class="icon reservation">` 캘린더. `external_id = SCWH-{medDrSeq}`.
+- **CHNUH** (코드 충돌 방지): `JNUH`(전남대) 와 코드 충돌 회피를 위해 `CHNUH` 사용. 활성 셀이 `<span>가능</span>` 마크라 `is_clinic_cell()` 매칭 안 돼 크롤러 내 전용 판정 추가. WARN 은 격주 4명(재활의학과·정형외과) `notes` 미반영 — Phase 2 에서 보완.
+- **YWMC**: Liferay 기반이지만 `/web/www/treatment_schedule` 통합 페이지가 있어 진료과 분산 부담 회피. 활성 마크는 `<span class="t_selc">선택</span>` (예약 버튼). `external_id = YWMC-{deptCode}-{path-safe Base64 empNo}` (Base64 의 `+/=` 를 `-_.` 로 치환). 신경통증클리닉(`/intro` 페이지 부재) 7명은 `YWMC-NA-{이름}` 폴백 — 다른 진료과에서도 노출되어 실질 손실 없음.
+- **CBNUH**: 통합 의사 목록 페이지(`/prog/doctor/main/sub01_01_02/list.do`) + 페이지네이션 19페이지. 카드 안에 시간표까지 포함되어 단일 페이지로 모두 수집됨. `<span class="dot on">진료</span>` (정규) / `<span class="tri on">진료</span>` (격주).
+
+### 검증
+- 모든 크롤러: `crawl_doctor_schedule()` 가 `_fetch_all()` 호출 안 함, 1명 조회 0.17~1.16s.
+- 스냅샷: `backend/scripts/verification_snapshots/{CODE}_20260425T0947*.json` 5건.
+- factory 등록: `_DEDICATED_CRAWLERS` + `_HOSPITAL_REGION` 모두 갱신. region: PAIKBS=부산, SCWH=경남, CBNUH=충북, CHNUH=대전, YWMC=강원.
+
+### 4/24 정찰의 25개 대비 완료 현황
+- ✅ **Static 16개** (Batch 1~3 정적): DAMC, KOSIN, DCMC, DKUH, GNAH, UUH (Batch 1) + KNUH+KNUHCG, JNUH+JNUHHS, PAIKBS (Batch 2 — SCWH 추가완료) + PNUH+PNUYH, YUMC, DSMC + **SCWH, CBNUH, CHNUH, YWMC** (Batch 3 신규)
+- ⏳ **Playwright/SPA 4개 미시작**: CUH(조선대), KYUH(건양대), JBUH(전북대), PNUYH 는 정적으로 흡수됨
+- ⏳ **재확인 필요 3개 미시작**: MIZMEDI, WKUH(원광대), GNUH2(경상국립) — sandbox DNS 차단으로 정찰 자체 미완
+
+### 이번 세션에서 하지 않은 것
+- Phase 2(playwright/SPA 4개) 와 Phase 3(재확인 3개) 는 별도 세션. 정적 사이트만 1차 마무리.
+- CHNUH 격주 notes 반영 — Phase 2 작업과 함께 보완 예정.
+
+---
+
+## 2026-04-24 세션 — 추가 25개 대학병원 크롤러 Phase 1 정찰
+
+### 대상 (25개)
+미즈메디, 단국대학교의과대학부속병원, 원주세브란스기독병원, 충북대학교병원, 건양대학교병원, 충남대학교병원, 강릉아산병원, 원광대학교병원, 전북대학교병원, 칠곡경북대학교병원, 계명대학교동산병원, 경북대학교병원, 대구가톨릭대학교병원, 영남대학교병원, 전남대학교병원, 조선대학교병원, 화순전남대학교병원, 경상국립대학교병원, 삼성창원병원, 양산부산대학교병원, 울산대학교병원, 인제대학교부산백병원, 동아대학교병원, 부산대학교병원, 고신대학교복음병원.
+
+### 정찰 분류 (도메인/유형 검증됨)
+| # | 병원 | 제안 CODE | URL | 유형 | 비고 |
+|---|-----|----------|-----|------|------|
+| 1 | 동아대학교병원 | DAMC | damc.or.kr | static (PHP) | HTTP 200, 85kB, 진료과별 페이지 |
+| 2 | 고신대학교복음병원 | KOSIN | kosinmed.or.kr | static | HTTP 200, 177kB |
+| 3 | 대구가톨릭대학교병원 | DCMC | dcmc.co.kr | static | HTTP 200, 107kB |
+| 4 | 부산대학교병원 | PNUH | pnuh.or.kr | static | HTTP 200, `/pnuh/*.do` 패턴 |
+| 5 | 양산부산대학교병원 | PNUYH | pnuyh.or.kr | static(small) | HTTP 200, 6.8kB — 경량 shell 가능성 |
+| 6 | 울산대학교병원 | UUH | uuh.ulsan.kr | static | HTTP 200, 15kB |
+| 7 | 전남대학교병원 | JNUH | cnuh.com | static (`.cs`) | HTTP 200, 11kB |
+| 8 | 화순전남대학교병원 | JNUHHS | cnuh.com/hwasun | static | JNUH 인프라 공유 (JS 리다이렉트) |
+| 9 | 영남대학교병원 | YUMC | yumc.ac.kr | static/xhr | HTTP 200, 77kB |
+| 10 | 경북대학교병원 | KNUH | knuh.or.kr | static (ASP, EUC-KR) | 칠곡분원과 infra 공유 |
+| 11 | 칠곡경북대학교병원 | KNUHCG | knuh.or.kr | static | KNUH 분원 |
+| 12 | 계명대학교동산병원 | DSMC | dsmc.or.kr:49848 | static (PHP) | 비표준 포트 |
+| 13 | 강릉아산병원 | GNAH | gnah.co.kr | static | `/kor/CMS/DoctorMgr/*.do`, seq 기반 |
+| 14 | 단국대학교병원 | DKUH | dkuh.co.kr | static | HTTP 200, 56kB |
+| 15 | 충북대학교병원 | CBNUH | cbnuh.or.kr | static | HTTP 200, 12kB |
+| 16 | 충남대학교병원 | CHNUH | cnuh.co.kr | static | HTTP 200, 10kB — **주의**: 코드 CNUH 는 전남대와 충돌 회피 위해 CHNUH 사용 |
+| 17 | 전북대학교병원 | JBUH | jbuh.co.kr | 미확정 (7kB shell) | SPA 가능성 — 재확인 필요 |
+| 18 | 원주세브란스기독병원 | YWMC | ywmc.or.kr | static (Liferay) | 진료과 분산형 |
+| 19 | 삼성창원병원 | SCWH | smc.skku.edu | static | **KBSMC/SMC 인프라 공유** — 기존 크롤러 패턴 재사용 가능 |
+| 20 | 인제대학교부산백병원 | PAIKBS | paik.ac.kr/busan | static | **ISPAIK/SGPAIK 인프라 공유** |
+| 21 | 조선대학교병원 | CUH | hosp.chosun.ac.kr | **playwright** | SPA, 9.5kB |
+| 22 | 건양대학교병원 | KYUH | kyuh.ac.kr | **xhr/playwright** | 198kB no tables, SPA 의심 |
+| 23 | 미즈메디 | MIZMEDI | mizmedi.com | 미확인 | sandbox DNS 차단, 구조 `/wweb/intro/popup/doctor?doctorId=..&deptPkid=..` 확인됨 (xhr 추정) |
+| 24 | 원광대학교병원 | WKUH | wkuh.org | 미확인 | sandbox DNS 차단, `/main/mc_medicalpart/medipart.do` 경로 확인됨 |
+| 25 | 경상국립대학교병원 | GNUH2 | gnuh.co.kr | 미확인 | sandbox DNS 차단, 분원 gnuch.co.kr(창원경상) 별도 존재 |
+
+### 이번 세션에서 하지 않은 것
+- 크롤러 실제 구현 (Phase 2/3) — 정찰 결과만 확정. 네트워크 제약으로 5개(미즈메디, 원광, 경상국립, 일부 SPA)는 실구현 단계에서 현장 확인 필요.
+
+### 다음 세션 우선순위
+1. **Batch 1 (static 확정, 낮은 리스크 6개)**: DAMC, KOSIN, DCMC, DKUH, GNAH, UUH — 병렬 서브에이전트 각 1병원씩 소유.
+2. **Batch 2 (공유 인프라 4개)**: KNUH+KNUHCG(한 크롤러 2 code), JNUH+JNUHHS(한 크롤러 2 code), SCWH(KBSMC 템플릿 재사용), PAIKBS(ISPAIK 템플릿 재사용).
+3. **Batch 3 (단건 static 5개)**: PNUH, CBNUH, CHNUH, YWMC, YUMC, DSMC.
+4. **Batch 4 (playwright/SPA 4개)**: CUH, KYUH, JBUH, PNUYH.
+5. **Batch 5 (재확인 필요 3개)**: MIZMEDI, WKUH, GNUH2 — 직접 병원 사이트 브라우저 확인 후 구현.
+
+## 2026-04-23 세션 — JNUH/JNUHHS 크롤러 구현
+
+### 배경
+Phase 1 정찰에서 "전남대학교병원(JNUH) + 화순전남대학교병원(JNUHHS)"을 공유 인프라로 분류했으나, 실제 확인 결과 각각 별도 도메인(`cnuh.com` / `cnuhh.com`)을 보유. 같은 cs-server 템플릿을 공유할 뿐 데이터는 완전히 분리돼 있다.
+
+### 구현 (`backend/app/crawlers/jnuh_crawler.py`)
+- 베이스 클래스 `_JnuhBaseCrawler` 1개에 브랜치별 서브클래스 2개(`JnuhCrawler`, `JnuhhsCrawler`) — 각 코드 `JNUH`(광주), `JNUHHS`(화순).
+- **브랜치 분리 메커니즘**: 도메인 분리가 1차(각 도메인이 자기 브랜치 의사만 노출), 셀 텍스트 마커(`전대병원 진료` vs `화순 진료`)로 2차 검증.
+- 수집: `/main.cs` 에서 진료과 코드+이름, `/medical/info/dept.cs?act=view&mode=doctorList&deptCd=X` 에서 진료과별 의사 목록+주간 스케줄 일괄 추출. 개별 의사 상세 페이지는 스케줄이 없어 불필요.
+- 스케줄: 주간 패턴만 제공(`schedules`), `date_schedules`=[]. `is_clinic_cell()` 로 수술/검사 배제.
+- `external_id = {HOSPITAL_CODE}-{deptCd}-{doctCd}` — 개별 조회 시 1 진료과만 재요청 (약 1초).
+
+### 결과
+- JNUH 258명 / JNUHHS 147명.
+- 스냅샷: `backend/scripts/verification_snapshots/JNUH_20260423T205421.json`, `JNUHHS_20260423T205421.json`.
+- factory.py 는 사용자 측에서 추후 등록 예정 (region: JNUH→`광주`, JNUHHS→`전남`).
+
+---
+
+## 2026-04-23 세션 — 학회 매칭 고도화 + 스케줄 팝업 힌트 + 알림 탭 재편
+
+### 배경
+실제 사용 중 세 가지 매칭·UX 이슈 발견. (1) `2026 한국망막학회 하계학술대회`의 강사 `이승규(연세대학교)` 가 내 교수 `이승규(서울아산 · 울산의대 · 간이식)` 로 잘못 매칭됨 — `_enrich_lectures_with_doctors` 가 이름 후보 1명이면 affiliation 확인 없이 채택하는 버그. (2) KMA affiliation 이 학교 약칭(`고려의대`)으로 들어오면 `HOSPITAL_ALIASES` 구조상 flagship 1곳에만 매핑되어 분원 교수 매칭 누락. (3) 스케줄 잡을 때 "해당 교수 이 주에 학회 있음" 힌트가 없고, 상단 알림 패널에도 학회 요약이 없음.
+
+### Backend
+- **`MEDICAL_SCHOOL_GROUPS` 신규** (`backend/app/api/academic.py`) — 의대/대학 약칭 → 소속 병원 목록(1:N) dict. `고려의대/고려대학교/고려대학교 의과대학` → [고대안암/고대구로/고대안산], `가톨릭의대` → [서울성모/여의도성모/성빈센트/은평성모/인천성모] 등 29개 키.
+- **`HOSPITAL_ALIASES` 재편** — 학교 약칭 항목(`울산의대`, `연세의대`, `고려의대` 등)은 전부 `MEDICAL_SCHOOL_GROUPS` 로 이관. `HOSPITAL_ALIASES` 에는 병원 고유 별칭만 남김.
+- **`_alias_match` 확장** — affiliation 후보 집합에 hospital 이 속한 학교 그룹의 모든 약칭 키를 병합.
+- **`_pick_candidate(candidates, affiliation)` 신규** — 이름 일치 후보 중 affiliation 으로 유일 매칭을 결정. 단일 후보라도 affiliation 이 있으면 `_alias_match` 로 검증하고 불일치 시 매칭 포기(false positive 방지). `_enrich_lectures_with_doctors` 와 `_summarize_matched_lecturers` 둘 다 이 헬퍼로 통일.
+- **`GET /api/academic-events/my-lecturers?months=1`** 신규 — 향후 N개월 중 내 교수(A/B/C) 가 강사로 매칭된 이벤트 목록 (NotificationPanel 요약 카드용).
+- **`GET /api/academic-events/for-doctor/{doctor_id}?start&end`** 신규 — 구간 내 학회 중 해당 교수가 강사로 매칭되거나(affiliation 검증 포함) 교수 department 가 이벤트 departments 에 포함되는 이벤트 (DoctorScheduleHintPopup 힌트용).
+
+### Frontend
+- **`academicApi.myLecturers`, `eventsForDoctor` 추가** (`frontend/src/api/client.js`).
+- **`DoctorScheduleHintPopup.jsx`** — 팝업 열릴 때 선택 날짜 기준 해당 주(월~일) 범위로 `eventsForDoctor` 호출. 결과 있으면 매트릭스 아래 파랑 박스로 `🎓 이번 주 관련 학회 N건` + 날짜/학회명/`강사|진료과` 라벨 표시. 없으면 블록 자체 숨김.
+- **`NotificationPanel.jsx` 탭 재편** — `[전체 / 스케줄 변경 / 리마인더]` 3개 → `[업무 / 스케줄 변경]` 2개. `업무` 는 `type !== 'schedule_change'` 필터(리마인더/미방문경고/기타 통합), 디폴트 탭. `스케줄 변경` 탭 열릴 때 `myLecturers(1)` 로드 → 상단에 **내 교수 참여 학회** 요약 카드(상위 3개 + "전체 학회 보기" 버튼). `onNavigate` prop 으로 Conferences 페이지 이동.
+- **`App.jsx`** — `NotificationPanel` 에 `onNavigate={navTo}` 전달.
+
+### 검증
+- `python -c "from app.api import academic; print('OK')"` 통과.
+- `_alias_match` 유닛 체크:
+  - 고려의대 → 고대안암/고대구로/고대안산 모두 `(0, 4)` 매치.
+  - 서울아산 × "연세대학교 이승규" → `None` (이승규 false positive 차단).
+  - 서울아산 × "울산의대" → `(0, 4)` 매치.
+  - 세브란스 × "연세대학교" → `(0, 5)` 매치.
+  - 가톨릭의대 × 성모병원 5곳 모두 매치.
+- `npm run build` 통과 (424 kB gzip 109 kB, 1.54s).
+- 라우트 등록 확인: `/my-lecturers`, `/for-doctor/{doctor_id}` 모두 `/{event_id}` 앞에 위치 (FastAPI 순서 충돌 없음).
+
+### 이번 세션에서 하지 않은 것
+- `Doctor.department` 정규화(통합분과 매핑) — 현재 데이터 클린, 우선순위 낮음.
+- 학회 D-7 푸시 알림 — 별도 세션.
+- 팀 공유.
+
+---
+
+## 2026-04-23 세션 — AI 정리 + 사전/사후 메모 분리
+
+### 배경
+월별 일정 확인에서 일정 카드를 눌러 상세 모달을 열었을 때, AI 정리 결과를 우선 보여주고 없으면 그 자리에서 AI 정리를 실행할 수 있어야 한다는 요청. 기존에는 Dashboard 의 "방문 완료 처리" 플로우에서만 AI 정리 가능. 구조 개선 요구도 함께: **방문 전 사전 메모는 방문 후에도 보존** 되어야 하며, **방문 결과 메모는 사전 메모를 덮어쓰지 않고 별도로 추가** 기록되어야 함.
+
+### Backend
+- **`VisitLog.post_notes` 컬럼** 추가 (`backend/app/models/database.py`). `notes` 는 사전 메모(교수) / 단일 메모(개인·공지) 역할로 재정의, `post_notes` 는 결과 메모(교수 전용).
+- **마이그레이션 스크립트** `backend/scripts/migrate_add_post_notes.py` — `ALTER TABLE visit_logs ADD COLUMN post_notes TEXT` + 이미 완료된(성공/부재/거절) 교수 방문의 기존 `notes` 를 `post_notes` 로 이관하고 `notes` 비움. 실행 결과 9개 레코드 이관.
+- **`POST /api/visits/{id}/ai-summarize`** 신규 엔드포인트 (`backend/app/api/visits.py`):
+  - 교수 방문(doctor_id 존재) → `post_notes` 를 source 로 사용
+  - 개인/공지 → `notes` 를 source 로 사용
+  - `raw_memo` 파라미터로 미저장 상태 원본 오버라이드 지원 (프론트가 textarea 값 직접 전달)
+  - 기존 `VisitMemo(visit_log_id 링크)` 존재 시 갱신, 없으면 생성
+  - 기본 템플릿(`is_default=True`) 자동 적용
+  - `organize_memo()` (Claude Haiku) 호출 → `ai_summary` JSON 저장 + 반환
+- `VisitLogCreate` 스키마, `doctors.py` 허용 필드 (`allowed`), `visits.py _visit_to_dict`, `dashboard.py /my-visits` 응답에 `post_notes` 반영.
+- `dashboard.py /my-visits` 응답에 `VisitMemo` LEFT JOIN → 각 visit 에 `ai_summary` (파싱된 dict) + `memo_id` 주입.
+- `SummarizeRequest` 스키마에 `raw_memo: Optional[str]` 추가.
+
+### Frontend
+- **`visitApi.aiSummarize(visitId, {raw_memo})`** 클라이언트 메서드 추가 (`frontend/src/api/client.js`).
+- **`VisitDetailModal.jsx` 재구성**:
+  - 교수 방문 완료 시 **사전 메모** 를 헤더 아래 읽기 전용 dashed 박스로 노출 + 아래 **결과 메모** 편집 영역 분리.
+  - 개인/공지는 기존대로 단일 메모.
+  - 메모 섹션 헤더에 **`✨ MR AI로 정리` 버튼** 노출 (source 텍스트 존재 시). 클릭 → `/ai-summarize` → `ai_summary` 상태 업데이트 + `my-visits`·`dashboard` 캐시 무효화.
+  - AI 결과 존재 시 상단에 **AI 정리 / 원본** 탭 토글. 디폴트 `AI 정리`.
+  - 미저장 상태에서도 AI 실행 가능 — textarea 값을 `raw_memo` 로 직접 전달(서버가 DB 에 반영).
+  - 결과 메모 placeholder: `"방문 결과를 입력하세요 (사전 메모는 보존됩니다)"`.
+- **`Schedule.jsx` 완료 모달**: `openComplete` 시 `completeNotes` 시드를 `visit.post_notes` 로, `submitComplete` 의 patch 필드를 `post_notes` 로 전환. 라벨 `메모` → `결과 메모` + placeholder 안내 문구 업데이트.
+- **`Dashboard.jsx` 완료 모달**: `openComplete` 시 `rawMemo` 를 `visit.post_notes` 로, `memoId`/`aiResult` 도 서버 응답 기반 프리필. `submitComplete` 의 updateVisit patch 를 `post_notes` 로 전환. 사전 메모가 있는 경우 **`사전 메모 (방문 전 작성)`** dashed 박스로 읽기 전용 노출.
+
+### 검증
+- `python -c "from app.api import visits, dashboard, doctors, memos; print('backend ok')"` 통과 — 등록 라우트 `[/personal, /{visit_id}, /announcement, /{visit_id}/ai-summarize]`.
+- `npm run build` 통과 (420 kB gzip 109 kB, 3.01s).
+- 마이그레이션 실행: 9개 완료 방문의 `notes` → `post_notes` 이관 완료.
+
+### 이번 세션에서 하지 않은 것
+- 사용자 인증/팀 분기 — 단일 사용자 전제, 모든 visit 에 AI 정리 허용. 추후 `user_id != current_user_id` 분기 도입 예정.
+- 템플릿 선택 UI — 기본 템플릿 고정. 사용자가 직접 정리하려면 메모/회의록 페이지에서 템플릿 지정 후 재실행 가능.
+
+### 2차 패치 (같은 세션)
+**이슈 1** — 업무/공지 AI 정리가 방문 메모 템플릿(교수명/병원명/논의 제품…)에 강제로 끼워 맞춰짐.
+**이슈 2** — 개인 일정/공지 상세 모달에서 수정 후 "저장" 클릭 시 `/api/doctors/null/visits/{id}` 로 빠져 404.
+
+**수정**:
+- `app/services/ai_memo.py` 에 **`summarize_freeform(raw_memo, kind)`** 신규 — 템플릿 없이 `{title, summary:{핵심,일시/장소,준비/참고}}` 형태로 자연스럽게 정돈. 전용 system/user 프롬프트.
+- `/api/visits/{id}/ai-summarize` — `is_professor` 분기:
+  - 교수 → 기존 `organize_memo` (템플릿 기반)
+  - 개인/공지 → `summarize_freeform(kind=announcement|personal)`
+- **`PATCH /api/visits/{visit_id}`** 플랫 엔드포인트 신규 (`app/api/visits.py`). `doctor_id` 없이 `status/notes/post_notes/title/visit_date` 수정 지원.
+- `visitApi.updateFlat(visitId, data)` 클라이언트 추가 (`frontend/src/api/client.js`).
+- `useMonthCalendar.updateVisit` — `visit.doctor_id` 존재 시 기존 라우트, 없으면 `updateFlat` 로 분기.
+
+---
+
+## 2026-04-23 세션 — 학회 일정 재설계 (내 교수 매칭 + 모바일 터치 + 내 일정 핀)
+
+### 배경
+기존 `Conferences.jsx` 는 "학회 목록 브라우저"에 그쳐 내 업무와의 연결이 카드 단에 드러나지 않음. 핸드폰 뷰에서 진료과 칩이 너무 작아 오터치 빈번. 외부 "자세히 보기" 링크가 주최자별 제각각 사이트로 흩어져 불안정. 학회 상세에서 내 일정으로 바로 등록하는 경로도 없었음.
+
+### Backend
+- **`AcademicEvent.is_pinned` 컬럼**(`backend/app/models/database.py`) + 인덱스 추가. 단일 사용자 한정 플래그 — 팀 모델 도입 시 `pinned_events_user(user_id,event_id)` 로 이관 예정.
+- **마이그레이션 스크립트** `backend/scripts/migrate_add_is_pinned.py` 추가 + 실행 (`[ok] added is_pinned column + index`).
+- **`_summarize_matched_lecturers`** 헬퍼(`backend/app/api/academic.py`) — 여러 event 의 `lectures_json` 을 일괄 파싱하고 Doctor 테이블 1회 SELECT(`name IN (...)`) + HOSPITAL_ALIASES 재사용으로 `{event_id: {count, names}}` 맵 반환. N+1 회피.
+- **`_organizer_homepages`** 헬퍼 — organizer_id set → `{id: homepage}` 맵. 리스트 응답에 주최단체 홈페이지 주입.
+- **`_enrich_events_with_summary`** — list/upcoming/unclassified 공통 빌더. 각 event 에 `matched_doctor_count`, `matched_doctor_names`, `is_pinned`, `organizer_homepage` 주입.
+- **`POST/DELETE /api/academic-events/{id}/pin`** — pin/unpin 토글 (FastAPI route order: `/my-schedule` 과 `/pin` 은 `{event_id}` 파라미터 라우트보다 앞에 배치해야 매칭 충돌 없음).
+- **`GET /api/academic-events/my-schedule?start&end`** — Schedule.jsx 전용. `source='manual' OR is_pinned=true` 합집합. 범위 기반 월 스캔.
+- `get_event` 단건 응답에도 `organizer_homepage` 주입 (모달 보조 링크용).
+
+### Frontend API 클라이언트
+- `academicApi.mySchedule({start_date,end_date})`, `.pin(id)`, `.unpin(id)` 추가 (`frontend/src/api/client.js`).
+
+### Conferences.jsx 재구성
+- **히어로 요약 카드** 상단 신규 — 파랑 그라데이션 배경, 🎓 + "다음 N개월" + `전체 학회 X개` / `내 교수 강사 참여 Y개` 큰 숫자 2개.
+- **탭 4개**: `내 교수 참여`(default, 신규 · `matched_doctor_count > 0` 필터) / `다가오는 일정` / `전체` / `미분류`. 가로 스크롤 가능.
+- **진료과 필터 칩 모바일 최적화** — `min-height: 40px`(iOS HIG), `padding: 10px 16px`, `font-size: 13px`, `gap: 10px`, 가로 스크롤(`overflow-x: auto` + `scroll-snap-type: x proximity` + 각 칩 `scroll-snap-align: start` + `flex-shrink: 0`), `::-webkit-scrollbar { display: none }` 숨김. 데스크톱에서도 자연스러운 단일 행.
+- **카드 뱃지**:
+  - `matched_doctor_count > 0` → 학회명 옆 **🎓 내 교수 N명** 파랑 뱃지 + 카드 테두리 `var(--ac)` 강조.
+  - `is_pinned` → **📌 내 일정 등록됨** 노란 뱃지.
+  - `matched_doctor_names.slice(0,3).join(' · ')` + overflow `+N명` 강사 프리뷰 행.
+- 동기화 성공 시 `invalidate('academic')` 프리픽스 캐시 전부 무효화.
+
+### AcademicEventModal.jsx 재배치
+- **내 교수 강사진** 섹션을 **헤더 바로 아래**로 이동 (파랑 테두리 카드). 강사 카드 클릭 → My Doctors 네비게이션(기존 로직).
+- **전체 세션** 접기/펼치기 — `<Presentation> 전체 세션 N개 보기 ▾` 버튼 토글. 디폴트 접힘.
+- **하단 액션 행** 재편:
+  - **`📅 내 일정에 등록`** — `!isManual` 일 때만 표시. 클릭 → `academicApi.pin` → 버튼 라벨 `내 일정 등록됨 ✓ (클릭하여 해제)` + 노란 톤. 재클릭 → confirm → unpin.
+  - **`🔗 KMA 연수교육 상세 페이지`** — `source='kma_edu'` + `kma_eduidx` → `https://edu.kma.org/edu/schedule_view?eduidx={kma_eduidx}` 고정 URL. 제각각 `detail_url_external` UI 노출 제거 (필드는 데이터 손실 방지 위해 DB 에 유지).
+  - **`🔗 원본 링크`** — `source='manual'` 은 유저 입력 `ev.url` 사용.
+  - **`🏛 {organizer_name} 홈페이지`** — `organizer_homepage` 존재 시 보조 링크(회색 outline, 작은 글씨). 주최단체 공식 홈페이지 직행.
+  - **`📢 팀 공지로 공유 (준비 중)`** — disabled + tooltip (향후 확장 자리).
+
+### Schedule.jsx EventCard + fetch 변경
+- 월간 학회 fetch 를 `academicApi.list({source:'manual'})` → `academicApi.mySchedule({start,end})` 로 전환. 이제 `source='manual'` + `is_pinned=true` KMA 이벤트 합집합 노출.
+- **EventCard 뱃지**:
+  - `matched_doctor_count > 0` → **🎓 내 교수 N명** 미니 뱃지 (indigo).
+  - `source='kma_edu' && is_pinned` → **📌 연수교육** 서브 뱃지 (기존 `학회` 뱃지와 구분).
+- `AcademicEventDetailModal` 삭제 동작을 `isManual` 분기로 확장:
+  - manual → `academicApi.delete` (실제 삭제)
+  - kma_edu → `academicApi.unpin` (내 일정에서 제거, 원본 크롤링 데이터 보존)
+- 캐시 키 `academic-month-manual:YYYY-MM` → `academic-my-schedule:YYYY-MM` 로 rename (의미 일치).
+
+### AcademicEventDetailModal.jsx 보강
+- kma_edu 이벤트도 KMA 고정 URL 로 `학회 페이지 열기` 버튼 활성화 (기존: `event.url` 이 비어있으면 숨김).
+- 내 교수 매칭 요약 배너 (`🎓 내 교수 N명 강사 참여 · 김철수, 이영희...`).
+- 삭제 버튼: manual → `삭제` (Trash2), kma_edu → `내 일정에서 제거` (PinOff).
+
+### 검증
+- `npm run build` 통과 (417 kB gzip 108 kB).
+- `python -c "from app.api import academic; from app.main import app"` 정상, 등록 라우트 수 65.
+- End-to-end: pin → `/my-schedule` 포함 → unpin → `/my-schedule` 제외 토글 정상.
+- `upcoming` 응답 샘플 — `matched_doctor_count`, `matched_doctor_names`, `is_pinned`, `organizer_homepage` 필드 모두 주입됨.
+
+### 이번 세션에서 하지 않은 것
+- Team 모델 + 학회 팀 공유 실제 동작 (UI 스텁만).
+- 학회 D-7 알림 푸시.
+- 학회 방문 보고서 AI 파이프라인.
+
+---
+
+## 2026-04-23 세션 — 업무공지 등록 기능
+
+### 배경
+"업무 일정" 클릭 시 팀원과 공유할 수 있는 업무 공지사항을 기록하고 싶다는 요청. 팀 공유는 단일 사용자 구조 때문에 1차 범위에서 제외 — 본인 일정에만 기록하는 등록 UI 만 선행 구현.
+
+### Backend
+- `POST /api/visits/announcement` 엔드포인트 추가 (`backend/app/api/visits.py`). `VisitLog` 에 `category='announcement'`, `doctor_id=None`, `status='예정'` 로 저장.
+- `AnnouncementCreate` Pydantic 스키마 추가 (`backend/app/schemas/schemas.py`) — `visit_date`, `title`, `notes`.
+
+### Frontend
+- `visitApi.createAnnouncement` 클라이언트 메서드 추가 (`frontend/src/api/client.js`).
+- **`WorkTypeChooser.jsx` 신규** — "업무 일정" → 서브 바텀시트(zIndex 305): `일정 등록` | `공지 등록` 2지선다.
+- **`WorkAnnouncementEditor.jsx` 신규** — 풀스크린 모달(zIndex 320). 날짜(date picker) + 제목(필수, 100자) + 내용(필수, 2000자). `팀원 공유 기능은 추후 추가` 안내. CTA `공지 등록`.
+- `Dashboard.jsx` 플로우 스텝 추가: `personal-type` (chooser) → `personal-event` (기존) 또는 `work-announcement` (신규). `handleSubmitAnnouncement` 는 `T00:00:00` 고정으로 POST → `refresh()` + 선택 날짜 이동 + 플로우 종료.
+- **카드 UI**:
+  - `Schedule.jsx` `PersonalCard` 는 `category==='announcement'` 분기로 `공지` 배지(#b45309) + `#fffbeb` 배경 + `#fde68a` 테두리. 시간 영역은 `공지` 텍스트로 치환(시각 없음).
+  - `DailySchedule.jsx` `VisitCard` 도 동일 분기 추가. 공지 카드는 완료/취소 버튼 제거, 클릭 → 상세 모달.
+- **`VisitDetailModal.jsx`** 공지 모드 분기 추가:
+  - `isAnnouncement = category==='announcement'` 플래그.
+  - 헤더 배지 `공지` (황토색), 타이틀 = `title`, 서브타이틀 `업무공지`.
+  - "방문 시간" 섹션 숨김(일 단위 기록). 메모 섹션 라벨 `공지 내용` + 전용 placeholder.
+  - 하단 취소 버튼 라벨 `삭제` (예정 개념 없음), "방문 결과 기록" 숨김.
+
+### 검증
+- `npm run build` 통과.
+- `python -c "from app.api import visits"` 정상, `AnnouncementCreate` 필드 OK.
+
+### 확장 여지
+- 팀원 공유: 향후 User/Team 모델 추가 + announcement 다중 공유 테이블(`announcement_shares`) 도입 시 확장.
+- AI 요약: 공지 내용도 필요 시 memo 파이프라인 재사용 가능.
+
+---
+
+## 2026-04-22 세션 — 월간 일정(Schedule) 아젠다 전면 개편 + 학회 수동 추가
+
+### 배경
+기존 `Schedule.jsx` 는 "7열 월력 그리드 + 선택일 사이드 패널" 구조. 내 교수 20~30명 × 월간 방문을 한눈에 훑기에는 셀당 정보가 너무 제한적이어서 "달력 형식 자체의 의미가 적다"고 판단 → 레퍼런스(`MrScheduler Schedule - Standalone.html`) 의 "월 헤더 + 주 점프 스트립 + 세로 아젠다" 패턴으로 완전 교체.
+
+### Schedule.jsx 전면 rewrite
+- **그리드 제거**, 세로 아젠다 단일 뷰. 토글 없음.
+- 월 헤더(`28px Manrope`) + `← 일정 확인` 돌아가기 링크 + 월 네비(이전/오늘/다음).
+- **카테고리 필터 칩 3종**: `내 의료진 방문` / `업무 일정` / `학회 일정` — 다중 토글, 색상 구분(파랑/네이비/보라).
+- **주 스트립**: WEEK 1~5 칩, 현재 주는 파랑 배경. 클릭 → `#day-N` 앵커 스크롤.
+- **DayRow**: 좌 110px(요일 · 큰 날짜 · TODAY 배지 · "완료 X · 예정 Y · 이슈 Z" 요약) + 우 카드 스택.
+- **카드 3종**: `VisitCard`(교수 방문, NEXT UP 강조) / `PersonalCard`(업무) / `EventCard`(학회, purple tint).
+- **학회 필터링**: Schedule 은 개인 일정 페이지이므로 `source='manual'` (사용자가 직접 추가한 학회)만 표시. KMA 크롤링 전체 학회는 Conferences 페이지에서 브라우징.
+- **VisitCard 메모 표시**: `ai_summary.summary.논의내용` 우선, 없을 때만 원본 `notes` fallback. AI 메모일 경우 `AI` 배지 prefix. (`DailySchedule.jsx` 와 동일 패턴)
+- **뒤로가기 + 월 헤더 + 필터 + 주 스트립 sticky 고정**: `position: sticky; top: 56px` 단일 래퍼로 묶어 스크롤 시 App 헤더 아래에 고정. `← 일정 확인` 버튼도 sticky 내부로 이동 — 어느 스크롤 위치에서도 Dashboard 로 돌아갈 수 있어야 하므로.
+- **아젠다 카드 클릭 → 상세 모달** (Dashboard 의 `VisitDetailModal` 패턴 이식):
+  - `VisitCard` (교수 방문) 클릭 → `VisitDetailModal` (기존, 날짜·시간·메모 수정 + 방문 결과 기록 + 취소)
+  - `PersonalCard` (업무) 클릭 → `VisitDetailModal` 재사용. `isPersonal = category==='personal' || !doctor_name` 분기 추가: 헤더 `업무` 배지 + `{title || '업무 일정'}`, "방문 결과 기록" 숨김, 취소 버튼 라벨 `삭제`.
+  - `EventCard` (학회) 클릭 → 신규 `AcademicEventDetailModal` (학회명/날짜/장소/주최/설명/URL 표시, 외부 페이지 열기, `source==='manual'` 일 때만 삭제).
+  - 카드 액션 버튼(완료/취소/삭제) 에 `e.stopPropagation()` 추가해 카드 클릭으로 bubble 안 되게.
+- **백엔드 `DELETE /academic-events/{id}`** — manual source 만 허용 (크롤링 데이터 보호). `academicApi.delete(id)` 추가.
+- **"일정 있는 날만" 필터 칩** — 디폴트 OFF, 클릭 시 ON. 활성화 시 빈 날짜 `DayRow` 는 `return null` 로 생략되어 아젠다에 일정 있는 날만 남음. `ListFilter` 아이콘 · teal(#0f766e) 액센트.
+- 월요일 앞 구분선, 주말 & 빈 날 `opacity: 0.55`, TODAY 행 파랑 그라데이션 배경.
+- 기존 완료 처리 모달(`status/product/notes`) 그대로 재사용.
+- `useMonthCalendar` 훅 그대로, `academicApi.list`로 월 이벤트 fetch는 기존 로직 유지.
+- 상단 StatCard 4개(완료/예정/달성률/미방문) **제거** — 사용자 요청.
+
+### 카테고리 라벨 재정비 (`AddEventBottomSheet`)
+- `개인 일정` → **업무 일정** (아이콘 `UserCog` → `Briefcase`)
+- `교수님 미팅` → **내 의료진 방문**
+- `기타` (준비 중) → **학회 일정** (활성화, 아이콘 `MoreHorizontal` → `BookOpen`)
+
+### 학회 수동 추가 플로우 신규
+- **백엔드**: `POST /api/academic-events` 엔드포인트 추가(`backend/app/api/academic.py`). `name` + `start_date` 필수, `source='manual'`, `classification_status='unclassified'` 로 INSERT.
+- **프론트 API**: `academicApi.create(data)` 메서드 추가.
+- **새 컴포넌트**: `frontend/src/components/AcademicEventCreateModal.jsx` — 전체화면 모달. 학회명/시작일/종료일/장소/주최/URL 입력. 성공 시 `academic-month:YYYY-MM` + `academic` 캐시 무효화.
+- **Dashboard `handleSelectCategory`** 에 `case 'etc'` → `setFlowStep('academic-event')` 추가, 새 모달 렌더.
+
+### App.jsx 네비게이션
+- `'대시보드'` → `'일정 확인'` (NAV 라벨 13행 + fallback 119행).
+- `<Schedule />` → `<Schedule onNavigate={navTo} />` 로 prop 주입해 Schedule 내 `← 일정 확인` 버튼과 연결. Dashboard ↔ Schedule 왕복 명확.
+
+### 수정 파일
+- `frontend/src/pages/Schedule.jsx` — 전면 rewrite
+- `frontend/src/pages/Dashboard.jsx` — AcademicEventCreateModal import/렌더, `handleSelectCategory` 확장
+- `frontend/src/components/AddEventBottomSheet.jsx` — 3개 라벨/아이콘/`disabled: false`
+- `frontend/src/components/AcademicEventCreateModal.jsx` — **신규**
+- `frontend/src/api/client.js` — `academicApi.create` 추가
+- `frontend/src/App.jsx` — NAV 라벨, Schedule prop
+- `backend/app/api/academic.py` — `POST /academic-events`
+
+### 검증
+- `npx vite build` OK (1748 modules, 2.37s).
+- `python -c "from app.api import academic"` OK.
+- 수동 테스트 TODO: dev server 실행 → 카테고리 3종 라벨 확인, 학회 모달 저장 → Schedule 아젠다에 학회 카드 노출, 필터 칩 토글, 주 스트립 점프, 완료 처리 플로우.
+
+---
+
+## 2026-04-22 세션 — 경기/인천 8개 크롤러 신규 추가 (엑셀 92~99)
+
+### 추가 병원 (총 8개)
+- **경기 7개**: SARANG(사랑의병원·김포), DANWON(단원병원·안산), BCWOORI(부천우리병원·부천), HANDOH(한도병원·안산), JAIN(더자인병원·고양), BCSEJONG(부천세종병원·부천), HSYUIL(화성유일병원·화성)
+- **인천 1개**: SCSUH(신천연합병원·남동)
+
+### 크롤러 특이사항
+- **SCSUH** — EUC-KR 정적 HTML(진료과 16개 페이지) + AJAX JSON 캘린더(`doctor_schedule_ajax.php`). 의사 16명·12진료과·1.8s.
+- **HSYUIL** — Creatorlink 브로셔 사이트. 구조화된 스케줄 없음 → `SETTINGS.blocknameList` JSON 에서 의사 이름 5명만 추출, schedules 빈 리스트 반환. verdict=WARN 은 업스트림 한계(의도된 설계).
+- **BCSEJONG** — AJAX `/adm/adm_boardProc.php` (board_id=doctors_team/mode=2), 3개월 date_schedules 지원, 85명·27진료과.
+- **JAIN** — iframe 내 `/new_old/jain2020/01about/about03.php`, 건강검진 패키지 필터 적용.
+- **BCWOORI** — sub14.php 단일 페이지, 다중 마커 클래스(active/active_red/active_orange/active_green) 처리.
+- **DANWON/HANDOH/SARANG** — 진료과 매핑 기반 표준 httpx+BS4 패턴.
+
+### 등록 결과
+- `factory.py` 에 8개 등록 완료 → **총 120개 병원** 커버.
+- `hospitals` 테이블 insert 완료, `verify_crawler.py` 로 7/8 OK·1 WARN(HSYUIL 예상) 확인.
+
+### 후속 TODO
+- 병원 로고 `frontend/public/hospital-logos/{CODE}.png` 수집 (8개).
+
+---
+
 ## 2026-04-22 세션 — 학회 일정 데이터 정리 + 기간 필터
 
 ### 데이터 검증

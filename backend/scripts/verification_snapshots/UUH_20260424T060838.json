@@ -1,0 +1,365 @@
+{
+  "hospital_code": "UUH",
+  "hospital_name": "울산대학교병원",
+  "status": "success",
+  "doctor_count": 259,
+  "dept_count": 36,
+  "sample_doctors": [
+    {
+      "name": "전영지",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "건강증진, 만성질환관리, 비만, 금연",
+      "profile_url": "https://www.uuh.ulsan.kr/kr/index.php?pCode=doctor&idx=546",
+      "photo_url": "https://www.uuh.ulsan.kr/_Data/MediTeamData/5b2655e2094933217452e0f92310cc18.png",
+      "external_id": "UUH-546",
+      "notes": "[학력] 울산대학교 의과대학 의학과 졸업, 울산대학교 대학원 의학석사, 동아대학교 대학원 의학박사\n[경력] 서울아산병원 인턴, 서울아산병원 가정의학과 전공의, 국립암센터 암예방검진센터 전임의, 인제대학교 해운대백병원 가정의학과 임상강사, 인제대학교 해운대백병원 가정의학과 전임강사, 인제대학교 해운대백병원 가정의학과 조교수, 울산대학교병원 가정의학과 임상조교수, 울산대학교병원 가정의학과 조교수, 울산대학교병원 가정의학과 부교수, 울산대학교병원 가정의학과 교수\n[직책] 건강증진센터장, 건강의학과 진료과장\n[수상] 2014년 대한가정의학회 추계학술대회 우수논문상",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 5,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 6,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": [
+        {
+          "schedule_date": "2026-04-24",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-26",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-27",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-28",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-29",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        }
+      ]
+    },
+    {
+      "name": "정태흠",
+      "department": "가정의학과",
+      "position": "교수",
+      "specialty": "만성질환관리, 건강검진, 비만, 금연, 골다공증, 진화의학",
+      "profile_url": "https://www.uuh.ulsan.kr/kr/index.php?pCode=doctor&idx=42",
+      "photo_url": "https://www.uuh.ulsan.kr/_Data/MediTeamData/d886724bfd3370cd391a7ff63dc4c5d5.png",
+      "external_id": "UUH-42",
+      "notes": "[학력] 영남대학교 의과대학 의학사, 영남대학교 대학원 의학박사(예방의학전공), 런던대학교 보건대학원 석사과정수료(역학전공)\n[경력] 영남대학교 의료원 가정의학과전공의, 울산대학교병원 가정의학과 과장, 울산대학교 의과대학 가정의학과 교수, 울산대학교병원 건강증진센터 소장, 대한가정의학회 수련위원, 대한임상건강증진학회 전문이사, 건강보험심사평가원 비상근심사위원\n[직책] 진료과장",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 4,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 5,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 6,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": [
+        {
+          "schedule_date": "2026-04-24",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-26",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-27",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-28",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-29",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-29",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        }
+      ]
+    },
+    {
+      "name": "황혜아",
+      "department": "가정의학과",
+      "position": "임상조교수",
+      "specialty": "평생건강관리,골다공증,고지혈증,금연,심.뇌혈관질환1차예방",
+      "profile_url": "https://www.uuh.ulsan.kr/kr/index.php?pCode=doctor&idx=532",
+      "photo_url": "https://www.uuh.ulsan.kr/_Data/MediTeamData/55a4ad577d793990b3cefa37c7e2da2a.png",
+      "external_id": "UUH-532",
+      "notes": "[학력] 조선대학교 의학전문대학원 의학과 석사 졸업\n[경력] 울산대학교병원 인턴, 울산대학교병원 가정의학과 전공의",
+      "schedules": [
+        {
+          "day_of_week": 0,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 1,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 2,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 3,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 5,
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": ""
+        },
+        {
+          "day_of_week": 6,
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": ""
+        }
+      ],
+      "date_schedules": [
+        {
+          "schedule_date": "2026-04-26",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-27",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-28",
+          "time_slot": "afternoon",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "location": "",
+          "status": "진료"
+        },
+        {
+          "schedule_date": "2026-04-28",
+          "time_slot": "morning",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "location": "",
+          "status": "진료"
+        }
+      ]
+    }
+  ],
+  "doctors_with_schedules": 175,
+  "doctors_with_date_schedules": 174,
+  "depts": [
+    "가정의학과",
+    "감염내과",
+    "건강의학과",
+    "내분비내과",
+    "마취통증의학과",
+    "방사선종양학과",
+    "병리과",
+    "비뇨의학과",
+    "산부인과",
+    "성형외과",
+    "소아청소년과",
+    "소화기내과",
+    "신경과",
+    "신경외과",
+    "신장내과",
+    "심장내과",
+    "심장혈관흉부외과",
+    "안과",
+    "알레르기/류마티스내과",
+    "영상의학과",
+    "예방의학과",
+    "외과",
+    "외상외과",
+    "응급의학과",
+    "이비인후과",
+    "재활의학과",
+    "정신건강의학과",
+    "정형외과",
+    "종양내과",
+    "직업환경의학과",
+    "진단검사의학과",
+    "치과",
+    "피부과",
+    "핵의학과",
+    "혈액내과",
+    "호흡기내과"
+  ]
+}

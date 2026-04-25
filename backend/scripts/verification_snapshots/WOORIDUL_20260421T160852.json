@@ -1,0 +1,239 @@
+{
+  "hospital_code": "WOORIDUL",
+  "hospital_name": "청담 우리들병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이상호",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-1",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신상하",
+      "department": "척추진료부 / 흉추진료부 / 척추측만증 치료부",
+      "external_id": "WOORIDUL-4",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배준석",
+      "department": "척추진료부 / 흉추진료부 / 척추측만증 치료부",
+      "external_id": "WOORIDUL-2",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장원석",
+      "department": "비수술 척추진료부 / 관절치료부",
+      "external_id": "WOORIDUL-28",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "금한중",
+      "department": "척추진료부 / 흉추진료부",
+      "external_id": "WOORIDUL-6",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진",
+      "department": "척추진료부 / 흉추진료부 / 척추측만증 치료부",
+      "external_id": "WOORIDUL-154",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정훈",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-7",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최용수",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-8",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준호",
+      "department": "척추진료부 / 흉추진료부 / 척추측만증 치료부",
+      "external_id": "WOORIDUL-161",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "석주완",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-153",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김신재",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-11",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노형우",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-13",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주형",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-17",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권정우",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-141",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "기회성",
+      "department": "비수술 척추진료부 / 관절치료부",
+      "external_id": "WOORIDUL-29",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현동",
+      "department": "뇌신경진료부",
+      "external_id": "WOORIDUL-30",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장성열",
+      "department": "내과진료부",
+      "external_id": "WOORIDUL-34",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배영식",
+      "department": "흉추진료부 / 척추측만증 치료부",
+      "external_id": "WOORIDUL-18",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황의동",
+      "department": "흉추진료부 / 척추측만증 치료부",
+      "external_id": "WOORIDUL-19",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선우",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-160",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허수영",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-162",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선엽",
+      "department": "척추진료부",
+      "external_id": "WOORIDUL-163",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심규대",
+      "department": "마취의학과",
+      "external_id": "WOORIDUL-35",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지훈",
+      "department": "마취의학과",
+      "external_id": "WOORIDUL-45",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은경",
+      "department": "마취의학과",
+      "external_id": "WOORIDUL-36",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최샛별",
+      "department": "마취의학과",
+      "external_id": "WOORIDUL-37",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유위강",
+      "department": "영상진단부",
+      "external_id": "WOORIDUL-38",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지영",
+      "department": "영상진단부",
+      "external_id": "WOORIDUL-39",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박현선",
+      "department": "영상진단부",
+      "external_id": "WOORIDUL-40",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

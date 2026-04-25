@@ -1,0 +1,727 @@
+{
+  "hospital_code": "SYMC",
+  "hospital_name": "삼육서울병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "최문영",
+      "department": "가정의학과",
+      "external_id": "SYMC-10347",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤여준",
+      "department": "가정의학과",
+      "external_id": "SYMC-10321",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이찬우",
+      "department": "가정의학과",
+      "external_id": "SYMC-10309",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조유미",
+      "department": "감염내과",
+      "external_id": "SYMC-10379",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박순희",
+      "department": "내분비내과",
+      "external_id": "SYMC-10109",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준",
+      "department": "내분비내과",
+      "external_id": "SYMC-10368",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전혜지",
+      "department": "류마티스내과",
+      "external_id": "SYMC-10389",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백승권",
+      "department": "마취통증의학과",
+      "external_id": "SYMC-10244",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤소영",
+      "department": "마취통증의학과",
+      "external_id": "SYMC-10024",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장원영",
+      "department": "마취통증의학과",
+      "external_id": "SYMC-10044",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조혜제",
+      "department": "병리과",
+      "external_id": "SYMC-10203",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전재범",
+      "department": "비뇨의학과",
+      "external_id": "SYMC-10386",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박준탁",
+      "department": "비뇨의학과",
+      "external_id": "SYMC-10132",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김순찬",
+      "department": "비뇨의학과",
+      "external_id": "SYMC-10034",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조유진",
+      "department": "비자검진센터",
+      "external_id": "SYMC-10225",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양거승",
+      "department": "산부인과",
+      "external_id": "SYMC-10187",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채두병",
+      "department": "산부인과",
+      "external_id": "SYMC-10339",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송송아",
+      "department": "산부인과",
+      "external_id": "SYMC-10385",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재희",
+      "department": "소아청소년과",
+      "external_id": "SYMC-10284",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김일경",
+      "department": "소아청소년과",
+      "external_id": "SYMC-10271",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강병호",
+      "department": "소아청소년과",
+      "external_id": "SYMC-10342",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이홍식",
+      "department": "소화기내과",
+      "external_id": "SYMC-10414",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재일",
+      "department": "소화기내과",
+      "external_id": "SYMC-10209",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동휘",
+      "department": "소화기내과",
+      "external_id": "SYMC-10312",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서유석",
+      "department": "소화기내과",
+      "external_id": "SYMC-10391",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신해광",
+      "department": "소화기내과",
+      "external_id": "SYMC-10408",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고경아",
+      "department": "소화기내과",
+      "external_id": "SYMC-10417",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김규영",
+      "department": "소화기내과",
+      "external_id": "SYMC-10420",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경욱",
+      "department": "소화기내과",
+      "external_id": "SYMC-10421",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임필용",
+      "department": "소화기내과",
+      "external_id": "SYMC-10422",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽재규",
+      "department": "신경과",
+      "external_id": "SYMC-10210",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동건",
+      "department": "신경과",
+      "external_id": "SYMC-10338",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지훈",
+      "department": "신경과",
+      "external_id": "SYMC-10361",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전현길",
+      "department": "신경외과",
+      "external_id": "SYMC-10058",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승준",
+      "department": "신경외과",
+      "external_id": "SYMC-10358",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지원",
+      "department": "신경외과",
+      "external_id": "SYMC-10415",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안선호",
+      "department": "신장내과",
+      "external_id": "SYMC-10403",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지훈",
+      "department": "신장내과",
+      "external_id": "SYMC-10390",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최하나",
+      "department": "신장내과",
+      "external_id": "SYMC-10423",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조욱현",
+      "department": "심장내과",
+      "external_id": "SYMC-10221",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형오",
+      "department": "심장내과",
+      "external_id": "SYMC-10369",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정명",
+      "department": "심장내과",
+      "external_id": "SYMC-10381",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이민호",
+      "department": "심장내과",
+      "external_id": "SYMC-10409",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권단열",
+      "department": "심장내과",
+      "external_id": "SYMC-10418",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이미나",
+      "department": "심장혈관흉부외과",
+      "external_id": "SYMC-10290",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지성",
+      "department": "심장혈관흉부외과",
+      "external_id": "SYMC-10315",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조명진",
+      "department": "안과",
+      "external_id": "SYMC-10364",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승주",
+      "department": "안과",
+      "external_id": "SYMC-10185",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배지현",
+      "department": "안과",
+      "external_id": "SYMC-10256",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재연",
+      "department": "안과",
+      "external_id": "SYMC-10317",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤제홍",
+      "department": "영상의학과",
+      "external_id": "SYMC-10345",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최나영",
+      "department": "영상의학과",
+      "external_id": "SYMC-10363",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최희영",
+      "department": "영상의학과",
+      "external_id": "SYMC-10376",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황현",
+      "department": "영상의학과",
+      "external_id": "SYMC-10405",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효헌",
+      "department": "영상의학과",
+      "external_id": "SYMC-10411",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은헌",
+      "department": "외과",
+      "external_id": "SYMC-10211",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백현남",
+      "department": "외과",
+      "external_id": "SYMC-10288",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정용환",
+      "department": "외과",
+      "external_id": "SYMC-10061",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황용희",
+      "department": "외과",
+      "external_id": "SYMC-10083",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채용민",
+      "department": "외과",
+      "external_id": "SYMC-10372",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승우",
+      "department": "응급의학과",
+      "external_id": "SYMC-10229",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이용주",
+      "department": "응급의학과",
+      "external_id": "SYMC-10125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "기웅",
+      "department": "응급의학과",
+      "external_id": "SYMC-10200",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오창관",
+      "department": "응급의학과",
+      "external_id": "SYMC-10243",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권대영",
+      "department": "응급의학과",
+      "external_id": "SYMC-10348",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창현",
+      "department": "응급의학과",
+      "external_id": "SYMC-10354",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신경훈",
+      "department": "응급의학과",
+      "external_id": "SYMC-10413",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오현진",
+      "department": "이비인후과",
+      "external_id": "SYMC-10266",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "이비인후과",
+      "external_id": "SYMC-10278",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤희",
+      "department": "재활의학과",
+      "external_id": "SYMC-10276",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김리나",
+      "department": "재활의학과",
+      "external_id": "SYMC-10401",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하강욱",
+      "department": "재활의학과",
+      "external_id": "SYMC-10255",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민숙",
+      "department": "정신건강의학과",
+      "external_id": "SYMC-10238",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서태연",
+      "department": "정신건강의학과",
+      "external_id": "SYMC-10299",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이소연",
+      "department": "정신건강의학과",
+      "external_id": "SYMC-10337",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남태석",
+      "department": "정형외과",
+      "external_id": "SYMC-10298",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하성식",
+      "department": "정형외과",
+      "external_id": "SYMC-10036",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심재천",
+      "department": "정형외과",
+      "external_id": "SYMC-10142",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정홍준",
+      "department": "정형외과",
+      "external_id": "SYMC-10319",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태호",
+      "department": "정형외과",
+      "external_id": "SYMC-10419",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태순",
+      "department": "종합검진팀",
+      "external_id": "SYMC-10343",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정필균",
+      "department": "직업환경의학과",
+      "external_id": "SYMC-10283",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류은광",
+      "department": "직업환경의학과",
+      "external_id": "SYMC-10352",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용균",
+      "department": "진단검사의학과",
+      "external_id": "SYMC-10330",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조태호",
+      "department": "피부과",
+      "external_id": "SYMC-10216",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철수",
+      "department": "혈액종양내과",
+      "external_id": "SYMC-10336",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최대로",
+      "department": "혈액종양내과",
+      "external_id": "SYMC-10373",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유문빈",
+      "department": "호흡기내과",
+      "external_id": "SYMC-10175",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은나",
+      "department": "호흡기내과",
+      "external_id": "SYMC-10331",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정대현",
+      "department": "호흡기내과",
+      "external_id": "SYMC-10375",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}
