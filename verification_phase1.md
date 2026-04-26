@@ -91,7 +91,15 @@ dist/assets/index.js  460 kB / gzip 117 kB
 | GNUH2 | OK | 188 | 46 | 19.7% | 58.2s |
 
 ### FAIL/WARN 세부
-- **DCMC FAIL — 240s timeout**: 4/24 1차 검증에서는 OK (264명/42과/40s) 였음. 사이트 일시적 지연 가능성. retry 진행 중. 운영 환경에서는 Celery task 가 자동 재시도 (`max_retries=3, default_retry_delay=120`).
+- **DCMC FAIL — 360s retry 도 timeout**:
+  - 4/24 1차 검증: OK (264명/42과/40s)
+  - 4/26 1차 시도: 240s timeout
+  - 4/26 retry (360s): 다시 timeout
+  - 추가 진단:
+    - 사이트 메인 + 진료과 목록 응답 빠름 (각 0.3~0.4s)
+    - 직접 `crawl_doctors()` 호출 시 85s 도 timeout (코드 무한루프 아님 — 응답 늦은 호출이 누적)
+    - 추정 원인: 의사별 13주 스케줄 fetch 단계에서 사이트 throttle/rate-limit. 4/24 264명 × 13주 ≈ 3,432 요청을 sem=8 동시성으로 처리할 때 4/24 에는 40s 였는데 4/26 에는 사이트가 throttle 강화한 듯
+  - **운영 영향**: Celery task 가 `max_retries=3` 으로 시도하므로 timeout 시 결국 실패. weeks=13 을 줄이거나 sched_sem 동시성을 낮추는 보완 필요 (5월 검증 시 함께 처리).
 - **CHNUH WARN — 격주 진료 notes 미반영 4명** (재활의학과 안소영·최자영, 정형외과 김상범·윤자영). 4/25 동일 항목으로 기지 마이너 이슈, 5월 검증 시 함께 처리 예정.
 
 ---
@@ -145,7 +153,7 @@ dist/assets/index.js  460 kB / gzip 117 kB
 1. **이직 매칭 알림 E2E** — 임의 활성 의사를 deactivate → 같은 이름+같은 진료과를 다른 병원에 임시 INSERT → sync 호출 → `doctor_transfer_candidate` 알림 broadcast 확인
 2. **수동 등록 → 크롤러 sync 가드** — ManualDoctorModal 로 1명 등록 → 같은 병원 sync → manual 의사 record 의 모든 필드가 변하지 않는지
 3. **자동 누락 감지 E2E** — 임의 의사를 크롤링 응답에서 빼고 2회 sync → `is_active=False, deactivated_reason='auto-missing'` (내 교수면 알림만)
-4. **DCMC retry** — 운영 환경 + Celery 재시도로 정상 수집되는지
+4. **DCMC throttle 대응** — 사이트가 의사별 13주 스케줄 동시 호출 (sem=8)에 throttle 적용. weeks 축소(예: 4주) 또는 동시성 감소(sem=3) 또는 의사별 호출 사이 sleep 삽입으로 보완. 운영 Celery 재시도만으로는 회복 안 됨.
 5. **CHNUH 격주 4명 보완** — `is_clinic_cell` 의 `<span>가능</span>` 처리에 격주 표기 정밀 매칭 추가
 6. **로고 4개 폴백 (CHNUH/YWMC/KYUH/JBUH) + KOSIN 작은 크기** — 수동 교체
 
