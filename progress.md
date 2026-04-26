@@ -83,6 +83,15 @@
 - `is_pinned → academic_event_pins` 분리 — 다중 사용자 도입 시점에 묶기로 결정
 - 옛 record 의 visit/memo 통합 타임라인 — 1차에선 비활성 view 에서 별도 조회, 추후 옵션
 
+### 9. Phase 1 종합 검증 (당일 마지막)
+- 5개 영역 일괄 점검 → ✅ **PASS**. 별도 리포트: `verification_phase1.md`
+  - 빌드/Import: backend 18/18 modules + frontend `vite build` 2.33s
+  - DB 무결성: 신규 컬럼 모두 존재, FK orphan 0, snapshot 누락 0, 활성 의사 11,248명, 146 hospitals
+  - 신규 25개 크롤러 재검증: 23 OK / 1 WARN(CHNUH 격주 4명 기지) / 1 FAIL(DCMC timeout — 일시적, 운영 Celery 재시도로 회복)
+  - FastAPI: 71 routes 모두 정상 등록 (신규 schedules/date-schedules/delete 노출 확인)
+  - 시나리오 sanity: 재단 매핑 8/8 정확, `_doctor_to_response_dict` linked 합성, helper import 모두 OK
+- 5월 첫째 주 검증 시 추가 점검 항목: 이직 매칭 E2E / 수동등록 가드 / auto-missing E2E / DCMC retry / CHNUH 격주 보완 / 로고 폴백 5개
+
 ### 8. 신규 25개 병원 로고 자동 수집
 - 25개 신규 크롤러 작성 시 sub-agent 에 SKILL.md "병원 로고 자동 수집 가이드" 지시 누락 → `frontend/public/hospital-logos/` 에 신규 25개 로고 전부 부재. 교수 탐색 카드가 🏥 이모지 폴백.
 - 신규 `backend/scripts/fetch_logos.py` — SKILL.md 3단계 절차 자동화: Google favicon (sz=128, 48px 임계) → 홈페이지 HTML 의 `<img class="logo">` 추출 → 폴백.
