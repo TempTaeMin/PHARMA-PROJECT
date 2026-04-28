@@ -138,7 +138,7 @@ export default function NotificationPanel({ open, onClose, notifications, onRefr
 
         {/* List */}
         <div style={{ flex: 1, overflowY: 'auto', padding: '12px 14px' }}>
-          {/* 스케줄 변경 탭 전용: 내 교수 참여 학회 요약 */}
+          {/* 스케줄 변경 탭 전용: 내 의료진 참여 학회 요약 */}
           {tab === 'schedule_change' && lecturerEvents.length > 0 && (
             <div style={{
               marginBottom: 12, padding: 12, borderRadius: 10,
@@ -150,7 +150,7 @@ export default function NotificationPanel({ open, onClose, notifications, onRefr
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--ac)', fontSize: 12, fontWeight: 800, fontFamily: 'Manrope' }}>
                   <GraduationCap size={14} />
-                  내 교수 참여 학회
+                  내 의료진 참여 학회
                   <span style={{ fontSize: 10, color: 'var(--t3)', fontWeight: 500, marginLeft: 2 }}>
                     (향후 1개월 · {lecturerEvents.length}건)
                   </span>

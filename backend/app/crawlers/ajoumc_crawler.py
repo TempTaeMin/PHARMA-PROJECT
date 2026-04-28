@@ -470,22 +470,53 @@ class AjoumcCrawler:
         """개별 교수 진료시간 조회"""
         empty = {
             "staff_id": staff_id, "name": "", "department": "", "position": "",
-            "specialty": "", "profile_url": "", "notes": "", "schedules": [],
+            "specialty": "", "profile_url": "", "notes": "", "schedules": [], "date_schedules": [],
         }
 
         # 캐시가 이미 있으면 캐시에서 조회
         if self._cached_data is not None:
             for d in self._cached_data:
                 if d["staff_id"] == staff_id or d["external_id"] == staff_id:
-                    return {k: d.get(k, "") for k in ("staff_id", "name", "department", "position", "specialty", "profile_url", "notes", "schedules")}
+                    result = {k: d.get(k, "") for k in ("staff_id", "name", "department", "position", "specialty", "profile_url", "notes", "schedules")}
+                    result["date_schedules"] = d.get("date_schedules", [])
+                    return result
             return empty
 
         # 전체 크롤링 후 캐시에서 조회
-        await self._fetch_all()
-        if self._cached_data:
-            for d in self._cached_data:
-                if d["staff_id"] == staff_id or d["external_id"] == staff_id:
-                    return {k: d.get(k, "") for k in ("staff_id", "name", "department", "position", "specialty", "profile_url", "notes", "schedules")}
+        prefix = f"{self.hospital_code}-"
+        prof_emp_cd = staff_id.replace(prefix, "", 1) if staff_id.startswith(prefix) else staff_id
+
+        depts = await self._fetch_departments()
+        async with httpx.AsyncClient(
+            headers=self.headers, timeout=60, follow_redirects=True,
+        ) as client:
+            for dept in depts:
+                dept_no = dept["code"]
+                dept_cd = dept.get("dept_cd", "")
+                dept_name = dept["name"]
+
+                docs = await self._fetch_dept_doctors(client, dept_no, dept_cd, dept_name)
+                target = next((d for d in docs if d.get("prof_emp_cd") == prof_emp_cd), None)
+                if not target:
+                    continue
+
+                schedules_map = await self._fetch_dept_schedule(client, dept_no)
+                schedules = schedules_map.get(prof_emp_cd, [])
+                if not schedules and target.get("name"):
+                    schedules = schedules_map.get(target["name"], [])
+
+                ext_id = f"{self.hospital_code}-{prof_emp_cd}"
+                return {
+                    "staff_id": ext_id,
+                    "name": target.get("name", ""),
+                    "department": target.get("department", dept_name),
+                    "position": target.get("position", ""),
+                    "specialty": target.get("specialty", ""),
+                    "profile_url": f"{BASE_URL}/doctor/profDeptList.do?deptNo={dept_no}",
+                    "notes": "",
+                    "schedules": schedules,
+                    "date_schedules": [],
+                }
 
         return empty
 

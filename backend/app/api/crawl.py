@@ -232,7 +232,7 @@ async def sync_hospital(
             updated += 1
 
             # 스케줄 동기화
-            if schedules:
+            if schedules or hospital_code == "KBSMC":
                 await _sync_schedules(db, existing.id, schedules)
                 schedules_saved += len(schedules)
             if date_schedules:
@@ -455,11 +455,12 @@ async def register_doctor(
             existing.profile_url = data["profile_url"]
 
         # 일정 동기화
-        if schedules:
+        if schedules or date_schedules:
             from app.services.crawl_service import _sync_schedules, _sync_date_schedules
+        if schedules or hospital_code == "KBSMC":
             await _sync_schedules(db, existing.id, schedules)
-            if date_schedules:
-                await _sync_date_schedules(db, existing.id, date_schedules)
+        if date_schedules:
+            await _sync_date_schedules(db, existing.id, date_schedules)
 
         await db.commit()
         await db.refresh(existing)

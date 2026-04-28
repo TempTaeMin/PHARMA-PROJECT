@@ -521,7 +521,7 @@ class KbsmcCrawler:
                     doc.setdefault("date_schedules", [])
                     all_doctors[ext_id] = doc
 
-            # 2단계: 의사별 스케줄 + 월별 스케줄 병렬 fetch
+            # 2단계: 강북삼성은 월별 캘린더형 병원이라 date_schedules만 저장한다.
             sem = asyncio.Semaphore(8)
 
             async def fetch_one(doc):
@@ -531,11 +531,8 @@ class KbsmcCrawler:
                 mp_idx = doc.get("_mp_idx", "")
                 async with sem:
                     try:
-                        sched, date_sched = await asyncio.gather(
-                            self._fetch_doctor_schedule(client, md_idx, mp_idx),
-                            self._fetch_monthly_schedule(client, md_idx, mp_idx),
-                        )
-                        doc["schedules"] = sched
+                        date_sched = await self._fetch_monthly_schedule(client, md_idx, mp_idx)
+                        doc["schedules"] = []
                         doc["date_schedules"] = date_sched
                     except Exception as e:
                         logger.warning(f"[KBSMC] {doc.get('name','')} 스케줄 실패: {e}")
@@ -624,7 +621,6 @@ class KbsmcCrawler:
                     pass
             mp_idx = mp_idx or "1"
 
-            schedules = await self._fetch_doctor_schedule(client, md_idx, mp_idx)
             date_schedules = await self._fetch_monthly_schedule(client, md_idx, mp_idx)
 
             ext_id = f"KBSMC-{md_idx}-{mp_idx}"
@@ -636,7 +632,7 @@ class KbsmcCrawler:
                 "specialty": "",
                 "profile_url": f"{BASE_URL}/main/doctor/view.do?md_idx={md_idx}&mp_idx={mp_idx}",
                 "notes": "",
-                "schedules": schedules,
+                "schedules": [],
                 "date_schedules": date_schedules,
             }
 

@@ -20,6 +20,496 @@
 
 ---
 
+## 2026-04-28 세션(2) — 진료 시간표 표시 캘린더로 통일 + 새 디자인 적용
+
+### 배경
+사용자 보고: 의사마다 가지고 있는 시간표 데이터(주간 정규 vs 특정 날짜 override)에 따라 표시 방식이 갈라져 있었음. 주간 schedules 만 있는 의사는 *주간 표(테이블)* 로, date_schedules 있는 의사는 *미니 캘린더*로 — 같은 정보를 보는데 화면이 두 가지. 또 mockup HTML(`MrScheduler Professor - Standalone.html`)의 캘린더 디자인이 더 명확해서 그걸로 통일.
+
+### 변경 파일
+
+**신규 공용 컴포넌트** — `frontend/src/components/ScheduleCalendar.jsx`
+- props: `schedules` (주간 정규), `dateSchedules` (특정 날짜 override)
+- 한 캘린더 안에서 두 데이터 통합 표시:
+  - 그 날짜의 dateSchedule 이 있으면 → override (status='휴진' 인 경우 "휴진" 뱃지 표시)
+  - 없으면 그 요일의 schedules → am/pm 뱃지
+- 디자인 (mockup HTML 차용):
+  - 셀: `min-height: 76px`, 둥근 모서리(10px), 패딩 8px, 큰 날짜 숫자(Manrope 14px Bold)
+  - 오전 뱃지: `var(--ac-d)` / `var(--ac)` (보라 톤)
+  - 오후 뱃지: `#fff5cc` / `#92670a` (호박 톤)
+  - 주말 색상: 토 `var(--bl)`, 일 `var(--rd)` — 헤더와 본문 모두
+  - 오늘 날짜: 보라 테두리 + 배경
+- 헤더: "MONTHLY" 뱃지 + 월 이동 화살표 + 월 표시
+- 월 탭: dateSchedules 가용 월이 있으면 표시 (월간 데이터가 있는 의사만)
+- 범례: 하단에 오전/오후 뱃지 한 쌍
+
+**`frontend/src/pages/MyDoctors.jsx`**
+- `import ScheduleCalendar` 추가
+- 인라인 `MiniCalendar` 함수(라인 21-101) 제거
+- 진료 시간표 섹션(라인 305-321) — `date_schedules` 있을 때 미니 캘린더 vs 없을 때 주간 표 분기 제거. `<ScheduleCalendar schedules={detail.schedules} dateSchedules={detail.date_schedules} />` 한 줄로 통일
+
+**`frontend/src/pages/BrowseDoctors.jsx`**
+- `import ScheduleCalendar` 추가
+- 인라인 `MiniCalendar` 함수(라인 12-98) 제거
+- 진료 시간표 섹션(라인 527-548) — 분기 제거하고 `ScheduleCalendar` 사용. `schedules` 배열의 `day`/`slot` 별칭 컬럼은 매핑해서 정규화(`s.day_of_week ?? s.day`, `s.time_slot ?? s.slot`)
+- 데이터 둘 다 비어 있을 때만 "진료일정 정보 없음" 표시 유지
+
+### 손대지 않은 것
+- `DoctorScheduleHintPopup.jsx` — 단일 날짜 힌트 표시 용도라 캘린더와 다른 UX. 별도 컴포넌트로 유지
+- `ManualDoctorModal.jsx` — 입력 화면이라 주간 체크박스 그대로 (체크 입력 형식)
+- 백엔드 데이터 모델 — schedules / date_schedules 그대로
+
+### 검증
+1. 의료진 검색 → 어떤 의사 선택 → "진료시간 가져오기" → 새 캘린더 디자인으로 표시되는지 (큰 셀 + 오전/오후 뱃지)
+2. 내 의료진 상세 → 진료 시간표 섹션 — 주간만 가진 의사도, date_schedules 가진 의사도 동일한 캘린더 디자인
+3. 월 이동 화살표 동작 확인
+4. dateSchedules 가용 월이 여러 개인 의사 → 월 탭 동작 확인
+5. 휴진 처리(date_schedule.status='휴진')된 날짜 — "휴진" 뱃지 표시
+6. 오늘 날짜 — 보라 테두리/배경 강조
+7. 회귀: Dashboard, Schedule, DoctorScheduleHintPopup, ManualDoctorModal 영향 없음
+
+---
+
+## 2026-04-28 세션(1) — 내 의료진 상세화면 정리: 헤더 specialty 제거 + 방문 이력·메모 통합
+
+### 배경
+사용자 보고: 내 의료진 상세화면이 의료진마다 표시 정보 일관성 없음. 두 가지 짚음:
+1. 헤더에 "병원 · 진료과 · 전문분야" 한 줄로 다 들어가는데, 별도 "전문 분야" 섹션도 있어서 specialty 가 두 곳에서 중복. 의사마다 specialty 유무에 따라 헤더 들쭉날쭉
+2. "방문 이력" 섹션과 "방문 메모" 섹션이 같은 본문을 두 형태로 노출 — 백엔드에서 동일 메모 텍스트가 `VisitLog.post_notes`와 `VisitMemo.raw_memo` 양쪽에 저장되기 때문
+
+### 변경 파일
+
+`frontend/src/pages/MyDoctors.jsx`:
+
+**1. 헤더 specialty 제거 (라인 341)**:
+- 변경 전: `{detail.hospital_name} · {detail.department} · {detail.specialty}`
+- 변경 후: `{detail.hospital_name} · {detail.department}`
+- "전문 분야" 별도 섹션(라인 374-382)은 그대로 유지 — specialty는 이 섹션에서만 표시
+
+**2. 방문 이력 + 방문 메모 → "방문 기록" 한 섹션으로 통합 (라인 413-515 → 신규 통합 섹션)**:
+- `memoByVisitId` Map 생성 (`memo.visit_log_id` → memo)
+- `orphanMemos` 분리 (visit_log 링크 없는 standalone memo)
+- visit 카드 한 줄로 통합 표시:
+  - 헤더 행: 날짜 · 상태 뱃지 · 제품 · (memo 있으면) AI 뱃지(우측)
+  - 본문: memo 있으면 메모 제목 + AI 요약/raw 미리보기, 없으면 `post_notes`/`notes`
+  - memo 있는 카드 클릭 → 메모 페이지 이동 (`onNavigate('memos', { filters: { doctor_id }})`)
+  - memo 없는 카드는 클릭 인터랙션 없음
+- orphan memo 카드 (visit 없이 memo만 있는 경우): "메모" 뱃지 + 제목 + AI 요약/raw 미리보기, 클릭 시 메모 페이지
+- 빈 상태(visits + memos 모두 0): "방문 기록 없음" + 안내문 한 카드
+- 섹션 헤더에 [전체 보기](memo 있을 때) + [+ 방문 기록] 두 버튼 함께 배치
+
+### 디자인 차용
+- AI 뱃지(`Sparkles` 아이콘 + AI 라벨) 패턴: 기존 방문 메모 카드(라인 487-494)
+- AI 요약 한 줄 추출 로직(`s['결과'] || s['논의내용'] || s['요약']` 우선) 그대로 차용
+- 상태 색상: '성공' → 그린, '예정' → 블루, 그 외 → 앰버
+
+### 손대지 않은 것
+- 백엔드 데이터 모델/API — 변경 없음 (UI 통합만으로 사용자 혼란 해결)
+- "전문 분야" 섹션, "진료 시간표" 섹션, "이전 병원 이력" 카드 — 모두 그대로
+- 기존 백엔드 `post_notes`↔`raw_memo` 양쪽 저장 로직 — 별 작업으로 분리 (이번엔 UI에 집중)
+
+### 검증 포인트
+1. 내 의료진 상세 진입 → 헤더에 "병원 · 진료과"만 표시 (specialty 의사·없는 의사 모두 동일 형태)
+2. 다음 섹션 순서: 전문 분야(있을 때) → 진료 시간표(있을 때) → 방문 기록
+3. memo 있는 방문 카드: 날짜/상태/제품 + 제목 + AI 요약 미리보기 + AI 뱃지(있을 때) + 클릭 시 메모 페이지
+4. memo 없는 방문 카드: 날짜/상태/제품 + post_notes 텍스트, 클릭 비활성
+5. orphan memo 카드(있을 때): "메모" 뱃지 + 제목 + 본문, 클릭 시 메모 페이지
+6. 빈 상태: "방문 기록 없음" + 안내문
+7. 섹션 헤더 [전체 보기] / [+ 방문 기록] 버튼 정상 동작
+8. 회귀: 다른 페이지 영향 없음
+
+---
+
+## 2026-04-27 세션(7) — 학회 매칭 alias 보강: 신규 25+ 대학병원 + 12개 대학 약칭 그룹
+
+### 배경
+사용자 지적: 25개 신규 대학병원 크롤러가 추가됐지만 `academic.py`의 `HOSPITAL_ALIASES` / `MEDICAL_SCHOOL_GROUPS`에 반영이 안 됨. 학회 강사의 affiliation 매칭 시 동명이인 disambiguation 실패 → matched_doctor_count 정확도 저하.
+
+이전 세션에서 정리됐듯 학회 ↔ 의사 매칭의 메인 키는 **이름 + 소속병원 substring**(`_alias_match`, `academic.py:114-140`). 즉 alias 누락은 매칭 실패의 직접 원인.
+
+### 데이터 분석
+- DB(`hospitals` 테이블)에 145개 병원 등록 (`backend/app/crawlers/factory.py`의 `_DEDICATED_CRAWLERS` 기준)
+- `HOSPITAL_ALIASES` 기존 29개 / `MEDICAL_SCHOOL_GROUPS` 기존 9개 대학 그룹
+- 매핑에 누락된 대학병원: 28+ (강동경희·순천향서울·노원을지·인제 4곳·동아대·고신대·영남대·경북대·칠곡경북대·전남대·화순전남대·울산대·충북대·충남대·단국대·전북대·원광대·부산대·양산부산대·대구가톨릭·계명대·삼성창원·경상국립대·원주세브란스·강릉아산·부천성모·의정부성모·광명중앙대·조선대·건양대 + 한림 분원 3곳)
+- 매핑에 누락된 대학 약칭 그룹: 12개 (한림·인제·순천향·을지·동아·고신·영남·경북·전남·충남·충북·단국·전북·원광·부산·계명·대구가톨릭·조선·건양·경상국립·동국)
+
+### 변경 파일
+
+`backend/app/api/academic.py`:
+
+**`HOSPITAL_ALIASES`에 33개 병원 추가 (라인 64-104 부근)** — 각 병원당 자주 쓰이는 통용명 1-3개:
+- 한림대학교강남성심병원 ↔ "강남성심", "한림 강남성심"
+- 한림대학교한강성심병원 ↔ "한강성심", "한림 한강성심"
+- 한림대학교동탄성심병원 ↔ "동탄성심", "한림 동탄성심"
+- 순천향대학교서울병원 ↔ "서울순천향", "순천향대 서울"
+- 노원/의정부 을지대 ↔ "노원을지", "의정부을지"
+- 인제대 4곳 ↔ "상계백", "일산백", "부산백", "의정부백"
+- 강동경희대 ↔ "강동경희"
+- 동아대·고신대·영남대·경북대·칠곡경북대·전남대·화순전남대·울산대·충북대·충남대·단국대·전북대·원광대·부산대·양산부산대 — 정식명 + 약칭
+- 대구가톨릭·계명대 동산·삼성창원·경상국립대·원주세브란스·강릉아산
+- 부천성모·의정부성모·중앙대 광명·조선대·건양대
+
+**`MEDICAL_SCHOOL_GROUPS`에 21개 대학 그룹 추가 (라인 105-160 부근)** — 각 대학당 3가지 표현 (의대/의과대학/약칭):
+- 한림의대 → 4 분원, 인제의대 → 4 분원, 순천향의대 → 2 분원, 을지의대 → 2 분원
+- 경북의대 → 본원·칠곡, 전남의대 → 본원·화순, 부산의대 → 본원·양산
+- 동국의대, 동아의대, 고신의대, 영남의대, 충남의대, 충북의대, 단국의대, 전북의대, 원광의대
+- 대구가톨릭의대, 계명의대, 조선의대, 건양의대, 경상의대
+
+### 매칭 메커니즘
+
+`_alias_match`는 affiliation 문자열에서 *최장 일치* 우선이라:
+- "○○대학교병원" 식 정식명이 affiliation에 그대로 있으면 그 병원으로 매칭(긴 문자열)
+- "○○의대 ○○과" 같은 약칭만 있으면 학교 그룹의 모든 병원이 후보 → `_pick_candidate`가 추가 컨텍스트로 좁힘
+- 이번 보강으로 affiliation 표현 다양성을 폭넓게 커버
+
+### 손대지 않은 것
+
+- `_alias_match`, `_pick_candidate` 등 매칭 로직 자체 — 변경 없음. 사전만 보강
+- 차의대(차병원 그룹), 강원대 등 일부 미등록 학교 — 학회 강사 affiliation 등장 빈도 낮으므로 추후 필요 시 보강
+- 작은 종합/요양병원의 alias — 학회 강사로 거의 등장 안 함
+
+### 적용 즉시성 / 검증
+
+- 백엔드 코드 변경이라 **백엔드 재시작 시 즉시 반영** (DB 변경 불필요)
+- 프론트 학회 캐시는 세션(6)에서 추가한 `invalidate('academic')` 호출로 의료진 변경 시 자동 비워짐. 백엔드 재시작만 하면 학회 페이지 진입 시 새 매칭 결과 표시
+- 검증: 학회 강사 affiliation에 새 추가한 병원·약칭이 등장하는 학회 한 건 골라 → 의사 매칭이 정상 작동하는지 확인
+- 회귀 위험: 새 alias가 false positive를 만드는 경우 — 가능성 낮지만 데이터 보면서 모니터링
+
+---
+
+## 2026-04-27 세션(6) — 의료진 변경 시 학회 캐시 무효화 + 내 일정 학회 카드 색상 통일
+
+### 배경
+1. 의료진 등록/해제 후 학회 일정 메뉴 "내 의료진 참여" 카운트가 즉시 반영 안 되는 문제. 백엔드 매칭은 매 호출마다 재계산하지만, 프론트 학회 캐시(`academic-range:from:to`, TTL 1시간)가 갱신을 막고 있었음
+2. 내 일정(Dashboard)의 학회 카드는 amber 톤, 전체 일정(Schedule)은 연한 보라색 — 두 화면 학회 카드 색상 불일치
+
+### 변경 파일
+
+**의료진 변경 시 `invalidate('academic')` 추가 (6개 위치):**
+- `frontend/src/pages/BrowseDoctors.jsx:273` — 의료진 등록 후
+- `frontend/src/pages/MyDoctors.jsx:144` — 의료진 크롤링 후
+- `frontend/src/pages/MyDoctors.jsx:205` — 비활성화(이직/퇴직 처리)
+- `frontend/src/pages/MyDoctors.jsx:218` — 활성 복원
+- `frontend/src/pages/MyDoctors.jsx:333` — 내 의료진 해제 (visit_grade null)
+- `frontend/src/components/ManualDoctorModal.jsx:118` — 수동 의료진 추가
+
+세션(3)에서 `cache.js:invalidate`에 dash prefix 매칭을 추가해 둔 덕에 `invalidate('academic')` 한 줄이 `academic-range:`, `academic-my-schedule:`, `academic-unclassified` 키 모두 무효화함.
+
+**학회 카드 색상 통일 — `frontend/src/components/DailySchedule.jsx`:**
+- 통계 bar 학회 칩: `#fef3c7`/`#b45309` (amber) → `#ede9fe`/`#7c3aed` (보라)
+- 학회 카드 배경/테두리: `#fffbeb` + `#fcd34d` → `#faf5ff` + `#e9d5ff`
+- 아이콘 박스: `#fef3c7`/`#b45309` → `#ede9fe`/`#7c3aed`
+- "학회" 뱃지 + 본문: `#92400e`/`#b45309` → `#7c3aed` + `var(--t1)`/`var(--t3)`
+- hover shadow: `rgba(180,83,9,.12)` → `rgba(124,58,237,.12)`
+
+이로써 내 일정과 전체 일정의 학회 카드가 시각적으로 동일한 보라색 톤.
+
+### 검증
+1. 의료진 검색 → 새 의료진 등록 → 곧장 학회 일정 메뉴 진입 → "내 의료진 참여" 탭에 매칭 즉시 반영 확인
+2. 내 의료진에서 의료진 해제/이직처리/복원 → 학회 페이지 즉시 반영
+3. 내 일정에서 학회 표시되는 날짜 진입 → 보라색 카드 확인
+4. 전체 일정과 색상 동일한지 비교
+
+---
+
+## 2026-04-27 세션(5) — 학회 진료과 세분화 작업 전체 롤백
+
+### 의사결정
+세션(4) 작업(학회명 키워드 우선 + 사전 22개 키워드 보강)을 사용자 결정으로 **전체 롤백**.
+
+**롤백 사유 (사용자 의견):**
+1. 시인성이 좋아져도 진료과 칩이 많아지면 **학회 검색·필터링이 더 어려워짐** — MR 입장에서 "내과 학회" 같은 큰 카테고리로 좁히는 게 실용적
+2. 의사 ↔ 학회 매칭의 메인 키는 **이름 + 소속병원 substring** 이라 진료과 세분화는 매칭에 직접 영향 없음 (`academic.py:305-353` `_enrich_lectures_with_doctors`, `_pick_candidate`)
+3. 키워드 매칭의 본질적 false positive 위험 — 100% 정확도 안 되면 차라리 큰 분류로 안전하게 가는 게 맞음
+
+### 변경 파일
+
+- `backend/app/services/academic_mapping.py`:
+  - **`DEPT_KEYWORDS` 원복** — 세션(4)에서 추가한 22개 키워드 모두 제거
+    (인공관절·척추·슬관절·견관절·고관절·관절경·미용성형·심혈관·심초음파·심부전·부정맥·관상동맥·천식·COPD·만성폐쇄성·골다공증·콩팥·비만·뇌혈관·법의학·입원의학·Liver)
+  - **`resolve_event` 우선순위 원복** — 학회명 우선 매칭 → 원래 3단계(KMA → organizer → keyword)
+  - 사전 외 다른 함수(`extract_departments`, `resolve_kma_category` 등) 변경 없음 — 이미 원본 그대로
+
+### 남겨둔 것
+
+- **`POST /api/academic-events/reclassify` endpoint (`backend/app/api/academic.py`)** — 제거하지 않고 유지. 진료과 세분화 작업과 무관한 *일반 admin 도구* 로 의미 있음 (사전/매핑 변경 시 기존 학회 일괄 재분류용). `mapped` 상태는 보호되므로 안전. 사용자가 호출하지 않으면 DB 영향 없음.
+- DB 데이터(`pharma_scheduler.db`) — 세션(4)에서도 `reclassify` 호출이 한 번도 없었고 DB는 옛 분류 그대로 유지됨. 추가 작업 불필요.
+
+### 학습 / 후행 세션 참고
+
+학회 진료과 분류는 다음 입장이 채택됨:
+- KMA 사이트가 주는 큰 카테고리("내과", "외과" 등)를 **그대로 표시**
+- 학회명에 명시적 단서가 있어도 *세분화 시도하지 않음* (false positive 방지)
+- 추후 분류 정확도가 정말 필요해지면 그때 AI 분류 fallback 검토 (현재 `services/ai_memo.py` Claude Haiku 4.5 인프라 보유)
+
+### 검증 포인트
+1. `git diff backend/app/services/academic_mapping.py` — 세션(4) 변경 모두 사라졌는지
+2. 백엔드 import 시 syntax 에러 없는지 (간단한 파이썬 파싱)
+3. Conferences 페이지 — 학회 카드 진료과 칩이 KMA 카테고리 그대로 표시 (내과 학회는 "내과")
+
+---
+
+## 2026-04-27 세션(4) [롤백됨] — 학회 진료과 세분화: 학회명 키워드 우선 + 사전 보강 (+ 데이터 기반 추가 보강)
+
+### 배경
+사용자 보고: 학회 카드의 진료과 칩이 "내과"로만 묶여 있어 심장내과·신장내과·알레르기내과 같은 세부 분과가 안 보임. KMA 사이트가 큰 분류만 주는 구조라 백엔드의 키워드 매칭이 보강해야 하는데, `resolve_event`가 KMA 결과를 1순위로 잡고 학회명 키워드 매칭을 건너뛰고 있었음.
+
+### 매칭 로직 정정(중요)
+이 작업의 효과 범위를 명확히 정리. **학회 ↔ 의사 매칭의 메인 키는 강사 이름 + 소속병원 substring**(`_enrich_lectures_with_doctors` `academic.py:305-353`, `_pick_candidate`). 진료과는 매칭 키 *아님* — DoctorScheduleHintPopup의 fallback에서만 정확 일치로 보조 사용(`academic.py:555-558`).
+
+따라서 진료과 세분화 작업의 진짜 가치:
+- ★ **학회 카드 진료과 칩 표시 정확도** (사용자 보고의 핵심 이슈)
+- ★ **Conferences 페이지의 진료과 필터** 정확도
+- × "내 의료진 참여" 매칭 카운트 자체에는 영향 없음 (이름+소속 키)
+
+사용자 예시:
+- "대한심혈관중재학회" → KMA "내과" 분류로 멈춰 "심혈관/순환기내과" 단서 무시됨
+- "천식알레르기 학회" → "알레르기" 키워드만 잡혀 호흡기내과 누락
+
+### 변경 파일
+
+- `backend/app/services/academic_mapping.py`
+  - **`DEPT_KEYWORDS` 보강** (라인 13-103): 누락된 세부 키워드 13종 추가
+    - 정형외과 세부: `인공관절`, `척추`, `슬관절`, `견관절`, `고관절`, `관절경`
+    - 순환기 세부: `심혈관`(사용자 예시), `부정맥`, `관상동맥`
+    - 호흡기 세부: `천식`(사용자 예시), `COPD`, `만성폐쇄성`
+    - 내분비 세부: `골다공증`
+    - 신경 세부: `뇌혈관` (`신경` 키워드보다 위 우선순위)
+    - 가정의학 세부: `비만`
+  - **`resolve_event` 우선순위 재배치** (라인 194-217):
+    - 변경 전: `KMA → organizer → keyword → unclassified`
+    - 변경 후: `학회명 세부 키워드(umbrella 외) → KMA → organizer → 학회명 umbrella → unclassified`
+    - 핵심: 학회명에서 세부 분과(`_UMBRELLA_KEYWORDS = {"내과","외과"}` 외)가 잡히면 KMA 큰 분류보다 우선
+    - umbrella만 잡힌 경우엔 KMA 결과를 우선 사용 (회귀 방지)
+
+- `backend/app/api/academic.py`
+  - `resolve_event` import 추가
+  - **`POST /academic-events/reclassify` endpoint 신설**:
+    - DB의 모든 AcademicEvent 순회하며 `resolve_event` 재호출
+    - `classification_status == 'mapped'` (수동 지정)은 skip — 사용자 보호
+    - `event.departments` 교체 + status 갱신
+    - 카운터 반환: `{ total, reclassified, skipped_mapped, unclassified }`
+    - 외부 크롤링 없이 사전/로직 변경 결과 즉시 반영 가능
+
+### 호환성
+
+- 기존 `crawl_academic_events` 태스크(`backend/app/tasks/academic_tasks.py:160-247`)는 변경 없음 — `resolve_event` 인터페이스 유지
+- 사용자가 수동 지정(`PATCH /academic-events/{id}/departments`)한 학회는 `classification_status='mapped'` 라 reclassify에서 자동 보호
+- 프론트엔드 칩 UI(`Conferences.jsx`, `AcademicEventModal.jsx`)는 이미 복수 진료과/wrap 지원 — 변경 불필요
+- 의사 ↔ 학회 매칭 로직(`academic.py:514-570`의 exact match)은 이번 범위 밖 — 학회 분류가 세부 분과로 떨어지면 의사 진료과(이미 세부 분과로 저장)와의 매칭률도 자연스럽게 오름
+
+### 검증 포인트
+1. 단위: `extract_departments("대한심혈관중재학회 춘계학술대회")` → `["순환기내과"]`
+2. 단위: `extract_departments("천식알레르기 의학회")` → `["알레르기내과", "호흡기내과"]`
+3. 단위: `resolve_event("대한심혈관중재학회", "...", {}, kma_category="내과")` → `["순환기내과"]`, status="keyword" (KMA "내과" 무시)
+4. 단위: `resolve_event("내과학회", "내과 종합", {}, kma_category="내과")` → `["내과"]`, status="kma" (학회명 단서 없으면 KMA 결과 유지)
+5. 백엔드 기동 후 `POST /api/academic-events/reclassify` 호출 → 카운터 응답 확인
+6. Conferences 페이지에서 사용자 예시 두 학회의 진료과 칩이 세부 분과로 표시되는지 확인
+7. 회귀: 기존에 잘 분류돼 있던 단순 학회(예: "정형외과 학회")의 분류 유지 확인
+8. 회귀: `classification_status='mapped'` 학회는 reclassify 후에도 그대로 유지
+
+### 후속 보강 — 실제 DB 분석 기반 키워드 7개 추가
+세션(4) 1차 보강이 사용자 예시 + 추측 기반이었던 점을 짚어주셔서, `pharma_scheduler.db`의 691건 학회 데이터를 직접 분석.
+
+**분석 결과 분포:**
+- `kma`(KMA 카테고리 매칭): 645건(93.4%) — 우선순위 변경으로 학회명에 단서 있으면 자동 세분화
+- `unclassified`: 31건(4.5%) — 절반은 진짜 분류 불가(의학교육·기초의학·정책·윤리)
+- `mapped`(수동): 11건, `keyword`: 4건
+
+**`DEPT_KEYWORDS`에 추가한 7개 키워드 (실제 학회명에서 식별):**
+
+| 키워드 | 매핑 | 근거 학회명 |
+|--------|------|------------|
+| `심초음파` | 순환기내과 | 경희심초음파 연수강좌 |
+| `Liver` | 소화기내과 | Liver 2026: 변화하는 패러다임 |
+| `콩팥` | 신장내과 | 당뇨병콩팥병연구회 |
+| `심부전` | 순환기내과 | (보강 차원) |
+| `미용성형` | 성형외과 | 대한미용성형레이저의학회 |
+| `법의학` | 병리과 | 대한법의학회 연수강좌 |
+| `입원의학` | 내과 | 입원의학과 심포지엄 |
+
+위치: `academic_mapping.py` 기존 그룹 안에 적절히 배치(`성형외` 위 `미용성형`, `심혈관` 위 `심초음파`, `간학회` 뒤 `Liver`, `신장` 위 `콩팥`, `병리` 위 `법의학` 등). 구체 키워드 우선 컨벤션 유지.
+
+**AI 분류 fallback 도입 검토 → 이번엔 안 함**:
+- 데이터 95%가 키워드로 처리되며 잔여 unclassified의 절반은 진료과 매핑이 의미 없는 학회
+- AI 비용/지연 트레이드오프 대비 효과 낮음
+- 인프라(`backend/app/services/ai_memo.py` Claude Haiku 4.5)는 이미 갖춰져 있어 추후 도입은 쉬움
+
+**다음 작업(사용자가 직접 수행):**
+1. 백엔드 기동
+2. `POST /api/academic-events/reclassify` 호출
+3. 응답 카운터 + Conferences 페이지에서 칩 표시 검증
+4. 잔여 unclassified 학회 명단 확인 후 추가 보강 필요 시 재논의
+
+---
+
+## 2026-04-27 세션(3) — 학회 캐시 무효화 버그 수정 + 내 일정 학회 표시 + 카드 뱃지 위치 고정
+
+### 배경
+세션(2)에서 학회 추가 흐름을 정비한 직후 사용자가 다음을 보고:
+- "학회 일정 메뉴에서 상세보기 → 내 일정에 등록" 클릭해도 **내 일정에도 전체 일정에도 학회가 표시되지 않음**
+- Conferences 학회 카드의 "내 일정 등록됨" 뱃지가 앞 뱃지 길이에 따라 위치가 달라져 한눈에 안 들어옴
+
+### 진단
+
+**버그 1 — `cache.js:invalidate` prefix 매칭 결함**:
+- `if (k === key || k.startsWith(key + ':'))` 만 매칭
+- 학회 캐시 키는 dash 컨벤션: `academic-range:...`, `academic-my-schedule:...`, `academic-unclassified` — 모두 `academic-` 으로 시작
+- `invalidate('academic')` 호출이 **사실상 아무것도 비우지 않고** 있었음 (TTL 1시간이라 한번 캐시되면 1시간 stale)
+- 이 결함으로 pin/unpin은 정상 작동했지만 화면 갱신이 안 됨
+
+**버그 2 — Dashboard 자체에 학회 표시 로직 없음**:
+- `useMonthCalendar` 훅이 visits만 가져오고 학회는 안 가져옴
+- 학회는 `Schedule.jsx`(전체 일정)에서만 별도 호출
+
+### 변경 파일
+
+- `frontend/src/api/cache.js` — `invalidate` 함수 매칭에 dash 추가:
+  `k === key || k.startsWith(key + ':') || k.startsWith(key + '-')` → `'academic-*'` 키 자동 무효화
+- `frontend/src/pages/Conferences.jsx` — 학회 카드의 `내 일정 등록됨` 뱃지에 `marginLeft: 'auto'` + `flexShrink: 0` 추가 → 앞 뱃지 길이와 무관하게 우측 끝 고정
+- `frontend/src/pages/Dashboard.jsx`:
+  - `academicApi`, `useCachedApi`, `invalidate`, `AcademicEventModal`, `useMemo` import 추가
+  - `academic-my-schedule:${monthKey}` 캐시 호출 추가 (Schedule.jsx와 동일한 캐시 키 → 중복 호출 안 됨)
+  - `eventsByDate` 생성 시 학회의 `start_date`~`end_date` **multi-day 매핑** 적용 (학회 진행 기간 내 모든 날짜에 표시)
+  - `selectedEvents`를 DailySchedule에 prop 전달
+  - `AcademicEventModal` 마운트 — 카드 클릭 시 상세 + unpin 가능, `onUpdated` 시 `invalidate('academic')` + `refreshAcademic()`
+  - `AcademicEventCreateModal.onCreated` 도 `refreshAcademic()` 호출 추가
+- `frontend/src/components/DailySchedule.jsx`:
+  - `BookOpen`, `MapPin` 아이콘 import 추가
+  - `events`, `onOpenAcademic` prop 추가 (기본값 `[]`)
+  - 통계 bar에 `학회 N` 칩 추가
+  - 통계 bar 아래 / 타임라인 위에 **학회 카드 섹션** 렌더링 (amber 톤, 클릭 시 onOpenAcademic)
+  - 빈 상태 분기에 `events.length === 0` 도 함께 체크 (학회만 있는 날은 빈 메시지 노출 안 함)
+  - 일정 카운트(`count`) 에 `events.length` 합산
+
+### 캐시 영향 검토
+- `'academic'`, `'my-visits'`, `'dashboard'`, `'doctors'`, `'my-doctors'`, `'hospitals'`, `'crawl-hospitals'` 등 모든 invalidate 호출처를 점검
+- dash prefix 키가 추가로 비워져도 의도와 어긋나는 경우 없음 — 오히려 의도된 동작이 이제야 작동 (특히 `invalidate('academic')`)
+
+### 손대지 않은 것
+- `Schedule.jsx` 의 학회 매핑 (시작일에만 매핑하는 단순 로직) — Dashboard만 multi-day 매핑 적용. Schedule도 통일이 필요할 수 있으나 별 작업으로 분리
+- AcademicEventModal pickMode/onPicked — 세션(2) 그대로
+
+### 검증 포인트
+1. `npm run dev` 후 사이드바 학회 일정 → 학회 클릭 → "내 일정에 등록" 클릭
+2. 사이드바 **전체 일정** → 그 학회의 시작일에 학회 표시 확인
+3. 사이드바 **내 일정** → 학회 진행 기간(시작일~종료일) 모든 날짜에 amber 학회 카드 표시 확인
+4. 학회 카드 클릭 → AcademicEventModal 열림 → 등록 해제 가능
+5. 등록 해제 후 내 일정/전체 일정 양쪽에서 즉시 사라지는지 확인 (캐시 갱신)
+6. Conferences 학회 카드의 "내 일정 등록됨" 뱃지가 카드 우측 끝에 고정 (앞 뱃지 길이와 무관)
+
+### 후속 정리 — KMA 출처 뱃지/링크 제거
+- `AcademicEventModal.jsx` — "KMA 연수" 헤더 뱃지 + "KMA 연수교육 상세 페이지" 외부 링크 버튼 제거 (전체 세션 펼침이 이미 있어 외부 링크 불필요)
+- `Conferences.jsx` 학회 목록 카드 — "KMA 연수" 뱃지 제거 (출처 노출이 카드 가독성에 도움 안 됨)
+- 두 파일에서 `SOURCE_LABELS`, `kmaDetailUrl`, `isKmaEdu`, `kmaUrl`, `src` 변수 모두 정리. ExternalLink import 는 manual url 링크에서 계속 사용되므로 유지
+
+### 후속 정리 — Conferences "다가오는 일정" 탭 제거
+- `Conferences.jsx` TABS 에서 `'upcoming'` 항목 삭제 (탭은 `matched / all / unclassified` 셋만 남김)
+- 코드상 `'upcoming'`은 사실 `'all'`과 동일하게 events 그대로 반환하던 무동작 탭이었음 (`tabFiltered` 라인 ~115 참조)
+- 기간 필터(지난 1년 / 지난 3개월 / 앞으로 3개월 / 앞으로 6개월 / 직접 선택)가 "다가오는" 범위를 이미 명시적으로 표현하므로 탭 차원의 중복 제거 → 용어 일관성 확보
+- 빈 상태 분기(`tab === 'upcoming' ? ...`)도 함께 제거
+
+---
+
+## 2026-04-27 세션(2) — 학회 일정 추가 흐름 두 갈래 분리 (직접 입력 / 학회 목록에서 선택)
+
+### 배경
+- Dashboard "+" 버튼 → "학회 일정" 카테고리가 곧바로 수동 입력 모달만 띄워서, 사이드바 학회 일정 메뉴에 쌓인 자동 수집 학회 데이터를 일정 추가 흐름에서 활용할 수 없었다.
+- 두 흐름(수동 입력 vs 기존 학회 pin)이 분리돼 사용자가 매번 직접 타이핑하거나 다른 메뉴로 이동해 검색해야 했다.
+- 학회 등록은 클릭 한 번으로 즉시 등록되는 게 부담스러우므로 상세보기 한 번 거치는 단계는 유지.
+
+### 변경 흐름
+
+```
+Dashboard + 버튼
+  └─ AddEventBottomSheet (1차) — 카테고리 3개 그대로
+      └─ 학회 일정 클릭
+          └─ AddEventBottomSheet (2차)
+              ├─ 직접 입력 → AcademicEventCreateModal (기존)
+              └─ 학회 일정에서 선택 → Conferences 페이지 (pick-for-add 모드)
+                  ├─ 상단 "일정 추가 중" 배너 + [취소]
+                  ├─ 학회 클릭 → AcademicEventModal (상세보기)
+                  └─ "내 일정에 추가" → pin + 자동 Dashboard 복귀
+```
+
+### 변경 파일
+
+- `frontend/src/components/AddEventBottomSheet.jsx` — 내부 step state(`primary`/`academic-secondary`) 도입, 2차 화면(직접 입력 / 학회 일정에서 선택 + ← 뒤로) 추가, 새 prop `onPickFromAcademicList`
+- `frontend/src/pages/Dashboard.jsx` — `onPickFromAcademicList` 콜백 → `closeFlow()` + `onNavigate('conferences', { mode: 'pick-for-add' })`
+- `frontend/src/App.jsx` — Conferences 마운트에 `mode={pageProps.mode}` 전달
+- `frontend/src/pages/Conferences.jsx` — `mode` prop 수신 → `pickMode` 파생, 헤더 위 "일정 추가 중 — 등록할 학회를 선택하세요 [취소]" 배너, AcademicEventModal에 `pickMode` + `onPicked` prop 전달
+- `frontend/src/components/AcademicEventModal.jsx` — `pickMode` / `onPicked` prop 추가. pickMode=true이고 pin 성공 시 `onPicked()` 호출(자동 Dashboard 복귀). pickMode + 이미 pinned된 학회 클릭 시 unpin 대신 `onPicked()` 호출(자동 복귀). pin 버튼 라벨도 pickMode일 때 "내 일정에 추가" / "이미 내 일정에 있음 — 일정으로 돌아가기" 로 명시
+
+### 캐시 무효화 전략
+- 기존 `Conferences.handleEventUpdated`의 `invalidate('academic')` 만으로 Schedule(전체 일정)의 학회 캐시 자동 갱신 → 추가 작업 불필요
+- Dashboard는 학회 데이터를 직접 표시하지 않아 별도 invalidate 불필요
+
+### 손대지 않은 것
+- AcademicEventCreateModal (직접 입력 모달) — 변경 없음
+- AddEventBottomSheet 1차 카테고리 정의 — 그대로 3개 (개수/순서 유지)
+- 사이드바 학회 일정 메뉴 직접 진입 흐름 (mode 없음) — 평소대로 작동
+- 백엔드/API/스키마 — 변경 없음
+
+### 검증 포인트
+1. Dashboard + → "학회 일정" → 2차 화면 노출 (직접 입력 / 학회 일정에서 선택)
+2. 2차 ← 뒤로 → 1차 화면 복귀
+3. 직접 입력 → 기존 AcademicEventCreateModal 정상 (회귀 없음)
+4. 학회 일정에서 선택 → Conferences 페이지 + "일정 추가 중" 배너 노출
+5. 배너 [취소] → Dashboard 복귀
+6. 학회 클릭 → AcademicEventModal → 라벨 "내 일정에 추가" 확인
+7. "내 일정에 추가" 클릭 → 모달 닫힘 + Dashboard 자동 복귀 + Schedule(전체 일정) 캘린더에 학회 표시
+8. 사이드바 학회 일정 직접 진입 시 배너 안 뜸, pin 후 모달 그대로 유지(회귀 없음)
+9. pickMode에서 이미 pinned 학회 클릭 시 unpin 대신 자동 복귀
+
+---
+
+## 2026-04-27 세션(1) — 사이드바 메뉴 라벨 정비 + 도메인 명사 "교수 → 의료진" 통일
+
+### 배경
+- 사이드바 메뉴 라벨이 도메인을 정확히 반영하지 못함: "일정 확인" 페이지가 실제로는 등록까지 포괄, "월간 일정"은 단순 월별 뷰가 아니라 전체 일정 뷰
+- 라벨 길이 편차로 사이드바 정렬이 들쭉날쭉
+- 카테고리 명사 "교수"가 페이지 곳곳에 흩어져 있어 사이드바 ↔ 페이지 용어가 어긋날 위험. 사용자 요청에 따라 카테고리 명사만 "의료진"으로 통일 (인물 호칭 "○○ 교수"는 유지)
+
+### 라벨 매핑
+
+| 이전 | 신규 |
+|------|------|
+| 일정 확인 | **내 일정** |
+| 월간 일정 | **전체 일정** |
+| 내 교수 | **내 의료진** |
+| 메모/회의록 | **메모·회의록** |
+| 교수 탐색 | **의료진 검색** |
+| 학회 일정 | 학회 일정 *(유지)* |
+| 설정 | 설정 *(유지)* |
+
+### 변경 파일
+
+- `frontend/src/App.jsx` — `NAV` 배열 6개 라벨 + 헤더 fallback
+- `frontend/src/pages/Schedule.jsx` — 뒤로가기 버튼 + 카드 배지
+- `frontend/src/pages/BrowseDoctors.jsx` — 배지 / 등록 토스트 / 등록 버튼 / 가이드 라인
+- `frontend/src/pages/Conferences.jsx` — 탭 / 부제 / 카드 라벨 / 빈 상태 / 배지
+- `frontend/src/pages/MyDoctors.jsx` — 빈 상태 안내 + 해제 confirm/버튼
+- `frontend/src/components/AcademicEventDetailModal.jsx` — 매칭 요약 라벨
+- `frontend/src/components/AcademicEventModal.jsx` — 강사진 라벨 + 등급 배지
+- `frontend/src/components/NotificationPanel.jsx` — 스케줄 변경 탭 요약 라벨
+- `frontend/src/pages/CrawlStatus.jsx` — 관리자 크롤링 페이지 4곳 (사이드바 라우트 없으나 일관성 유지)
+
+### 손대지 않은 것
+- 코드 주석 (UI 영향 없음)
+- `BrowseDoctors.jsx` 검색 placeholder `"병원명 또는 교수 이름 검색"` (인물 단수 표현이라 자연스러움)
+- `AddEventBottomSheet.jsx`의 `'학회 일정'` 카테고리 (라벨 변경 없음)
+- 백엔드/API/DB (영문 키 그대로)
+
+### 검증 포인트
+1. 사이드바 6개 메뉴 라벨이 신규 라벨로 표시
+2. 각 메뉴 클릭 → 헤더 타이틀이 사이드바 라벨과 동일 (App.jsx L119 fallback)
+3. 전체 일정 페이지 뒤로가기 버튼 → `내 일정`
+4. 내 의료진 빈 상태 → `의료진 검색에서 등록해주세요`
+5. 의료진 검색 페이지 가이드 → `병원 선택 → 의료진 검색 → 진료시간 확인 → 내 의료진으로 등록`
+6. 학회 페이지 탭 `내 의료진 참여`, 부제, 빈 상태, 배지 일관성
+7. 알림 패널 `내 의료진 참여 학회` 헤더
+
+---
+
 ## 2026-04-26 세션(2) — UX 보강: 일정 흐름 / 학회 필터 / 비활성·복원 / 이직 매칭 / 탐색 수리
 
 ### 배경

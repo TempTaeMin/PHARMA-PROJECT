@@ -101,7 +101,7 @@ export default function CrawlStatus() {
       {/* 탭 */}
       <div style={{ display: 'flex', gap: 4, marginBottom: 20 }}>
         {[
-          { id: 'my', label: '내 교수 크롤링', icon: Star },
+          { id: 'my', label: '내 의료진 크롤링', icon: Star },
           { id: 'hospital', label: '병원별 크롤링', icon: Activity },
           { id: 'dept', label: '진료과 선택 크롤링', icon: Users },
         ].map(t => {
@@ -120,13 +120,13 @@ export default function CrawlStatus() {
         })}
       </div>
 
-      {/* ═══ 내 교수 크롤링 ═══ */}
+      {/* ═══ 내 의료진 크롤링 ═══ */}
       {tab === 'my' && (
         <div>
           <div style={{ padding: 20, borderRadius: 12, background: 'var(--bg-1)', border: '1px solid var(--bd-s)', marginBottom: 16 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
               <div>
-                <div style={{ fontFamily: 'Outfit', fontSize: 15, fontWeight: 600 }}>내 교수 일정 크롤링</div>
+                <div style={{ fontFamily: 'Outfit', fontSize: 15, fontWeight: 600 }}>내 의료진 일정 크롤링</div>
                 <div style={{ fontSize: 12, color: 'var(--t3)', marginTop: 2 }}>
                   등록된 담당 교수들의 진료일정만 빠르게 업데이트합니다
                 </div>
@@ -137,12 +137,12 @@ export default function CrawlStatus() {
                 display: 'flex', alignItems: 'center', gap: 6, opacity: myLoading ? .6 : 1,
               }}>
                 <RefreshCw size={14} style={{ animation: myLoading ? 'spin .8s linear infinite' : 'none' }} />
-                {myLoading ? '크롤링 중…' : '내 교수 크롤링'}
+                {myLoading ? '크롤링 중…' : '내 의료진 크롤링'}
               </button>
             </div>
 
             <div style={{ fontSize: 11, color: 'var(--t3)', padding: '10px 14px', background: 'var(--bg-2)', borderRadius: 8, lineHeight: 1.6 }}>
-              • 내 교수로 등록된 교수들만 크롤링합니다<br/>
+              • 내 의료진으로 등록된 의료진만 크롤링합니다<br/>
               • 진료일정이 변경되면 자동으로 DB에 반영됩니다<br/>
               • 변경 사항은 알림으로 전달됩니다
             </div>

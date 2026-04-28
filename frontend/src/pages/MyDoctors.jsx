@@ -4,6 +4,7 @@ import { doctorApi, visitApi, crawlApi, memoApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
 import ManualDoctorModal from '../components/ManualDoctorModal';
+import ScheduleCalendar from '../components/ScheduleCalendar';
 
 const REASON_LABELS = {
   transferred: { text: '이직', color: 'var(--am)' },
@@ -17,89 +18,7 @@ const G = { A: { bg: 'var(--rd-d)', c: 'var(--rd)' }, B: { bg: 'var(--am-d)', c:
 const DAY_NAMES = ['월', '화', '수', '목', '금', '토'];
 const SLOT_NAMES = { morning: '오전', afternoon: '오후', evening: '야간' };
 
-/* ── 미니 캘린더 컴포넌트 ── */
-function MiniCalendar({ dateSchedules }) {
-  const [viewMonth, setViewMonth] = useState(() => {
-    const now = new Date();
-    return { year: now.getFullYear(), month: now.getMonth() };
-  });
-
-  if (!dateSchedules?.length) return null;
-
-  const schedMap = {};
-  dateSchedules.forEach(ds => {
-    if (!schedMap[ds.schedule_date]) schedMap[ds.schedule_date] = [];
-    schedMap[ds.schedule_date].push(ds);
-  });
-
-  const months = [...new Set(dateSchedules.map(ds => ds.schedule_date.slice(0, 7)))].sort();
-  const { year, month } = viewMonth;
-  const firstDay = new Date(year, month, 1);
-  const startDow = (firstDay.getDay() + 6) % 7;
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const todayStr = new Date().toISOString().slice(0, 10);
-  const monthStr = `${year}-${String(month + 1).padStart(2, '0')}`;
-
-  const prevMonth = () => setViewMonth(v => v.month === 0 ? { year: v.year - 1, month: 11 } : { ...v, month: v.month - 1 });
-  const nextMonth = () => setViewMonth(v => v.month === 11 ? { year: v.year + 1, month: 0 } : { ...v, month: v.month + 1 });
-
-  const cells = [];
-  for (let i = 0; i < startDow; i++) cells.push(null);
-  for (let d = 1; d <= daysInMonth; d++) cells.push(d);
-
-  return (
-    <div style={{ marginBottom: 16 }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-          <Calendar size={14} style={{ color: 'var(--ac)' }} />
-          <span style={{ fontSize: 12, fontWeight: 500 }}>날짜별 진료일정</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <button onClick={prevMonth} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--t3)', padding: 2 }}><ChevronLeft size={14} /></button>
-          <span style={{ fontSize: 12, fontWeight: 600, fontFamily: "'JetBrains Mono'", minWidth: 80, textAlign: 'center' }}>{year}.{String(month + 1).padStart(2, '0')}</span>
-          <button onClick={nextMonth} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--t3)', padding: 2 }}><ChevronRight size={14} /></button>
-        </div>
-      </div>
-      <div style={{ display: 'flex', gap: 4, marginBottom: 8, flexWrap: 'wrap' }}>
-        {months.map(m => (
-          <button key={m} onClick={() => setViewMonth({ year: parseInt(m.slice(0, 4)), month: parseInt(m.slice(5, 7)) - 1 })}
-            style={{ padding: '3px 8px', borderRadius: 4, fontSize: 10, fontFamily: "'JetBrains Mono'", cursor: 'pointer', border: m === monthStr ? '1px solid var(--ac)' : '1px solid var(--bd-s)', background: m === monthStr ? 'var(--ac-d)' : 'var(--bg-2)', color: m === monthStr ? 'var(--ac)' : 'var(--t3)' }}>
-            {m.slice(5)}월
-          </button>
-        ))}
-      </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 1, border: '1px solid var(--bd-s)', borderRadius: 10, overflow: 'hidden', background: 'var(--bd-s)' }}>
-        {['월', '화', '수', '목', '금', '토', '일'].map(d => (
-          <div key={d} style={{ padding: '8px 0', textAlign: 'center', fontSize: 11, fontWeight: 500, color: d === '일' ? 'var(--rd)' : d === '토' ? 'var(--bl)' : 'var(--t3)', background: 'var(--bg-2)' }}>{d}</div>
-        ))}
-        {cells.map((day, i) => {
-          if (day === null) return <div key={`e${i}`} style={{ background: 'var(--bg-1)', padding: 4 }} />;
-          const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-          const entries = schedMap[dateStr] || [];
-          const isToday = dateStr === todayStr;
-          const dow = (startDow + day - 1) % 7;
-          const hasAm = entries.some(e => e.time_slot === 'morning');
-          const hasPm = entries.some(e => e.time_slot === 'afternoon');
-          return (
-            <div key={day} style={{ background: isToday ? 'var(--ac-d)' : 'var(--bg-1)', padding: '5px 2px', minHeight: 44, position: 'relative' }}>
-              <div style={{ fontSize: 11, fontWeight: isToday ? 700 : 400, color: isToday ? 'var(--ac)' : dow === 6 ? 'var(--rd)' : dow === 5 ? 'var(--bl)' : 'var(--t2)', textAlign: 'center', marginBottom: 3 }}>{day}</div>
-              {entries.length > 0 && (
-                <div style={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
-                  {hasAm && <div style={{ width: 8, height: 8, borderRadius: 2, background: 'var(--ac)' }} title={`오전${entries.filter(e => e.time_slot === 'morning').map(e => e.location).filter(Boolean).join(', ') ? ': ' + entries.filter(e => e.time_slot === 'morning').map(e => e.location).filter(Boolean).join(', ') : ''}`} />}
-                  {hasPm && <div style={{ width: 8, height: 8, borderRadius: 2, background: 'var(--gn)' }} title={`오후${entries.filter(e => e.time_slot === 'afternoon').map(e => e.location).filter(Boolean).join(', ') ? ': ' + entries.filter(e => e.time_slot === 'afternoon').map(e => e.location).filter(Boolean).join(', ') : ''}`} />}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-      <div style={{ display: 'flex', gap: 10, marginTop: 8, fontSize: 11, color: 'var(--t3)' }}>
-        <span><span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 2, background: 'var(--ac)', verticalAlign: 'middle', marginRight: 3 }} />오전</span>
-        <span><span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 2, background: 'var(--gn)', verticalAlign: 'middle', marginRight: 3 }} />오후</span>
-      </div>
-    </div>
-  );
-}
+/* MiniCalendar 는 ScheduleCalendar (frontend/src/components/ScheduleCalendar.jsx) 로 통합되어 제거됨. */
 
 export default function MyDoctors({ onNavigate, initialDoctorId }) {
   // 'active' (기본, 정상 활성 내 교수) | 'inactive' (이직/퇴직/오인 등록 처리된 의사 — 복원 가능)
@@ -142,6 +61,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
       localStorage.setItem('my-doctors-last-crawl', now);
       invalidate('my-doctors');
       invalidate('doctors');
+      invalidate('academic');
       refresh();
     } catch (e) {
       setCrawlResult({ error: e.message });
@@ -202,7 +122,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
         is_active: false,
         deactivated_reason: deactivateFor.reason,
       });
-      invalidate('my-doctors'); invalidate('doctors');
+      invalidate('my-doctors'); invalidate('doctors'); invalidate('academic');
       setDeactivateFor(null);
       setDetail(null);
       refresh();
@@ -215,7 +135,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
     if (!confirm(`${doc.name} 교수를 다시 활성 상태로 복원하시겠습니까?`)) return;
     try {
       await doctorApi.update(doc.id, { is_active: true });
-      invalidate('my-doctors'); invalidate('doctors');
+      invalidate('my-doctors'); invalidate('doctors'); invalidate('academic');
       refresh();
     } catch (e) {
       alert('복원 실패: ' + e.message);
@@ -330,14 +250,14 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
           <button onClick={() => setDetail(null)} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 13, color: 'var(--t3)', cursor: 'pointer', background: 'none', border: 'none', fontFamily: 'inherit' }}><ChevronLeft size={16} /> 돌아가기</button>
           <div style={{ display: 'flex', gap: 6 }}>
             <button onClick={() => setDeactivateFor({ doctor: detail, reason: 'transferred' })} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--am)', cursor: 'pointer', background: 'none', border: '1px solid rgba(245,158,11,.3)', borderRadius: 6, padding: '5px 10px', fontFamily: 'inherit' }}><LogOut size={13} /> 이직/퇴직 처리</button>
-            <button onClick={async () => { if (!confirm(`${detail.name} 교수를 내 교수에서 해제하시겠습니까?`)) return; await doctorApi.update(detail.id, { visit_grade: null }); invalidate('my-doctors'); invalidate('doctors'); refresh(); setDetail(null); }} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--rd)', cursor: 'pointer', background: 'none', border: '1px solid rgba(248,113,113,.3)', borderRadius: 6, padding: '5px 10px', fontFamily: 'inherit' }}><UserMinus size={13} /> 내 교수 해제</button>
+            <button onClick={async () => { if (!confirm(`${detail.name} 교수를 내 의료진에서 해제하시겠습니까?`)) return; await doctorApi.update(detail.id, { visit_grade: null }); invalidate('my-doctors'); invalidate('doctors'); invalidate('academic'); refresh(); setDetail(null); }} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--rd)', cursor: 'pointer', background: 'none', border: '1px solid rgba(248,113,113,.3)', borderRadius: 6, padding: '5px 10px', fontFamily: 'inherit' }}><UserMinus size={13} /> 내 의료진 해제</button>
           </div>
         </div>
         <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
           <div style={{ width: 56, height: 56, borderRadius: 12, background: 'var(--ac-d)', color: 'var(--ac)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, fontWeight: 700, fontFamily: 'Outfit', flexShrink: 0 }}>{detail.name?.[0]}</div>
           <div>
             <div style={{ fontFamily: 'Outfit', fontSize: 20, fontWeight: 700 }}>{detail.name} <span style={{ fontSize: 14, color: 'var(--t3)', fontWeight: 400 }}>{detail.position}</span></div>
-            <div style={{ fontSize: 13, color: 'var(--t3)', marginBottom: 8 }}>{detail.hospital_name} · {detail.department} · {detail.specialty}</div>
+            <div style={{ fontSize: 13, color: 'var(--t3)', marginBottom: 8 }}>{detail.hospital_name} · {detail.department}</div>
             <span style={{ padding: '4px 10px', borderRadius: 6, fontSize: 11, fontWeight: 500, background: g.bg, color: g.c }}>{detail.visit_grade}등급</span>
           </div>
         </div>
@@ -382,23 +302,10 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
         {(detail.schedules?.length > 0 || detail.date_schedules?.length > 0) && (
           <div style={{ marginBottom: 24 }}>
             <div style={{ fontFamily: 'Outfit', fontSize: 14, fontWeight: 600, marginBottom: 10 }}>진료 시간표</div>
-            {detail.date_schedules?.length > 0 ? (
-              <MiniCalendar dateSchedules={detail.date_schedules} />
-            ) : (
-              <>
-                <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: 0, border: '1px solid var(--bd-s)', borderRadius: 10, overflow: 'hidden' }}>
-                  <thead><tr>{['구분', ...DAY_NAMES].map(h => <th key={h} style={{ padding: '10px 12px', textAlign: 'center', fontSize: 12, background: 'var(--bg-2)', color: 'var(--t3)', fontWeight: 500, borderBottom: '1px solid var(--bd-s)' }}>{h}</th>)}</tr></thead>
-                  <tbody>{['morning', 'afternoon'].map(slot => (<tr key={slot}><td style={{ padding: '10px', textAlign: 'center', fontSize: 12, color: 'var(--t3)', fontWeight: 500, background: 'var(--bg-1)', borderBottom: '1px solid var(--bd-s)' }}>{slot === 'morning' ? '오전' : '오후'}</td>{[0,1,2,3,4,5].map(di => { const has = detail.schedules.some(s => s.day_of_week === di && s.time_slot === slot); return <td key={di} style={{ padding: '10px', textAlign: 'center', background: 'var(--bg-1)', borderBottom: '1px solid var(--bd-s)' }}>{has ? <span style={{ color: 'var(--ac)', fontWeight: 700 }}>●</span> : <span style={{ color: 'var(--t3)' }}>-</span>}</td>; })}</tr>))}</tbody>
-                </table>
-                <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap', marginTop: 10 }}>
-                  {detail.schedules.map((s, i) => (
-                    <span key={i} style={{ padding: '4px 10px', borderRadius: 5, fontSize: 11, fontWeight: 500, background: 'var(--ac-d)', color: 'var(--ac)', border: '1px solid rgba(124,106,240,.2)' }}>
-                      {DAY_NAMES[s.day_of_week] || '?'} {SLOT_NAMES[s.time_slot] || ''}
-                    </span>
-                  ))}
-                </div>
-              </>
-            )}
+            <ScheduleCalendar
+              schedules={detail.schedules || []}
+              dateSchedules={detail.date_schedules || []}
+            />
             {detail.notes && (
               <div style={{ marginTop: 10, padding: '10px 12px', borderRadius: 7, background: 'var(--bg-2)', border: '1px solid var(--bd-s)' }}>
                 <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500, marginBottom: 4 }}>특이사항</div>
@@ -409,109 +316,193 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
         )}
         {/* 메모 */}
         {detail.memo && <div style={{ marginBottom: 24 }}><div style={{ fontFamily: 'Outfit', fontSize: 14, fontWeight: 600, marginBottom: 8 }}>메모</div><div style={{ padding: 14, borderRadius: 9, background: 'var(--bg-1)', border: '1px solid var(--bd-s)', fontSize: 13, color: 'var(--t2)', lineHeight: 1.6 }}>{detail.memo}</div></div>}
-        <div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-            <span style={{ fontFamily: 'Outfit', fontSize: 14, fontWeight: 600 }}>방문 이력</span>
-            <button onClick={() => { setReportFor(detail); setDetail(null); }} style={{ padding: '6px 14px', borderRadius: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: 'var(--t2)', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 4 }}><Plus size={13} /> 방문 기록</button>
-          </div>
-          {visits.length === 0 && <div style={{ padding: 30, textAlign: 'center', color: 'var(--t3)', fontSize: 13 }}>방문 기록 없음</div>}
-          {visits.map(v => (
-            <div key={v.id} style={{ padding: '12px 14px', borderRadius: 9, background: 'var(--bg-1)', border: '1px solid var(--bd-s)', marginBottom: 6 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}><span style={{ fontFamily: "'JetBrains Mono'", fontSize: 11, color: 'var(--t3)' }}>{new Date(v.visit_date).toLocaleDateString('ko-KR')}</span><span style={{ padding: '2px 8px', borderRadius: 4, fontSize: 10, fontWeight: 600, background: v.status === '성공' ? 'var(--gn-d)' : 'var(--am-d)', color: v.status === '성공' ? 'var(--gn)' : 'var(--am)' }}>{v.status}</span></div>
-              {v.product && <div style={{ fontSize: 12, color: 'var(--ac)', marginBottom: 4 }}>{v.product}</div>}
-              {v.notes && <div style={{ fontSize: 12, color: 'var(--t2)', lineHeight: 1.5 }}>{v.notes}</div>}
-            </div>
-          ))}
-        </div>
 
-        {/* 방문 메모 (AI 정리) */}
-        <div style={{ marginTop: 20 }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-            <span style={{ fontFamily: 'Outfit', fontSize: 14, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}>
-              <Sparkles size={14} style={{ color: 'var(--ac)' }} /> 방문 메모
-            </span>
-            {doctorMemos.length > 0 && (
-              <button
-                onClick={() => onNavigate?.('memos', { filters: { doctor_id: detail.id } })}
-                style={{
-                  padding: '5px 11px', borderRadius: 6,
-                  background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
-                  color: 'var(--t2)', fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
-                }}
-              >
-                전체 보기
-              </button>
-            )}
-          </div>
-          {doctorMemos.length === 0 ? (
-            <div style={{
-              padding: '20px 16px', textAlign: 'center',
-              background: 'var(--bg-1)', border: '1px dashed var(--bd-s)',
-              borderRadius: 10, fontSize: 12, color: 'var(--t3)',
-            }}>
-              아직 이 교수에 대한 메모가 없습니다.
-              <div style={{ fontSize: 11, marginTop: 4 }}>
-                방문 후 "방문결과메모"를 작성하면 여기에 표시됩니다.
+        {/* 방문 기록 — visit + memo 통합 */}
+        {(() => {
+          const memoByVisitId = new Map(
+            doctorMemos.filter(m => m.visit_log_id).map(m => [m.visit_log_id, m])
+          );
+          const orphanMemos = doctorMemos.filter(m => !m.visit_log_id);
+          const isEmpty = visits.length === 0 && orphanMemos.length === 0;
+
+          const aiSummaryLine = (m) => {
+            const aiOk = !!(m.ai_summary && (
+              (typeof m.ai_summary === 'object' && m.ai_summary.summary) ||
+              (typeof m.ai_summary === 'string' && m.ai_summary.trim())
+            ));
+            const oneLine = (() => {
+              if (aiOk && typeof m.ai_summary === 'object' && m.ai_summary.summary) {
+                const s = m.ai_summary.summary;
+                const pref = s['결과'] || s['논의내용'] || s['요약'];
+                if (pref && String(pref).trim()) return String(pref);
+                const first = Object.values(s).find(v => v && String(v).trim());
+                if (first) return String(first);
+              }
+              return (m.raw_memo || '').slice(0, 80);
+            })();
+            return { aiOk, oneLine };
+          };
+
+          const statusColor = (status) => {
+            if (status === '성공') return { bg: 'var(--gn-d)', c: 'var(--gn)' };
+            if (status === '예정') return { bg: '#e0f2fe', c: '#0369a1' };
+            return { bg: 'var(--am-d)', c: 'var(--am)' };
+          };
+
+          return (
+            <div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+                <span style={{ fontFamily: 'Outfit', fontSize: 14, fontWeight: 600 }}>방문 기록</span>
+                <div style={{ display: 'flex', gap: 6 }}>
+                  {doctorMemos.length > 0 && (
+                    <button
+                      onClick={() => onNavigate?.('memos', { filters: { doctor_id: detail.id } })}
+                      style={{
+                        padding: '6px 11px', borderRadius: 7,
+                        background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
+                        color: 'var(--t2)', fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
+                      }}
+                    >
+                      전체 보기
+                    </button>
+                  )}
+                  <button onClick={() => { setReportFor(detail); setDetail(null); }} style={{ padding: '6px 14px', borderRadius: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: 'var(--t2)', fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 4 }}><Plus size={13} /> 방문 기록</button>
+                </div>
               </div>
-            </div>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-              {doctorMemos.map(m => {
-                const aiOk = !!(m.ai_summary && (
-                  (typeof m.ai_summary === 'object' && m.ai_summary.summary) ||
-                  (typeof m.ai_summary === 'string' && m.ai_summary.trim())
-                ));
-                const oneLine = (() => {
-                  if (aiOk && typeof m.ai_summary === 'object' && m.ai_summary.summary) {
-                    const s = m.ai_summary.summary;
-                    const pref = s['결과'] || s['논의내용'] || s['요약'];
-                    if (pref && String(pref).trim()) return String(pref);
-                    const first = Object.values(s).find(v => v && String(v).trim());
-                    if (first) return String(first);
-                  }
-                  return (m.raw_memo || '').slice(0, 80);
-                })();
-                return (
-                  <div
-                    key={m.id}
-                    onClick={() => onNavigate?.('memos', { filters: { doctor_id: detail.id } })}
-                    style={{
-                      padding: '11px 13px', borderRadius: 9,
-                      background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    <div style={{ display: 'flex', gap: 6, alignItems: 'center', marginBottom: 4 }}>
-                      {aiOk && (
-                        <span style={{
-                          padding: '1px 6px', borderRadius: 4,
-                          background: 'var(--ac-d)', color: 'var(--ac)',
-                          fontSize: 9, fontWeight: 800, fontFamily: 'Manrope',
-                          display: 'inline-flex', alignItems: 'center', gap: 2,
-                        }}>
-                          <Sparkles size={8} /> AI
-                        </span>
-                      )}
-                      <span style={{ fontSize: 10, color: 'var(--t3)', fontFamily: "'JetBrains Mono'" }}>
-                        {m.visit_date ? new Date(m.visit_date).toLocaleDateString('ko-KR') : ''}
-                      </span>
-                    </div>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)', marginBottom: 3, lineHeight: 1.35 }}>
-                      {m.title || '(제목 없음)'}
-                    </div>
-                    <div style={{
-                      fontSize: 11, color: 'var(--t2)', lineHeight: 1.45,
-                      overflow: 'hidden', textOverflow: 'ellipsis',
-                      display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
-                    }}>
-                      {oneLine}
-                    </div>
+
+              {isEmpty ? (
+                <div style={{
+                  padding: '24px 16px', textAlign: 'center',
+                  background: 'var(--bg-1)', border: '1px dashed var(--bd-s)',
+                  borderRadius: 10, fontSize: 13, color: 'var(--t3)',
+                }}>
+                  방문 기록 없음
+                  <div style={{ fontSize: 11, marginTop: 4 }}>
+                    방문 후 "방문결과메모"를 작성하면 여기에 표시됩니다.
                   </div>
-                );
-              })}
+                </div>
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  {visits.map(v => {
+                    const memo = memoByVisitId.get(v.id);
+                    const sc = statusColor(v.status);
+                    const { aiOk, oneLine } = memo ? aiSummaryLine(memo) : { aiOk: false, oneLine: '' };
+                    const clickable = !!memo;
+                    return (
+                      <div
+                        key={`v-${v.id}`}
+                        onClick={clickable ? () => onNavigate?.('memos', { filters: { doctor_id: detail.id } }) : undefined}
+                        style={{
+                          padding: '12px 14px', borderRadius: 9,
+                          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+                          cursor: clickable ? 'pointer' : 'default',
+                        }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6, flexWrap: 'wrap' }}>
+                          <span style={{ fontFamily: "'JetBrains Mono'", fontSize: 11, color: 'var(--t3)' }}>
+                            {new Date(v.visit_date).toLocaleDateString('ko-KR')}
+                          </span>
+                          <span style={{
+                            padding: '2px 8px', borderRadius: 4, fontSize: 10, fontWeight: 600,
+                            background: sc.bg, color: sc.c,
+                          }}>{v.status}</span>
+                          {v.product && (
+                            <span style={{ fontSize: 11, color: 'var(--ac)', fontWeight: 600 }}>
+                              🏷 {v.product}
+                            </span>
+                          )}
+                          {aiOk && (
+                            <span style={{
+                              padding: '1px 6px', borderRadius: 4,
+                              background: 'var(--ac-d)', color: 'var(--ac)',
+                              fontSize: 9, fontWeight: 800, fontFamily: 'Manrope',
+                              display: 'inline-flex', alignItems: 'center', gap: 2, marginLeft: 'auto',
+                            }}>
+                              <Sparkles size={8} /> AI
+                            </span>
+                          )}
+                        </div>
+                        {memo ? (
+                          <>
+                            {memo.title && (
+                              <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)', marginBottom: 3, lineHeight: 1.35 }}>
+                                {memo.title}
+                              </div>
+                            )}
+                            {oneLine && (
+                              <div style={{
+                                fontSize: 12, color: 'var(--t2)', lineHeight: 1.45,
+                                overflow: 'hidden', textOverflow: 'ellipsis',
+                                display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+                              }}>
+                                {oneLine}
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          (v.post_notes || v.notes) && (
+                            <div style={{ fontSize: 12, color: 'var(--t2)', lineHeight: 1.5 }}>
+                              {v.post_notes || v.notes}
+                            </div>
+                          )
+                        )}
+                      </div>
+                    );
+                  })}
+
+                  {orphanMemos.map(m => {
+                    const { aiOk, oneLine } = aiSummaryLine(m);
+                    return (
+                      <div
+                        key={`m-${m.id}`}
+                        onClick={() => onNavigate?.('memos', { filters: { doctor_id: detail.id } })}
+                        style={{
+                          padding: '12px 14px', borderRadius: 9,
+                          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                          <span style={{ fontFamily: "'JetBrains Mono'", fontSize: 11, color: 'var(--t3)' }}>
+                            {m.visit_date ? new Date(m.visit_date).toLocaleDateString('ko-KR') : ''}
+                          </span>
+                          <span style={{
+                            padding: '2px 7px', borderRadius: 4, fontSize: 10, fontWeight: 600,
+                            background: 'var(--bg-2)', color: 'var(--t3)',
+                          }}>메모</span>
+                          {aiOk && (
+                            <span style={{
+                              padding: '1px 6px', borderRadius: 4,
+                              background: 'var(--ac-d)', color: 'var(--ac)',
+                              fontSize: 9, fontWeight: 800, fontFamily: 'Manrope',
+                              display: 'inline-flex', alignItems: 'center', gap: 2, marginLeft: 'auto',
+                            }}>
+                              <Sparkles size={8} /> AI
+                            </span>
+                          )}
+                        </div>
+                        {m.title && (
+                          <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)', marginBottom: 3, lineHeight: 1.35 }}>
+                            {m.title}
+                          </div>
+                        )}
+                        {oneLine && (
+                          <div style={{
+                            fontSize: 12, color: 'var(--t2)', lineHeight: 1.45,
+                            overflow: 'hidden', textOverflow: 'ellipsis',
+                            display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+                          }}>
+                            {oneLine}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          );
+        })()}
       </div>
       {sharedModals}
     </>);
@@ -623,7 +614,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
 
       {loading && !docs.length ? <div style={{ textAlign: 'center', padding: 60, color: 'var(--t3)' }}>로딩 중…</div> : filtered.length === 0 ? (
         <div style={{ textAlign: 'center', padding: 60, color: 'var(--t3)', fontSize: 13 }}>
-          {searchQ ? '검색 결과 없음' : '등록된 교수가 없습니다. 교수 탐색에서 등록해주세요.'}
+          {searchQ ? '검색 결과 없음' : '등록된 의료진이 없습니다. 의료진 검색에서 등록해주세요.'}
         </div>
       ) : (
         <div>

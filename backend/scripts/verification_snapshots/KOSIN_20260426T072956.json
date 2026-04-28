@@ -1,0 +1,1559 @@
+{
+  "hospital_code": "KOSIN",
+  "hospital_name": "고신대학교복음병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김부경",
+      "department": "내분비내과",
+      "external_id": "KOSIN-44",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성우",
+      "department": "내분비내과",
+      "external_id": "KOSIN-45",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상욱",
+      "department": "간담췌내과",
+      "external_id": "KOSIN-36",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김구상",
+      "department": "두경부갑상선 내분비외과",
+      "external_id": "KOSIN-186",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정만홍",
+      "department": "호흡기내과",
+      "external_id": "KOSIN-182",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신성훈",
+      "department": "혈액종양내과",
+      "external_id": "KOSIN-178",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희영",
+      "department": "핵의학과",
+      "external_id": "KOSIN-177",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희진",
+      "department": "치과",
+      "external_id": "KOSIN-169",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미향",
+      "department": "진단검사의학과",
+      "external_id": "KOSIN-165",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정원",
+      "department": "직업환경의학과",
+      "external_id": "KOSIN-161",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권영호",
+      "department": "정형외과",
+      "external_id": "KOSIN-156",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정주원",
+      "department": "응급외과",
+      "external_id": "KOSIN-145",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "계여곤",
+      "department": "응급의학과",
+      "external_id": "KOSIN-140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정원길",
+      "department": "완화의학과",
+      "external_id": "KOSIN-134",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영덕",
+      "department": "영상의학과",
+      "external_id": "KOSIN-126",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임학",
+      "department": "신장내과",
+      "external_id": "KOSIN-107",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조혁래",
+      "department": "신경외과",
+      "external_id": "KOSIN-102",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유봉구",
+      "department": "신경과",
+      "external_id": "KOSIN-96",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍유라",
+      "department": "소아청소년과",
+      "external_id": "KOSIN-82",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류현열",
+      "department": "비뇨의학과",
+      "external_id": "KOSIN-69",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서광일",
+      "department": "간담췌내과",
+      "external_id": "KOSIN-37",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신동훈",
+      "department": "간담도췌장외과 · 이식외과",
+      "external_id": "KOSIN-32",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희규",
+      "department": "알레르기내과",
+      "external_id": "KOSIN-29",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장민수",
+      "department": "피부과",
+      "external_id": "KOSIN-23",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김호찬",
+      "department": "정신건강의학과",
+      "external_id": "KOSIN-22",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심영주",
+      "department": "재활의학과",
+      "external_id": "KOSIN-21",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정성의",
+      "department": "유방외과",
+      "external_id": "KOSIN-19",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤기영",
+      "department": "위장관외과",
+      "external_id": "KOSIN-17",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상준",
+      "department": "안과",
+      "external_id": "KOSIN-16",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성달",
+      "department": "심장혈관 흉부외과",
+      "external_id": "KOSIN-15",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차태준",
+      "department": "심장내과(순환기내과)",
+      "external_id": "KOSIN-14",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박선자",
+      "department": "소화기내과",
+      "external_id": "KOSIN-12",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진형",
+      "department": "성형외과",
+      "external_id": "KOSIN-9",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최종순",
+      "department": "가정의학과",
+      "external_id": "KOSIN-3",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종빈",
+      "department": "피부과",
+      "external_id": "KOSIN-173",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서고은",
+      "department": "치과",
+      "external_id": "KOSIN-170",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지현",
+      "department": "직업환경의학과",
+      "external_id": "KOSIN-162",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상신",
+      "department": "정신건강의학과",
+      "external_id": "KOSIN-153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영식",
+      "department": "응급외과",
+      "external_id": "KOSIN-146",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공섬김",
+      "department": "완화의학과",
+      "external_id": "KOSIN-135",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허진도",
+      "department": "영상의학과",
+      "external_id": "KOSIN-127",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승욱",
+      "department": "안과",
+      "external_id": "KOSIN-121",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종인",
+      "department": "심장혈관 흉부외과",
+      "external_id": "KOSIN-115",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허정호",
+      "department": "심장내과(순환기내과)",
+      "external_id": "KOSIN-111",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정연순",
+      "department": "신장내과",
+      "external_id": "KOSIN-108",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정현",
+      "department": "신경외과",
+      "external_id": "KOSIN-103",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박무인",
+      "department": "소화기내과",
+      "external_id": "KOSIN-88",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황현용",
+      "department": "진단검사의학과",
+      "external_id": "KOSIN-81",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정소학",
+      "department": "정형외과",
+      "external_id": "KOSIN-80",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성",
+      "department": "비뇨의학과",
+      "external_id": "KOSIN-70",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영일",
+      "department": "간담도췌장외과 · 이식외과",
+      "external_id": "KOSIN-33",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공은희",
+      "department": "가정의학과",
+      "external_id": "KOSIN-30",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장태원",
+      "department": "호흡기내과",
+      "external_id": "KOSIN-26",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호섭",
+      "department": "혈액종양내과",
+      "external_id": "KOSIN-24",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서경원",
+      "department": "위장관외과",
+      "external_id": "KOSIN-18",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은미",
+      "department": "혈액종양내과",
+      "external_id": "KOSIN-179",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서기석",
+      "department": "피부과",
+      "external_id": "KOSIN-174",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강은숙",
+      "department": "치과",
+      "external_id": "KOSIN-171",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이운형",
+      "department": "진단검사의학과",
+      "external_id": "KOSIN-166",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배현숙",
+      "department": "직업환경의학과",
+      "external_id": "KOSIN-163",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현석",
+      "department": "정신건강의학과",
+      "external_id": "KOSIN-154",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권재환",
+      "department": "이비인후 갑상선 두경부외과",
+      "external_id": "KOSIN-148",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임호섭",
+      "department": "응급의학과",
+      "external_id": "KOSIN-142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김구상",
+      "department": "유방외과",
+      "external_id": "KOSIN-138",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오경승",
+      "department": "영상의학과",
+      "external_id": "KOSIN-128",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창주",
+      "department": "안과",
+      "external_id": "KOSIN-122",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성일",
+      "department": "심장내과(순환기내과)",
+      "external_id": "KOSIN-112",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신호식",
+      "department": "신장내과",
+      "external_id": "KOSIN-109",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문원",
+      "department": "소화기내과",
+      "external_id": "KOSIN-89",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정현",
+      "department": "소아청소년과",
+      "external_id": "KOSIN-84",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김택상",
+      "department": "비뇨의학과",
+      "external_id": "KOSIN-71",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문형환",
+      "department": "간담도췌장외과 · 이식외과",
+      "external_id": "KOSIN-34",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지훈",
+      "department": "가정의학과",
+      "external_id": "KOSIN-31",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "옥철호",
+      "department": "호흡기내과",
+      "external_id": "KOSIN-25",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김다정",
+      "department": "혈액종양내과",
+      "external_id": "KOSIN-180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민경",
+      "department": "치과",
+      "external_id": "KOSIN-172",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양다해",
+      "department": "진단검사의학과",
+      "external_id": "KOSIN-167",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김창수",
+      "department": "정형외과",
+      "external_id": "KOSIN-157",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형신",
+      "department": "이비인후 갑상선 두경부외과",
+      "external_id": "KOSIN-149",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김슬기",
+      "department": "응급의학과",
+      "external_id": "KOSIN-143",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성호",
+      "department": "심장혈관 흉부외과",
+      "external_id": "KOSIN-116",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김봉준",
+      "department": "심장내과(순환기내과)",
+      "external_id": "KOSIN-113",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "소화기내과",
+      "external_id": "KOSIN-90",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "연규민",
+      "department": "소아청소년과",
+      "external_id": "KOSIN-85",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강수환",
+      "department": "비뇨의학과",
+      "external_id": "KOSIN-72",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김예나",
+      "department": "신장내과",
+      "external_id": "KOSIN-13",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성설화",
+      "department": "피부과",
+      "external_id": "KOSIN-175",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최현지",
+      "department": "진단검사의학과",
+      "external_id": "KOSIN-168",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "정신건강의학과",
+      "external_id": "KOSIN-155",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주연",
+      "department": "이비인후 갑상선 두경부외과",
+      "external_id": "KOSIN-150",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기현",
+      "department": "위장관외과",
+      "external_id": "KOSIN-136",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강희",
+      "department": "영상의학과",
+      "external_id": "KOSIN-129",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최길순",
+      "department": "알레르기내과",
+      "external_id": "KOSIN-124",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "심장내과(순환기내과)",
+      "external_id": "KOSIN-114",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도연",
+      "department": "신경외과",
+      "external_id": "KOSIN-105",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조지훈",
+      "department": "간담도췌장외과 · 이식외과",
+      "external_id": "KOSIN-35",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재현",
+      "department": "소화기내과",
+      "external_id": "KOSIN-11",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤홍",
+      "department": "위장관외과",
+      "external_id": "KOSIN-137",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이해영",
+      "department": "심장혈관 흉부외과",
+      "external_id": "KOSIN-117",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경원",
+      "department": "소화기내과",
+      "external_id": "KOSIN-91",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이형석",
+      "department": "성형외과",
+      "external_id": "KOSIN-77",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정욱",
+      "department": "간담췌내과",
+      "external_id": "KOSIN-39",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "공섬김",
+      "department": "소아청소년과",
+      "external_id": "KOSIN-10",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "고택용",
+      "department": "심장혈관 흉부외과",
+      "external_id": "KOSIN-118",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심용우",
+      "department": "신경외과",
+      "external_id": "KOSIN-106",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이명훈",
+      "department": "소화기내과",
+      "external_id": "KOSIN-95",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지연",
+      "department": "정형외과",
+      "external_id": "KOSIN-158",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최윤정",
+      "department": "소화기내과",
+      "external_id": "KOSIN-92",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정호중",
+      "department": "재활의학과",
+      "external_id": "KOSIN-228",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영준",
+      "department": "이비인후 갑상선 두경부외과",
+      "external_id": "KOSIN-151",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤종혁",
+      "department": "영상의학과",
+      "external_id": "KOSIN-131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오지현",
+      "department": "알레르기내과",
+      "external_id": "KOSIN-125",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장희경",
+      "department": "병리과",
+      "external_id": "KOSIN-65",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경란",
+      "department": "방사선종양학과",
+      "external_id": "KOSIN-62",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경한",
+      "department": "마취통증의학과",
+      "external_id": "KOSIN-56",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김근태",
+      "department": "류마티스내과",
+      "external_id": "KOSIN-54",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안병권",
+      "department": "대장항문외과",
+      "external_id": "KOSIN-48",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진솔",
+      "department": "감염내과",
+      "external_id": "KOSIN-42",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심대무",
+      "department": "정형외과",
+      "external_id": "KOSIN-159",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손민영",
+      "department": "소화기내과",
+      "external_id": "KOSIN-93",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최소윤",
+      "department": "소아청소년과",
+      "external_id": "KOSIN-87",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권정미",
+      "department": "영상의학과",
+      "external_id": "KOSIN-132",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김범수",
+      "department": "핵의학과",
+      "external_id": "KOSIN-190",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오현철",
+      "department": "직업환경의학과",
+      "external_id": "KOSIN-164",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대환",
+      "department": "응급의학과",
+      "external_id": "KOSIN-144",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명국",
+      "department": "신경과",
+      "external_id": "KOSIN-97",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤수",
+      "department": "성형외과",
+      "external_id": "KOSIN-79",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천봉권",
+      "department": "병리과",
+      "external_id": "KOSIN-66",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류시정",
+      "department": "마취통증의학과",
+      "external_id": "KOSIN-57",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤경",
+      "department": "류마티스내과",
+      "external_id": "KOSIN-55",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승현",
+      "department": "대장항문외과",
+      "external_id": "KOSIN-49",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수진",
+      "department": "감염내과",
+      "external_id": "KOSIN-43",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "마선영",
+      "department": "방사선종양학과",
+      "external_id": "KOSIN-5",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최한용",
+      "department": "영상의학과",
+      "external_id": "KOSIN-133",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권수경",
+      "department": "내분비내과",
+      "external_id": "KOSIN-234",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민정",
+      "department": "신경과",
+      "external_id": "KOSIN-98",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영옥",
+      "department": "병리과",
+      "external_id": "KOSIN-67",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승훈",
+      "department": "대장항문외과",
+      "external_id": "KOSIN-50",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박태훈",
+      "department": "내분비내과",
+      "external_id": "KOSIN-46",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김두식",
+      "department": "마취통증의학과",
+      "external_id": "KOSIN-4",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최진혁",
+      "department": "유방외과",
+      "external_id": "KOSIN-139",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유제상",
+      "department": "암성통증센터",
+      "external_id": "KOSIN-209",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태화",
+      "department": "호흡기내과",
+      "external_id": "KOSIN-204",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진형",
+      "department": "신경과",
+      "external_id": "KOSIN-99",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오선주",
+      "department": "병리과",
+      "external_id": "KOSIN-68",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유제상",
+      "department": "방사선종양학과",
+      "external_id": "KOSIN-64",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주덕",
+      "department": "마취통증의학과",
+      "external_id": "KOSIN-58",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문예진",
+      "department": "대장항문외과",
+      "external_id": "KOSIN-51",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태화",
+      "department": "산부인과",
+      "external_id": "KOSIN-8",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전향배",
+      "department": "재활의학과",
+      "external_id": "KOSIN-235",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강철민",
+      "department": "두경부갑상선 내분비외과",
+      "external_id": "KOSIN-232",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강철민",
+      "department": "유방외과",
+      "external_id": "KOSIN-229",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미수",
+      "department": "암성통증센터",
+      "external_id": "KOSIN-208",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허소영",
+      "department": "신경과",
+      "external_id": "KOSIN-198",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정형주",
+      "department": "마취통증의학과",
+      "external_id": "KOSIN-60",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조수민",
+      "department": "간담췌내과",
+      "external_id": "KOSIN-40",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전병준",
+      "department": "신경과",
+      "external_id": "KOSIN-100",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강동희",
+      "department": "마취통증의학과",
+      "external_id": "KOSIN-59",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나주영",
+      "department": "신경과",
+      "external_id": "KOSIN-187",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지욱",
+      "department": "마취통증의학과",
+      "external_id": "KOSIN-61",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박은주",
+      "department": "가정의학과",
+      "external_id": "KOSIN-219",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진호",
+      "department": "영상의학과",
+      "external_id": "KOSIN-213",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김신동",
+      "department": "안과",
+      "external_id": "KOSIN-205",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정우혁",
+      "department": "소화기내과",
+      "external_id": "KOSIN-225",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜지",
+      "department": "응급의학과",
+      "external_id": "KOSIN-220",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임성경",
+      "department": "소화기내과",
+      "external_id": "KOSIN-226",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장리라",
+      "department": "소화기내과",
+      "external_id": "KOSIN-227",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태윤",
+      "department": "호흡기내과",
+      "external_id": "KOSIN-184",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이송현",
+      "department": "소화기내과",
+      "external_id": "KOSIN-221",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "성형외과",
+      "external_id": "KOSIN-224",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동영",
+      "department": "이비인후 갑상선 두경부외과",
+      "external_id": "KOSIN-222",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도섭",
+      "department": "호흡기내과",
+      "external_id": "KOSIN-217",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박귀애",
+      "department": "완화의학과",
+      "external_id": "KOSIN-215",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "류마티스내과",
+      "external_id": "KOSIN-212",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "내분비내과",
+      "external_id": "KOSIN-210",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박소영",
+      "department": "응급의학과",
+      "external_id": "KOSIN-207",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신영경",
+      "department": "영상의학과",
+      "external_id": "KOSIN-206",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미수",
+      "department": "가정의학과",
+      "external_id": "KOSIN-203",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우혜문",
+      "department": "치과",
+      "external_id": "KOSIN-202",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허재준",
+      "department": "간담췌내과",
+      "external_id": "KOSIN-195",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전요한",
+      "department": "병리과",
+      "external_id": "KOSIN-188",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "알레르기내과",
+      "external_id": "KOSIN-101",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오영림",
+      "department": "산부인과",
+      "external_id": "KOSIN-76",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "이비인후 갑상선 두경부외과",
+      "external_id": "KOSIN-236",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤항구",
+      "department": "산부인과",
+      "external_id": "KOSIN-7",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강태경",
+      "department": "산부인과",
+      "external_id": "KOSIN-75",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "정형외과",
+      "external_id": "KOSIN-160",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은택",
+      "department": "산부인과",
+      "external_id": "KOSIN-74",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수용",
+      "department": "방사선종양학과",
+      "external_id": "KOSIN-231",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종헌",
+      "department": "마취통증의학과",
+      "external_id": "KOSIN-199",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상길",
+      "department": "직업환경의학과",
+      "external_id": "KOSIN-197",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오영도",
+      "department": "간담도췌장외과 · 이식외과",
+      "external_id": "KOSIN-196",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이학수",
+      "department": "신경외과",
+      "external_id": "KOSIN-191",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전공의",
+      "department": "간담췌내과",
+      "external_id": "KOSIN-41",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

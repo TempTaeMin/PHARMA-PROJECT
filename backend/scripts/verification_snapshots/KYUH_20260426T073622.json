@@ -1,0 +1,1359 @@
+{
+  "hospital_code": "KYUH",
+  "hospital_name": "건양대학교병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "강영우",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-6F8F382AF5315CDAFFFB9BE27D09A726",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장 : 2026-05-06~2026-05-06 출장 : 2026-05-26~2026-05-26 출장 : 2026-05-27~2026-05-27 학회 : 2026-06-11~2026-06-12 출장:2026-05-04~2026-05-04 출장:2026-05-06~2026-05-06 출장:2026-05-26~2026-05-26 출장:2026-05-27~2026-05-27 학회:2026-06-11~2026-06-12"
+    },
+    {
+      "name": "최용우",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-A910FAFF1CE91D3A91E070E10BFC384C",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장:2026-05-04~2026-05-04"
+    },
+    {
+      "name": "허규찬",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-9AB233E2AFC45C9A018838A0B9E70BD8",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이태희",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-B110CCBE3D92AC0D347E33720481391B",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-06-11~2026-06-12 출장 : 2026-07-12~2026-07-19 출장 : 2026-07-28~2026-07-28 출장 : 2026-09-03~2026-09-04 출장 : 2026-09-07~2026-09-10 학회:2026-06-11~2026-06-12 출장:2026-07-12~2026-07-19 출장:2026-07-28~2026-07-28 출장:2026-09-03~2026-09-04 출장:2026-09-07~2026-09-10"
+    },
+    {
+      "name": "김선문",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-A8255D02F7A71D4203208239B04C8162",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-05-15~2026-05-15 출장 : 2026-05-29~2026-05-29 출장 : 2026-08-13~2026-08-14 출장 : 2026-11-18~2026-11-19 학회 : 2026-11-20~2026-11-20 출장:2026-05-15~2026-05-15 출장:2026-05-29~2026-05-29 출장:2026-08-13~2026-08-14 출장:2026-11-18~2026-11-19 학회:2026-11-20~2026-11-20"
+    },
+    {
+      "name": "구훈섭",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-78FD9B438CD44E344F859284539B0B1E",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-29~2026-05-29 학회 : 2026-06-25~2026-06-26 출장:2026-05-29~2026-05-29 학회:2026-06-25~2026-06-26"
+    },
+    {
+      "name": "류기현",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-6051F2F21E7E5C1A5063E7979F906CBE",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-05-04~2026-05-06 학회 : 2026-05-13~2026-05-19 학회:2026-05-04~2026-05-06 학회:2026-05-13~2026-05-19"
+    },
+    {
+      "name": "김대성",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-97DC53E5E3198872B4E9BAF37B8799D8",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-05-04~2026-05-07 출장 : 2026-05-15~2026-05-15 출장 : 2026-05-18~2026-05-18 학회 : 2026-06-19~2026-06-19 학회 : 2026-06-25~2026-06-26 출장 : 2026-07-23~2026-07-24 출장 : 2026-08-28~2026-08-28 학회:2026-05-04~2026-05-07 출장:2026-05-15~2026-05-15 출장:2026-05-18~2026-05-18 학회:2026-06-19~2026-06-19 학회:2026-06-25~2026-06-26 출장:2026-07-23~2026-07-24 출장:2026-08-28~2026-08-28"
+    },
+    {
+      "name": "이상혁",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-0FA5B893C2FED331B0408FF02AA2659C",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "정원강",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-96BAA23339A56C055A68EBF76D6A8D89",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김창화",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-C7725F48BA21A1CF5D625AFA81C8C57E",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김용준",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-1774BBE08861259E6693F5416EA02641",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준영",
+      "department": "소화기내과",
+      "external_id": "KYUH-GAS-A61BAECF2355D63949B5A2A034547CC5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배장호",
+      "department": "심장내과",
+      "external_id": "KYUH-CIR-E66F2FFD514415F167EB897C45C240D4",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김기홍",
+      "department": "심장내과",
+      "external_id": "KYUH-CIR-5573BFBF5A5A0398D103839024CBD571",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "황경규",
+      "department": "심장내과",
+      "external_id": "KYUH-CIR-067DCA7F925D6A11405123512DD4732A",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "출장 : 2026-05-04~2026-05-04 학회 : 2026-05-29~2026-05-29 출장:2026-05-04~2026-05-04 학회:2026-05-29~2026-05-29"
+    },
+    {
+      "name": "손지웅",
+      "department": "호흡기내과",
+      "external_id": "KYUH-RES-EF3914B648499E4EE2BAFED8F587B079",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "권선중",
+      "department": "호흡기내과",
+      "external_id": "KYUH-RES-E0FC0D1AC948D89077C9FE7ADD58B9D8",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "학회 : 2026-04-30~2026-04-30 출장 : 2026-05-14~2026-05-15 출장 : 2026-06-10~2026-06-11 출장 : 2026-10-07~2026-10-08 학회 : 2026-10-12~2026-10-16 학회:2026-04-30~2026-04-30 출장:2026-05-14~2026-05-15 출장:2026-06-10~2026-06-11 출장:2026-10-07~2026-10-08 학회:2026-10-12~2026-10-16"
+    },
+    {
+      "name": "정인범",
+      "department": "호흡기내과",
+      "external_id": "KYUH-RES-CEE824E51D4EBC6E39702C8013F521B1",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-05-15~2026-05-15 출장 : 2026-06-03~2026-06-05 출장 : 2026-06-15~2026-06-17 출장 : 2026-07-22~2026-07-22 출장 : 2026-08-07~2026-08-07 출장:2026-05-15~2026-05-15 출장:2026-06-03~2026-06-05 출장:2026-06-15~2026-06-17 출장:2026-07-22~2026-07-22 출장:2026-08-07~2026-08-07"
+    },
+    {
+      "name": "강다은",
+      "department": "호흡기내과",
+      "external_id": "KYUH-RES-ED38BC418E2B9796FCEB0AE278E4C754",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "학회 : 2026-04-30~2026-04-30 출장 : 2026-05-04~2026-05-04 출장 : 2026-10-08~2026-10-08 학회:2026-04-30~2026-04-30 출장:2026-05-04~2026-05-04 출장:2026-10-08~2026-10-08"
+    },
+    {
+      "name": "이민혁",
+      "department": "호흡기내과",
+      "external_id": "KYUH-RES-F0C017B9E2A78CADCB7BF0586FA6E352",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장:2026-05-04~2026-05-04"
+    },
+    {
+      "name": "박근용",
+      "department": "내분비내과",
+      "external_id": "KYUH-END-271A60B6B7CFEFAB86D99118CEEEBDBA",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "학회 : 2026-04-30~2026-04-30 학회 : 2026-10-15~2026-10-16 학회 : 2026-10-29~2026-10-30 학회:2026-04-30~2026-04-30 학회:2026-10-15~2026-10-16 학회:2026-10-29~2026-10-30"
+    },
+    {
+      "name": "김종대",
+      "department": "내분비내과",
+      "external_id": "KYUH-END-AF55F9C1FA5DE59BB98B0824E0CFFE0E",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "출장 : 2026-05-29~2026-05-29 출장 : 2026-08-28~2026-08-28 학회 : 2026-10-15~2026-10-16 학회 : 2026-10-29~2026-10-30 출장 : 2026-11-27~2026-11-27 출장 : 2027-01-29~2027-01-29 출장:2026-05-29~2026-05-29 출장:2026-08-28~2026-08-28 학회:2026-10-15~2026-10-16 학회:2026-10-29~2026-10-30 출장:2026-11-27~2026-11-27 출장:2027-01-29~2027-01-29"
+    },
+    {
+      "name": "우신영",
+      "department": "내분비내과",
+      "external_id": "KYUH-END-B42313051AFED3C41AD44047B70E0A68",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "학회 : 2026-04-30~2026-04-30 출장 : 2026-05-28~2026-05-29 출장 : 2026-06-25~2026-06-26 학회 : 2026-09-11~2026-09-11 출장 : 2026-09-17~2026-09-18 출장 : 2026-10-19~2026-10-23 학회 : 2026-10-29~2026-10-30 학회:2026-04-30~2026-04-30 출장:2026-05-28~2026-05-29 출장:2026-06-25~2026-06-26 학회:2026-09-11~2026-09-11 출장:2026-09-17~2026-09-18 출장:2026-10-19~2026-10-23 학회:2026-10-29~2026-10-30"
+    },
+    {
+      "name": "박성지",
+      "department": "내분비내과",
+      "external_id": "KYUH-END-8C5D5C150768125FA1EA60C497E8C8C2",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "학회 : 2026-04-30~2026-04-30 출장 : 2026-05-06~2026-05-08 학회 : 2026-09-11~2026-09-11 학회 : 2026-10-15~2026-10-16 출장 : 2026-10-17~2026-10-17 출장 : 2026-10-26~2026-10-28 출장 : 2026-12-28~2026-12-28 학회:2026-04-30~2026-04-30 출장:2026-05-06~2026-05-08 학회:2026-09-11~2026-09-11 학회:2026-10-15~2026-10-16 출장:2026-10-17~2026-10-17 출장:2026-10-26~2026-10-28 출장:2026-12-28~2026-12-28"
+    },
+    {
+      "name": "윤성로",
+      "department": "신장내과",
+      "external_id": "KYUH-NEP-4EB4ACFB8BD97A601AE6F20F674084C5",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": "출장 : 2026-04-27~2026-04-30 출장 : 2026-05-04~2026-05-04 출장:2026-04-27~2026-04-30 출장:2026-05-04~2026-05-04"
+    },
+    {
+      "name": "황원민",
+      "department": "신장내과",
+      "external_id": "KYUH-NEP-7FDF47CCF4320A35D3E5FA7BA39544B3",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": "출장 : 2026-05-08~2026-05-08 학회 : 2026-06-11~2026-06-12 출장:2026-05-08~2026-05-08 학회:2026-06-11~2026-06-12"
+    },
+    {
+      "name": "윤세희",
+      "department": "신장내과",
+      "external_id": "KYUH-NEP-2B92F10C28D89BA99BDB0216238BDF80",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-06-01~2026-06-05 출장 : 2026-06-08~2026-06-08 학회 : 2026-06-12~2026-06-12 학회:2026-06-01~2026-06-05 출장:2026-06-08~2026-06-08 학회:2026-06-12~2026-06-12"
+    },
+    {
+      "name": "박요한",
+      "department": "신장내과",
+      "external_id": "KYUH-NEP-5BFFD8E0D7F71C9098D8157AABDB3DDB",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-04-29~2026-04-29 학회 : 2026-04-30~2026-04-30 출장 : 2026-08-03~2026-08-07 출장:2026-04-29~2026-04-29 학회:2026-04-30~2026-04-30 출장:2026-08-03~2026-08-07"
+    },
+    {
+      "name": "이지원",
+      "department": "신장내과",
+      "external_id": "KYUH-NEP-A85B1378388AE15DC6F35A1D332379C7",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-06-25~2026-06-26 출장:2026-06-25~2026-06-26"
+    },
+    {
+      "name": "신유진",
+      "department": "신장내과",
+      "external_id": "KYUH-NEP-B40B09D8808A4270513CA8FCDD59B697",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조도연",
+      "department": "혈액종양내과",
+      "external_id": "KYUH-ONC-17ADD5F479CA72622830451C6FF631B7",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": ""
+    },
+    {
+      "name": "최종권",
+      "department": "혈액종양내과",
+      "external_id": "KYUH-ONC-224708AB0001C3E19C722A583F214AF4",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "박영규",
+      "department": "혈액종양내과",
+      "external_id": "KYUH-ONC-08025E9DABE5AB371CE5F34F20FA71EB",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": "출장 : 2026-05-20~2026-05-20 출장:2026-05-20~2026-05-20"
+    },
+    {
+      "name": "정청일",
+      "department": "류마티스내과",
+      "external_id": "KYUH-RHE-3FED8A7636E8DE5306CE8EF6A447C1B1",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "출장 : 2026-06-16~2026-06-16 출장 : 2026-07-21~2026-07-21 출장 : 2026-07-27~2026-07-31 출장 : 2026-08-18~2026-08-18 출장 : 2026-09-15~2026-09-15 출장 : 2026-10-20~2026-10-20 출장 : 2026-11-17~2026-11-17 출장 : 2026-12-15~2026-12-15 출장 : 2027-01-19~2027-01-19 출장 : 2027-03-16~2027-03-16 출장 : 2027-04-20~2027-04-20 출장:2026-06-16~2026-06-16 출장:2026-07-21~2026-07-21 출장:2026-07-27~2026-07-31 출장:2026-08-18~2026-08-18 출장:2026-09-15~2026-09-15 출장:2026-10-20~2026-10-20 출장:2026-11-17~2026-11-17 출장:2026-12-15~2026-12-15 출장:2027-01-19~2027-01-19 출장:2027-03-16~2027-03-16 출장:2027-04-20~2027-04-20"
+    },
+    {
+      "name": "권미혜",
+      "department": "류마티스내과",
+      "external_id": "KYUH-RHE-6ACF84F01BD4D9D821757C26F5DB702C",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": "출장 : 2026-05-04~2026-05-04 학회 : 2026-05-14~2026-05-15 출장 : 2026-05-22~2026-05-22 출장 : 2026-05-27~2026-05-29 학회 : 2026-06-02~2026-06-05 학회 : 2026-06-24~2026-06-26 출장 : 2026-07-20~2026-07-23 출장:2026-05-04~2026-05-04 학회:2026-05-14~2026-05-15 출장:2026-05-22~2026-05-22 출장:2026-05-27~2026-05-29 학회:2026-06-02~2026-06-05 학회:2026-06-24~2026-06-26 출장:2026-07-20~2026-07-23"
+    },
+    {
+      "name": "강성희",
+      "department": "감염내과",
+      "external_id": "KYUH-INF-87707184DDBC75E202450A75D86FFAD1",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "학회 : 2026-05-22~2026-05-22 출장 : 2026-06-12~2026-06-12 출장 : 2026-08-06~2026-08-07 학회:2026-05-22~2026-05-22 출장:2026-06-12~2026-06-12 출장:2026-08-06~2026-08-07"
+    },
+    {
+      "name": "이인구",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-6C6B2ECFE249B244D40ADD7A95BF4D34",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-05-04~2026-05-04 학회 : 2026-05-07~2026-05-08 출장:2026-05-04~2026-05-04 학회:2026-05-07~2026-05-08"
+    },
+    {
+      "name": "고경옥",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-9B7402542B8D109F26783BA67EE3DB1C",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "학회 : 2026-05-15~2026-05-15 학회:2026-05-15~2026-05-15"
+    },
+    {
+      "name": "임재우",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-9FDC1B5407BC88B1BB75B5652788B348",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "출장 : 2026-05-09~2026-05-09 학회 : 2026-05-15~2026-05-15 출장:2026-05-09~2026-05-09 학회:2026-05-15~2026-05-15"
+    },
+    {
+      "name": "윤정민",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-4F9C5D220C05D27142BB83D0894CD788",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-05-14~2026-05-15 출장 : 2026-07-23~2026-07-24 출장:2026-05-14~2026-05-15 출장:2026-07-23~2026-07-24"
+    },
+    {
+      "name": "송영화",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-7324F0DA728AC2627BCDC32AA435A64F",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "학회 : 2026-05-15~2026-05-15 출장 : 2026-06-04~2026-06-04 학회:2026-05-15~2026-05-15 출장:2026-06-04~2026-06-04"
+    },
+    {
+      "name": "오준석",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-2E6C931BB5E311445928CC770BFC77C8",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-08-10~2026-08-14 출장:2026-08-10~2026-08-14"
+    },
+    {
+      "name": "장민정",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-AFE9F469A6F5FBC86BED379D4EBBFC71",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신종수",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-73C86BBDABDA20E5336BD4904B43176C",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권영대",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-8AEBE743E9C5C3D6F5975C88B09AA008",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김수연",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-0CCCC882FE5B4A0E9DBB32697E5EF968",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송우선",
+      "department": "소아청소년과",
+      "external_id": "KYUH-PED-6DBF84C106F72792F297E585B68CA4D0",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김용덕",
+      "department": "신경과",
+      "external_id": "KYUH-NEU-5507035FA84E9AC153415C99B9ECDE4B",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "나상준",
+      "department": "신경과",
+      "external_id": "KYUH-NEU-C8ED09CE37DCE5C1D16F3CBE00D7CD00",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이선민",
+      "department": "신경과",
+      "external_id": "KYUH-NEU-BD8D5233ABFD24C2FAE1557321D99DCA",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "휴진 : 2025-08-15~2026-08-14(D-111) 휴진:2025-08-15~2026-08-14(D-111)"
+    },
+    {
+      "name": "장혜연",
+      "department": "신경과",
+      "external_id": "KYUH-NEU-2A508B3B9162FF45FB1B05DBFE369E40",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장 : 2026-05-22~2026-05-22 학회 : 2026-06-19~2026-06-19 출장 : 2026-07-03~2026-07-03 출장 : 2026-07-15~2026-07-15 학회 : 2026-09-04~2026-09-04 출장 : 2026-09-23~2026-09-23 출장 : 2026-10-07~2026-10-07 학회 : 2026-11-27~2026-11-27 출장 : 2027-01-04~2027-01-04 출장 : 2027-02-05~2027-02-05 출장:2026-05-04~2026-05-04 출장:2026-05-22~2026-05-22 학회:2026-06-19~2026-06-19 출장:2026-07-03~2026-07-03 출장:2026-07-15~2026-07-15 학회:2026-09-04~2026-09-04 출장:2026-09-23~2026-09-23 출장:2026-10-07~2026-10-07 학회:2026-11-27~2026-11-27 출장:2027-01-04~2027-01-04 출장:2027-02-05~2027-02-05"
+    },
+    {
+      "name": "오홍석",
+      "department": "정신건강의학과",
+      "external_id": "KYUH-PSY-088257DC5B600C8845C1B92CCEE37BC1",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "학회 : 2026-05-06~2026-05-06 학회 : 2026-06-26~2026-06-26 학회:2026-05-06~2026-05-06 학회:2026-06-26~2026-06-26"
+    },
+    {
+      "name": "임우영",
+      "department": "정신건강의학과",
+      "external_id": "KYUH-PSY-6AA68F5C5FFEC66B63CA4B95A544DFD0",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": "학회 : 2026-04-30~2026-04-30 출장 : 2026-05-28~2026-05-28 출장 : 2026-08-20~2026-08-21 출장 : 2026-08-24~2026-08-28 출장 : 2026-08-31~2026-08-31 학회:2026-04-30~2026-04-30 출장:2026-05-28~2026-05-28 출장:2026-08-20~2026-08-21 출장:2026-08-24~2026-08-28 출장:2026-08-31~2026-08-31"
+    },
+    {
+      "name": "신상호",
+      "department": "정신건강의학과",
+      "external_id": "KYUH-PSY-BDFC77C7E4CD7AB15634C9507BB1745D",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-05-11~2026-05-15 학회 : 2026-05-18~2026-05-20 학회 : 2026-05-26~2026-05-29 출장 : 2026-06-11~2026-06-12 출장:2026-05-11~2026-05-15 학회:2026-05-18~2026-05-20 학회:2026-05-26~2026-05-29 출장:2026-06-11~2026-06-12"
+    },
+    {
+      "name": "명기범",
+      "department": "피부과",
+      "external_id": "KYUH-DER-C62147D21F0BAFB85B16389C2211CB92",
+      "n_schedules": 7,
+      "n_date_schedules": 94,
+      "notes": ""
+    },
+    {
+      "name": "정승현",
+      "department": "피부과",
+      "external_id": "KYUH-DER-BCE74500213A72773B578E8F1C9F215C",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장 : 2026-06-02~2026-06-02 출장:2026-05-04~2026-05-04 출장:2026-06-02~2026-06-02"
+    },
+    {
+      "name": "최인석",
+      "department": "외과",
+      "external_id": "KYUH-GS-31A3747446A90CB084058BD73F9D1E79",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-04-30~2026-04-30 출장 : 2026-05-22~2026-05-22 학회 : 2026-05-29~2026-05-29 출장 : 2026-06-24~2026-06-25 출장:2026-04-30~2026-04-30 출장:2026-05-22~2026-05-22 학회:2026-05-29~2026-05-29 출장:2026-06-24~2026-06-25"
+    },
+    {
+      "name": "이상억",
+      "department": "외과",
+      "external_id": "KYUH-GS-0FCD58D33117B8ECC6DE28AA26D48DC4",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-07~2026-05-07 학회 : 2026-05-22~2026-05-22 학회 : 2026-05-29~2026-05-29 출장:2026-05-07~2026-05-07 학회:2026-05-22~2026-05-22 학회:2026-05-29~2026-05-29"
+    },
+    {
+      "name": "문주익",
+      "department": "외과",
+      "external_id": "KYUH-GS-D81FEEC119D415B663B633514F94F94D",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "학회 : 2026-05-29~2026-05-29 학회:2026-05-29~2026-05-29"
+    },
+    {
+      "name": "성낙송",
+      "department": "외과",
+      "external_id": "KYUH-GS-50344065F1FBFB2FB495A7DD46D203B4",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장 : 2026-05-06~2026-05-07 학회 : 2026-05-08~2026-05-14 출장:2026-05-04~2026-05-04 출장:2026-05-06~2026-05-07 학회:2026-05-08~2026-05-14"
+    },
+    {
+      "name": "노승재",
+      "department": "외과",
+      "external_id": "KYUH-GS-AED178A6BA495DDAD16278F38FB574D8",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-08-10~2026-08-14 출장:2026-08-10~2026-08-14"
+    },
+    {
+      "name": "김성곤",
+      "department": "외과",
+      "external_id": "KYUH-GS-E5D86274AEA8DCEF85701BC2D168988D",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "학회 : 2026-05-22~2026-05-22 학회 : 2026-05-29~2026-05-29 학회:2026-05-22~2026-05-22 학회:2026-05-29~2026-05-29"
+    },
+    {
+      "name": "김민규",
+      "department": "외과",
+      "external_id": "KYUH-GS-1B29586948A2494BDB7E02C3528884BC",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "연희진",
+      "department": "외과",
+      "external_id": "KYUH-GS-FCCE0CB0F20C3131C2E2D83282EEE8A5",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-05-29~2026-05-29 학회:2026-05-29~2026-05-29"
+    },
+    {
+      "name": "김영진",
+      "department": "외과",
+      "external_id": "KYUH-GS-FEDFF04EB07B5F99126B8FAECF52F88F",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "윤대성",
+      "department": "유방·갑상선클리닉",
+      "external_id": "KYUH-BC-1355B3042BB9B9F586233E091261B23E",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "출장 : 2026-05-28~2026-05-29 출장:2026-05-28~2026-05-29"
+    },
+    {
+      "name": "권성욱",
+      "department": "유방·갑상선클리닉",
+      "external_id": "KYUH-BC-697A0CE8C519597A7951FD4A5C9E6F5B",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "연수 : 2025-09-01~2026-08-31(D-128) 연수:2025-09-01~2026-08-31(D-128)"
+    },
+    {
+      "name": "배인의",
+      "department": "유방·갑상선클리닉",
+      "external_id": "KYUH-BC-7928E3B1BBCB87D0ABD78E1DD6F7EDAA",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "학회 : 2026-05-14~2026-05-14 학회:2026-05-14~2026-05-14"
+    },
+    {
+      "name": "송란",
+      "department": "유방·갑상선클리닉",
+      "external_id": "KYUH-BC-74A9FBD8FD85F38A2D4CC6FC515ADBBE",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": "출장 : 2026-06-08~2026-09-05 출장:2026-06-08~2026-09-05"
+    },
+    {
+      "name": "홍미진",
+      "department": "유전상담클리닉",
+      "external_id": "KYUH-GC-200B1568FD5F403EFA1D2B85F780300A",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "출장 : 2026-05-04~2026-05-04 학회 : 2026-05-18~2026-05-22 출장:2026-05-04~2026-05-04 학회:2026-05-18~2026-05-22"
+    },
+    {
+      "name": "류한영",
+      "department": "심장혈관흉부외과",
+      "external_id": "KYUH-CS-F9576A25D1FC81BB59A5B5D7314F5BD9",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-05-28~2026-05-28 출장 : 2026-06-11~2026-06-12 출장:2026-05-28~2026-05-28 출장:2026-06-11~2026-06-12"
+    },
+    {
+      "name": "김영진",
+      "department": "심장혈관흉부외과",
+      "external_id": "KYUH-CS-4D86A948BDB8EA8948C4461076DD12FE",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-06-04~2026-06-05 학회:2026-06-04~2026-06-05"
+    },
+    {
+      "name": "김재현",
+      "department": "심장혈관흉부외과",
+      "external_id": "KYUH-CS-EBF28EFB33EA657FBBDA4D0E740BC552",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장 : 2026-05-06~2026-05-08 학회 : 2026-06-04~2026-06-05 출장:2026-05-04~2026-05-04 출장:2026-05-06~2026-05-08 학회:2026-06-04~2026-06-05"
+    },
+    {
+      "name": "구관우",
+      "department": "심장혈관흉부외과",
+      "external_id": "KYUH-CS-4AC74ECB13598AFDD7565B9810B1DCCE",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-05-13~2026-05-15 출장 : 2026-06-09~2026-06-09 학회:2026-05-13~2026-05-15 출장:2026-06-09~2026-06-09"
+    },
+    {
+      "name": "황완진",
+      "department": "심장혈관흉부외과",
+      "external_id": "KYUH-CS-4F4F022E9A81E590566FA5F6EB4177F2",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-04-29~2026-04-30 출장 : 2026-05-04~2026-05-04 출장:2026-04-29~2026-04-30 출장:2026-05-04~2026-05-04"
+    },
+    {
+      "name": "김현우",
+      "department": "신경외과",
+      "external_id": "KYUH-NS-49BD7F6849860563B6D76BD5C036AC28",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-06-05~2026-06-05 출장 : 2026-06-16~2026-06-19 학회:2026-06-05~2026-06-05 출장:2026-06-16~2026-06-19"
+    },
+    {
+      "name": "서인엽",
+      "department": "신경외과",
+      "external_id": "KYUH-NS-DDFCD64CB1A4511D763228E780D7E689",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "학회 : 2026-06-05~2026-06-05 학회:2026-06-05~2026-06-05"
+    },
+    {
+      "name": "박재성",
+      "department": "신경외과",
+      "external_id": "KYUH-NS-43852B7FD220F66C1A5ECDA78F3F1D8B",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-18~2026-05-18 출장:2026-05-18~2026-05-18"
+    },
+    {
+      "name": "신의규",
+      "department": "신경외과",
+      "external_id": "KYUH-NS-F0340662DDCD3D0957A248E093CADEBB",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-06-19~2026-06-19 출장:2026-06-19~2026-06-19"
+    },
+    {
+      "name": "박거성",
+      "department": "신경외과",
+      "external_id": "KYUH-NS-9C682FEA8C78844278D75A09B9A09E49",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김광균",
+      "department": "정형외과",
+      "external_id": "KYUH-OS-F1ED93F45DFEDCC6BBBF5C5A76EE273B",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "학회 : 2026-05-08~2026-05-08 학회 : 2026-05-14~2026-05-15 학회:2026-05-08~2026-05-08 학회:2026-05-14~2026-05-15"
+    },
+    {
+      "name": "김태균",
+      "department": "정형외과",
+      "external_id": "KYUH-OS-E8D091DEAE25405192550087E881CFEC",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "송재황",
+      "department": "정형외과",
+      "external_id": "KYUH-OS-321EAA4F4E02A476EE3A0C95362E2DFE",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-04-27~2026-04-27 출장 : 2026-05-11~2026-05-11 출장:2026-04-27~2026-04-27 출장:2026-05-11~2026-05-11"
+    },
+    {
+      "name": "장민구",
+      "department": "정형외과",
+      "external_id": "KYUH-OS-ACC922872A1B539B7224F7A57C003008",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "학회 : 2026-05-20~2026-05-22 출장 : 2026-06-12~2026-06-12 학회:2026-05-20~2026-05-22 출장:2026-06-12~2026-06-12"
+    },
+    {
+      "name": "민영기",
+      "department": "정형외과",
+      "external_id": "KYUH-OS-9E7BA9AEC8F289CFDB65E1B24594EA1A",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "조형규",
+      "department": "정형외과",
+      "external_id": "KYUH-OS-B72FEF4E548E3EB0809F9EB1CDD219C7",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-04-27~2026-04-29 출장:2026-04-27~2026-04-29"
+    },
+    {
+      "name": "유창근",
+      "department": "정형외과",
+      "external_id": "KYUH-OS-125675329DE1F016275AF9F4BF066D87",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-23~2026-05-29 출장:2026-05-23~2026-05-29"
+    },
+    {
+      "name": "고인창",
+      "department": "성형외과",
+      "external_id": "KYUH-PS-D648551407101B8CAE6C1A5C6F6D35DA",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "임수연",
+      "department": "성형외과",
+      "external_id": "KYUH-PS-6440F91A059CC3F28D965BBB3A726A66",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-05-13~2026-05-13 학회 : 2026-05-14~2026-05-15 출장:2026-05-13~2026-05-13 학회:2026-05-14~2026-05-15"
+    },
+    {
+      "name": "엄기일",
+      "department": "성형외과",
+      "external_id": "KYUH-PS-1FE36EE0CD77699BC4C667C8FE488207",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "출장 : 2026-05-14~2026-05-14 출장:2026-05-14~2026-05-14"
+    },
+    {
+      "name": "이혁구",
+      "department": "성형외과",
+      "external_id": "KYUH-PS-6B12B4F4109A84C71BF11BA20406BA3A",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이성기",
+      "department": "산부인과",
+      "external_id": "KYUH-OBG-C8C4D5437E19AEA2F3DC172B8F440A27",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-08~2026-05-08 출장 : 2026-05-11~2026-05-15 출장:2026-05-08~2026-05-08 출장:2026-05-11~2026-05-15"
+    },
+    {
+      "name": "김철중",
+      "department": "산부인과",
+      "external_id": "KYUH-OBG-B86536AA2C37FFBB4C91DF65853F9F03",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": "출장 : 2026-05-11~2026-05-11 출장:2026-05-11~2026-05-11"
+    },
+    {
+      "name": "김태현",
+      "department": "산부인과",
+      "external_id": "KYUH-OBG-5D16BE842BA96154033246D2548F050B",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "출장 : 2025-08-01~2028-07-31 출장:2025-08-01~2028-07-31"
+    },
+    {
+      "name": "한재원",
+      "department": "산부인과",
+      "external_id": "KYUH-OBG-5D6C776DFCF68D6804A8EF7587021CD4",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-04-28~2026-04-28 출장 : 2026-05-15~2026-05-15 출장:2026-04-28~2026-04-28 출장:2026-05-15~2026-05-15"
+    },
+    {
+      "name": "김태윤",
+      "department": "산부인과",
+      "external_id": "KYUH-OBG-4F08DD6D7E5BACDA3367E8B38E8C9D73",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-07-01~2026-07-03 출장:2026-07-01~2026-07-03"
+    },
+    {
+      "name": "권명승",
+      "department": "산부인과",
+      "external_id": "KYUH-OBG-884B56F4930C79840237BC4A1E1B9C66",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "박진솔",
+      "department": "산부인과",
+      "external_id": "KYUH-OBG-C1662F7F585C9419309ACBEB78D3C505",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "출장 : 2026-06-15~2026-06-16 출장:2026-06-15~2026-06-16"
+    },
+    {
+      "name": "공상묵",
+      "department": "안과",
+      "external_id": "KYUH-OPH-BAA9DC95C5D7960166709081000D85B9",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-11~2026-05-14 출장:2026-05-11~2026-05-14"
+    },
+    {
+      "name": "이성철",
+      "department": "안과",
+      "external_id": "KYUH-OPH-9AE69F01A2C5EC24FE7F4389CDFD655D",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "출장 : 2026-06-15~2026-06-15 출장:2026-06-15~2026-06-15"
+    },
+    {
+      "name": "김용연",
+      "department": "안과",
+      "external_id": "KYUH-OPH-E1FA6CB9731810112009A197BB0828AB",
+      "n_schedules": 2,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "황정민",
+      "department": "안과",
+      "external_id": "KYUH-OPH-20E301420A719868B09E69DA6DFF4266",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "장영석",
+      "department": "안과",
+      "external_id": "KYUH-OPH-468155783DC4D2ED97F350CAD1C86AAF",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "학회 : 2026-05-18~2026-05-22 출장 : 2026-05-25~2026-05-28 출장 : 2026-05-26~2026-05-28 학회 : 2026-06-12~2026-06-12 학회:2026-05-18~2026-05-22 출장:2026-05-25~2026-05-28 출장:2026-05-26~2026-05-28 학회:2026-06-12~2026-06-12"
+    },
+    {
+      "name": "김국영",
+      "department": "안과",
+      "external_id": "KYUH-OPH-47F169CEC38D34A6452E9415DE0AA449",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "학회 : 2026-05-18~2026-05-22 출장 : 2026-05-25~2026-05-25 학회:2026-05-18~2026-05-22 출장:2026-05-25~2026-05-25"
+    },
+    {
+      "name": "이가현",
+      "department": "안과",
+      "external_id": "KYUH-OPH-878A7BDA9ABF4CF63612C31806B634AD",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-12~2026-05-12 출장 : 2026-05-19~2026-05-19 출장 : 2026-05-26~2026-05-26 출장 : 2026-06-02~2026-06-02 출장:2026-05-12~2026-05-12 출장:2026-05-19~2026-05-19 출장:2026-05-26~2026-05-26 출장:2026-06-02~2026-06-02"
+    },
+    {
+      "name": "박혜원",
+      "department": "안과",
+      "external_id": "KYUH-OPH-9A445647821A3C347CC04BC6949D1625",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "출장 : 2025-03-01~2027-08-16 출장:2025-03-01~2027-08-16"
+    },
+    {
+      "name": "이민우",
+      "department": "안과",
+      "external_id": "KYUH-OPH-A017FB534F2D5E72B813373346FCC17C",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장:2026-05-04~2026-05-04"
+    },
+    {
+      "name": "김정태",
+      "department": "안과",
+      "external_id": "KYUH-OPH-5DC5E6898A8C43FCFC084277FCA7CB06",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "출장 : 2026-07-28~2026-07-31 출장:2026-07-28~2026-07-31"
+    },
+    {
+      "name": "이종빈",
+      "department": "이비인후과",
+      "external_id": "KYUH-ENT-B5780C5DBE6CEF20C91CF540D9283E4B",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "인승민",
+      "department": "이비인후과",
+      "external_id": "KYUH-ENT-F565B323228E7051130D8D52DD807BF2",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": "학회 : 2026-04-24~2026-04-30 학회:2026-04-24~2026-04-30"
+    },
+    {
+      "name": "김종엽",
+      "department": "이비인후과",
+      "external_id": "KYUH-ENT-65CAE9F5183887A8ECC3C8F825F36F4D",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "출장 : 2026-04-29~2026-04-29 출장 : 2026-07-10~2026-07-10 출장 : 2026-07-13~2026-07-17 출장:2026-04-29~2026-04-29 출장:2026-07-10~2026-07-10 출장:2026-07-13~2026-07-17"
+    },
+    {
+      "name": "이기일",
+      "department": "이비인후과",
+      "external_id": "KYUH-ENT-4C0939BD14E9422C0EA5D9CB23118E50",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "연수 : 2025-08-15~2026-08-14(D-111) 연수:2025-08-15~2026-08-14(D-111)"
+    },
+    {
+      "name": "김한태",
+      "department": "이비인후과",
+      "external_id": "KYUH-ENT-6F4F82AF967E340CA0FFCF5B1DC9D312",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "휴진 : 2025-09-01~2027-08-31(D-493) 휴진:2025-09-01~2027-08-31(D-493)"
+    },
+    {
+      "name": "김대경",
+      "department": "비뇨의학과",
+      "external_id": "KYUH-URO-8B7A82A9D480F3F0D28F81DAE27C5585",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-04-29~2026-04-30 출장 : 2026-05-08~2026-05-08 출장:2026-04-29~2026-04-30 출장:2026-05-08~2026-05-08"
+    },
+    {
+      "name": "고동훈",
+      "department": "비뇨의학과",
+      "external_id": "KYUH-URO-E8CD3FAF1F5F350586B3AACB8E81B363",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "휴진 : 2025-07-01~2026-07-31(D-97) 휴진:2025-07-01~2026-07-31(D-97)"
+    },
+    {
+      "name": "현재석",
+      "department": "비뇨의학과",
+      "external_id": "KYUH-URO-28B374C34435A96A8F79485BF34AC3DB",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "출장 : 2026-06-15~2026-06-19 출장:2026-06-15~2026-06-19"
+    },
+    {
+      "name": "이영진",
+      "department": "재활의학과",
+      "external_id": "KYUH-REH-E87DE1FEA997050810C4129F0FE33F2E",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-04-29~2026-04-29 출장 : 2026-05-13~2026-05-15 출장 : 2026-06-18~2026-06-19 출장 : 2026-11-19~2026-11-20 출장 : 2026-12-18~2026-12-18 출장 : 2027-02-03~2027-02-04 출장:2026-04-29~2026-04-29 출장:2026-05-13~2026-05-15 출장:2026-06-18~2026-06-19 출장:2026-11-19~2026-11-20 출장:2026-12-18~2026-12-18 출장:2027-02-03~2027-02-04"
+    },
+    {
+      "name": "권희욱",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-D976DD41D35195E437A71CEFDAFA517E",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조춘규",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-D0E138E5A89531CECBB152D25476BD03",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성태윤",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-829CA770ED04EFE3D3028F0E20742679",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "인치범",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-A9CC82AFCB8D5CB98141BE39CD2FFD0D",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지영석",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-2428E1ABB3E5ADA10B97C4C9380BF579",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권우진",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-F944FE75041D4AB08206DF1EB3AAE442",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정지윤",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-1E502E71FA4275CD9CF10C8AB98D4F07",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유황주",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-3A1D2BC2D62040AA8784A8AE74AB2CDA",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유석",
+      "department": "마취통증의학과",
+      "external_id": "KYUH-ANE-4B4426ECDFF337FCE0F6BAEF15C694D5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영준",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-5753F46CE45C264FE6A32BF8C0A178A2",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유형식",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-6DFEF3FAA4D6ABE7B07A6ED3A1538811",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대호",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-8B8D3CA1E3974A3B2F65BBE3CA931253",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김금원",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-1D60A1B10EC95EC4D1F8FDE40A6C2F47",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영중",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-019E973B897E8879B12A1D9C11B15DEE",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한혜연",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-AD7BA4D3E78624307AA63F39B44CA930",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서재영",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-549DC9626664FC017DF317FCE1ECBE64",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유선경",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-FE39963D4041C31D3C1F57C3748215A0",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송창준",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-7202A9039CA25FC887B1C6FBA36AA248",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상준",
+      "department": "영상의학과",
+      "external_id": "KYUH-RAD-3DE0944084DE735AD020DBDF59E5E180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정훈",
+      "department": "방사선종양학과",
+      "external_id": "KYUH-RO-F0C09354EA5F35B250B422F72D724E17",
+      "n_schedules": 7,
+      "n_date_schedules": 95,
+      "notes": ""
+    },
+    {
+      "name": "김상원",
+      "department": "방사선종양학과",
+      "external_id": "KYUH-RO-8A1E70D7E0D1221605AF3E285D1861B9",
+      "n_schedules": 8,
+      "n_date_schedules": 107,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장:2026-05-04~2026-05-04"
+    },
+    {
+      "name": "박규은",
+      "department": "진단검사의학과",
+      "external_id": "KYUH-CP-51A13FB25FD960CA5BFADE8DFD635133",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종욱",
+      "department": "진단검사의학과",
+      "external_id": "KYUH-CP-5F7E9745AFEE36AB7D875C5BADB00AE6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문정",
+      "department": "진단검사의학과",
+      "external_id": "KYUH-CP-D023391F7FCB68BA0DBEBCAF893C9F12",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권건영",
+      "department": "병리과",
+      "external_id": "KYUH-AP-D63A2F4A119DE3EF39299BE22A45594C",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송영수",
+      "department": "병리과",
+      "external_id": "KYUH-AP-8F20134584B5DAA5019684A92D61B64B",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정의",
+      "department": "병리과",
+      "external_id": "KYUH-AP-51B18CF379C11E801DEF813CADF69C38",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이혜승",
+      "department": "병리과",
+      "external_id": "KYUH-AP-52732E0D277E56810F76037A00ACD853",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주헌",
+      "department": "병리과",
+      "external_id": "KYUH-AP-763343790806900C556FAD424AC71FED",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진만",
+      "department": "병리과",
+      "external_id": "KYUH-AP-FBFF3E04F6CFC5E4B950326948FEA09A",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유병연",
+      "department": "가정의학과",
+      "external_id": "KYUH-FM-9EAB67973A8F127A12B9017638075569",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "강지현",
+      "department": "가정의학과",
+      "external_id": "KYUH-FM-35F30BC8CCA7F33FFD194D5FBAE93656",
+      "n_schedules": 7,
+      "n_date_schedules": 93,
+      "notes": "학회 : 2026-07-13~2026-07-17 학회 : 2026-09-03~2026-09-04 학회 : 2026-10-13~2026-10-14 출장 : 2026-10-15~2026-10-16 출장 : 2026-10-19~2026-10-19 학회 : 2026-11-26~2026-11-27 학회:2026-07-13~2026-07-17 학회:2026-09-03~2026-09-04 학회:2026-10-13~2026-10-14 출장:2026-10-15~2026-10-16 출장:2026-10-19~2026-10-19 학회:2026-11-26~2026-11-27"
+    },
+    {
+      "name": "김성주",
+      "department": "가정의학과",
+      "external_id": "KYUH-FM-E380A37CC9678FD5B1CF3AE4D020BA0B",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "출장 : 2026-05-27~2026-05-27 출장 : 2026-05-29~2026-05-29 출장 : 2026-06-01~2026-06-03 출장 : 2026-07-20~2026-07-24 출장:2026-05-27~2026-05-27 출장:2026-05-29~2026-05-29 출장:2026-06-01~2026-06-03 출장:2026-07-20~2026-07-24"
+    },
+    {
+      "name": "이준호",
+      "department": "가정의학과",
+      "external_id": "KYUH-FM-6E61EA666AF6A9F181594F4B50C4BE0A",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "출장 : 2026-06-25~2026-06-26 출장 : 2026-08-12~2026-08-14 출장:2026-06-25~2026-06-26 출장:2026-08-12~2026-08-14"
+    },
+    {
+      "name": "김훈",
+      "department": "치과",
+      "external_id": "KYUH-DEN-F711FA09A9064A0D5D22841D8E59FAAA",
+      "n_schedules": 7,
+      "n_date_schedules": 95,
+      "notes": ""
+    },
+    {
+      "name": "김경아",
+      "department": "치과",
+      "external_id": "KYUH-DEN-E45D227965DDBABCD0D4D8A59C575CC7",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "휴진 : 2026-02-09~2027-02-28(D-309) 휴진:2026-02-09~2027-02-28(D-309)"
+    },
+    {
+      "name": "김진여",
+      "department": "치과",
+      "external_id": "KYUH-DEN-68C5CBF6276AE2F0D80E76DF65B04185",
+      "n_schedules": 7,
+      "n_date_schedules": 94,
+      "notes": "출장 : 2026-05-04~2026-05-04 출장:2026-05-04~2026-05-04"
+    },
+    {
+      "name": "박성수",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-4D5CD7B5D8BD553D8432D5CB7111487E",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재광",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-FBA4DCDCAD2E897964342D5EF791BECA",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변준석",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-F094DD757B8A0A9A80E0F7E2D30C5527",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장기경",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-ECB10526E69E6BDBB810C5F2FC1DD1F2",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장지연",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-671FEC3E524AE1E6CB6F70A54BC44D12",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김근수",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-1FDC734C1C113402AE06402ECB3F8CA6",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원석",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-4362E1223E95DD8A3F4D3B723063CFCE",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안홍준",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-544A89938A4148F3BF1386844F487295",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천은정",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-56880CEAF436A4EB200BF8F4D8507140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수빈",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-518AAF0CC5209AC25BF4F9A1EB205EAD",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황승연",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-FFB1469A6BB391E4FF249043551860C5",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최준영",
+      "department": "응급의학과",
+      "external_id": "KYUH-ER-DF8E3DDACE583047D621F698FC64089D",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이무식",
+      "department": "직업환경의학과",
+      "external_id": "KYUH-OEM-E02402E42D39000B152E369507F35F49",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김진숙",
+      "department": "핵의학과",
+      "external_id": "KYUH-NM-EF90C06CAE539E279344E1D86894CD5C",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    }
+  ]
+}

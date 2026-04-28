@@ -14,7 +14,7 @@ import httpx
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-from app.crawlers._schedule_rules import find_exclude_keyword, has_biweekly_mark
+from app.crawlers._schedule_rules import is_clinic_cell, has_biweekly_mark
 
 logger = logging.getLogger(__name__)
 
@@ -23,9 +23,9 @@ TIMETABLE_URL = f"{BASE_URL}/sub01/sub02.php"
 
 TIME_RANGES = {"morning": ("09:00", "12:00"), "afternoon": ("13:00", "17:00")}
 DAY_MAP = {"월": 0, "화": 1, "수": 2, "목": 3, "금": 4, "토": 5}
-# 실제 진료로 인정할 키워드 (빈 문자열/휴진 계열 + 외래 아닌 활동 제외)
-WORK_TEXTS = ("진료", "격주", "검진", "외래", "순환", "왕진", "예약", "클리닉")
 DEPT_HINTS = ("과", "센터", "클리닉")
+# 진료과 헤더로 잘못 잡히지 않게 거를 단어들 — 페이지 안내문/특이사항 박스 제외용
+DEPT_NAME_EXCLUDE = ("특이사항", "안내", "비고", "공지", "참고", "유의", "주의")
 
 
 class GreenCrawler:
@@ -53,8 +53,11 @@ class GreenCrawler:
         while prev is not None:
             text = prev.get_text(" ", strip=True)
             if text and len(text) < 25 and any(h in text for h in DEPT_HINTS):
-                # "문의: 02-..." 같은 줄은 제거
-                if "문의" in text or "전화" in text:
+                # "문의: 02-..." / 안내·특이사항 박스의 헤더는 진료과명이 아니므로 거른다
+                if (
+                    "문의" in text or "전화" in text
+                    or any(e in text for e in DEPT_NAME_EXCLUDE)
+                ):
                     prev = prev.find_previous(["h1", "h2", "h3", "h4", "h5", "p", "div"])
                     continue
                 return text
@@ -146,16 +149,25 @@ class GreenCrawler:
                     continue
                 dow = col_to_dow[abs_col]
                 text = cell.get_text(" ", strip=True)
-                if not text:
-                    continue
-                # EXCLUDE 우선 — 수술/내시경/검사 등 외래 아님
-                if find_exclude_keyword(text):
-                    continue
-                # 키워드 기반 스케줄 인정
-                if not any(w in text for w in WORK_TEXTS):
-                    continue
-                # 완전 휴진("휴진"만 있고 진료 언급 없는 경우)
-                if text.strip() == "휴진":
+
+                # 녹색병원 시간표는 ○를 텍스트가 아닌 <span class="circle"></span>로 그린다.
+                # bar 클래스는 휴진/없음 표시.
+                has_circle = bool(cell.select_one(".circle"))
+                has_bar = bool(cell.select_one(".bar"))
+
+                if has_circle:
+                    # 단순 ○ 셀 (텍스트 비어있어도 진료) — 그대로 인정
+                    pass
+                elif text:
+                    # 격주 셀처럼 "1·3·5번 토 진료 / 2·4번 토 휴진" 양쪽 단어가 섞인 경우
+                    # is_clinic_cell 은 "휴진"(INACTIVE) 만나는 순간 False 반환하므로
+                    # 격주 표시 + "진료" 단어가 둘 다 있으면 진료로 인정한다.
+                    if has_biweekly_mark(text) and "진료" in text:
+                        pass
+                    elif not is_clinic_cell(text):
+                        continue
+                else:
+                    # 빈 셀 / bar (휴진)
                     continue
 
                 key = (dow, slot)
@@ -209,9 +221,11 @@ class GreenCrawler:
         seen_ids = set()
 
         for table in soup.select("table"):
-            # 요일 헤더가 없는 테이블은 건너뜀
+            # 요일 헤더가 없는 테이블은 건너뜀.
+            # 안내/특이사항 박스가 우연히 "월/화/수" 만 포함하는 경우를 거르려고
+            # 평일 5요일 (월~금) 모두 등장해야 진료시간표 테이블로 인정한다.
             header_text = " ".join(c.get_text(strip=True) for c in table.select("tr")[0].select("th, td")) if table.select("tr") else ""
-            if not all(d in header_text for d in ("월", "화", "수")):
+            if not all(d in header_text for d in ("월", "화", "수", "목", "금")):
                 continue
 
             dept_name = self._find_dept_name(table)

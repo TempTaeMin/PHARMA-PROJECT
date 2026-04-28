@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Plus, X, Sparkles, RefreshCw } from 'lucide-react';
 import DailySchedule from '../components/DailySchedule';
 import AddEventBottomSheet from '../components/AddEventBottomSheet';
@@ -9,10 +9,13 @@ import SelectMeetingTime from '../components/SelectMeetingTime';
 import VisitDetailModal from '../components/VisitDetailModal';
 import PersonalEventEditor from '../components/PersonalEventEditor';
 import AcademicEventCreateModal from '../components/AcademicEventCreateModal';
+import AcademicEventModal from '../components/AcademicEventModal';
 import WorkTypeChooser from '../components/WorkTypeChooser';
 import WorkAnnouncementEditor from '../components/WorkAnnouncementEditor';
 import { useMonthCalendar } from '../hooks/useMonthCalendar';
-import { memoApi, visitApi } from '../api/client';
+import { useCachedApi } from '../hooks/useCachedApi';
+import { invalidate } from '../api/cache';
+import { memoApi, visitApi, academicApi } from '../api/client';
 
 function ymd(y, m, d) {
   return `${y}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
@@ -50,6 +53,39 @@ export default function Dashboard({ onNavigate }) {
     doctors, visitsByDate, loading, actions, refresh,
   } = useMonthCalendar(year, month);
 
+  // ─ 학회 일정 (이번 월) ─
+  const monthKey = `${year}-${String(month + 1).padStart(2, '0')}`;
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const { data: monthEvents, refresh: refreshAcademic } = useCachedApi(
+    `academic-my-schedule:${monthKey}`,
+    () => academicApi.mySchedule({
+      start_date: ymd(year, month, 1),
+      end_date: ymd(year, month, daysInMonth),
+    }),
+    { ttlKey: 'academic', deps: [monthKey] },
+  );
+  const events = monthEvents || [];
+
+  const eventsByDate = useMemo(() => {
+    const map = {};
+    events.forEach(e => {
+      if (!e.start_date) return;
+      const start = e.start_date;
+      const end = e.end_date || start;
+      let cur = start;
+      while (cur <= end) {
+        (map[cur] ||= []).push(e);
+        const d = new Date(cur + 'T00:00:00');
+        d.setDate(d.getDate() + 1);
+        cur = ymd(d.getFullYear(), d.getMonth(), d.getDate());
+      }
+    });
+    return map;
+  }, [events]);
+
+  // ─ 학회 상세 모달 state ─
+  const [academicModalEvent, setAcademicModalEvent] = useState(null);
+
   useEffect(() => {
     refresh();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -67,6 +103,8 @@ export default function Dashboard({ onNavigate }) {
   const selectedVisits = (visitsByDate[selected] || []).slice().sort((a, b) =>
     (a.visit_date || '').localeCompare(b.visit_date || '')
   );
+
+  const selectedEvents = eventsByDate[selected] || [];
 
   // ─ 일정 추가 플로우 액션 ─
   const handleSelectCategory = (key) => {
@@ -241,10 +279,12 @@ export default function Dashboard({ onNavigate }) {
           dateStr={selected}
           todayStr={todayStr}
           visits={selectedVisits}
+          events={selectedEvents}
           onSelectDate={handleSelectDate}
           onComplete={openComplete}
           onCancel={cancelPlanned}
           onOpenDetail={setDetailVisit}
+          onOpenAcademic={setAcademicModalEvent}
           onOpenMonth={() => onNavigate?.('schedule')}
         />
       )}
@@ -284,6 +324,10 @@ export default function Dashboard({ onNavigate }) {
         open={flowStep === 'category'}
         onClose={closeFlow}
         onSelectCategory={handleSelectCategory}
+        onPickFromAcademicList={() => {
+          closeFlow();
+          onNavigate?.('conferences', { mode: 'pick-for-add' });
+        }}
       />
       <SelectDoctorForMeeting
         open={flowStep === 'select-doctor'}
@@ -334,7 +378,18 @@ export default function Dashboard({ onNavigate }) {
         open={flowStep === 'academic-event'}
         initialDate={selected}
         onClose={closeFlow}
-        onCreated={() => { refresh(); }}
+        onCreated={() => { refresh(); refreshAcademic(); }}
+      />
+
+      {/* ── 학회 상세 (Dashboard 학회 카드 클릭 시) ── */}
+      <AcademicEventModal
+        open={!!academicModalEvent}
+        event={academicModalEvent}
+        onClose={() => setAcademicModalEvent(null)}
+        onUpdated={() => {
+          invalidate('academic');
+          refreshAcademic();
+        }}
       />
 
       {/* ── Visit Detail / Edit Modal ── */}

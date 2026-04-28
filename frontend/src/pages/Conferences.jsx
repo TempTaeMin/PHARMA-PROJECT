@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Calendar, MapPin, BookOpen, ChevronRight, RefreshCw, Filter, AlertCircle, CalendarRange, GraduationCap, Pin } from 'lucide-react';
+import { Calendar, MapPin, BookOpen, ChevronRight, ChevronLeft, RefreshCw, Filter, AlertCircle, CalendarRange, GraduationCap, Pin } from 'lucide-react';
 import { academicApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
@@ -32,10 +32,6 @@ function fmtRange(start, end) {
   return `${fmtDate(start)} ~ ${fmtDate(end)}`;
 }
 
-const SOURCE_LABELS = {
-  kma_edu: { label: 'KMA 연수', bg: '#fef3c7', c: '#92400e' },
-};
-
 function addMonthsISO(date, months) {
   const d = new Date(date);
   d.setMonth(d.getMonth() + months);
@@ -63,8 +59,9 @@ function defaultRange() {
   return { presetKey: DEFAULT_PRESET_KEY, from, to };
 }
 
-export default function Conferences({ onNavigate }) {
-  const [tab, setTab] = useState('matched'); // matched | upcoming | all | unclassified
+export default function Conferences({ onNavigate, mode }) {
+  const pickMode = mode === 'pick-for-add';
+  const [tab, setTab] = useState('matched'); // matched | all | unclassified
   const [deptFilter, setDeptFilter] = useState('');
   const [range, setRange] = useState(defaultRange);
   const [syncStatus, setSyncStatus] = useState(null);
@@ -152,8 +149,7 @@ export default function Conferences({ onNavigate }) {
   }
 
   const TABS = [
-    { id: 'matched', label: '내 교수 참여' },
-    { id: 'upcoming', label: '다가오는 일정' },
+    { id: 'matched', label: '내 의료진 참여' },
     { id: 'all', label: '전체' },
     { id: 'unclassified', label: '미분류' },
   ];
@@ -165,6 +161,31 @@ export default function Conferences({ onNavigate }) {
         .dept-chip-row { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
 
+      {pickMode && (
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          gap: 12, padding: '10px 14px', marginBottom: 14, borderRadius: 10,
+          background: 'var(--ac-d)', border: '1px solid var(--ac)',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--ac)', fontSize: 12, fontWeight: 700, fontFamily: 'Manrope' }}>
+            <BookOpen size={14} />
+            일정 추가 중 — 등록할 학회를 선택하세요
+          </div>
+          <button
+            onClick={() => onNavigate?.('dashboard')}
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 4,
+              padding: '5px 10px', borderRadius: 8,
+              background: 'var(--bg-1)', color: 'var(--t2)',
+              border: '1px solid var(--bd-s)',
+              fontSize: 11, fontWeight: 600, fontFamily: 'inherit', cursor: 'pointer',
+            }}
+          >
+            <ChevronLeft size={12} /> 취소
+          </button>
+        </div>
+      )}
+
       {/* ── 헤더 ── */}
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -173,7 +194,7 @@ export default function Conferences({ onNavigate }) {
         <div>
           <div style={{ fontFamily: 'Manrope', fontSize: 22, fontWeight: 700, letterSpacing: '-.02em' }}>학회 일정</div>
           <div style={{ fontSize: 12, color: 'var(--t3)', marginTop: 4 }}>
-            내 교수가 강사로 참여하는 학회를 우선으로 · 매월 1일 자동 갱신
+            내 의료진이 강사로 참여하는 학회를 우선으로 · 매월 1일 자동 갱신
           </div>
         </div>
         <button onClick={handleSync} disabled={syncStatus === 'syncing'} style={{
@@ -209,7 +230,7 @@ export default function Conferences({ onNavigate }) {
             </div>
           </div>
           <div>
-            <div style={{ fontSize: 10, color: 'var(--t3)', fontWeight: 600 }}>내 교수 강사 참여</div>
+            <div style={{ fontSize: 10, color: 'var(--t3)', fontWeight: 600 }}>내 의료진 강사 참여</div>
             <div style={{ fontFamily: 'Manrope', fontSize: 26, fontWeight: 800, color: 'var(--ac)', lineHeight: 1.1 }}>
               {heroStats.matched}<span style={{ fontSize: 13, marginLeft: 2 }}>개</span>
             </div>
@@ -329,8 +350,7 @@ export default function Conferences({ onNavigate }) {
           textAlign: 'center', padding: 60, color: 'var(--t3)',
           background: 'var(--bg-1)', borderRadius: 12, border: '1px solid var(--bd-s)',
         }}>
-          {tab === 'matched' ? '내 교수가 강사로 참여하는 학회가 없습니다'
-            : tab === 'upcoming' ? '다가오는 학회 일정이 없습니다'
+          {tab === 'matched' ? '내 의료진이 강사로 참여하는 학회가 없습니다'
             : tab === 'unclassified' ? '미분류 이벤트가 없습니다'
             : '데이터가 없습니다'}
         </div>
@@ -373,13 +393,6 @@ export default function Conferences({ onNavigate }) {
                     <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--t1)', lineHeight: 1.4 }}>
                       {e.name}
                     </div>
-                    {SOURCE_LABELS[e.source] && (
-                      <span style={{
-                        padding: '2px 7px', borderRadius: 10, fontSize: 9, fontWeight: 700,
-                        background: SOURCE_LABELS[e.source].bg, color: SOURCE_LABELS[e.source].c,
-                        letterSpacing: '.02em',
-                      }}>{SOURCE_LABELS[e.source].label}</span>
-                    )}
                     {matchedCount > 0 && (
                       <span style={{
                         display: 'inline-flex', alignItems: 'center', gap: 3,
@@ -388,7 +401,7 @@ export default function Conferences({ onNavigate }) {
                         background: 'var(--ac)', color: '#fff',
                         letterSpacing: '.02em',
                       }}>
-                        <GraduationCap size={10} /> 내 교수 {matchedCount}명
+                        <GraduationCap size={10} /> 내 의료진 {matchedCount}명
                       </span>
                     )}
                     {e.is_pinned && (
@@ -398,6 +411,7 @@ export default function Conferences({ onNavigate }) {
                         fontSize: 9, fontWeight: 800,
                         background: '#fef3c7', color: '#b45309',
                         letterSpacing: '.02em',
+                        marginLeft: 'auto', flexShrink: 0,
                       }}>
                         <Pin size={9} /> 내 일정 등록됨
                       </span>
@@ -476,6 +490,11 @@ export default function Conferences({ onNavigate }) {
           if (onNavigate) onNavigate('my-doctors', { doctorId });
         }}
         onUpdated={handleEventUpdated}
+        pickMode={pickMode}
+        onPicked={() => {
+          setSelectedEvent(null);
+          if (onNavigate) onNavigate('dashboard');
+        }}
       />
     </div>
   );

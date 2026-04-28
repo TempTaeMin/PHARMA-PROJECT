@@ -115,7 +115,7 @@ export default function ManualDoctorModal({ open, onClose, onCreated }) {
       if (items.length > 0) {
         await doctorApi.replaceManualSchedules(doc.id, items);
       }
-      invalidate('my-doctors'); invalidate('doctors'); invalidate('hospitals');
+      invalidate('my-doctors'); invalidate('doctors'); invalidate('hospitals'); invalidate('academic');
       onCreated?.(doc);
       onClose?.();
     } catch (e) {

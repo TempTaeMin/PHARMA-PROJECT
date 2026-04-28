@@ -1,0 +1,1111 @@
+{
+  "hospital_code": "DAMC",
+  "hospital_name": "동아대학교병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박주성",
+      "department": "가정의학과",
+      "external_id": "DAMC-93773",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "2026년 04월 24일부터 2026년 04월 26일까지 출장 입니다."
+    },
+    {
+      "name": "한성호",
+      "department": "가정의학과",
+      "external_id": "DAMC-05115",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "2026년 04월 23일부터 2026년 04월 27일까지 출장 입니다."
+    },
+    {
+      "name": "박영진",
+      "department": "가정의학과",
+      "external_id": "DAMC-09164",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "2026년 04월 24일부터 2026년 04월 26일까지 출장 입니다."
+    },
+    {
+      "name": "신보경",
+      "department": "가정의학과",
+      "external_id": "DAMC-24011",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "2026년 04월 24일부터 2026년 04월 26일까지 출장 입니다."
+    },
+    {
+      "name": "이호진",
+      "department": "감염내과",
+      "external_id": "DAMC-10011",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "박찬호",
+      "department": "내분비내과",
+      "external_id": "DAMC-23462",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "이성원",
+      "department": "류마티스내과",
+      "external_id": "DAMC-02468",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": ""
+    },
+    {
+      "name": "이상엽",
+      "department": "류마티스내과",
+      "external_id": "DAMC-11221",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "박준용",
+      "department": "류마티스내과",
+      "external_id": "DAMC-23237",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "이승철",
+      "department": "마취통증의학과",
+      "external_id": "DAMC-05113",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "최소론",
+      "department": "마취통증의학과",
+      "external_id": "DAMC-08580",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상융",
+      "department": "마취통증의학과",
+      "external_id": "DAMC-17166",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "정찬종",
+      "department": "마취통증의학과",
+      "external_id": "DAMC-91791",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태영",
+      "department": "마취통증의학과",
+      "external_id": "DAMC-24253",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영민",
+      "department": "방사선종양학과",
+      "external_id": "DAMC-04114",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김성민",
+      "department": "방사선종양학과",
+      "external_id": "DAMC-23246",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이형식",
+      "department": "방사선종양학과",
+      "external_id": "DAMC-92762",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "나서희",
+      "department": "병리과",
+      "external_id": "DAMC-93768",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노미숙",
+      "department": "병리과",
+      "external_id": "DAMC-96370",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민경",
+      "department": "병리과",
+      "external_id": "DAMC-16446",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한송희",
+      "department": "병리과",
+      "external_id": "DAMC-18581",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종혁",
+      "department": "병리과",
+      "external_id": "DAMC-25504",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태효",
+      "department": "비뇨의학과",
+      "external_id": "DAMC-10187",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김수동",
+      "department": "비뇨의학과",
+      "external_id": "DAMC-11670",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "이기수",
+      "department": "비뇨의학과",
+      "external_id": "DAMC-15214",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "2026년 04월 24일부터 2026년 04월 26일까지 휴진 입니다."
+    },
+    {
+      "name": "최동원",
+      "department": "비뇨의학과",
+      "external_id": "DAMC-24130",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "고혁준",
+      "department": "비뇨의학과",
+      "external_id": "DAMC-21625",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "박정우",
+      "department": "산부인과",
+      "external_id": "DAMC-13704",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "오소라",
+      "department": "산부인과",
+      "external_id": "DAMC-19586",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "산부인과",
+      "external_id": "DAMC-22680",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이은현",
+      "department": "산부인과",
+      "external_id": "DAMC-25123",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "일반의사",
+      "department": "산부인과",
+      "external_id": "DAMC-71112",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": ""
+    },
+    {
+      "name": "이근철",
+      "department": "성형외과",
+      "external_id": "DAMC-23304",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이동민",
+      "department": "성형외과",
+      "external_id": "DAMC-23243",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "박태서",
+      "department": "성형외과",
+      "external_id": "DAMC-25343",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "정진아",
+      "department": "소아청소년과",
+      "external_id": "DAMC-02476",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이영석",
+      "department": "소아청소년과",
+      "external_id": "DAMC-03439",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김묘징",
+      "department": "소아청소년과",
+      "external_id": "DAMC-08578",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "이선영",
+      "department": "소아청소년과",
+      "external_id": "DAMC-23241",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "조재구",
+      "department": "소아청소년과",
+      "external_id": "DAMC-23479",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노명환",
+      "department": "소화기내과",
+      "external_id": "DAMC-97746",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "이종훈",
+      "department": "소화기내과",
+      "external_id": "DAMC-02470",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "백양현",
+      "department": "소화기내과",
+      "external_id": "DAMC-10188",
+      "n_schedules": 4,
+      "n_date_schedules": 34,
+      "notes": "2026년 03월 14일부터 2026년 05월 31일까지 휴진 입니다."
+    },
+    {
+      "name": "이종윤",
+      "department": "소화기내과",
+      "external_id": "DAMC-20240",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "고명석",
+      "department": "소화기내과",
+      "external_id": "DAMC-21236",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김영대",
+      "department": "순환기내과",
+      "external_id": "DAMC-23256",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "박태호",
+      "department": "순환기내과",
+      "external_id": "DAMC-04116",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "박종성",
+      "department": "순환기내과",
+      "external_id": "DAMC-10706",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "박경일",
+      "department": "순환기내과",
+      "external_id": "DAMC-11219",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "조용락",
+      "department": "순환기내과",
+      "external_id": "DAMC-13702",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "김재우",
+      "department": "신경과",
+      "external_id": "DAMC-21631",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "차재관",
+      "department": "신경과",
+      "external_id": "DAMC-97749",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천상명",
+      "department": "신경과",
+      "external_id": "DAMC-07197",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김대현",
+      "department": "신경과",
+      "external_id": "DAMC-10191",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종국",
+      "department": "신경과",
+      "external_id": "DAMC-11222",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김기욱",
+      "department": "신경외과",
+      "external_id": "DAMC-22442",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "송영진",
+      "department": "신경외과",
+      "external_id": "DAMC-05112",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "권영민",
+      "department": "신경외과",
+      "external_id": "DAMC-10707",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재형",
+      "department": "신경외과",
+      "external_id": "DAMC-12192",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성경수",
+      "department": "신경외과",
+      "external_id": "DAMC-19154",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "신장내과",
+      "external_id": "DAMC-93771",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "안원석",
+      "department": "신장내과",
+      "external_id": "DAMC-03435",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이수미",
+      "department": "신장내과",
+      "external_id": "DAMC-14152",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "양동은",
+      "department": "신장내과",
+      "external_id": "DAMC-24123",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": "2026년 04월 25일부터 2026년 05월 03일까지 휴진 입니다."
+    },
+    {
+      "name": "이혜정",
+      "department": "신장내과",
+      "external_id": "DAMC-24185",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "조광조",
+      "department": "심장혈관흉부외과",
+      "external_id": "DAMC-96468",
+      "n_schedules": 2,
+      "n_date_schedules": 22,
+      "notes": "2026년 04월 23일부터 2026년 05월 13일까지 휴진 입니다."
+    },
+    {
+      "name": "정상석",
+      "department": "심장혈관흉부외과",
+      "external_id": "DAMC-20433",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "이정훈",
+      "department": "심장혈관흉부외과",
+      "external_id": "DAMC-20587",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "안희배",
+      "department": "안과",
+      "external_id": "DAMC-01543",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "정우진",
+      "department": "안과",
+      "external_id": "DAMC-08184",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "진상욱",
+      "department": "안과",
+      "external_id": "DAMC-16512",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "안성현",
+      "department": "안과",
+      "external_id": "DAMC-23464",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "김남영",
+      "department": "안과",
+      "external_id": "DAMC-22682",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "남영희",
+      "department": "알레르기내과",
+      "external_id": "DAMC-14653",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "최순섭",
+      "department": "영상의학과",
+      "external_id": "DAMC-22684",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강명진",
+      "department": "영상의학과",
+      "external_id": "DAMC-06130",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": ""
+    },
+    {
+      "name": "권희진",
+      "department": "영상의학과",
+      "external_id": "DAMC-08186",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강은주",
+      "department": "영상의학과",
+      "external_id": "DAMC-12193",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상현",
+      "department": "영상의학과",
+      "external_id": "DAMC-17167",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최홍조",
+      "department": "외과",
+      "external_id": "DAMC-23478",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김민찬",
+      "department": "외과",
+      "external_id": "DAMC-02474",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "박기재",
+      "department": "외과",
+      "external_id": "DAMC-03436",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김성흔",
+      "department": "외과",
+      "external_id": "DAMC-03655",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "노영훈",
+      "department": "외과",
+      "external_id": "DAMC-08575",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "정진우",
+      "department": "응급의학과",
+      "external_id": "DAMC-11669",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재훈",
+      "department": "응급의학과",
+      "external_id": "DAMC-13174",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권인호",
+      "department": "응급의학과",
+      "external_id": "DAMC-16602",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지은",
+      "department": "응급의학과",
+      "external_id": "DAMC-20244",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최유리",
+      "department": "응급의학과",
+      "external_id": "DAMC-21237",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강명구",
+      "department": "이비인후과",
+      "external_id": "DAMC-94714",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "배우용",
+      "department": "이비인후과",
+      "external_id": "DAMC-05591",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "이동근",
+      "department": "이비인후과",
+      "external_id": "DAMC-18186",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "정동원",
+      "department": "이비인후과",
+      "external_id": "DAMC-24283",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "박헌수",
+      "department": "이비인후과",
+      "external_id": "DAMC-96455",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "일반의사",
+      "department": "일반내과",
+      "external_id": "DAMC-71100",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이경우",
+      "department": "재활의학과",
+      "external_id": "DAMC-02475",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이종화",
+      "department": "재활의학과",
+      "external_id": "DAMC-08579",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김민아",
+      "department": "재활의학과",
+      "external_id": "DAMC-24188",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "김성환",
+      "department": "정신건강의학과",
+      "external_id": "DAMC-07195",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "정신건강의학과",
+      "external_id": "DAMC-23239",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": ""
+    },
+    {
+      "name": "전덕인",
+      "department": "정신건강의학과",
+      "external_id": "DAMC-25478",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": ""
+    },
+    {
+      "name": "김철홍",
+      "department": "정형외과",
+      "external_id": "DAMC-22683",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "이명진",
+      "department": "정형외과",
+      "external_id": "DAMC-04113",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김현준",
+      "department": "정형외과",
+      "external_id": "DAMC-10709",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "정성윤",
+      "department": "정형외과",
+      "external_id": "DAMC-22436",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김정신",
+      "department": "정형외과",
+      "external_id": "DAMC-25093",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "정진헌",
+      "department": "중환자의학과",
+      "external_id": "DAMC-17616",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김래영",
+      "department": "중환자의학과",
+      "external_id": "DAMC-22430",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김가연",
+      "department": "중환자의학과",
+      "external_id": "DAMC-22431",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이강호",
+      "department": "중환자의학과",
+      "external_id": "DAMC-23480",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심정용",
+      "department": "중환자의학과",
+      "external_id": "DAMC-25190",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정일",
+      "department": "직업환경의학과",
+      "external_id": "DAMC-98619",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "김병권",
+      "department": "직업환경의학과",
+      "external_id": "DAMC-09162",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "조성식",
+      "department": "직업환경의학과",
+      "external_id": "DAMC-19157",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "이제니",
+      "department": "직업환경의학과",
+      "external_id": "DAMC-25153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수연",
+      "department": "직업환경의학과",
+      "external_id": "DAMC-26033",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경희",
+      "department": "진단검사의학과",
+      "external_id": "DAMC-02473",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우광숙",
+      "department": "진단검사의학과",
+      "external_id": "DAMC-11775",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인화",
+      "department": "진단검사의학과",
+      "external_id": "DAMC-23247",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김철훈",
+      "department": "치과",
+      "external_id": "DAMC-02464",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "김복주",
+      "department": "치과",
+      "external_id": "DAMC-13705",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "김정한",
+      "department": "치과",
+      "external_id": "DAMC-21233",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "강선우",
+      "department": "치과",
+      "external_id": "DAMC-23465",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "전영미",
+      "department": "치과",
+      "external_id": "DAMC-01084",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "윤정호",
+      "department": "피부과",
+      "external_id": "DAMC-21231",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김기호",
+      "department": "피부과",
+      "external_id": "DAMC-24187",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "강도영",
+      "department": "핵의학과",
+      "external_id": "DAMC-00562",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "정영진",
+      "department": "핵의학과",
+      "external_id": "DAMC-12641",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "전성민",
+      "department": "핵의학과",
+      "external_id": "DAMC-24128",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김성현",
+      "department": "혈액종양내과",
+      "external_id": "DAMC-04117",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "오성용",
+      "department": "혈액종양내과",
+      "external_id": "DAMC-08183",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이수이",
+      "department": "혈액종양내과",
+      "external_id": "DAMC-10189",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이지현",
+      "department": "혈액종양내과",
+      "external_id": "DAMC-14163",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "허석재",
+      "department": "혈액종양내과",
+      "external_id": "DAMC-20586",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "엄수정",
+      "department": "호흡기내과",
+      "external_id": "DAMC-09586",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김인수",
+      "department": "호흡기내과",
+      "external_id": "DAMC-20241",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "강보형",
+      "department": "호흡기내과",
+      "external_id": "DAMC-15186",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2026년 03월 01일부터 2026년 07월 31일까지 휴진 입니다."
+    },
+    {
+      "name": "이혁",
+      "department": "호흡기내과",
+      "external_id": "DAMC-26034",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    }
+  ]
+}

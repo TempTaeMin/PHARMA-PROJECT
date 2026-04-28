@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { CheckCircle, Trash2, ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
+import { CheckCircle, Trash2, ChevronLeft, ChevronRight, RotateCcw, BookOpen, MapPin } from 'lucide-react';
 
 const DOW_KO = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
 const DOW_SHORT = ['일', '월', '화', '수', '목', '금', '토'];
@@ -50,10 +50,12 @@ export default function DailySchedule({
   dateStr,
   todayStr,
   visits = [],            // VisitLog[]
+  events = [],            // AcademicEvent[] — 해당 날짜에 진행되는 학회/심포지엄
   onSelectDate,
   onComplete,
   onCancel,
   onOpenDetail,           // 카드 본문 클릭 → 상세 모달
+  onOpenAcademic,         // 학회 카드 클릭 → 학회 상세 모달
   onOpenMonth,            // "전체 일정 확인" 버튼
 }) {
   const dateObj = dateStr ? new Date(dateStr + 'T00:00:00') : new Date();
@@ -107,7 +109,7 @@ export default function DailySchedule({
     return candidates[0]?.id || null;
   }, [items, dateStr, todayStr]);
 
-  const count = items.length;
+  const count = items.length + events.length;
   const completedCount = visits.filter(v => v.status === '성공').length;
   const plannedCount = visits.filter(v => v.status === '예정').length;
 
@@ -275,11 +277,80 @@ export default function DailySchedule({
               예정 {plannedCount}
             </span>
           )}
+          {events.length > 0 && (
+            <span style={{
+              padding: '4px 9px', borderRadius: 6,
+              background: '#ede9fe', color: '#7c3aed', fontWeight: 700,
+            }}>
+              학회 {events.length}
+            </span>
+          )}
+        </div>
+      )}
+
+      {/* ── 학회 섹션 ── */}
+      {events.length > 0 && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 14 }}>
+          {events.map(ev => (
+            <button
+              key={ev.id}
+              onClick={() => onOpenAcademic?.(ev)}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 10,
+                padding: '10px 12px', borderRadius: 10,
+                background: '#faf5ff',
+                border: '1px solid #e9d5ff',
+                cursor: 'pointer', fontFamily: 'inherit',
+                textAlign: 'left',
+                transition: 'transform .12s, box-shadow .12s',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = '0 4px 10px rgba(124,58,237,.12)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+            >
+              <div style={{
+                width: 32, height: 32, borderRadius: 8,
+                background: '#ede9fe', color: '#7c3aed',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                flexShrink: 0,
+              }}>
+                <BookOpen size={15} />
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{
+                  display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2,
+                }}>
+                  <span style={{
+                    padding: '1px 6px', borderRadius: 4,
+                    fontSize: 9, fontWeight: 800, letterSpacing: '.05em',
+                    background: '#ede9fe', color: '#7c3aed',
+                    fontFamily: 'Manrope', flexShrink: 0,
+                  }}>학회</span>
+                  <span style={{
+                    fontSize: 13, fontWeight: 700, color: 'var(--t1)',
+                    overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                  }}>
+                    {ev.name}
+                  </span>
+                </div>
+                {(ev.location || ev.organizer_name) && (
+                  <div style={{
+                    display: 'flex', alignItems: 'center', gap: 4,
+                    fontSize: 11, color: 'var(--t3)',
+                  }}>
+                    {ev.location && <MapPin size={10} />}
+                    <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {ev.location || ev.organizer_name}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </button>
+          ))}
         </div>
       )}
 
       {/* ── 세로 타임라인 ── */}
-      {items.length === 0 ? (
+      {items.length === 0 && events.length === 0 ? (
         <div style={{
           padding: '60px 20px', textAlign: 'center',
           color: 'var(--t3)', fontSize: 13,

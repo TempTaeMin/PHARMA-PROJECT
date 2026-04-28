@@ -1,0 +1,1447 @@
+{
+  "hospital_code": "KUANAM",
+  "hospital_name": "고대안암병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "이재명",
+      "department": "중환자외상외과",
+      "external_id": "KUANAM-16C72",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "고재철",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-17211",
+      "n_schedules": 5,
+      "n_date_schedules": 58,
+      "notes": ""
+    },
+    {
+      "name": "성현영",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-16072",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신현주",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-08685",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신혜원",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-01498",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유해선",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-03204",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤승주",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-07B04",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임춘학",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-01321",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장유경",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-15165",
+      "n_schedules": 4,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "조장은",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-11720",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성욱",
+      "department": "마취통증의학과",
+      "external_id": "KUANAM-00076",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김훈엽",
+      "department": "유방내분비외과",
+      "external_id": "KUANAM-08439",
+      "n_schedules": 7,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "박다원",
+      "department": "유방내분비외과",
+      "external_id": "KUANAM-13125",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "이은신",
+      "department": "유방내분비외과",
+      "external_id": "KUANAM-20F97",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "정승필",
+      "department": "유방내분비외과",
+      "external_id": "KUANAM-03069",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "김미나",
+      "department": "순환기내과",
+      "external_id": "KUANAM-06110",
+      "n_schedules": 4,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김보련",
+      "department": "순환기내과",
+      "external_id": "KUANAM-U2108",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소리",
+      "department": "순환기내과",
+      "external_id": "KUANAM-20172",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "김영훈",
+      "department": "순환기내과",
+      "external_id": "KUANAM-93085",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤기",
+      "department": "순환기내과",
+      "external_id": "KUANAM-16205",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "박성미",
+      "department": "순환기내과",
+      "external_id": "KUANAM-97060",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "신용훈",
+      "department": "순환기내과",
+      "external_id": "KUANAM-24310",
+      "n_schedules": 2,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "심재민",
+      "department": "순환기내과",
+      "external_id": "KUANAM-13093",
+      "n_schedules": 4,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "유철웅",
+      "department": "순환기내과",
+      "external_id": "KUANAM-13094",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "이주성",
+      "department": "순환기내과",
+      "external_id": "KUANAM-U3265",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "임자영",
+      "department": "순환기내과",
+      "external_id": "KUANAM-24323",
+      "n_schedules": 1,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "정주희",
+      "department": "순환기내과",
+      "external_id": "KUANAM-17139",
+      "n_schedules": 3,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "조동혁",
+      "department": "순환기내과",
+      "external_id": "KUANAM-09446",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "주형준",
+      "department": "순환기내과",
+      "external_id": "KUANAM-03096",
+      "n_schedules": 5,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "차정준",
+      "department": "순환기내과",
+      "external_id": "KUANAM-20168",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "최종일",
+      "department": "순환기내과",
+      "external_id": "KUANAM-99131",
+      "n_schedules": 5,
+      "n_date_schedules": 58,
+      "notes": ""
+    },
+    {
+      "name": "홍순준",
+      "department": "순환기내과",
+      "external_id": "KUANAM-98081",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "곽정면",
+      "department": "대장항문외과",
+      "external_id": "KUANAM-99072",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "김지선",
+      "department": "대장항문외과",
+      "external_id": "KUANAM-13117",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "김진",
+      "department": "대장항문외과",
+      "external_id": "KUANAM-03154",
+      "n_schedules": 2,
+      "n_date_schedules": 20,
+      "notes": ""
+    },
+    {
+      "name": "백세진",
+      "department": "대장항문외과",
+      "external_id": "KUANAM-05052",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "김지언",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUANAM-19800",
+      "n_schedules": 2,
+      "n_date_schedules": 20,
+      "notes": ""
+    },
+    {
+      "name": "김희중",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUANAM-13098",
+      "n_schedules": 2,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "손호성",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUANAM-01102",
+      "n_schedules": 1,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "이성호",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUANAM-01084",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "정영기",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUANAM-17201",
+      "n_schedules": 1,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "정재승",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUANAM-99060",
+      "n_schedules": 2,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "정재호",
+      "department": "심장혈관흉부외과",
+      "external_id": "KUANAM-04063",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대현",
+      "department": "피부과",
+      "external_id": "KUANAM-10111",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "서수홍",
+      "department": "피부과",
+      "external_id": "KUANAM-98049",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "안효현",
+      "department": "피부과",
+      "external_id": "KUANAM-03158",
+      "n_schedules": 4,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "이유선",
+      "department": "치과교정과",
+      "external_id": "KUANAM-23003",
+      "n_schedules": 6,
+      "n_date_schedules": 71,
+      "notes": ""
+    },
+    {
+      "name": "임방현",
+      "department": "치과교정과",
+      "external_id": "KUANAM-22578",
+      "n_schedules": 6,
+      "n_date_schedules": 72,
+      "notes": ""
+    },
+    {
+      "name": "류재준",
+      "department": "치과보철과",
+      "external_id": "KUANAM-01079",
+      "n_schedules": 6,
+      "n_date_schedules": 74,
+      "notes": ""
+    },
+    {
+      "name": "최연조",
+      "department": "치과보철과",
+      "external_id": "KUANAM-04513",
+      "n_schedules": 6,
+      "n_date_schedules": 73,
+      "notes": ""
+    },
+    {
+      "name": "김경진A",
+      "department": "내분비내과",
+      "external_id": "KUANAM-09302",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "김경진B",
+      "department": "내분비내과",
+      "external_id": "KUANAM-11204",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "김남훈",
+      "department": "내분비내과",
+      "external_id": "KUANAM-04111",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "김신곤",
+      "department": "내분비내과",
+      "external_id": "KUANAM-01378",
+      "n_schedules": 4,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "김정아",
+      "department": "내분비내과",
+      "external_id": "KUANAM-13115",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "김희영",
+      "department": "내분비내과",
+      "external_id": "KUANAM-99145",
+      "n_schedules": 6,
+      "n_date_schedules": 71,
+      "notes": ""
+    },
+    {
+      "name": "김양현",
+      "department": "가정의학과",
+      "external_id": "KUANAM-03076",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "윤지현",
+      "department": "가정의학과",
+      "external_id": "KUANAM-03010",
+      "n_schedules": 5,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "이규배",
+      "department": "가정의학과",
+      "external_id": "KUANAM-19283",
+      "n_schedules": 5,
+      "n_date_schedules": 45,
+      "notes": ""
+    },
+    {
+      "name": "한병덕",
+      "department": "가정의학과",
+      "external_id": "KUANAM-08164",
+      "n_schedules": 4,
+      "n_date_schedules": 38,
+      "notes": ""
+    },
+    {
+      "name": "금보라",
+      "department": "소화기내과",
+      "external_id": "KUANAM-01175",
+      "n_schedules": 4,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김은선",
+      "department": "소화기내과",
+      "external_id": "KUANAM-03045",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "김태형",
+      "department": "소화기내과",
+      "external_id": "KUANAM-06117",
+      "n_schedules": 5,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "서연석",
+      "department": "소화기내과",
+      "external_id": "KUANAM-04222",
+      "n_schedules": 5,
+      "n_date_schedules": 60,
+      "notes": ""
+    },
+    {
+      "name": "이보미",
+      "department": "소화기내과",
+      "external_id": "KUANAM-18156",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "이재민",
+      "department": "소화기내과",
+      "external_id": "KUANAM-05113",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "임선영",
+      "department": "소화기내과",
+      "external_id": "KUANAM-07153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "전한조",
+      "department": "소화기내과",
+      "external_id": "KUANAM-13180",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "전훈재",
+      "department": "소화기내과",
+      "external_id": "KUANAM-96017",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "진윤태",
+      "department": "소화기내과",
+      "external_id": "KUANAM-98015",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "권영근",
+      "department": "위장관외과(상부)",
+      "external_id": "KUANAM-14076",
+      "n_schedules": 5,
+      "n_date_schedules": 58,
+      "notes": ""
+    },
+    {
+      "name": "민재석",
+      "department": "위장관외과(상부)",
+      "external_id": "KUANAM-24588",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "강석호",
+      "department": "비뇨의학과",
+      "external_id": "KUANAM-01403",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "강성구",
+      "department": "비뇨의학과",
+      "external_id": "KUANAM-01221",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "노태일",
+      "department": "비뇨의학과",
+      "external_id": "KUANAM-10202",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "심지성",
+      "department": "비뇨의학과",
+      "external_id": "KUANAM-08188",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "강가원",
+      "department": "혈액내과",
+      "external_id": "KUANAM-10101",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽근예",
+      "department": "혈액내과",
+      "external_id": "KUANAM-20362",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김병수",
+      "department": "혈액내과",
+      "external_id": "KUANAM-98139",
+      "n_schedules": 6,
+      "n_date_schedules": 62,
+      "notes": ""
+    },
+    {
+      "name": "박용",
+      "department": "혈액내과",
+      "external_id": "KUANAM-01240",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "김좌훈",
+      "department": "종양내과",
+      "external_id": "KUANAM-21236",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "김주원",
+      "department": "종양내과",
+      "external_id": "KUANAM-12121",
+      "n_schedules": 4,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "박경화",
+      "department": "종양내과",
+      "external_id": "KUANAM-99053",
+      "n_schedules": 3,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "이수현",
+      "department": "종양내과",
+      "external_id": "KUANAM-19102",
+      "n_schedules": 4,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "이지원",
+      "department": "종양내과",
+      "external_id": "KUANAM-14141",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "최윤지",
+      "department": "종양내과",
+      "external_id": "KUANAM-06177",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "유영동",
+      "department": "간담췌외과",
+      "external_id": "KUANAM-00142",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "최유진",
+      "department": "간담췌외과",
+      "external_id": "KUANAM-14160",
+      "n_schedules": 2,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "김민자",
+      "department": "감염내과",
+      "external_id": "KUANAM-87021",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "손장욱",
+      "department": "감염내과",
+      "external_id": "KUANAM-01107",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "윤영경",
+      "department": "감염내과",
+      "external_id": "KUANAM-04070",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "구태연",
+      "department": "신장내과",
+      "external_id": "KUANAM-22579",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명규",
+      "department": "신장내과",
+      "external_id": "KUANAM-01225",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "오세원",
+      "department": "신장내과",
+      "external_id": "KUANAM-05062",
+      "n_schedules": 4,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "조상경",
+      "department": "신장내과",
+      "external_id": "KUANAM-00483",
+      "n_schedules": 4,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "강신혁",
+      "department": "신경외과",
+      "external_id": "KUANAM-03155",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김장훈",
+      "department": "신경외과",
+      "external_id": "KUANAM-11211",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "박경재",
+      "department": "신경외과",
+      "external_id": "KUANAM-01184",
+      "n_schedules": 1,
+      "n_date_schedules": 6,
+      "notes": ""
+    },
+    {
+      "name": "박동혁",
+      "department": "신경외과",
+      "external_id": "KUANAM-99070",
+      "n_schedules": 4,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "박정율",
+      "department": "신경외과",
+      "external_id": "KUANAM-95023",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "안성재",
+      "department": "신경외과",
+      "external_id": "KUANAM-23447",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "오영규",
+      "department": "신경외과",
+      "external_id": "KUANAM-23669",
+      "n_schedules": 4,
+      "n_date_schedules": 49,
+      "notes": ""
+    },
+    {
+      "name": "이성우",
+      "department": "신경외과",
+      "external_id": "KUANAM-15155",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "이수범",
+      "department": "신경외과",
+      "external_id": "KUANAM-22520",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "허준석",
+      "department": "신경외과",
+      "external_id": "KUANAM-08165",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "김병조",
+      "department": "신경과",
+      "external_id": "KUANAM-00240",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김정빈",
+      "department": "신경과",
+      "external_id": "KUANAM-07106",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "김하욤",
+      "department": "신경과",
+      "external_id": "KUANAM-14098",
+      "n_schedules": 4,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "노지훈",
+      "department": "신경과",
+      "external_id": "KUANAM-03139",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "박건우",
+      "department": "신경과",
+      "external_id": "KUANAM-96021",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "박진우",
+      "department": "신경과",
+      "external_id": "KUANAM-11224",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "백설희",
+      "department": "신경과",
+      "external_id": "KUANAM-10207",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유성욱",
+      "department": "신경과",
+      "external_id": "KUANAM-03157",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "이선욱",
+      "department": "신경과",
+      "external_id": "KUANAM-19105",
+      "n_schedules": 4,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "이찬녕",
+      "department": "신경과",
+      "external_id": "KUANAM-02096",
+      "n_schedules": 5,
+      "n_date_schedules": 58,
+      "notes": ""
+    },
+    {
+      "name": "조경희",
+      "department": "신경과",
+      "external_id": "KUANAM-11687",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "최종석",
+      "department": "신경과",
+      "external_id": "KUANAM-13194",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "김성민",
+      "department": "산부인과",
+      "external_id": "KUANAM-09307",
+      "n_schedules": 3,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "류기진",
+      "department": "산부인과",
+      "external_id": "KUANAM-10132",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "박현태",
+      "department": "산부인과",
+      "external_id": "KUANAM-99129",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "송재윤",
+      "department": "산부인과",
+      "external_id": "KUANAM-99135",
+      "n_schedules": 2,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "안기훈",
+      "department": "산부인과",
+      "external_id": "KUANAM-01214",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "이상훈",
+      "department": "산부인과",
+      "external_id": "KUANAM-02167",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "이선미",
+      "department": "산부인과",
+      "external_id": "KUANAM-22517",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "정혜경",
+      "department": "산부인과",
+      "external_id": "KUANAM-22535",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "홍순철",
+      "department": "산부인과",
+      "external_id": "KUANAM-98060",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "김연수",
+      "department": "이비인후과",
+      "external_id": "KUANAM-07184",
+      "n_schedules": 3,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "김태훈",
+      "department": "이비인후과",
+      "external_id": "KUANAM-99132",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "박의현",
+      "department": "이비인후과",
+      "external_id": "KUANAM-09329",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백승국",
+      "department": "이비인후과",
+      "external_id": "KUANAM-98119",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "신재민",
+      "department": "이비인후과",
+      "external_id": "KUANAM-05108",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "장지원",
+      "department": "이비인후과",
+      "external_id": "KUANAM-03101",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "최수정",
+      "department": "이비인후과",
+      "external_id": "KUANAM-18166",
+      "n_schedules": 3,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "안과",
+      "external_id": "KUANAM-22I50",
+      "n_schedules": 4,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김승현",
+      "department": "안과",
+      "external_id": "KUANAM-01379",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "김영호",
+      "department": "안과",
+      "external_id": "KUANAM-06187",
+      "n_schedules": 3,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "오재령",
+      "department": "안과",
+      "external_id": "KUANAM-98113",
+      "n_schedules": 3,
+      "n_date_schedules": 31,
+      "notes": ""
+    },
+    {
+      "name": "유정권",
+      "department": "안과",
+      "external_id": "KUANAM-98078",
+      "n_schedules": 4,
+      "n_date_schedules": 46,
+      "notes": ""
+    },
+    {
+      "name": "최유진",
+      "department": "안과",
+      "external_id": "KUANAM-11261",
+      "n_schedules": 3,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "박종웅",
+      "department": "정형외과",
+      "external_id": "KUANAM-99033",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "박종훈",
+      "department": "정형외과",
+      "external_id": "KUANAM-07238",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "양재혁",
+      "department": "정형외과",
+      "external_id": "KUANAM-02049",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "장우영",
+      "department": "정형외과",
+      "external_id": "KUANAM-16243",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "정웅교",
+      "department": "정형외과",
+      "external_id": "KUANAM-06233",
+      "n_schedules": 4,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "최인철",
+      "department": "정형외과",
+      "external_id": "KUANAM-98039",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "최지혜",
+      "department": "정형외과",
+      "external_id": "KUANAM-22527",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한승범",
+      "department": "정형외과",
+      "external_id": "KUANAM-99195",
+      "n_schedules": 2,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "박유진",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-23456",
+      "n_schedules": 1,
+      "n_date_schedules": 3,
+      "notes": ""
+    },
+    {
+      "name": "박준은",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-20E48",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "변정혜",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-05129",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "유영",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-05191",
+      "n_schedules": 2,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "이영준",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-07263",
+      "n_schedules": 4,
+      "n_date_schedules": 47,
+      "notes": ""
+    },
+    {
+      "name": "이윤",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-03127",
+      "n_schedules": 3,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "이주성",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-13212",
+      "n_schedules": 3,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "조한나",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-20171",
+      "n_schedules": 1,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "최영준",
+      "department": "소아청소년과",
+      "external_id": "KUANAM-21230",
+      "n_schedules": 2,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "박호진",
+      "department": "성형외과",
+      "external_id": "KUANAM-11288",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "윤을식",
+      "department": "성형외과",
+      "external_id": "KUANAM-00062",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이병일",
+      "department": "성형외과",
+      "external_id": "KUANAM-94046",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "이재민",
+      "department": "성형외과",
+      "external_id": "KUANAM-16082",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "이형철",
+      "department": "성형외과",
+      "external_id": "KUANAM-18098",
+      "n_schedules": 3,
+      "n_date_schedules": 35,
+      "notes": ""
+    },
+    {
+      "name": "정재호",
+      "department": "성형외과",
+      "external_id": "KUANAM-09367",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "김병근",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUANAM-17213",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "이상엽",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUANAM-02317",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "이은주",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUANAM-01263",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "최수인",
+      "department": "호흡기·알레르기내과",
+      "external_id": "KUANAM-10185",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "정신건강의학과",
+      "external_id": "KUANAM-15231",
+      "n_schedules": 4,
+      "n_date_schedules": 48,
+      "notes": ""
+    },
+    {
+      "name": "이헌정",
+      "department": "정신건강의학과",
+      "external_id": "KUANAM-03156",
+      "n_schedules": 3,
+      "n_date_schedules": 37,
+      "notes": ""
+    },
+    {
+      "name": "조철현",
+      "department": "정신건강의학과",
+      "external_id": "KUANAM-05143",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한규만",
+      "department": "정신건강의학과",
+      "external_id": "KUANAM-09383",
+      "n_schedules": 4,
+      "n_date_schedules": 44,
+      "notes": ""
+    },
+    {
+      "name": "함병주",
+      "department": "정신건강의학과",
+      "external_id": "KUANAM-01376",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "이영호",
+      "department": "류마티스내과",
+      "external_id": "KUANAM-96024",
+      "n_schedules": 5,
+      "n_date_schedules": 61,
+      "notes": ""
+    },
+    {
+      "name": "지종대",
+      "department": "류마티스내과",
+      "external_id": "KUANAM-02247",
+      "n_schedules": 5,
+      "n_date_schedules": 59,
+      "notes": ""
+    },
+    {
+      "name": "김보련",
+      "department": "재활의학과",
+      "external_id": "KUANAM-20164",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배초롱",
+      "department": "재활의학과",
+      "external_id": "KUANAM-14111",
+      "n_schedules": 7,
+      "n_date_schedules": 86,
+      "notes": ""
+    },
+    {
+      "name": "서경천",
+      "department": "재활의학과",
+      "external_id": "KUANAM-22538",
+      "n_schedules": 7,
+      "n_date_schedules": 85,
+      "notes": ""
+    },
+    {
+      "name": "이상헌",
+      "department": "재활의학과",
+      "external_id": "KUANAM-99400",
+      "n_schedules": 2,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "편성범",
+      "department": "재활의학과",
+      "external_id": "KUANAM-06274",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오영주",
+      "department": "이식혈관외과",
+      "external_id": "KUANAM-22524",
+      "n_schedules": 3,
+      "n_date_schedules": 34,
+      "notes": ""
+    },
+    {
+      "name": "전흥만",
+      "department": "이식혈관외과",
+      "external_id": "KUANAM-13539",
+      "n_schedules": 3,
+      "n_date_schedules": 36,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,2887 @@
+{
+  "hospital_code": "PAIKBS",
+  "hospital_name": "인제대학교 부산백병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "박태진",
+      "department": "가정의학과",
+      "external_id": "PAIKBS-157",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이가영",
+      "department": "가정의학과",
+      "external_id": "PAIKBS-158",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진승",
+      "department": "가정의학과",
+      "external_id": "PAIKBS-159",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "현정현",
+      "department": "가정의학과",
+      "external_id": "PAIKBS-2218",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최창수",
+      "department": "간이식 간담췌외과",
+      "external_id": "PAIKBS-143",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강상현",
+      "department": "간이식 간담췌외과",
+      "external_id": "PAIKBS-144",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희주",
+      "department": "간이식 간담췌외과",
+      "external_id": "PAIKBS-145",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현경",
+      "department": "간질성폐질환클리닉",
+      "external_id": "PAIKBS-378",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김무성",
+      "department": "감마나이프클리닉",
+      "external_id": "PAIKBS-1436",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강진숙",
+      "department": "감염내과",
+      "external_id": "PAIKBS-99",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문석준",
+      "department": "감염내과",
+      "external_id": "PAIKBS-101",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하태권",
+      "department": "갑상선 두경부외과",
+      "external_id": "PAIKBS-146",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박하경",
+      "department": "갑상선 두경부외과",
+      "external_id": "PAIKBS-147",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하태권",
+      "department": "갑상선·두경부종양센터",
+      "external_id": "PAIKBS-288",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박하경",
+      "department": "갑상선·두경부종양센터",
+      "external_id": "PAIKBS-289",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도훈",
+      "department": "갑상선·두경부종양센터",
+      "external_id": "PAIKBS-287",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유진",
+      "department": "갑상선·두경부종양센터",
+      "external_id": "PAIKBS-1434",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대유",
+      "department": "고압산소치료클리닉",
+      "external_id": "PAIKBS-2274",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영남",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-291",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김다현",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-2106",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임도화",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-2184",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은혜",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-2105",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은정",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-2104",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구수현",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-293",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은진",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-2108",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동준",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-2109",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소정",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-2111",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손현우",
+      "department": "권역모자의료센터",
+      "external_id": "PAIKBS-2110",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진승",
+      "department": "금연클리닉",
+      "external_id": "PAIKBS-2269",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김다현",
+      "department": "난임클리닉",
+      "external_id": "PAIKBS-2251",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정현",
+      "department": "내분비대사내과",
+      "external_id": "PAIKBS-102",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이순희",
+      "department": "내분비대사내과",
+      "external_id": "PAIKBS-103",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권민정",
+      "department": "내분비대사내과",
+      "external_id": "PAIKBS-104",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김응규",
+      "department": "뇌졸중 및 경동맥클리닉",
+      "external_id": "PAIKBS-2270",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석윤",
+      "department": "뇌졸중 및 경동맥클리닉",
+      "external_id": "PAIKBS-2271",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정영균",
+      "department": "뇌혈관질환클리닉",
+      "external_id": "PAIKBS-382",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진",
+      "department": "뇌혈관질환클리닉",
+      "external_id": "PAIKBS-2264",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주환",
+      "department": "뇌혈관질환클리닉",
+      "external_id": "PAIKBS-2267",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정현",
+      "department": "당뇨병센터",
+      "external_id": "PAIKBS-294",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이순희",
+      "department": "당뇨병센터",
+      "external_id": "PAIKBS-295",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권민정",
+      "department": "당뇨병센터",
+      "external_id": "PAIKBS-296",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배기범",
+      "department": "대장항문외과",
+      "external_id": "PAIKBS-148",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백형주",
+      "department": "대장항문외과",
+      "external_id": "PAIKBS-150",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강상현",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-2158",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희주",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-2159",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하태권",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-301",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박하경",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-302",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배기범",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-300",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백형주",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-2168",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재일",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-307",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서원익",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-308",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이찬호",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-309",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경복",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-304",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정대훈",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-305",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변정미",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-306",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은혜",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-2253",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성광",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-2155",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서상혁",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-303",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변경도",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-2156",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희연",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-2157",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도훈",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-299",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성율",
+      "department": "로봇수술센터",
+      "external_id": "PAIKBS-2154",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동욱",
+      "department": "류마티스내과",
+      "external_id": "PAIKBS-105",
+      "n_schedules": 9,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강주연",
+      "department": "류마티스내과",
+      "external_id": "PAIKBS-106",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정순호",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-160",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임세훈",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-164",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조광래",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-165",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명훈",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-166",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원진",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-162",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "기승희",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-1304",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수지",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-1604",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용현",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-2015",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배우종",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-2087",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한지수",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-2134",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현태",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-2215",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최석환",
+      "department": "마취통증의학과",
+      "external_id": "PAIKBS-2216",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임세훈",
+      "department": "무수혈센터",
+      "external_id": "PAIKBS-313",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대경",
+      "department": "무수혈센터",
+      "external_id": "PAIKBS-312",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김무성",
+      "department": "무수혈센터",
+      "external_id": "PAIKBS-1432",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박하경",
+      "department": "무수혈센터",
+      "external_id": "PAIKBS-311",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤유상",
+      "department": "무수혈센터",
+      "external_id": "PAIKBS-310",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김명훈",
+      "department": "무수혈센터",
+      "external_id": "PAIKBS-314",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조흥래",
+      "department": "방사선종양학과",
+      "external_id": "PAIKBS-169",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안기정",
+      "department": "방사선종양학과",
+      "external_id": "PAIKBS-170",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성광",
+      "department": "방사선종양학과",
+      "external_id": "PAIKBS-168",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현정",
+      "department": "방사선종양학과",
+      "external_id": "PAIKBS-2076",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양영일",
+      "department": "병리과",
+      "external_id": "PAIKBS-173",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수진",
+      "department": "병리과",
+      "external_id": "PAIKBS-175",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박하영",
+      "department": "병리과",
+      "external_id": "PAIKBS-177",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안효정",
+      "department": "병리과",
+      "external_id": "PAIKBS-2220",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상진",
+      "department": "보톡스클리닉",
+      "external_id": "PAIKBS-2272",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진호",
+      "department": "보톡스클리닉",
+      "external_id": "PAIKBS-2273",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "민권식",
+      "department": "비뇨의학과",
+      "external_id": "PAIKBS-178",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성협",
+      "department": "비뇨의학과",
+      "external_id": "PAIKBS-1701",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정재일",
+      "department": "비뇨의학과",
+      "external_id": "PAIKBS-179",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서원익",
+      "department": "비뇨의학과",
+      "external_id": "PAIKBS-180",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이찬호",
+      "department": "비뇨의학과",
+      "external_id": "PAIKBS-181",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이가영",
+      "department": "비만클리닉",
+      "external_id": "PAIKBS-1437",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진승",
+      "department": "비만클리닉",
+      "external_id": "PAIKBS-1990",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경복",
+      "department": "산부인과",
+      "external_id": "PAIKBS-183",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정대훈",
+      "department": "산부인과",
+      "external_id": "PAIKBS-185",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영남",
+      "department": "산부인과",
+      "external_id": "PAIKBS-184",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변정미",
+      "department": "산부인과",
+      "external_id": "PAIKBS-186",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김다현",
+      "department": "산부인과",
+      "external_id": "PAIKBS-2252",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임도화",
+      "department": "산부인과",
+      "external_id": "PAIKBS-2183",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은혜",
+      "department": "산부인과",
+      "external_id": "PAIKBS-2254",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은정",
+      "department": "산부인과",
+      "external_id": "PAIKBS-1776",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박진옥",
+      "department": "산부인과",
+      "external_id": "PAIKBS-1976",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문정준",
+      "department": "섭식장애클리닉",
+      "external_id": "PAIKBS-384",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진우",
+      "department": "성형외과",
+      "external_id": "PAIKBS-192",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤지영",
+      "department": "성형외과",
+      "external_id": "PAIKBS-193",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정의한",
+      "department": "성형외과",
+      "external_id": "PAIKBS-194",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남소현",
+      "department": "소아외과",
+      "external_id": "PAIKBS-1747",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주은",
+      "department": "소아외과",
+      "external_id": "PAIKBS-2141",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지경",
+      "department": "소아청소년과",
+      "external_id": "PAIKBS-196",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구수현",
+      "department": "소아청소년과",
+      "external_id": "PAIKBS-199",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이보련",
+      "department": "소아청소년과",
+      "external_id": "PAIKBS-197",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최은진",
+      "department": "소아청소년과",
+      "external_id": "PAIKBS-202",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노다은",
+      "department": "소아청소년과",
+      "external_id": "PAIKBS-203",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동준",
+      "department": "소아청소년과",
+      "external_id": "PAIKBS-1308",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손현우",
+      "department": "소아청소년과",
+      "external_id": "PAIKBS-1746",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소정",
+      "department": "소아청소년과",
+      "external_id": "PAIKBS-1784",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이연재",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-107",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지삼룡",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-110",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성재",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-111",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정식",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-109",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상헌",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-108",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준식",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-113",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이홍섭",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-114",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유승정",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-116",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박민석",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-1754",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "존 마옌 루벤",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-1875",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동우",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-1935",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백희원",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-2010",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준섭",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-2142",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한다현",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-2143",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허혜랑",
+      "department": "소화기내과",
+      "external_id": "PAIKBS-2227",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이연재",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-323",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지삼룡",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-326",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성재",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-327",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최정식",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-325",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이홍섭",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-329",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤준식",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-328",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유승정",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-331",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최창수",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-316",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배기범",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-317",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광희",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-318",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서상혁",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-320",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백형주",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-321",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강상현",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-322",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이희주",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-1426",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상헌",
+      "department": "소화기센터",
+      "external_id": "PAIKBS-324",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대경",
+      "department": "순환기내과",
+      "external_id": "PAIKBS-121",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양태현",
+      "department": "순환기내과",
+      "external_id": "PAIKBS-123",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진한영",
+      "department": "순환기내과",
+      "external_id": "PAIKBS-119",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정숙",
+      "department": "순환기내과",
+      "external_id": "PAIKBS-120",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영아",
+      "department": "순환기내과",
+      "external_id": "PAIKBS-122",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송여정",
+      "department": "순환기내과",
+      "external_id": "PAIKBS-2012",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최규남",
+      "department": "순환기내과",
+      "external_id": "PAIKBS-2164",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서상혁",
+      "department": "식도암클리닉",
+      "external_id": "PAIKBS-386",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김응규",
+      "department": "신경과",
+      "external_id": "PAIKBS-204",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상진",
+      "department": "신경과",
+      "external_id": "PAIKBS-205",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은주",
+      "department": "신경과",
+      "external_id": "PAIKBS-206",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지기환",
+      "department": "신경과",
+      "external_id": "PAIKBS-207",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강미리",
+      "department": "신경과",
+      "external_id": "PAIKBS-210",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석윤",
+      "department": "신경과",
+      "external_id": "PAIKBS-211",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진호",
+      "department": "신경과",
+      "external_id": "PAIKBS-212",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김무성",
+      "department": "신경외과",
+      "external_id": "PAIKBS-214",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정영균",
+      "department": "신경외과",
+      "external_id": "PAIKBS-216",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "팽성화",
+      "department": "신경외과",
+      "external_id": "PAIKBS-217",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이근수",
+      "department": "신경외과",
+      "external_id": "PAIKBS-218",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원희",
+      "department": "신경외과",
+      "external_id": "PAIKBS-220",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진",
+      "department": "신경외과",
+      "external_id": "PAIKBS-1756",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주환",
+      "department": "신경외과",
+      "external_id": "PAIKBS-2266",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "팽성화",
+      "department": "신경척추클리닉",
+      "external_id": "PAIKBS-391",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태희",
+      "department": "신장기증자클리닉",
+      "external_id": "PAIKBS-392",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영훈",
+      "department": "신장내과",
+      "external_id": "PAIKBS-125",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태희",
+      "department": "신장내과",
+      "external_id": "PAIKBS-126",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박석주",
+      "department": "신장내과",
+      "external_id": "PAIKBS-128",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤미",
+      "department": "신장내과",
+      "external_id": "PAIKBS-129",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허혁",
+      "department": "신장내과",
+      "external_id": "PAIKBS-2248",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강소이",
+      "department": "신장내과",
+      "external_id": "PAIKBS-2222",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이양행",
+      "department": "심장혈관흉부외과",
+      "external_id": "PAIKBS-282",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "위진홍",
+      "department": "심장혈관흉부외과",
+      "external_id": "PAIKBS-284",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성광",
+      "department": "심장혈관흉부외과",
+      "external_id": "PAIKBS-286",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주현",
+      "department": "심장혈관흉부외과",
+      "external_id": "PAIKBS-2013",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정숙",
+      "department": "심장희귀질환클리닉",
+      "external_id": "PAIKBS-2146",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대경",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-336",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양태현",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-338",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진한영",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-334",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서정숙",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-335",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영아",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-337",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송여정",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-2174",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최규남",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-2173",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "위진홍",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-1552",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주현",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-2180",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최석진",
+      "department": "심혈관센터",
+      "external_id": "PAIKBS-1548",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양재욱",
+      "department": "안과",
+      "external_id": "PAIKBS-221",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정림",
+      "department": "안과",
+      "external_id": "PAIKBS-222",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성혁",
+      "department": "안과",
+      "external_id": "PAIKBS-223",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽현덕",
+      "department": "안과",
+      "external_id": "PAIKBS-224",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황문원",
+      "department": "안과",
+      "external_id": "PAIKBS-226",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영진",
+      "department": "안과",
+      "external_id": "PAIKBS-225",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동근",
+      "department": "안과",
+      "external_id": "PAIKBS-227",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재협",
+      "department": "안과",
+      "external_id": "PAIKBS-1874",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원식",
+      "department": "암센터",
+      "external_id": "PAIKBS-340",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상민",
+      "department": "암센터",
+      "external_id": "PAIKBS-343",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기향",
+      "department": "암센터",
+      "external_id": "PAIKBS-342",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "암센터",
+      "external_id": "PAIKBS-341",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조흥래",
+      "department": "암센터",
+      "external_id": "PAIKBS-344",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안기정",
+      "department": "암센터",
+      "external_id": "PAIKBS-345",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상헌",
+      "department": "염증성장질환클리닉",
+      "external_id": "PAIKBS-1846",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이홍섭",
+      "department": "염증성장질환클리닉",
+      "external_id": "PAIKBS-1845",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백형주",
+      "department": "염증성장질환클리닉",
+      "external_id": "PAIKBS-1847",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강주연",
+      "department": "염증성장질환클리닉",
+      "external_id": "PAIKBS-1848",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최석진",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-1549",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영미",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-232",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해웅",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-229",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이선주",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-233",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "추혜정",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-235",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유진",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-236",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백진욱",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-1663",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허영진",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-1553",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신기원",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-237",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한지연",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-1311",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은주",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-1313",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주용",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-1795",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신민지",
+      "department": "영상의학과",
+      "external_id": "PAIKBS-1719",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김광희",
+      "department": "위암 식도암 위장관외과",
+      "external_id": "PAIKBS-152",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서상혁",
+      "department": "위암 식도암 위장관외과",
+      "external_id": "PAIKBS-153",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태현",
+      "department": "유방센터",
+      "external_id": "PAIKBS-1422",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진우",
+      "department": "유방센터",
+      "external_id": "PAIKBS-348",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영미",
+      "department": "유방센터",
+      "external_id": "PAIKBS-1607",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태현",
+      "department": "유방외과",
+      "external_id": "PAIKBS-154",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변경도",
+      "department": "유방외과",
+      "external_id": "PAIKBS-156",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김희연",
+      "department": "유방외과",
+      "external_id": "PAIKBS-155",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김양원",
+      "department": "응급의료센터",
+      "external_id": "PAIKBS-1420",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤유상",
+      "department": "응급의료센터",
+      "external_id": "PAIKBS-1421",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지훈",
+      "department": "응급의료센터",
+      "external_id": "PAIKBS-349",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지재구",
+      "department": "응급의료센터",
+      "external_id": "PAIKBS-351",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김양원",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-241",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤유상",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-242",
+      "n_schedules": 12,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강지훈",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-243",
+      "n_schedules": 11,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지재구",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-1315",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주진수",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-1852",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서용송",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-1938",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김마로",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-2096",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동현",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-2098",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손동우",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-2097",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호진",
+      "department": "응급의학과",
+      "external_id": "PAIKBS-2162",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성국",
+      "department": "이비인후과",
+      "external_id": "PAIKBS-245",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허경욱",
+      "department": "이비인후과",
+      "external_id": "PAIKBS-246",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김도훈",
+      "department": "이비인후과",
+      "external_id": "PAIKBS-247",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우진",
+      "department": "이비인후과",
+      "external_id": "PAIKBS-2178",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍태의",
+      "department": "이비인후과",
+      "external_id": "PAIKBS-1748",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성율",
+      "department": "이비인후과",
+      "external_id": "PAIKBS-1873",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김순일",
+      "department": "이식 및 혈관외과",
+      "external_id": "PAIKBS-1560",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하수민",
+      "department": "이식 및 혈관외과",
+      "external_id": "PAIKBS-1876",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정해웅",
+      "department": "인터벤션센터",
+      "external_id": "PAIKBS-1718",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백진욱",
+      "department": "인터벤션센터",
+      "external_id": "PAIKBS-353",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박주용",
+      "department": "인터벤션센터",
+      "external_id": "PAIKBS-1796",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진",
+      "department": "인터벤션센터",
+      "external_id": "PAIKBS-2262",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이석윤",
+      "department": "인터벤션센터",
+      "external_id": "PAIKBS-2280",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준형",
+      "department": "인터벤션센터",
+      "external_id": "PAIKBS-2079",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조정현",
+      "department": "인터벤션센터",
+      "external_id": "PAIKBS-2080",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이주환",
+      "department": "인터벤션센터",
+      "external_id": "PAIKBS-2265",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신재국",
+      "department": "임상약리학과",
+      "external_id": "PAIKBS-251",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김은영",
+      "department": "임상약리학과",
+      "external_id": "PAIKBS-250",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종률",
+      "department": "임상약리학과",
+      "external_id": "PAIKBS-1318",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영훈",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-357",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태희",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-359",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤미",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-1923",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김순일",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-2203",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이연재",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-358",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박성재",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-360",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서원익",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-362",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강상현",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-356",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황문원",
+      "department": "장기이식센터",
+      "external_id": "PAIKBS-2204",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이경복",
+      "department": "장애친화산부인과",
+      "external_id": "PAIKBS-1841",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정대훈",
+      "department": "장애친화산부인과",
+      "external_id": "PAIKBS-1840",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영남",
+      "department": "장애친화산부인과",
+      "external_id": "PAIKBS-1787",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "변정미",
+      "department": "장애친화산부인과",
+      "external_id": "PAIKBS-1833",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김다현",
+      "department": "장애친화산부인과",
+      "external_id": "PAIKBS-1788",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임도화",
+      "department": "장애친화산부인과",
+      "external_id": "PAIKBS-1834",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조은혜",
+      "department": "장애친화산부인과",
+      "external_id": "PAIKBS-1835",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은정",
+      "department": "장애친화산부인과",
+      "external_id": "PAIKBS-1836",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현동",
+      "department": "재활의학과",
+      "external_id": "PAIKBS-252",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한나미",
+      "department": "재활의학과",
+      "external_id": "PAIKBS-253",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남희성",
+      "department": "재활의학과",
+      "external_id": "PAIKBS-254",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정도운",
+      "department": "정신건강의학과",
+      "external_id": "PAIKBS-256",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강제욱",
+      "department": "정신건강의학과",
+      "external_id": "PAIKBS-255",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문정준",
+      "department": "정신건강의학과",
+      "external_id": "PAIKBS-257",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주현빈",
+      "department": "정신건강의학과",
+      "external_id": "PAIKBS-2201",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정한",
+      "department": "정형외과",
+      "external_id": "PAIKBS-261",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박대현",
+      "department": "정형외과",
+      "external_id": "PAIKBS-262",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권용욱",
+      "department": "정형외과",
+      "external_id": "PAIKBS-264",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이창락",
+      "department": "정형외과",
+      "external_id": "PAIKBS-263",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대유",
+      "department": "정형외과",
+      "external_id": "PAIKBS-265",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정수환",
+      "department": "정형외과",
+      "external_id": "PAIKBS-1319",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지훈",
+      "department": "정형외과",
+      "external_id": "PAIKBS-2086",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원식",
+      "department": "조혈모세포이식센터",
+      "external_id": "PAIKBS-363",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상민",
+      "department": "조혈모세포이식센터",
+      "external_id": "PAIKBS-364",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정호",
+      "department": "직업환경의학과",
+      "external_id": "PAIKBS-267",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손병철",
+      "department": "직업환경의학과",
+      "external_id": "PAIKBS-268",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서춘희",
+      "department": "직업환경의학과",
+      "external_id": "PAIKBS-269",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "예병진",
+      "department": "직업환경의학과",
+      "external_id": "PAIKBS-1320",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손석현",
+      "department": "직업환경의학과",
+      "external_id": "PAIKBS-2217",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하나영",
+      "department": "직업환경의학과",
+      "external_id": "PAIKBS-1605",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜란",
+      "department": "진단검사의학과",
+      "external_id": "PAIKBS-271",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신정환",
+      "department": "진단검사의학과",
+      "external_id": "PAIKBS-272",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이자영",
+      "department": "진단검사의학과",
+      "external_id": "PAIKBS-273",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유은경",
+      "department": "진단검사의학과",
+      "external_id": "PAIKBS-1322",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현우",
+      "department": "진단검사의학과",
+      "external_id": "PAIKBS-2225",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상준",
+      "department": "치과",
+      "external_id": "PAIKBS-274",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정태영",
+      "department": "치과",
+      "external_id": "PAIKBS-275",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경희",
+      "department": "치과",
+      "external_id": "PAIKBS-276",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정원",
+      "department": "치과",
+      "external_id": "PAIKBS-277",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차영민",
+      "department": "치과",
+      "external_id": "PAIKBS-2171",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정도운",
+      "department": "치매클리닉",
+      "external_id": "PAIKBS-2268",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영남",
+      "department": "태아클리닉",
+      "external_id": "PAIKBS-394",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조용현",
+      "department": "통증클리닉",
+      "external_id": "PAIKBS-2122",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한지수",
+      "department": "통증클리닉",
+      "external_id": "PAIKBS-2160",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상진",
+      "department": "파킨슨병센터",
+      "external_id": "PAIKBS-1415",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김무성",
+      "department": "파킨슨병센터",
+      "external_id": "PAIKBS-1418",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김현동",
+      "department": "파킨슨병센터",
+      "external_id": "PAIKBS-365",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정진호",
+      "department": "파킨슨병센터",
+      "external_id": "PAIKBS-2277",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현경",
+      "department": "폐암클리닉",
+      "external_id": "PAIKBS-397",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효진",
+      "department": "피부과",
+      "external_id": "PAIKBS-278",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "설정은",
+      "department": "피부과",
+      "external_id": "PAIKBS-279",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지선",
+      "department": "핵의학과",
+      "external_id": "PAIKBS-280",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이순성",
+      "department": "핵의학과",
+      "external_id": "PAIKBS-1323",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최수정",
+      "department": "핵의학과",
+      "external_id": "PAIKBS-281",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원식",
+      "department": "혈액종양내과",
+      "external_id": "PAIKBS-132",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상민",
+      "department": "혈액종양내과",
+      "external_id": "PAIKBS-135",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기향",
+      "department": "혈액종양내과",
+      "external_id": "PAIKBS-134",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지영",
+      "department": "혈액종양내과",
+      "external_id": "PAIKBS-133",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영민",
+      "department": "호흡기·알레르기내과",
+      "external_id": "PAIKBS-136",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현경",
+      "department": "호흡기·알레르기내과",
+      "external_id": "PAIKBS-139",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미영",
+      "department": "호흡기·알레르기내과",
+      "external_id": "PAIKBS-137",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이홍열",
+      "department": "호흡기·알레르기내과",
+      "external_id": "PAIKBS-138",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이호영",
+      "department": "호흡기·알레르기내과",
+      "external_id": "PAIKBS-142",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍성민",
+      "department": "호흡기·알레르기내과",
+      "external_id": "PAIKBS-140",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "방유미",
+      "department": "호흡기·알레르기내과",
+      "external_id": "PAIKBS-1725",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배현혜",
+      "department": "호흡기·알레르기내과",
+      "external_id": "PAIKBS-2176",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이보련",
+      "department": "희귀유전질환클리닉",
+      "external_id": "PAIKBS-1557",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이보련",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-377",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구수현",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-1373",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정현",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-1374",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강주연",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-2172",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김상진",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-372",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영남",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-367",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유은경",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-1375",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허경욱",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-1376",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박지경",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-376",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권용욱",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-374",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문성혁",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-1378",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강제욱",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-373",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태희",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-368",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정은주",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-1380",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이자영",
+      "department": "희귀질환센터",
+      "external_id": "PAIKBS-366",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

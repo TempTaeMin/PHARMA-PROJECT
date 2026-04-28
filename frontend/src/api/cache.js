@@ -39,9 +39,9 @@ export function setCache(key, data) {
 
 export function invalidate(key) {
   if (key) {
-    // 특정 키 또는 prefix로 시작하는 모든 키 삭제
+    // 특정 키 또는 prefix로 시작하는 모든 키 삭제 (':'와 '-' 둘 다 prefix 구분자로 인정)
     for (const k of cache.keys()) {
-      if (k === key || k.startsWith(key + ':')) {
+      if (k === key || k.startsWith(key + ':') || k.startsWith(key + '-')) {
         cache.delete(k);
       }
     }

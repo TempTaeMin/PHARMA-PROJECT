@@ -1,0 +1,2119 @@
+{
+  "hospital_code": "DSMC",
+  "hospital_name": "계명대학교동산병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김대현",
+      "department": "가정의학과",
+      "external_id": "DSMC-162",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "서영성",
+      "department": "가정의학과",
+      "external_id": "DSMC-128",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "홍승완",
+      "department": "가정의학과",
+      "external_id": "DSMC-237",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김용훈",
+      "department": "간담췌외과",
+      "external_id": "DSMC-96",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "안근수",
+      "department": "간담췌외과",
+      "external_id": "DSMC-123",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김태석",
+      "department": "간담췌외과",
+      "external_id": "DSMC-221",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김민재",
+      "department": "간담췌외과",
+      "external_id": "DSMC-553",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조인수",
+      "department": "간담췌외과",
+      "external_id": "DSMC-595",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김현아",
+      "department": "감염내과",
+      "external_id": "DSMC-4",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "현미리",
+      "department": "감염내과",
+      "external_id": "DSMC-340",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이지연",
+      "department": "감염내과",
+      "external_id": "DSMC-238",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이건영",
+      "department": "감염내과",
+      "external_id": "DSMC-538",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김혜순",
+      "department": "내분비대사내과",
+      "external_id": "DSMC-53",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조호찬",
+      "department": "내분비대사내과",
+      "external_id": "DSMC-166",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김미경",
+      "department": "내분비대사내과",
+      "external_id": "DSMC-264",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "하은영",
+      "department": "내분비대사내과",
+      "external_id": "DSMC-589",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "백성규",
+      "department": "대장항문외과",
+      "external_id": "DSMC-141",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정운경",
+      "department": "대장항문외과",
+      "external_id": "DSMC-168",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "배성욱",
+      "department": "대장항문외과",
+      "external_id": "DSMC-9",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김상현",
+      "department": "류마티스내과",
+      "external_id": "DSMC-41",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김지민",
+      "department": "류마티스내과",
+      "external_id": "DSMC-202",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "송병욱",
+      "department": "류마티스내과",
+      "external_id": "DSMC-569",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "남소혜",
+      "department": "류마티스내과",
+      "external_id": "DSMC-570",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정혜진",
+      "department": "류마티스내과",
+      "external_id": "DSMC-241",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "류마티스내과",
+      "external_id": "DSMC-646",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김애라",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-101",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최규택",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-461",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "홍지희",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-100",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박상진",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-652",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박기범",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-257",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박지훈",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-333",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김지섭",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-366",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이재윤",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-546",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김현재",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-565",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조은영",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-480",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김상백",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-481",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이승원",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-607",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김홍란",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-625",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "강호준",
+      "department": "마취통증의학과",
+      "external_id": "DSMC-645",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김진희",
+      "department": "방사선종양학과",
+      "external_id": "DSMC-56",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "변상준",
+      "department": "방사선종양학과",
+      "external_id": "DSMC-281",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박승규",
+      "department": "방사선종양학과",
+      "external_id": "DSMC-367",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최은철",
+      "department": "방사선종양학과",
+      "external_id": "DSMC-225",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "윤상희",
+      "department": "방사선종양학과",
+      "external_id": "DSMC-653",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김상표",
+      "department": "병리과",
+      "external_id": "DSMC-115",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최미선",
+      "department": "병리과",
+      "external_id": "DSMC-113",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "권선영",
+      "department": "병리과",
+      "external_id": "DSMC-51",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정혜라",
+      "department": "병리과",
+      "external_id": "DSMC-32",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "황일선",
+      "department": "병리과",
+      "external_id": "DSMC-50",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이혜원",
+      "department": "병리과",
+      "external_id": "DSMC-282",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "신형찬",
+      "department": "병리과",
+      "external_id": "DSMC-373",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김병훈",
+      "department": "비뇨의학과",
+      "external_id": "DSMC-54",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "하지용",
+      "department": "비뇨의학과",
+      "external_id": "DSMC-223",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정원호",
+      "department": "비뇨의학과",
+      "external_id": "DSMC-214",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "신택준",
+      "department": "비뇨의학과",
+      "external_id": "DSMC-369",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "변혜진",
+      "department": "비뇨의학과",
+      "external_id": "DSMC-442",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "장현찬",
+      "department": "비뇨의학과",
+      "external_id": "DSMC-599",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이경섭",
+      "department": "비뇨의학과",
+      "external_id": "DSMC-470",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조치흠",
+      "department": "산부인과",
+      "external_id": "DSMC-173",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "권상훈",
+      "department": "산부인과",
+      "external_id": "DSMC-140",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "배진곤",
+      "department": "산부인과",
+      "external_id": "DSMC-66",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "신소진",
+      "department": "산부인과",
+      "external_id": "DSMC-31",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "장태규",
+      "department": "산부인과",
+      "external_id": "DSMC-330",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정혜원",
+      "department": "산부인과",
+      "external_id": "DSMC-406",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이승미",
+      "department": "산부인과",
+      "external_id": "DSMC-339",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이기수",
+      "department": "산부인과",
+      "external_id": "DSMC-525",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박성은",
+      "department": "산부인과",
+      "external_id": "DSMC-554",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "남승협",
+      "department": "산부인과",
+      "external_id": "DSMC-561",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "손대구",
+      "department": "성형외과",
+      "external_id": "DSMC-163",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김준형",
+      "department": "성형외과",
+      "external_id": "DSMC-268",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최재훈",
+      "department": "성형외과",
+      "external_id": "DSMC-219",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정운혁",
+      "department": "성형외과",
+      "external_id": "DSMC-258",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조태희",
+      "department": "성형외과",
+      "external_id": "DSMC-448",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "송중원",
+      "department": "성형외과",
+      "external_id": "DSMC-657",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정은영",
+      "department": "소아외과",
+      "external_id": "DSMC-196",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김천수",
+      "department": "소아청소년과",
+      "external_id": "DSMC-76",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최희정",
+      "department": "소아청소년과",
+      "external_id": "DSMC-248",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "변준철",
+      "department": "소아청소년과",
+      "external_id": "DSMC-484",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "장효정",
+      "department": "소아청소년과",
+      "external_id": "DSMC-260",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "신소영",
+      "department": "소아청소년과",
+      "external_id": "DSMC-288",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김가은",
+      "department": "소아청소년과",
+      "external_id": "DSMC-485",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김세진",
+      "department": "소아청소년과",
+      "external_id": "DSMC-593",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이로지",
+      "department": "소아청소년과",
+      "external_id": "DSMC-598",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "곽아브라함",
+      "department": "소아청소년과",
+      "external_id": "DSMC-596",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "황재석",
+      "department": "소화기내과",
+      "external_id": "DSMC-136",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조광범",
+      "department": "소화기내과",
+      "external_id": "DSMC-29",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정우진",
+      "department": "소화기내과",
+      "external_id": "DSMC-150",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "장병국",
+      "department": "소화기내과",
+      "external_id": "DSMC-152",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이주엽",
+      "department": "소화기내과",
+      "external_id": "DSMC-250",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이유진",
+      "department": "소화기내과",
+      "external_id": "DSMC-64",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이진욱",
+      "department": "소화기내과",
+      "external_id": "DSMC-486",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김유리",
+      "department": "소화기내과",
+      "external_id": "DSMC-586",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "신경인",
+      "department": "소화기내과",
+      "external_id": "DSMC-585",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조용원",
+      "department": "신경과",
+      "external_id": "DSMC-34",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "손성일",
+      "department": "신경과",
+      "external_id": "DSMC-55",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "홍정호",
+      "department": "신경과",
+      "external_id": "DSMC-246",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김근태",
+      "department": "신경과",
+      "external_id": "DSMC-293",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김소현",
+      "department": "신경과",
+      "external_id": "DSMC-534",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이준석",
+      "department": "신경과",
+      "external_id": "DSMC-592",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "권혜수",
+      "department": "신경과",
+      "external_id": "DSMC-627",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "오승태",
+      "department": "신경과",
+      "external_id": "DSMC-651",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료(2층",
+      "department": "신경과",
+      "external_id": "DSMC-328",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료(3층",
+      "department": "신경과",
+      "external_id": "DSMC-621",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김인수",
+      "department": "신경외과",
+      "external_id": "DSMC-65",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김엘",
+      "department": "신경외과",
+      "external_id": "DSMC-21",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김창현",
+      "department": "신경외과",
+      "external_id": "DSMC-198",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "권세민",
+      "department": "신경외과",
+      "external_id": "DSMC-362",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "권민용",
+      "department": "신경외과",
+      "external_id": "DSMC-567",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김재현",
+      "department": "신경외과",
+      "external_id": "DSMC-508",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료(3층",
+      "department": "신경외과",
+      "external_id": "DSMC-503",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "한승엽",
+      "department": "신장내과",
+      "external_id": "DSMC-265",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "진규복",
+      "department": "신장내과",
+      "external_id": "DSMC-6",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박우영",
+      "department": "신장내과",
+      "external_id": "DSMC-252",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "백진혁",
+      "department": "신장내과",
+      "external_id": "DSMC-329",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김예림",
+      "department": "신장내과",
+      "external_id": "DSMC-360",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "권진경",
+      "department": "신장내과",
+      "external_id": "DSMC-559",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "황정필",
+      "department": "신장내과",
+      "external_id": "DSMC-655",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "신장내과",
+      "external_id": "DSMC-579",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "남창욱",
+      "department": "심장내과",
+      "external_id": "DSMC-129",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김형섭",
+      "department": "심장내과",
+      "external_id": "DSMC-130",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "윤혁준",
+      "department": "심장내과",
+      "external_id": "DSMC-148",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박형섭",
+      "department": "심장내과",
+      "external_id": "DSMC-153",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조윤경",
+      "department": "심장내과",
+      "external_id": "DSMC-33",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김인철",
+      "department": "심장내과",
+      "external_id": "DSMC-275",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이철현",
+      "department": "심장내과",
+      "external_id": "DSMC-342",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "황종민",
+      "department": "심장내과",
+      "external_id": "DSMC-343",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이희정",
+      "department": "심장내과",
+      "external_id": "DSMC-457",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정태완",
+      "department": "심장내과",
+      "external_id": "DSMC-552",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정민수",
+      "department": "심장내과",
+      "external_id": "DSMC-590",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정유정",
+      "department": "심장내과",
+      "external_id": "DSMC-654",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "금동윤",
+      "department": "심장혈관흉부외과",
+      "external_id": "DSMC-28",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김재범",
+      "department": "심장혈관흉부외과",
+      "external_id": "DSMC-419",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "장우성",
+      "department": "심장혈관흉부외과",
+      "external_id": "DSMC-86",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김윤석",
+      "department": "심장혈관흉부외과",
+      "external_id": "DSMC-370",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "채민철",
+      "department": "심장혈관흉부외과",
+      "external_id": "DSMC-444",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "송경섭",
+      "department": "심장혈관흉부외과",
+      "external_id": "DSMC-529",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "윤성실",
+      "department": "심장혈관흉부외과",
+      "external_id": "DSMC-631",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "배요한",
+      "department": "심장혈관흉부외과",
+      "external_id": "DSMC-656",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김유철",
+      "department": "안과",
+      "external_id": "DSMC-75",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이동철",
+      "department": "안과",
+      "external_id": "DSMC-412",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "장지혜",
+      "department": "안과",
+      "external_id": "DSMC-411",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조순영",
+      "department": "안과",
+      "external_id": "DSMC-515",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "곽지영",
+      "department": "안과",
+      "external_id": "DSMC-609",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "방승필",
+      "department": "안과",
+      "external_id": "DSMC-610",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이재경",
+      "department": "안과",
+      "external_id": "DSMC-629",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "안재홍",
+      "department": "안과",
+      "external_id": "DSMC-639",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이다빈",
+      "department": "안과",
+      "external_id": "DSMC-650",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정창규",
+      "department": "알레르기내과",
+      "external_id": "DSMC-327",
+      "n_schedules": 6,
+      "n_date_schedules": 79,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "알레르기내과",
+      "external_id": "DSMC-647",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이희정",
+      "department": "영상의학과",
+      "external_id": "DSMC-92",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김미정",
+      "department": "영상의학과",
+      "external_id": "DSMC-146",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이재혁",
+      "department": "영상의학과",
+      "external_id": "DSMC-350",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이무숙",
+      "department": "영상의학과",
+      "external_id": "DSMC-432",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김영환",
+      "department": "영상의학과",
+      "external_id": "DSMC-431",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "홍정희",
+      "department": "영상의학과",
+      "external_id": "DSMC-497",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김병제",
+      "department": "영상의학과",
+      "external_id": "DSMC-472",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "구민재",
+      "department": "영상의학과",
+      "external_id": "DSMC-597",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "황은택",
+      "department": "영상의학과",
+      "external_id": "DSMC-616",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정하경",
+      "department": "영상의학과",
+      "external_id": "DSMC-634",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이윤정",
+      "department": "영상의학과",
+      "external_id": "DSMC-648",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이정우",
+      "department": "외상·중환자외과",
+      "external_id": "DSMC-460",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박찬희",
+      "department": "외상·중환자외과",
+      "external_id": "DSMC-495",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "류승완",
+      "department": "위장관외과",
+      "external_id": "DSMC-132",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "손영길",
+      "department": "위장관외과",
+      "external_id": "DSMC-106",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김상훈",
+      "department": "위장관외과",
+      "external_id": "DSMC-535",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "강선희",
+      "department": "유방내분비외과",
+      "external_id": "DSMC-117",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이무현",
+      "department": "유방내분비외과",
+      "external_id": "DSMC-271",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이현지",
+      "department": "유방내분비외과",
+      "external_id": "DSMC-347",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최우익",
+      "department": "응급의학과",
+      "external_id": "DSMC-161",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "주명돈",
+      "department": "응급의학과",
+      "external_id": "DSMC-197",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "양승준",
+      "department": "응급의학과",
+      "external_id": "DSMC-109",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이상훈",
+      "department": "응급의학과",
+      "external_id": "DSMC-368",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김태권",
+      "department": "응급의학과",
+      "external_id": "DSMC-476",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "유종훈",
+      "department": "응급의학과",
+      "external_id": "DSMC-501",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이상민",
+      "department": "응급의학과",
+      "external_id": "DSMC-600",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정원동",
+      "department": "응급의학과",
+      "external_id": "DSMC-608",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "전유나",
+      "department": "응급의학과",
+      "external_id": "DSMC-611",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "노우영",
+      "department": "응급의학과",
+      "external_id": "DSMC-612",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "유동욱",
+      "department": "응급의학과",
+      "external_id": "DSMC-642",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "경동수",
+      "department": "응급의학과",
+      "external_id": "DSMC-658",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "남성일",
+      "department": "이비인후과",
+      "external_id": "DSMC-67",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "여창기",
+      "department": "이비인후과",
+      "external_id": "DSMC-68",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김동은",
+      "department": "이비인후과",
+      "external_id": "DSMC-36",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이예원",
+      "department": "이비인후과",
+      "external_id": "DSMC-636",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조유미",
+      "department": "이비인후과",
+      "external_id": "DSMC-637",
+      "n_schedules": 8,
+      "n_date_schedules": 106,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "이비인후과",
+      "external_id": "DSMC-183",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조원현",
+      "department": "이식혈관외과",
+      "external_id": "DSMC-618",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박영률",
+      "department": "이식혈관외과",
+      "external_id": "DSMC-624",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이소영",
+      "department": "재활의학과",
+      "external_id": "DSMC-167",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조장혁",
+      "department": "재활의학과",
+      "external_id": "DSMC-445",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김경태",
+      "department": "재활의학과",
+      "external_id": "DSMC-498",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최용민",
+      "department": "재활의학과",
+      "external_id": "DSMC-301",
+      "n_schedules": 8,
+      "n_date_schedules": 106,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "재활의학과",
+      "external_id": "DSMC-184",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김희철",
+      "department": "정신건강의학과",
+      "external_id": "DSMC-89",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정성원",
+      "department": "정신건강의학과",
+      "external_id": "DSMC-91",
+      "n_schedules": 6,
+      "n_date_schedules": 79,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김양태",
+      "department": "정신건강의학과",
+      "external_id": "DSMC-138",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이호준",
+      "department": "정신건강의학과",
+      "external_id": "DSMC-446",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "공나영",
+      "department": "정신건강의학과",
+      "external_id": "DSMC-551",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "정신건강의학과",
+      "external_id": "DSMC-185",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "배기철",
+      "department": "정형외과",
+      "external_id": "DSMC-70",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조철현",
+      "department": "정형외과",
+      "external_id": "DSMC-60",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이경재",
+      "department": "정형외과",
+      "external_id": "DSMC-72",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "손은석",
+      "department": "정형외과",
+      "external_id": "DSMC-85",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이시욱",
+      "department": "정형외과",
+      "external_id": "DSMC-217",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김두한",
+      "department": "정형외과",
+      "external_id": "DSMC-375",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "연창진",
+      "department": "정형외과",
+      "external_id": "DSMC-527",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "손혁준",
+      "department": "정형외과",
+      "external_id": "DSMC-630",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "정형외과",
+      "external_id": "DSMC-649",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정인성",
+      "department": "직업환경의학과",
+      "external_id": "DSMC-45",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "하제철",
+      "department": "직업환경의학과",
+      "external_id": "DSMC-496",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최나리",
+      "department": "직업환경의학과",
+      "external_id": "DSMC-528",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정지윤",
+      "department": "직업환경의학과",
+      "external_id": "DSMC-632",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "직업환경의학과",
+      "external_id": "DSMC-179",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "하정숙",
+      "department": "진단검사의학과",
+      "external_id": "DSMC-121",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "류남희",
+      "department": "진단검사의학과",
+      "external_id": "DSMC-52",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김도훈",
+      "department": "진단검사의학과",
+      "external_id": "DSMC-25",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박성균",
+      "department": "진단검사의학과",
+      "external_id": "DSMC-449",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김경보",
+      "department": "진단검사의학과",
+      "external_id": "DSMC-499",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "강혜인",
+      "department": "진단검사의학과",
+      "external_id": "DSMC-556",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "남기영",
+      "department": "치과",
+      "external_id": "DSMC-126",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "황상희",
+      "department": "치과",
+      "external_id": "DSMC-157",
+      "n_schedules": 7,
+      "n_date_schedules": 92,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "조주연",
+      "department": "치과",
+      "external_id": "DSMC-133",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "신영민",
+      "department": "치과",
+      "external_id": "DSMC-227",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "류영욱",
+      "department": "피부과",
+      "external_id": "DSMC-12",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김성애",
+      "department": "피부과",
+      "external_id": "DSMC-212",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "정진웅",
+      "department": "피부과",
+      "external_id": "DSMC-633",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "일반진료",
+      "department": "피부과",
+      "external_id": "DSMC-303",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "원경숙",
+      "department": "핵의학과",
+      "external_id": "DSMC-26",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "송봉일",
+      "department": "핵의학과",
+      "external_id": "DSMC-208",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김해원",
+      "department": "핵의학과",
+      "external_id": "DSMC-222",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박건욱",
+      "department": "혈액종양내과",
+      "external_id": "DSMC-98",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "도영록",
+      "department": "혈액종양내과",
+      "external_id": "DSMC-267",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김진영",
+      "department": "혈액종양내과",
+      "external_id": "DSMC-37",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김혜라",
+      "department": "혈액종양내과",
+      "external_id": "DSMC-441",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "최연악",
+      "department": "혈액종양내과",
+      "external_id": "DSMC-643",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박재석",
+      "department": "호흡기내과",
+      "external_id": "DSMC-203",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박순효",
+      "department": "호흡기내과",
+      "external_id": "DSMC-10",
+      "n_schedules": 7,
+      "n_date_schedules": 95,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김현정",
+      "department": "호흡기내과",
+      "external_id": "DSMC-279",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김미애",
+      "department": "호흡기내과",
+      "external_id": "DSMC-522",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김태훈",
+      "department": "호흡기내과",
+      "external_id": "DSMC-492",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "윤성환",
+      "department": "호흡기내과",
+      "external_id": "DSMC-591",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박용일",
+      "department": "건강증진센터",
+      "external_id": "DSMC-261",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김윤정",
+      "department": "건강증진센터",
+      "external_id": "DSMC-379",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이소연",
+      "department": "건강증진센터",
+      "external_id": "DSMC-471",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박준호",
+      "department": "건강증진센터",
+      "external_id": "DSMC-262",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "임선경",
+      "department": "건강증진센터",
+      "external_id": "DSMC-378",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "황미영",
+      "department": "건강증진센터",
+      "external_id": "DSMC-571",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이경인",
+      "department": "건강증진센터",
+      "external_id": "DSMC-1",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김대현",
+      "department": "건강증진센터",
+      "external_id": "DSMC-606",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "홍승완",
+      "department": "건강증진센터",
+      "external_id": "DSMC-602",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이경재",
+      "department": "노인골절 치유센터",
+      "external_id": "DSMC-474",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "하정숙",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-417",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김도훈",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-418",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "변준철",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-557",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김인철",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-513",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "황종민",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-544",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이소영",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-514",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김소현",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-568",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "신소진",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-573",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "이무현",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-574",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김진영",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-575",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "박성균",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-577",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "김경보",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-578",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": "근무: 동산병원, 대구동산병원"
+    },
+    {
+      "name": "송병욱",
+      "department": "유전·희귀질환센터",
+      "external_id": "DSMC-601",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": "근무: 동산병원, 대구동산병원"
+    }
+  ]
+}

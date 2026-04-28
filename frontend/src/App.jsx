@@ -10,11 +10,11 @@ import Memos from './pages/Memos';
 import NotificationPanel from './components/NotificationPanel';
 
 const NAV = [
-  { id: 'dashboard', label: '일정 확인', icon: LayoutDashboard },
-  { id: 'schedule', label: '월간 일정', icon: CalendarDays },
-  { id: 'my-doctors', label: '내 교수', icon: Star },
-  { id: 'memos', label: '메모/회의록', icon: FileText },
-  { id: 'browse', label: '교수 탐색', icon: Building2 },
+  { id: 'dashboard', label: '내 일정', icon: LayoutDashboard },
+  { id: 'schedule', label: '전체 일정', icon: CalendarDays },
+  { id: 'my-doctors', label: '내 의료진', icon: Star },
+  { id: 'memos', label: '메모·회의록', icon: FileText },
+  { id: 'browse', label: '의료진 검색', icon: Building2 },
   { id: 'conferences', label: '학회 일정', icon: BookOpen },
 ];
 
@@ -116,7 +116,7 @@ export default function App() {
               </button>
             )}
             <h2 style={{ fontFamily: 'Manrope', fontSize: 17, fontWeight: 700, letterSpacing: '-.02em', color: 'var(--t1)' }}>
-              {NAV.find(n => n.id === page)?.label || '일정 확인'}
+              {NAV.find(n => n.id === page)?.label || '내 일정'}
             </h2>
           </div>
           <button onClick={() => { setNotifOpen(true); loadNotifs(); }} style={{
@@ -134,7 +134,7 @@ export default function App() {
           {page === 'my-doctors' && <MyDoctors onNavigate={navTo} initialDoctorId={pageProps.doctorId} />}
           {page === 'memos' && <Memos initialFilters={pageProps.filters || {}} />}
           {page === 'browse' && <BrowseDoctors onNavigate={navTo} />}
-          {page === 'conferences' && <Conferences onNavigate={navTo} />}
+          {page === 'conferences' && <Conferences onNavigate={navTo} mode={pageProps.mode} />}
         </div>
       </main>
 

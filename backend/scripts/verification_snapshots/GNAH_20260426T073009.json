@@ -1,0 +1,1191 @@
+{
+  "hospital_code": "GNAH",
+  "hospital_name": "강릉아산병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "오미경",
+      "department": "가정의학과",
+      "external_id": "GNAH-104",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채은혜",
+      "department": "가정의학과",
+      "external_id": "GNAH-271",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송은희",
+      "department": "감염내과",
+      "external_id": "GNAH-52",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진엽",
+      "department": "내분비내과",
+      "external_id": "GNAH-31",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심명숙",
+      "department": "내분비내과",
+      "external_id": "GNAH-32",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김원준",
+      "department": "내분비내과",
+      "external_id": "GNAH-33",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김하영",
+      "department": "내분비내과",
+      "external_id": "GNAH-177",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성수",
+      "department": "류마티스내과",
+      "external_id": "GNAH-29",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보영",
+      "department": "류마티스내과",
+      "external_id": "GNAH-30",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "성규완",
+      "department": "마취통증의학과",
+      "external_id": "GNAH-138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영기",
+      "department": "마취통증의학과",
+      "external_id": "GNAH-136",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성수",
+      "department": "마취통증의학과",
+      "external_id": "GNAH-137",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정화성",
+      "department": "마취통증의학과",
+      "external_id": "GNAH-140",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정의균",
+      "department": "마취통증의학과",
+      "external_id": "GNAH-141",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김진선",
+      "department": "마취통증의학과",
+      "external_id": "GNAH-142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유병우",
+      "department": "마취통증의학과",
+      "external_id": "GNAH-253",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재호",
+      "department": "마취통증의학과",
+      "external_id": "GNAH-304",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최원식",
+      "department": "방사선종양학과",
+      "external_id": "GNAH-122",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신성수",
+      "department": "방사선종양학과",
+      "external_id": "GNAH-121",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정인혜",
+      "department": "방사선종양학과",
+      "external_id": "GNAH-124",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안우상",
+      "department": "방사선종양학과",
+      "external_id": "GNAH-123",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "엄대운",
+      "department": "병리과",
+      "external_id": "GNAH-149",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강길현",
+      "department": "병리과",
+      "external_id": "GNAH-148",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노병주",
+      "department": "병리과",
+      "external_id": "GNAH-161",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임샤론",
+      "department": "병리과",
+      "external_id": "GNAH-150",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성진",
+      "department": "비뇨의학과",
+      "external_id": "GNAH-99",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종연",
+      "department": "비뇨의학과",
+      "external_id": "GNAH-98",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김한권",
+      "department": "비뇨의학과",
+      "external_id": "GNAH-97",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "남욱",
+      "department": "비뇨의학과",
+      "external_id": "GNAH-101",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상욱",
+      "department": "산부인과",
+      "external_id": "GNAH-164",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손우석",
+      "department": "산부인과",
+      "external_id": "GNAH-162",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상수",
+      "department": "산부인과",
+      "external_id": "GNAH-163",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "주다혜",
+      "department": "산부인과",
+      "external_id": "GNAH-165",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영재",
+      "department": "산부인과",
+      "external_id": "GNAH-190",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유성철",
+      "department": "성형외과",
+      "external_id": "GNAH-85",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영휘",
+      "department": "소아청소년과",
+      "external_id": "GNAH-212",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김봉성",
+      "department": "소아청소년과",
+      "external_id": "GNAH-41",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박기영",
+      "department": "소아청소년과",
+      "external_id": "GNAH-42",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "진현승",
+      "department": "소아청소년과",
+      "external_id": "GNAH-43",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정민희",
+      "department": "소아청소년과",
+      "external_id": "GNAH-44",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤명",
+      "department": "소아청소년과",
+      "external_id": "GNAH-46",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "도현정",
+      "department": "소아청소년과",
+      "external_id": "GNAH-196",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오성희",
+      "department": "소아청소년과",
+      "external_id": "GNAH-199",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기수",
+      "department": "소아청소년과",
+      "external_id": "GNAH-272",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "천갑진",
+      "department": "소화기내과",
+      "external_id": "GNAH-1",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상진",
+      "department": "소화기내과",
+      "external_id": "GNAH-5",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종규",
+      "department": "소화기내과",
+      "external_id": "GNAH-6",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서현일",
+      "department": "소화기내과",
+      "external_id": "GNAH-7",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이윤형",
+      "department": "소화기내과",
+      "external_id": "GNAH-240",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서명숙",
+      "department": "소화기내과",
+      "external_id": "GNAH-10",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성구",
+      "department": "소화기내과",
+      "external_id": "GNAH-282",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이태영",
+      "department": "소화기내과",
+      "external_id": "GNAH-266",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장우영",
+      "department": "신경과",
+      "external_id": "GNAH-48",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종성",
+      "department": "신경과",
+      "external_id": "GNAH-246",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조광덕",
+      "department": "신경과",
+      "external_id": "GNAH-47",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박계원",
+      "department": "신경과",
+      "external_id": "GNAH-281",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이정규",
+      "department": "신경과",
+      "external_id": "GNAH-312",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유승훈",
+      "department": "신경외과",
+      "external_id": "GNAH-80",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양구현",
+      "department": "신경외과",
+      "external_id": "GNAH-205",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김민수",
+      "department": "신경외과",
+      "external_id": "GNAH-207",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "노성우",
+      "department": "신경외과",
+      "external_id": "GNAH-296",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장선우",
+      "department": "신경외과",
+      "external_id": "GNAH-297",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송경일",
+      "department": "신장내과",
+      "external_id": "GNAH-166",
+      "n_schedules": 7,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤성빈",
+      "department": "신장내과",
+      "external_id": "GNAH-257",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정상식",
+      "department": "심장내과",
+      "external_id": "GNAH-17",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "우영민",
+      "department": "심장내과",
+      "external_id": "GNAH-291",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박한빛",
+      "department": "심장내과",
+      "external_id": "GNAH-214",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기환",
+      "department": "심장내과",
+      "external_id": "GNAH-277",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승한",
+      "department": "심장내과",
+      "external_id": "GNAH-292",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백다영",
+      "department": "심장내과",
+      "external_id": "GNAH-285",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최형우",
+      "department": "심장내과",
+      "external_id": "GNAH-313",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조원철",
+      "department": "심장혈관흉부외과",
+      "external_id": "GNAH-68",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종빈",
+      "department": "심장혈관흉부외과",
+      "external_id": "GNAH-66",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유동곤",
+      "department": "심장혈관흉부외과",
+      "external_id": "GNAH-67",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이한필",
+      "department": "심장혈관흉부외과",
+      "external_id": "GNAH-223",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최우석",
+      "department": "심장혈관흉부외과",
+      "external_id": "GNAH-310",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이충현",
+      "department": "안과",
+      "external_id": "GNAH-86",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김유정",
+      "department": "안과",
+      "external_id": "GNAH-88",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최경준",
+      "department": "안과",
+      "external_id": "GNAH-221",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유영상",
+      "department": "알레르기내과",
+      "external_id": "GNAH-220",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최수정",
+      "department": "영상의학과",
+      "external_id": "GNAH-130",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정승문",
+      "department": "영상의학과",
+      "external_id": "GNAH-126",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박만수",
+      "department": "영상의학과",
+      "external_id": "GNAH-127",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "나동규",
+      "department": "영상의학과",
+      "external_id": "GNAH-128",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안재홍",
+      "department": "영상의학과",
+      "external_id": "GNAH-131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조영종",
+      "department": "영상의학과",
+      "external_id": "GNAH-134",
+      "n_schedules": 10,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤가영",
+      "department": "영상의학과",
+      "external_id": "GNAH-135",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한병희",
+      "department": "영상의학과",
+      "external_id": "GNAH-191",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수현",
+      "department": "영상의학과",
+      "external_id": "GNAH-300",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유여진",
+      "department": "영상의학과",
+      "external_id": "GNAH-309",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유창식",
+      "department": "외과",
+      "external_id": "GNAH-222",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김지훈",
+      "department": "외과",
+      "external_id": "GNAH-60",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최건무",
+      "department": "외과",
+      "external_id": "GNAH-57",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장혁재",
+      "department": "외과",
+      "external_id": "GNAH-58",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "곽재영",
+      "department": "외과",
+      "external_id": "GNAH-61",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양관모",
+      "department": "외과",
+      "external_id": "GNAH-64",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤광현",
+      "department": "외과",
+      "external_id": "GNAH-63",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤경원",
+      "department": "외과",
+      "external_id": "GNAH-62",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "마충현",
+      "department": "외과",
+      "external_id": "GNAH-168",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정윤태",
+      "department": "외과",
+      "external_id": "GNAH-197",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정윤",
+      "department": "외과",
+      "external_id": "GNAH-233",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조준회",
+      "department": "외과",
+      "external_id": "GNAH-279",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강희동",
+      "department": "응급의학과",
+      "external_id": "GNAH-111",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오세현",
+      "department": "응급의학과",
+      "external_id": "GNAH-110",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정상구",
+      "department": "응급의학과",
+      "external_id": "GNAH-112",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이유진",
+      "department": "응급의학과",
+      "external_id": "GNAH-115",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "허석진",
+      "department": "응급의학과",
+      "external_id": "GNAH-117",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박인준",
+      "department": "응급의학과",
+      "external_id": "GNAH-118",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기헌",
+      "department": "응급의학과",
+      "external_id": "GNAH-198",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권재화",
+      "department": "응급의학과",
+      "external_id": "GNAH-228",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대곤",
+      "department": "응급의학과",
+      "external_id": "GNAH-311",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송용진",
+      "department": "이비인후과",
+      "external_id": "GNAH-90",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박정미",
+      "department": "이비인후과",
+      "external_id": "GNAH-180",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여남경",
+      "department": "이비인후과",
+      "external_id": "GNAH-92",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이종철",
+      "department": "이비인후과",
+      "external_id": "GNAH-94",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이영이",
+      "department": "일반내과",
+      "external_id": "GNAH-235",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김예진",
+      "department": "일반내과",
+      "external_id": "GNAH-236",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황동욱",
+      "department": "일반내과",
+      "external_id": "GNAH-303",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정유진",
+      "department": "일반내과",
+      "external_id": "GNAH-305",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "구정회",
+      "department": "재활의학과",
+      "external_id": "GNAH-103",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송선홍",
+      "department": "재활의학과",
+      "external_id": "GNAH-102",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍유진",
+      "department": "정신건강의학과",
+      "external_id": "GNAH-54",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백상빈",
+      "department": "정신건강의학과",
+      "external_id": "GNAH-53",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최영준",
+      "department": "정형외과",
+      "external_id": "GNAH-69",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정환",
+      "department": "정형외과",
+      "external_id": "GNAH-70",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황재광",
+      "department": "정형외과",
+      "external_id": "GNAH-71",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이기원",
+      "department": "정형외과",
+      "external_id": "GNAH-72",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "배주열",
+      "department": "정형외과",
+      "external_id": "GNAH-76",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최신우",
+      "department": "정형외과",
+      "external_id": "GNAH-77",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재우",
+      "department": "정형외과",
+      "external_id": "GNAH-187",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정구민",
+      "department": "정형외과",
+      "external_id": "GNAH-299",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "라호종",
+      "department": "정형외과",
+      "external_id": "GNAH-307",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차충환",
+      "department": "진단검사의학과",
+      "external_id": "GNAH-147",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정욱",
+      "department": "진단검사의학과",
+      "external_id": "GNAH-146",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유창승",
+      "department": "진단검사의학과",
+      "external_id": "GNAH-234",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "차민상",
+      "department": "치과",
+      "external_id": "GNAH-119",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이상운",
+      "department": "치과",
+      "external_id": "GNAH-120",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "양인섭",
+      "department": "피부과",
+      "external_id": "GNAH-302",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이효상",
+      "department": "핵의학과",
+      "external_id": "GNAH-151",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신언우",
+      "department": "핵의학과",
+      "external_id": "GNAH-288",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안용철",
+      "department": "혈액종양내과",
+      "external_id": "GNAH-27",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김문호",
+      "department": "혈액종양내과",
+      "external_id": "GNAH-28",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안희준",
+      "department": "혈액종양내과",
+      "external_id": "GNAH-26",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오호석",
+      "department": "혈액종양내과",
+      "external_id": "GNAH-25",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하석훈",
+      "department": "혈액종양내과",
+      "external_id": "GNAH-209",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정복현",
+      "department": "호흡기내과",
+      "external_id": "GNAH-12",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김미혜",
+      "department": "호흡기내과",
+      "external_id": "GNAH-13",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장윤실",
+      "department": "호흡기내과",
+      "external_id": "GNAH-284",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

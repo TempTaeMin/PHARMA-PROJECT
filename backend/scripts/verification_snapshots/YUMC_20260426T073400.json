@@ -1,0 +1,1559 @@
+{
+  "hospital_code": "YUMC",
+  "hospital_name": "영남대학교병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "강석휘",
+      "department": "신장내과",
+      "external_id": "YUMC-404",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강성일",
+      "department": "대장항문외과",
+      "external_id": "YUMC-577",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "(경력)\r\n2005.03 ~ 2006.02  분당차병원 인턴\r\n2006.03 ~ 2010.02  분당차병원 외과 전공의\r\n2010.04 ~ 2013.04  서귀포의료원 외과과장 (공중보건의)\r\n2014.01 ~ 2015.01  부산항운병원 외과과장\r\n2015.03 ~ 2018.01  분당서울대학교병원 대장항문외과 임상강사\r\n2018.02 ~ 2019.02  영남대학교병원 대장항문외과 임상교수\r\n2019.03 ~ 2025.02  영남대학교병원 대장항문외과 조교수\r\n2025.03~              영남대학교병원 대장항문외과 부교수\r\n\r\n(자격)\r\n외과전문의 (2010)\r\n대한 대장항문학회 대장내시경 인정의 (2015)\r\n대장항문외과 세부전문의 (2017)"
+    },
+    {
+      "name": "강소희",
+      "department": "치과",
+      "external_id": "YUMC-685",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "경북대학교치과대학병원 인턴\r\n경북대학교치과대학병원 치과보존과 수련\r\n보건복지부 인증 치과보존과 전문의\r\n영남대학교의료원 치과 임상교수\r\n현) 영남대학교 의과대학 조교수"
+    },
+    {
+      "name": "강수환",
+      "department": "유방내분비외과",
+      "external_id": "YUMC-194",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "외과 전문의\r\n한국유방암학회 정보이사(2017~2019)\r\n한국유방암학회 술기이사(2019~2021)\r\n대한갑상선내분비외과학회 의료심사이사(2018~2020)\r\n대한갑상선내분비외과학회 무임소이사(2017~2018)\r\n대한외과학회 정회원\r\n한국유방암학회 평생회원\r\n대한갑상선내분비외과학회 평생회원\r\n대한외과종양학회 평생회원\r\n대한갑상선학회 정회원"
+    },
+    {
+      "name": "고성애",
+      "department": "혈액종양내과",
+      "external_id": "YUMC-600",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 혈액종양내과 전공의\r\n영남대학교병원 임상교수 (2013-2016)\r\n영남대학교 병원 조교수 (2016 -2022)\r\n영남대학교 병원 부교수 (2022 - )"
+    },
+    {
+      "name": "공은정",
+      "department": "핵의학과",
+      "external_id": "YUMC-388",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "[학력]\r\n영남대학교 의과대학 졸업(2005)\r\n영남대학교 대학원 의학박사(2013)\r\n\r\n[경력 및 연수]\r\n2006년 ~ 2009년 영남대학교병원 핵의학과 레지던트 수료\r\n2010년 ~ 2011년 영남대학교병원 핵의학과 전임의\r\n2012년 ~ 2013년 영남대학교병원 핵의학과 임상교수\r\n2014년 ~ 현재 영남대학교병원 핵의학과 조교수 및 부교수(현재)"
+    },
+    {
+      "name": "곽소영",
+      "department": "재활의학과",
+      "external_id": "YUMC-547",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 병원 재활의학과 전문의 수료\r\n영남대학교 재활의학과 전임의 수료"
+    },
+    {
+      "name": "구미진",
+      "department": "병리과",
+      "external_id": "YUMC-386",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "대구 파티마병원 병리과 과장 (2004~2011)\r\n미국 스탠포드 대학 병원 연수 (2015-2016) \r\n영남대학교 병리학교실 교수 (2012~현재)"
+    },
+    {
+      "name": "구본훈",
+      "department": "정신건강의학과",
+      "external_id": "YUMC-272",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "국립부곡정신병원 및 울산기독병원 공중보건의사\r\n시몬병원 정신과 과장 역임\r\n영남대학교병원 정신과 전임의 및 임상교수 역임\r\n현 영남대학교병원 정신과 교수\r\n미국 UCSD 불안장애연구소 방문교수 (2012.8.~2013.7.)\r\n미국 샌디에고 정신분석연구소 정신분석프로그램 연수 (2012.8.~2013.7.)\r\n미국 UCSD Center for mindfulness MBCT & MBSR 과정 연수 \r\n\r\nCandidate of International psychoanalytical association and Study group of Korean association of psychoanalysis\r\nMember of Allied center of International psychoanalytical association \r\n한국정신분석학회 보험이사 및 간행위원 \r\n대한불안의학회 편집위원 \r\n대한생물치료정신의학회 이사\r\n대한우울조울병학회 이사 \r\n한국정신신체의학회 평이사 \r\n대한생"
+    },
+    {
+      "name": "구유진",
+      "department": "산부인과",
+      "external_id": "YUMC-466",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "고려대학교 의학 박사\r\n삼성제일병원 산부인과 전공의 및 전임의\r\n서울아산병원 산부인과 임상강사\r\n고려대학교 구로병원 산부인과 임상강사\r\n현, 영남대학교 의료원 산부인과 교수"
+    },
+    {
+      "name": "구주환",
+      "department": "산부인과",
+      "external_id": "YUMC-787",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권두혁",
+      "department": "신경과",
+      "external_id": "YUMC-663",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "<<경력사항>> \r\n영남대학교 의과대학 학사/ 의학석사\r\n차의과대학교병원 신경과 임상교수 \r\n계명대학교병원 신경과 임상교수 \r\n바르셀로나 발데브론 대학병원 단기연수\r\n(현)영남대학교병원 신경과 교수 \r\n\r\n<<학회 및 외부활동>>\r\n(현)대한신경과학회 고시위원\r\n(현)대한신경과학회 수련위원\r\n(현)대한신경과학회 대경지회 총무이사\r\n(현)대한뇌졸중학회 질향상위원회 인증위원\r\n(현)대한뇌졸중학회 대경지회 특임이사\r\n(현)대한신경과학회 영호남지회 편집이사\r\n(현)근로복지공단 자문의 \r\n대한신경집중치료학회 수련간사 역임\r\n\r\n<<자격사항>>\r\n신경중재치료(Neurointervention)인증의,KSIN\r\n신경집중치료(Neurocritical Care)인증의,KNCS\r\n급성뇌졸중(Acute Stroke Neurologist)인증의,KNA\r\n\r\n<<수상사항>> \r\n2025 대한뇌졸중학회지(Journal of Stroke) 공로상\r\n2023 대한신경집중치료학회 공로상\r\n2020,2021 대한신경"
+    },
+    {
+      "name": "권진주",
+      "department": "치과",
+      "external_id": "YUMC-748",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "권희정",
+      "department": "병리과",
+      "external_id": "YUMC-750",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김경옥",
+      "department": "소화기내과",
+      "external_id": "YUMC-344",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2002년 영남대학교 의과대학 졸업\r\n2003-2007.02  영남대학교 병원 내과학교실\r\n2007.03-2009.02  영남대학교 병원 소화기내과 전임의\r\n2009.03-2010.02  영남대학교 병원 소화기내과 임상교수\r\n2010.03-2016.02  영남대학교 병원 소화기내과 전임강사/조교수\r\n2016.03- 2020.02    영남대학교 병원 소화기내과 부교수\r\n2017.09-2018.08 Virginia Mason Medical Center, IBD center of excellence, Seattle WA, USA 연수\r\n2021.03- 현재    영남대학교 병원 소화기내과 교수\r\n\r\n학회 및 학술 활동\r\n대한장연구학회 정회원\r\n대한소화기학회정회원\r\n대한 소화기내시경학 정회원\r\n대한 소화기 기능성질환 운동학회 정회원\r\n대한장연구학회 학술위원\r\n대한장연구학회 IBD 연구회 위원\r\n대구 경북 크론병 네트워크 연구회 총무이사"
+    },
+    {
+      "name": "김기백",
+      "department": "신장내과",
+      "external_id": "YUMC-784",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기범",
+      "department": "정형외과",
+      "external_id": "YUMC-614",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "2009-2010 영남대학교병원 인턴 \r\n2010-2014 영남대학교병원 정형외과 전공의 \r\n2014-2015 UAE 군사훈련 협력단 군의관\r\n2015-2017 국군대전병원 정형외과장\r\n2017-2019 강동경희대학교병원 관절센터 슬관절 임상강사\r\n영남대학교병원 정형외과 슬관절파트 조교수"
+    },
+    {
+      "name": "김미은",
+      "department": "건강증진센터",
+      "external_id": "YUMC-676",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "대구 효성병원 영상의학과 과장\r\n대구 세동병원 영상의학과 과장\r\n현 영남대학교병원 건강증진센터 영상의학과 교수"
+    },
+    {
+      "name": "김민경",
+      "department": "혈액종양내과",
+      "external_id": "YUMC-181",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "울산대학교 서울아산병원 임상강사\r\n영남대학교 의과대학 혈액종양내과 교수\r\nBone Marrow Transplantation Unit, Dept of Hematology/Medical Oncology, Princess Margaret Hospital 연수\r\nLaboratory of Gene Regulation and Signal Transduction, Dept of Pharmacology and Pathology, School of Medicine, UCSD 연수\r\n\r\n혈액종양내과 분과전문의\r\n대한혈액학회 정회원\r\n대한조혈모세포이식학회 정회원\r\n대한종양내과학회 정회원\r\n대한두경부암학회 정회원\r\n미국혈액학회 정회원"
+    },
+    {
+      "name": "김민종",
+      "department": "병리과",
+      "external_id": "YUMC-708",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "2021.05 ~ 2022.02 서울성모병원 병리과 임상강사\r\n2022.03 ~ 2023.02 영남대학교병원 병리과 전임의\r\n2023.03 ~ 영남대학교병원 병리과 조교수"
+    },
+    {
+      "name": "김민철",
+      "department": "소화기내과",
+      "external_id": "YUMC-611",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2006.03 ~ 2012.02 영남대학교 의과대학 의학사\r\n2014.03 ~ 2018.02 영남대학교 의과대학 의학석,박사\r\n\r\n2012.03 ~ 2013.02 영남대학교병원 인턴\r\n2013.02 ~ 2017.02 영남대학교병원 내과 전공의\r\n2017.03 ~ 2019.02 영남대학교병원 소화기내과 전임의\r\n2019.03 ~ 2025.02 영남대학교병원 소화기내과 조교수\r\n2025.03 ~            영남대학교병원 소화기내과 부교수\r\n\r\n[학회 및 학술활동]\r\n대한내과학회 평생회원\r\n대한소화기학회 평생회원\r\n대한소화기내시경학회 평생회원\r\n대한장연구학회 평생회원\r\n대한간학회 평생회원\r\n대한임상초음파학회 평생회원"
+    },
+    {
+      "name": "김상우",
+      "department": "신경외과",
+      "external_id": "YUMC-185",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "대한 신경외과학회 정회원\r\n대한신경외과학회 이사\r\n대한 척추신경외과학회 종신회원\r\n대한 척추신경외과학회 상임이사\r\n북미척추학회(NASS;North American Spine Society)정회원\r\n대한 신경통증학회 종신회원\r\n대한 통증연구학회 정회원\r\n대한경추연구회 회장\r\n대한신경외과학회 대구경북 지회장"
+    },
+    {
+      "name": "김선연",
+      "department": "산부인과",
+      "external_id": "YUMC-744",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김선오",
+      "department": "심장내과",
+      "external_id": "YUMC-788",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성은",
+      "department": "성형외과",
+      "external_id": "YUMC-772",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 수련의 수료\r\n영남대학교병원 성형외과 전공의 수료\r\n\r\n영남대학교병원 성형외과 전임의\r\n울산 제니스 성형외과 원장\r\n대구가톨릭대학교 의학과 성형외과 조교수 \r\n대구가톨릭대학교 의학과 성형외과 부교수\r\n현) 영남대학교 의학과 성형외과 부교수"
+    },
+    {
+      "name": "김성호",
+      "department": "신경외과",
+      "external_id": "YUMC-44",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "1999 의학박사\r\n2017.3.-현재 대한노인신경외과학회장\r\n2016.10.-현재  대한신경외과학회 수련교육위원장(상임이사)\r\n2015.3.-2016.3.  대한정위기능신경외과학회장\r\n2014.10.-2016.10. 대한신경외과학회 미래위원장\r\n2013.1-2013.12. 대한신경외과학회 대구경북지회장\r\n2013.2.1.-2014.7.31. 의료원 기획조정처장\r\n2011.2.1.-2013.1.31. 의료원 사무국장\r\n2009.9.-2010.1.31. 영남학원 발전특별위원회 의료원분과 위원\r\n2009.2.-2009.9. 부속병원 교육연구부장\r\n2005.3.1. -2011.1. 31.신경외과 주임교수 및 과장\r\n2006-2007 의대 부학장(학생담당)\r\n2004-2005 의료원 기획조정실 차장(홍보담당)\r\n1998 미국 듀크대 medical center - 통증수술연수\r\n1999-2000. 캐나다 토론토대학병원 - 기능수술연수\r\n2001-현재,CNS(북미신경외과학회) 정회원\r\n1999"
+    },
+    {
+      "name": "김성훈",
+      "department": "핵의학과",
+      "external_id": "YUMC-745",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "계명대학교 동산의료원 인턴 및 레지던트\r\n국군대전병원 핵의학과 과장\r\n연세대학교 세브란스병원 핵의학과 임상강사\r\n계명대학교 동산의료원 핵의학과 임상조교수\r\n영남대학교병원 핵의학과 임상교수\r\n영남대학교병원 핵의학과 조교수 (현)"
+    },
+    {
+      "name": "김세동",
+      "department": "정형외과",
+      "external_id": "YUMC-800",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김세윤",
+      "department": "소아청소년과",
+      "external_id": "YUMC-776",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김소현",
+      "department": "대장항문외과",
+      "external_id": "YUMC-412",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "2007년~11년 영남대학교 영남의료원 외과 레지던트수료\r\n2011년~13년 영남대학교 외과 대장항문외과 전임의\r\n2013년~15년 영남대학교 외과 대장항문외과 촉탁의\r\n2015년~ 영남대학교 외과 조교수\r\n\r\n<b>학회활동</b>\r\n대한외과 학회 정회원\r\n대한대장항문학회 정회원\r\n대한 임상종양학회 정회원"
+    },
+    {
+      "name": "김수홍",
+      "department": "영상의학과",
+      "external_id": "YUMC-727",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김승범",
+      "department": "소화기내과",
+      "external_id": "YUMC-563",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2005년 영남대학교 의과대학 졸업 \r\n2006-2010.02 영남대학교 병원 내과학교실\r\n2013.05-2015.02 영남대학교 병원 소화기내과 전임의 \r\n2015.03-2016.07 안동성소병원 소화기내과 \r\n2017.02-2017.08 미국 하버드 대학교 소화기내과 research fellow 연수 \r\n2017.09-2023.08 영남대학교병원 소화기내과 조교수 \r\n2023.09-현재 영남대학교병원 소화기내과 부교수 \r\n\r\n췌장담도내시경 인증의\r\n췌장담도내시경 지도전문의 \r\n대한소화기암인정의\r\n소화기내시경전문의\r\n내과분과전문의\r\n내과전공의 복부초음파 지도인증의"
+    },
+    {
+      "name": "김아영",
+      "department": "신장내과",
+      "external_id": "YUMC-717",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "2016-2019 영남대학교 병원 내과 전공의 \r\n2020-2021 영남대학교 병원 신장내과 전임의\r\n2022 영남대학교 병원 신장내과 임상교수 \r\n2023- 영남대학교 병원 신장내과 조교수"
+    },
+    {
+      "name": "김영아",
+      "department": "유방내분비외과",
+      "external_id": "YUMC-729",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영욱",
+      "department": "비뇨의학과",
+      "external_id": "YUMC-655",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 인턴 수료\r\n영남대학교병원 비뇨의학과 레지던트 수료\r\n영남대학교병원 비뇨의학과 전임의 수료"
+    },
+    {
+      "name": "김용대",
+      "department": "이비인후과",
+      "external_id": "YUMC-73",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "[학력]\r\n영남대학교 의과대학 졸업\r\n의학박사\r\n\r\n[경력 및 연수]\r\n미국국립보건원(NIH) 연수(1997-1998)\r\n대한비과학회 학술상 수상(2012)\r\n제 16회 세계비과학회 Best paper award 수상(2015)\r\n\r\n[학회활동]\r\n대한이비인후과학회 정회원\r\n대한비과학회 정회원\r\n대한천식알레르기학회 정회원"
+    },
+    {
+      "name": "김용하",
+      "department": "성형외과",
+      "external_id": "YUMC-167",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "[주요진료 및 연구분야]\r\n안면 골절 (안와 골절, 상악 및 하악 골절, 광대 골절, 비골 골절), 구순구개열, 선천성 안면기형, 코성형술, 눈성형술\r\n\r\n\r\n[경력 및 연수]\r\n\r\n영남대학교병원 성형외과 수련(1992-1996)\r\n영남대학교병원 성형외과 교수(1997-현재) \r\n영남대학교병원 성형외과 주임교수 및 임상과장 역임(2005-2015)"
+    },
+    {
+      "name": "김웅",
+      "department": "심장내과",
+      "external_id": "YUMC-382",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "<b>[경력]</b>\r\n1998-1999: 영남대학병원 인턴\r\n1999-2003: 영남대학병원 레지던트\r\n2006-2008: 영남대학병원 전임의\r\n2008: 신촌 세브란스 병원 강사\r\n2008-2010: 인제대학교 부산백병원 순환기 내과 전임강사\r\n2010-2011: 인제대학교 해운대 백병원 순환기 내과 조교수\r\n2011-2015: 영남대학병원 순환기 내과 조교수\r\n2016-2017: Canada, St' Paul Hospital, Advanced Cardiac Imaging 연수\r\n2015-2020: 영남대학병원 순환기 내과 부교수\r\n2021-(현) 영남대학병원 순환기 내과 교수\r\n\r\n<b>[회원, 가입단체 및 수상경력]</b>\r\n대한 심장학회 정회원\r\n대한 중재시술학회 정회원\r\n대한 고혈압학회 정회원\r\n대한 내과 학회 정회원\r\n대한 지질동맥경화학회 정회원\r\n(전)영남 중재시술학회 총무/학술이사\r\n(전)대한 분지병변연구회 간행이사\r\n(전)영남대학교 의과대학 의학과장\r\n(전)영남대학"
+    },
+    {
+      "name": "김원제",
+      "department": "안센터",
+      "external_id": "YUMC-417",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 졸업\r\n국군대구병원 안과군의관\r\n영남대학교 병원 사시소아안과 전임의\r\n을지대학교 서울을지병원 사시소아안과 전문의\r\n영남대학교 병원 사시소아안과 부교수\r\n대한안과학회 수련위원회 위원 (2018.7-)\r\n대한안과학회지 편집위원 (2019.7-2023.6)\r\n\r\n한국사시소아안과학회 정회원\r\n한국신경안과학회 정회원\r\n아시아신경안과학회(ASNOS) 정회원"
+    },
+    {
+      "name": "김은미",
+      "department": "유방내분비외과",
+      "external_id": "YUMC-597",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의학과 의학사\r\n영남대학교 의학과 의학석사\r\n영남대학교병원 유방내분비외과 전임의\r\n전 신세계여성병원 외과과장\r\n전 퀸스유외과 원장\r\n전 대구보건대병원 외과과장"
+    },
+    {
+      "name": "김일국",
+      "department": "성형외과",
+      "external_id": "YUMC-587",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "[주요진료 및 연구분야] \r\n림프부종, 유방 재건 (자가조직 및 보형물), 유방확대 및 축소, 여성형 유방, 미세수술, 피부양성종양, 안면골골절, 수부외과\r\n\r\n[학력 및 경력] \r\n영남대학교 의과대학 졸업 (2008) \r\n영남대학교병원 성형외과 전문의 (2013)\r\n영남대학교 대학원 의학박사 (2009-2012, 성형외과학)\r\n카이스트 의과학대학원 박사 (2013-2017, 혈관생물학)\r\n서울대학교병원 성형외과 유방, 미세재건 분야 임상강사 (2017-2018) \r\n영남대학교 의과대학 조교수 (2018-2024)\r\nUniversity of Southern California 의과대학 연수 (2022-2023)\r\n영남대학교 의과대학 부교수 (2024-현재)\r\n\r\n[책임 연구과제]\r\n1. 학술연구혁신지원사업 글로컬R&D지원 (2025-2028)\r\n2. 선도연구센터지원사업 핵심연구원 (2022-2029)\r\n3. 한국연구재단 개인연구사업 중견연계 신진후속연구 (2021-2024)\r\n4. "
+    },
+    {
+      "name": "김재운",
+      "department": "영상의학과",
+      "external_id": "YUMC-200",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김재환",
+      "department": "진단검사의학과",
+      "external_id": "YUMC-661",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "2022-현재 영남대학교병원 진단검사의학과 조교수\r\n2020-2022 영남대학교병원 진단검사의학과 임기제임상교수\r\n2020-2020 김천제일병원 진단검사의학과 과장\r\n2018-2019 서울대학교병원 연구교수\r\n2017-2018 삼성서울병원 진단검사의학과 임상강사\r\n2013-2017 경북대학교병원 진단검사의학과 전공의\r\n2012-2013 원자력병원 인턴"
+    },
+    {
+      "name": "김정호",
+      "department": "응급의학과",
+      "external_id": "YUMC-469",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "응급의학과 전문의\r\n대구가톨릭대학교 칠곡가톨릭병원 응급의학과장\r\n문경제일병원 응급의학과장\r\n영남대학교병원 임상교수\r\n영남대학교 의과대학 전임교수\r\n영남대학교 의과대학 의학과장"
+    },
+    {
+      "name": "김종훈",
+      "department": "신경외과",
+      "external_id": "YUMC-444",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 신경외과 전공의\r\n영남대학교병원 신경외과 전임의 \r\n영남대학교병원 신경외과 임상교수\r\n영남대학교병원 신경외과 조교수\r\n영남대학교병원 신경외과 부교수(현재)\r\n___________________________________\r\n뇌졸중시술 인증의 \r\n뇌혈관외과 인증의\r\n신경계 중환자 전문치료 인증의\r\n노인의학 지도전문의"
+    },
+    {
+      "name": "김주영",
+      "department": "소아청소년과",
+      "external_id": "YUMC-783",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김준군",
+      "department": "피부과",
+      "external_id": "YUMC-738",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 수련의 수료 (2014.02.)\r\n영남대학교병원 피부과 전공의 수료 (2019.02.)\r\n한국과학기술원(KAIST) 전문연구요원 (2019.03. - 2023.02.)\r\n세브란스병원(신촌) 피부과 임상강사 (2023.03. - 2024.02.)\r\n영남대학교병원 피부과 조교수 (2024.03. - )"
+    },
+    {
+      "name": "김진우",
+      "department": "정신건강의학과",
+      "external_id": "YUMC-777",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김초신",
+      "department": "혈관외과",
+      "external_id": "YUMC-686",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "2020 영남대학교 병원 혈관이식외과 전임의 수료\r\n2021 삼성서울병원 혈관외과 임상강사 수료\r\n현 영남대학교 병원 혈관이식외과 임상교수 재직"
+    },
+    {
+      "name": "김태곤",
+      "department": "성형외과",
+      "external_id": "YUMC-337",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "[주요진료 및 연구분야]\r\n하지 재건, 당뇨족, 두경부 재건, 피부종양, 미세수술, 안검성형술(눈성형), 미용성형\r\n \r\n[학력]\r\n울산대학교 의과대학 졸업(1997)\r\n울산대학교 의학석사(2004)\r\n울산대학교 의학박사(2012)\r\n \r\n[경력 및 연수]\r\n서울아산병원 성형외과 전공의(2001-2005)\r\n울산대학교병원 성형외과 임상조교수(2005-2007)\r\n울산대학교병원 성형외과 조교수(2007-2009)\r\n영남대학교병원 성형외과 임상교수(2009-2010)\r\n영남대학교병원 성형외과 조교수(2010-2014)\r\n영남대학교병원 성형외과 부교수(2014)\r\n영남대학교병원 성형외과 교수(현재)\r\n\r\nChang-Gung Memorial Hospital, Taiwan 미세재건센터 연수(2010)\r\n(美)UC Irvine Medical Center 성형외과 연수(2014-2015)\r\n \r\n[학회활동]\r\n대한성형외과학회 정회원\r\n대한미용성형외과학회 정회원\r\n대한두개안면성형외과학회 정회원\r\n"
+    },
+    {
+      "name": "김현제",
+      "department": "류마티스내과",
+      "external_id": "YUMC-719",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 병원 내과 전공의\r\n영남대학교 병원 감염/류마티스 전임의\r\n차의과학대학교 구미 차병원 류마티스/감염 내과 조교수"
+    },
+    {
+      "name": "김형동",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-753",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형주",
+      "department": "간담췌외과",
+      "external_id": "YUMC-728",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김효신",
+      "department": "산부인과",
+      "external_id": "YUMC-711",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 산부인과 전공의 \r\n칠곡경북대학교병원 산과 임상 강사\r\n현, 영남대학교병원 산부인과 교수"
+    },
+    {
+      "name": "남종호",
+      "department": "심장내과",
+      "external_id": "YUMC-493",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "[학력]\r\n2001-2007 영남대학교 의과대학 의학사\r\n2010-2015 영남대학교 대학원 의학석사\r\n2015-2017 영남대학교 대학원 의학박사 수료\r\n\r\n[경력]\r\n2007-2008 영남대학교 병원 인턴\r\n2008-2012 영남대학교 병원 내과 전공의\r\n2015-2017 영남대학교 병원 순환기내과 전임의 \r\n2017-2018 연세대학교 세브란스 심장혈관병원 임상연구조교수\r\n2018- 현재 영남대학교 의과대학 내과학교실 조교수\r\n\r\n[학술활동]\r\n대한내과학회 정회원\r\n대한심장학회 정회원\r\n대한심초음파학회 정회원"
+    },
+    {
+      "name": "노영남",
+      "department": "혈관외과",
+      "external_id": "YUMC-732",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "현 영남대학교의료원 이식-혈관외과 부교수\r\n\r\n2012.3 ~ 2016.2 인제대학교 일산백병원 외과 조교수\r\n2017.3 ~ 2020.2 계명대학교 동산의료원 이식-혈관외과 조교수\r\n2021.3 ~ 2021.12 계명대학교 동산의료원 이식-혈관외과 부교수\r\n2022.1. ~ 2023.8 영남대학교의료원 이식-혈관외과 임상교수"
+    },
+    {
+      "name": "노형균",
+      "department": "이비인후과",
+      "external_id": "YUMC-779",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "경북대학교병원 인턴\r\n경북대학교병원 이비인후과 레지던트\r\n대구의료원 이비인후과장\r\n서울특별시 동부병원 이비인후과장\r\n국립재활원 청각재활과장\r\n중앙병역판정소 징병검사전문의사\r\n대구광역시 달서구보건소장\r\n대구교도소 의료과장\r\n영남대학교병원 이비인후과 임상교수\r\n영남대학교 의과대학 이비인후과학교실 겸임교수"
+    },
+    {
+      "name": "도준영",
+      "department": "신장내과",
+      "external_id": "YUMC-14",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "의학박사 \r\n영국 웨일즈 대학에서 복막중피 세포에 대한 연수\r\n2004년 8월 국제복막투석학회에서 Bergstrom Award 수상"
+    },
+    {
+      "name": "문가빈",
+      "department": "건강증진센터",
+      "external_id": "YUMC-765",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문기학",
+      "department": "비뇨의학과",
+      "external_id": "YUMC-162",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "의학박사 \r\n대한비뇨기과학회 이사\r\n대한남성과학회 상임이사\r\n대한남성과학회지 편집위원\r\n대한남성갱년기학회 이사\r\n대한비뇨기과학회 정회원\r\n대한비뇨기과학회 정보위원\r\n세계성기능장애학회 정회원\r\n미국비뇨기과학회 정회원\r\nEndoruology 학회 정회원"
+    },
+    {
+      "name": "문준성",
+      "department": "내분비대사내과",
+      "external_id": "YUMC-394",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대병원 혁신형의사과학자공동연구사업단 부단장 (2019-2022)\r\n영남대학교 융복합의과학연구센터장 (2022-2024)\r\n영남대학교 임상의학실험실장 (2021-2022)\r\n내과 전문의 \r\n내분비대사내과 분과전문의"
+    },
+    {
+      "name": "민호기",
+      "department": "심장혈관흉부외과",
+      "external_id": "YUMC-642",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "- 1999: 경북대학교 의과대학 졸업\r\n2001-2003: 경북대학교 의학 석사\r\n1999 -2000: 강북삼성병원 인턴 수료\r\n2000-2004: 삼성 서울병원 흉부외과 전공의 수료\r\n2005-2007: 공중보건의 \r\n2007-2010: 삼성 서울병원 전임의 및 임상교수\r\n2010 - 2019: 인제대학교 해운대 백병원 부교수 역임\r\n2015.09 - 2016.08 : Cleveland University Hospital 해외 연수"
+    },
+    {
+      "name": "박미영",
+      "department": "신경과",
+      "external_id": "YUMC-19",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "의학박사\r\n신경과장, 주임교수(2005~2007)\r\n미국UAB대학 연수\r\n캐나다Toronto대학 연수\r\n미국 NIH 연구원\r\n대한치매학회장(2014), 대한파킨병 및 이상운동질환학회 이사\r\n대구·경북 치매연구회 이사\r\n대구경북신경과지회장(2013-2014)\r\n세계운동장애학회 정회원\r\n대한신경과학회장(2024)"
+    },
+    {
+      "name": "박복환",
+      "department": "영상의학과",
+      "external_id": "YUMC-87",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "학력\r\n1970년 경북대학교 의과대학 졸업\r\n1994년 경북대학교 대학원 의학과 박사과정 수료(박사학위 취득)\r\n\r\n경력\r\n1971~1975년 경북대학교병원 방사선과 전공의 과정 수료(방사선과 전문의 자격 취득)\r\n1975~1978년 군복무. 국군대구통합병원 방사선과 과장 역임\r\n1978~1988 부산 메리놀병원 방사선과 과장 역임\r\n1988~2010 영남대학교 의과대학 교수 겸 영남대학교병원 영상의학과 과장 역임\r\n2010~2018 영남대학교병원 건강증진센터 근무\r\n\r\n1998~1999년 대한초음파의학회 회장 역임"
+    },
+    {
+      "name": "박삼국",
+      "department": "정형외과",
+      "external_id": "YUMC-479",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "2003년 12월 ～ 2006년 9월 : 울산중앙병원 정형외과 과장\r\n2006년 10월 ～ 2010년 11월 : 서대구 정형외과 의원 원장\r\n2011년 3월 ～ 2015년 12월 : 경산 중앙병원 병원장\r\n2017년 03월 – 현 재: 영남의대 정형외과학 교실 주임교수\r\n\r\n대한 정형외과 학회 정회원\r\n대한 수부외과학회 정회원\r\n대한 미세수술학회 정회원\r\n대한 견주관절 학회 정회원\r\n대한 골절학회 정회원\r\n대한 수부외과 학회 이사\r\n대한 미세수술 학회 이사 (현)"
+    },
+    {
+      "name": "박소희",
+      "department": "신경외과",
+      "external_id": "YUMC-691",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2014-2018 영남대학교 신경외과 전공의\r\n2018-2019 영남대학교 신경외과 전임의\r\n2019-2022 연세대학교 신경외과 임상연구조교수\r\n2022-2023.8 영남대학교 신경외과 임상교수\r\n2023.9-       영남대학교 신경외과 조교수"
+    },
+    {
+      "name": "박신률",
+      "department": "응급의학과",
+      "external_id": "YUMC-373",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "경북대학교병원 응급의학과 수련\r\n경북대학교병원 전임의\r\n영남대학교병원 임상교수"
+    },
+    {
+      "name": "박신영",
+      "department": "유방내분비외과",
+      "external_id": "YUMC-726",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의학과 의학사\r\n영남대학교 의학과 의학석사\r\n영남대학교병원 유방내분비외과 전임의\r\n전 퀸스유외과 원장\r\n전 브이라이프 검진센터 외과원장"
+    },
+    {
+      "name": "박영은",
+      "department": "신장내과",
+      "external_id": "YUMC-781",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박용은",
+      "department": "위장관외과",
+      "external_id": "YUMC-525",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "외과 전문의\r\n위장관외과 분과전문의\r\n대한외과학회회원\r\n대한복강경위장관연구회 정회원\r\n대한환자영양지원학회 회원"
+    },
+    {
+      "name": "박용훈",
+      "department": "응급의학과",
+      "external_id": "YUMC-705",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박욱태",
+      "department": "정형외과",
+      "external_id": "YUMC-735",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 정형외과 전공의\r\n영남대학교병원 척추 전임의\r\n영남대학교병원 척추센터 임상교수\r\n현재 영남대학교 척추센터 조교수"
+    },
+    {
+      "name": "박은영",
+      "department": "치과",
+      "external_id": "YUMC-355",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박일래",
+      "department": "내분비대사내과",
+      "external_id": "YUMC-755",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박재원",
+      "department": "방사선종양학과",
+      "external_id": "YUMC-461",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "서울아산병원 인턴 (2006.3-2007.2)\r\n서울아산병원 레지던트6(2007.3-2011.2)\r\n공중보건의사 (2011.3-2014.4)\r\n서울아산병원 방사선종양학과 임상강사 (2014.5-2015.2)\r\n영남대학교 병원 촉탁의 (2015.3~2016.8)\r\n영남대학교 의과대학 방사선종양학교실 조교수 (2016.9~2022.8)\r\n영남대학교 의과대학 방사선종양학교실 부교수 (2022.9~)\r\n\r\n[학회활동]\r\n대한방사선 종양학회 정회원\r\n\r\n[주요경력]\r\n2010 대한방사선종양학회 구연상 (KASTRO Travel Award)\r\n\r\n[주요연구]\r\nPrognosis of esophageal cancer patients with pathologic complete response after preoperative concurrent chemoradiotherapy (International Journal of Radiation Oncology* Biology* Physics 2011"
+    },
+    {
+      "name": "박재현",
+      "department": "방사선종양학과",
+      "external_id": "YUMC-627",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "서울아산병원 인턴\r\n서울아산병원 방사선종양학과 전공의\r\n전북대학교병원 방사선종양학과 전임의\r\n영남대학교병원 방사선종양학과 임기제임상교원\r\n(현) 영남대학교 의과대학 방사선종양학교실 조교수"
+    },
+    {
+      "name": "박정길",
+      "department": "소화기내과",
+      "external_id": "YUMC-531",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "2014.~2016. 8.차의과학대학교 부속 구미차병원 조교수\r\n2023.~ 현재. Clinical Ultrasound, Editor-In-Chief"
+    },
+    {
+      "name": "박정우",
+      "department": "직업환경의학과",
+      "external_id": "YUMC-773",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "부산 남구청 산업보건의\r\n대구 북구청, 수성구청 산업보건의\r\n대구 직업병 안심센터 위원"
+    },
+    {
+      "name": "박종선",
+      "department": "심장내과",
+      "external_id": "YUMC-8",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "<b>[학력]</b>\r\n영남대 의대 학사 (1988)\r\n영남대 의대 석사 (1990)\r\n영남대 의대 박사 (1997)\r\n\r\n<b>[경력]</b>\r\n내과 전문의 취득 (1992)\r\n영남대병원 순환기내과 Fellow (1995-1998), 순환기내과 전문의 취득\r\nResearch Fellow, Tufts University, St. Elizabeth’s Hospital, Boston, USA (2002-2004)\r\n현 영남대학교 병원 순환기내과 교수\r\n\r\n<b>[학술활동]</b>\r\n대한 내과학회 정회원\r\n대한 심장학회 정회원\r\n대한 심초음파학회 정회원\r\n대한 심혈관 중재시술학회 정회원"
+    },
+    {
+      "name": "박종수",
+      "department": "영상의학과",
+      "external_id": "YUMC-700",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종원",
+      "department": "신장내과",
+      "external_id": "YUMC-190",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 졸업(1992)\r\n경북대학교 의학전문대학원 의학박사 (2010)\r\n내과전문의,신장내과분과전문의,투석전문의\r\n미국 University of Florida에서 혈관내피전구세포에 대한 연수(2007-2009)"
+    },
+    {
+      "name": "박종일",
+      "department": "심장내과",
+      "external_id": "YUMC-710",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "2016-2017 영남대학교 병원 인턴\r\n2017-2020 영남대학교 병원 내과 전공의\r\n2020-2022 영남대학교 병원 순환기 내과 전임의\r\n2022-2023 연세대학교 세브란스 심혈관병원 임상연구조교수\r\n2023- 영남대학교 병원 순환기 내과 조교수"
+    },
+    {
+      "name": "박철현",
+      "department": "정형외과",
+      "external_id": "YUMC-391",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "2002-2003  영남대학교 병원 인턴\r\n2006-2010  영남대학교 병원 정형외과 전공의 \r\n2010-2011  영남대학교 병원 정형외과 전임의 \r\n2011-2012  인제대학교 서울백병원 족부센터 임상교수 \r\n2012-2018  영남대학교 의과대학 조교수 \r\n2018-2022  영남대학교 의과대학 부교수 \r\n2022-현재 영남대학교 의과대학 정교수"
+    },
+    {
+      "name": "배상운",
+      "department": "감염내과",
+      "external_id": "YUMC-697",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교의료원 내과학 교실 전공의 수련\r\n영남대학교병원 감염내과 전임의\r\n서울성모병원 감염내과 전임의\r\n영남대학교병원 감염내과 임상교수\r\n영남대학교병원 감염내과 교수"
+    },
+    {
+      "name": "배영경",
+      "department": "병리과",
+      "external_id": "YUMC-171",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "1993. 03 ~ 1994. 02 영남대학교병원 인턴 \r\n1994. 03 ~ 1998. 02 영남대학교병원 병리과 전공의 \r\n2003. 03 ~ 2014. 02 영남대학교 의과대학 전임강사, 조교수, 부교수\r\n2014. 03 ~ 현재      영남대학교 의과대학 교수"
+    },
+    {
+      "name": "배정민",
+      "department": "외과",
+      "external_id": "YUMC-369",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "(현) 영남대학교 의과대학 외과학교실 교수\r\n(전)동국대학교 의과대학 외과학교실 조교수\r\n(전)안동성소병원, 대구의료원 응급의학과장.\r\n(전)영남대학교병원 외과 전임의, 임상교수-위암, 위장관 외과 전공\r\n\r\n자격 : \r\n외과 전문의 \r\n위장관외과  분과전문의 \r\n외상외과 세부전문의 \r\n중환자의학 세부전문의\r\n대한외과학회 외과-응급중환자외상분과 지도전문의"
+    },
+    {
+      "name": "백승철",
+      "department": "안센터",
+      "external_id": "YUMC-740",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백종규",
+      "department": "신경과",
+      "external_id": "YUMC-798",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백종윤",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-751",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "백종현",
+      "department": "심장혈관흉부외과",
+      "external_id": "YUMC-583",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "사공미",
+      "department": "유방내분비외과",
+      "external_id": "YUMC-406",
+      "n_schedules": 8,
+      "n_date_schedules": 0,
+      "notes": "경북대학교 의과대학 졸업\r\n경북대학교 의과대학원 의학석사\r\n경북대학교 의과대학원 의학박사\r\n현, 영남대학교병원 유방센터 임상교수"
+    },
+    {
+      "name": "사공민",
+      "department": "안센터",
+      "external_id": "YUMC-331",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 및 대학원 졸업 (의학박사)\r\n\r\nEuropean Vitreoretinal Trainging School 수료 (Germany)\r\n일본 오사카대학병원 단기 연수\r\n미국 University of Southern California (USC) 연수\r\n미국 University of California, Los Angeles (UCLA) 연수\r\n\r\n대한안과학회 정회원\r\n한국망막학회 정회원\r\n한국포도막학회 정회원\r\n유럽유리체망막학회 정회원\r\n미국안과학회 정회원\r\n미국망막전문의학회 정회원\r\n\r\n한국망막학회 이사\r\n한국포도막학회 이사\r\n한국망막학회 JOR (Journal of Retina) 편집위원\r\n대한안과학회 역학조사위원회 위원\r\n한국망막변성협회 판독센터장\r\nJCM (Journal of Clinical Medicine) 부편집장\r\n\r\n영남대학교병원 (전)협력커뮤니케이션실장\r\n\r\nMarquis Who's Who 세계인명사전 등재"
+    },
+    {
+      "name": "사공준",
+      "department": "직업환경의학과",
+      "external_id": "YUMC-125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "의학박사"
+    },
+    {
+      "name": "서완석",
+      "department": "정신건강의학과",
+      "external_id": "YUMC-174",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "학력\r\n1987.3-1993.2 영남대학교 의과대학(학사)\r\n1993.2-1994.2 영남대학교 의료원 인턴\r\n1994.2-1998.2 영남대학교 의료원 정신과 수료(정신과 전문의)\r\n1998.2-2001.4 육군 군의관(예비역 대위)\r\n2001.5-2001.11 서울대학교 병원 정신과 전임의\r\n2001.11-2003.2 영남대학교 의료원 정신과 전임의\r\n2003.3 – 현재  영남대학교 의과대학 정신과학 교실(부교수)\r\n2006.8-2007.8 미국 존스홉킨스 의과대학 방문교수\r\n1995.3-1997.2 영남대학교 대학원 의학과 석사(의학석사)\r\n2003.3-2006.2 충남대학교 대학원 의학과 박사(의학박사)\r\n\r\n학회 및 연구회 활동\r\nSubMeet 책임 연구원\r\n대한신경정신의학회 정회원\r\n평생회원: 대한소아청소년정신의학회, 대한정신약물학회, 대한생물치료정신의학회\r\n대한생물치료정신의학회 간행이사\r\n대한수면의학회 이사\r\n2009년 수면의학회 우수포스터상 수상\r\n국내외 저명학술지 "
+    },
+    {
+      "name": "손덕청",
+      "department": "응급의학과",
+      "external_id": "YUMC-401",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "경북대학교 의과대학 의학사\r\n영남대학교병원 전임의"
+    },
+    {
+      "name": "손욱진",
+      "department": "정형외과",
+      "external_id": "YUMC-177",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의학과 졸업\r\n의학박사\r\n\r\n슬관절학회 편집위원\r\n관절경학회 학술위원\r\n대한정형외과학회 편집위원\r\n골절학회 학술위원/ 평위원 / 보험위원장(전편집위원간사)\r\n대한운동계줄기세포재생의학회 학술위원\r\n대한정형외과학회 고시위원 / 이사\r\n대한정형외과 스포츠의학회 국제교육위원\r\n국민연금 직업병 자문의사"
+    },
+    {
+      "name": "손장원",
+      "department": "심장내과",
+      "external_id": "YUMC-403",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "<b> [학력]</b>\r\n1996. 03 – 2002. 02. 영남대학교 의과대학 의학사\r\n2004. 03 – 2006. 02 영남대학교 대학원 의학석사\r\n2010. 03 – 2012. 02 영남대학교 대학원 의학박사\r\n\r\n<b> [경력]</b>\r\n2002-2003 영남대학교 병원 Intern 수료\r\n2003-2007 영남대학교 병원 내과 Resident 수료\r\n2010-2011 영남대학교 병원 순환기내과 전임의\r\n2011-2013 연세의대 세브란스 심장혈관병원 임상연구조교수\r\n2013-현재 영남대학교 의과대학 조교수, 부교수(현재)\r\n\r\n<b> [학술활동]</b>\r\n대한내과학회 정회원\r\n대한심장학회 정회원\r\n한국심초음파학회 정회원, 연구위원, KSE Club 40\r\n조영심초음파연구회 정회원\r\n대한심혈관중재학회 정회원"
+    },
+    {
+      "name": "손준혁",
+      "department": "안센터",
+      "external_id": "YUMC-208",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "대한성형안과학회 정회원\r\n대한성형안과학회 학술이사\r\n미국 University of Washington 대학 교환교수\r\n유럽성형안과학회 정회원\r\n세계인명사전(Marquis Who's Who 2012등재)"
+    },
+    {
+      "name": "손휘승",
+      "department": "정형외과",
+      "external_id": "YUMC-684",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 인턴\r\n영남대학교병원 정형외과 전공의\r\n영월의료원 정형외과장\r\n고려대학교 구로병원 중증외상 최종치료센터 정형외과 임상강사\r\n영남대학교병원 정형외과 임상교수\r\n영남대학교병원 정형외과 조교수"
+    },
+    {
+      "name": "송시연",
+      "department": "이비인후과",
+      "external_id": "YUMC-130",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "[학력]\r\n영남대학교 의과대학 졸업\r\n의학박사 \r\n\r\n[경력 및 연수]\r\n미국 University of Pittsburg Medical Center 이비인후과 연수\r\n미국 Mayo Clinic 이비인후과 연수\r\n\r\n[학회활동]\r\n대한이비인후과학회 정회원\r\n대한갑상선두경부외과학회 정회원\r\n대한두경부종양학회 정회원\r\n대한후두음성언어학회 정회원\r\n대한기관식도과학회 정회원\r\n대한갑상선학회 정회원\r\n대한소아이비인후과학회 정회원"
+    },
+    {
+      "name": "송필현",
+      "department": "비뇨의학과",
+      "external_id": "YUMC-333",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 비뇨기과 레지던트 과정 수료\r\n영남대학교병원 비뇨기과 전임의\r\n일본도카이대학 내비뇨기과학 전임의 연수\r\n2011년 대한내비뇨기학회 해외연수생선정\r\n- 미국 클리브랜드클리닉 로봇센터 연수 \r\n미국 스탠퍼드(Stanford) 의과대학교 비뇨기과 및 스탠퍼드 대학병원 로봇센터 방문교수\r\n\r\n대한비뇨의학회 정회원 및 상임이사\r\n대한비뇨기종양학회 정회원 및 상임이사\r\n대한비뇨내시경로봇학회 정회원 및 상임이사\r\n대한전립선학회 정회원 및 상임이사\r\n대한요로생식기감염학회 정회원 및 상임이사\r\n대한노인요양비뇨의학회 정회원 및 상임이사\r\n한남비뇨의학회 정회원 및 상임이사\r\n한국의료법학회 정회원 및 이사"
+    },
+    {
+      "name": "신경철",
+      "department": "호흡기알레르기내과",
+      "external_id": "YUMC-59",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 전공의 수료\r\n영남대학교병원 호흡기알레르기내과 전임의\r\n영남대학교 의과대학 내과학 교실 전임강사, 조교수, 부교수, 교수(현재)\r\n해외연수: 미국 University of Colorado School of Medicine, Pathology, 객원교수(폐암 조기진단):2008-2009\r\n영남대학교병원 호흡기전문질환센터 사업수행부장(2011-2013)\r\n영남대학교병원 호흡기알레르기내과 분과장(2012-2022)\r\n영남대학교 의과대학 부학장(2014.02-2014.07)\r\n영남대학교의료원 사무국장(2016.02 - 2017.01)\r\n영남대학교병원 부원장(2014.08 - 2016.01 / 2021.02 - 2022.01) \r\n영남대학교병원 병원장(2022.02-2025.01)\r\n영남대학교병원 '권역 호흡기 전문질환센터' 센터장(2024.03 - 현재)"
+    },
+    {
+      "name": "신동훈",
+      "department": "피부과",
+      "external_id": "YUMC-78",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "의학박사, 울산동강병원 피부과장, 미국캘리포니아대학에서 피부조직병리학 연구"
+    },
+    {
+      "name": "신민우",
+      "department": "심장내과",
+      "external_id": "YUMC-794",
+      "n_schedules": 1,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신수정",
+      "department": "응급의학과",
+      "external_id": "YUMC-796",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신현호",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-770",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "계명대학교 동산병원 인턴 : 2010-2011년\r\n계명대학교 동산병원 레지던트 : 2011-2015년\r\n완도군/성주군 공중보건의 : 2015-2018년\r\n경북대학교 병원 마취통증의학과 임상강사 : 2018-2019년\r\n밀양윤병원 마취통증의학과 과장 : 2019-2025년\r\n영남대학교 병원 마취통증의학과 임상교수 : 2025년-현재\r\n대한마취통증의학회 정회원\r\n대한통증학회 정회원"
+    },
+    {
+      "name": "심범진",
+      "department": "정형외과",
+      "external_id": "YUMC-743",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 수련의: 2012. 03. 01 - 2013. 02. 27\r\n영남대학교병원 정형외과 전공의: 2013. 03. 01 - 2017. 02. 27\r\n대한민국 육군 군의관: 2017. 04. 26 - 2020. 04. 25\r\n분당서울대병원, 서울대병원 임상강사: 2020. 05. 01 - 2021. 02. 28\r\n한림대학교 춘천성심병원 임상강사: 2021. 03. 01 - 2022. 02. 28\r\n칠곡경북대병원 임상교수: 2022. 03. 01 - 2023. 02. 28\r\n경북대학교 의과대학 조교수: 2023. 03. 01 - 2024. 02. 29\r\n영남대학교 의과대학 조교수: 2024. 03. 01 - 현재"
+    },
+    {
+      "name": "안준홍",
+      "department": "호흡기알레르기내과",
+      "external_id": "YUMC-542",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 내과학교실 전공의\r\n영남대학교병원 호흡기알레르기내과 전임의\r\n영남대학교병원 호흡기알레르기내과 조교수\r\n영남대학교병원 호흡기알레르기내과 부교수 (현)"
+    },
+    {
+      "name": "양승호",
+      "department": "소아청소년과",
+      "external_id": "YUMC-775",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "예지원",
+      "department": "방사선종양학과",
+      "external_id": "YUMC-368",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "[학력]\r\n계명대학교 의과대학 졸업(1994)\r\n영남대학교 방사선종양학과 석사 졸업(2000)\r\n영남대학교 의공학과 박사(2010)\r\n\r\n[경력 및 연수]\r\n계명대학교 동산의료원 전임의(2000-2004)\r\n미국 듀크대학교 연수(2008-2009)\r\n대구 가톨릭대학병원 조교수(2004-2009)\r\n영남대학교병원 방사선종양학과 조교수 (2010.9)\r\n영남대학교병원 방사선종양학과 교수(현재)"
+    },
+    {
+      "name": "오동현",
+      "department": "유방내분비외과",
+      "external_id": "YUMC-782",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "오지은",
+      "department": "건강증진센터",
+      "external_id": "YUMC-689",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "2007-2008 성균관대학교 삼성창원병원 소화기내과 전임의\r\n2008-2009 울산 동강병원 소화기내과 과장\r\n2010-2021 성균관대학교 삼성창원병원 소화기내과  진료 교수\r\n현 영남대학교병원 건강증진센터 소화기내과 교수"
+    },
+    {
+      "name": "우현",
+      "department": "건강증진센터",
+      "external_id": "YUMC-747",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "현 영남대학교병원 건강증진센터 교수"
+    },
+    {
+      "name": "원규장",
+      "department": "내분비대사내과",
+      "external_id": "YUMC-12",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남의대 졸\r\n의학박사\r\nPacific Northwest Research Institute、Seattle 연수\r\n\r\n現) 영남대의료원 의생명연구처장\r\n     영남대병원 혁신형의사과학자공동연구사업단 단장\r\n대한당뇨병학회 이사장 (2022~2023)\r\n\r\n前) 대한내분비학회 부회장\r\n     대한내분비학회 연구이사 \r\n     대한당뇨병학회 간행이사, 학술이사 \r\n     대구경북내분비당뇨학회 지회장\r\n     영남대의료원 기획조정실장\r\n                        사무국장\r\n                        QI 실장 \r\n      영남대학교의과대학 교무부학장\r\n     영남대병원 내과과장 \r\n                        건강증진센터장 \r\n\r\n대한당뇨병학회 평의원\r\n대한내분비학회 평의원\r\n대한내과학회 평의원\r\n미국 당뇨병학회 정회원\r\n미국 내분비학회 정회원"
+    },
+    {
+      "name": "유동우",
+      "department": "신경외과",
+      "external_id": "YUMC-640",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 전공의\r\n영남대학교병원 전임의\r\n보광병원 신경외과 과장\r\n영남대학교병원 임상교수\r\n영남대학교병원 조교수"
+    },
+    {
+      "name": "윤석호",
+      "department": "정신건강의학과",
+      "external_id": "YUMC-662",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "윤성수",
+      "department": "간담췌외과",
+      "external_id": "YUMC-476",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "<b>주요경력</b>\r\n1981.3 ~ 1987.2 : 영남의대 의학사\r\n1991.3 ~ 1997.8 : 영남의대 외과학 의학박사\r\n1996.3 ~ 현재 : 영남대학교병원 교수\r\n1999 ~ 2000 : 미국 뉴욕 마운트사이나이 병원 교환교수\r\n미국 뉴욕 메모리얼 슬로언케터링 암병원(MSKCC) 교환교수\r\n2007.3 ~ 2009.2 : 영남남대학교 의료공학 연구소장\r\n2011.2 ~ 2015.1 : 영남대학교병원 외과 과장\r\n2014.8 ~ 2017.1 : 영남대학교병원 임상시험센터장\r\n2017.2 ~ 2019.1 : 영남대학교병원 병원장\r\n2019.2 ~ 2021.1 : 영남대학교 의과대학 학장\r\n\r\n<b>학회 및 학술활동</b>\r\n2018.9 ~ 2020.8 : 대구경북외과학회 회장\r\n2018. 9∼ 2020.8 : 대구경북간담췌외과연구회회장\r\n2019.4 ~ 2020.4 : 대한내시경로봇외과학회 회장\r\n2025.4 ∼ 현재 :  한국간담췌외과학회 회장"
+    },
+    {
+      "name": "윤지성",
+      "department": "내분비대사내과",
+      "external_id": "YUMC-196",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남의대 졸 \r\n의학박사\r\n(前) 순천향대학병원 내분비대사내과 교수 \r\nDiabetes & Endocrinology Research Center, Washington University, Seattle 교환교수"
+    },
+    {
+      "name": "윤지원",
+      "department": "소화기내과",
+      "external_id": "YUMC-799",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "은종신",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-767",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "시너지병원 마취통증의학과 원장\r\n의찬 신경통증클리닉 원장\r\n이춘택병원 비수술 척추센터 원장\r\n김찬병원 부원장 \r\n연세나무병원 비수술 척추센터 원장\r\n굿닥터 튼튼병원 척추내시경 Advanced Course Fellow"
+    },
+    {
+      "name": "이경희",
+      "department": "혈액종양내과",
+      "external_id": "YUMC-554",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "1. 학력\r\n1980.3 - 1986.2 영남대 의대 의학과 학사 대한민국\r\n1987.3 - 1989.2 영남대 의대 의학과 석사 대한민국\r\n1995.3 - 1997.9 경북대 의대 의학과 박사 대한민국\r\n\r\n2. 경력\r\n1986 - 1990 영남대학병원 인턴. 레지던트\r\n1993 - 1995 연세대학교, 연세암센터 연구강사\r\n1995 - 1997 영남대학병원 전임강사\r\n1997 - 1999.4 영남대학병원 조교수\r\n1999.5 - 2000.4 MD anderson cancer center, University of Texas, USA 연구전임의\r\n2001.3 - 2006.3 영남대학병원 부교수\r\n2006.4 - 현재 영남대학병원 교수"
+    },
+    {
+      "name": "이관호",
+      "department": "호흡기알레르기내과",
+      "external_id": "YUMC-9",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "경북의대 졸업,\r\n경북의대부속병원 인턴, 내과 레지던트 수료\r\n내과전문의,호흡기내과 분과전문의\r\n전 영남의대 교학담당학장보, 의예과장, 의학과장, 부학장 \r\n전 영남대학교 의료원 중환자실장\r\n전 영남대학교 보건진료소장\r\n1993년-1994년 교육부 해외파견 교수(미국)\r\n미국 Baylor College of Medicine에서 연수\r\n대한결핵및호흡기학회 간행위원,고시위원,학술위원,평의원,수련이사\r\n대한내과학회 간행위원,기획고시위원,평의원\r\n대한폐암학회 운영위원,이사,임상연구위원장\r\n전 영남대학교 의과학연구소장\r\n미국흉부학회 정회원\r\n유럽 호흡기학회 정회원\r\nFellow of International Academy of Chest Physicians and Surgeons(FCCP) \r\nWhos Who since 1997\r\n2005년 제8회 대구광역시 의사회 학술상 \r\n2005년 대한내과학회잡지 우수논문상\r\n2007년 대한내과학회잡지 최우수임상화보상\r\n전 영남의대 내과과장\r\n전 영남대"
+    },
+    {
+      "name": "이근미",
+      "department": "가정의학과",
+      "external_id": "YUMC-148",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "1994. 2.               가정의학과 전문의 자격 취득\r\n1994. 5. – 1998.8.  영남대학교 의과대학 연구강사\r\n1998.9. ~  현재.    영남대학교 의과대학 가정의학교실 교수\r\n2009.2. ~ 2012.1.   영남대학교 의과대학 의예과장  \r\n2013.2. ~ 2015.7.   영남대학교 의과대학 입학부학장\r\n2016.2. ~ 2017.7.   영남대학교 의과대학 교무부학장\r\n2007.3. ~ 2023.2.   영남대학교 의과대학 진료역량개발위원회 위원장\r\n2018.8. ~ 2023.2.   영남대학교 의과대학 임상수기센터장\r\n2020.2. ~ 2022.1.    영남대학교 의과대학 대학원 주임교수\r\n2020.2. ~  현재.      영남대학교 의과대학 가정의학교실 주임교수, 과장\r\n2025.2. ~ 현재        영남대학교 의과대학 교무부학장\r\n2020.1. ~ 2021.12.   대구경북 지필고사컨소시엄 위원장\r\n2009.3. ~  현재."
+    },
+    {
+      "name": "이남혁",
+      "department": "소아외과",
+      "external_id": "YUMC-191",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "경북의대 졸업\r\n의학박사\r\n미국 하버드의대 보스톤 소아병원 연수\r\n(2001년 ~ 2003년)"
+    },
+    {
+      "name": "이대형",
+      "department": "산부인과",
+      "external_id": "YUMC-338",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 졸업 및 동대학원 석사, 박사\r\n영남대학교 의료원 산부인과 전공의\r\n영남대학교 의료원 산부인과 전임의 및 임상교수\r\n\r\n대한산부인과학회 국제협력위원\r\n대한부인종양학회 부안암 예방위원"
+    },
+    {
+      "name": "이덕희",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-153",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "1992 영남대학교병원 인턴\r\n1993-1996 영남대학교병원 마취통증의학과 전공의\r\n1997-1999 해군 군의관\r\n2000 영남대학교병원 마취통증의학과 전임의\r\n2001- 영남대학교 의과대학 마취통증의학교실 교수\r\n대한마취통증의학회 정회원\r\n대한뇌신경마취학회 정회원"
+    },
+    {
+      "name": "이도현",
+      "department": "간담췌외과",
+      "external_id": "YUMC-758",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동규",
+      "department": "재활의학과",
+      "external_id": "YUMC-544",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 졸업 및 의과대학 박사\r\n계명대학교 동산병원 재활의학과 조교수\r\n영남대학교 의과대학 재활의학과 조교수(현재)\r\n\r\n대한재활의학과 정회원\r\n대한임상통증학회 정회원\r\n대한암재활학회 정회원\r\nThe Spine intervention society (SIS) 정회원\r\nKorean Spine Intervention Society (KorSIS) 정회원\r\nInternational Neuromodulation Society (NIS) 정회원\r\nInternational Association for the Study of Pain (IASP) 정회원"
+    },
+    {
+      "name": "이삼범",
+      "department": "응급의학과",
+      "external_id": "YUMC-120",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "내과 전문의 / 응급의학 전문의 / 중환자의학 전문의\r\n미국 펜실베니아 주립대학교\r\nHershey Medical Center 응급의료센터 연수\r\n(International Emergency Medicine Fellowship Program)\r\nACEP(미국응급의학회) 정회원\r\n대한내과학회/순환기학회/대한응급의학회 정회원\r\n대한응급의학회 감사,부회장 역임\r\n대한응급의학회 대구경북지회 회장 역임\r\n삼남응급의학회 회장 역임\r\n임상독성학회 창립회원\r\n영남대학교 의과대학 부학장 역임\r\n소방/전문학교 응급구조사 교육과정 위촉교수"
+    },
+    {
+      "name": "이상범",
+      "department": "안센터",
+      "external_id": "YUMC-142",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "한국실명예방재단 대구경북지부장\r\n\r\n(전) 한국각막학회 회장, 한국각막질환연구회 회장, 한국건성안학회 감사, 한남각막학회 회장\r\n(전) 영남대학교의료원 기획조정처장, 부원장, 교육수련실장, QI실장, 의과대학 부학장\r\n(전) 한국의료기관평가인증원 조사위원\r\n\r\n대한안과학회 정회원/대의원\r\n한국각막학회/한국백내장굴절수술학회/한국건성안학회/한국각막질환연구회 정회원\r\n유럽백내장굴절수술학회/미국백내장굴절수술학회 정회원\r\nAsia Dry Eye Society, Regular member"
+    },
+    {
+      "name": "이수인",
+      "department": "진단검사의학과",
+      "external_id": "YUMC-706",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이수정",
+      "department": "유방내분비외과",
+      "external_id": "YUMC-29",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "의학박사  미국 뉴욕 Mount Sinai University 외과학교실 연수 ,\r\n 뉴욕 Memorial Sloan-Kettering Cancer Center 연수"
+    },
+    {
+      "name": "이승은",
+      "department": "영상의학과",
+      "external_id": "YUMC-749",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이시형",
+      "department": "소화기내과",
+      "external_id": "YUMC-340",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "1999년 영남대학교 의과대학 졸업 \r\n2007.05-2009.02 영남대학교 병원 소화기내과 전임의 \r\n2009.03-2011.02 영남대학교 병원 소화기내과 전임강사\r\n2011.03-2015.02 영남대학교 병원 소화기내과 조교수\r\n2016.8-2017.8 미국 네바다 주립대학 연수\r\n2015.03 영남대학교 병원 소화기내과 부교수\r\n현재 영남대학교병원 소화기내과 교수\r\n\r\n학회 및 학술 활동 \r\n대한소화기학회정회원 \r\n대한 소화기내시경학 정회원 \r\n대한상부위장관, 헬리코박터학회 정회원\r\n대한장연구학회 정회원 \r\n대한 소화기 종양학회 정회원\r\n대한 소화기 기능성질환 운동학회 정회원"
+    },
+    {
+      "name": "이연지",
+      "department": "혈액종양내과",
+      "external_id": "YUMC-790",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "경북대학교 병원 인턴\r\n경북대학교 병원 레지던트\r\n경북대학교 병원 전임의\r\n경북대학교 병원 진료교수\r\n영남대학교 의료원 조교수"
+    },
+    {
+      "name": "이영환",
+      "department": "소아청소년과",
+      "external_id": "YUMC-64",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "[주요 진료 및 연구 분야]\r\n소아 심장학 – 선천성 심장질환, 가와사키병의 병태생리\r\n\r\n[학력]\r\n영남대학교 의과대학 졸업\r\n경북대학교 의과대학 대학원 의학박사\r\n\r\n[경력]\r\n영남대학교병원 소아청소년과 전공의\r\n영남대학교병원 소아청소년과 교수\r\n소아심장학 분과전문의\r\n영남대학교 의과대학 의료인문학교실 교수\r\n\r\n[주요 보직]\r\n영남대학교 의과대학 교육부학장\r\n영남대학교 부속병원 부원장\r\n영남대학교 의과대학 교무부학장\r\n영남대학교 의과대학 학장\r\n영남대학교 부속병원 원장\r\n\r\n[연수]\r\n미국 미시간대학교 소아심장학 \r\n호주 시드니대학교 의료인문학\r\n\r\n[학회활동]\r\n대한소아과학회 정회원\r\n대한심장학회 정회원\r\n대한소아과학회 고시위원\r\n소아고혈압연구회 일반이사\r\n한국의학교육학회 기획이사\r\n한국의학교육학회 교육정보이사\r\n한국의학교육학회 부회장\r\n한국의학교육학회 회장\r\n\r\n[의학교육 관련 분야 주요활동]\r\n한국의학교육평가원 평가기준전문위원\r\n한국보건의료인국가시험원 의사시험위원\r\n의학교"
+    },
+    {
+      "name": "이용철",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-791",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "계명대학교 동산병원 마취통증의학과 전임강사\r\n계명대학교 동산병원 마취통증의학과 조교수\r\n계명대학교 동산병원 마취통증의학과 부교수\r\n계명대학교 동산병원 마취통증의학과 교   수\r\n\r\n계명대학교 동산병원 수술센터장\r\n계명대학교 동산병원 마취통증의학과 주임교수 및 과장"
+    },
+    {
+      "name": "이유나",
+      "department": "건강증진센터",
+      "external_id": "YUMC-766",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은실",
+      "department": "소아청소년과",
+      "external_id": "YUMC-60",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "[주요 진료 및 연구분야] \r\n- 신생아학: 미숙아, 고위험 신생아, 신생아 질환, 예방 접종, 육아 상담 클리닉\r\n\r\n[학력] \r\n영남대학교 의과대학 졸업 (1992)\r\n영남대 의과대학 대학원 의학박사 (2001) \r\n\r\n[경력]\r\n영남대학교병원 인턴\r\n영남대학교병원 소아과 전공의 \r\n영남대학교병원 소아과 전임의\r\n영남대학교병원 소아청소년과 교수 (현)\r\n신생아학 세부 전문의\r\n미국 미시간대학교 Holden NICU, 신생아학 (2005 – 2006)\r\n\r\n[주요보직]\r\n영남대학교병원 신생아중환자실 실장 (현)\r\n\r\n[학회활동]\r\n대한 신생아학회\r\n대한 주산의학회\r\n대한 주산의학회 논문심사위원\r\n대한 소아과학회\r\n\r\n[주요연구]\r\n미숙아에서의 적정 체중아와 부당 경량아의 주산기 이환률 비교\r\n선천성 심장질환을 가진 신생아의 자궁내 성장 평가\r\nLow birth weight, very low birth weight rates and gestational age-specific bir"
+    },
+    {
+      "name": "이장훈",
+      "department": "심장혈관흉부외과",
+      "external_id": "YUMC-186",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 졸업(1993)\r\n영남대학교 의과대학 의학석사(1997)\r\n의학박사 (2009)"
+    },
+    {
+      "name": "이종호",
+      "department": "진단검사의학과",
+      "external_id": "YUMC-487",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "영남대학교의료원 인턴\r\n영남대학교의료원 진단검사의학 과레지던트\r\n영남대학교의료원 진단검사의학 전임의\r\n영남대학교의료원 진단검사의학 임상교수\r\n현, 영남대학교의료원 진단검사의학 조교수"
+    },
+    {
+      "name": "이준",
+      "department": "신경과",
+      "external_id": "YUMC-192",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 병원장\r\n영남대학교 의과대학 신경과 교수\r\n미국 스탠포드대학병원 뇌졸중센터 교환교수 (Stanford University Stroke Center Visiting Professor)\r\n계명대학교 동산의료원 신경과 교수\r\n성균관대학교 삼성의료원 신경과 뇌졸중분야 전임의\r\n영남대학교병원 신경과 전임의\r\n\r\n현, 대구경북신경과지회장\r\n현, 영호남신경과학회 이사\r\n대한신경과학회 이사역임\r\n대한뇌졸중학회 이사역임\r\n대구경북뇌졸중지회장 역임\r\n대한신경중재시술학회 이사역임\r\n대한심뇌혈관예방학회 이사역임\r\n신경계우울 및 행동장애연구회 이사역임\r\n재관류치료연구회 학술위원장 역임"
+    },
+    {
+      "name": "이준호",
+      "department": "성형외과",
+      "external_id": "YUMC-336",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "[주요진료 및 연구분야]\r\n유방확대술, 유방축소술, 유방재건술, 유방하수교정, 여성형유방교정술, 부유방교정술, 액취증, 화상, 지방 흡입 및 이식(체형성형술), 수부외상, 수부선천기형, 체부재건, 미세수술, 설소대, 욕창\r\n\r\n[학력]\r\n영남대학교 의과대학 졸업(1999)\r\n영남대학교 의학석사(2004)\r\n\r\n[경력 및 연수]\r\n영남대학교병원 성형외과 전공의(2000-2004)\r\n영남대학교병원 성형외과 전임의(2007-2009)\r\n영남대학교병원 성형외과 조교수(2009-2014)\r\n영남대학교병원 성형외과 부교수(2014-)\r\n(美)MD Anderson Cancer Center 성형외과 연수(2007, 2009)\r\n       \r\n[학회활동]\r\n대한성형외과학회 정회원\r\n대한미용성형외과학회 정회원\r\n대한수부외과학회 정회원\r\n대한미세수술학회 정회원\r\n대한창상학회 정회원\r\n대한화상학회 정회원"
+    },
+    {
+      "name": "이진욱",
+      "department": "건강증진센터",
+      "external_id": "YUMC-774",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이찬희",
+      "department": "심장내과",
+      "external_id": "YUMC-439",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "<b>[학력]</b>\r\n영남대학교 의과대학 의학사\r\n영남대학교 대학원 의학박사\r\n \r\n<b>[경력]</b>\r\n 영남대학교병원 내과 전공의\r\n 영남대학교병원 순환기내과 전임의\r\n University of California San Francisco 연수\r\n 현재, 영남대학교 심장내과 부교수\r\n\r\n<b>[학술활동]</b>\r\n대한부정맥학회 진료치침위원\r\n부정맥 중재시술 전문의\r\n대한뇌혈관내치료의학회 심뇌혈관정책 이사\r\n\r\n<b>[저서]</b>\r\n개념으로 설명하고 모식도로 정리한 <개념 심전도>\r\n\r\n<b>[수상경력]</b>\r\n보건 복지부 장관 표창 (2013년)\r\n영남대학교 의과대학 우수교육 교수상 (2016년)\r\n영남대학교 내과학교실 강의우수 교수상 (2019년)\r\n영남대학교 의과대학 W송원 연구자상 (2023년)"
+    },
+    {
+      "name": "이채훈",
+      "department": "진단검사의학과",
+      "external_id": "YUMC-116",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "의학박사"
+    },
+    {
+      "name": "임기영",
+      "department": "소화기내과",
+      "external_id": "YUMC-698",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2016.03 ~ 2017.02 영남대학교병원 인턴\r\n2017.03 ~ 2020.02 영남대학교병원 내과 전공의\r\n2020.03 ~ 2022.02 영남대학교병원 소화기내과 전임의\r\n2022.03 ~  2023.08 영남대학교병원 소화기내과 임상교수\r\n2023.09 ~              영남대학교병원 소화기내과 조교수"
+    },
+    {
+      "name": "임동은",
+      "department": "호흡기알레르기내과",
+      "external_id": "YUMC-786",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임지남",
+      "department": "안센터",
+      "external_id": "YUMC-718",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 인턴\r\n영남대학교병원 안과 전공의\r\n영남대학교병원 안과 성형안과 전임의\r\n(현)영남대학교병원 안과 성형안과 임상교수"
+    },
+    {
+      "name": "임지은",
+      "department": "심장혈관흉부외과",
+      "external_id": "YUMC-793",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장민혜",
+      "department": "병리과",
+      "external_id": "YUMC-490",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 졸업 \r\n서울대학교 대학원 박사\r\n분당서울대학교 병원 임상강사\r\n건국대학교병원 임상강사"
+    },
+    {
+      "name": "장병익",
+      "department": "소화기내과",
+      "external_id": "YUMC-139",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "1996: 의학박사 \r\n1999-2003: 영남대학교 의과대학 내과학교실 전임강사 및 조교수\r\n2003-2005: 미국노스케롤리나대학 소화기병연구소 연구원\r\n2006-2010: 영남대학교 의과대학 내과학교실 소화기분과 부교수\r\n2010-2011: 미국 베일러의대 소화기병센터 교환교수\r\n2012-2013: 영남대학교 의과대학 부학장\r\n2011-   영남대학교 의과대학 내과학교실 소화기분과 교수\r\n2011-2018: 영남대학병원 내과 소화기분과장\r\n2014-2018: 영남대학병원 내과 소화기센터장"
+    },
+    {
+      "name": "장병일",
+      "department": "혈액종양내과",
+      "external_id": "YUMC-771",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의료원 인턴\r\n영남대학교 의료원 내과전공의\r\n영남대학교 의료원 혈액종양내과 전임의\r\n영남대학교 의료원 혈액종양내과 임상조교수\r\n영남대학교 의료원 혈액종양내과 조교수"
+    },
+    {
+      "name": "장성호",
+      "department": "재활의학과",
+      "external_id": "YUMC-106",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "*경력: \r\n       1998년: 신촌세브란스병원 재활의학과 전문의 수료\r\n       1999년~2013년: 영남대학교 의과대학 재활의학과 교수\r\n       2013년~현재: 영남대학교 의과대학 재활의학과 석좌교수\r\n \r\n*수상: 2007년: 대한 재활의학회 학술상\r\n          2009년: 대한 재활의학회 학술상\r\n          2009년: 대구광역시 의사회 학술상\r\n          2012년: 영남대학교 천마학술상\r\n          2012년: 중앙일보 대학평가 - 의학계열 연구업적 전국 1위\r\n          2013년: 대한 재활의학회 학술상\r\n          2014년: 마르퀴즈 후즈후(Marquis Who’s Who) 세계인명사전 10년 연속 등재( 2005~2014)\r\n          2015년: 중앙일보 대학평가 - 논문의 질 [피인용도] 높은 연구자: 의학계열\r\n                       전국 2위\r\n          2015년"
+    },
+    {
+      "name": "장종걸",
+      "department": "호흡기알레르기내과",
+      "external_id": "YUMC-592",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 내과 전공의 수료 \r\n영남대학교병원 호흡기알레르기내과 전임의 수료\r\n영남대학교병원 호흡기내과 임상교수, 조교수 (현재)\r\n대구광역시 금연지원센터 금연캠프팀장"
+    },
+    {
+      "name": "장철훈",
+      "department": "신경외과",
+      "external_id": "YUMC-175",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "울산대학교 의과대학 졸업\r\n서울 아산병원 신경외과 임상강사\r\n대한 신경외과학회 정회원\r\n대한 뇌혈관외과학회 정회원\r\n대한뇌혈관내치료의학회 정회원\r\n미국 Barrow Neurologicak Institute(BNI) - 뇌혈관 질환 수술 장기 연수\r\nWorld Federation of Interventional & Therapeutic Neuroradiology 정회원\r\n대한뇌혈관내치료의학회 회장 (2021. 12~2023. 11.)"
+    },
+    {
+      "name": "전익찬",
+      "department": "신경외과",
+      "external_id": "YUMC-463",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "[학력 및 경력]\r\n의학박사\r\n영남대학교 의과대학 \r\n영남대학교병원 신경외과 전공의\r\n국군대구병원 신경외과장\r\n영남대학교병원 신경외과 전임의\r\n연세대학교 강남세브란스병원 척추신경외과 임상연구조교수\r\n독일 숀 클리닉 뮌헨-하를라칭 병원 (SCHON KLINIK Munchen-Harlaching) 연수\r\n싱가포르 국립대학병원 (NUH) 척추센터 연수\r\n미국 스탠포드대학교 Spine Artificial Intelligence Laboratory (Stanford Medicine) 연수\r\n\r\n[학회활동]\r\n대한신경외과학회 정회원\r\n대한척추신경외과학회 정회원\r\n대한최소침습척추학회 정회원\r\n대한골대사학회 정회원\r\n대한의료인공지능학회 정회원\r\n\r\n[수상경력]\r\n대한신경외과학회 제26차 춘계학술대회 학술상 (2008)\r\n대한척추기초연구회 제12차 정기학술대회 우수학술상 (2021)\r\n대한척추신경외과학회 제35차 정기학술대회 나누리학술상 (2021, 책임저자)\r\n대한척추골다공증연구회 제11차 정기학"
+    },
+    {
+      "name": "정성미",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-385",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "세브란스병원 연구강사\r\n건양대학교병원 의학부교수"
+    },
+    {
+      "name": "정성용",
+      "department": "안센터",
+      "external_id": "YUMC-669",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 안과 전공의\r\n군위군보건소 안과 과장\r\n영남대학교 병원 망막 전임의\r\n영남대학교 병원 망막 조교수"
+    },
+    {
+      "name": "정승민",
+      "department": "내분비대사내과",
+      "external_id": "YUMC-567",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "내과 전문의\r\n내분비대사내과 분과전문의\r\n내과전공의 갑상선 초음파교육 지도인증의\r\n당뇨병 교육자 자격 인증의\r\n\r\n2013-2017 영남대학교병원 내과 전공의\r\n2017-2019 영남대학교병원 내분비대사내과 전임의\r\n2019-2022 영남대학교병원 내분비대사내과 임상교수\r\n2022- 현재  영남대학교 의과대학 내과학교실 조교수"
+    },
+    {
+      "name": "정아름",
+      "department": "안센터",
+      "external_id": "YUMC-613",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 인턴\r\n영남대학교병원 안과 전공의\r\n영남대학교병원 안과 녹내장분과 전임의\r\n영남대학교병원 안과 망막분과 전임의\r\n영남대학교병원 안과 망막분과 임상교수\r\n(현) 영남대학교병원 안과 조교수"
+    },
+    {
+      "name": "정영상",
+      "department": "심장내과",
+      "external_id": "YUMC-778",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정영진",
+      "department": "신경외과",
+      "external_id": "YUMC-396",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 신경외과 교수/ 의학석사\r\n미국 에모리 대학 교환 교수 (Emory University Medical Center, Visiting scholarship, 2016.08~2017.07)\r\n서울 아산 병원 신경외과 전임의\r\n영남대학교 신경외과 전임의\r\n대한 신경외과 학회 정회원\r\n대한 뇌혈관 외과 학회 정회원\r\n대한 뇌혈관내 수술 학회 정회원 및 뇌혈관내 수술 인증의\r\n대한 뇌졸중 학회 정회원\r\n대한 두통학회 정회원"
+    },
+    {
+      "name": "정준창",
+      "department": "심장내과",
+      "external_id": "YUMC-789",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정한솔",
+      "department": "응급의학과",
+      "external_id": "YUMC-671",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 병원(인턴, 전공의)\r\n응급의학 전문의, 의학박사\r\n(前)경북대학교 병원 칠곡응급의료센터 진료교수\r\n(前)영남대학교 병원 임상교수\r\n(現)영남대학교 병원 응급의학과 교수"
+    },
+    {
+      "name": "정희창",
+      "department": "비뇨의학과",
+      "external_id": "YUMC-161",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "의학박사\r\n대한비뇨기과학회 평의원\r\n보건복지부 보건산업진흥원 GHKOL 전문위원\r\n보건산업진흥원 R&D 중개연구단 운영위원\r\n식품의약품안전전청 의료기기 전문위원\r\n대한배뇨장애 및 요실금학회 이사\r\n대한전립선학회 이사\r\n대한비뇨기과학회 대구경북지부 회장\r\n국제배뇨장애 및 요실금학회 정회원\r\n유럽비뇨기과학회 정회원"
+    },
+    {
+      "name": "조규향",
+      "department": "신장내과",
+      "external_id": "YUMC-291",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조소혜",
+      "department": "정신건강의학과",
+      "external_id": "YUMC-653",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조윤영",
+      "department": "방사선종양학과",
+      "external_id": "YUMC-693",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "이대목동병원 인턴\r\n서울아산병원 방사선종양학과 전공의\r\n영남대학교병원 방사선종양학과 전임의\r\n영남대학교병원 방사선종양학과 임상교수"
+    },
+    {
+      "name": "조인호",
+      "department": "핵의학과",
+      "external_id": "YUMC-103",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "[학력]\r\n영남대학교 의과대학 졸업(1986)\r\n영남대학교 의과대학 석사(1989)\r\n경북대학교 의과대학 박사(1997)\r\n\r\n[경력 및 연수]\r\n1987년 ~ 1990년 영남대학교병원 내과 레지던트 수료\r\n1993년 ~ 1994년 영남대학교병원 핵의학과 연구강사\r\n1995년 ~ 1998년 영남대학교병원 핵의학과 조교수\r\n1999년 ~ 2003년 영남대학교병원 핵의학과 부교수\r\n2004년 ~ 현재    영남대학교병원 핵의학과 교수\r\n1996년 The science and technology agency fellowship in national cardiovascular center research institute of Japan"
+    },
+    {
+      "name": "조재호",
+      "department": "영상의학과",
+      "external_id": "YUMC-128",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "의학박사"
+    },
+    {
+      "name": "조준현",
+      "department": "소화기내과",
+      "external_id": "YUMC-570",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2010 – 2011  영남대학교병원 소화기내과 전임의\r\n2011 – 2018  영남대학교 의과대학 내과학교실 외래교수\r\n2018.3 – 2022.2 영남대학교 의과대학 내과학교실 소화기내과 조교수\r\n2022.3 - 현재 영남대학교 의과대학 내과학교실 소화기내과 부교수\r\n2011 – 대한소화기내시경학회 소화기내시경 세부전문의\r\n2013 – 대한내과학회 내과분과전문의(소화기분과)\r\n2018 - 대한소화기암학회 소화기암인증의\r\n2018 - 대한소화기학회 복부초음파 지도인증의\r\n\r\n<학술 및 학회활동>\r\n대한내과학회 정회원\r\n대한소화기학회 평생회원\r\n대한소화기내시경학회 평생회원\r\n대한임상초음파학회 정회원\r\n대한소화기암학회 평생회원\r\n대한소화기기능성질환운동학회 평생회원\r\n대한상부위장관헬리코박터학회 평생회원"
+    },
+    {
+      "name": "조진모",
+      "department": "호흡기알레르기내과",
+      "external_id": "YUMC-795",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조찬우",
+      "department": "간담췌외과",
+      "external_id": "YUMC-578",
+      "n_schedules": 2,
+      "n_date_schedules": 0,
+      "notes": "서울의료원 인턴 (2010-2011)\r\n삼성서울병원 외과 전공의 (2011-2015)\r\n삼성서울병원 이식외과 전임의 (2015-2018)\r\n영남대학교병원 간담췌외과 조교수 (2018-현재)"
+    },
+    {
+      "name": "조찬호",
+      "department": "안센터",
+      "external_id": "YUMC-736",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교병원 인턴 수료 (2010.2)\r\n영남대학교병원 안과 레지던트 수료 (2014.2)\r\n경상북도 성주군 공중보건의사 복무 만료 (2017.4)\r\n영남대학교병원 안과 외안부분과 전임의 수료 (2019.2)\r\n영남대학교병원 안과 임상교수 (2019.3-2020.2)\r\n인제대학교 해운대백병원 안과 진료교수 (2020.3-2021.2)\r\n인제대학교 해운대백병원 안과 조교수 (2021.3-2024.2)\r\n(현) 영남대학교병원 안과 조교수 (2024.3-)"
+    },
+    {
+      "name": "진현정",
+      "department": "호흡기알레르기내과",
+      "external_id": "YUMC-389",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 부속병원 호흡기내과 전임의\r\n아주대학교 의과대학 부속병원 알레르기내과 임상교수\r\n영남대학교 의과대학 부속병원 호흡기알레르기내과 조교수\r\n대한천식알레르기학회 대구경북지부 학술이사\r\n대한천식알레르기학회 홍보위원회 위원\r\n대한천식알레르기학회 정보통신위원회 위원\r\n건강보험심사평가원 진료심사평가위원회 위원"
+    },
+    {
+      "name": "천경아",
+      "department": "핵의학과",
+      "external_id": "YUMC-188",
+      "n_schedules": 6,
+      "n_date_schedules": 0,
+      "notes": "[학력]\r\n경북대학교 의과대학 졸업(1995)\r\n경북대학교 의과대학 의학석사\r\n경북대학교 의과대학 의학박사(2001)\r\n\r\n[경력 및 연수]\r\n1996년 ~ 1999년 경북대학교병원 핵의학과 레지던트수료\r\n2000년 ~ 2003년 영남대학교병원 핵의학과 전임의. 연구강사\r\n2004년 ~ 2009년 영남대학교병원 핵의학과 전임강사, 조교수\r\n2010년 ~ 현재 영남대학교병원 핵의학과 부교수, (현)교수\r\n2012년 - 미국 Johns Hopkins 의과대학 연수"
+    },
+    {
+      "name": "천은진",
+      "department": "정신건강의학과",
+      "external_id": "YUMC-395",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "생명사랑 위기대응센터장 \r\n정신건강의학과 전문의\r\n대한조현병학회 정회원 \r\n대한 우울조울병학회 정회원\r\n대한 불안의학회 정회원\r\n대한 생물치료정신의학회 정회원, 이사\r\n대한 정신약물학회 정회원 \r\n정신병심리치료학회지 간행위원"
+    },
+    {
+      "name": "최강운",
+      "department": "심장내과",
+      "external_id": "YUMC-677",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "2012-2016 영남대학교 병원 내과 전공의\r\n2016-2018 영남대학교 병원 순환기내과 전임의\r\n2018-2019 연세대학교 세브란스 심장혈관병원 임상연구조교수\r\n2019-2021 동국대학교 경주병원 심장혈관내과 조교수\r\n2022-       영남대학교 의과대학 내과학교실 심장내과 조교수"
+    },
+    {
+      "name": "최광해",
+      "department": "소아청소년과",
+      "external_id": "YUMC-65",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "[주요 진료 및 연구분야]\r\n- 소아 소화기영양학: 크론병, 소아간염, 소아 비만 클리닉, 소화기 질환 클리닉\r\n\r\n[학력]\r\n영남대학교 의과대학 졸업 \r\n계명대학교 대학원 석사\r\n\r\n[경력]\r\n영남대학교병원 인턴\r\n영남대학교병원 소아과 전공의 \r\n서울대학교 어린이병원 소아과 전임의 과정 (소화기영양분과) 이수\r\n소아소화기영양 분과 전문의\r\n영남대학교병원 소아청소년과 교수 \r\n\r\n[주요보직]\r\n영남대학교병원 소아청소년과 과장 (현)\r\n영남대학교 의과대학 교무부학장 (현)\r\n\r\n[학회활동]\r\n대한소아소화기영양학회 간행이사 (2007~2009)\r\n제11차 아시아태평양 소아소화기영양학회 행사진행분과 위원장 (2007~2009)\r\n대한소아소화기영양학회 평의원\r\n대한소아소화기영양학회, 대한소아과학회 논문심사위원\r\n질병관리본부 청소년 비만 전문기술분과 위원\r\n\r\n[주요연구]\r\n임상비만학-비알코올성 지방간염\r\n비만아에서 비알코올성 지방간염의 위험요인\r\n울산지역 초 중 고등학생들의 자기 체형에 대"
+    },
+    {
+      "name": "최규운",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-769",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "울산대학교병원 인턴 수료\r\n단국대학교병원 마취통증의학과 전공의 수료\r\n고려대학교 안산병원 진료전문의"
+    },
+    {
+      "name": "최은경",
+      "department": "마취통증의학과",
+      "external_id": "YUMC-561",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "경북대학교 병원 마취통증의학과 전임강사 \r\n영남대학교 병원 마취통증의학과 부교수 2023년-현재\r\n대한이식마취통증의학회 정회원"
+    },
+    {
+      "name": "최재영",
+      "department": "비뇨의학과",
+      "external_id": "YUMC-459",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "경북대학교병원 수련의 \r\n해군 문무대왕함 군의관\r\n해군사관학교 의무대 피부.비뇨기과장 \r\n경북대학교병원 비뇨기과 전공의\r\n경북대학교병원 비뇨기과 임상강사 \r\n칠곡경북대학교병원 비뇨기암센터 임상강사 \r\n경북대학교병원 비뇨기과 임상교수\r\n현) 영남대학교병원 비뇨의학과 부교수"
+    },
+    {
+      "name": "최정은",
+      "department": "유방내분비외과",
+      "external_id": "YUMC-383",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의학과 의학사\r\n영남대학교 의학과 의학석사\r\n계명대학교 의학과 의학박사\r\n2010년 영남대학병원 전임의\r\n2011년 영남대학병원 전임강사\r\n2012년 영남대학병원 조교수\r\n2016년 미국 하버드 대학 다나파버 암센터 연수\r\n2017년 영남대학병원 부교수\r\n한국 유방암 학회, 대한 갑상선 외과학회 정회원"
+    },
+    {
+      "name": "최종수",
+      "department": "피부과",
+      "external_id": "YUMC-76",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "의학박사 \r\n미국 캘리포니아대학 연수 \r\n미국 CDC에서 진균학에 대해 연구"
+    },
+    {
+      "name": "최준혁",
+      "department": "병리과",
+      "external_id": "YUMC-96",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "1996 ~ 1998 영남대학교 의과대학 전임강사\r\n1999 ~ 2001 영남대학교 의과대학 조교수\r\n2002 ~ 2006 영남대학교 의과대학 부교수\r\n2007 ~ 현재 영남대학교 의과대학 교수"
+    },
+    {
+      "name": "최진균",
+      "department": "응급의학과",
+      "external_id": "YUMC-797",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최해동",
+      "department": "신장내과",
+      "external_id": "YUMC-792",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하정상",
+      "department": "신경과",
+      "external_id": "YUMC-18",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "의학박사 \r\n미국 Alabama 대학병원(UAB) 근전도 및 신경-근질환 연구소 연구원(1991)\r\n신경과학교실 주임교수 겸 신경과장 역임(1996-2005)\r\n대한신경과학회 영-호남지회 이사장 역임(2004-2006)\r\n대한신경과학회 평의원 겸 부회장 (2009)"
+    },
+    {
+      "name": "허민구",
+      "department": "안센터",
+      "external_id": "YUMC-737",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": "대구파티마병원 인턴\r\n대구파티마병원 안과 전공의\r\n부산지방병무청 안과 병역판정전담의\r\n중앙신체검사소 안과 병역판정전담의\r\n서울대학교병원 안과 녹내장 임상강사\r\n\r\n영남대학교병원 안과 임상교수\r\n(現) 영남대학교병원 안과 조교수"
+    },
+    {
+      "name": "허지안",
+      "department": "감염내과",
+      "external_id": "YUMC-346",
+      "n_schedules": 4,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍경수",
+      "department": "호흡기알레르기내과",
+      "external_id": "YUMC-636",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": "2012.03 - 2016.02 영남대학교의료원 내과학 교실\r\n2019.05 - 2021.02 영남대학교의료원 호흡기내과 전임의\r\n2021.03 - 2023.02 영남대학교의료원 호흡기내과 임상교수\r\n2023.03 - 현재     영남대학교의료원 호흡기내과 조교수"
+    },
+    {
+      "name": "홍영훈",
+      "department": "류마티스내과",
+      "external_id": "YUMC-189",
+      "n_schedules": 5,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의학석사\r\n영남대학교 의학박사 수료"
+    },
+    {
+      "name": "황미수",
+      "department": "영상의학과",
+      "external_id": "YUMC-695",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": "영남대학교 의과대학 교수 역임"
+    }
+  ]
+}

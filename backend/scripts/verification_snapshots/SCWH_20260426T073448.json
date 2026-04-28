@@ -1,0 +1,1415 @@
+{
+  "hospital_code": "SCWH",
+  "hospital_name": "성균관대학교 삼성창원병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김광민",
+      "department": "소화기내과",
+      "external_id": "SCWH-39",
+      "n_schedules": 3,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "고광철",
+      "department": "소화기내과",
+      "external_id": "SCWH-201",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "심상군",
+      "department": "소화기내과",
+      "external_id": "SCWH-41",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "조대현",
+      "department": "소화기내과",
+      "external_id": "SCWH-36",
+      "n_schedules": 3,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "이정원",
+      "department": "소화기내과",
+      "external_id": "SCWH-38",
+      "n_schedules": 3,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "권병수",
+      "department": "소화기내과",
+      "external_id": "SCWH-32",
+      "n_schedules": 3,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "김준영",
+      "department": "소화기내과",
+      "external_id": "SCWH-37",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "성보람",
+      "department": "소화기내과",
+      "external_id": "SCWH-278",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "이보경",
+      "department": "소화기내과",
+      "external_id": "SCWH-279",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "임덕길",
+      "department": "소화기내과",
+      "external_id": "SCWH-307",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김규상",
+      "department": "소화기내과",
+      "external_id": "SCWH-324",
+      "n_schedules": 2,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "김한성",
+      "department": "소화기내과",
+      "external_id": "SCWH-325",
+      "n_schedules": 2,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "이미래",
+      "department": "순환기내과",
+      "external_id": "SCWH-18",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "김덕경",
+      "department": "순환기내과",
+      "external_id": "SCWH-230",
+      "n_schedules": 4,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "오주현",
+      "department": "순환기내과",
+      "external_id": "SCWH-22",
+      "n_schedules": 2,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "김진구",
+      "department": "순환기내과",
+      "external_id": "SCWH-252",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "박용환",
+      "department": "순환기내과",
+      "external_id": "SCWH-20",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "곽혜빈",
+      "department": "순환기내과",
+      "external_id": "SCWH-24",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "박익현",
+      "department": "순환기내과",
+      "external_id": "SCWH-23",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "방승혁",
+      "department": "순환기내과",
+      "external_id": "SCWH-317",
+      "n_schedules": 3,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "이승도",
+      "department": "순환기내과",
+      "external_id": "SCWH-272",
+      "n_schedules": 3,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "조현규",
+      "department": "호흡기내과",
+      "external_id": "SCWH-54",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "정재완",
+      "department": "호흡기내과",
+      "external_id": "SCWH-257",
+      "n_schedules": 4,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "배지철",
+      "department": "내분비내과",
+      "external_id": "SCWH-28",
+      "n_schedules": 5,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "서성환",
+      "department": "내분비내과",
+      "external_id": "SCWH-235",
+      "n_schedules": 5,
+      "n_date_schedules": 24,
+      "notes": ""
+    },
+    {
+      "name": "한지민",
+      "department": "내분비내과",
+      "external_id": "SCWH-31",
+      "n_schedules": 5,
+      "n_date_schedules": 20,
+      "notes": ""
+    },
+    {
+      "name": "김혜인",
+      "department": "내분비내과",
+      "external_id": "SCWH-27",
+      "n_schedules": 5,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "조정환",
+      "department": "내분비내과",
+      "external_id": "SCWH-30",
+      "n_schedules": 5,
+      "n_date_schedules": 21,
+      "notes": ""
+    },
+    {
+      "name": "윤상아",
+      "department": "내분비내과",
+      "external_id": "SCWH-326",
+      "n_schedules": 4,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "이유지",
+      "department": "신장내과",
+      "external_id": "SCWH-50",
+      "n_schedules": 4,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "김성록",
+      "department": "신장내과",
+      "external_id": "SCWH-48",
+      "n_schedules": 4,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "나진희",
+      "department": "신장내과",
+      "external_id": "SCWH-223",
+      "n_schedules": 5,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "박인호",
+      "department": "신장내과",
+      "external_id": "SCWH-298",
+      "n_schedules": 5,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "박선영",
+      "department": "신장내과",
+      "external_id": "SCWH-303",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김우겸",
+      "department": "신장내과",
+      "external_id": "SCWH-323",
+      "n_schedules": 1,
+      "n_date_schedules": 5,
+      "notes": ""
+    },
+    {
+      "name": "지준호",
+      "department": "혈액종양내과",
+      "external_id": "SCWH-44",
+      "n_schedules": 4,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "강원기",
+      "department": "혈액종양내과",
+      "external_id": "SCWH-280",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김석현",
+      "department": "혈액종양내과",
+      "external_id": "SCWH-46",
+      "n_schedules": 5,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "김성민",
+      "department": "혈액종양내과",
+      "external_id": "SCWH-45",
+      "n_schedules": 5,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "이유선",
+      "department": "류마티스내과",
+      "external_id": "SCWH-56",
+      "n_schedules": 6,
+      "n_date_schedules": 36,
+      "notes": ""
+    },
+    {
+      "name": "위유미",
+      "department": "감염내과",
+      "external_id": "SCWH-26",
+      "n_schedules": 2,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "김시호",
+      "department": "감염내과",
+      "external_id": "SCWH-25",
+      "n_schedules": 2,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "전천후",
+      "department": "감염내과",
+      "external_id": "SCWH-236",
+      "n_schedules": 2,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "최성희",
+      "department": "외과",
+      "external_id": "SCWH-12",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김성",
+      "department": "외과",
+      "external_id": "SCWH-194",
+      "n_schedules": 2,
+      "n_date_schedules": 9,
+      "notes": ""
+    },
+    {
+      "name": "조재원",
+      "department": "외과",
+      "external_id": "SCWH-234",
+      "n_schedules": 2,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "최성호",
+      "department": "외과",
+      "external_id": "SCWH-195",
+      "n_schedules": 2,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "이순정",
+      "department": "외과",
+      "external_id": "SCWH-15",
+      "n_schedules": 4,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "김용석",
+      "department": "외과",
+      "external_id": "SCWH-16",
+      "n_schedules": 3,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "이형근",
+      "department": "외과",
+      "external_id": "SCWH-11",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "윤해란",
+      "department": "외과",
+      "external_id": "SCWH-10",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "최희준",
+      "department": "외과",
+      "external_id": "SCWH-13",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "이지수",
+      "department": "외과",
+      "external_id": "SCWH-293",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "방윤주",
+      "department": "외과",
+      "external_id": "SCWH-217",
+      "n_schedules": 3,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안성효",
+      "department": "외과",
+      "external_id": "SCWH-304",
+      "n_schedules": 3,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "강수진",
+      "department": "외과",
+      "external_id": "SCWH-320",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "박재홍",
+      "department": "심장혈관흉부외과",
+      "external_id": "SCWH-115",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김한용",
+      "department": "심장혈관흉부외과",
+      "external_id": "SCWH-114",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "황상원",
+      "department": "심장혈관흉부외과",
+      "external_id": "SCWH-116",
+      "n_schedules": 3,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "최창석",
+      "department": "심장혈관흉부외과",
+      "external_id": "SCWH-220",
+      "n_schedules": 4,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "김명영",
+      "department": "심장혈관흉부외과",
+      "external_id": "SCWH-117",
+      "n_schedules": 3,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "이영민",
+      "department": "신경외과",
+      "external_id": "SCWH-73",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "어환",
+      "department": "신경외과",
+      "external_id": "SCWH-72",
+      "n_schedules": 3,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "김규홍",
+      "department": "신경외과",
+      "external_id": "SCWH-67",
+      "n_schedules": 3,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "김준수",
+      "department": "신경외과",
+      "external_id": "SCWH-70",
+      "n_schedules": 3,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "김영준",
+      "department": "신경외과",
+      "external_id": "SCWH-75",
+      "n_schedules": 3,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "장지환",
+      "department": "신경외과",
+      "external_id": "SCWH-68",
+      "n_schedules": 3,
+      "n_date_schedules": 11,
+      "notes": ""
+    },
+    {
+      "name": "김승환",
+      "department": "신경외과",
+      "external_id": "SCWH-74",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "이창호",
+      "department": "신경외과",
+      "external_id": "SCWH-321",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "김동희",
+      "department": "정형외과",
+      "external_id": "SCWH-91",
+      "n_schedules": 3,
+      "n_date_schedules": 10,
+      "notes": ""
+    },
+    {
+      "name": "김종관",
+      "department": "정형외과",
+      "external_id": "SCWH-232",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "정성원",
+      "department": "정형외과",
+      "external_id": "SCWH-90",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "진진우",
+      "department": "정형외과",
+      "external_id": "SCWH-87",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "신성진",
+      "department": "정형외과",
+      "external_id": "SCWH-89",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "이도경",
+      "department": "정형외과",
+      "external_id": "SCWH-86",
+      "n_schedules": 3,
+      "n_date_schedules": 7,
+      "notes": ""
+    },
+    {
+      "name": "위승명",
+      "department": "정형외과",
+      "external_id": "SCWH-231",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "강대일",
+      "department": "성형외과",
+      "external_id": "SCWH-107",
+      "n_schedules": 3,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "박상우",
+      "department": "성형외과",
+      "external_id": "SCWH-108",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "김창운",
+      "department": "산부인과",
+      "external_id": "SCWH-79",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "지병주",
+      "department": "산부인과",
+      "external_id": "SCWH-78",
+      "n_schedules": 4,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "김민규",
+      "department": "산부인과",
+      "external_id": "SCWH-80",
+      "n_schedules": 4,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "옥지훈",
+      "department": "산부인과",
+      "external_id": "SCWH-77",
+      "n_schedules": 4,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "이주석",
+      "department": "소아청소년과",
+      "external_id": "SCWH-101",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "김영돈",
+      "department": "소아청소년과",
+      "external_id": "SCWH-106",
+      "n_schedules": 2,
+      "n_date_schedules": 8,
+      "notes": ""
+    },
+    {
+      "name": "이준화",
+      "department": "소아청소년과",
+      "external_id": "SCWH-96",
+      "n_schedules": 5,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "김성훈",
+      "department": "소아청소년과",
+      "external_id": "SCWH-100",
+      "n_schedules": 4,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "이해정",
+      "department": "소아청소년과",
+      "external_id": "SCWH-99",
+      "n_schedules": 4,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "이상택",
+      "department": "소아청소년과",
+      "external_id": "SCWH-98",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "경예찬",
+      "department": "소아청소년과",
+      "external_id": "SCWH-97",
+      "n_schedules": 4,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "전우영",
+      "department": "소아청소년과",
+      "external_id": "SCWH-202",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김주영",
+      "department": "소아청소년과",
+      "external_id": "SCWH-284",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최민환",
+      "department": "소아청소년과",
+      "external_id": "SCWH-104",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강동완",
+      "department": "소아청소년과",
+      "external_id": "SCWH-245",
+      "n_schedules": 0,
+      "n_date_schedules": 5,
+      "notes": ""
+    },
+    {
+      "name": "김연수",
+      "department": "신경과",
+      "external_id": "SCWH-62",
+      "n_schedules": 4,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "이경수",
+      "department": "신경과",
+      "external_id": "SCWH-66",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "김지윤",
+      "department": "신경과",
+      "external_id": "SCWH-61",
+      "n_schedules": 4,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "김도형",
+      "department": "신경과",
+      "external_id": "SCWH-63",
+      "n_schedules": 4,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "이소영",
+      "department": "신경과",
+      "external_id": "SCWH-253",
+      "n_schedules": 4,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김창남",
+      "department": "정신건강의학과",
+      "external_id": "SCWH-59",
+      "n_schedules": 5,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "최성원",
+      "department": "정신건강의학과",
+      "external_id": "SCWH-60",
+      "n_schedules": 6,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "오수환",
+      "department": "정신건강의학과",
+      "external_id": "SCWH-58",
+      "n_schedules": 5,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "김창일",
+      "department": "피부과",
+      "external_id": "SCWH-283",
+      "n_schedules": 5,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "최재영",
+      "department": "피부과",
+      "external_id": "SCWH-310",
+      "n_schedules": 8,
+      "n_date_schedules": 32,
+      "notes": ""
+    },
+    {
+      "name": "류동수",
+      "department": "비뇨의학과",
+      "external_id": "SCWH-120",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "이영숙",
+      "department": "비뇨의학과",
+      "external_id": "SCWH-121",
+      "n_schedules": 5,
+      "n_date_schedules": 25,
+      "notes": ""
+    },
+    {
+      "name": "정승찬",
+      "department": "비뇨의학과",
+      "external_id": "SCWH-119",
+      "n_schedules": 4,
+      "n_date_schedules": 18,
+      "notes": ""
+    },
+    {
+      "name": "강경민",
+      "department": "안과",
+      "external_id": "SCWH-92",
+      "n_schedules": 3,
+      "n_date_schedules": 12,
+      "notes": ""
+    },
+    {
+      "name": "김은아",
+      "department": "안과",
+      "external_id": "SCWH-287",
+      "n_schedules": 3,
+      "n_date_schedules": 15,
+      "notes": ""
+    },
+    {
+      "name": "박기철",
+      "department": "이비인후과",
+      "external_id": "SCWH-83",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "박하나로",
+      "department": "이비인후과",
+      "external_id": "SCWH-82",
+      "n_schedules": 3,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "서지원",
+      "department": "이비인후과",
+      "external_id": "SCWH-81",
+      "n_schedules": 4,
+      "n_date_schedules": 16,
+      "notes": ""
+    },
+    {
+      "name": "최우리",
+      "department": "이비인후과",
+      "external_id": "SCWH-84",
+      "n_schedules": 3,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "김순준",
+      "department": "이비인후과",
+      "external_id": "SCWH-306",
+      "n_schedules": 4,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "박근우",
+      "department": "이비인후과",
+      "external_id": "SCWH-322",
+      "n_schedules": 4,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "고현민",
+      "department": "가정의학과",
+      "external_id": "SCWH-3",
+      "n_schedules": 6,
+      "n_date_schedules": 23,
+      "notes": ""
+    },
+    {
+      "name": "장지용",
+      "department": "가정의학과",
+      "external_id": "SCWH-4",
+      "n_schedules": 6,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "박혜랑",
+      "department": "가정의학과",
+      "external_id": "SCWH-237",
+      "n_schedules": 3,
+      "n_date_schedules": 19,
+      "notes": ""
+    },
+    {
+      "name": "이준호",
+      "department": "직업환경의학과",
+      "external_id": "SCWH-182",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영욱",
+      "department": "직업환경의학과",
+      "external_id": "SCWH-177",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "채창호",
+      "department": "직업환경의학과",
+      "external_id": "SCWH-178",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박형욱",
+      "department": "직업환경의학과",
+      "external_id": "SCWH-181",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "손준석",
+      "department": "직업환경의학과",
+      "external_id": "SCWH-179",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김찬우",
+      "department": "직업환경의학과",
+      "external_id": "SCWH-180",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신영후",
+      "department": "직업환경의학과",
+      "external_id": "SCWH-183",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정의엽",
+      "department": "직업환경의학과",
+      "external_id": "SCWH-205",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박영숙",
+      "department": "재활의학과",
+      "external_id": "SCWH-110",
+      "n_schedules": 4,
+      "n_date_schedules": 30,
+      "notes": ""
+    },
+    {
+      "name": "장현정",
+      "department": "재활의학과",
+      "external_id": "SCWH-111",
+      "n_schedules": 4,
+      "n_date_schedules": 22,
+      "notes": ""
+    },
+    {
+      "name": "박진기",
+      "department": "재활의학과",
+      "external_id": "SCWH-112",
+      "n_schedules": 4,
+      "n_date_schedules": 33,
+      "notes": ""
+    },
+    {
+      "name": "노홍섭",
+      "department": "치과",
+      "external_id": "SCWH-139",
+      "n_schedules": 0,
+      "n_date_schedules": 43,
+      "notes": ""
+    },
+    {
+      "name": "정세화",
+      "department": "치과",
+      "external_id": "SCWH-140",
+      "n_schedules": 0,
+      "n_date_schedules": 29,
+      "notes": ""
+    },
+    {
+      "name": "김용환",
+      "department": "응급의학과",
+      "external_id": "SCWH-145",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황성연",
+      "department": "응급의학과",
+      "external_id": "SCWH-142",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "황태식",
+      "department": "응급의학과",
+      "external_id": "SCWH-315",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조광원",
+      "department": "응급의학과",
+      "external_id": "SCWH-143",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이준호",
+      "department": "응급의학과",
+      "external_id": "SCWH-144",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이동우",
+      "department": "응급의학과",
+      "external_id": "SCWH-295",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김혜란",
+      "department": "응급의학과",
+      "external_id": "SCWH-318",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박종윤",
+      "department": "응급의학과",
+      "external_id": "SCWH-244",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "여현도",
+      "department": "응급의학과",
+      "external_id": "SCWH-292",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이현욱",
+      "department": "병리과",
+      "external_id": "SCWH-131",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이은희",
+      "department": "병리과",
+      "external_id": "SCWH-130",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김대철",
+      "department": "병리과",
+      "external_id": "SCWH-297",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박문일",
+      "department": "병리과",
+      "external_id": "SCWH-132",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이재석",
+      "department": "병리과",
+      "external_id": "SCWH-133",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "안지현",
+      "department": "병리과",
+      "external_id": "SCWH-319",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장세민",
+      "department": "병리과",
+      "external_id": "SCWH-134",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김기수",
+      "department": "병리과",
+      "external_id": "SCWH-249",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박경진",
+      "department": "진단검사의학과",
+      "external_id": "SCWH-138",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김영재",
+      "department": "진단검사의학과",
+      "external_id": "SCWH-135",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김형태",
+      "department": "진단검사의학과",
+      "external_id": "SCWH-137",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "신승현",
+      "department": "핵의학과",
+      "external_id": "SCWH-171",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "선우미옥",
+      "department": "영상의학과",
+      "external_id": "SCWH-188",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "하현권",
+      "department": "영상의학과",
+      "external_id": "SCWH-200",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이원재",
+      "department": "영상의학과",
+      "external_id": "SCWH-286",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "임현철",
+      "department": "영상의학과",
+      "external_id": "SCWH-308",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장홍",
+      "department": "영상의학과",
+      "external_id": "SCWH-187",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김성관",
+      "department": "영상의학과",
+      "external_id": "SCWH-290",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류경화",
+      "department": "영상의학과",
+      "external_id": "SCWH-211",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김동수",
+      "department": "영상의학과",
+      "external_id": "SCWH-193",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김양원",
+      "department": "영상의학과",
+      "external_id": "SCWH-273",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "홍파",
+      "department": "영상의학과",
+      "external_id": "SCWH-274",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이문옥",
+      "department": "마취통증의학과",
+      "external_id": "SCWH-127",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이성호",
+      "department": "마취통증의학과",
+      "external_id": "SCWH-123",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이승목",
+      "department": "마취통증의학과",
+      "external_id": "SCWH-314",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "심행선",
+      "department": "마취통증의학과",
+      "external_id": "SCWH-125",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박태식",
+      "department": "마취통증의학과",
+      "external_id": "SCWH-124",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김채선",
+      "department": "마취통증의학과",
+      "external_id": "SCWH-313",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "조성애",
+      "department": "마취통증의학과",
+      "external_id": "SCWH-327",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김정연",
+      "department": "마취통증의학과",
+      "external_id": "SCWH-247",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김태규",
+      "department": "방사선종양학과",
+      "external_id": "SCWH-113",
+      "n_schedules": 4,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "최지훈",
+      "department": "방사선종양학과",
+      "external_id": "SCWH-294",
+      "n_schedules": 4,
+      "n_date_schedules": 17,
+      "notes": ""
+    },
+    {
+      "name": "박성진",
+      "department": "중환자의학과",
+      "external_id": "SCWH-8",
+      "n_schedules": 1,
+      "n_date_schedules": 3,
+      "notes": ""
+    },
+    {
+      "name": "최영철",
+      "department": "중환자의학과",
+      "external_id": "SCWH-9",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "장혜진",
+      "department": "입원의학과",
+      "external_id": "SCWH-277",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "지준호",
+      "department": "입원의학과",
+      "external_id": "SCWH-289",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이안나",
+      "department": "입원의학과",
+      "external_id": "SCWH-309",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    }
+  ]
+}

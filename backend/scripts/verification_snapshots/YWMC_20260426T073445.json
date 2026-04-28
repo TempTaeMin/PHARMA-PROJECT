@@ -1,0 +1,1511 @@
+{
+  "hospital_code": "YWMC",
+  "hospital_name": "원주세브란스기독병원",
+  "status": "success",
+  "doctors": [
+    {
+      "name": "김종구",
+      "department": "가정의학과",
+      "external_id": "YWMC-FM-Xfd3PCVvUw2aUJYOdsVtHg..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "박연철",
+      "department": "가정의학과",
+      "external_id": "YWMC-FM-go7M8PIqL0hJmsV_DF3v_A..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "정태하",
+      "department": "가정의학과",
+      "external_id": "YWMC-FM-3W8Jn59568R7D1l4QpyIMg..",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "서명재",
+      "department": "가정의학과",
+      "external_id": "YWMC-FM-PDDlllEGFOSV3jZoVrWNjg..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "이태식",
+      "department": "가정의학과",
+      "external_id": "YWMC-FM-jz9pk9K10O-1n_cV7srL5Q..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김동현",
+      "department": "간담췌외과",
+      "external_id": "YWMC-HBP-kBnZi4ttaSxP3aRJNjCsvw..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "차성환",
+      "department": "간담췌외과",
+      "external_id": "YWMC-HBP-oAEJKfaEBnddtNNJEDUV-w..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김효열",
+      "department": "감염내과",
+      "external_id": "YWMC-INF-thj7CvGfF8xuTBPgbgSYqA..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김영근",
+      "department": "감염내과",
+      "external_id": "YWMC-INF-_3fjq8rameke1m_GqgMkkQ..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "손유진",
+      "department": "감염내과",
+      "external_id": "YWMC-INF-_ULovVYGiqASxwgyijqrbQ..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "윤종호",
+      "department": "갑상선내분비외과",
+      "external_id": "YWMC-TE-2HnfyTo2OOOWlYHtd40rPA..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "박재현",
+      "department": "갑상선내분비외과",
+      "external_id": "YWMC-TE-19FmcxTW-Hce_dxr0B0biw..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김광민",
+      "department": "갑상선내분비외과",
+      "external_id": "YWMC-NA-갑상선내분비외과-김광민",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "강예진",
+      "department": "구강악안면외과",
+      "external_id": "YWMC-DENA-tJggMAJvL3ZZxpaUyaSLgg..",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": ""
+    },
+    {
+      "name": "조현미",
+      "department": "구강악안면외과",
+      "external_id": "YWMC-DENA-e_236NEKT9OWLqLMQOZgHw..",
+      "n_schedules": 6,
+      "n_date_schedules": 80,
+      "notes": ""
+    },
+    {
+      "name": "정춘희",
+      "department": "내분비대사내과",
+      "external_id": "YWMC-END-xVu21pX11QUu01XgFSH4Pw..",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "신장열",
+      "department": "내분비대사내과",
+      "external_id": "YWMC-END-eyDN5Lo_15NA9Vrr8TAWoA..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "임정수",
+      "department": "내분비대사내과",
+      "external_id": "YWMC-END-3UN7zbXMBI3TvvlOMSQycg..",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "김익용",
+      "department": "대장항문외과",
+      "external_id": "YWMC-CRS-ZqUf-4YViPEy1GxPYhxJQQ..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "권혜연",
+      "department": "대장항문외과",
+      "external_id": "YWMC-CRS-bWOEfEQMbvE_M8Z_EsvKOg..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "안상현",
+      "department": "대장항문외과",
+      "external_id": "YWMC-CRS-kOtqS8llrjFD6vkSZAA21A..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김무현",
+      "department": "대장항문외과",
+      "external_id": "YWMC-CRS-I-gni-GCtAdmyEwkzHMceA..",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "남승완",
+      "department": "류마티스내과",
+      "external_id": "YWMC-RMT-8kOL0kDUiztHPKVrjZ8g1w..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "이향선",
+      "department": "류마티스내과",
+      "external_id": "YWMC-RMT-l5NgH5h1Zryi1J9pU_2sRQ..",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "박정은",
+      "department": "류마티스내과",
+      "external_id": "YWMC-NA-류마티스내과-박정은",
+      "n_schedules": 6,
+      "n_date_schedules": 81,
+      "notes": ""
+    },
+    {
+      "name": "유세환",
+      "department": "방사선종양학과",
+      "external_id": "YWMC-RT-wtLBSsb1UnOuHKxk2BKlOQ..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김미선",
+      "department": "방사선종양학과",
+      "external_id": "YWMC-RT-c4CkydRjowWxvqolfEtihQ..",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "차혜정",
+      "department": "방사선종양학과",
+      "external_id": "YWMC-RT-gdRni1rhhUH6Upj6t3VSlA..",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "김성현",
+      "department": "방사선종양학과",
+      "external_id": "YWMC-RT-_m8UG-triJYvOSoE_M3YXg..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "최현준",
+      "department": "방사선종양학과",
+      "external_id": "YWMC-RT-wGmghCccYDHlO8zHoYumGg..",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정상운",
+      "department": "방사선종양학과",
+      "external_id": "YWMC-NA-방사선종양학과-정상운",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최성진",
+      "department": "부인과",
+      "external_id": "YWMC-GYN-1ZlVSKBWi0NbZUEEwVf9nw..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "한경희",
+      "department": "부인과",
+      "external_id": "YWMC-GYN-VPhOdXAXpoR5pIzWIp2AMw..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "박은영",
+      "department": "부인과",
+      "external_id": "YWMC-GYN-QXKHeczqxEEQmNDIs4Iakg..",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "이산희",
+      "department": "부인과",
+      "external_id": "YWMC-GYN-vbLQiMzodanojKlno3FkxQ..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "강지은",
+      "department": "부인과",
+      "external_id": "YWMC-GYN-KDUJYMNTILMj4OHxTCjgWA..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "박선화",
+      "department": "부인과",
+      "external_id": "YWMC-GYN-no94lCgRerS4n5Tw4vldYg..",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "안정환",
+      "department": "부인과",
+      "external_id": "YWMC-GYN-zYBCoyrwpcFAHo8xShTs9A..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "정현철",
+      "department": "비뇨의학과",
+      "external_id": "YWMC-URO-_nthSh4WRyepLMAf4j9V1Q..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "정재흥",
+      "department": "비뇨의학과",
+      "external_id": "YWMC-URO-Gac_X3n1JF4tuv2nreSbkw..",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "정홍",
+      "department": "비뇨의학과",
+      "external_id": "YWMC-URO-qob9JnjMJwYoW_aqllkLEg..",
+      "n_schedules": 3,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "강태욱",
+      "department": "비뇨의학과",
+      "external_id": "YWMC-URO-6x_h2qU5J4B4cgM9YU5OzA..",
+      "n_schedules": 3,
+      "n_date_schedules": 39,
+      "notes": ""
+    },
+    {
+      "name": "김광진",
+      "department": "비뇨의학과",
+      "external_id": "YWMC-URO-Q-vCKXkWj7bSMgFgk1soVg..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김석원",
+      "department": "성형외과",
+      "external_id": "YWMC-PS-y_6IHXeabvMti6qw3PNTnA..",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "김지예",
+      "department": "성형외과",
+      "external_id": "YWMC-PS-XYCdNR5PhpgrlDQPaJMzHg..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "이훈범",
+      "department": "성형외과",
+      "external_id": "YWMC-PS-lp6GcV4PTOQzMRup6qx4Ng..",
+      "n_schedules": 2,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "남궁미경",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-V5_XwcLvaEkPBsGsVvSyOw..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "차병호",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-Gwl7rs2r0VsTB775ZA-sCA..",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "이정민",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-n5G7OJ-Ei_GSS_DBc9QOlg..",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "김용혁",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-klBfvUkLJrLt3D2vSUJiSA..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "강윤구",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-3tj3cXbQOojc_Hx1JMBBFA..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "유영명",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-gAT-yB61dwbI74w911_ODA..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "신태우",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-Ty8Tx0vTxithkChsSDowQg..",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "이은정",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-7fbCQKuJmWMwJo37TrDOeg..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "오기택",
+      "department": "소아청소년과",
+      "external_id": "YWMC-PED-_rn1ITlv6kQpP9c6PrMilA..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "민세라",
+      "department": "소아청소년과",
+      "external_id": "YWMC-NA-소아청소년과-민세라",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박기홍",
+      "department": "소아청소년과",
+      "external_id": "YWMC-NA-소아청소년과-박기홍",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이진석",
+      "department": "소아청소년과",
+      "external_id": "YWMC-NA-소아청소년과-이진석",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최재욱",
+      "department": "소아청소년과",
+      "external_id": "YWMC-NA-소아청소년과-최재욱",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "류지인",
+      "department": "소아치과",
+      "external_id": "YWMC-DENE-nHMH4VT8YyNa3cP6KX_ZXQ..",
+      "n_schedules": 8,
+      "n_date_schedules": 106,
+      "notes": ""
+    },
+    {
+      "name": "백순구",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-5ybaNZe7FiDBZfxWJ0Npiw..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "이동기",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-RAl_hyARaAAL7clrGh8TuQ..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김현수",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-mxClPdnPwnNlpFXXP-eJZg..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김문영",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-EDoKc36ZemLpcf6PmLBV5A..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "박홍준",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-mWBL61SxHmjn4J_RUd_opQ..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김수영",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-HsRRGBgf3WE-5xarNlyY-w..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김현일",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-4kJWHp-DAG0cfsozDaUUDA..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "권상옥",
+      "department": "소화기내과",
+      "external_id": "YWMC-NA-소화기내과-권상옥",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한슬기",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-X3Vs0N_ZD0gyUysPubUc4A..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "박현우",
+      "department": "소화기내과",
+      "external_id": "YWMC-NA-소화기내과-박현우",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정현정",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-zIYZZWBZaCyzqiZdrk1TGw..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김창현",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-Aai6wvj0jpQJqIk-VcAkcA..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김영익",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-4zzDqHw-XQNDInesp_blfQ..",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "문희찬",
+      "department": "소화기내과",
+      "external_id": "YWMC-GI-0sAYuGkJcEuBFfeuOkkhNg..",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서명재",
+      "department": "소화기내과",
+      "external_id": "YWMC-NA-소화기내과-서명재",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "조승국",
+      "department": "소화기내과",
+      "external_id": "YWMC-NA-소화기내과-조승국",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "이지용",
+      "department": "신경과",
+      "external_id": "YWMC-NM-T1JYAY5wh3zjAiHKsNnEUw..",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김서현",
+      "department": "신경과",
+      "external_id": "YWMC-NM-bDFEXCOKOxWL2Cdqij1cIA..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "박찬익",
+      "department": "신경과",
+      "external_id": "YWMC-NM-AHftlgt10Agm61hMALUVFg..",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "홍진용",
+      "department": "신경과",
+      "external_id": "YWMC-NM-3wqUqnYTuNGDNBa7OAUAXw..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "백민석",
+      "department": "신경과",
+      "external_id": "YWMC-NM-aB7ZaIBkVFSehYyXxFMmag..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김지인",
+      "department": "신경과",
+      "external_id": "YWMC-NM-TxfuhcLGE0t8I9MmIEW1ng..",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "황희원",
+      "department": "신경과",
+      "external_id": "YWMC-NM-GFOZpuphKafsslWWbRziyQ..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김한결",
+      "department": "신경과",
+      "external_id": "YWMC-NM-_kUBb6pn5oug4ul6i80Y5w..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "황금",
+      "department": "신경외과",
+      "external_id": "YWMC-NS-hXnwih1GSPvzpax85KeqUA..",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "조성민",
+      "department": "신경외과",
+      "external_id": "YWMC-NS-RQR7dn5oDG_QlT5NM6--FA..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "한용표",
+      "department": "신경외과",
+      "external_id": "YWMC-NS-IvvX974xGAHQbJpZR9S41w..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김문규",
+      "department": "신경외과",
+      "external_id": "YWMC-NS-ADC_Pe70W5i_FPP5SsEC5A..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김종연",
+      "department": "신경외과",
+      "external_id": "YWMC-NA-신경외과-김종연",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김종연",
+      "department": "신경외과(뇌혈관)",
+      "external_id": "YWMC-CVNS-ZpjO2wvh3IkA6tG8LML9eg..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "박종택",
+      "department": "신경통증클리닉",
+      "external_id": "YWMC-NA-신경통증클리닉-박종택",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "전영관",
+      "department": "신경통증클리닉",
+      "external_id": "YWMC-NA-신경통증클리닉-전영관",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "박지형",
+      "department": "신경통증클리닉",
+      "external_id": "YWMC-NA-신경통증클리닉-박지형",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "송승우",
+      "department": "신경통증클리닉",
+      "external_id": "YWMC-NA-신경통증클리닉-송승우",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김수진",
+      "department": "신경통증클리닉",
+      "external_id": "YWMC-NA-신경통증클리닉-김수진",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한이경",
+      "department": "신경통증클리닉",
+      "external_id": "YWMC-NA-신경통증클리닉-한이경",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김보성",
+      "department": "신경통증클리닉",
+      "external_id": "YWMC-NA-신경통증클리닉-김보성",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "한병근",
+      "department": "신장내과",
+      "external_id": "YWMC-NEP-Wxp0MmE7sy2SI6egYDQk3A..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "양재원",
+      "department": "신장내과",
+      "external_id": "YWMC-NEP-bigZkHjBBWnlW90wMjE_cA..",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김재석",
+      "department": "신장내과",
+      "external_id": "YWMC-NEP-Q0HDsG22xDkAgK7uMUUZCg..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이준영",
+      "department": "신장내과",
+      "external_id": "YWMC-NEP-sLPnuidaa14bBM7Mm-Ms1g..",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "최승옥",
+      "department": "신장내과",
+      "external_id": "YWMC-NA-신장내과-최승옥",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "유병수",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-Ym7F3lhmauYd6gyAVysz1A..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "김장영",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-DRQg-a6JnJtqThMLoPKBWw..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "안성균",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-GlZudUE0ihsIXbOktjETRw..",
+      "n_schedules": 4,
+      "n_date_schedules": 55,
+      "notes": ""
+    },
+    {
+      "name": "안민수",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-vV6UKcTHhyoMi4g1bOa9TA..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "윤영진",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-wSRwOtO5ZSVlJ4K5hcB-GA..",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "이준원",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-1z0nDLkX8XZRJLvovkZ-bg..",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "손정우",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-nGlee_j44IR7hcfJuwIV-g..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "이중희",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-Cokap_L-6AEpJ2bAT9s0fg..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "전호성",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-3xN1oIxwJOPG_cjWR_8Nug..",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "김세은",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-qjsuottDrXKS5ebRAcSEig..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김수용",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-zoUFv2RJjK1FQl_271IQGQ..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "이상준",
+      "department": "심장혈관센터(심장내과)",
+      "external_id": "YWMC-CAR9-jodphDDunWOlUxYtojS0IA..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "홍순창",
+      "department": "심장혈관외과",
+      "external_id": "YWMC-CVS-QVUiBbJPbrb4CmGRyC6jxA..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김선웅",
+      "department": "안과",
+      "external_id": "YWMC-EYE-Zvb9_Z5COe5ydf3zIYFhog..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이종혁",
+      "department": "안과",
+      "external_id": "YWMC-NA-안과-이종혁",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "나상훈",
+      "department": "안과",
+      "external_id": "YWMC-NA-안과-나상훈",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "배금석",
+      "department": "외상중환자외과",
+      "external_id": "YWMC-TCS-mCmDee0-V53aBOVptjzdIw..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "최영운",
+      "department": "외상중환자외과",
+      "external_id": "YWMC-TCS-o38x0swb-ti7eNcMfmlV3w..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김형원",
+      "department": "외상중환자외과",
+      "external_id": "YWMC-TCS-Q1p_VgQHtvCfXUNtpDLvAA..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "류훈",
+      "department": "위장관외과",
+      "external_id": "YWMC-EGIS-0gKg9mMaQxFxOPeIL5irgg..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "공성찬",
+      "department": "위장관외과",
+      "external_id": "YWMC-EGIS-dZUqTaT-Zl9vTYBxT9R1Hg..",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "최향숙",
+      "department": "유방외과",
+      "external_id": "YWMC-BS-YkSlBScJbA0I-rjszQNhRA..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "한애리",
+      "department": "유방외과",
+      "external_id": "YWMC-BS-p6pWOYOVK_spCqBA9yxNyw..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김광민",
+      "department": "유방외과",
+      "external_id": "YWMC-NA-유방외과-김광민",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김성엽",
+      "department": "응급중환자외과",
+      "external_id": "YWMC-ACS-_9zC7rNIhrRTIINJXeJLZQ..",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "정필영",
+      "department": "응급중환자외과",
+      "external_id": "YWMC-ACS-iTpNjbAjZf1X94lNF1Ge8Q..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "신인식",
+      "department": "응급중환자외과",
+      "external_id": "YWMC-ACS-cpG7QpRbRRFwI_M6zC34yA..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "장성우",
+      "department": "응급중환자외과",
+      "external_id": "YWMC-ACS-S11GOeIbEmbUEptwcD96EA..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김민주",
+      "department": "응급중환자외과",
+      "external_id": "YWMC-ACS-ODAtUjs3lfPigsgWtY6eHQ..",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "박상유",
+      "department": "이비인후과",
+      "external_id": "YWMC-ENT-7iB3Y-0U9W2Rh4Tmh-49Bg..",
+      "n_schedules": 4,
+      "n_date_schedules": 52,
+      "notes": ""
+    },
+    {
+      "name": "서영준",
+      "department": "이비인후과",
+      "external_id": "YWMC-ENT-2fMyfJlS81KodsuwL7zWrg..",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "이소윤",
+      "department": "이비인후과",
+      "external_id": "YWMC-ENT-JUj6gTpMUC61ZAo_8p4QJw..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "이은정",
+      "department": "이비인후과",
+      "external_id": "YWMC-ENT-R5TbfEPxNXgd4KrotYJTMw..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "공태훈",
+      "department": "이비인후과",
+      "external_id": "YWMC-ENT-P3WwID7upLP99Bm3lztKhg..",
+      "n_schedules": 3,
+      "n_date_schedules": 42,
+      "notes": ""
+    },
+    {
+      "name": "이재우",
+      "department": "이비인후과",
+      "external_id": "YWMC-ENT-HrvnTrr8DdyuTlx88IsEbw..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "전현종",
+      "department": "이비인후과",
+      "external_id": "YWMC-ENT-g0eZaEPeffMuIyKMhXXDWQ..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "김성훈",
+      "department": "재활의학과",
+      "external_id": "YWMC-REH-uuTuttMeqll-8VbxxglHaA..",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "이영희",
+      "department": "재활의학과",
+      "external_id": "YWMC-NA-재활의학과-이영희",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "용상열",
+      "department": "재활의학과",
+      "external_id": "YWMC-REH-IZSRn4sBDaGGvrGHS9XlMw..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "최은희",
+      "department": "재활의학과",
+      "external_id": "YWMC-REH-XbPdsp7nyb0afWurFqg6wg..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "민성호",
+      "department": "정신건강의학과",
+      "external_id": "YWMC-PSY-V1n-Piz1QovYWzpYrmd97g..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "김민혁",
+      "department": "정신건강의학과",
+      "external_id": "YWMC-PSY-Xx7gWflLUsIh0Z1AWxBLqg..",
+      "n_schedules": 5,
+      "n_date_schedules": 68,
+      "notes": ""
+    },
+    {
+      "name": "김태희",
+      "department": "정신건강의학과",
+      "external_id": "YWMC-PSY-3Fr5bHxqfSVohuHa9dX9ag..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "이진희",
+      "department": "정신건강의학과",
+      "external_id": "YWMC-PSY-vzsSoyXU8iJ4u79b1xJKMQ..",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "서준호",
+      "department": "정신건강의학과",
+      "external_id": "YWMC-PSY-7jFDAWks8lsn7IdnSof5mQ..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "남연주",
+      "department": "정신건강의학과",
+      "external_id": "YWMC-NA-정신건강의학과-남연주",
+      "n_schedules": 4,
+      "n_date_schedules": 53,
+      "notes": ""
+    },
+    {
+      "name": "오진록",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-_Hb2N6h-0VDUr1gKjP1KwQ..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "김두섭",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-Tw6B_VfHfih2qaeW-zLsOg..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "손훈상",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-JB9g9kuzj8yN-BcUYoQY-A..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "정회정",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-hzy-aExs68mz21tcKPgq-A..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "이정우",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-0fIosQC8Ro3kDj71DtFqZQ..",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "장영환",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-2B0VhUQSdFuJGGbO5tRdsw..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "권기연",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-W7VmuAMJkA3Z5WvGO7nS6g..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "박지수",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-qTnHaHYy1z6B-P66cylzlg..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "이재민",
+      "department": "정형외과",
+      "external_id": "YWMC-OS-1SODo_igJG1-2JyXRouSfA..",
+      "n_schedules": 2,
+      "n_date_schedules": 28,
+      "notes": ""
+    },
+    {
+      "name": "이종인",
+      "department": "종양내과",
+      "external_id": "YWMC-ONC-giQrZv_3Vp4YoOmYAPkbvA..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "심광용",
+      "department": "종양내과",
+      "external_id": "YWMC-ONC--LcBkh4ZrbF1f8QNvwCjig..",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "공지현",
+      "department": "종양내과",
+      "external_id": "YWMC-ONC-NabVxxJDgSkMmCBxKjOMfw..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "임승택",
+      "department": "종양내과",
+      "external_id": "YWMC-ONC-8TR3BrsNCVd5XOFRDgoAfQ..",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "김윤덕",
+      "department": "종양내과",
+      "external_id": "YWMC-ONC-MW9UG8Bxv-MfQTMQ0Gd9YQ..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "장재연",
+      "department": "종양내과",
+      "external_id": "YWMC-ONC-6NiXvGsLprBh9YVW9S-5WA..",
+      "n_schedules": 5,
+      "n_date_schedules": 66,
+      "notes": ""
+    },
+    {
+      "name": "고상백",
+      "department": "직업환경의학과",
+      "external_id": "YWMC-OE-HrTgk2C9Vx-TR2oxlhVS7w..",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": ""
+    },
+    {
+      "name": "오성수",
+      "department": "직업환경의학과",
+      "external_id": "YWMC-OE-QJy3B9IUsR2tOWSzUDzqSg..",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": ""
+    },
+    {
+      "name": "강희태",
+      "department": "직업환경의학과",
+      "external_id": "YWMC-OE-V0dLYXbrNaXQtQ772PkqJw..",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "정경숙",
+      "department": "직업환경의학과",
+      "external_id": "YWMC-OE-UnHupzvOnOCJoOI22KBMqg..",
+      "n_schedules": 10,
+      "n_date_schedules": 134,
+      "notes": ""
+    },
+    {
+      "name": "김성경",
+      "department": "직업환경의학과",
+      "external_id": "YWMC-OE-rOm8pxI5GsKDGcJPPgNM7Q..",
+      "n_schedules": 1,
+      "n_date_schedules": 14,
+      "notes": ""
+    },
+    {
+      "name": "안연순",
+      "department": "직업환경의학과",
+      "external_id": "YWMC-NA-직업환경의학과-안연순",
+      "n_schedules": 0,
+      "n_date_schedules": 0,
+      "notes": ""
+    },
+    {
+      "name": "강혜경",
+      "department": "치과교정과",
+      "external_id": "YWMC-DEND-q3lobY9etigUc2a5P6Kwzg..",
+      "n_schedules": 7,
+      "n_date_schedules": 93,
+      "notes": ""
+    },
+    {
+      "name": "김범수",
+      "department": "치과교정과",
+      "external_id": "YWMC-DEND-3DoEA1KXT8FRxrJQNDUJuQ..",
+      "n_schedules": 7,
+      "n_date_schedules": 94,
+      "notes": ""
+    },
+    {
+      "name": "권영민",
+      "department": "치과보존과",
+      "external_id": "YWMC-DENC-PB2hUF5hagvMvgd5StCEjQ..",
+      "n_schedules": 8,
+      "n_date_schedules": 108,
+      "notes": ""
+    },
+    {
+      "name": "유지현",
+      "department": "치과보철과",
+      "external_id": "YWMC-DENB-LJb68x9HCMQHCxLIaEBCvg..",
+      "n_schedules": 8,
+      "n_date_schedules": 108,
+      "notes": ""
+    },
+    {
+      "name": "최응호",
+      "department": "피부과",
+      "external_id": "YWMC-DER-0jVhaJ3tmwwvYTZQ-QwKfA..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "홍승필",
+      "department": "피부과",
+      "external_id": "YWMC-DER-VDVqdcoiGKk1eWfaaUA5Xg..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "홍한나",
+      "department": "피부과",
+      "external_id": "YWMC-DER-X7-fRGNLNcs6CaO0vribOw..",
+      "n_schedules": 5,
+      "n_date_schedules": 67,
+      "notes": ""
+    },
+    {
+      "name": "유장",
+      "department": "핵의학과",
+      "external_id": "YWMC-NUM-EJhEyd7LmIG61VZo0oascA..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    },
+    {
+      "name": "리원연",
+      "department": "호흡기센터(호흡기알레르기내과)",
+      "external_id": "YWMC-PUL4-sf2-UhvcsiKD8BsJ5xaVVQ..",
+      "n_schedules": 3,
+      "n_date_schedules": 41,
+      "notes": ""
+    },
+    {
+      "name": "김상하",
+      "department": "호흡기센터(호흡기알레르기내과)",
+      "external_id": "YWMC-PUL4-ZO0xU6HbM7uo1sbGT1oAaQ..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "이석정",
+      "department": "호흡기센터(호흡기알레르기내과)",
+      "external_id": "YWMC-PUL4-u_32IMt3MgJY6x1vsH28VA..",
+      "n_schedules": 2,
+      "n_date_schedules": 26,
+      "notes": ""
+    },
+    {
+      "name": "이지호",
+      "department": "호흡기센터(호흡기알레르기내과)",
+      "external_id": "YWMC-PUL4-h1NucsIU2eIJazImZhCqFA..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "박순민",
+      "department": "호흡기센터(호흡기알레르기내과)",
+      "external_id": "YWMC-PUL4-Cc8idh9zckiH-ESf_Jm13w..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "유이슬",
+      "department": "호흡기센터(호흡기알레르기내과)",
+      "external_id": "YWMC-PUL4-ehtbF9FjTU5KYHTeDRz-mg..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "장민석",
+      "department": "호흡기센터(호흡기알레르기내과)",
+      "external_id": "YWMC-PUL4-1tPxPmZ6a1kcv2v_PTERzQ..",
+      "n_schedules": 4,
+      "n_date_schedules": 54,
+      "notes": ""
+    },
+    {
+      "name": "조인소",
+      "department": "호흡기센터(호흡기알레르기내과)",
+      "external_id": "YWMC-PUL4-lItFM5kGRjCj10UMXJF3AA..",
+      "n_schedules": 3,
+      "n_date_schedules": 40,
+      "notes": ""
+    },
+    {
+      "name": "박일환",
+      "department": "흉부외과",
+      "external_id": "YWMC-CS-k5BlS9yL9mo3FhRHPX2SCw..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "변천성",
+      "department": "흉부외과",
+      "external_id": "YWMC-CS-kNKgn5pRfMJ54MBzEXq6Vg..",
+      "n_schedules": 2,
+      "n_date_schedules": 27,
+      "notes": ""
+    },
+    {
+      "name": "김창완",
+      "department": "흉부외과",
+      "external_id": "YWMC-CS-MxiNazJ9zrVFIA-UeIQ8WQ..",
+      "n_schedules": 1,
+      "n_date_schedules": 13,
+      "notes": ""
+    }
+  ]
+}

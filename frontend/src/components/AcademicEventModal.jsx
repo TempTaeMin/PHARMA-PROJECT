@@ -8,10 +8,6 @@ const GRADE_COLORS = {
   C: { bg: '#dbeafe', c: '#1d4ed8' },
 };
 
-const SOURCE_LABELS = {
-  kma_edu: { label: 'KMA 연수', bg: '#fef3c7', c: '#92400e' },
-};
-
 const DEPT_COLORS = [
   { bg: '#dbeafe', c: '#1e40af' },
   { bg: '#dcfce7', c: '#166534' },
@@ -39,12 +35,7 @@ function fmtRange(start, end) {
   return `${fmtDate(start)} ~ ${fmtDate(end)}`;
 }
 
-function kmaDetailUrl(eduidx) {
-  if (!eduidx) return null;
-  return `https://edu.kma.org/edu/schedule_view?eduidx=${eduidx}`;
-}
-
-export default function AcademicEventModal({ open, event, onClose, onNavigateDoctor, onUpdated }) {
+export default function AcademicEventModal({ open, event, onClose, onNavigateDoctor, onUpdated, pickMode = false, onPicked }) {
   const [enriched, setEnriched] = useState(null);
   const [loading, setLoading] = useState(false);
   const [sessionsOpen, setSessionsOpen] = useState(false);
@@ -77,10 +68,7 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
   const allLectures = Array.isArray(ev.lectures) ? ev.lectures : [];
   const matchedLectures = allLectures.filter(L => !!L.matched_doctor_id);
   const hasAnyLectures = allLectures.length > 0;
-  const src = SOURCE_LABELS[ev.source];
-  const isKmaEdu = ev.source === 'kma_edu';
   const isManual = ev.source === 'manual';
-  const kmaUrl = isKmaEdu ? kmaDetailUrl(ev.kma_eduidx) : null;
   const manualUrl = isManual ? (ev.url || null) : null;
   const organizerHomepage = ev.organizer_homepage || null;
 
@@ -89,17 +77,26 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
     setPinBusy(true);
     try {
       if (isPinned) {
+        if (pickMode) {
+          onPicked?.();
+          return;
+        }
         if (!window.confirm('내 일정에서 제거할까요?')) {
           setPinBusy(false);
           return;
         }
         await academicApi.unpin(ev.id);
         setIsPinned(false);
+        if (onUpdated) onUpdated();
       } else {
         await academicApi.pin(ev.id);
         setIsPinned(true);
+        if (onUpdated) onUpdated();
+        if (pickMode) {
+          onPicked?.();
+          return;
+        }
       }
-      if (onUpdated) onUpdated();
     } catch (err) {
       console.error('[AcademicEventModal] pin toggle failed', err);
       alert('처리에 실패했습니다');
@@ -130,16 +127,6 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 14 }}>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 8 }}>
-              {src && (
-                <span style={{
-                  display: 'inline-block',
-                  padding: '3px 8px', borderRadius: 5,
-                  fontSize: 10, fontWeight: 800, letterSpacing: '.05em',
-                  background: src.bg, color: src.c, fontFamily: 'Manrope',
-                }}>
-                  {src.label}
-                </span>
-              )}
               {isPinned && (
                 <span style={{
                   display: 'inline-flex', alignItems: 'center', gap: 3,
@@ -164,7 +151,7 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
           }}><X size={20} /></button>
         </div>
 
-        {/* 내 교수 강사진 — 최상단 */}
+        {/* 내 의료진 강사진 — 최상단 */}
         {matchedLectures.length > 0 && (
           <div style={{
             marginBottom: 16, padding: '12px 14px', borderRadius: 12,
@@ -176,7 +163,7 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
               <GraduationCap size={14} style={{ color: 'var(--ac)' }} />
               <span style={{
                 fontSize: 12, fontWeight: 800, color: 'var(--ac)', letterSpacing: '.02em',
-              }}>내 교수 강사진 · {matchedLectures.length}명</span>
+              }}>내 의료진 강사진 · {matchedLectures.length}명</span>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {matchedLectures.map((L, i) => {
@@ -225,7 +212,7 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
                           padding: '2px 7px', borderRadius: 10, fontSize: 9, fontWeight: 800,
                           background: gcol.bg, color: gcol.c, letterSpacing: '.02em',
                           fontFamily: 'Manrope', marginLeft: 'auto',
-                        }}>내 교수 · {grade}</span>
+                        }}>내 의료진 · {grade}</span>
                       )}
                     </div>
                   </div>
@@ -376,8 +363,8 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
                   {blockNewPin
                     ? '이미 종료된 학회 (등록 불가)'
                     : isPinned
-                      ? '내 일정 등록됨 ✓ (클릭하여 해제)'
-                      : '내 일정에 등록'}
+                      ? (pickMode ? '이미 내 일정에 있음 — 일정으로 돌아가기' : '내 일정 등록됨 ✓ (클릭하여 해제)')
+                      : (pickMode ? '내 일정에 추가' : '내 일정에 등록')}
                 </button>
                 {blockNewPin && (
                   <div style={{
@@ -391,24 +378,6 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
               </>
             );
           })()}
-
-          {/* KMA 연수교육 페이지 — kma_edu 만 */}
-          {kmaUrl && (
-            <a
-              href={kmaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-                padding: '11px 16px', borderRadius: 10,
-                background: 'var(--ac-d)', color: 'var(--ac)',
-                border: '1px solid var(--ac)', textDecoration: 'none',
-                fontSize: 12, fontWeight: 800, fontFamily: 'inherit',
-              }}
-            >
-              <ExternalLink size={13} /> KMA 연수교육 상세 페이지
-            </a>
-          )}
 
           {/* manual 이벤트 — 사용자 입력 URL */}
           {manualUrl && (

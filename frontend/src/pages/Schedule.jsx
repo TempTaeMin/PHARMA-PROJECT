@@ -165,7 +165,7 @@ export default function Schedule({ onNavigate }) {
             color: 'var(--t2)', fontSize: 13, fontWeight: 600, fontFamily: 'inherit',
           }}
         >
-          <ChevronLeft size={16} /> 일정 확인
+          <ChevronLeft size={16} /> 내 일정
         </button>
 
         {/* ── Month Header ── */}
@@ -627,7 +627,7 @@ function EventCard({ event, onOpen }) {
               background: '#e0e7ff', color: '#3730a3',
               letterSpacing: '.02em', fontFamily: 'Manrope',
             }}>
-              <GraduationCap size={9} /> 내 교수 {matchedCount}명
+              <GraduationCap size={9} /> 내 의료진 {matchedCount}명
             </span>
           )}
         </div>

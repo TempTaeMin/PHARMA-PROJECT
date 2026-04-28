@@ -1,10 +1,13 @@
-import { Briefcase, GraduationCap, BookOpen, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Briefcase, GraduationCap, BookOpen, ChevronRight, ChevronLeft, Edit3, ListChecks } from 'lucide-react';
 
-/**
- * + 버튼을 누르면 아래에서 올라오는 바텀시트.
- * 3개 카테고리(업무 일정 / 내 의료진 방문 / 학회 일정) 중 선택.
- */
-export default function AddEventBottomSheet({ open, onClose, onSelectCategory }) {
+export default function AddEventBottomSheet({ open, onClose, onSelectCategory, onPickFromAcademicList }) {
+  const [step, setStep] = useState('primary');
+
+  useEffect(() => {
+    if (!open) setStep('primary');
+  }, [open]);
+
   if (!open) return null;
 
   const items = [
@@ -30,6 +33,88 @@ export default function AddEventBottomSheet({ open, onClose, onSelectCategory })
       disabled: false,
     },
   ];
+
+  const academicOptions = [
+    {
+      key: 'manual',
+      label: '직접 입력',
+      sub: '학회명·일정·장소를 직접 적어 등록',
+      icon: Edit3,
+    },
+    {
+      key: 'pick',
+      label: '학회 일정에서 선택',
+      sub: '수집된 학회 목록에서 검색해 등록',
+      icon: ListChecks,
+    },
+  ];
+
+  const handlePrimaryClick = (key) => {
+    if (key === 'etc') {
+      setStep('academic-secondary');
+    } else {
+      onSelectCategory?.(key);
+    }
+  };
+
+  const handleAcademicChoice = (key) => {
+    if (key === 'manual') {
+      onSelectCategory?.('etc');
+    } else if (key === 'pick') {
+      onPickFromAcademicList?.();
+    }
+  };
+
+  const renderListButton = (it, onClick) => {
+    const Icon = it.icon;
+    return (
+      <button
+        key={it.key}
+        disabled={it.disabled}
+        onClick={() => !it.disabled && onClick(it.key)}
+        style={{
+          display: 'flex', alignItems: 'center', gap: 14,
+          padding: '14px 16px', borderRadius: 14,
+          background: it.disabled ? 'var(--bg-2)' : 'var(--bg-1)',
+          border: `1px solid ${it.disabled ? 'var(--bd-s)' : 'var(--bd)'}`,
+          cursor: it.disabled ? 'not-allowed' : 'pointer',
+          textAlign: 'left', fontFamily: 'inherit',
+          opacity: it.disabled ? .5 : 1,
+          transition: 'background .15s',
+        }}
+        onMouseEnter={e => {
+          if (!it.disabled) e.currentTarget.style.background = 'var(--ac-d)';
+        }}
+        onMouseLeave={e => {
+          if (!it.disabled) e.currentTarget.style.background = 'var(--bg-1)';
+        }}
+      >
+        <div style={{
+          width: 42, height: 42, borderRadius: 10,
+          background: it.disabled ? 'var(--bg-h)' : 'var(--ac)',
+          color: '#fff',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          flexShrink: 0,
+        }}>
+          <Icon size={20} />
+        </div>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--t1)' }}>
+            {it.label}
+            {it.disabled && (
+              <span style={{
+                marginLeft: 6, padding: '1px 6px', borderRadius: 4,
+                fontSize: 9, fontWeight: 700, background: 'var(--bg-h)',
+                color: 'var(--t3)', verticalAlign: 2,
+              }}>준비 중</span>
+            )}
+          </div>
+          <div style={{ fontSize: 11, color: 'var(--t3)', marginTop: 2 }}>{it.sub}</div>
+        </div>
+        {!it.disabled && <ChevronRight size={18} style={{ color: 'var(--t3)' }} />}
+      </button>
+    );
+  };
 
   return (
     <div
@@ -57,82 +142,79 @@ export default function AddEventBottomSheet({ open, onClose, onSelectCategory })
           background: 'var(--bg-h)', margin: '0 auto 14px',
         }} />
 
-        <div style={{
-          fontFamily: 'Manrope', fontSize: 19, fontWeight: 800, color: 'var(--t1)',
-          letterSpacing: '-.01em',
-        }}>
-          일정 추가
-        </div>
-        <div style={{
-          fontSize: 12, color: 'var(--t3)', marginTop: 4, marginBottom: 16,
-        }}>
-          추가할 일정의 유형을 선택하세요
-        </div>
+        {step === 'primary' ? (
+          <>
+            <div style={{
+              fontFamily: 'Manrope', fontSize: 19, fontWeight: 800, color: 'var(--t1)',
+              letterSpacing: '-.01em',
+            }}>
+              일정 추가
+            </div>
+            <div style={{
+              fontSize: 12, color: 'var(--t3)', marginTop: 4, marginBottom: 16,
+            }}>
+              추가할 일정의 유형을 선택하세요
+            </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {items.map(it => {
-            const Icon = it.icon;
-            return (
-              <button
-                key={it.key}
-                disabled={it.disabled}
-                onClick={() => !it.disabled && onSelectCategory?.(it.key)}
-                style={{
-                  display: 'flex', alignItems: 'center', gap: 14,
-                  padding: '14px 16px', borderRadius: 14,
-                  background: it.disabled ? 'var(--bg-2)' : 'var(--bg-1)',
-                  border: `1px solid ${it.disabled ? 'var(--bd-s)' : 'var(--bd)'}`,
-                  cursor: it.disabled ? 'not-allowed' : 'pointer',
-                  textAlign: 'left', fontFamily: 'inherit',
-                  opacity: it.disabled ? .5 : 1,
-                  transition: 'background .15s',
-                }}
-                onMouseEnter={e => {
-                  if (!it.disabled) e.currentTarget.style.background = 'var(--ac-d)';
-                }}
-                onMouseLeave={e => {
-                  if (!it.disabled) e.currentTarget.style.background = 'var(--bg-1)';
-                }}
-              >
-                <div style={{
-                  width: 42, height: 42, borderRadius: 10,
-                  background: it.disabled ? 'var(--bg-h)' : 'var(--ac)',
-                  color: '#fff',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  flexShrink: 0,
-                }}>
-                  <Icon size={20} />
-                </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--t1)' }}>
-                    {it.label}
-                    {it.disabled && (
-                      <span style={{
-                        marginLeft: 6, padding: '1px 6px', borderRadius: 4,
-                        fontSize: 9, fontWeight: 700, background: 'var(--bg-h)',
-                        color: 'var(--t3)', verticalAlign: 2,
-                      }}>준비 중</span>
-                    )}
-                  </div>
-                  <div style={{ fontSize: 11, color: 'var(--t3)', marginTop: 2 }}>{it.sub}</div>
-                </div>
-                {!it.disabled && <ChevronRight size={18} style={{ color: 'var(--t3)' }} />}
-              </button>
-            );
-          })}
-        </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {items.map(it => renderListButton(it, handlePrimaryClick))}
+            </div>
 
-        <button
-          onClick={onClose}
-          style={{
-            marginTop: 14, width: '100%', padding: '13px 14px', borderRadius: 12,
-            background: 'var(--bg-2)', color: 'var(--t2)',
-            border: '1px solid var(--bd-s)',
-            fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
-          }}
-        >
-          취소
-        </button>
+            <button
+              onClick={onClose}
+              style={{
+                marginTop: 14, width: '100%', padding: '13px 14px', borderRadius: 12,
+                background: 'var(--bg-2)', color: 'var(--t2)',
+                border: '1px solid var(--bd-s)',
+                fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+              }}
+            >
+              취소
+            </button>
+          </>
+        ) : (
+          <>
+            <button
+              onClick={() => setStep('primary')}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 4,
+                padding: '4px 8px 4px 4px', marginBottom: 8,
+                background: 'none', border: 'none', cursor: 'pointer',
+                color: 'var(--t2)', fontSize: 12, fontWeight: 600, fontFamily: 'inherit',
+              }}
+            >
+              <ChevronLeft size={14} /> 뒤로
+            </button>
+
+            <div style={{
+              fontFamily: 'Manrope', fontSize: 19, fontWeight: 800, color: 'var(--t1)',
+              letterSpacing: '-.01em',
+            }}>
+              학회 일정 추가
+            </div>
+            <div style={{
+              fontSize: 12, color: 'var(--t3)', marginTop: 4, marginBottom: 16,
+            }}>
+              직접 입력하거나 수집된 학회 목록에서 선택하세요
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {academicOptions.map(it => renderListButton(it, handleAcademicChoice))}
+            </div>
+
+            <button
+              onClick={onClose}
+              style={{
+                marginTop: 14, width: '100%', padding: '13px 14px', borderRadius: 12,
+                background: 'var(--bg-2)', color: 'var(--t2)',
+                border: '1px solid var(--bd-s)',
+                fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+              }}
+            >
+              취소
+            </button>
+          </>
+        )}
       </div>
 
       <style>{`

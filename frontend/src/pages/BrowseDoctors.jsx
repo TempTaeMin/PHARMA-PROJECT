@@ -4,98 +4,12 @@ import { crawlApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
 import HospitalLogo from '../components/HospitalLogo';
+import ScheduleCalendar from '../components/ScheduleCalendar';
 
 const DAY_NAMES = ['월', '화', '수', '목', '금', '토'];
 const SLOT_NAMES = { morning: '오전', afternoon: '오후', evening: '야간' };
 
-/* ── 미니 캘린더 컴포넌트 ── */
-function MiniCalendar({ dateSchedules }) {
-  const [viewMonth, setViewMonth] = useState(() => {
-    const now = new Date();
-    return { year: now.getFullYear(), month: now.getMonth() };
-  });
-
-  if (!dateSchedules?.length) return null;
-
-  // 날짜별 스케줄 맵 생성
-  const schedMap = {};
-  dateSchedules.forEach(ds => {
-    if (!schedMap[ds.schedule_date]) schedMap[ds.schedule_date] = [];
-    schedMap[ds.schedule_date].push(ds);
-  });
-
-  // 가용 월 목록
-  const months = [...new Set(dateSchedules.map(ds => ds.schedule_date.slice(0, 7)))].sort();
-
-  const { year, month } = viewMonth;
-  const firstDay = new Date(year, month, 1);
-  const startDow = (firstDay.getDay() + 6) % 7; // 월=0
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const todayStr = new Date().toISOString().slice(0, 10);
-  const monthStr = `${year}-${String(month + 1).padStart(2, '0')}`;
-
-  const prevMonth = () => setViewMonth(v => v.month === 0 ? { year: v.year - 1, month: 11 } : { ...v, month: v.month - 1 });
-  const nextMonth = () => setViewMonth(v => v.month === 11 ? { year: v.year + 1, month: 0 } : { ...v, month: v.month + 1 });
-
-  const cells = [];
-  for (let i = 0; i < startDow; i++) cells.push(null);
-  for (let d = 1; d <= daysInMonth; d++) cells.push(d);
-
-  return (
-    <div style={{ marginBottom: 16 }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-          <Calendar size={13} style={{ color: 'var(--ac)' }} />
-          <span style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500 }}>날짜별 진료일정</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <button onClick={prevMonth} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--t3)', padding: 2 }}><ChevronLeft size={14} /></button>
-          <span style={{ fontSize: 12, fontWeight: 600, fontFamily: "'JetBrains Mono'", minWidth: 80, textAlign: 'center' }}>{year}.{String(month + 1).padStart(2, '0')}</span>
-          <button onClick={nextMonth} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--t3)', padding: 2 }}><ChevronRight size={14} /></button>
-        </div>
-      </div>
-      {/* 월 탭 */}
-      <div style={{ display: 'flex', gap: 4, marginBottom: 8, flexWrap: 'wrap' }}>
-        {months.map(m => (
-          <button key={m} onClick={() => setViewMonth({ year: parseInt(m.slice(0, 4)), month: parseInt(m.slice(5, 7)) - 1 })}
-            style={{ padding: '3px 8px', borderRadius: 4, fontSize: 10, fontFamily: "'JetBrains Mono'", cursor: 'pointer', border: m === monthStr ? '1px solid var(--ac)' : '1px solid var(--bd-s)', background: m === monthStr ? 'var(--ac-d)' : 'var(--bg-2)', color: m === monthStr ? 'var(--ac)' : 'var(--t3)' }}>
-            {m.slice(5)}월
-          </button>
-        ))}
-      </div>
-      {/* 캘린더 그리드 */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 1, border: '1px solid var(--bd-s)', borderRadius: 8, overflow: 'hidden', background: 'var(--bd-s)' }}>
-        {['월', '화', '수', '목', '금', '토', '일'].map(d => (
-          <div key={d} style={{ padding: '6px 0', textAlign: 'center', fontSize: 10, fontWeight: 500, color: d === '일' ? 'var(--rd)' : d === '토' ? 'var(--bl)' : 'var(--t3)', background: 'var(--bg-2)' }}>{d}</div>
-        ))}
-        {cells.map((day, i) => {
-          if (day === null) return <div key={`e${i}`} style={{ background: 'var(--bg-1)', padding: 4 }} />;
-          const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-          const entries = schedMap[dateStr] || [];
-          const isToday = dateStr === todayStr;
-          const dow = (startDow + day - 1) % 7;
-          const hasAm = entries.some(e => e.time_slot === 'morning');
-          const hasPm = entries.some(e => e.time_slot === 'afternoon');
-          return (
-            <div key={day} style={{ background: isToday ? 'var(--ac-d)' : 'var(--bg-1)', padding: '4px 2px', minHeight: 38, position: 'relative' }}>
-              <div style={{ fontSize: 10, fontWeight: isToday ? 700 : 400, color: isToday ? 'var(--ac)' : dow === 6 ? 'var(--rd)' : dow === 5 ? 'var(--bl)' : 'var(--t2)', textAlign: 'center', marginBottom: 2 }}>{day}</div>
-              {entries.length > 0 && (
-                <div style={{ display: 'flex', gap: 1, justifyContent: 'center', flexWrap: 'wrap' }}>
-                  {hasAm && <div style={{ width: 6, height: 6, borderRadius: 1, background: 'var(--ac)' }} title={`오전${entries.filter(e => e.time_slot === 'morning').map(e => e.location).filter(Boolean).join(', ') ? ': ' + entries.filter(e => e.time_slot === 'morning').map(e => e.location).filter(Boolean).join(', ') : ''}`} />}
-                  {hasPm && <div style={{ width: 6, height: 6, borderRadius: 1, background: 'var(--gn)' }} title={`오후${entries.filter(e => e.time_slot === 'afternoon').map(e => e.location).filter(Boolean).join(', ') ? ': ' + entries.filter(e => e.time_slot === 'afternoon').map(e => e.location).filter(Boolean).join(', ') : ''}`} />}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-      <div style={{ display: 'flex', gap: 10, marginTop: 6, fontSize: 10, color: 'var(--t3)' }}>
-        <span><span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: 1, background: 'var(--ac)', verticalAlign: 'middle', marginRight: 3 }} />오전</span>
-        <span><span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: 1, background: 'var(--gn)', verticalAlign: 'middle', marginRight: 3 }} />오후</span>
-      </div>
-    </div>
-  );
-}
+/* MiniCalendar 는 ScheduleCalendar (frontend/src/components/ScheduleCalendar.jsx) 로 통합되어 제거됨. */
 
 export default function BrowseDoctors({ onNavigate }) {
   const { data: crawlHospitals, loading } = useCachedApi('crawl-hospitals', crawlApi.hospitals, { ttlKey: 'hospitals' });
@@ -270,6 +184,7 @@ export default function BrowseDoctors({ onNavigate }) {
       });
       invalidate('doctors');
       invalidate('my-doctors');
+      invalidate('academic');
       setRegistered(true);
       setRegisteredSet(prev => new Set([...prev, selectedDoctor.external_id]));
       setTimeout(() => onNavigate?.('my-doctors'), 1200);
@@ -334,9 +249,9 @@ export default function BrowseDoctors({ onNavigate }) {
             </div>
 
             {/* 병원 헤더 + 크롤링 정보 */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, padding: 14, borderRadius: 10, background: 'var(--bg-1)', border: '1px solid var(--bd-s)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, padding: 14, borderRadius: 10, background: 'var(--bg-1)', border: '1px solid var(--bd-s)', flexWrap: 'wrap' }}>
               <HospitalLogo code={selectedHospital.code} size={36} radius={8} />
-              <div style={{ flex: 1 }}>
+              <div style={{ flex: 1, minWidth: 120 }}>
                 <div style={{ fontSize: 14, fontWeight: 600 }}>{selectedHospital.name}</div>
                 <div style={{ fontSize: 11, color: 'var(--t3)' }}>
                   {doctors.length}명 · 마지막 크롤링: {formatCrawledDate(lastCrawled)}
@@ -345,13 +260,13 @@ export default function BrowseDoctors({ onNavigate }) {
               <button
                 onClick={() => syncHospital()}
                 disabled={syncing}
-                style={{ padding: '5px 12px', borderRadius: 6, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: syncing ? 'var(--t3)' : 'var(--ac)', fontSize: 11, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 4 }}
+                style={{ padding: '5px 12px', borderRadius: 6, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: syncing ? 'var(--t3)' : 'var(--ac)', fontSize: 11, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', flexShrink: 0 }}
               >
                 <RefreshCw size={12} style={syncing ? { animation: 'spin .8s linear infinite' } : {}} />
                 {syncing ? '크롤링 중…' : '새로 크롤링'}
               </button>
-              <button onClick={() => { setSelectedHospital(null); closePreview(); }} style={{ padding: '5px 10px', borderRadius: 6, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: 'var(--t2)', fontSize: 10, cursor: 'pointer', fontFamily: 'inherit' }}>
-                <ChevronLeft size={12} style={{ display: 'inline', verticalAlign: -2 }} /> 돌아가기
+              <button onClick={() => { setSelectedHospital(null); closePreview(); }} style={{ padding: '5px 10px', borderRadius: 6, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: 'var(--t2)', fontSize: 10, cursor: 'pointer', fontFamily: 'inherit', whiteSpace: 'nowrap', flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 3 }}>
+                <ChevronLeft size={12} /> 돌아가기
               </button>
             </div>
 
@@ -444,7 +359,7 @@ export default function BrowseDoctors({ onNavigate }) {
                             </div>
                           </div>
                           {isMyDoctor ? (
-                            <span style={{ padding: '3px 8px', borderRadius: 4, background: 'var(--gn-d)', color: 'var(--gn)', fontSize: 10, fontWeight: 600, flexShrink: 0 }}>내 교수</span>
+                            <span style={{ padding: '3px 8px', borderRadius: 4, background: 'var(--gn-d)', color: 'var(--gn)', fontSize: 10, fontWeight: 600, flexShrink: 0 }}>내 의료진</span>
                           ) : (
                             <ChevronRight size={14} style={{ color: isSelected ? 'var(--ac)' : 'var(--t3)', flexShrink: 0 }} />
                           )}
@@ -524,24 +439,15 @@ export default function BrowseDoctors({ onNavigate }) {
                 )}
                 <div style={{ marginBottom: 16 }}>
                   <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500, marginBottom: 6 }}>진료 시간표</div>
-                  {schedule.date_schedules?.length > 0 ? (
-                    <MiniCalendar dateSchedules={schedule.date_schedules} />
-                  ) : schedule.schedules?.length > 0 ? (
-                    <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: 0, border: '1px solid var(--bd-s)', borderRadius: 8, overflow: 'hidden' }}>
-                      <thead><tr>
-                        <th style={{ padding: '8px 6px', textAlign: 'center', fontSize: 10, background: 'var(--bg-2)', color: 'var(--t3)', fontWeight: 500, borderBottom: '1px solid var(--bd-s)' }}>구분</th>
-                        {DAY_NAMES.map(d => <th key={d} style={{ padding: '8px 4px', textAlign: 'center', fontSize: 10, background: 'var(--bg-2)', color: 'var(--t3)', fontWeight: 500, borderBottom: '1px solid var(--bd-s)' }}>{d}</th>)}
-                      </tr></thead>
-                      <tbody>{['morning', 'afternoon'].map(slot => (
-                        <tr key={slot}>
-                          <td style={{ padding: '8px 6px', textAlign: 'center', fontSize: 10, color: 'var(--t3)', fontWeight: 500, background: 'var(--bg-1)', borderBottom: '1px solid var(--bd-s)' }}>{SLOT_NAMES[slot]}</td>
-                          {[0,1,2,3,4,5].map(di => {
-                            const has = schedule.schedules.some(s => (s.day_of_week === di || s.day === di) && (s.time_slot === slot || s.slot === slot));
-                            return <td key={di} style={{ padding: '8px 4px', textAlign: 'center', background: 'var(--bg-1)', borderBottom: '1px solid var(--bd-s)' }}>{has ? <span style={{ display: 'inline-block', width: 16, height: 16, borderRadius: 4, background: 'var(--ac-d)', color: 'var(--ac)', lineHeight: '16px', fontWeight: 700, fontSize: 9 }}>●</span> : <span style={{ color: 'var(--t3)', fontSize: 10 }}>-</span>}</td>;
-                          })}
-                        </tr>
-                      ))}</tbody>
-                    </table>
+                  {(schedule.date_schedules?.length > 0 || schedule.schedules?.length > 0) ? (
+                    <ScheduleCalendar
+                      compact
+                      schedules={(schedule.schedules || []).map(s => ({
+                        day_of_week: s.day_of_week ?? s.day,
+                        time_slot: s.time_slot ?? s.slot,
+                      }))}
+                      dateSchedules={schedule.date_schedules || []}
+                    />
                   ) : (
                     <div style={{ padding: '16px 0', textAlign: 'center', color: 'var(--t3)', fontSize: 12 }}>진료일정 정보 없음</div>
                   )}
@@ -555,10 +461,10 @@ export default function BrowseDoctors({ onNavigate }) {
               </>
             )}
 
-            {/* 내 교수 등록 버튼 */}
+            {/* 내 의료진 등록 버튼 */}
             {registered ? (
               <div style={{ padding: '12px 16px', borderRadius: 8, textAlign: 'center', background: 'var(--gn-d)', border: '1px solid rgba(52,211,153,.2)', color: 'var(--gn)', fontSize: 13, fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
-                <CheckCircle size={16} /> 내 교수로 등록되었습니다
+                <CheckCircle size={16} /> 내 의료진으로 등록되었습니다
               </div>
             ) : (
               <button onClick={registerDoctor} disabled={registering} style={{
@@ -568,7 +474,7 @@ export default function BrowseDoctors({ onNavigate }) {
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
                 opacity: registering ? .6 : 1, transition: 'opacity .12s',
               }}>
-                {registering ? <><RefreshCw size={14} style={{ animation: 'spin .8s linear infinite' }} /> 등록 중…</> : <><UserPlus size={14} /> 내 교수로 등록</>}
+                {registering ? <><RefreshCw size={14} style={{ animation: 'spin .8s linear infinite' }} /> 등록 중…</> : <><UserPlus size={14} /> 내 의료진으로 등록</>}
               </button>
             )}
           </div>
@@ -585,7 +491,7 @@ export default function BrowseDoctors({ onNavigate }) {
           <Search size={14} style={{ color: 'var(--t3)' }} />
           <input placeholder="병원명 또는 교수 이름 검색" value={hospitalSearchQ} onChange={e => setHospitalSearchQ(e.target.value)} style={{ border: 'none', background: 'none', outline: 'none', color: 'var(--t1)', fontSize: 12.5, width: '100%' }} />
         </div>
-        <span style={{ fontSize: 12, color: 'var(--t3)' }}>병원 선택 → 교수 검색 → 진료시간 확인 → 내 교수 등록</span>
+        <span style={{ fontSize: 12, color: 'var(--t3)' }}>병원 선택 → 의료진 검색 → 진료시간 확인 → 내 의료진으로 등록</span>
       </div>
 
       {loading ? (
