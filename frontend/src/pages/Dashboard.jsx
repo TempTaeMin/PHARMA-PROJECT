@@ -15,7 +15,7 @@ import WorkAnnouncementEditor from '../components/WorkAnnouncementEditor';
 import { useMonthCalendar } from '../hooks/useMonthCalendar';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
-import { memoApi, visitApi, academicApi } from '../api/client';
+import { memoApi, visitApi, academicApi, memoTemplateApi } from '../api/client';
 
 function ymd(y, m, d) {
   return `${y}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
@@ -65,6 +65,17 @@ export default function Dashboard({ onNavigate }) {
     { ttlKey: 'academic', deps: [monthKey] },
   );
   const events = monthEvents || [];
+
+  // 기본 템플릿 — AI 정리 버튼 라벨에 표시
+  const { data: tplList } = useCachedApi(
+    'memo-templates',
+    () => memoTemplateApi.list().then(r => r.templates || r || []),
+    { ttlKey: 'memo-templates' },
+  );
+  const defaultTpl = useMemo(
+    () => (tplList || []).find(t => t.is_default),
+    [tplList],
+  );
 
   const eventsByDate = useMemo(() => {
     const map = {};
@@ -409,7 +420,6 @@ export default function Dashboard({ onNavigate }) {
       {/* ── Complete Modal (raw + AI 2영역) ── */}
       {completing && (
         <div
-          onClick={closeComplete}
           style={{
             position: 'fixed', inset: 0, background: 'rgba(0,0,0,.45)', zIndex: 200,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -487,7 +497,7 @@ export default function Dashboard({ onNavigate }) {
                 title="Claude Haiku로 구조화된 방문일지로 정리"
               >
                 {aiLoading ? <RefreshCw size={12} /> : <Sparkles size={12} />}
-                {aiLoading ? '정리 중…' : (aiResult ? '다시 정리' : 'MR AI로 정리')}
+                {aiLoading ? '정리 중…' : (aiResult ? '다시 정리' : `MR AI로 정리${defaultTpl ? ` · ${defaultTpl.name}` : ''}`)}
               </button>
             </div>
             <textarea

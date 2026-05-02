@@ -5,6 +5,9 @@ import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
 import ManualDoctorModal from '../components/ManualDoctorModal';
 import ScheduleCalendar from '../components/ScheduleCalendar';
+import SelectVisitDate from '../components/SelectVisitDate';
+import DoctorScheduleHintPopup from '../components/DoctorScheduleHintPopup';
+import SelectMeetingTime from '../components/SelectMeetingTime';
 
 const REASON_LABELS = {
   transferred: { text: '이직', color: 'var(--am)' },
@@ -44,10 +47,64 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
   // 이직/퇴직 처리 모달: { doctor, reason } | null
   const [deactivateFor, setDeactivateFor] = useState(null);
 
+  // ─ 방문 일정 등록 플로우 (detail 에서 열림) ─
+  // null | 'select-date' | 'hint-popup' | 'select-time'
+  const [planStep, setPlanStep] = useState(null);
+  const [planDate, setPlanDate] = useState(null);
+
+  const todayStr = (() => {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  })();
+
+  const closePlanFlow = () => {
+    setPlanStep(null);
+    setPlanDate(null);
+  };
+
+  const handlePlanConfirmDate = (dateStr) => {
+    setPlanDate(dateStr);
+    setPlanStep('hint-popup');
+  };
+
+  const handlePlanConfirmHint = () => {
+    setPlanStep('select-time');
+  };
+
+  const handlePlanConfirmTime = async ({ doctor, dateStr, timeHHMM, notes }) => {
+    const dt = `${dateStr}T${timeHHMM}:00`;
+    const payload = { doctor_id: doctor.id, visit_date: dt, status: '예정' };
+    if (notes) payload.notes = notes;
+    try {
+      await visitApi.create(doctor.id, payload);
+      invalidate('my-visits');
+      invalidate('dashboard');
+      invalidate('doctors');
+      // 상세 화면 방문 리스트도 갱신
+      const v = await visitApi.list(doctor.id);
+      setVisits(v);
+      closePlanFlow();
+    } catch (e) {
+      alert('일정 등록 실패: ' + e.message);
+    }
+  };
+
   const formatDate = (iso) => {
     if (!iso) return null;
     const d = new Date(iso);
     return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+  };
+
+  // 최종 방문 후 며칠 지났는지 — 'NEW' / 'N일 전' / null(이직/퇴직)
+  const lastVisitBadge = (iso) => {
+    if (!iso) return { text: 'NEW', bg: 'var(--ac-d)', c: 'var(--ac)' };
+    const last = new Date(iso);
+    if (Number.isNaN(last.getTime())) return null;
+    const days = Math.floor((Date.now() - last.getTime()) / 86400000);
+    if (days <= 0) return { text: '오늘', bg: 'var(--gn-d)', c: 'var(--gn)' };
+    if (days <= 14) return { text: `${days}일 전`, bg: 'var(--gn-d)', c: 'var(--gn)' };
+    if (days <= 30) return { text: `${days}일 전`, bg: 'var(--am-d)', c: 'var(--am)' };
+    return { text: `${days}일 전`, bg: '#fee2e2', c: '#b91c1c' };
   };
 
   const runScheduleUpdate = async () => {
@@ -158,7 +215,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
       />
       {deactivateFor && (
         <>
-          <div onClick={() => setDeactivateFor(null)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 60, animation: 'fadeIn .15s' }} />
+          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 60, animation: 'fadeIn .15s' }} />
           <div style={{
             position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
             width: 'min(440px, 92vw)', background: 'var(--bg-1)',
@@ -214,6 +271,30 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
           </div>
         </>
       )}
+
+      {/* ── 방문 일정 등록 플로우 (의료진 상세에서 진입) ── */}
+      <SelectVisitDate
+        open={planStep === 'select-date'}
+        doctor={detail}
+        initialDate={planDate || todayStr}
+        onBack={closePlanFlow}
+        onConfirm={handlePlanConfirmDate}
+      />
+      <DoctorScheduleHintPopup
+        open={planStep === 'hint-popup'}
+        doctor={detail}
+        selectedDate={planDate || todayStr}
+        onClose={() => setPlanStep('select-date')}
+        onConfirm={handlePlanConfirmHint}
+      />
+      <SelectMeetingTime
+        open={planStep === 'select-time'}
+        doctor={detail}
+        initialDate={planDate || todayStr}
+        todayStr={todayStr}
+        onBack={() => setPlanStep('hint-popup')}
+        onConfirm={handlePlanConfirmTime}
+      />
     </>
   );
 
@@ -243,7 +324,6 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
 
   // ── 상세 ──
   if (detail) {
-    const g = G[detail.visit_grade] || G.B;
     return (<>
       <div style={{ maxWidth: 600, animation: 'slideR .25s ease' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
@@ -253,13 +333,27 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
             <button onClick={async () => { if (!confirm(`${detail.name} 교수를 내 의료진에서 해제하시겠습니까?`)) return; await doctorApi.update(detail.id, { visit_grade: null }); invalidate('my-doctors'); invalidate('doctors'); invalidate('academic'); refresh(); setDetail(null); }} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--rd)', cursor: 'pointer', background: 'none', border: '1px solid rgba(248,113,113,.3)', borderRadius: 6, padding: '5px 10px', fontFamily: 'inherit' }}><UserMinus size={13} /> 내 의료진 해제</button>
           </div>
         </div>
-        <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
+        <div style={{ display: 'flex', gap: 16, marginBottom: 16, alignItems: 'flex-start' }}>
           <div style={{ width: 56, height: 56, borderRadius: 12, background: 'var(--ac-d)', color: 'var(--ac)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, fontWeight: 700, fontFamily: 'Outfit', flexShrink: 0 }}>{detail.name?.[0]}</div>
-          <div>
+          <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontFamily: 'Outfit', fontSize: 20, fontWeight: 700 }}>{detail.name} <span style={{ fontSize: 14, color: 'var(--t3)', fontWeight: 400 }}>{detail.position}</span></div>
-            <div style={{ fontSize: 13, color: 'var(--t3)', marginBottom: 8 }}>{detail.hospital_name} · {detail.department}</div>
-            <span style={{ padding: '4px 10px', borderRadius: 6, fontSize: 11, fontWeight: 500, background: g.bg, color: g.c }}>{detail.visit_grade}등급</span>
+            <div style={{ fontSize: 13, color: 'var(--t3)' }}>{detail.hospital_name} · {detail.department}</div>
+            {detail.source === 'manual' && (
+              <span style={{ display: 'inline-block', marginTop: 8, padding: '3px 8px', borderRadius: 4, fontSize: 10, fontWeight: 800, fontFamily: 'Manrope', letterSpacing: '.04em', background: '#fef3c7', color: '#b45309', border: '1px solid #fcd34d' }}>수동 등록</span>
+            )}
           </div>
+          <button
+            onClick={() => { setPlanDate(todayStr); setPlanStep('select-date'); }}
+            style={{
+              flexShrink: 0, padding: '10px 16px', borderRadius: 9,
+              background: 'var(--ac)', color: '#fff', border: 'none',
+              fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+              display: 'flex', alignItems: 'center', gap: 6,
+              boxShadow: '0 4px 12px rgba(0,64,161,.18)',
+            }}
+          >
+            <Calendar size={14} /> 일정 등록
+          </button>
         </div>
 
         {/* 이직 이력 — 이전 병원 record 와 연결됐을 때 */}
@@ -618,19 +712,28 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
         </div>
       ) : (
         <div>
-          {hospitalEntries.map(([hname, group]) => (
+          {hospitalEntries.map(([hname, group]) => {
+            const hospManual = group[0]?.hospital_source === 'manual';
+            return (
             <div key={hname} style={{ marginBottom: 20 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
                 <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--t1)' }}>{hname}</span>
+                {hospManual && (
+                  <span title="수동 등록한 병원" style={{
+                    padding: '2px 7px', borderRadius: 4,
+                    fontSize: 9, fontWeight: 800, fontFamily: 'Manrope', letterSpacing: '.04em',
+                    background: '#fef3c7', color: '#b45309', border: '1px solid #fcd34d',
+                  }}>수동 등록 병원</span>
+                )}
                 <span style={{ fontSize: 11, color: 'var(--t3)', fontFamily: "'JetBrains Mono'" }}>{group.length}</span>
                 <div style={{ flex: 1, height: 1, background: 'var(--bd-s)' }} />
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8 }}>
                 {group.map((d, i) => {
-                  const g = G[d.visit_grade] || G.B;
                   const isManual = d.source === 'manual';
                   const isInactive = view === 'inactive';
                   const reason = REASON_LABELS[d.deactivated_reason] || null;
+                  const lastBadge = !isInactive ? lastVisitBadge(d.last_visit_date) : null;
                   return (
                     <div
                       key={d.id}
@@ -643,20 +746,27 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
                         opacity: isInactive ? .85 : 1,
                         transition: 'all .12s',
                         animation: `fadeUp .3s ease ${i * .03}s both`,
+                        scrollSnapAlign: 'start',
+                        scrollMarginTop: 90,
                       }}
                     >
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
                         <div style={{ width: 38, height: 38, borderRadius: 9, background: isInactive ? 'var(--bg-3)' : 'var(--ac-d)', color: isInactive ? 'var(--t3)' : 'var(--ac)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, fontWeight: 700, fontFamily: 'Outfit' }}>{d.name?.[0]}</div>
                         <div style={{ display: 'flex', gap: 4, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
                           {isManual && (
-                            <span title="수동 등록" style={{ padding: '3px 6px', borderRadius: 4, fontSize: 9, fontWeight: 700, fontFamily: "'JetBrains Mono'", background: 'var(--bg-3)', color: 'var(--t2)', border: '1px solid var(--bd-s)' }}>수동</span>
+                            <span title="수동 등록한 의료진" style={{ padding: '3px 7px', borderRadius: 4, fontSize: 9, fontWeight: 800, fontFamily: 'Manrope', letterSpacing: '.04em', background: '#fef3c7', color: '#b45309', border: '1px solid #fcd34d' }}>수동 등록</span>
                           )}
-                          {isInactive && reason ? (
+                          {lastBadge && (
+                            <span title={d.last_visit_date ? `마지막 방문: ${d.last_visit_date.slice(0, 10)}` : '아직 방문 기록 없음'} style={{
+                              padding: '3px 7px', borderRadius: 4,
+                              fontSize: 9, fontWeight: 800, fontFamily: 'Manrope', letterSpacing: '.04em',
+                              background: lastBadge.bg, color: lastBadge.c,
+                            }}>{lastBadge.text}</span>
+                          )}
+                          {isInactive && reason && (
                             <span style={{ padding: '3px 7px', borderRadius: 4, fontSize: 10, fontWeight: 700, fontFamily: "'JetBrains Mono'", background: 'var(--bg-3)', color: reason.color, border: `1px solid ${reason.color}` }}>
                               {reason.text}
                             </span>
-                          ) : (
-                            <span style={{ padding: '3px 7px', borderRadius: 4, fontSize: 10, fontWeight: 700, fontFamily: "'JetBrains Mono'", background: g.bg, color: g.c }}>{d.visit_grade}</span>
                           )}
                         </div>
                       </div>
@@ -699,7 +809,8 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
                 })}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       )}
       {sharedModals}

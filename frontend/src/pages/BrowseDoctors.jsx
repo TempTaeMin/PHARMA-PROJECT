@@ -221,9 +221,9 @@ export default function BrowseDoctors({ onNavigate }) {
   const regionEntries = REGION_ORDER.map(r => [r, groupedHospitals[r] || []]).filter(([, list]) => list.length > 0);
   if (groupedHospitals['기타']?.length) regionEntries.push(['기타', groupedHospitals['기타']]);
 
-  // 마지막 크롤링 날짜 포맷
+  // 마지막 업데이트 날짜 포맷
   const formatCrawledDate = (iso) => {
-    if (!iso) return '아직 크롤링 안 됨';
+    if (!iso) return '아직 정보 없음';
     const d = new Date(iso);
     const yyyy = d.getFullYear();
     const mm = String(d.getMonth() + 1).padStart(2, '0');
@@ -236,9 +236,8 @@ export default function BrowseDoctors({ onNavigate }) {
   // ═══ 병원 내 교수 목록 ═══
   if (selectedHospital) {
     return (
-      <div style={{ display: 'flex', gap: 16, animation: 'slideR .25s ease' }}>
-        {/* 왼쪽: 교수 목록 */}
-        <div style={{ flex: 1, minWidth: 0 }}>
+      <div style={{ animation: 'slideR .25s ease' }}>
+        <div style={{ minWidth: 0 }}>
           {/* 고정 헤더 영역 */}
           <div style={{ position: 'sticky', top: 49, zIndex: 5, background: 'var(--bg-0)', marginLeft: -24, marginRight: -24, paddingLeft: 24, paddingRight: 24, paddingTop: 4, paddingBottom: 4 }}>
             {/* 브레드크럼 */}
@@ -254,7 +253,7 @@ export default function BrowseDoctors({ onNavigate }) {
               <div style={{ flex: 1, minWidth: 120 }}>
                 <div style={{ fontSize: 14, fontWeight: 600 }}>{selectedHospital.name}</div>
                 <div style={{ fontSize: 11, color: 'var(--t3)' }}>
-                  {doctors.length}명 · 마지막 크롤링: {formatCrawledDate(lastCrawled)}
+                  {doctors.length}명 · 마지막 업데이트: {formatCrawledDate(lastCrawled)}
                 </div>
               </div>
               <button
@@ -263,7 +262,7 @@ export default function BrowseDoctors({ onNavigate }) {
                 style={{ padding: '5px 12px', borderRadius: 6, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: syncing ? 'var(--t3)' : 'var(--ac)', fontSize: 11, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', flexShrink: 0 }}
               >
                 <RefreshCw size={12} style={syncing ? { animation: 'spin .8s linear infinite' } : {}} />
-                {syncing ? '크롤링 중…' : '새로 크롤링'}
+                {syncing ? '정보 받는 중…' : '최신 정보 받기'}
               </button>
               <button onClick={() => { setSelectedHospital(null); closePreview(); }} style={{ padding: '5px 10px', borderRadius: 6, background: 'var(--bg-2)', border: '1px solid var(--bd)', color: 'var(--t2)', fontSize: 10, cursor: 'pointer', fontFamily: 'inherit', whiteSpace: 'nowrap', flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 3 }}>
                 <ChevronLeft size={12} /> 돌아가기
@@ -279,9 +278,9 @@ export default function BrowseDoctors({ onNavigate }) {
                 color: syncResult.status === 'success' ? 'var(--gn)' : 'var(--rd)',
               }}>
                 {syncResult.status === 'success' ? (
-                  <><CheckCircle size={12} /> {syncResult.total_crawled}명 크롤링 완료 (신규 {syncResult.created}, 업데이트 {syncResult.updated})</>
+                  <><CheckCircle size={12} /> {syncResult.total_crawled}명 정보 받기 완료 (신규 {syncResult.created}, 업데이트 {syncResult.updated})</>
                 ) : (
-                  <><AlertTriangle size={12} /> {syncResult.message || '크롤링 실패'}</>
+                  <><AlertTriangle size={12} /> {syncResult.message || '정보 받기 실패'}</>
                 )}
               </div>
             )}
@@ -302,11 +301,11 @@ export default function BrowseDoctors({ onNavigate }) {
           {(doctorsLoading || syncing) && !doctors.length ? (
             <div style={{ textAlign: 'center', padding: 40 }}>
               <RefreshCw size={24} style={{ color: 'var(--ac)', animation: 'spin .8s linear infinite', marginBottom: 12 }} />
-              <div style={{ fontSize: 13, color: 'var(--t2)' }}>{syncing ? '크롤링 중…' : '로딩 중…'}</div>
+              <div style={{ fontSize: 13, color: 'var(--t2)' }}>{syncing ? '정보 받는 중…' : '로딩 중…'}</div>
             </div>
           ) : doctors.length === 0 ? (
             <div style={{ textAlign: 'center', padding: 40, color: 'var(--t3)', fontSize: 13 }}>
-              {searchQ ? '검색 결과 없음' : '교수 데이터가 없습니다. "새로 크롤링" 버튼을 눌러주세요.'}
+              {searchQ ? '검색 결과 없음' : '교수 데이터가 없습니다. "최신 정보 받기" 버튼을 눌러주세요.'}
             </div>
           ) : (() => {
             // 진료과별 그룹핑
@@ -340,6 +339,8 @@ export default function BrowseDoctors({ onNavigate }) {
                             border: `1px solid ${isSelected ? 'var(--ac)' : 'var(--bd-s)'}`,
                             marginBottom: 5, cursor: 'pointer', transition: 'all .12s',
                             animation: `fadeUp .25s ease ${i * .02}s both`,
+                            scrollSnapAlign: 'start',
+                            scrollMarginTop: 200,
                           }}
                         >
                           <div style={{
@@ -373,110 +374,124 @@ export default function BrowseDoctors({ onNavigate }) {
           })()}
         </div>
 
-        {/* 오른쪽: 미리보기 패널 */}
+        {/* ── 교수 프리뷰 모달 ── */}
         {selectedDoctor && (
           <div style={{
-            width: 360, minWidth: 360, position: 'sticky', top: 80, alignSelf: 'flex-start',
-            background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 12,
-            padding: 20, animation: 'fadeUp .25s ease',
+            position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
+            zIndex: 200, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: 16, animation: 'fadeIn .15s ease',
           }}>
-            <button onClick={closePreview} style={{
-              position: 'absolute', top: 12, right: 12,
-              width: 24, height: 24, borderRadius: 6, background: 'var(--bg-2)',
-              border: '1px solid var(--bd-s)', display: 'flex', alignItems: 'center', justifyContent: 'center',
-              cursor: 'pointer', color: 'var(--t3)',
-            }}><X size={12} /></button>
-
-            {/* 프로필 */}
-            <div style={{ display: 'flex', gap: 12, marginBottom: 16 }}>
+            <div style={{
+              background: 'var(--bg-1)', borderRadius: 14,
+              width: 480, maxWidth: '100%', maxHeight: '92vh',
+              display: 'flex', flexDirection: 'column',
+              animation: 'fadeUp .2s ease',
+            }}>
+              {/* Header */}
               <div style={{
-                width: 48, height: 48, borderRadius: 10, flexShrink: 0,
-                background: 'var(--ac-d)', color: 'var(--ac)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 20, fontWeight: 700, fontFamily: 'Outfit',
-              }}>{selectedDoctor.name?.[0]}</div>
-              <div>
-                <div style={{ fontFamily: 'Outfit', fontSize: 17, fontWeight: 700 }}>{selectedDoctor.name}</div>
-                <div style={{ fontSize: 12, color: 'var(--t3)', marginTop: 2 }}>{selectedDoctor.department}</div>
+                display: 'flex', alignItems: 'center', gap: 12,
+                padding: '14px 16px', borderBottom: '1px solid var(--bd-s)',
+                flexShrink: 0,
+              }}>
+                <div style={{
+                  width: 44, height: 44, borderRadius: 10, flexShrink: 0,
+                  background: 'var(--ac-d)', color: 'var(--ac)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 18, fontWeight: 700, fontFamily: 'Outfit',
+                }}>{selectedDoctor.name?.[0]}</div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontFamily: 'Outfit', fontSize: 17, fontWeight: 700, color: 'var(--t1)' }}>{selectedDoctor.name}</div>
+                  <div style={{ fontSize: 12, color: 'var(--t3)', marginTop: 2 }}>{selectedDoctor.department}</div>
+                </div>
+                <button onClick={closePreview} aria-label="닫기" style={{
+                  width: 30, height: 30, borderRadius: 7, background: 'var(--bg-2)',
+                  border: '1px solid var(--bd-s)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  cursor: 'pointer', color: 'var(--t3)', padding: 0, flexShrink: 0,
+                }}><X size={14} /></button>
+              </div>
+
+              {/* Body */}
+              <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 12px' }}>
+                {/* 진료시간 가져오기 버튼 */}
+                {!schedule && !scheduleLoading && !scheduleError && (
+                  <button onClick={fetchSchedule} style={{
+                    width: '100%', padding: '12px 16px', borderRadius: 8, marginBottom: 12,
+                    background: 'var(--bg-2)', color: 'var(--ac)', border: '1px solid rgba(124,106,240,.3)',
+                    fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                  }}>
+                    <Clock size={14} /> 진료시간 가져오기
+                  </button>
+                )}
+
+                {scheduleLoading && (
+                  <div style={{ textAlign: 'center', padding: '20px 0', marginBottom: 12 }}>
+                    <RefreshCw size={20} style={{ color: 'var(--ac)', animation: 'spin .8s linear infinite', marginBottom: 8 }} />
+                    <div style={{ fontSize: 12, color: 'var(--t2)' }}>진료시간 가져오는 중…</div>
+                  </div>
+                )}
+
+                {scheduleError && (
+                  <div style={{ padding: '10px 14px', borderRadius: 7, marginBottom: 12, background: 'var(--rd-d)', border: '1px solid rgba(248,113,113,.2)', fontSize: 11, color: 'var(--rd)', display: 'flex', alignItems: 'center', gap: 5 }}>
+                    <AlertTriangle size={12} /> {scheduleError}
+                  </div>
+                )}
+
+                {schedule && (
+                  <>
+                    <div style={{ padding: '8px 12px', borderRadius: 7, marginBottom: 12, background: 'var(--gn-d)', border: '1px solid rgba(52,211,153,.2)', fontSize: 11, color: 'var(--gn)', display: 'flex', alignItems: 'center', gap: 5 }}>
+                      <CheckCircle size={12} /> 진료시간 가져오기 완료
+                    </div>
+                    {schedule.specialty && (
+                      <div style={{ marginBottom: 14 }}>
+                        <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500, marginBottom: 4 }}>전문 분야</div>
+                        <div style={{ fontSize: 12, color: 'var(--t2)', padding: '8px 10px', background: 'var(--bg-2)', borderRadius: 6 }}>{schedule.specialty}</div>
+                      </div>
+                    )}
+                    <div style={{ marginBottom: 16 }}>
+                      <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500, marginBottom: 6 }}>진료 시간표</div>
+                      {(schedule.date_schedules?.length > 0 || schedule.schedules?.length > 0) ? (
+                        <ScheduleCalendar
+                          compact
+                          schedules={(schedule.schedules || []).map(s => ({
+                            day_of_week: s.day_of_week ?? s.day,
+                            time_slot: s.time_slot ?? s.slot,
+                          }))}
+                          dateSchedules={schedule.date_schedules || []}
+                        />
+                      ) : (
+                        <div style={{ padding: '16px 0', textAlign: 'center', color: 'var(--t3)', fontSize: 12 }}>진료일정 정보 없음</div>
+                      )}
+                    </div>
+                    {schedule.notes && (
+                      <div style={{ marginBottom: 12, padding: '10px 12px', borderRadius: 7, background: 'var(--bg-2)', border: '1px solid var(--bd-s)' }}>
+                        <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500, marginBottom: 4 }}>특이사항</div>
+                        <div style={{ fontSize: 12, color: 'var(--t2)', lineHeight: 1.5, whiteSpace: 'pre-wrap' }}>{schedule.notes}</div>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+
+              {/* Footer — 내 의료진 등록 */}
+              <div style={{ padding: '12px 16px 16px', borderTop: '1px solid var(--bd-s)', flexShrink: 0 }}>
+                {registered ? (
+                  <div style={{ padding: '12px 16px', borderRadius: 8, textAlign: 'center', background: 'var(--gn-d)', border: '1px solid rgba(52,211,153,.2)', color: 'var(--gn)', fontSize: 13, fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+                    <CheckCircle size={16} /> 내 의료진으로 등록되었습니다
+                  </div>
+                ) : (
+                  <button onClick={registerDoctor} disabled={registering} style={{
+                    width: '100%', padding: '12px 16px', borderRadius: 8,
+                    background: 'var(--ac)', color: '#fff', border: 'none',
+                    fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                    opacity: registering ? .6 : 1, transition: 'opacity .12s',
+                  }}>
+                    {registering ? <><RefreshCw size={14} style={{ animation: 'spin .8s linear infinite' }} /> 등록 중…</> : <><UserPlus size={14} /> 내 의료진으로 등록</>}
+                  </button>
+                )}
               </div>
             </div>
-
-            {/* 진료시간 가져오기 버튼 */}
-            {!schedule && !scheduleLoading && !scheduleError && (
-              <button onClick={fetchSchedule} style={{
-                width: '100%', padding: '12px 16px', borderRadius: 8, marginBottom: 12,
-                background: 'var(--bg-2)', color: 'var(--ac)', border: '1px solid rgba(124,106,240,.3)',
-                fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-              }}>
-                <Clock size={14} /> 진료시간 가져오기
-              </button>
-            )}
-
-            {scheduleLoading && (
-              <div style={{ textAlign: 'center', padding: '20px 0', marginBottom: 12 }}>
-                <RefreshCw size={20} style={{ color: 'var(--ac)', animation: 'spin .8s linear infinite', marginBottom: 8 }} />
-                <div style={{ fontSize: 12, color: 'var(--t2)' }}>진료시간 크롤링 중…</div>
-              </div>
-            )}
-
-            {scheduleError && (
-              <div style={{ padding: '10px 14px', borderRadius: 7, marginBottom: 12, background: 'var(--rd-d)', border: '1px solid rgba(248,113,113,.2)', fontSize: 11, color: 'var(--rd)', display: 'flex', alignItems: 'center', gap: 5 }}>
-                <AlertTriangle size={12} /> {scheduleError}
-              </div>
-            )}
-
-            {schedule && (
-              <>
-                <div style={{ padding: '8px 12px', borderRadius: 7, marginBottom: 12, background: 'var(--gn-d)', border: '1px solid rgba(52,211,153,.2)', fontSize: 11, color: 'var(--gn)', display: 'flex', alignItems: 'center', gap: 5 }}>
-                  <CheckCircle size={12} /> 진료시간 크롤링 완료
-                </div>
-                {schedule.specialty && (
-                  <div style={{ marginBottom: 14 }}>
-                    <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500, marginBottom: 4 }}>전문 분야</div>
-                    <div style={{ fontSize: 12, color: 'var(--t2)', padding: '8px 10px', background: 'var(--bg-2)', borderRadius: 6 }}>{schedule.specialty}</div>
-                  </div>
-                )}
-                <div style={{ marginBottom: 16 }}>
-                  <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500, marginBottom: 6 }}>진료 시간표</div>
-                  {(schedule.date_schedules?.length > 0 || schedule.schedules?.length > 0) ? (
-                    <ScheduleCalendar
-                      compact
-                      schedules={(schedule.schedules || []).map(s => ({
-                        day_of_week: s.day_of_week ?? s.day,
-                        time_slot: s.time_slot ?? s.slot,
-                      }))}
-                      dateSchedules={schedule.date_schedules || []}
-                    />
-                  ) : (
-                    <div style={{ padding: '16px 0', textAlign: 'center', color: 'var(--t3)', fontSize: 12 }}>진료일정 정보 없음</div>
-                  )}
-                </div>
-                {schedule.notes && (
-                  <div style={{ marginBottom: 16, padding: '10px 12px', borderRadius: 7, background: 'var(--bg-2)', border: '1px solid var(--bd-s)' }}>
-                    <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500, marginBottom: 4 }}>특이사항</div>
-                    <div style={{ fontSize: 12, color: 'var(--t2)', lineHeight: 1.5, whiteSpace: 'pre-wrap' }}>{schedule.notes}</div>
-                  </div>
-                )}
-              </>
-            )}
-
-            {/* 내 의료진 등록 버튼 */}
-            {registered ? (
-              <div style={{ padding: '12px 16px', borderRadius: 8, textAlign: 'center', background: 'var(--gn-d)', border: '1px solid rgba(52,211,153,.2)', color: 'var(--gn)', fontSize: 13, fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
-                <CheckCircle size={16} /> 내 의료진으로 등록되었습니다
-              </div>
-            ) : (
-              <button onClick={registerDoctor} disabled={registering} style={{
-                width: '100%', padding: '12px 16px', borderRadius: 8,
-                background: 'var(--ac)', color: '#fff', border: 'none',
-                fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-                opacity: registering ? .6 : 1, transition: 'opacity .12s',
-              }}>
-                {registering ? <><RefreshCw size={14} style={{ animation: 'spin .8s linear infinite' }} /> 등록 중…</> : <><UserPlus size={14} /> 내 의료진으로 등록</>}
-              </button>
-            )}
           </div>
         )}
       </div>
@@ -486,12 +501,19 @@ export default function BrowseDoctors({ onNavigate }) {
   // ═══ 병원 목록 ═══
   return (
     <>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', borderRadius: 7, padding: '6px 10px', flex: 1, maxWidth: 320 }}>
-          <Search size={14} style={{ color: 'var(--t3)' }} />
-          <input placeholder="병원명 또는 교수 이름 검색" value={hospitalSearchQ} onChange={e => setHospitalSearchQ(e.target.value)} style={{ border: 'none', background: 'none', outline: 'none', color: 'var(--t1)', fontSize: 12.5, width: '100%' }} />
+      <div style={{
+        position: 'sticky', top: 56, zIndex: 5,
+        background: 'var(--bg-0)',
+        margin: '-8px -4px 16px',
+        padding: '8px 4px 8px',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', borderRadius: 7, padding: '6px 10px', flex: 1, maxWidth: 320 }}>
+            <Search size={14} style={{ color: 'var(--t3)' }} />
+            <input placeholder="병원명 또는 교수 이름 검색" value={hospitalSearchQ} onChange={e => setHospitalSearchQ(e.target.value)} style={{ border: 'none', background: 'none', outline: 'none', color: 'var(--t1)', fontSize: 12.5, width: '100%' }} />
+          </div>
+          <span style={{ fontSize: 12, color: 'var(--t3)' }}>병원 선택 → 의료진 검색 → 진료시간 확인 → 내 의료진으로 등록</span>
         </div>
-        <span style={{ fontSize: 12, color: 'var(--t3)' }}>병원 선택 → 의료진 검색 → 진료시간 확인 → 내 의료진으로 등록</span>
       </div>
 
       {loading ? (
@@ -514,6 +536,8 @@ export default function BrowseDoctors({ onNavigate }) {
               padding: 20, cursor: 'pointer', transition: 'all .15s',
               display: 'flex', flexDirection: 'column', gap: 10,
               animation: `fadeUp .3s ease ${i * .04}s both`,
+              scrollSnapAlign: 'start',
+              scrollMarginTop: 60,
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <HospitalLogo code={h.code} size={44} radius={10} />
@@ -555,6 +579,8 @@ export default function BrowseDoctors({ onNavigate }) {
                           background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
                           cursor: 'pointer', transition: 'all .12s',
                           animation: `fadeUp .25s ease ${i * .02}s both`,
+                          scrollSnapAlign: 'start',
+                          scrollMarginTop: 60,
                         }}
                       >
                         <HospitalLogo code={d.hospital_code} size={32} radius={7} />
@@ -598,6 +624,8 @@ export default function BrowseDoctors({ onNavigate }) {
                     padding: 20, cursor: 'pointer', transition: 'all .15s',
                     display: 'flex', flexDirection: 'column', gap: 10,
                     animation: `fadeUp .3s ease ${i * .04}s both`,
+                    scrollSnapAlign: 'start',
+                    scrollMarginTop: 60,
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                       <HospitalLogo code={h.code} size={44} radius={10} />

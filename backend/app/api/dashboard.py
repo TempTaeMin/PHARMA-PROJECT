@@ -7,19 +7,40 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func, or_
 from sqlalchemy.orm import selectinload
 from datetime import datetime, timedelta
+from app.auth.deps import get_current_user
 from app.models.connection import get_db
-from app.models.database import Doctor, Hospital, VisitLog, ScheduleChange, VisitMemo
+from app.models.database import (
+    Doctor, Hospital, ScheduleChange, User, UserDoctorGrade, VisitLog, VisitMemo,
+)
 
 router = APIRouter(prefix="/api/dashboard", tags=["대시보드"])
 
 
 @router.get("/", summary="대시보드 요약 데이터")
-async def get_dashboard(db: AsyncSession = Depends(get_db)):
+async def get_dashboard(
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
     today = datetime.now()
     today_str = today.strftime("%Y-%m-%d")
     today_dow = today.weekday()
 
-    # 내 교수 (visit_grade A/B/C) + 스케줄 + 병원
+    # 내 교수 = 현재 사용자가 등급 A/B/C 매긴 의사
+    grade_rows = (await db.execute(
+        select(UserDoctorGrade).where(
+            UserDoctorGrade.user_id == user.id,
+            UserDoctorGrade.grade.in_(["A", "B", "C"]),
+        )
+    )).scalars().all()
+    grade_by_doctor = {g.doctor_id: g.grade for g in grade_rows}
+    if not grade_by_doctor:
+        return {
+            "today": today_str,
+            "today_dow": today_dow,
+            "doctors": [],
+            "recent_visits": [],
+            "recent_changes": [],
+        }
     query = (
         select(Doctor)
         .options(
@@ -28,7 +49,7 @@ async def get_dashboard(db: AsyncSession = Depends(get_db)):
             selectinload(Doctor.hospital),
             selectinload(Doctor.visit_logs),
         )
-        .where(Doctor.is_active == True, Doctor.visit_grade.in_(["A", "B", "C"]))
+        .where(Doctor.is_active == True, Doctor.id.in_(grade_by_doctor.keys()))
     )
     result = await db.execute(query)
     doctors = result.scalars().all()
@@ -71,20 +92,21 @@ async def get_dashboard(db: AsyncSession = Depends(get_db)):
             "position": d.position,
             "specialty": d.specialty,
             "hospital_name": d.hospital.name if d.hospital else None,
-            "visit_grade": d.visit_grade,
+            "visit_grade": grade_by_doctor.get(d.id),
             "notes": d.notes,
             "schedules": active_schedules,
             "date_schedules": date_scheds,
             "last_visit_date": last_visit,
         })
 
-    # 최근 방문 기록 (30일)
+    # 최근 방문 기록 (30일) — 현재 사용자 본인 것만
     doctor_ids = [d.id for d in doctors]
     visit_list = []
     if doctor_ids:
         visit_query = (
             select(VisitLog)
             .where(
+                VisitLog.user_id == user.id,
                 VisitLog.doctor_id.in_(doctor_ids),
                 VisitLog.visit_date >= today - timedelta(days=30),
             )
@@ -149,8 +171,9 @@ async def my_visits(
     year: int = Query(..., ge=2000, le=2100),
     month: int = Query(..., ge=1, le=12),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
-    """내 교수(visit_grade A/B/C) 의 한 달치 VisitLog 를 반환.
+    """내 교수(현재 사용자가 등급 A/B/C 매긴 의사) 의 한 달치 VisitLog 를 반환.
 
     - 완료 기록(성공/부재/거절) + 계획(예정) 모두 포함
     - 월간 캘린더 플래너에서 한 번에 로드해 클라이언트에서 날짜별로 분류
@@ -159,14 +182,24 @@ async def my_visits(
     start = datetime(year, month, 1, 0, 0, 0)
     end = datetime(year, month, last_day, 23, 59, 59)
 
+    graded_sub = select(UserDoctorGrade.doctor_id).where(
+        UserDoctorGrade.user_id == user.id,
+        UserDoctorGrade.grade.in_(["A", "B", "C"]),
+    )
+    grade_rows = (await db.execute(
+        select(UserDoctorGrade).where(UserDoctorGrade.user_id == user.id)
+    )).scalars().all()
+    grade_by_doctor = {g.doctor_id: g.grade for g in grade_rows}
+
     query = (
         select(VisitLog, Doctor, Hospital, VisitMemo)
         .outerjoin(Doctor, VisitLog.doctor_id == Doctor.id)
         .outerjoin(Hospital, Doctor.hospital_id == Hospital.id)
         .outerjoin(VisitMemo, VisitMemo.visit_log_id == VisitLog.id)
         .where(
+            VisitLog.user_id == user.id,
             or_(
-                Doctor.visit_grade.in_(["A", "B", "C"]),
+                Doctor.id.in_(graded_sub),
                 VisitLog.category.in_(["personal", "announcement"]),
             ),
             VisitLog.visit_date >= start,
@@ -191,7 +224,7 @@ async def my_visits(
             "doctor_name": d.name if d else None,
             "hospital_name": h.name if h else None,
             "department": d.department if d else None,
-            "visit_grade": d.visit_grade if d else None,
+            "visit_grade": grade_by_doctor.get(d.id) if d else None,
             "category": v.category,
             "title": v.title,
             "visit_date": v.visit_date.isoformat() if v.visit_date else None,

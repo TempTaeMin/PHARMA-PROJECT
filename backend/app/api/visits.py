@@ -7,14 +7,13 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
+from app.auth.deps import get_current_user
 from app.models.connection import get_db
-from app.models.database import Doctor, MemoTemplate, VisitLog, VisitMemo
+from app.models.database import Doctor, MemoTemplate, User, VisitLog, VisitMemo
 from app.schemas.schemas import AnnouncementCreate, PersonalEventCreate, SummarizeRequest
 from app.services.ai_memo import organize_memo, summarize_freeform
 
 router = APIRouter(prefix="/api/visits", tags=["방문 로그"])
-
-DEFAULT_USER_ID = 1
 
 
 def _visit_to_dict(visit: VisitLog) -> dict:
@@ -32,10 +31,13 @@ def _visit_to_dict(visit: VisitLog) -> dict:
 
 @router.post("/personal", summary="개인 일정 등록")
 async def create_personal_event(
-    data: PersonalEventCreate, db: AsyncSession = Depends(get_db)
+    data: PersonalEventCreate,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     title = (data.title or "").strip() or "내 일정"
     visit = VisitLog(
+        user_id=user.id,
         doctor_id=None,
         visit_date=data.visit_date,
         status=data.status or "예정",
@@ -50,8 +52,14 @@ async def create_personal_event(
 
 
 @router.delete("/{visit_id}", summary="방문 로그 삭제 (개인/공지 포함)")
-async def delete_visit(visit_id: int, db: AsyncSession = Depends(get_db)):
-    visit = (await db.execute(select(VisitLog).where(VisitLog.id == visit_id))).scalar_one_or_none()
+async def delete_visit(
+    visit_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    visit = (await db.execute(
+        select(VisitLog).where(VisitLog.id == visit_id, VisitLog.user_id == user.id)
+    )).scalar_one_or_none()
     if not visit:
         raise HTTPException(404, "visit not found")
     await db.delete(visit)
@@ -60,10 +68,17 @@ async def delete_visit(visit_id: int, db: AsyncSession = Depends(get_db)):
 
 
 @router.patch("/{visit_id}", summary="방문 로그 수정 (개인/공지 · doctor_id 무관)")
-async def update_visit_flat(visit_id: int, data: dict, db: AsyncSession = Depends(get_db)):
+async def update_visit_flat(
+    visit_id: int,
+    data: dict,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
     """doctor_id 없이도 동작하는 플랫 PATCH — 개인 일정/공지에서 사용.
     교수 방문의 경우 기존 /api/doctors/{doctor_id}/visits/{visit_id} 를 계속 사용."""
-    visit = (await db.execute(select(VisitLog).where(VisitLog.id == visit_id))).scalar_one_or_none()
+    visit = (await db.execute(
+        select(VisitLog).where(VisitLog.id == visit_id, VisitLog.user_id == user.id)
+    )).scalar_one_or_none()
     if not visit:
         raise HTTPException(404, "visit not found")
     allowed = {"status", "notes", "post_notes", "title", "visit_date"}
@@ -81,13 +96,16 @@ async def update_visit_flat(visit_id: int, data: dict, db: AsyncSession = Depend
 
 @router.post("/announcement", summary="업무공지 등록")
 async def create_announcement(
-    data: AnnouncementCreate, db: AsyncSession = Depends(get_db)
+    data: AnnouncementCreate,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """업무공지(category='announcement') 등록. 팀원 공유는 추후 확장."""
     title = (data.title or "").strip()
     if not title:
         raise HTTPException(400, "title is required")
     visit = VisitLog(
+        user_id=user.id,
         doctor_id=None,
         visit_date=data.visit_date,
         status="예정",
@@ -112,10 +130,10 @@ def _parse_ai(raw: Optional[str]):
         return raw
 
 
-async def _load_default_template(db: AsyncSession) -> Optional[MemoTemplate]:
+async def _load_default_template(db: AsyncSession, user_id: int) -> Optional[MemoTemplate]:
     query = (
         select(MemoTemplate)
-        .where(MemoTemplate.user_id == DEFAULT_USER_ID, MemoTemplate.is_default == True)
+        .where(MemoTemplate.user_id == user_id, MemoTemplate.is_default == True)
         .limit(1)
     )
     return (await db.execute(query)).scalar_one_or_none()
@@ -126,6 +144,7 @@ async def ai_summarize_visit(
     visit_id: int,
     payload: SummarizeRequest = SummarizeRequest(),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """VisitLog 의 메모를 AI 로 정리하여 VisitMemo 에 저장.
 
@@ -136,7 +155,7 @@ async def ai_summarize_visit(
     query = (
         select(VisitLog)
         .options(selectinload(VisitLog.doctor).selectinload(Doctor.hospital))
-        .where(VisitLog.id == visit_id)
+        .where(VisitLog.id == visit_id, VisitLog.user_id == user.id)
     )
     visit = (await db.execute(query)).scalar_one_or_none()
     if not visit:
@@ -167,7 +186,7 @@ async def ai_summarize_visit(
                 select(MemoTemplate).where(MemoTemplate.id == payload.template_id)
             )).scalar_one_or_none()
         if template is None:
-            template = await _load_default_template(db)
+            template = await _load_default_template(db, user.id)
 
         fields: list[str] = []
         prompt_addon: Optional[str] = None
@@ -210,7 +229,7 @@ async def ai_summarize_visit(
         doctor_obj = visit.doctor if is_professor else None
         hospital_obj = doctor_obj.hospital if doctor_obj else None
         memo = VisitMemo(
-            user_id=DEFAULT_USER_ID,
+            user_id=user.id,
             doctor_id=visit.doctor_id,
             visit_log_id=visit.id,
             template_id=template.id if template else None,

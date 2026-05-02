@@ -40,7 +40,6 @@ export default function AcademicEventDetailModal({ open, event, onClose, onDelet
 
   return (
     <div
-      onClick={onClose}
       style={{
         position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
         zIndex: 380, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -67,7 +66,7 @@ export default function AcademicEventDetailModal({ open, event, onClose, onDelet
               marginBottom: 8,
             }}>
               <BookOpen size={10} />
-              {isManual ? '수동 추가' : 'KMA 크롤링'}
+              {isManual ? '수동 추가' : 'KMA 자동 수집'}
             </span>
             <div style={{ fontFamily: 'Manrope', fontSize: 18, fontWeight: 800, color: 'var(--t1)', lineHeight: 1.3 }}>
               {event.name}

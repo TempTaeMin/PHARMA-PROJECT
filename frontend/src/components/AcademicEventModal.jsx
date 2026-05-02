@@ -107,7 +107,6 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
 
   return (
     <div
-      onClick={onClose}
       style={{
         position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
         zIndex: 380, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -167,8 +166,7 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {matchedLectures.map((L, i) => {
-                const grade = L.matched_doctor_grade;
-                const gcol = GRADE_COLORS[grade];
+                const isMyDoctor = !!L.matched_doctor_id;
                 return (
                   <div
                     key={i}
@@ -207,12 +205,12 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
                       {L.affiliation && (
                         <span style={{ color: 'var(--t3)' }}>· {L.affiliation}</span>
                       )}
-                      {gcol && (
+                      {isMyDoctor && (
                         <span style={{
                           padding: '2px 7px', borderRadius: 10, fontSize: 9, fontWeight: 800,
-                          background: gcol.bg, color: gcol.c, letterSpacing: '.02em',
+                          background: 'var(--ac-d)', color: 'var(--ac)', letterSpacing: '.02em',
                           fontFamily: 'Manrope', marginLeft: 'auto',
-                        }}>내 의료진 · {grade}</span>
+                        }}>내 의료진</span>
                       )}
                     </div>
                   </div>

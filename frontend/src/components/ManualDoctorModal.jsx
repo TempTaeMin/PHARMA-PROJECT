@@ -129,7 +129,7 @@ export default function ManualDoctorModal({ open, onClose, onCreated }) {
 
   return (
     <>
-      <div onClick={onClose} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 60, animation: 'fadeIn .15s' }} />
+      <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 60, animation: 'fadeIn .15s' }} />
       <div style={{
         position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
         width: 'min(560px, 92vw)', maxHeight: '92vh', overflowY: 'auto',

@@ -12,6 +12,7 @@ from sqlalchemy import select, or_
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
+from app.auth.deps import get_current_user
 from app.models.connection import get_db
 from app.models.database import (
     AcademicEvent,
@@ -19,6 +20,9 @@ from app.models.database import (
     AcademicOrganizer,
     Doctor,
     Hospital,
+    User,
+    UserAcademicPin,
+    UserDoctorGrade,
 )
 from app.services.academic_mapping import (
     departments_from_json,
@@ -61,51 +65,14 @@ HOSPITAL_ALIASES: dict[str, list[str]] = {
     "인하대병원": ["인하대학교병원", "인하대병원"],
     "길병원": ["가천대 길", "길병원"],
     "한림성심병원": ["한림대학교 성심", "한림의대 성심", "한림성심"],
-    "한림대학교강남성심병원": ["한림 강남성심", "강남성심", "한림대 강남성심"],
-    "한림대학교한강성심병원": ["한림 한강성심", "한강성심", "한림대 한강성심"],
-    "한림대학교동탄성심병원": ["한림 동탄성심", "동탄성심", "한림대 동탄성심"],
     "동국대학교일산병원": ["동국대학교 일산", "동국대일산", "동국의대 일산"],
     "부천순천향병원": ["부천순천향", "순천향대 부천", "순천향 부천"],
-    "순천향대학교서울병원": ["서울순천향", "순천향 서울", "순천향대 서울"],
-    "노원을지대학교병원": ["노원을지", "을지대 노원", "을지 노원"],
-    "의정부을지대학교병원": ["의정부을지", "을지대 의정부", "을지 의정부"],
-    "인제대학교 상계백병원": ["상계백병원", "상계백", "인제대 상계"],
-    "인제대학교 일산백병원": ["일산백병원", "일산백", "인제대 일산"],
-    "인제대학교 부산백병원": ["부산백병원", "부산백", "인제대 부산"],
-    "의정부백병원": ["의정부백", "의정부 백병원"],
-    "강동경희대학교병원": ["강동경희", "강동경희대"],
-    "동아대학교병원": ["동아대병원", "동아대학교병원", "동아의대"],
-    "고신대학교복음병원": ["고신복음", "복음병원", "고신대 복음"],
-    "영남대학교병원": ["영남대병원", "영남대학교병원", "영남의대 병원"],
-    "경북대학교병원": ["경북대병원", "경북대학교병원"],
-    "칠곡경북대학교병원": ["칠곡경북대", "칠곡경북대병원"],
-    "전남대학교병원": ["전남대병원", "전남대학교병원"],
-    "화순전남대학교병원": ["화순전남대", "화순전남대병원"],
-    "울산대학교병원": ["울산대병원", "울산대학교병원"],
-    "충북대학교병원": ["충북대병원", "충북대학교병원"],
-    "충남대학교병원": ["충남대병원", "충남대학교병원"],
-    "단국대학교의과대학부속병원": ["단국대병원", "단국대학교병원", "단국의대 병원"],
-    "전북대학교병원": ["전북대병원", "전북대학교병원"],
-    "원광대학교병원": ["원광대병원", "원광대학교병원"],
-    "부산대학교병원": ["부산대병원", "부산대학교병원"],
-    "양산부산대학교병원": ["양산부산대", "양산부산대병원"],
-    "대구가톨릭대학교병원": ["대구가톨릭", "대구가톨릭병원"],
-    "계명대학교동산병원": ["계명대 동산", "계명동산", "계명대학교 동산"],
-    "삼성창원병원": ["삼성창원"],
-    "경상국립대학교병원": ["경상국립대", "경상대병원", "경상국립대병원"],
-    "원주세브란스기독병원": ["원주세브란스", "원주기독병원"],
-    "강릉아산병원": ["강릉아산"],
-    "부천성모병원": ["부천성모"],
-    "의정부성모병원": ["의정부성모"],
-    "중앙대학교광명병원": ["중앙대 광명", "광명중앙대"],
-    "조선대학교병원": ["조선대병원", "조선대학교병원"],
-    "건양대학교병원": ["건양대병원", "건양대학교병원"],
     "국립암센터": ["국립암센터"],
     "한국원자력의학원": ["원자력의학원", "원자력병원"],
 }
 
 
-# 의대/대학 약칭 → 소속 병원 목록 (1:N).
+#  
 # affiliation 에 학교 약칭이 포함되면 해당 그룹의 **모든 병원**이 후보로 간주된다.
 # (ex) "고려의대 내과 이OO" → 고대안암/고대구로/고대안산 교수 모두 매칭 가능.
 MEDICAL_SCHOOL_GROUPS: dict[str, list[str]] = {
@@ -121,9 +88,9 @@ MEDICAL_SCHOOL_GROUPS: dict[str, list[str]] = {
     "서울대학교 의과대학":   ["서울대학교병원", "분당서울대병원"],
     "성균관의대":            ["삼성서울병원", "강북삼성병원"],
     "성균관대학교 의과대학": ["삼성서울병원", "강북삼성병원"],
-    "울산의대":              ["서울아산병원"],
-    "울산대학교 의과대학":   ["서울아산병원"],
-    "울산대학교":            ["서울아산병원"],
+    "울산의대":              ["서울아산병원", "강릉아산병원"],
+    "울산대학교 의과대학":   ["서울아산병원", "강릉아산병원"],
+    "울산대학교":            ["서울아산병원", "강릉아산병원"],
     "경희의대":              ["경희대병원"],
     "경희대학교 의과대학":   ["경희대병원"],
     "건국의대":              ["건국대학교병원"],
@@ -138,68 +105,6 @@ MEDICAL_SCHOOL_GROUPS: dict[str, list[str]] = {
     "인하대학교 의과대학":   ["인하대병원"],
     "가천의대":              ["길병원"],
     "가천대학교 의과대학":   ["길병원"],
-    "한림의대":              ["한림성심병원", "한림대학교강남성심병원", "한림대학교한강성심병원", "한림대학교동탄성심병원"],
-    "한림대학교 의과대학":   ["한림성심병원", "한림대학교강남성심병원", "한림대학교한강성심병원", "한림대학교동탄성심병원"],
-    "한림대":                ["한림성심병원", "한림대학교강남성심병원", "한림대학교한강성심병원", "한림대학교동탄성심병원"],
-    "인제의대":              ["인제대학교 상계백병원", "인제대학교 일산백병원", "인제대학교 부산백병원", "의정부백병원"],
-    "인제대학교 의과대학":   ["인제대학교 상계백병원", "인제대학교 일산백병원", "인제대학교 부산백병원", "의정부백병원"],
-    "인제대":                ["인제대학교 상계백병원", "인제대학교 일산백병원", "인제대학교 부산백병원", "의정부백병원"],
-    "순천향의대":            ["순천향대학교서울병원", "부천순천향병원"],
-    "순천향대학교 의과대학": ["순천향대학교서울병원", "부천순천향병원"],
-    "순천향대":              ["순천향대학교서울병원", "부천순천향병원"],
-    "을지의대":              ["노원을지대학교병원", "의정부을지대학교병원"],
-    "을지대학교 의과대학":   ["노원을지대학교병원", "의정부을지대학교병원"],
-    "을지대":                ["노원을지대학교병원", "의정부을지대학교병원"],
-    "동국의대":              ["동국대학교일산병원"],
-    "동국대학교 의과대학":   ["동국대학교일산병원"],
-    "동국대":                ["동국대학교일산병원"],
-    "동아의대":              ["동아대학교병원"],
-    "동아대학교 의과대학":   ["동아대학교병원"],
-    "동아대":                ["동아대학교병원"],
-    "고신의대":              ["고신대학교복음병원"],
-    "고신대학교 의과대학":   ["고신대학교복음병원"],
-    "고신대":                ["고신대학교복음병원"],
-    "영남의대":              ["영남대학교병원"],
-    "영남대학교 의과대학":   ["영남대학교병원"],
-    "영남대":                ["영남대학교병원"],
-    "경북의대":              ["경북대학교병원", "칠곡경북대학교병원"],
-    "경북대학교 의과대학":   ["경북대학교병원", "칠곡경북대학교병원"],
-    "경북대":                ["경북대학교병원", "칠곡경북대학교병원"],
-    "전남의대":              ["전남대학교병원", "화순전남대학교병원"],
-    "전남대학교 의과대학":   ["전남대학교병원", "화순전남대학교병원"],
-    "전남대":                ["전남대학교병원", "화순전남대학교병원"],
-    "충남의대":              ["충남대학교병원"],
-    "충남대학교 의과대학":   ["충남대학교병원"],
-    "충남대":                ["충남대학교병원"],
-    "충북의대":              ["충북대학교병원"],
-    "충북대학교 의과대학":   ["충북대학교병원"],
-    "충북대":                ["충북대학교병원"],
-    "단국의대":              ["단국대학교의과대학부속병원"],
-    "단국대학교 의과대학":   ["단국대학교의과대학부속병원"],
-    "단국대":                ["단국대학교의과대학부속병원"],
-    "전북의대":              ["전북대학교병원"],
-    "전북대학교 의과대학":   ["전북대학교병원"],
-    "전북대":                ["전북대학교병원"],
-    "원광의대":              ["원광대학교병원"],
-    "원광대학교 의과대학":   ["원광대학교병원"],
-    "원광대":                ["원광대학교병원"],
-    "부산의대":              ["부산대학교병원", "양산부산대학교병원"],
-    "부산대학교 의과대학":   ["부산대학교병원", "양산부산대학교병원"],
-    "부산대":                ["부산대학교병원", "양산부산대학교병원"],
-    "대구가톨릭의대":        ["대구가톨릭대학교병원"],
-    "대구가톨릭대학교 의과대학": ["대구가톨릭대학교병원"],
-    "계명의대":              ["계명대학교동산병원"],
-    "계명대학교 의과대학":   ["계명대학교동산병원"],
-    "계명대":                ["계명대학교동산병원"],
-    "조선의대":              ["조선대학교병원"],
-    "조선대학교 의과대학":   ["조선대학교병원"],
-    "조선대":                ["조선대학교병원"],
-    "건양의대":              ["건양대학교병원"],
-    "건양대학교 의과대학":   ["건양대학교병원"],
-    "건양대":                ["건양대학교병원"],
-    "경상의대":              ["경상국립대학교병원"],
-    "경상국립대학교 의과대학": ["경상국립대학교병원"],
-    "경상국립대":            ["경상국립대학교병원"],
 }
 
 
@@ -256,7 +161,10 @@ def _parse_lectures_json(raw: Optional[str]) -> list[dict]:
         return []
 
 
-def _event_to_dict(e: AcademicEvent) -> dict:
+def _event_to_dict(e: AcademicEvent, pinned_event_ids: Optional[set[int]] = None) -> dict:
+    """is_pinned 는 사용자별 (UserAcademicPin) 로 분리됐으므로, 호출자가 미리
+    조회한 pinned_event_ids set 를 전달한다."""
+    is_pinned = bool(pinned_event_ids and e.id in pinned_event_ids)
     return {
         "id": e.id,
         "name": e.name,
@@ -275,14 +183,45 @@ def _event_to_dict(e: AcademicEvent) -> dict:
         "event_code": e.event_code,
         "detail_url_external": e.detail_url_external,
         "classification_status": e.classification_status,
-        "is_pinned": bool(e.is_pinned),
+        "is_pinned": is_pinned,
         "departments": sorted({d.department for d in e.departments}),
         "lectures": _parse_lectures_json(e.lectures_json),
+        "updated_at": e.updated_at.isoformat() if e.updated_at else None,
+        "created_at": e.created_at.isoformat() if getattr(e, "created_at", None) else None,
     }
 
 
+async def _user_pinned_event_ids(
+    db: AsyncSession, user_id: int, event_ids: Optional[list[int]] = None
+) -> set[int]:
+    q = select(UserAcademicPin.event_id).where(UserAcademicPin.user_id == user_id)
+    if event_ids:
+        q = q.where(UserAcademicPin.event_id.in_(event_ids))
+    rows = (await db.execute(q)).scalars().all()
+    return set(rows)
+
+
+async def _user_graded_doctor_ids_in_names(
+    db: AsyncSession, user_id: int, names: set[str]
+) -> dict[str, list[Doctor]]:
+    """현재 사용자가 등급 매긴 의사 중 이름이 names 에 포함되는 후보 dict.
+    Doctor.visit_grade 글로벌 컬럼 사용을 UserDoctorGrade 로 대체."""
+    if not names:
+        return {}
+    sub = select(UserDoctorGrade.doctor_id).where(UserDoctorGrade.user_id == user_id)
+    rows = (await db.execute(
+        select(Doctor)
+        .options(selectinload(Doctor.hospital))
+        .where(Doctor.id.in_(sub), Doctor.name.in_(names))
+    )).scalars().all()
+    by_name: dict[str, list[Doctor]] = {}
+    for d in rows:
+        by_name.setdefault(d.name, []).append(d)
+    return by_name
+
+
 async def _summarize_matched_lecturers(
-    events: list[AcademicEvent], db: AsyncSession
+    events: list[AcademicEvent], db: AsyncSession, user_id: int
 ) -> dict[int, dict]:
     """여러 event 의 lectures_json 을 일괄 파싱 + Doctor 테이블 1회 SELECT 로
     {event_id: {count, names}} 맵 반환. N+1 회피.
@@ -303,18 +242,7 @@ async def _summarize_matched_lecturers(
     if not all_names:
         return {e.id: {"count": 0, "names": []} for e in events}
 
-    rows = (await db.execute(
-        select(Doctor)
-        .options(selectinload(Doctor.hospital))
-        .where(
-            Doctor.visit_grade.in_(["A", "B", "C"]),
-            Doctor.name.in_(all_names),
-        )
-    )).scalars().all()
-
-    by_name: dict[str, list[Doctor]] = {}
-    for d in rows:
-        by_name.setdefault(d.name, []).append(d)
+    by_name = await _user_graded_doctor_ids_in_names(db, user_id, all_names)
 
     summary: dict[int, dict] = {}
     for e in events:
@@ -381,18 +309,19 @@ async def _organizer_homepages(
 
 
 async def _enrich_events_with_summary(
-    events: list[AcademicEvent], db: AsyncSession
+    events: list[AcademicEvent], db: AsyncSession, user_id: int
 ) -> list[dict]:
     """list/upcoming/unclassified 공통 응답 빌더.
-    각 event 에 matched_doctor_count/names, organizer_homepage 주입.
+    각 event 에 matched_doctor_count/names, organizer_homepage, is_pinned(user별) 주입.
     """
-    matched = await _summarize_matched_lecturers(events, db)
+    pinned = await _user_pinned_event_ids(db, user_id, [e.id for e in events])
+    matched = await _summarize_matched_lecturers(events, db, user_id)
     homepages = await _organizer_homepages(
         {e.organizer_id for e in events if e.organizer_id}, db
     )
     result = []
     for e in events:
-        d = _event_to_dict(e)
+        d = _event_to_dict(e, pinned_event_ids=pinned)
         m = matched.get(e.id, {"count": 0, "names": []})
         d["matched_doctor_count"] = m["count"]
         d["matched_doctor_names"] = m["names"]
@@ -402,14 +331,9 @@ async def _enrich_events_with_summary(
 
 
 async def _enrich_lectures_with_doctors(
-    lectures: list[dict], db: AsyncSession
+    lectures: list[dict], db: AsyncSession, user_id: int
 ) -> list[dict]:
-    """강의 리스트에 내 교수(visit_grade A/B/C) 매칭 정보 주입.
-
-    - 이름 정규화(직위 suffix 제거) 후 visit_grade A/B/C 범위에서 완전일치 검색
-    - 동명이인이 여러 명이면 affiliation 문자열에 Doctor.hospital.name 이
-      substring 으로 포함되는 후보로 좁힘. 여전히 모호하면 매칭 포기.
-    """
+    """강의 리스트에 내 교수(UserDoctorGrade A/B/C, 현재 사용자) 매칭 정보 주입."""
     if not lectures:
         return lectures
 
@@ -420,18 +344,17 @@ async def _enrich_lectures_with_doctors(
     if not normalized_names:
         return lectures
 
-    rows = (await db.execute(
-        select(Doctor)
-        .options(selectinload(Doctor.hospital))
-        .where(
-            Doctor.visit_grade.in_(["A", "B", "C"]),
-            Doctor.name.in_(normalized_names),
-        )
-    )).scalars().all()
+    by_name = await _user_graded_doctor_ids_in_names(db, user_id, normalized_names)
 
-    by_name: dict[str, list[Doctor]] = {}
-    for d in rows:
-        by_name.setdefault(d.name, []).append(d)
+    # matched_doctor_grade 도 사용자별 — 한 번에 조회
+    all_doctor_ids = [d.id for ds in by_name.values() for d in ds]
+    grade_rows = (await db.execute(
+        select(UserDoctorGrade).where(
+            UserDoctorGrade.user_id == user_id,
+            UserDoctorGrade.doctor_id.in_(all_doctor_ids) if all_doctor_ids else False,
+        )
+    )).scalars().all() if all_doctor_ids else []
+    grade_map = {g.doctor_id: g.grade for g in grade_rows}
 
     enriched: list[dict] = []
     for lec in lectures:
@@ -443,7 +366,7 @@ async def _enrich_lectures_with_doctors(
         if matched:
             item["matched_doctor_id"] = matched.id
             item["matched_doctor_name"] = matched.name
-            item["matched_doctor_grade"] = matched.visit_grade
+            item["matched_doctor_grade"] = grade_map.get(matched.id)
             item["matched_department"] = matched.department
             item["matched_hospital_name"] = (
                 matched.hospital.name if matched.hospital else None
@@ -477,6 +400,7 @@ async def list_events(
     source: Optional[str] = None,
     limit: int = Query(200, le=2000),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     query = select(AcademicEvent).options(selectinload(AcademicEvent.departments))
 
@@ -495,7 +419,7 @@ async def list_events(
 
     query = query.order_by(AcademicEvent.start_date.asc()).limit(limit)
     rows = (await db.execute(query)).scalars().unique().all()
-    return await _enrich_events_with_summary(list(rows), db)
+    return await _enrich_events_with_summary(list(rows), db, user.id)
 
 
 @router.get("/academic-events/upcoming")
@@ -504,6 +428,7 @@ async def list_upcoming_events(
     source: Optional[str] = None,
     months: int = Query(3, ge=1, le=12),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     today = datetime.now().strftime("%Y-%m-%d")
     end = (datetime.now() + timedelta(days=30 * months)).strftime("%Y-%m-%d")
@@ -525,11 +450,14 @@ async def list_upcoming_events(
     query = query.order_by(AcademicEvent.start_date.asc())
 
     rows = (await db.execute(query)).scalars().unique().all()
-    return await _enrich_events_with_summary(list(rows), db)
+    return await _enrich_events_with_summary(list(rows), db, user.id)
 
 
 @router.get("/academic-events/unclassified")
-async def list_unclassified_events(db: AsyncSession = Depends(get_db)):
+async def list_unclassified_events(
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
     query = (
         select(AcademicEvent)
         .options(selectinload(AcademicEvent.departments))
@@ -537,7 +465,7 @@ async def list_unclassified_events(db: AsyncSession = Depends(get_db)):
         .order_by(AcademicEvent.start_date.asc())
     )
     rows = (await db.execute(query)).scalars().unique().all()
-    return await _enrich_events_with_summary(list(rows), db)
+    return await _enrich_events_with_summary(list(rows), db, user.id)
 
 
 @router.get("/academic-events/my-schedule")
@@ -545,8 +473,10 @@ async def list_my_schedule_events(
     start: str = Query(..., description="YYYY-MM-DD"),
     end: str = Query(..., description="YYYY-MM-DD"),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
-    """Schedule.jsx 월간 아젠다용. source='manual' OR is_pinned=true 합집합."""
+    """Schedule.jsx 월간 아젠다용. source='manual' OR 사용자 pin 합집합."""
+    pinned_sub = select(UserAcademicPin.event_id).where(UserAcademicPin.user_id == user.id)
     query = (
         select(AcademicEvent)
         .options(selectinload(AcademicEvent.departments))
@@ -555,24 +485,22 @@ async def list_my_schedule_events(
             AcademicEvent.start_date <= end,
             or_(
                 AcademicEvent.source == "manual",
-                AcademicEvent.is_pinned == True,  # noqa: E712
+                AcademicEvent.id.in_(pinned_sub),
             ),
         )
         .order_by(AcademicEvent.start_date.asc())
     )
     rows = (await db.execute(query)).scalars().unique().all()
-    return await _enrich_events_with_summary(list(rows), db)
+    return await _enrich_events_with_summary(list(rows), db, user.id)
 
 
 @router.get("/academic-events/my-lecturers")
 async def list_my_lecturer_events(
     months: int = Query(1, ge=1, le=12),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
-    """향후 N개월 중 내 교수(visit_grade A/B/C) 가 강사로 참여하는 이벤트.
-
-    NotificationPanel '스케줄 변경' 탭 요약 카드 소스.
-    """
+    """향후 N개월 중 내 교수(현재 사용자가 등급 매긴 의사) 가 강사로 참여하는 이벤트."""
     today = datetime.now().strftime("%Y-%m-%d")
     end = (datetime.now() + timedelta(days=30 * months)).strftime("%Y-%m-%d")
     query = (
@@ -585,7 +513,7 @@ async def list_my_lecturer_events(
         .order_by(AcademicEvent.start_date.asc())
     )
     rows = list((await db.execute(query)).scalars().unique().all())
-    matched = await _summarize_matched_lecturers(rows, db)
+    matched = await _summarize_matched_lecturers(rows, db, user.id)
     out: list[dict] = []
     for e in rows:
         m = matched.get(e.id, {"count": 0, "names": []})
@@ -610,6 +538,7 @@ async def list_events_for_doctor(
     start: str = Query(..., description="YYYY-MM-DD"),
     end: str = Query(..., description="YYYY-MM-DD"),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """[start, end] 구간 학회 중 doctor 가 강사로 매칭되거나 doctor.department 가
     이벤트 departments 에 포함되는 이벤트. DoctorScheduleHintPopup 힌트 소스.
@@ -691,8 +620,12 @@ async def sync_events(background: BackgroundTasks):
 
 
 @router.post("/academic-events")
-async def create_event(payload: dict, db: AsyncSession = Depends(get_db)):
-    """사용자가 수동으로 학회 일정을 추가한다. source='manual' 고정."""
+async def create_event(
+    payload: dict,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """수동 학회 일정 추가 (글로벌 마스터). source='manual' 고정."""
     name = (payload.get("name") or "").strip()
     start_date = (payload.get("start_date") or "").strip()
     if not name:
@@ -715,54 +648,67 @@ async def create_event(payload: dict, db: AsyncSession = Depends(get_db)):
     await db.commit()
     await db.refresh(event)
 
-    # departments relationship 은 아직 로드되지 않았으므로 재로드
     event = (await db.execute(
         select(AcademicEvent)
         .options(selectinload(AcademicEvent.departments))
         .where(AcademicEvent.id == event.id)
     )).scalar_one()
-    return _event_to_dict(event)
+    pinned = await _user_pinned_event_ids(db, user.id, [event.id])
+    return _event_to_dict(event, pinned_event_ids=pinned)
 
 
 @router.post("/academic-events/{event_id}/pin")
-async def pin_event(event_id: int, db: AsyncSession = Depends(get_db)):
-    """학회 일정을 '내 일정'(Schedule.jsx) 에 노출하도록 pin.
-
-    이미 종료된 학회(start_date < today)는 신규 pin 차단.
-    이미 pinned 된 학회는 그대로 유지(unpin 으로만 해제 가능).
-    """
+async def pin_event(
+    event_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """학회 일정을 현재 사용자의 '내 일정' 에 노출하도록 pin (UserAcademicPin)."""
     event = (await db.execute(
         select(AcademicEvent).where(AcademicEvent.id == event_id)
     )).scalar_one_or_none()
     if not event:
         raise HTTPException(404, "event not found")
 
-    # 과거 학회 신규 pin 가드
+    existing = (await db.execute(
+        select(UserAcademicPin).where(
+            UserAcademicPin.user_id == user.id, UserAcademicPin.event_id == event_id
+        )
+    )).scalar_one_or_none()
+
     today_str = datetime.now().strftime("%Y-%m-%d")
-    if event.start_date and event.start_date < today_str and not event.is_pinned:
+    if event.start_date and event.start_date < today_str and not existing:
         raise HTTPException(400, "이미 종료된 학회는 새로 등록할 수 없습니다.")
 
-    event.is_pinned = True
-    event.updated_at = datetime.utcnow()
-    await db.commit()
+    if not existing:
+        db.add(UserAcademicPin(user_id=user.id, event_id=event_id))
+        await db.commit()
     return {"status": "pinned", "id": event_id, "is_pinned": True}
 
 
 @router.delete("/academic-events/{event_id}/pin")
-async def unpin_event(event_id: int, db: AsyncSession = Depends(get_db)):
-    event = (await db.execute(
-        select(AcademicEvent).where(AcademicEvent.id == event_id)
+async def unpin_event(
+    event_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    existing = (await db.execute(
+        select(UserAcademicPin).where(
+            UserAcademicPin.user_id == user.id, UserAcademicPin.event_id == event_id
+        )
     )).scalar_one_or_none()
-    if not event:
-        raise HTTPException(404, "event not found")
-    event.is_pinned = False
-    event.updated_at = datetime.utcnow()
-    await db.commit()
+    if existing:
+        await db.delete(existing)
+        await db.commit()
     return {"status": "unpinned", "id": event_id, "is_pinned": False}
 
 
 @router.get("/academic-events/{event_id}")
-async def get_event(event_id: int, db: AsyncSession = Depends(get_db)):
+async def get_event(
+    event_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
     event = (await db.execute(
         select(AcademicEvent)
         .options(selectinload(AcademicEvent.departments))
@@ -770,11 +716,11 @@ async def get_event(event_id: int, db: AsyncSession = Depends(get_db)):
     )).scalar_one_or_none()
     if not event:
         raise HTTPException(404, "event not found")
-    payload = _event_to_dict(event)
+    pinned = await _user_pinned_event_ids(db, user.id, [event.id])
+    payload = _event_to_dict(event, pinned_event_ids=pinned)
     payload["lectures"] = await _enrich_lectures_with_doctors(
-        payload["lectures"], db
+        payload["lectures"], db, user.id
     )
-    # organizer_homepage 주입 (상세 모달 '주최단체 홈페이지' 보조 링크용)
     if event.organizer_id:
         hp_map = await _organizer_homepages({event.organizer_id}, db)
         payload["organizer_homepage"] = hp_map.get(event.organizer_id)
@@ -784,9 +730,12 @@ async def get_event(event_id: int, db: AsyncSession = Depends(get_db)):
 
 
 @router.delete("/academic-events/{event_id}")
-async def delete_event(event_id: int, db: AsyncSession = Depends(get_db)):
-    """수동으로 추가한 학회(source='manual') 만 삭제 허용.
-    크롤링 데이터는 동기화 시 재생성되므로 UI 삭제 의미가 없어 거부."""
+async def delete_event(
+    event_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """수동으로 추가한 학회(source='manual') 만 삭제 허용 (글로벌 마스터)."""
     event = (await db.execute(
         select(AcademicEvent).where(AcademicEvent.id == event_id)
     )).scalar_one_or_none()
@@ -804,6 +753,7 @@ async def update_event_departments(
     event_id: int,
     payload: dict,
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     departments = payload.get("departments") or []
     event = (await db.execute(
@@ -821,7 +771,8 @@ async def update_event_departments(
     event.updated_at = datetime.utcnow()
     await db.commit()
     await db.refresh(event)
-    return _event_to_dict(event)
+    pinned = await _user_pinned_event_ids(db, user.id, [event.id])
+    return _event_to_dict(event, pinned_event_ids=pinned)
 
 
 @router.post("/academic-events/reclassify")

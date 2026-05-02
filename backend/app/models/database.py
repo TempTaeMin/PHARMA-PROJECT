@@ -1,6 +1,6 @@
 """Database models for PharmScheduler"""
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, Text, ForeignKey, Enum as SQLEnum
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, Text, ForeignKey, UniqueConstraint, Enum as SQLEnum
 from sqlalchemy.orm import relationship, declarative_base
 import enum
 
@@ -11,6 +11,79 @@ class VisitGrade(str, enum.Enum):
     A = "A"  # 주1회
     B = "B"  # 격주
     C = "C"  # 월1회
+
+
+# ─────────── 인증 / 팀 (1.0 OAuth 도입) ───────────
+
+class User(Base):
+    """Google OAuth 가입 사용자."""
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    google_sub = Column(String(64), unique=True, nullable=False, index=True)
+    email = Column(String(200), unique=True, nullable=False, index=True)
+    name = Column(String(200))
+    picture = Column(String(500))
+    created_at = Column(DateTime, default=datetime.utcnow)
+    last_login_at = Column(DateTime, default=datetime.utcnow)
+
+
+class Team(Base):
+    """팀. 1.0 에서는 가입 시 자동 생성되는 1인 팀이 전부 (멤버 초대 UI 는 후속)."""
+    __tablename__ = "teams"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(200), nullable=False)
+    owner_user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class TeamMember(Base):
+    __tablename__ = "team_members"
+    __table_args__ = (UniqueConstraint("team_id", "user_id", name="uq_team_user"),)
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    team_id = Column(Integer, ForeignKey("teams.id"), nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    role = Column(String(20), default="owner", nullable=False)  # "owner" | "member"
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+# ─────────── 사용자별 의견 (글로벌 마스터에서 분리) ───────────
+
+class UserDoctorGrade(Base):
+    """의사별 '내 교수 등급' (사용자 단위). Doctor.visit_grade 를 대체."""
+    __tablename__ = "user_doctor_grades"
+    __table_args__ = (UniqueConstraint("user_id", "doctor_id", name="uq_userdoctor_grade"),)
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=False, index=True)
+    grade = Column(String(1), nullable=False)  # A/B/C
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+
+class UserDoctorMemo(Base):
+    """의사별 개인 메모 (사용자 단위). Doctor.memo 를 대체."""
+    __tablename__ = "user_doctor_memos"
+    __table_args__ = (UniqueConstraint("user_id", "doctor_id", name="uq_userdoctor_memo"),)
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    doctor_id = Column(Integer, ForeignKey("doctors.id"), nullable=False, index=True)
+    memo = Column(Text)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+
+class UserAcademicPin(Base):
+    """학회 일정 핀 (사용자 단위). AcademicEvent.is_pinned 를 대체."""
+    __tablename__ = "user_academic_pins"
+    __table_args__ = (UniqueConstraint("user_id", "event_id", name="uq_user_academic_pin"),)
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    event_id = Column(Integer, ForeignKey("academic_events.id"), nullable=False, index=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
 
 
 class Hospital(Base):
@@ -132,6 +205,7 @@ class VisitLog(Base):
     __tablename__ = "visit_logs"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
     doctor_id = Column(Integer, ForeignKey("doctors.id", ondelete="SET NULL"), nullable=True)
     visit_date = Column(DateTime, nullable=False)
     status = Column(String(20))  # "성공", "부재", "거절", "예정"
@@ -212,15 +286,21 @@ class AcademicEventDepartment(Base):
 
 
 class MemoTemplate(Base):
-    """메모/회의록 정리용 템플릿 (AI 프롬프트 구성)."""
+    """메모/회의록/보고서 정리용 템플릿 (AI 프롬프트 구성).
+
+    scope 로 메모용/보고서용을 구분. is_default 는 메모(scope in memo/both) 안에서만
+    의미있는 플래그 — 보고서는 매번 생성 시 명시 선택하는 워크플로우.
+    """
     __tablename__ = "memo_templates"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, default=1, nullable=False)  # 인증 도입 전까지 1
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
     name = Column(String(200), nullable=False)
     fields = Column(Text, nullable=False)  # JSON array of field names
     prompt_addon = Column(Text)
     is_default = Column(Boolean, default=False)
+    scope = Column(String(20), default="memo", nullable=False)  # "memo" | "report" | "both"
+    default_report_type = Column(String(20), nullable=True)  # "daily" | "weekly" | None
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
@@ -230,7 +310,7 @@ class VisitMemo(Base):
     __tablename__ = "visits_memo"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, default=1, nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
     doctor_id = Column(Integer, ForeignKey("doctors.id", ondelete="SET NULL"), nullable=True)
     visit_log_id = Column(Integer, ForeignKey("visit_logs.id", ondelete="SET NULL"), nullable=True)
     template_id = Column(Integer, ForeignKey("memo_templates.id"), nullable=True)
@@ -248,6 +328,27 @@ class VisitMemo(Base):
 
     doctor = relationship("Doctor")
     visit_log = relationship("VisitLog")
+    template = relationship("MemoTemplate")
+
+
+class Report(Base):
+    """MR 일일/주간 보고서. 메모들을 묶어 AI로 종합 정리한 결과를 저장."""
+    __tablename__ = "reports"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    report_type = Column(String(20), nullable=False)  # "daily" | "weekly"
+    period_start = Column(String(10), nullable=False)  # "YYYY-MM-DD"
+    period_end = Column(String(10), nullable=False)
+    title = Column(String(300))
+    source_memo_ids = Column(Text)    # JSON array — 묶인 메모 id (memos 직접 종합 모드)
+    source_report_ids = Column(Text)  # JSON array — 묶인 일일 보고서 id (주간 메타 모드)
+    raw_combined = Column(Text)       # 합쳐진 원본 텍스트 (감사용)
+    ai_summary = Column(Text)         # JSON {title, summary: {...}}
+    template_id = Column(Integer, ForeignKey("memo_templates.id"), nullable=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
     template = relationship("MemoTemplate")
 
 

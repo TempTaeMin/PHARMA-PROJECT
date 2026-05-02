@@ -280,7 +280,6 @@ export default function Schedule({ onNavigate }) {
       {/* ── Complete Modal (기존 유지) ── */}
       {completing && (
         <div
-          onClick={() => setCompleting(null)}
           style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.4)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
           <div
@@ -398,6 +397,8 @@ function DayRow({ year, month, day, isToday, visits, events, filter, nextUpVisit
             : 'transparent',
           opacity: dim ? 0.55 : 1,
           borderRadius: 10,
+          scrollSnapAlign: 'start',
+          scrollMarginTop: 200,
         }}
       >
         {/* LEFT */}

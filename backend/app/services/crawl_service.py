@@ -150,16 +150,23 @@ async def save_crawl_result(db: AsyncSession, crawl_result: CrawlResult) -> dict
 
 
 async def crawl_my_doctors(db: AsyncSession) -> dict:
-    """등록된 '내 교수'들의 진료일정만 크롤링합니다."""
-    from app.crawlers.factory import get_crawler
+    """모든 사용자가 등급 매긴 '관심 의사' 합집합 진료일정만 크롤링합니다.
 
-    # 내 교수만 (visit_grade A/B/C + external_id 있는 교수만 크롤링 가능).
+    OAuth 멀티유저: 누가 트리거하든 시스템 전체에서 누군가가 A/B/C 등급으로
+    표시한 의사들을 한 번에 크롤. 한 달 1회 운영 정책에 부합.
+    """
+    from app.crawlers.factory import get_crawler
+    from app.models.database import UserDoctorGrade
+
+    graded_sub = select(UserDoctorGrade.doctor_id).where(
+        UserDoctorGrade.grade.in_(["A", "B", "C"])
+    ).distinct()
     # 수동 등록 의사(source='manual')는 외부 크롤러로 가져올 수 없으므로 제외.
     result = await db.execute(
         select(Doctor)
         .where(Doctor.is_active == True)
         .where(Doctor.source == "crawler")
-        .where(Doctor.visit_grade.in_(["A", "B", "C"]))
+        .where(Doctor.id.in_(graded_sub))
         .where(Doctor.external_id != None)
         .where(Doctor.external_id != "")
     )

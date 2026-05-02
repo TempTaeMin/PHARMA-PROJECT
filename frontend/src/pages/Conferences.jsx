@@ -59,6 +59,18 @@ function defaultRange() {
   return { presetKey: DEFAULT_PRESET_KEY, from, to };
 }
 
+function formatAbsoluteDateTime(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return null;
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  const hh = String(d.getHours()).padStart(2, '0');
+  const min = String(d.getMinutes()).padStart(2, '0');
+  return `${yyyy}.${mm}.${dd} ${hh}:${min}`;
+}
+
 export default function Conferences({ onNavigate, mode }) {
   const pickMode = mode === 'pick-for-add';
   const [tab, setTab] = useState('matched'); // matched | all | unclassified
@@ -66,6 +78,7 @@ export default function Conferences({ onNavigate, mode }) {
   const [range, setRange] = useState(defaultRange);
   const [syncStatus, setSyncStatus] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [lastSyncAt, setLastSyncAt] = useState(() => localStorage.getItem('academic-last-sync'));
 
   const {
     data: rangeRaw, loading: rangeLoading, refresh: refreshRange,
@@ -82,18 +95,6 @@ export default function Conferences({ onNavigate, mode }) {
   const sourceRaw = tab === 'unclassified' ? unclassifiedRaw : rangeRaw;
   const loading = tab === 'unclassified' ? unLoading : rangeLoading;
   const events = Array.isArray(sourceRaw) ? sourceRaw : [];
-
-  // 히어로 요약 — 현재 선택 기간 기준
-  const heroStats = useMemo(() => {
-    const base = Array.isArray(rangeRaw) ? rangeRaw : [];
-    const matched = base.filter(e => (e.matched_doctor_count || 0) > 0).length;
-    return { total: base.length, matched };
-  }, [rangeRaw]);
-
-  const presetLabel = useMemo(() => {
-    const p = RANGE_PRESETS.find(x => x.key === range.presetKey);
-    return p ? p.label : '지정 기간';
-  }, [range.presetKey]);
 
   const selectPreset = (key) => {
     if (key === 'custom') {
@@ -125,21 +126,59 @@ export default function Conferences({ onNavigate, mode }) {
     return tabFiltered.filter(e => (e.departments || []).includes(deptFilter));
   }, [tabFiltered, deptFilter]);
 
+  // 백엔드 데이터에서 가장 최근 업데이트 시각 — localStorage 가 비어 있을 때 폴백
+  const latestEventUpdate = useMemo(() => {
+    const list = Array.isArray(rangeRaw) ? rangeRaw : [];
+    let max = null;
+    list.forEach(e => {
+      const t = e.updated_at || e.created_at;
+      if (t && (!max || t > max)) max = t;
+    });
+    return max;
+  }, [rangeRaw]);
+
+  const effectiveLastSync = (() => {
+    if (lastSyncAt && latestEventUpdate) {
+      return lastSyncAt > latestEventUpdate ? lastSyncAt : latestEventUpdate;
+    }
+    return lastSyncAt || latestEventUpdate;
+  })();
+
+  function markSyncDone() {
+    const now = new Date().toISOString();
+    localStorage.setItem('academic-last-sync', now);
+    setLastSyncAt(now);
+  }
+
   async function handleSync() {
+    if (syncStatus === 'syncing' || syncStatus === 'progress') return;
     setSyncStatus('syncing');
     try {
       await academicApi.sync();
-      setSyncStatus('dispatched');
+      // 백엔드는 BackgroundTasks 로 fire-and-forget — 실제 크롤은 30~120초 소요.
+      // progress 단계로 유지하면서 60초 후 자동 새로고침 + 완료 표시.
+      setSyncStatus('progress');
       setTimeout(() => {
         invalidate('academic');
         refreshRange();
         refreshUnclassified();
-        setSyncStatus(null);
-      }, 2000);
+        markSyncDone();
+        setSyncStatus('done');
+        setTimeout(() => setSyncStatus(null), 4000);
+      }, 60000);
     } catch {
       setSyncStatus('error');
-      setTimeout(() => setSyncStatus(null), 3000);
+      setTimeout(() => setSyncStatus(null), 5000);
     }
+  }
+
+  function handleManualRefresh() {
+    invalidate('academic');
+    refreshRange();
+    refreshUnclassified();
+    markSyncDone();
+    setSyncStatus('done');
+    setTimeout(() => setSyncStatus(null), 3000);
   }
 
   function handleEventUpdated() {
@@ -186,56 +225,48 @@ export default function Conferences({ onNavigate, mode }) {
         </div>
       )}
 
-      {/* ── 헤더 ── */}
+      {/* ── 상단 sticky 영역: 업데이트 정보 + 탭 + 진료과 chip 전체 고정 ── */}
       <div style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        marginBottom: 16, gap: 16, flexWrap: 'wrap',
+        position: 'sticky', top: 56, zIndex: 5,
+        background: 'var(--bg-0)',
+        margin: '0 -4px',
+        padding: '6px 4px 0',
       }}>
-        <div>
-          <div style={{ fontFamily: 'Manrope', fontSize: 22, fontWeight: 700, letterSpacing: '-.02em' }}>학회 일정</div>
-          <div style={{ fontSize: 12, color: 'var(--t3)', marginTop: 4 }}>
-            내 의료진이 강사로 참여하는 학회를 우선으로 · 매월 1일 자동 갱신
-          </div>
+      {/* ── 업데이트 정보 + 일정 업데이트 버튼 ── */}
+      <div style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'flex-end',
+        marginBottom: 12, gap: 10, flexWrap: 'wrap',
+      }}>
+        <div style={{ fontSize: 11, color: 'var(--t3)', fontFamily: "'JetBrains Mono'" }}>
+          마지막 업데이트: {formatAbsoluteDateTime(effectiveLastSync) || '기록 없음'}
         </div>
-        <button onClick={handleSync} disabled={syncStatus === 'syncing'} style={{
-          display: 'flex', alignItems: 'center', gap: 6,
-          padding: '8px 14px', borderRadius: 10,
-          background: syncStatus === 'error' ? '#fee2e2' : 'var(--bg-1)',
-          border: '1px solid var(--bd-s)', cursor: 'pointer',
-          fontSize: 12, fontWeight: 600, color: 'var(--t1)', fontFamily: 'inherit',
-        }}>
-          <RefreshCw size={13} style={{ animation: syncStatus === 'syncing' ? 'spin 1s linear infinite' : 'none' }} />
-          {syncStatus === 'syncing' ? '동기화 중…' : syncStatus === 'dispatched' ? '동기화 요청됨' : syncStatus === 'error' ? '실패' : '동기화'}
+        <button
+          onClick={handleSync}
+          disabled={syncStatus === 'syncing' || syncStatus === 'progress'}
+          style={{
+            display: 'flex', alignItems: 'center', gap: 6,
+            padding: '8px 14px', borderRadius: 10,
+            background: syncStatus === 'error' ? '#fee2e2'
+              : syncStatus === 'done' ? 'var(--gn-d)'
+              : 'var(--bg-1)',
+            border: '1px solid ' + (syncStatus === 'done' ? 'var(--gn)' : 'var(--bd-s)'),
+            cursor: (syncStatus === 'syncing' || syncStatus === 'progress') ? 'not-allowed' : 'pointer',
+            fontSize: 12, fontWeight: 600,
+            color: syncStatus === 'done' ? 'var(--gn)' : 'var(--t1)',
+            fontFamily: 'inherit',
+            opacity: (syncStatus === 'syncing' || syncStatus === 'progress') ? .7 : 1,
+          }}
+        >
+          <RefreshCw size={13} style={{
+            animation: (syncStatus === 'syncing' || syncStatus === 'progress')
+              ? 'spin 1.2s linear infinite' : 'none',
+          }} />
+          {syncStatus === 'syncing' ? '요청 중…'
+            : syncStatus === 'progress' ? '업데이트 중…'
+            : syncStatus === 'done' ? '완료'
+            : syncStatus === 'error' ? '실패'
+            : '일정 업데이트'}
         </button>
-      </div>
-
-      {/* ── 히어로 요약 ── */}
-      <div style={{
-        background: 'linear-gradient(135deg, var(--ac-d), #eef2ff)',
-        border: '1px solid var(--ac)',
-        borderRadius: 14, padding: '16px 20px', marginBottom: 16,
-        display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap',
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <GraduationCap size={28} style={{ color: 'var(--ac)' }} />
-          <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ac)', letterSpacing: '.08em' }}>
-            {presetLabel}
-          </div>
-        </div>
-        <div style={{ display: 'flex', gap: 24, flex: 1, flexWrap: 'wrap' }}>
-          <div>
-            <div style={{ fontSize: 10, color: 'var(--t3)', fontWeight: 600 }}>전체 학회</div>
-            <div style={{ fontFamily: 'Manrope', fontSize: 26, fontWeight: 800, color: 'var(--t1)', lineHeight: 1.1 }}>
-              {heroStats.total}<span style={{ fontSize: 13, marginLeft: 2 }}>개</span>
-            </div>
-          </div>
-          <div>
-            <div style={{ fontSize: 10, color: 'var(--t3)', fontWeight: 600 }}>내 의료진 강사 참여</div>
-            <div style={{ fontFamily: 'Manrope', fontSize: 26, fontWeight: 800, color: 'var(--ac)', lineHeight: 1.1 }}>
-              {heroStats.matched}<span style={{ fontSize: 13, marginLeft: 2 }}>개</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* ── 탭 + 기간 필터 ── */}
@@ -261,12 +292,12 @@ export default function Conferences({ onNavigate, mode }) {
         </div>
 
         {tab !== 'unclassified' && (
-          <div style={{
+          <div className="dept-chip-row" style={{
             display: 'flex', alignItems: 'center', gap: 6, padding: 4,
             background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 10,
-            flexWrap: 'wrap',
+            flexWrap: 'nowrap', overflowX: 'auto', maxWidth: '100%',
           }}>
-            <CalendarRange size={13} style={{ color: 'var(--t3)', marginLeft: 6 }} />
+            <CalendarRange size={13} style={{ color: 'var(--t3)', marginLeft: 6, flexShrink: 0 }} />
             {RANGE_PRESETS.map(p => (
               <button key={p.key} onClick={() => selectPreset(p.key)} style={{
                 padding: '6px 12px', borderRadius: 7, border: 'none',
@@ -274,12 +305,14 @@ export default function Conferences({ onNavigate, mode }) {
                 color: range.presetKey === p.key ? 'var(--ac)' : 'var(--t3)',
                 fontWeight: range.presetKey === p.key ? 600 : 500, fontSize: 12,
                 fontFamily: 'inherit', cursor: 'pointer', whiteSpace: 'nowrap',
+                flexShrink: 0,
               }}>{p.label}</button>
             ))}
             {range.presetKey === 'custom' && (
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 4,
                 marginLeft: 4, paddingLeft: 8, borderLeft: '1px solid var(--bd-s)',
+                flexShrink: 0,
               }}>
                 <input type="date" value={range.from}
                   onChange={e => setRange(prev => ({ ...prev, from: e.target.value }))}
@@ -299,7 +332,7 @@ export default function Conferences({ onNavigate, mode }) {
         <div
           className="dept-chip-row"
           style={{
-            display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16,
+            display: 'flex', alignItems: 'center', gap: 10, marginBottom: 0,
             overflowX: 'auto', flexWrap: 'nowrap',
             scrollSnapType: 'x proximity',
             padding: '2px 2px 6px',
@@ -341,6 +374,65 @@ export default function Conferences({ onNavigate, mode }) {
           ))}
         </div>
       )}
+      </div>
+
+      {/* ── 일정 업데이트 진행 상황 배너 (sticky 밖, 정상 흐름) ── */}
+      {(syncStatus === 'syncing' || syncStatus === 'progress' || syncStatus === 'done' || syncStatus === 'error') && (
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 10,
+          padding: '10px 14px', marginTop: 12, marginBottom: 4, borderRadius: 10,
+          background: syncStatus === 'error' ? '#fee2e2'
+            : syncStatus === 'done' ? 'var(--gn-d)'
+            : 'var(--ac-d)',
+          border: '1px solid ' + (
+            syncStatus === 'error' ? '#fca5a5'
+            : syncStatus === 'done' ? 'var(--gn)'
+            : 'var(--ac)'
+          ),
+          color: syncStatus === 'error' ? '#7f1d1d'
+            : syncStatus === 'done' ? 'var(--gn)'
+            : 'var(--ac)',
+          fontSize: 12,
+        }}>
+          {(syncStatus === 'syncing' || syncStatus === 'progress') && (
+            <RefreshCw size={14} style={{ animation: 'spin 1.2s linear infinite', flexShrink: 0 }} />
+          )}
+          <div style={{ flex: 1, lineHeight: 1.5 }}>
+            {syncStatus === 'syncing' && (
+              <span><b>업데이트 요청 중…</b> 서버에 작업을 전달하고 있습니다.</span>
+            )}
+            {syncStatus === 'progress' && (
+              <div>
+                <div><b>학회 일정 정보를 가져오는 중</b> — 30초~2분 정도 소요됩니다.</div>
+                <div>완료되면 목록이 자동으로 새로고침됩니다.</div>
+              </div>
+            )}
+            {syncStatus === 'done' && (
+              <span><b>업데이트 완료</b> — 최신 학회 일정이 반영되었습니다.</span>
+            )}
+            {syncStatus === 'error' && (
+              <span><b>업데이트 실패</b> — 잠시 후 다시 시도해주세요.</span>
+            )}
+          </div>
+          {syncStatus === 'progress' && (
+            <button
+              onClick={handleManualRefresh}
+              style={{
+                padding: '5px 10px', borderRadius: 7,
+                background: 'var(--bg-1)', color: 'var(--ac)',
+                border: '1px solid var(--ac)',
+                fontSize: 11, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+                whiteSpace: 'nowrap', flexShrink: 0,
+              }}
+            >
+              지금 새로고침
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* 카드와 필터 사이 여백 */}
+      <div style={{ height: 12 }} />
 
       {/* ── 이벤트 목록 ── */}
       {loading && !sourceRaw ? (
@@ -371,6 +463,8 @@ export default function Conferences({ onNavigate, mode }) {
                   borderRadius: 12, padding: 16, display: 'flex', gap: 14, cursor: 'pointer',
                   animation: `fadeUp .25s ease ${i * .03}s both`,
                   transition: 'border-color .15s, transform .15s',
+                  scrollSnapAlign: 'start',
+                  scrollMarginTop: 180,
                 }}
                 onMouseEnter={ev => ev.currentTarget.style.borderColor = 'var(--ac)'}
                 onMouseLeave={ev => ev.currentTarget.style.borderColor = matchedCount > 0 ? 'var(--ac)' : 'var(--bd-s)'}

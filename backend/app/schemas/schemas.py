@@ -218,6 +218,8 @@ class MemoTemplateBase(BaseModel):
     fields: list[str]
     prompt_addon: Optional[str] = None
     is_default: Optional[bool] = False
+    scope: Optional[str] = "memo"  # "memo" | "report" | "both"
+    default_report_type: Optional[str] = None  # "daily" | "weekly" | None
 
 class MemoTemplateCreate(MemoTemplateBase):
     pass
@@ -227,6 +229,8 @@ class MemoTemplateUpdate(BaseModel):
     fields: Optional[list[str]] = None
     prompt_addon: Optional[str] = None
     is_default: Optional[bool] = None
+    scope: Optional[str] = None
+    default_report_type: Optional[str] = None
 
 class MemoTemplateResponse(MemoTemplateBase):
     id: int
@@ -277,3 +281,30 @@ class VisitMemoResponse(BaseModel):
 class SummarizeRequest(BaseModel):
     template_id: Optional[int] = None
     raw_memo: Optional[str] = None  # 서버 DB 값 대신 사용할 원본 메모(미저장 상태 지원)
+
+
+# --- Reports (일일/주간 MR 보고서) ---
+class ReportCreate(BaseModel):
+    report_type: str  # "daily" | "weekly"
+    period_start: str  # "YYYY-MM-DD"
+    period_end: str
+    memo_ids: Optional[list[int]] = None      # 메모 직접 종합
+    report_ids: Optional[list[int]] = None    # 일일 보고서 합치기 (주간)
+    title: Optional[str] = None
+    template_id: Optional[int] = None
+
+
+class ReportResponse(BaseModel):
+    id: int
+    user_id: int
+    report_type: str
+    period_start: str
+    period_end: str
+    title: Optional[str] = None
+    source_memo_ids: Optional[list[int]] = None
+    source_report_ids: Optional[list[int]] = None
+    raw_combined: Optional[str] = None
+    ai_summary: Optional[Any] = None  # parsed JSON
+    template_id: Optional[int] = None
+    created_at: datetime
+    updated_at: Optional[datetime] = None

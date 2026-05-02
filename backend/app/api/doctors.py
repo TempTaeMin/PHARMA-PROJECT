@@ -1,12 +1,17 @@
 """의료진/교수 관리 API"""
 import uuid
 from datetime import datetime
+from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
+from app.auth.deps import get_current_user
 from app.models.connection import get_db
-from app.models.database import Doctor, Hospital, DoctorSchedule, DoctorDateSchedule, VisitLog
+from app.models.database import (
+    Doctor, Hospital, DoctorSchedule, DoctorDateSchedule, User,
+    UserDoctorGrade, UserDoctorMemo, VisitLog,
+)
 from app.schemas.schemas import (
     DoctorBase, DoctorResponse, DoctorWithSchedule,
     DoctorUpdate, DoctorScheduleCreate, DoctorDateScheduleCreate,
@@ -14,6 +19,68 @@ from app.schemas.schemas import (
 )
 
 router = APIRouter(prefix="/api/doctors", tags=["의료진 관리"])
+
+
+# ─────────── 사용자별 등급/메모 헬퍼 ───────────
+
+async def _load_user_doctor_grades(
+    db: AsyncSession, user_id: int, doctor_ids: Optional[list[int]] = None
+) -> dict[int, str]:
+    q = select(UserDoctorGrade).where(UserDoctorGrade.user_id == user_id)
+    if doctor_ids:
+        q = q.where(UserDoctorGrade.doctor_id.in_(doctor_ids))
+    rows = (await db.execute(q)).scalars().all()
+    return {r.doctor_id: r.grade for r in rows}
+
+
+async def _load_user_doctor_memos(
+    db: AsyncSession, user_id: int, doctor_ids: Optional[list[int]] = None
+) -> dict[int, str]:
+    q = select(UserDoctorMemo).where(UserDoctorMemo.user_id == user_id)
+    if doctor_ids:
+        q = q.where(UserDoctorMemo.doctor_id.in_(doctor_ids))
+    rows = (await db.execute(q)).scalars().all()
+    return {r.doctor_id: (r.memo or "") for r in rows}
+
+
+async def _upsert_user_grade(
+    db: AsyncSession, user_id: int, doctor_id: int, grade: Optional[str]
+):
+    """grade 가 None/빈 문자면 row 삭제 (등급 해제). 값 있으면 upsert."""
+    existing = (await db.execute(
+        select(UserDoctorGrade).where(
+            UserDoctorGrade.user_id == user_id,
+            UserDoctorGrade.doctor_id == doctor_id,
+        )
+    )).scalar_one_or_none()
+    if not grade:
+        if existing:
+            await db.delete(existing)
+        return
+    if existing:
+        existing.grade = grade
+    else:
+        db.add(UserDoctorGrade(user_id=user_id, doctor_id=doctor_id, grade=grade))
+
+
+async def _upsert_user_memo(
+    db: AsyncSession, user_id: int, doctor_id: int, memo: Optional[str]
+):
+    """memo 가 None/빈 문자면 row 삭제. 있으면 upsert."""
+    existing = (await db.execute(
+        select(UserDoctorMemo).where(
+            UserDoctorMemo.user_id == user_id,
+            UserDoctorMemo.doctor_id == doctor_id,
+        )
+    )).scalar_one_or_none()
+    if not memo:
+        if existing:
+            await db.delete(existing)
+        return
+    if existing:
+        existing.memo = memo
+    else:
+        db.add(UserDoctorMemo(user_id=user_id, doctor_id=doctor_id, memo=memo))
 
 
 # 슬롯 → 기본 시간 매핑 (사용자 입력 누락 시 폴백)
@@ -24,16 +91,33 @@ _SLOT_DEFAULT_TIMES = {
 }
 
 
-def _doctor_to_response_dict(doctor: Doctor, *, hospital_name: str | None = None) -> dict:
+def _doctor_to_response_dict(
+    doctor: Doctor,
+    *,
+    hospital_name: str | None = None,
+    user_grade: Optional[str] = None,
+    user_memo: Optional[str] = None,
+) -> dict:
     """Doctor → DoctorResponse dict + hospital_name + linked record 정보 합성.
 
-    linked_doctor 가 selectinload 으로 로딩되어 있을 때만 linked 정보를 채움.
-    로딩 안 된 경우 추가 쿼리는 하지 않음 (N+1 회피).
+    visit_grade / memo 는 사용자별 분리 (UserDoctorGrade / UserDoctorMemo) 로
+    이동했으므로, 호출자가 user_grade / user_memo 를 미리 조회해 주입한다.
+    Doctor 테이블의 visit_grade / memo 컬럼은 폐기 예정 (1.x DROP).
     """
     base = DoctorResponse.model_validate(doctor).model_dump()
+    base["visit_grade"] = user_grade
+    base["memo"] = user_memo
     base["hospital_name"] = hospital_name if hospital_name is not None else (
         doctor.hospital.name if doctor.hospital else None
     )
+    base["hospital_source"] = doctor.hospital.source if doctor.hospital else None
+
+    # 최근 방문일 — visit_logs 가 selectinload 으로 로딩된 경우만 계산 (N+1 회피)
+    try:
+        visit_dates = [v.visit_date for v in doctor.visit_logs if v.visit_date]
+        base["last_visit_date"] = max(visit_dates).isoformat() if visit_dates else None
+    except Exception:
+        base["last_visit_date"] = None
 
     # linked_doctor 가 있고 이미 로딩됐으면 정보 합성
     linked = None
@@ -65,39 +149,61 @@ async def list_doctors(
     my_only: bool = False,
     status: str = "active",  # "active" (기본) | "inactive" | "all"
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """등록된 의료진 목록을 조회합니다.
 
-    - my_only=true: 내 교수만 (visit_grade A/B)
-    - status='active': 활성 의사만 (기본). 비활성 의사 잘못 클릭 등으로 보였으면 안 됨.
-    - status='inactive': 이직/퇴직 처리된 의사만 (복원 UI 용).
-    - status='all': 모두 (관리자 시나리오).
+    - my_only=true: 내 교수만 (UserDoctorGrade A/B, 현재 사용자 한정)
+    - visit_grade=A|B|C: 해당 등급으로 매긴 의사만 (현재 사용자 한정)
+    - status='active': 활성 의사만 (기본). status='inactive': 비활성만. 'all': 모두.
     """
     query = select(Doctor).options(
         selectinload(Doctor.hospital),
         selectinload(Doctor.linked_doctor).selectinload(Doctor.hospital),
+        selectinload(Doctor.visit_logs),
     )
     if status == "active":
         query = query.where(Doctor.is_active == True)
     elif status == "inactive":
         query = query.where(Doctor.is_active == False)
-    # status == "all" 이면 필터 없음
     if my_only:
-        query = query.where(Doctor.visit_grade.in_(["A", "B"]))
+        sub = select(UserDoctorGrade.doctor_id).where(
+            UserDoctorGrade.user_id == user.id,
+            UserDoctorGrade.grade.in_(["A", "B"]),
+        )
+        query = query.where(Doctor.id.in_(sub))
+    if visit_grade:
+        sub = select(UserDoctorGrade.doctor_id).where(
+            UserDoctorGrade.user_id == user.id,
+            UserDoctorGrade.grade == visit_grade,
+        )
+        query = query.where(Doctor.id.in_(sub))
     if hospital_id:
         query = query.where(Doctor.hospital_id == hospital_id)
     if department:
         query = query.where(Doctor.department == department)
-    if visit_grade:
-        query = query.where(Doctor.visit_grade == visit_grade)
 
     result = await db.execute(query)
     doctors = result.scalars().all()
-    return [_doctor_to_response_dict(d) for d in doctors]
+    doctor_ids = [d.id for d in doctors]
+    grade_map = await _load_user_doctor_grades(db, user.id, doctor_ids)
+    memo_map = await _load_user_doctor_memos(db, user.id, doctor_ids)
+    return [
+        _doctor_to_response_dict(
+            d,
+            user_grade=grade_map.get(d.id),
+            user_memo=memo_map.get(d.id),
+        )
+        for d in doctors
+    ]
 
 
 @router.get("/{doctor_id}", summary="의료진 상세 (일정 포함)")
-async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
+async def get_doctor(
+    doctor_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
     """의료진 상세 정보와 진료일정을 조회합니다."""
     query = (
         select(Doctor)
@@ -106,6 +212,7 @@ async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
             selectinload(Doctor.date_schedules),
             selectinload(Doctor.hospital),
             selectinload(Doctor.linked_doctor).selectinload(Doctor.hospital),
+            selectinload(Doctor.visit_logs),
         )
         .where(Doctor.id == doctor_id)
     )
@@ -125,17 +232,32 @@ async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
     ]
     date_scheds.sort(key=lambda x: (x["schedule_date"], x["time_slot"]))
 
-    response = _doctor_to_response_dict(doctor)
+    grade_map = await _load_user_doctor_grades(db, user.id, [doctor.id])
+    memo_map = await _load_user_doctor_memos(db, user.id, [doctor.id])
+    response = _doctor_to_response_dict(
+        doctor,
+        user_grade=grade_map.get(doctor.id),
+        user_memo=memo_map.get(doctor.id),
+    )
     response["schedules"] = [s.__dict__ for s in doctor.schedules if s.is_active]
     response["date_schedules"] = date_scheds
     return response
 
 
-@router.post("/", summary="의료진 등록", response_model=DoctorResponse)
-async def create_doctor(data: DoctorBase, db: AsyncSession = Depends(get_db)):
-    """담당 의료진을 등록합니다. source 미지정 시 'manual' 기본,
-    external_id 미지정 시 MANUAL-{8자리} 자동 발급."""
+@router.post("/", summary="의료진 등록")
+async def create_doctor(
+    data: DoctorBase,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """담당 의료진을 등록합니다 (글로벌 마스터). source 미지정 시 'manual',
+    external_id 미지정 시 MANUAL-{8자리} 자동 발급.
+
+    payload 의 visit_grade / memo 가 있으면 등록자(user) 의 사용자별 데이터로
+    분리 저장."""
     payload = data.model_dump(exclude_unset=True)
+    user_grade = payload.pop("visit_grade", None)
+    user_memo = payload.pop("memo", None)
     if not payload.get("source"):
         payload["source"] = "manual"
     if payload["source"] == "manual" and not payload.get("external_id"):
@@ -144,18 +266,31 @@ async def create_doctor(data: DoctorBase, db: AsyncSession = Depends(get_db)):
     db.add(doctor)
     await db.commit()
     await db.refresh(doctor)
-    return doctor
+    if user_grade:
+        await _upsert_user_grade(db, user.id, doctor.id, user_grade)
+    if user_memo:
+        await _upsert_user_memo(db, user.id, doctor.id, user_memo)
+    if user_grade or user_memo:
+        await db.commit()
+    return _doctor_to_response_dict(
+        doctor, user_grade=user_grade, user_memo=user_memo,
+    )
 
 
 @router.patch("/{doctor_id}", summary="의료진 정보 수정")
 async def update_doctor(
-    doctor_id: int, data: dict, db: AsyncSession = Depends(get_db)
+    doctor_id: int,
+    data: dict,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
-    """의료진 정보를 수정합니다 (방문등급, 메모, 비활성화 사유 등).
+    """의료진 정보를 수정합니다.
 
-    is_active=False 로 전환 시 deactivated_at 자동 설정,
-    deactivated_reason 같이 보내면 함께 저장 ('transferred' | 'retired' | 'mistake' 등).
-    True 로 복귀 시 deactivated_* 자동 클리어.
+    - visit_grade / memo: 사용자별 (UserDoctorGrade / UserDoctorMemo upsert)
+    - is_active / department / position / deactivated_reason / linked_doctor_id:
+      글로벌 마스터 변경 (모든 사용자에게 영향)
+
+    is_active=False 로 전환 시 deactivated_at 자동 설정. True 복귀 시 자동 클리어.
     """
     query = select(Doctor).where(Doctor.id == doctor_id)
     result = await db.execute(query)
@@ -163,8 +298,14 @@ async def update_doctor(
     if not doctor:
         raise HTTPException(status_code=404, detail="의료진을 찾을 수 없습니다.")
 
+    # 사용자별 컬럼: UserDoctorGrade / UserDoctorMemo 로 분리
+    if "visit_grade" in data:
+        await _upsert_user_grade(db, user.id, doctor_id, data.pop("visit_grade"))
+    if "memo" in data:
+        await _upsert_user_memo(db, user.id, doctor_id, data.pop("memo"))
+
     allowed_fields = {
-        "visit_grade", "memo", "is_active", "department", "position",
+        "is_active", "department", "position",
         "deactivated_reason", "linked_doctor_id",
     }
     was_active = doctor.is_active
@@ -204,7 +345,13 @@ async def update_doctor(
 
     await db.commit()
     await db.refresh(doctor)
-    return DoctorResponse.model_validate(doctor)
+    grade_map = await _load_user_doctor_grades(db, user.id, [doctor_id])
+    memo_map = await _load_user_doctor_memos(db, user.id, [doctor_id])
+    return _doctor_to_response_dict(
+        doctor,
+        user_grade=grade_map.get(doctor_id),
+        user_memo=memo_map.get(doctor_id),
+    )
 
 
 # ─── 수동 진료 일정 입력 ───
@@ -331,10 +478,12 @@ async def delete_manual_schedule(
 # --- 방문 기록 ---
 @router.post("/{doctor_id}/visits", summary="방문 기록 등록")
 async def create_visit_log(
-    doctor_id: int, data: VisitLogCreate, db: AsyncSession = Depends(get_db)
+    doctor_id: int,
+    data: VisitLogCreate,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """방문 기록을 등록합니다. doctor/hospital snapshot 도 함께 저장."""
-    # 의사·병원 정보 로드 (snapshot 용)
     doctor = (await db.execute(
         select(Doctor).options(selectinload(Doctor.hospital)).where(Doctor.id == doctor_id)
     )).scalar_one_or_none()
@@ -342,6 +491,7 @@ async def create_visit_log(
         raise HTTPException(404, "의료진을 찾을 수 없습니다.")
 
     visit = VisitLog(
+        user_id=user.id,
         doctor_id=doctor_id,
         **data.model_dump(exclude={"doctor_id"}),
         doctor_name_snapshot=doctor.name,
@@ -355,11 +505,15 @@ async def create_visit_log(
 
 
 @router.get("/{doctor_id}/visits", summary="방문 기록 조회")
-async def list_visit_logs(doctor_id: int, db: AsyncSession = Depends(get_db)):
-    """특정 의료진의 방문 기록을 조회합니다."""
+async def list_visit_logs(
+    doctor_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """특정 의료진의 방문 기록을 조회합니다 (현재 사용자 한정)."""
     query = (
         select(VisitLog)
-        .where(VisitLog.doctor_id == doctor_id)
+        .where(VisitLog.doctor_id == doctor_id, VisitLog.user_id == user.id)
         .order_by(VisitLog.visit_date.desc())
     )
     result = await db.execute(query)
@@ -372,10 +526,15 @@ async def update_visit_log(
     visit_id: int,
     data: dict,
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """방문 기록 수정. 예정(계획) → 실행 결과 전환에도 사용."""
     visit = (await db.execute(
-        select(VisitLog).where(VisitLog.id == visit_id, VisitLog.doctor_id == doctor_id)
+        select(VisitLog).where(
+            VisitLog.id == visit_id,
+            VisitLog.doctor_id == doctor_id,
+            VisitLog.user_id == user.id,
+        )
     )).scalar_one_or_none()
     if not visit:
         raise HTTPException(404, "방문 기록을 찾을 수 없습니다.")
@@ -398,10 +557,15 @@ async def delete_visit_log(
     doctor_id: int,
     visit_id: int,
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """예정된 방문만 삭제 가능. 이미 실행된 기록은 보호."""
     visit = (await db.execute(
-        select(VisitLog).where(VisitLog.id == visit_id, VisitLog.doctor_id == doctor_id)
+        select(VisitLog).where(
+            VisitLog.id == visit_id,
+            VisitLog.doctor_id == doctor_id,
+            VisitLog.user_id == user.id,
+        )
     )).scalar_one_or_none()
     if not visit:
         raise HTTPException(404, "방문 기록을 찾을 수 없습니다.")

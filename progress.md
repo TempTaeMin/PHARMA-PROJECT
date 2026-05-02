@@ -20,6 +20,64 @@
 
 ---
 
+## 2026-04-29 — MR 일일/주간 보고서 시스템 + AI 백본 교체 + 메모 UX 보강
+
+### 1) 보고서 시스템 신규 (메인 작업)
+
+배경: MR 이 일일·주간 단위로 활동을 종합해 상사 보고에 쓸 수 있는 출력물이 필요. 메모 단건만으로는 부족, AI 가 다건을 묶어 핵심 활동/이슈/다음 액션 등으로 정리하고 부족한 부분은 사용자가 docx 로 받아 워드에서 직접 편집하는 워크플로우로 설계.
+
+**Backend**
+- `backend/app/models/database.py` — `Report` 테이블 신규. 컬럼: `report_type`(daily/weekly), `period_start/end`, `title`, `source_memo_ids`/`source_report_ids`(JSON 배열, 직접/메타 모드 분기), `raw_combined`(감사용 합본), `ai_summary`(JSON), `template_id` FK. 주간은 일일 보고서들을 합치는 메타 모드도 지원(`source_report_ids`).
+- `backend/app/schemas/schemas.py` — `ReportCreate`/`ReportResponse`. 생성 요청은 `memo_ids` 또는 `report_ids` 중 하나만 허용(서로 배타).
+- `backend/app/api/reports.py` 신규 — POST(생성), GET 리스트/상세, POST `{id}/regenerate`(AI 재정리), DELETE, GET `{id}/docx`(다운로드). 한글 파일명은 RFC 5987 `filename*=UTF-8''...` 형식.
+- `_collect_items_from_memos` / `_collect_items_from_reports` 헬퍼로 두 경로 통합. `_ai_summary_to_text()` 가 단건 메모의 구조화 JSON 을 평문으로 풀어 raw_combined 에 합침.
+- `backend/app/services/ai_memo.py` 에 `summarize_report(items, report_type, period_label, prompt_addon)` 추가. 일일/주간 별 system prompt 분기, JSON 응답 강제.
+- `backend/app/main.py` 에 `reports_router` include.
+- `requirements.txt` — `google-genai>=0.4.0`, `python-docx>=1.1.0` 추가.
+
+**Frontend**
+- `frontend/src/components/ReportGenerator.jsx` 신규 — 모달. 모드: `daily`(메모 자동 수집), `daily-from-memos`(미리 선택된 메모 ID 배열), `weekly`(직접 메모 종합 또는 일일 보고서 합치기). 템플릿 선택 가능. 생성 후 `onOpenReport` 로 바로 상세 모달 띄움.
+- `frontend/src/components/ReportDetail.jsx` 신규 — 상세/편집/재정리/docx 다운로드/삭제. 다운로드는 `fetch` → `blob` → `URL.createObjectURL` 패턴.
+- `frontend/src/api/client.js` — `reportApi` (list/get/create/regenerate/remove/docxUrl) 추가.
+- `frontend/src/pages/Memos.jsx`
+  - 상단에 `메모 / 보고서` 탭 추가. `view` state 로 분기.
+  - 보고서 탭: `[+ 일일 보고서]` `[+ 주간 보고서]` 액션 + `ReportCard` 리스트.
+  - 메모 다중 선택: 카드에 체크박스, 1개 이상 선택 시 floating bar (`fixed; bottom: 18; translate-x: 50%`) 가 떠올라 `[일일 보고서로 만들기]` 버튼 노출 → `daily-from-memos` 모드로 ReportGenerator 오픈.
+
+### 2) AI 백본 교체 — Claude Haiku → Gemini Flash
+
+비용 대비 효용 판단으로 단건 정리/보고서 종합 모두 `gemini-2.5-flash-lite` 단일 모델로 통일. 부족한 부분은 사용자가 docx 받아 직접 편집(워크플로우 일부).
+
+- `backend/app/services/ai_memo.py`
+  - `MODEL = "claude-haiku-4-5-20251001"` 제거, `GEMINI_MODEL = "gemini-2.5-flash-lite"` 도입.
+  - `_get_client()` (anthropic) → `_get_gemini_client()` 로 교체. `GEMINI_API_KEY` 또는 `GOOGLE_API_KEY` 환경변수 사용.
+  - 공용 헬퍼 `_gemini_json_call(system_prompt, user_prompt, max_tokens)` — `response_mime_type="application/json"` 으로 JSON 강제, 빈 응답/파싱 실패 케이스 핸들링.
+  - 기존 함수들 모두 새 헬퍼로 재구현: `organize_memo`, `summarize_freeform` (공지/개인일정), `summarize_report` (신규).
+- `backend/.env` 에 `GEMINI_API_KEY=...` 추가 필요. `ANTHROPIC_API_KEY` 는 더 이상 사용하지 않으나 제거는 자유.
+
+### 3) 메모 페이지 UX 보강
+
+- `frontend/src/pages/Memos.jsx`
+  - 상단 검색·필터 버튼 + 필터 패널 + 탭 전체를 `position: sticky; top: 56px` 컨테이너로 묶음 (헤더 높이 오프셋). 배경 `var(--bg-0)` 로 카드 위로 비치지 않게.
+  - 기본 날짜 범위 `오늘-7일 ~ 오늘` (`DEFAULT_FROM`/`DEFAULT_TO` 모듈 상수, `ymdMinusDays(7)` 헬퍼). 기본 범위에서는 `anyFilter` ON 표시 안 띄우도록 `dateChanged` 비교 추가, 초기화 시 빈 문자열이 아닌 기본 범위로 리셋.
+  - `enteredWithDoctor` 분기: 의료진 상세에서 `initialFilters.doctor_id` 와 함께 진입한 경우 기본 기간 필터를 풀어 해당 교수 전 기록 노출 + 상단에 `[← 의료진 상세로 돌아가기]` 버튼(`onNavigate('my-doctors', { doctorId })`).
+  - `reloadTemplates` 가 `invalidate('memo-templates')` 호출 — 템플릿 변경 후 다른 페이지/모달이 stale 캐시 안 쥐도록.
+
+### 사용자 액션 필요
+1. `backend && pip install -r requirements.txt` (google-genai, python-docx 신규).
+2. `backend/.env` 에 `GEMINI_API_KEY=AIza...` 추가 (Google AI Studio).
+3. SQLite `reports` 테이블은 `Base.metadata.create_all` 경로로 자동 생성됨(서버 재시작 시).
+4. 백엔드 재시작 → 메모 페이지에서 보고서 탭 동작/메모 다중선택 floating bar 동작 확인.
+
+### 검증 포인트
+- 메모 탭에서 다중 선택 → floating bar → 일일 보고서 생성 → 상세 모달 자동 오픈
+- 보고서 탭에서 [일일/주간] 직접 생성, 주간은 일일 보고서 합치기 모드도 가능
+- AI 재정리 / docx 다운로드(한글 파일명 정상) / 삭제
+- 메모 페이지 스크롤 시 상단 검색·필터·탭 sticky 유지, 기본 7일 범위에서는 필터 ON 인디케이터 안 뜸
+- `MyDoctors` 상세에서 메모 전체보기로 진입 → 기간 필터 풀려 있음 + 돌아가기 버튼 노출
+
+---
+
 ## 2026-04-28 세션(2) — 진료 시간표 표시 캘린더로 통일 + 새 디자인 적용
 
 ### 배경
@@ -2077,26 +2135,22 @@ Phase 1 정찰에서 "전남대학교병원(JNUH) + 화순전남대학교병원(
 
 ### 새 파일 (untracked, 커밋 전)
 - **Backend**
-  - `backend/.env.example` — 환경변수 템플릿
-  - `backend/app/api/memos.py` — 메모 CRUD + AI summarize 엔드포인트
-  - `backend/app/api/visits.py` — 방문 로그 CRUD
-  - `backend/app/services/ai_memo.py` — Claude Haiku 호출 (`organize_memo()`), 동기 블로킹
-  - `backend/scripts/fix_visit_tz.py` — 방문 타임존 보정 스크립트
+  - `backend/app/api/reports.py` — 일일/주간 보고서 CRUD + 재정리 + docx 다운로드
 - **Frontend**
-  - `frontend/src/components/MemoDetail.jsx`, `MemoEditor.jsx`, `TemplateSettings.jsx`
-  - `frontend/src/components/PersonalEventEditor.jsx`, `VisitDetailModal.jsx`
-  - `frontend/src/pages/Memos.jsx`
-- **기타**
-  - `.gitignore` — 루트 gitignore 최초 추가
+  - `frontend/src/components/ReportGenerator.jsx` — 보고서 생성 모달 (daily / daily-from-memos / weekly)
+  - `frontend/src/components/ReportDetail.jsx` — 보고서 상세/편집/재정리/docx 다운로드/삭제
+- **백엔드 의존성** — `requirements.txt` 에 `google-genai`, `python-docx` 추가 → `pip install -r requirements.txt` 필요
+- **백엔드 환경변수** — `.env` 에 `GEMINI_API_KEY` 추가 필요 (Anthropic 키는 미사용)
 
-### 수정된 파일 (unstaged)
-- Backend: `app/main.py`, `api/dashboard.py`, `models/*`, `schemas/schemas.py`, `tasks/*`, `pharma_scheduler.db`, `requirements.txt`
-- Frontend: `App.jsx`, `api/client.js`, `components/{AddEventBottomSheet,DailySchedule,DoctorScheduleHintPopup,SelectMeetingTime}.jsx`, `hooks/useMonthCalendar.js`, `pages/{Conferences,Dashboard,MyDoctors}.jsx`, `package.json`
+### 수정된 파일 (unstaged, 2026-04-29 작업분 기준)
+- **Backend**: `app/main.py`(reports 라우터 등록), `models/database.py`(Report 테이블), `schemas/schemas.py`(ReportCreate/Response), `services/ai_memo.py`(Gemini 전환), `api/academic.py`, `api/doctors.py`, `api/memos.py`, `requirements.txt`, `pharma_scheduler.db`
+- **Frontend**: `pages/Memos.jsx`(보고서 탭/다중선택/sticky filter), `api/client.js`(reportApi), `api/cache.js`, 기존 컴포넌트 다수(`AcademicEvent*`, `AddEventBottomSheet`, `DailySchedule`, `DailyTimeline`, `MonthCalendar`, `NotificationPanel`, `PersonalEventEditor`, `SelectMeetingTime`, `TemplateSettings`, `WorkAnnouncementEditor` 등) — 진료 시간표 캘린더 통일/의료진 상세 정리 작업 잔여분
 
-### 삭제된 파일
-- `backend/app/crawlers/academic/healthmedia_event_crawler.py`
-
-**다음 세션에서 해야 할 것**: 이 변경분들을 논리 단위로 묶어 커밋 — AI 메모 시스템 도입 / 대시보드 UX 픽스 / 크롤러 정리 등으로 분리하는 것이 자연스럽다.
+**다음 세션에서 해야 할 것**: 변경분을 논리 단위로 묶어 커밋
+1. **보고서 시스템 도입** — `api/reports.py` (untracked), `models/database.py`, `schemas/schemas.py`, `services/ai_memo.py`, `api/client.js`, `pages/Memos.jsx`, `components/ReportGenerator.jsx` `ReportDetail.jsx` (untracked), `requirements.txt`, `main.py`
+2. **AI 백본 Claude→Gemini 교체** — `services/ai_memo.py` 의 `_get_client/_get_gemini_client` 부분만 묶어 별 커밋도 가능 (위 1번에 합쳐도 무방)
+3. **메모 페이지 UX (sticky/7일 기본/다중선택)** — `pages/Memos.jsx`
+4. **잔여 캘린더 통일/UX 작업** — 4-28 세션에서 시작했지만 미커밋된 컴포넌트 변경분
 
 ---
 
@@ -2104,7 +2158,7 @@ Phase 1 정찰에서 "전남대학교병원(JNUH) + 화순전남대학교병원(
 
 - **병원 로고 보완** — 교수 탐색에서 로고 14곳이 저해상도, SCHBC 1곳 누락. 향후 교체 예정.
 - **KBSMC 월간 전환** — 강북삼성병원 주간→월간 스케줄 전환 완료(2026-04-10). 유사 전환을 다른 병원에 적용할 수 있는지 재검토 가능.
-- **AI 메모 동기 블로킹** — `/api/memos/{id}/summarize` 가 Claude Haiku 응답을 기다리며 request 를 블록. 길어지면 FastAPI worker 고갈 위험. 백그라운드 태스크(Celery 이미 있음 `tasks/celery_app.py`) 로 이전 검토.
+- **AI 메모 동기 블로킹** — `/api/memos/{id}/summarize` 와 `/api/reports` 가 Gemini Flash 응답을 기다리며 request 를 블록. 보고서는 다건 합쳐 호출이라 단건 메모보다 더 길어질 수 있음. FastAPI worker 고갈 위험 — 백그라운드 태스크(Celery 이미 있음 `tasks/celery_app.py`) 로 이전 검토.
 - **캐시 TTL 2분** — 대시보드는 mount 시 refresh 로 해결했지만 Memos/Conferences 등은 stale 데이터가 남을 수 있음. 필요 시 페이지별 동일 패턴 적용.
 - **학회 동기화 진행 상황 미노출** — sync 가 BackgroundTasks 로 비동기 실행되므로 완료 시점을 프론트가 알 수 없음. 현재는 2초 후 refresh 로 대충 잡지만, KMA 크롤링이 실제로 수십 초~수 분 걸릴 수 있음. 추후 task_id 기반 polling 엔드포인트 필요.
 - **기존 academic_events 행의 신규 필드 백필** — 마이그레이션으로 컬럼만 추가되고 값은 NULL. 동기화 재실행해야 기존 행도 업데이트됨 (sync 로직이 external_key 로 기존 행 업데이트함).
@@ -2121,7 +2175,14 @@ VisitLog (visits.py)
 VisitMemo (memos.py)
   ├─ raw_memo         ← 방문 완료 시점 입력
   └─ ai_summary       ← JSON { title, summary: { 논의내용, 결과, ... } }
-    └─ services/ai_memo.py:organize_memo() 가 Claude Haiku 로 생성
+    └─ services/ai_memo.py:organize_memo() 가 Gemini Flash (gemini-2.5-flash-lite) 로 생성
+
+Report (reports.py) — 일일/주간 종합
+  ├─ source_memo_ids / source_report_ids ← 묶을 원본 (직접/메타 모드)
+  ├─ raw_combined     ← 합본 평문 (감사용)
+  └─ ai_summary       ← JSON { title, summary: {...} }
+    └─ services/ai_memo.py:summarize_report() 가 Gemini Flash 로 생성
+    └─ /api/reports/{id}/docx 로 워드 문서 다운로드 (python-docx)
 ```
 `GET /api/dashboard/my-visits` 가 `VisitLog ⟕ VisitMemo` outer join 으로 양쪽을 한 번에 내려준다 (`dashboard.py:162~205`).
 

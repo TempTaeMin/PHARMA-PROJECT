@@ -1,18 +1,37 @@
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 const WS_BASE = API_BASE.replace('http', 'ws');
 
+// 401 응답 시 호출되는 콜백 (App.jsx 에서 등록)
+let _onUnauthorized = null;
+export function setUnauthorizedHandler(fn) {
+  _onUnauthorized = fn;
+}
+
 async function request(path, options = {}) {
   const url = `${API_BASE}${path}`;
   const res = await fetch(url, {
+    credentials: 'include',  // 세션 쿠키 전송
     headers: { 'Content-Type': 'application/json', ...options.headers },
     ...options,
   });
+  if (res.status === 401) {
+    _onUnauthorized?.();
+    const err = await res.json().catch(() => ({ detail: 'Unauthorized' }));
+    throw new Error(err.detail || 'Unauthorized');
+  }
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: res.statusText }));
     throw new Error(err.detail || `API Error ${res.status}`);
   }
   return res.json();
 }
+
+// ─── Auth ───
+export const authApi = {
+  me: () => request('/auth/me'),
+  logout: () => request('/auth/logout', { method: 'POST' }),
+  loginUrl: () => `${API_BASE}/auth/google/login`,
+};
 
 // ─── Hospitals ───
 export const hospitalApi = {
@@ -163,10 +182,31 @@ export const memoApi = {
 };
 
 export const memoTemplateApi = {
-  list: () => request('/api/memo-templates'),
+  list: (params = {}) => {
+    const qs = new URLSearchParams(
+      Object.entries(params).filter(([, v]) => v !== undefined && v !== null && v !== '')
+    ).toString();
+    return request(`/api/memo-templates${qs ? '?' + qs : ''}`);
+  },
   create: (data) => request('/api/memo-templates', { method: 'POST', body: JSON.stringify(data) }),
   update: (id, data) => request(`/api/memo-templates/${id}`, { method: 'PUT', body: JSON.stringify(data) }),
   remove: (id) => request(`/api/memo-templates/${id}`, { method: 'DELETE' }),
+};
+
+// ─── Reports (일일/주간 보고서) ───
+export const reportApi = {
+  list: (params = {}) => {
+    const qs = new URLSearchParams(
+      Object.entries(params).filter(([, v]) => v !== undefined && v !== null && v !== '')
+    ).toString();
+    return request(`/api/reports${qs ? '?' + qs : ''}`);
+  },
+  get: (id) => request(`/api/reports/${id}`),
+  create: (data) => request('/api/reports', { method: 'POST', body: JSON.stringify(data) }),
+  regenerate: (id) => request(`/api/reports/${id}/regenerate`, { method: 'POST' }),
+  remove: (id) => request(`/api/reports/${id}`, { method: 'DELETE' }),
+  // docx 다운로드 URL — fetch + blob 으로 처리 가능
+  docxUrl: (id) => `${API_BASE}/api/reports/${id}/docx`,
 };
 
 // ─── Notifications ───

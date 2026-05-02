@@ -142,7 +142,6 @@ function Section({ slot, doctors, visits, visitedDoctorIds, overdueSet, overdueD
           if (already) return null; // 이미 방문 기록이 있으면 숨김 (중복 방지)
           const isOverdue = overdueSet.has(doctor.id);
           const overdueInfo = overdueDoctors.find(o => o.doctor.id === doctor.id);
-          const gc = GC[doctor.visit_grade] || GC.B;
           return (
             <div key={doctor.id} style={{
               padding: '10px 12px', borderRadius: 10,
@@ -153,12 +152,6 @@ function Section({ slot, doctors, visits, visitedDoctorIds, overdueSet, overdueD
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2 }}>
                   <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)' }}>{doctor.name}</div>
-                  {doctor.visit_grade && (
-                    <span style={{
-                      padding: '1px 5px', borderRadius: 4, fontSize: 9, fontWeight: 700,
-                      fontFamily: "'JetBrains Mono'", background: gc.bg, color: gc.c,
-                    }}>{doctor.visit_grade}</span>
-                  )}
                   {isOverdue && (
                     <span style={{
                       display: 'inline-flex', alignItems: 'center', gap: 2,

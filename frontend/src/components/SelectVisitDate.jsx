@@ -90,7 +90,7 @@ export default function SelectVisitDate({ open, doctor, initialDate, onBack, onC
   const selectedClosed = selectedOverride?.allClosed && !selectedOverride?.hasOpen;
 
   return (
-    <div onClick={onBack} style={{
+    <div style={{
       position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
       zIndex: 350, display: 'flex', alignItems: 'center', justifyContent: 'center',
       padding: 20, animation: 'fadeIn .18s ease',

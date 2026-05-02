@@ -51,10 +51,41 @@ async def _migrate_visit_logs(conn):
         await conn.execute(text("ALTER TABLE visit_logs ADD COLUMN title VARCHAR(200)"))
 
 
+async def _migrate_memo_templates(conn):
+    """memo_templates: scope / default_report_type 컬럼 추가 (있으면 skip)."""
+    res = await conn.execute(text("PRAGMA table_info(memo_templates)"))
+    rows = res.fetchall()
+    if not rows:
+        return
+    existing = {row[1] for row in rows}
+    if "scope" not in existing:
+        await conn.execute(text(
+            "ALTER TABLE memo_templates ADD COLUMN scope VARCHAR(20) NOT NULL DEFAULT 'memo'"
+        ))
+    if "default_report_type" not in existing:
+        await conn.execute(text(
+            "ALTER TABLE memo_templates ADD COLUMN default_report_type VARCHAR(20)"
+        ))
+
+
+async def _migrate_visit_logs_user_id(conn):
+    """visit_logs 에 user_id 추가. 기존 row 는 reset_for_oauth.py 가 비움."""
+    res = await conn.execute(text("PRAGMA table_info(visit_logs)"))
+    rows = res.fetchall()
+    if not rows:
+        return
+    existing = {row[1] for row in rows}
+    if "user_id" not in existing:
+        # SQLite ALTER 는 NOT NULL 추가 불가 → nullable 로 추가, 코드 레벨에서 NOT NULL 보장
+        await conn.execute(text("ALTER TABLE visit_logs ADD COLUMN user_id INTEGER"))
+
+
 async def init_db():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
         await _migrate_visit_logs(conn)
+        await _migrate_memo_templates(conn)
+        await _migrate_visit_logs_user_id(conn)
 
 
 async def get_db():

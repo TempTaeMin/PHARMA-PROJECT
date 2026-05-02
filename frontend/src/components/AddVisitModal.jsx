@@ -56,7 +56,6 @@ export default function AddVisitModal({ open, dateStr, doctors = [], onClose, on
 
   return (
     <div
-      onClick={onClose}
       style={{
         position: 'fixed', inset: 0, background: 'rgba(0,0,0,.45)',
         zIndex: 200, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -144,7 +143,6 @@ export default function AddVisitModal({ open, dateStr, doctors = [], onClose, on
             <div>
               {filtered.map(d => {
                 const isSelected = selectedDoctorId === d.id;
-                const gc = GC[d.visit_grade] || GC.B;
                 return (
                   <button
                     key={d.id}
@@ -158,16 +156,7 @@ export default function AddVisitModal({ open, dateStr, doctors = [], onClose, on
                     }}
                   >
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2 }}>
-                        <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)' }}>{d.name}</span>
-                        {d.visit_grade && (
-                          <span style={{
-                            padding: '1px 5px', borderRadius: 4,
-                            fontSize: 9, fontWeight: 700, fontFamily: "'JetBrains Mono'",
-                            background: gc.bg, color: gc.c,
-                          }}>{d.visit_grade}</span>
-                        )}
-                      </div>
+                      <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)', marginBottom: 2 }}>{d.name}</div>
                       <div style={{ fontSize: 11, color: 'var(--t3)' }}>
                         {d.hospital_name} · {d.department}
                       </div>

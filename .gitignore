@@ -26,3 +26,13 @@ build/
 .idea/
 .DS_Store
 Thumbs.db
+
+# 크롤러 정찰용 임시 HTML/JS 덤프 (커밋 X)
+backend/_scratch/
+backend/tmp-probe/
+backend/*_tmp.html
+backend/*.log
+
+# Claude Code 스크래치 디렉토리
+.claude/
+plans/

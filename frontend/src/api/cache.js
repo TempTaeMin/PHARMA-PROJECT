@@ -18,6 +18,7 @@ const TTL = {
   crawl: 10 * 60 * 1000,      // 10분
   notifications: 30 * 1000,   // 30초
   academic: 60 * 60 * 1000,   // 1시간 (자주 안 바뀜)
+  'memo-templates': 5 * 60 * 1000, // 5분
 };
 
 export function getCached(key) {

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { CheckCircle, Trash2, ChevronLeft, ChevronRight, RotateCcw, BookOpen, MapPin } from 'lucide-react';
+import { CheckCircle, Trash2, ChevronLeft, ChevronRight, RotateCcw, BookOpen, MapPin, Megaphone } from 'lucide-react';
 
 const DOW_KO = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
 const DOW_SHORT = ['일', '월', '화', '수', '목', '금', '토'];
@@ -86,9 +86,19 @@ export default function DailySchedule({
 
   const shiftStrip = (delta) => setStripStart(s => addDays(s, delta));
 
-  // ─ 타임라인 항목(visits만)을 시각 순 정렬 ─
+  // ─ 공지사항은 학회처럼 상단 고정. 타임라인에서는 제외 ─
+  const announcements = useMemo(
+    () => visits.filter(v => v.category === 'announcement'),
+    [visits]
+  );
+  const timelineVisits = useMemo(
+    () => visits.filter(v => v.category !== 'announcement'),
+    [visits]
+  );
+
+  // ─ 타임라인 항목(공지 제외 visits)을 시각 순 정렬 ─
   const items = useMemo(() => {
-    return visits.map(v => ({
+    return timelineVisits.map(v => ({
       id: `v-${v.id}`,
       time: hhmm(v.visit_date) || '09:00',
       minutes: v.visit_date
@@ -96,7 +106,7 @@ export default function DailySchedule({
         : 0,
       visit: v,
     })).sort((a, b) => a.minutes - b.minutes);
-  }, [visits]);
+  }, [timelineVisits]);
 
   // ─ NEXT UP: 지금 시각 이후 첫 예정 visit ─
   const nextUpId = useMemo(() => {
@@ -109,12 +119,19 @@ export default function DailySchedule({
     return candidates[0]?.id || null;
   }, [items, dateStr, todayStr]);
 
-  const count = items.length + events.length;
-  const completedCount = visits.filter(v => v.status === '성공').length;
-  const plannedCount = visits.filter(v => v.status === '예정').length;
+  const count = items.length + events.length + announcements.length;
+  const completedCount = timelineVisits.filter(v => v.status === '성공').length;
+  const plannedCount = timelineVisits.filter(v => v.status === '예정').length;
 
   return (
     <div>
+      {/* ── 상단 고정 영역: 날짜 타이틀 + 주간 스트립 + 통계 bar ── */}
+      <div style={{
+        position: 'sticky', top: 56, zIndex: 5,
+        background: 'var(--bg-0)',
+        margin: '0 -6px',
+        padding: '0 6px',
+      }}>
       {/* ── 날짜 타이틀 헤더 ── */}
       <div style={{
         display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
@@ -287,6 +304,67 @@ export default function DailySchedule({
           )}
         </div>
       )}
+      </div>
+
+      {/* ── 업무공지 섹션 ── */}
+      {announcements.length > 0 && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 14 }}>
+          {announcements.map(an => (
+            <button
+              key={an.id}
+              onClick={() => onOpenDetail?.(an)}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 10,
+                padding: '10px 12px', borderRadius: 10,
+                background: '#fffbeb',
+                border: '1px solid #fde68a',
+                cursor: 'pointer', fontFamily: 'inherit',
+                textAlign: 'left',
+                transition: 'transform .12s, box-shadow .12s',
+                scrollSnapAlign: 'start',
+                scrollMarginTop: 180,
+              }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = '0 4px 10px rgba(245,158,11,.15)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+            >
+              <div style={{
+                width: 32, height: 32, borderRadius: 8,
+                background: '#fef3c7', color: '#b45309',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                flexShrink: 0,
+              }}>
+                <Megaphone size={15} />
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{
+                  display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2,
+                }}>
+                  <span style={{
+                    padding: '1px 6px', borderRadius: 4,
+                    fontSize: 9, fontWeight: 800, letterSpacing: '.05em',
+                    background: '#fef3c7', color: '#b45309',
+                    fontFamily: 'Manrope', flexShrink: 0,
+                  }}>공지</span>
+                  <span style={{
+                    fontSize: 13, fontWeight: 700, color: 'var(--t1)',
+                    overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                  }}>
+                    {an.title || '업무공지'}
+                  </span>
+                </div>
+                {an.notes && (
+                  <div style={{
+                    fontSize: 11, color: 'var(--t3)',
+                    overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                  }}>
+                    {an.notes}
+                  </div>
+                )}
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* ── 학회 섹션 ── */}
       {events.length > 0 && (
@@ -303,6 +381,8 @@ export default function DailySchedule({
                 cursor: 'pointer', fontFamily: 'inherit',
                 textAlign: 'left',
                 transition: 'transform .12s, box-shadow .12s',
+                scrollSnapAlign: 'start',
+                scrollMarginTop: 180,
               }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = '0 4px 10px rgba(124,58,237,.12)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
@@ -350,7 +430,7 @@ export default function DailySchedule({
       )}
 
       {/* ── 세로 타임라인 ── */}
-      {items.length === 0 && events.length === 0 ? (
+      {items.length === 0 && events.length === 0 && announcements.length === 0 ? (
         <div style={{
           padding: '60px 20px', textAlign: 'center',
           color: 'var(--t3)', fontSize: 13,
@@ -385,6 +465,8 @@ function TimelineRow({ item, isNextUp, onComplete, onCancel, onOpenDetail }) {
   return (
     <div style={{
       display: 'flex', gap: 12, alignItems: 'stretch', minHeight: 76,
+      scrollSnapAlign: 'start',
+      scrollMarginTop: 180,
     }}>
       {/* 좌측 시각 + 점 */}
       <div style={{

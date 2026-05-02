@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react';
-import { ArrowLeft, Calendar, Check, ChevronUp, ChevronDown, MapPin } from 'lucide-react';
+import { Calendar, Check, ChevronUp, ChevronDown, MapPin, X } from 'lucide-react';
 
 const GRADE_CHIP = {
   A: { bg: '#ffdad6', c: '#ba1a1a' },
@@ -97,35 +97,45 @@ export default function SelectMeetingTime({
 
   return (
     <div style={{
-      position: 'fixed', inset: 0, background: 'var(--bg-0)',
-      zIndex: 360, display: 'flex', flexDirection: 'column',
-      animation: 'fadeIn .18s ease',
+      position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
+      zIndex: 360, display: 'flex', alignItems: 'center', justifyContent: 'center',
+      padding: 16, animation: 'fadeIn .18s ease',
     }}>
+      <div style={{
+        background: 'var(--bg-1)', borderRadius: 14,
+        width: 560, maxWidth: '100%', maxHeight: '92vh',
+        display: 'flex', flexDirection: 'column',
+        animation: 'fadeUp .2s ease',
+      }}>
       {/* Header */}
       <div style={{
         display: 'flex', alignItems: 'center', gap: 10,
-        padding: '16px 16px 12px',
-        background: 'var(--bg-1)', borderBottom: '1px solid var(--bd-s)',
+        padding: '14px 16px',
+        borderBottom: '1px solid var(--bd-s)',
         flexShrink: 0,
       }}>
-        <button onClick={onBack} style={iconBtn}>
-          <ArrowLeft size={20} />
-        </button>
         <div style={{
-          flex: 1, fontFamily: 'Manrope', fontSize: 18, fontWeight: 800,
-          color: 'var(--t1)', textAlign: 'center', paddingRight: 36,
+          flex: 1, fontFamily: 'Manrope', fontSize: 16, fontWeight: 800,
+          color: 'var(--t1)',
         }}>
           일정 상세 설정
         </div>
+        <button onClick={onBack} aria-label="닫기" style={{
+          width: 30, height: 30, border: '1px solid var(--bd-s)', borderRadius: 7,
+          background: 'var(--bg-2)', color: 'var(--t3)', cursor: 'pointer',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
+        }}>
+          <X size={14} />
+        </button>
       </div>
 
       {/* Body */}
-      <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 140px' }}>
+      <div style={{ flex: 1, overflowY: 'auto', padding: '16px 16px 16px' }}>
         {/* 의료진 정보 */}
         <SectionLabel>의료진 정보</SectionLabel>
         <div style={{
           padding: '18px 16px', borderRadius: 14,
-          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+          background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
           marginBottom: 18, textAlign: 'center',
         }}>
           <div style={{
@@ -154,13 +164,6 @@ export default function SelectMeetingTime({
             <span style={{ fontSize: 12, color: 'var(--t3)' }}>
               {doctor.hospital_name}
             </span>
-            {doctor.visit_grade && (
-              <span style={{
-                padding: '2px 7px', borderRadius: 5,
-                fontSize: 9, fontWeight: 800, fontFamily: "'JetBrains Mono'",
-                ...(GRADE_CHIP[doctor.visit_grade] || {}),
-              }}>{doctor.visit_grade}</span>
-            )}
           </div>
           {location && (
             <div style={{
@@ -176,7 +179,7 @@ export default function SelectMeetingTime({
         <SectionLabel>방문 일정</SectionLabel>
         <div style={{
           padding: '14px 16px', borderRadius: 14,
-          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+          background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
           marginBottom: 18,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10,
         }}>
@@ -206,7 +209,7 @@ export default function SelectMeetingTime({
             onChange={e => setDateStr(e.target.value)}
             style={{
               width: '100%', padding: '11px 13px', borderRadius: 10,
-              border: '1px solid var(--bd)', background: 'var(--bg-1)',
+              border: '1px solid var(--bd)', background: 'var(--bg-2)',
               fontSize: 14, fontFamily: 'inherit', color: 'var(--t1)',
               marginTop: -12, marginBottom: 18, boxSizing: 'border-box',
             }}
@@ -217,7 +220,7 @@ export default function SelectMeetingTime({
         <SectionLabel>시간 설정</SectionLabel>
         <div style={{
           padding: '22px 16px 20px', borderRadius: 14,
-          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+          background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
           marginBottom: scheduleHint ? 10 : 18,
         }}>
           <div style={{
@@ -277,7 +280,7 @@ export default function SelectMeetingTime({
           placeholder="미팅 목적이나 준비사항을 입력하세요..."
           style={{
             width: '100%', padding: '13px 14px', borderRadius: 14,
-            border: '1px solid var(--bd-s)', background: 'var(--bg-1)',
+            border: '1px solid var(--bd-s)', background: 'var(--bg-2)',
             fontSize: 13, fontFamily: 'inherit', color: 'var(--t1)',
             outline: 'none', resize: 'vertical', boxSizing: 'border-box',
             lineHeight: 1.5,
@@ -290,22 +293,20 @@ export default function SelectMeetingTime({
         </div>
       </div>
 
-      {/* 하단 고정 완료 버튼 */}
+      {/* 하단 완료 버튼 */}
       <div style={{
-        position: 'fixed', bottom: 0, left: 0, right: 0,
-        padding: '14px 16px 20px',
-        background: 'var(--bg-1)',
+        padding: '12px 16px 16px',
         borderTop: '1px solid var(--bd-s)',
-        display: 'flex', justifyContent: 'center',
+        flexShrink: 0,
       }}>
         <button
           onClick={handleConfirm}
           disabled={saving}
           style={{
-            width: '100%', maxWidth: 520, padding: '15px 20px', borderRadius: 12,
+            width: '100%', padding: '13px 20px', borderRadius: 12,
             background: 'var(--ac)',
             color: '#fff', border: 'none',
-            fontSize: 15, fontWeight: 800, fontFamily: 'inherit',
+            fontSize: 14, fontWeight: 800, fontFamily: 'inherit',
             cursor: saving ? 'not-allowed' : 'pointer',
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
             opacity: saving ? .7 : 1,
@@ -318,6 +319,7 @@ export default function SelectMeetingTime({
             </>
           )}
         </button>
+      </div>
       </div>
     </div>
   );
@@ -364,13 +366,6 @@ function formatRange(start, end) {
   if (s && e) return `${s}-${e}`;
   return s || e || '';
 }
-
-const iconBtn = {
-  width: 36, height: 36, borderRadius: 10,
-  background: 'transparent', border: 'none',
-  cursor: 'pointer', color: 'var(--t1)',
-  display: 'flex', alignItems: 'center', justifyContent: 'center',
-};
 
 const spinBtn = {
   width: 44, height: 32, borderRadius: 8,

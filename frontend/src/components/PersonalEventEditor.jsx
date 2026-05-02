@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronUp, ChevronDown } from 'lucide-react';
+import { ChevronUp, ChevronDown, X } from 'lucide-react';
 
 function formatKoreanDate(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -52,40 +52,45 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
   return (
     <div
       style={{
-        position: 'fixed', inset: 0, background: 'var(--bg-0)',
-        zIndex: 320, display: 'flex', flexDirection: 'column',
-        fontFamily: 'inherit',
+        position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
+        zIndex: 320, display: 'flex', alignItems: 'center', justifyContent: 'center',
+        padding: 16, animation: 'fadeIn .18s ease', fontFamily: 'inherit',
       }}
     >
+      <div style={{
+        background: 'var(--bg-1)', borderRadius: 14,
+        width: 560, maxWidth: '100%', maxHeight: '92vh',
+        display: 'flex', flexDirection: 'column',
+        animation: 'fadeUp .2s ease',
+      }}>
       {/* ── 상단바 ── */}
       <div style={{
-        display: 'flex', alignItems: 'center',
-        padding: '14px 12px', borderBottom: '1px solid var(--bd-s)',
-        background: 'var(--bg-1)',
+        display: 'flex', alignItems: 'center', gap: 8,
+        padding: '14px 16px', borderBottom: '1px solid var(--bd-s)',
+        flexShrink: 0,
       }}>
-        <button
-          onClick={onClose}
-          aria-label="뒤로"
-          style={{
-            width: 36, height: 36, border: 'none', background: 'transparent',
-            color: 'var(--t1)', cursor: 'pointer', display: 'flex',
-            alignItems: 'center', justifyContent: 'center', padding: 0,
-          }}
-        >
-          <ChevronLeft size={24} />
-        </button>
         <div style={{
-          flex: 1, textAlign: 'center', fontSize: 16, fontWeight: 800,
-          color: 'var(--t1)', letterSpacing: '-.01em', paddingRight: 36,
+          flex: 1, fontSize: 16, fontWeight: 800,
+          color: 'var(--t1)', letterSpacing: '-.01em',
         }}>
           개인 일정 설정
         </div>
+        <button
+          onClick={onClose}
+          aria-label="닫기"
+          style={{
+            width: 30, height: 30, border: '1px solid var(--bd-s)', borderRadius: 7,
+            background: 'var(--bg-2)', color: 'var(--t3)', cursor: 'pointer',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
+          }}
+        >
+          <X size={14} />
+        </button>
       </div>
 
       {/* ── 본문 ── */}
       <div style={{
         flex: 1, overflowY: 'auto', padding: '18px 16px 20px',
-        maxWidth: 560, width: '100%', margin: '0 auto', boxSizing: 'border-box',
       }}>
         {/* 일정 */}
         <SectionLabel>일정</SectionLabel>
@@ -93,7 +98,7 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
           onClick={() => dateInputRef.current?.showPicker?.() ?? dateInputRef.current?.click()}
           style={{
             padding: '18px 18px', borderRadius: 14,
-            background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+            background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
             cursor: 'pointer', marginBottom: 18, position: 'relative',
           }}
         >
@@ -117,7 +122,7 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
         <SectionLabel>시간 설정</SectionLabel>
         <div style={{
           padding: '18px 16px', borderRadius: 14,
-          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+          background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
           marginBottom: 18,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           gap: 14, position: 'relative',
@@ -142,7 +147,7 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
         <SectionLabel>일정 제목</SectionLabel>
         <div style={{
           padding: '12px 14px', borderRadius: 14,
-          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+          background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
           marginBottom: 18,
         }}>
           <input
@@ -162,7 +167,7 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
         <SectionLabel>일정 메모</SectionLabel>
         <div style={{
           padding: '14px 14px 10px', borderRadius: 14,
-          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+          background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
         }}>
           <textarea
             value={notes}
@@ -186,16 +191,16 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
 
       {/* ── 하단 CTA ── */}
       <div style={{
-        padding: '12px 16px 20px', borderTop: '1px solid var(--bd-s)',
-        background: 'var(--bg-1)',
+        padding: '12px 16px 16px', borderTop: '1px solid var(--bd-s)',
+        flexShrink: 0,
       }}>
         <button
           onClick={handleSubmit}
           disabled={submitting}
           style={{
-            width: '100%', height: 52, border: 'none', borderRadius: 14,
+            width: '100%', height: 48, border: 'none', borderRadius: 12,
             background: 'var(--ac)', color: '#fff',
-            fontSize: 15, fontWeight: 800, letterSpacing: '-.01em',
+            fontSize: 14, fontWeight: 800, letterSpacing: '-.01em',
             cursor: submitting ? 'wait' : 'pointer', fontFamily: 'inherit',
             boxShadow: '0 6px 18px rgba(0,64,161,.22)',
             opacity: submitting ? 0.7 : 1,
@@ -203,6 +208,7 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
         >
           {submitting ? '등록 중…' : '일정 등록 완료'}
         </button>
+      </div>
       </div>
     </div>
   );

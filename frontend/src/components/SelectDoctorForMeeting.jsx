@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ArrowLeft, Search, Check } from 'lucide-react';
+import { Search, Check, X } from 'lucide-react';
 
 const GRADE_AVATAR = {
   A: { bg: '#ffdad6', c: '#ba1a1a' },
@@ -53,31 +53,40 @@ export default function SelectDoctorForMeeting({ open, doctors = [], onBack, onS
 
   return (
     <div style={{
-      position: 'fixed', inset: 0, background: 'var(--bg-0)',
-      zIndex: 350, display: 'flex', flexDirection: 'column',
-      animation: 'fadeIn .18s ease',
+      position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
+      zIndex: 350, display: 'flex', alignItems: 'center', justifyContent: 'center',
+      padding: 16, animation: 'fadeIn .18s ease',
     }}>
+      <div style={{
+        background: 'var(--bg-1)', borderRadius: 14,
+        width: 560, maxWidth: '100%', maxHeight: '92vh',
+        display: 'flex', flexDirection: 'column',
+        animation: 'fadeUp .2s ease',
+      }}>
       {/* ── Header ── */}
       <div style={{
         display: 'flex', alignItems: 'center', gap: 10,
-        padding: '16px 16px 12px',
-        background: 'var(--bg-1)',
+        padding: '14px 16px',
         borderBottom: '1px solid var(--bd-s)',
         flexShrink: 0,
       }}>
-        <button onClick={onBack} style={iconBtn} title="뒤로">
-          <ArrowLeft size={20} />
-        </button>
         <div style={{
-          flex: 1, fontFamily: 'Manrope', fontSize: 18, fontWeight: 800,
+          flex: 1, fontFamily: 'Manrope', fontSize: 16, fontWeight: 800,
           color: 'var(--t1)',
         }}>
           내 의료진 관리
         </div>
+        <button onClick={onBack} aria-label="닫기" style={{
+          width: 30, height: 30, border: '1px solid var(--bd-s)', borderRadius: 7,
+          background: 'var(--bg-2)', color: 'var(--t3)', cursor: 'pointer',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0,
+        }}>
+          <X size={14} />
+        </button>
       </div>
 
       {/* ── 검색창 ── */}
-      <div style={{ padding: '12px 16px 6px', background: 'var(--bg-1)' }}>
+      <div style={{ padding: '12px 16px 6px', flexShrink: 0 }}>
         <div style={{
           display: 'flex', alignItems: 'center', gap: 8,
           background: 'var(--bg-2)', borderRadius: 10,
@@ -102,8 +111,9 @@ export default function SelectDoctorForMeeting({ open, doctors = [], onBack, onS
       {/* ── 병원 탭 ── */}
       <div style={{
         display: 'flex', gap: 6, padding: '10px 16px 12px',
-        overflowX: 'auto', background: 'var(--bg-1)',
+        overflowX: 'auto',
         borderBottom: '1px solid var(--bd-s)',
+        flexShrink: 0,
       }}>
         <TabPill
           label="전체"
@@ -156,18 +166,19 @@ export default function SelectDoctorForMeeting({ open, doctors = [], onBack, onS
           </div>
         ))}
       </div>
+      </div>
     </div>
   );
 }
 
 function DoctorCard({ doctor, onSelect }) {
-  const avatar = GRADE_AVATAR[doctor.visit_grade] || { bg: 'var(--bg-2)', c: 'var(--t2)' };
+  const avatar = { bg: 'var(--ac-d)', c: 'var(--ac)' };
   const initial = (doctor.name || '?').slice(0, 1);
   return (
     <div style={{
       display: 'flex', alignItems: 'center', gap: 12,
       padding: '12px 14px', borderRadius: 12,
-      background: 'var(--bg-1)',
+      background: 'var(--bg-2)',
       border: '1px solid var(--bd-s)',
     }}>
       <div style={{
@@ -224,10 +235,3 @@ function TabPill({ label, active, onClick }) {
     </button>
   );
 }
-
-const iconBtn = {
-  width: 36, height: 36, borderRadius: 10,
-  background: 'transparent', border: 'none',
-  cursor: 'pointer', color: 'var(--t1)',
-  display: 'flex', alignItems: 'center', justifyContent: 'center',
-};

@@ -4,19 +4,10 @@ import { ymd } from '../hooks/useMonthCalendar';
 
 const DOW_KO = ['일', '월', '화', '수', '목', '금', '토'];
 
-const GRADE_COLOR = {
-  A: '#ba1a1a',
-  B: '#b45309',
-  C: '#0056d2',
-};
-
 function underlineColor(dateStr, doctorsForDate, visitsForDate, overdueSet) {
   const hasOverdue = doctorsForDate.some(x => overdueSet.has(x.doctor.id));
   if (hasOverdue) return '#dc2626';
-  const grades = doctorsForDate.map(x => x.doctor.visit_grade).filter(Boolean);
-  if (grades.includes('A')) return GRADE_COLOR.A;
-  if (grades.includes('B')) return GRADE_COLOR.B;
-  if (grades.includes('C')) return GRADE_COLOR.C;
+  if (doctorsForDate.length > 0) return 'var(--ac)';
   if (visitsForDate.length > 0) return '#0040a1';
   return null;
 }

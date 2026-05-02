@@ -94,7 +94,7 @@ export default function NotificationPanel({ open, onClose, notifications, onRefr
   return (
     <>
       {/* Overlay */}
-      {open && <div onClick={onClose} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 49, animation: 'fadeIn .15s' }} />}
+      {open && <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 49, animation: 'fadeIn .15s' }} />}
 
       {/* Panel */}
       <div style={{
