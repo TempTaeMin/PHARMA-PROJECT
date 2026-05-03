@@ -1,0 +1,14 @@
+[Unit]
+Description=MediSync Backend (FastAPI)
+After=network.target postgresql.service
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/pharma-project/backend
+EnvironmentFile=/home/ubuntu/pharma-project/backend/.env
+ExecStart=/home/ubuntu/pharma-project/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

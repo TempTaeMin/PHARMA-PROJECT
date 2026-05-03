@@ -1,4 +1,4 @@
-# PharmScheduler Backend v0.4.0
+# MediSync Backend v0.4.0
 
 제약 영업사원(MR)을 위한 교수 진료일정 크롤링 & 스케줄 관리 API
 
@@ -7,7 +7,7 @@
 | 영역 | 기술 |
 |------|------|
 | **Backend** | Python FastAPI 0.115 + asyncio |
-| **DB** | SQLAlchemy 2.0 + SQLite (MVP) → PostgreSQL (운영) |
+| **DB** | SQLAlchemy 2.0 + Alembic (dev: SQLite / prod: PostgreSQL via asyncpg) |
 | **크롤링** | httpx + BeautifulSoup + Playwright 1.47 |
 | **태스크 큐** | Celery 5.4 + Redis |
 | **실시간 알림** | WebSocket (FastAPI 내장) |
@@ -65,13 +65,51 @@ pharma-project/
 
 ## 빠른 시작
 
-### Backend (기본)
+### Backend (기본 — dev SQLite)
 
 ```bash
 cd backend
 pip install -r requirements.txt
 python run.py
 # 또는: uvicorn app.main:app --port 8000
+```
+
+dev 환경은 디폴트로 SQLite (`pharma_scheduler.db`) 사용. 새 테이블은 앱 시작 시
+`Base.metadata.create_all()` 로 자동 추가됨. **컬럼 변경/삭제는 alembic 으로 관리**
+(아래 "DB 마이그레이션" 참고).
+
+### 프로덕션 배포 (Postgres)
+
+```bash
+# 1) DATABASE_URL 환경변수 설정
+export DATABASE_URL="postgresql+asyncpg://USER:PASSWORD@HOST:5432/medisync"
+
+# 2) 의존성 설치
+pip install -r requirements.txt
+
+# 3) DB 스키마 적용 (빈 DB → 모든 테이블 생성)
+alembic upgrade head
+
+# 4) 앱 실행
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+### DB 마이그레이션 (alembic)
+
+스키마 변경 절차:
+
+```bash
+# 모델(database.py) 수정 후
+alembic revision --autogenerate -m "변경 내용 한 줄 설명"
+
+# 생성된 migrations/versions/<hash>_*.py 검토 (불필요한 drop/rename 없는지)
+
+# dev 에서 적용 시험
+alembic upgrade head
+
+# prod 배포 시
+alembic upgrade head     # 새 마이그레이션 적용
+alembic downgrade -1     # 직전 버전으로 되돌리기 (필요 시)
 ```
 
 ### Celery + Redis 포함 (전체 기능)

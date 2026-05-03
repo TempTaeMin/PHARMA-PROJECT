@@ -3,6 +3,13 @@
 .env.*
 !.env.example
 
+# SSH 키 / 인증서 (절대 커밋 금지)
+*.pem
+*.key
+*.p12
+id_rsa*
+id_ed25519*
+
 # 파이썬
 __pycache__/
 *.pyc
