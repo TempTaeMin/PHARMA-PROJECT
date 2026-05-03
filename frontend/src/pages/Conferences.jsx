@@ -71,7 +71,8 @@ function formatAbsoluteDateTime(iso) {
   return `${yyyy}.${mm}.${dd} ${hh}:${min}`;
 }
 
-export default function Conferences({ onNavigate, mode }) {
+export default function Conferences({ onNavigate, mode, currentUser }) {
+  const hasTeam = !!currentUser?.team_id;
   const pickMode = mode === 'pick-for-add';
   const [tab, setTab] = useState('matched'); // matched | all | unclassified
   const [deptFilter, setDeptFilter] = useState('');
@@ -579,6 +580,8 @@ export default function Conferences({ onNavigate, mode }) {
         open={!!selectedEvent}
         event={selectedEvent}
         onClose={() => setSelectedEvent(null)}
+        hasTeam={hasTeam}
+        currentUserId={currentUser?.id}
         onNavigateDoctor={(doctorId) => {
           setSelectedEvent(null);
           if (onNavigate) onNavigate('my-doctors', { doctorId });

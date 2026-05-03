@@ -187,7 +187,7 @@ export default function BrowseDoctors({ onNavigate }) {
       invalidate('academic');
       setRegistered(true);
       setRegisteredSet(prev => new Set([...prev, selectedDoctor.external_id]));
-      setTimeout(() => onNavigate?.('my-doctors'), 1200);
+      // 등록 후 검색 화면 유지 — 사용자가 연속으로 다른 교수도 등록할 수 있도록
     } catch (e) {
       alert('등록 실패: ' + e.message);
     } finally {

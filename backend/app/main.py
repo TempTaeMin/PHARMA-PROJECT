@@ -1,4 +1,4 @@
-"""PharmScheduler - FastAPI 메인 앱"""
+"""MediSync - FastAPI 메인 앱"""
 import logging
 import os
 from contextlib import asynccontextmanager
@@ -24,6 +24,7 @@ from app.api.memos import (
     doctor_memos_router,
 )
 from app.api.reports import router as reports_router
+from app.api.teams import router as teams_router
 from app.api.visits import router as visits_router
 from app.auth.routes import router as auth_router
 
@@ -38,13 +39,13 @@ async def lifespan(app: FastAPI):
     await init_db()
     async with async_session() as db:
         await seed_database(db)
-    logging.getLogger(__name__).info("PharmScheduler v0.4.0 시작")
+    logging.getLogger(__name__).info("MediSync v0.4.0 시작")
     yield
-    logging.getLogger(__name__).info("PharmScheduler 종료")
+    logging.getLogger(__name__).info("MediSync 종료")
 
 
 app = FastAPI(
-    title="PharmScheduler API",
+    title="MediSync API",
     description="제약 영업사원을 위한 교수 진료일정 크롤링 & 스케줄 관리 API",
     version="0.4.0",
     lifespan=lifespan,
@@ -70,6 +71,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_router)
+app.include_router(teams_router)
 app.include_router(crawl_router)
 app.include_router(dashboard_router)
 app.include_router(hospitals_router)
@@ -88,7 +90,7 @@ app.include_router(visits_router)
 async def root():
     from app.notifications.manager import notification_manager
     return {
-        "service": "PharmScheduler",
+        "service": "MediSync",
         "version": "0.4.0",
         "status": "running",
         "websocket_connections": notification_manager.active_count,

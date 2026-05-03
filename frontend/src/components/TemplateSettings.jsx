@@ -82,7 +82,7 @@ function badgeStyle(bg, color, border) {
   };
 }
 
-export default function TemplateSettings({ open, onClose, onChanged }) {
+export default function TemplateSettings({ open, onClose, onChanged, inline = false }) {
   const [templates, setTemplates] = useState([]);
   const [loading, setLoading] = useState(false);
   const [editing, setEditing] = useState(null);
@@ -101,14 +101,14 @@ export default function TemplateSettings({ open, onClose, onChanged }) {
   };
 
   useEffect(() => {
-    if (open) {
+    if (inline || open) {
       load();
       setEditing(null);
       setErr(null);
     }
-  }, [open]);
+  }, [open, inline]);
 
-  if (!open) return null;
+  if (!inline && !open) return null;
 
   const startNew = () => setEditing({
     id: null,
@@ -184,34 +184,26 @@ export default function TemplateSettings({ open, onClose, onChanged }) {
     }
   };
 
-  return (
+  const headerNode = !inline && (
     <div style={{
-      position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      zIndex: 50, padding: 20,
+      padding: '16px 20px', borderBottom: '1px solid var(--bd-s)',
+      display: 'flex', justifyContent: 'space-between', alignItems: 'center',
     }}>
-      <div onClick={(e) => e.stopPropagation()} style={{
-        background: 'var(--bg-0)', borderRadius: 14, width: '100%',
-        maxWidth: 720, maxHeight: '90vh', display: 'flex', flexDirection: 'column',
-        boxShadow: '0 20px 60px rgba(0,0,0,.3)',
+      <div style={{ fontFamily: 'Manrope', fontSize: 16, fontWeight: 800 }}>
+        메모·보고서 템플릿 관리
+      </div>
+      <button onClick={onClose} style={{
+        width: 30, height: 30, borderRadius: 8, background: 'var(--bg-2)',
+        border: '1px solid var(--bd-s)', cursor: 'pointer',
+        display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--t2)',
       }}>
-        <div style={{
-          padding: '16px 20px', borderBottom: '1px solid var(--bd-s)',
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        }}>
-          <div style={{ fontFamily: 'Manrope', fontSize: 16, fontWeight: 800 }}>
-            메모 템플릿 관리
-          </div>
-          <button onClick={onClose} style={{
-            width: 30, height: 30, borderRadius: 8, background: 'var(--bg-2)',
-            border: '1px solid var(--bd-s)', cursor: 'pointer',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--t2)',
-          }}>
-            <X size={14} />
-          </button>
-        </div>
+        <X size={14} />
+      </button>
+    </div>
+  );
 
-        <div style={{ flex: 1, overflow: 'auto', padding: 20 }}>
+  const innerBody = (
+    <div style={{ flex: 1, overflow: 'auto', padding: inline ? 0 : 20 }}>
           {err && (
             <div style={{
               padding: '8px 12px', borderRadius: 8, background: '#fee2e2',
@@ -319,7 +311,33 @@ export default function TemplateSettings({ open, onClose, onChanged }) {
               </div>
             </>
           )}
-        </div>
+    </div>
+  );
+
+  if (inline) {
+    return (
+      <div style={{
+        background: 'var(--bg-1)', border: '1px solid var(--bd-s)', borderRadius: 14,
+        padding: 16,
+      }}>
+        {innerBody}
+      </div>
+    );
+  }
+
+  return (
+    <div style={{
+      position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      zIndex: 50, padding: 20,
+    }}>
+      <div onClick={(e) => e.stopPropagation()} style={{
+        background: 'var(--bg-0)', borderRadius: 14, width: '100%',
+        maxWidth: 720, maxHeight: '90vh', display: 'flex', flexDirection: 'column',
+        boxShadow: '0 20px 60px rgba(0,0,0,.3)',
+      }}>
+        {headerNode}
+        {innerBody}
       </div>
     </div>
   );

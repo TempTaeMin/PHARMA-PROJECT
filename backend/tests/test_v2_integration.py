@@ -1,4 +1,4 @@
-"""PharmScheduler v0.2.0 통합 테스트
+"""MediSync v0.2.0 통합 테스트
 
 추가 테스트:
 - Celery 태스크 구조 검증
@@ -237,7 +237,7 @@ async def test_fastapi_v2():
 
 
 def main():
-    print("🏥 PharmScheduler v0.2.0 통합 테스트")
+    print("🏥 MediSync v0.2.0 통합 테스트")
     print(f"📅 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
 

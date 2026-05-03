@@ -4,9 +4,13 @@ from datetime import datetime, timedelta
 from fastapi import APIRouter, HTTPException, Query, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
+from app.auth.deps import get_current_user
 from app.crawlers.factory import get_crawler, list_supported_hospitals
 from app.models.connection import get_db
-from app.models.database import Hospital, Doctor, DoctorSchedule, DoctorDateSchedule, CrawlLog
+from app.models.database import (
+    Hospital, Doctor, DoctorSchedule, DoctorDateSchedule, CrawlLog,
+    User, UserDoctorGrade,
+)
 from app.services.crawl_service import (
     crawl_my_doctors,
     _sync_schedules,
@@ -14,6 +18,38 @@ from app.services.crawl_service import (
     _handle_missing_doctors,
     detect_transfer_candidate,
 )
+
+
+async def _user_grade_map(
+    db: AsyncSession, user_id: int, doctor_ids: list[int]
+) -> dict[int, str]:
+    """현재 사용자의 (doctor_id → grade) 매핑."""
+    if not doctor_ids:
+        return {}
+    rows = (await db.execute(
+        select(UserDoctorGrade).where(
+            UserDoctorGrade.user_id == user_id,
+            UserDoctorGrade.doctor_id.in_(doctor_ids),
+        )
+    )).scalars().all()
+    return {r.doctor_id: r.grade for r in rows}
+
+
+async def _upsert_user_grade(
+    db: AsyncSession, user_id: int, doctor_id: int, grade: str
+):
+    existing = (await db.execute(
+        select(UserDoctorGrade).where(
+            UserDoctorGrade.user_id == user_id,
+            UserDoctorGrade.doctor_id == doctor_id,
+        )
+    )).scalar_one_or_none()
+    if existing:
+        # 이미 A 면 유지, 그 외에는 새 grade 로
+        if existing.grade != "A":
+            existing.grade = grade
+    else:
+        db.add(UserDoctorGrade(user_id=user_id, doctor_id=doctor_id, grade=grade))
 
 _DEPT_CLEAN_RE = re.compile(r"일반$")
 def _clean_dept(name: str) -> str:
@@ -43,8 +79,11 @@ async def browse_doctors(
     search: str = Query("", description="이름/진료과 검색"),
     department: str = Query("", description="진료과 필터"),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
-    """DB에 저장된 교수 목록을 조회합니다. 이름/진료과 검색 지원."""
+    """DB에 저장된 교수 목록을 조회합니다. 이름/진료과 검색 지원.
+
+    응답 visit_grade 는 현재 사용자의 UserDoctorGrade 기준."""
     # 병원 찾기
     result = await db.execute(select(Hospital).where(Hospital.code == hospital_code))
     hospital = result.scalar_one_or_none()
@@ -75,6 +114,7 @@ async def browse_doctors(
     )
     last_log = log_result.scalar_one_or_none()
 
+    grade_map = await _user_grade_map(db, user.id, [d.id for d in doctors])
     return {
         "hospital_code": hospital_code,
         "hospital_name": hospital.name,
@@ -89,7 +129,7 @@ async def browse_doctors(
                 "specialty": d.specialty or "",
                 "external_id": d.external_id or "",
                 "profile_url": d.profile_url or "",
-                "visit_grade": d.visit_grade,
+                "visit_grade": grade_map.get(d.id),
                 "notes": d.notes or "",
             }
             for d in doctors
@@ -102,8 +142,11 @@ async def search_doctors_global(
     q: str = Query("", description="교수 이름 검색어"),
     limit: int = Query(50, ge=1, le=200),
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
-    """모든 병원의 교수를 이름으로 검색합니다. 병원 선택 화면의 통합 검색용."""
+    """모든 병원의 교수를 이름으로 검색합니다. 병원 선택 화면의 통합 검색용.
+
+    응답 visit_grade 는 현재 사용자의 UserDoctorGrade 기준."""
     q = (q or "").strip()
     if not q:
         return {"query": q, "count": 0, "doctors": []}
@@ -117,6 +160,7 @@ async def search_doctors_global(
     )
     rows = (await db.execute(query)).all()
 
+    grade_map = await _user_grade_map(db, user.id, [d.id for d, _ in rows])
     return {
         "query": q,
         "count": len(rows),
@@ -129,7 +173,7 @@ async def search_doctors_global(
                 "specialty": d.specialty or "",
                 "external_id": d.external_id or "",
                 "profile_url": d.profile_url or "",
-                "visit_grade": d.visit_grade,
+                "visit_grade": grade_map.get(d.id),
                 "hospital_code": h.code,
                 "hospital_name": h.name,
             }
@@ -384,9 +428,10 @@ async def crawl_single_doctor(
 async def register_doctor(
     data: dict,
     db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
-    """교수를 내 교수로 등록합니다 (visit_grade=B).
-    진료시간 정보가 있으면 함께 저장합니다."""
+    """교수를 현재 사용자의 내 교수로 등록합니다 (UserDoctorGrade=B).
+    진료시간 정보가 있으면 함께 저장합니다 (글로벌 마스터)."""
     hospital_code = data.get("hospital_code")
     if not hospital_code:
         raise HTTPException(status_code=400, detail="hospital_code 필수")
@@ -444,9 +489,9 @@ async def register_doctor(
         existing = r.scalar_one_or_none()
 
     if existing:
-        # visit_grade를 B로 승격 (이미 A면 유지)
-        if existing.visit_grade not in ("A",):
-            existing.visit_grade = "B"
+        # 사용자별 등급 부여 (UserDoctorGrade upsert; 본인이 이미 A면 유지)
+        await _upsert_user_grade(db, user.id, existing.id, "B")
+        # 글로벌 마스터의 부수 정보는 갱신 (모든 사용자에게 영향)
         if data.get("specialty"):
             existing.specialty = data["specialty"]
         if data.get("position"):
@@ -471,7 +516,7 @@ async def register_doctor(
             "message": f"{existing.name} 교수를 내 교수로 등록했습니다",
         }
 
-    # 신규 등록
+    # 신규 등록 (글로벌 마스터에 의사 row 생성 + 본인 등급 부여)
     new_doc = Doctor(
         hospital_id=hospital.id,
         name=name,
@@ -481,10 +526,11 @@ async def register_doctor(
         profile_url=data.get("profile_url", ""),
         photo_url=data.get("photo_url", ""),
         external_id=external_id,
-        visit_grade="B",
+        visit_grade=None,  # 글로벌 컬럼은 1.x 에서 DROP 예정
     )
     db.add(new_doc)
     await db.flush()
+    await _upsert_user_grade(db, user.id, new_doc.id, "B")
 
     # 일정 저장
     for s in schedules:

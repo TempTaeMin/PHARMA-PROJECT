@@ -330,17 +330,64 @@ async def delete_report(
 # ─────────── DOCX 다운로드 ───────────
 
 def _build_docx(report: Report) -> bytes:
-    """보고서를 docx 바이트로 변환. 사용자가 워드/구글 문서에서 자유롭게 편집 가능."""
+    """보고서를 docx 바이트로 변환.
+
+    한글 깨짐 방지: python-docx 디폴트 폰트는 Calibri (서양 전용) 라 일부 Word
+    환경에서 한글이 eastAsia 슬롯 폰트 매핑 실패로 □□□ 로 표시된다. 모든 run
+    에 '맑은 고딕' + eastAsia 슬롯을 명시.
+    """
     try:
         from docx import Document
-        from docx.shared import Pt, RGBColor
+        from docx.shared import Pt
+        from docx.oxml.ns import qn
+        from docx.oxml import OxmlElement
     except ImportError as e:
         raise HTTPException(
             status_code=500,
             detail="python-docx 미설치. backend 에서 `pip install python-docx` 후 재시작하세요.",
         ) from e
 
+    KO_FONT = "맑은 고딕"
+
+    def _apply_font(run):
+        run.font.name = KO_FONT
+        rPr = run._element.get_or_add_rPr()
+        rFonts = rPr.find(qn("w:rFonts"))
+        if rFonts is None:
+            rFonts = OxmlElement("w:rFonts")
+            rPr.append(rFonts)
+        rFonts.set(qn("w:ascii"), KO_FONT)
+        rFonts.set(qn("w:hAnsi"), KO_FONT)
+        rFonts.set(qn("w:eastAsia"), KO_FONT)
+        rFonts.set(qn("w:cs"), KO_FONT)
+
+    def _add_para(text: str = ""):
+        p = doc.add_paragraph()
+        if text:
+            r = p.add_run(text)
+            _apply_font(r)
+        return p
+
+    def _add_heading(text: str, level: int):
+        h = doc.add_heading(text, level=level)
+        for r in h.runs:
+            _apply_font(r)
+        return h
+
     doc = Document()
+
+    # Normal 스타일 자체도 한글 폰트로 (테마 fallback 차단)
+    normal = doc.styles["Normal"]
+    normal.font.name = KO_FONT
+    n_rPr = normal.element.get_or_add_rPr()
+    n_rFonts = n_rPr.find(qn("w:rFonts"))
+    if n_rFonts is None:
+        n_rFonts = OxmlElement("w:rFonts")
+        n_rPr.append(n_rFonts)
+    n_rFonts.set(qn("w:ascii"), KO_FONT)
+    n_rFonts.set(qn("w:hAnsi"), KO_FONT)
+    n_rFonts.set(qn("w:eastAsia"), KO_FONT)
+
     type_label = "주간" if report.report_type == "weekly" else "일일"
     period_label = (
         report.period_start
@@ -349,16 +396,19 @@ def _build_docx(report: Report) -> bytes:
     )
 
     # 제목
-    h = doc.add_heading(report.title or f"{type_label} 보고서", level=1)
-    h_run = h.runs[0] if h.runs else None
-    if h_run:
-        h_run.font.size = Pt(18)
+    h = _add_heading(report.title or f"{type_label} 보고서", level=1)
+    if h.runs:
+        h.runs[0].font.size = Pt(18)
 
     # 메타 정보 줄
     meta = doc.add_paragraph()
-    meta.add_run(f"{type_label} 보고서  |  기간: {period_label}").italic = True
+    r1 = meta.add_run(f"{type_label} 보고서  |  기간: {period_label}")
+    r1.italic = True
+    _apply_font(r1)
     if report.created_at:
-        meta.add_run(f"  |  작성일: {report.created_at.strftime('%Y-%m-%d %H:%M')}").italic = True
+        r2 = meta.add_run(f"  |  작성일: {report.created_at.strftime('%Y-%m-%d %H:%M')}")
+        r2.italic = True
+        _apply_font(r2)
 
     # AI 종합 섹션
     summary = None
@@ -370,23 +420,23 @@ def _build_docx(report: Report) -> bytes:
     sections = (summary or {}).get("summary") if isinstance(summary, dict) else None
 
     if isinstance(sections, dict) and sections:
-        doc.add_paragraph()  # 빈 줄
+        _add_para()  # 빈 줄
         for key, value in sections.items():
             if not value or not str(value).strip():
                 continue
-            doc.add_heading(str(key), level=2)
+            _add_heading(str(key), level=2)
             for line in str(value).split("\n"):
-                doc.add_paragraph(line)
+                _add_para(line)
     else:
-        doc.add_paragraph()
-        doc.add_paragraph("(AI 정리 결과 없음)")
+        _add_para()
+        _add_para("(AI 정리 결과 없음)")
 
     # 원본(감사용) — 페이지 나눔 후 부록으로
     if report.raw_combined:
         doc.add_page_break()
-        doc.add_heading("부록 — 원본 메모/기록", level=2)
+        _add_heading("부록 — 원본 메모/기록", level=2)
         for line in report.raw_combined.split("\n"):
-            doc.add_paragraph(line)
+            _add_para(line)
 
     buf = io.BytesIO()
     doc.save(buf)

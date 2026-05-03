@@ -1,4 +1,4 @@
-"""PharmScheduler 설정 관리"""
+"""MediSync 설정 관리"""
 import os
 from pydantic_settings import BaseSettings
 from functools import lru_cache
@@ -6,7 +6,7 @@ from functools import lru_cache
 
 class Settings(BaseSettings):
     # App
-    APP_NAME: str = "PharmScheduler"
+    APP_NAME: str = "MediSync"
     APP_VERSION: str = "0.2.0"
     DEBUG: bool = True
 

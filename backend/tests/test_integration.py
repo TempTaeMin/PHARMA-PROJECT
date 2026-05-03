@@ -282,7 +282,7 @@ async def test_fastapi_app():
 
 
 def main():
-    print("🏥 PharmScheduler 통합 테스트")
+    print("🏥 MediSync 통합 테스트")
     print(f"📅 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
 

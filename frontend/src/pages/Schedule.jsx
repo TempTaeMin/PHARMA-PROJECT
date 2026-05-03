@@ -123,7 +123,11 @@ export default function Schedule({ onNavigate }) {
   }
 
   async function submitComplete() {
-    if (!completeStatus || !completing) return;
+    if (!completing) return;
+    if (!completeStatus) {
+      alert('방문 결과를 선택해주세요.');
+      return;
+    }
     try {
       await actions.updateVisit(completing, {
         status: completeStatus,
@@ -322,7 +326,7 @@ export default function Schedule({ onNavigate }) {
             />
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end', marginTop: 14 }}>
               <button onClick={() => setCompleting(null)} style={btnGhost}>취소</button>
-              <button onClick={submitComplete} disabled={!completeStatus} style={{ ...btnPrimary, opacity: completeStatus ? 1 : .5 }}>
+              <button onClick={submitComplete} style={btnPrimary}>
                 저장
               </button>
             </div>

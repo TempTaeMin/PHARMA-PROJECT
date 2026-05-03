@@ -123,6 +123,8 @@ export default function MonthCalendar({
 
           const dowColor = c.dow === 0 ? '#ef4444' : c.dow === 6 ? '#3b82f6' : 'var(--t1)';
 
+          const showBadge = !c.outOfMonth && visitsHere.length > 0;
+          const showUnderline = !!underline && !c.outOfMonth;
           return (
             <button
               key={i}
@@ -135,9 +137,12 @@ export default function MonthCalendar({
                 cursor: 'pointer',
                 padding: 4,
                 fontFamily: 'inherit',
+                // 모든 셀이 동일한 layout — 날짜 박스 위, 점(underline) 자리는 항상 reserve
                 display: 'flex',
-                alignItems: 'flex-start',
-                justifyContent: 'center',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+                gap: 6,
                 opacity: c.outOfMonth ? 0.3 : 1,
                 transition: 'transform .1s',
               }}
@@ -155,6 +160,7 @@ export default function MonthCalendar({
                 border: isSelected && !isToday ? '1.5px solid var(--bd)' : 'none',
                 boxShadow: isSelected && isToday ? '0 0 0 2px var(--bd)' : 'none',
                 transition: 'all .15s',
+                flexShrink: 0,
               }}>
                 <span style={{
                   fontSize: 15,
@@ -162,20 +168,38 @@ export default function MonthCalendar({
                   fontFamily: 'Manrope',
                   color: isToday ? '#fff' : dowColor,
                 }}>{c.day}</span>
+                {/* 등록된 일정 개수 배지 (우상단) */}
+                {showBadge && (
+                  <span style={{
+                    position: 'absolute',
+                    top: -5, right: -5,
+                    minWidth: 16, height: 16,
+                    padding: '0 4px',
+                    borderRadius: 8,
+                    background: '#0040a1',
+                    color: '#fff',
+                    fontSize: 10,
+                    fontWeight: 800,
+                    fontFamily: 'Manrope',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 0 0 1.5px var(--bg-1)',
+                    boxSizing: 'border-box',
+                    pointerEvents: 'none',
+                  }}>
+                    {visitsHere.length}
+                  </span>
+                )}
               </div>
-              {/* 일정 밑줄 */}
-              {underline && !c.outOfMonth && (
-                <div style={{
-                  position: 'absolute',
-                  bottom: 8,
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: 22,
-                  height: 3,
-                  borderRadius: 2,
-                  background: underline,
-                }} />
-              )}
+              {/* 일정 밑줄 — 항상 자리 reserve (없으면 투명) */}
+              <div style={{
+                width: 22,
+                height: 3,
+                borderRadius: 2,
+                background: showUnderline ? underline : 'transparent',
+                flexShrink: 0,
+              }} />
             </button>
           );
         })}

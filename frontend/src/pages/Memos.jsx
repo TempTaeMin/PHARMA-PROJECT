@@ -71,7 +71,6 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
   const [fromDate, setFromDate] = useState(enteredWithDoctor ? '' : DEFAULT_FROM);
   const [toDate, setToDate] = useState(enteredWithDoctor ? '' : DEFAULT_TO);
   const [showFilters, setShowFilters] = useState(true);
-  const [templateSettingsOpen, setTemplateSettingsOpen] = useState(false);
 
   // 뷰 상태
   const [view, setView] = useState('memos'); // 'memos' | 'reports'
@@ -260,13 +259,16 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
         </button>
       )}
 
-      {/* 메모 / 보고서 탭 */}
-      <div style={{ display: 'flex', gap: 4, marginBottom: 12 }}>
+      {/* 메모 / 보고서 / 템플릿 관리 탭 */}
+      <div style={{ display: 'flex', gap: 4, marginBottom: 12, flexWrap: 'wrap' }}>
         <button onClick={() => setView('memos')} style={tabPillStyle(view === 'memos')}>
           <FileText size={13} /> 메모
         </button>
         <button onClick={() => setView('reports')} style={tabPillStyle(view === 'reports')}>
           <ClipboardList size={13} /> 보고서
+        </button>
+        <button onClick={() => setView('templates')} style={tabPillStyle(view === 'templates')}>
+          <Settings size={13} /> 메모·보고서 템플릿 관리
         </button>
       </div>
 
@@ -304,19 +306,6 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
             background: 'var(--ac)', color: '#fff', borderRadius: 10,
             padding: '1px 6px', fontSize: 10,
           }}>ON</span>}
-        </button>
-        <button
-          onClick={() => setTemplateSettingsOpen(true)}
-          title="템플릿 관리"
-          style={{
-            padding: '9px 12px', borderRadius: 9,
-            background: 'var(--bg-1)', color: 'var(--t3)',
-            border: '1px solid var(--bd-s)',
-            fontSize: 12, fontWeight: 700, fontFamily: 'inherit',
-            cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5,
-          }}
-        >
-          <Settings size={13} /> 템플릿
         </button>
         <button
           onClick={() => { setEditTarget(null); setEditorOpen(true); }}
@@ -471,6 +460,11 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
           </button>
         </div>
       )}
+
+      {/* ── 템플릿 관리 탭 ── */}
+      {view === 'templates' && (
+        <TemplateSettings inline onChanged={() => { /* 변경 후 자동 리로드 (컴포넌트 내부 처리) */ }} />
+      )}
       </div>
 
       {/* 카운트 */}
@@ -593,13 +587,6 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
         templates={templates}
         onClose={() => { setEditorOpen(false); setEditTarget(null); }}
         onSaved={handleSaved}
-      />
-
-      {/* 템플릿 관리 모달 */}
-      <TemplateSettings
-        open={templateSettingsOpen}
-        onClose={() => setTemplateSettingsOpen(false)}
-        onChanged={reloadTemplates}
       />
 
       {/* 보고서 생성 모달 */}
