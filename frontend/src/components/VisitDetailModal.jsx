@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
   X, Calendar, Clock, Trash2, Save, CheckCircle,
-  Sparkles, FileText, RefreshCw,
+  Sparkles, FileText, RefreshCw, Users,
 } from 'lucide-react';
 import { visitApi } from '../api/client';
 import { invalidate } from '../api/cache';
@@ -21,6 +21,7 @@ const STATUS_LABEL = {
  */
 export default function VisitDetailModal({
   open, visit, onClose, onSave, onCancelPlanned, onComplete,
+  onShare, hasTeam = false,
 }) {
   const [dateStr, setDateStr] = useState('');
   const [hour, setHour] = useState(9);
@@ -91,17 +92,23 @@ export default function VisitDetailModal({
   const handleSave = async () => {
     setSaving(true);
     try {
-      const time = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}:00`;
-      const patch = { visit_date: `${dateStr}T${time}` };
-      if (isProfessor) {
-        // 예정: 사전 메모 편집. 완료: 결과 메모 편집 + 사전 메모 보존.
-        if (isPlanned) {
-          patch.notes = preNotes.trim() || null;
-        } else {
-          patch.post_notes = postNotes.trim() || null;
-        }
+      const isMineLocal = visit.is_mine !== false;
+      let patch;
+      if (!isMineLocal) {
+        // recipient — 결과 메모만 저장 가능 (완료된 교수 visit 한정)
+        patch = { post_notes: postNotes.trim() || null };
       } else {
-        patch.notes = singleNotes.trim() || null;
+        const time = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}:00`;
+        patch = { visit_date: `${dateStr}T${time}` };
+        if (isProfessor) {
+          if (isPlanned) {
+            patch.notes = preNotes.trim() || null;
+          } else {
+            patch.post_notes = postNotes.trim() || null;
+          }
+        } else {
+          patch.notes = singleNotes.trim() || null;
+        }
       }
       await onSave(visit, patch);
       onClose();
@@ -151,6 +158,13 @@ export default function VisitDetailModal({
     ? '공지 내용'
     : (isPersonal ? '메모' : (isPlanned ? '사전 메모' : '결과 메모'));
 
+  const isMine = visit.is_mine !== false;
+  const isShared = (visit.visibility || 'private') === 'team';
+  const recipientCount = Array.isArray(visit.recipient_user_ids) ? visit.recipient_user_ids.length : 0;
+  const shareLabel = isAnnouncement ? '팀공지로 공유' : '팀에 공유';
+  // recipient 는 완료된 교수 visit 의 post_notes 만 수정 가능
+  const canSave = isMine || (isProfessor && !isPlanned);
+
   return (
     <div
       style={{
@@ -171,16 +185,29 @@ export default function VisitDetailModal({
         {/* 헤더 */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 4 }}>
           <div>
-            <span style={{
-              display: 'inline-block',
-              padding: '3px 8px', borderRadius: 5,
-              fontSize: 10, fontWeight: 800, letterSpacing: '.05em',
-              background: isAnnouncement ? '#fef3c7' : (isPersonal ? 'var(--ac-d)' : theme.bg),
-              color: isAnnouncement ? '#b45309' : (isPersonal ? 'var(--ac)' : theme.c),
-              fontFamily: 'Manrope', marginBottom: 8,
-            }}>
-              {isAnnouncement ? '공지' : (isPersonal ? '업무' : theme.label)}
-            </span>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center', marginBottom: 8 }}>
+              <span style={{
+                display: 'inline-block',
+                padding: '3px 8px', borderRadius: 5,
+                fontSize: 10, fontWeight: 800, letterSpacing: '.05em',
+                background: isAnnouncement ? '#fef3c7' : (isPersonal ? 'var(--ac-d)' : theme.bg),
+                color: isAnnouncement ? '#b45309' : (isPersonal ? 'var(--ac)' : theme.c),
+                fontFamily: 'Manrope',
+              }}>
+                {isAnnouncement ? '공지' : (isPersonal ? '업무' : theme.label)}
+              </span>
+              {!isMine && visit.owner_name && (
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 4,
+                  padding: '3px 8px', borderRadius: 5,
+                  fontSize: 10, fontWeight: 800, letterSpacing: '.02em',
+                  background: '#ede9fe', color: '#6d28d9',
+                  border: '1px solid #c4b5fd', fontFamily: 'Manrope',
+                }}>
+                  <Users size={11} /> {visit.owner_name} 님이 공유
+                </span>
+              )}
+            </div>
             <div style={{ fontFamily: 'Manrope', fontSize: 20, fontWeight: 800, color: 'var(--t1)' }}>
               {isAnnouncement
                 ? (visit.title || '업무공지')
@@ -205,15 +232,15 @@ export default function VisitDetailModal({
           <input
             type="date"
             value={dateStr}
-            disabled={!isPlanned}
+            disabled={!isPlanned || !isMine}
             onChange={e => setDateStr(e.target.value)}
             style={{
               width: '100%', padding: '11px 13px', borderRadius: 10,
               border: '1px solid var(--bd-s)',
-              background: isPlanned ? 'var(--bg-1)' : 'var(--bg-2)',
+              background: (isPlanned && isMine) ? 'var(--bg-1)' : 'var(--bg-2)',
               fontSize: 14, fontFamily: 'inherit', color: 'var(--t1)',
               boxSizing: 'border-box',
-              opacity: isPlanned ? 1 : .7,
+              opacity: (isPlanned && isMine) ? 1 : .7,
             }}
           />
         </div>
@@ -222,7 +249,7 @@ export default function VisitDetailModal({
         {!isAnnouncement && (
         <div style={{ marginTop: 14 }}>
           <SectionLabel icon={<Clock size={12} />}>방문 시간</SectionLabel>
-          {isPlanned ? (
+          {isPlanned && isMine ? (
             <div style={{
               padding: '14px 16px', borderRadius: 10,
               background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
@@ -356,6 +383,7 @@ export default function VisitDetailModal({
               isProfessor={isProfessor}
               isPlanned={isPlanned}
               isAnnouncement={isAnnouncement}
+              isMine={isMine}
               preNotes={preNotes}
               setPreNotes={setPreNotes}
               postNotes={postNotes}
@@ -375,8 +403,35 @@ export default function VisitDetailModal({
           )}
         </div>
 
+        {/* 팀 공유 행 — 본인 일정 + 팀 있을 때만 */}
+        {isMine && hasTeam && onShare && (
+          <button
+            onClick={() => onShare(visit)}
+            style={{
+              marginTop: 18, width: '100%', padding: '11px 14px', borderRadius: 10,
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8,
+              background: isShared ? '#dcfce7' : 'var(--bg-2)',
+              color: isShared ? '#15803d' : 'var(--t2)',
+              border: `1px solid ${isShared ? '#86efac' : 'var(--bd-s)'}`,
+              cursor: 'pointer', fontFamily: 'inherit',
+            }}
+          >
+            <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <Users size={14} />
+              <span style={{ fontSize: 13, fontWeight: 700 }}>
+                {isShared
+                  ? `공유 중 · ${recipientCount}명`
+                  : shareLabel}
+              </span>
+            </span>
+            <span style={{ fontSize: 11, color: 'inherit', opacity: .7 }}>
+              {isShared ? '수신자 변경 →' : '수신자 선택 →'}
+            </span>
+          </button>
+        )}
+
         {/* 액션 버튼 */}
-        <div style={{ display: 'flex', gap: 8, marginTop: 20, flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: 8, marginTop: 14, flexWrap: 'wrap' }}>
           {isPlanned && !isPersonal && !isAnnouncement && (
             <button
               onClick={() => { onClose(); onComplete?.(visit); }}
@@ -391,7 +446,7 @@ export default function VisitDetailModal({
               <CheckCircle size={14} /> 방문 결과 기록
             </button>
           )}
-          {isPlanned && (
+          {isPlanned && isMine && (
             <button
               onClick={handleCancelPlanned}
               disabled={saving}
@@ -406,20 +461,22 @@ export default function VisitDetailModal({
               <Trash2 size={13} /> {(isPersonal || isAnnouncement) ? '삭제' : '일정 취소'}
             </button>
           )}
-          <button
-            onClick={handleSave}
-            disabled={saving}
-            style={{
-              flex: 1, padding: '12px 16px', borderRadius: 10,
-              background: 'var(--ac)', color: '#fff', border: 'none',
-              cursor: saving ? 'not-allowed' : 'pointer',
-              fontSize: 13, fontWeight: 800, fontFamily: 'inherit',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-              opacity: saving ? .7 : 1,
-            }}
-          >
-            <Save size={14} /> {saving ? '저장 중…' : '저장'}
-          </button>
+          {canSave && (
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              style={{
+                flex: 1, padding: '12px 16px', borderRadius: 10,
+                background: 'var(--ac)', color: '#fff', border: 'none',
+                cursor: saving ? 'not-allowed' : 'pointer',
+                fontSize: 13, fontWeight: 800, fontFamily: 'inherit',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                opacity: saving ? .7 : 1,
+              }}
+            >
+              <Save size={14} /> {saving ? '저장 중…' : '저장'}
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -427,17 +484,20 @@ export default function VisitDetailModal({
 }
 
 function MemoTextarea({
-  visit, isProfessor, isPlanned, isAnnouncement,
+  visit, isProfessor, isPlanned, isAnnouncement, isMine = true,
   preNotes, setPreNotes, postNotes, setPostNotes,
   singleNotes, setSingleNotes,
 }) {
   let value = '';
   let setter = () => {};
   let placeholder = '';
+  // recipient(비-owner)는 사전 메모 / 개인메모 / 공지 본문 편집 불가. 결과 메모만 허용.
+  let readOnly = false;
   if (isProfessor) {
     if (isPlanned) {
       value = preNotes; setter = setPreNotes;
       placeholder = '방문 전 준비사항, 언급할 제품/포인트 등';
+      if (!isMine) readOnly = true;
     } else {
       value = postNotes; setter = setPostNotes;
       placeholder = '방문 결과를 입력하세요 (사전 메모는 보존됩니다)';
@@ -447,6 +507,7 @@ function MemoTextarea({
     placeholder = isAnnouncement
       ? '공지 상세 내용 (일시, 장소, 준비물, 참고사항 등)'
       : '업무 내용 / 회의 내용 / 참고 메모';
+    if (!isMine) readOnly = true;
   }
   return (
     <textarea
@@ -454,12 +515,15 @@ function MemoTextarea({
       onChange={e => setter(e.target.value)}
       rows={5}
       placeholder={placeholder}
+      readOnly={readOnly}
       style={{
         width: '100%', padding: '12px 14px', borderRadius: 10,
-        border: '1px solid var(--bd-s)', background: 'var(--bg-1)',
+        border: '1px solid var(--bd-s)',
+        background: readOnly ? 'var(--bg-2)' : 'var(--bg-1)',
         fontSize: 13, fontFamily: 'inherit', color: 'var(--t1)',
         outline: 'none', resize: 'vertical', boxSizing: 'border-box',
         lineHeight: 1.5,
+        opacity: readOnly ? .8 : 1,
       }}
     />
   );

@@ -147,10 +147,13 @@ class VisitLogCreate(BaseModel):
     notes: Optional[str] = None
     post_notes: Optional[str] = None
     next_action: Optional[str] = None
+    visibility: Optional[str] = None  # "private" | "team", 미지정 시 'private'
+    recipient_user_ids: Optional[list[int]] = None  # visibility='team' 시 필수 (>=1)
 
 class VisitLogResponse(VisitLogCreate):
     id: int
     created_at: datetime
+    recipient_user_ids: list[int] = []
     class Config:
         from_attributes = True
 
@@ -160,13 +163,17 @@ class PersonalEventCreate(BaseModel):
     title: Optional[str] = None
     notes: Optional[str] = None
     status: Optional[str] = "예정"
+    visibility: Optional[str] = None  # "private" | "team"
+    recipient_user_ids: Optional[list[int]] = None
 
 
 class AnnouncementCreate(BaseModel):
-    """업무공지 등록 스키마. 팀원 공유는 추후 확장."""
+    """업무공지 등록 스키마. 디폴트 'team' (공지는 팀 공유 의도)."""
     visit_date: datetime
     title: str
     notes: Optional[str] = None
+    visibility: Optional[str] = None  # 미지정 시 'team' 디폴트
+    recipient_user_ids: Optional[list[int]] = None
 
 
 # --- Academic Organizer ---

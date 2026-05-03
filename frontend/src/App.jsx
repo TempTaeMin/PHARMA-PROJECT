@@ -1,12 +1,14 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { LayoutDashboard, Star, Building2, BookOpen, Settings, Bell, Menu, CalendarDays, FileText, LogOut, User as UserIcon } from 'lucide-react';
-import { authApi, notificationApi, setUnauthorizedHandler } from './api/client';
+import { LayoutDashboard, Star, Building2, BookOpen, Settings, Bell, Menu, CalendarDays, FileText, LogOut, User as UserIcon, Users } from 'lucide-react';
+import { authApi, notificationApi, setUnauthorizedHandler, teamApi } from './api/client';
 import Dashboard from './pages/Dashboard';
 import MyDoctors from './pages/MyDoctors';
 import BrowseDoctors from './pages/BrowseDoctors';
 import Conferences from './pages/Conferences';
 import Schedule from './pages/Schedule';
 import Memos from './pages/Memos';
+import Team from './pages/Team';
+import SettingsPage from './pages/Settings';
 import Login from './pages/Login';
 import NotificationPanel from './components/NotificationPanel';
 
@@ -17,6 +19,7 @@ const NAV = [
   { id: 'memos', label: '메모·회의록', icon: FileText },
   { id: 'browse', label: '의료진 검색', icon: Building2 },
   { id: 'conferences', label: '학회 일정', icon: BookOpen },
+  { id: 'team', label: '팀 관리', icon: Users },
 ];
 
 export default function App() {
@@ -25,6 +28,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [notifOpen, setNotifOpen] = useState(false);
   const [notifications, setNotifications] = useState([]);
+  const [invitations, setInvitations] = useState([]);  // 받은 팀 초대 (pending)
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== 'undefined' && window.innerWidth <= 768
   );
@@ -33,6 +37,21 @@ export default function App() {
   const [authChecking, setAuthChecking] = useState(true);
   const [profileOpen, setProfileOpen] = useState(false);
   const profileRef = useRef(null);
+  const [teamMembers, setTeamMembers] = useState([]);
+
+  const reloadTeam = useCallback(async () => {
+    try {
+      const t = await teamApi.me();
+      setTeamMembers(Array.isArray(t?.members) ? t.members : []);
+    } catch {
+      setTeamMembers([]);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (currentUser) reloadTeam();
+    else setTeamMembers([]);
+  }, [currentUser, reloadTeam]);
 
   // 401 응답 시 자동 로그아웃
   useEffect(() => {
@@ -79,9 +98,20 @@ export default function App() {
       const r = await notificationApi.list(30);
       setNotifications(r.notifications || []);
     } catch (e) { /* offline */ }
+    try {
+      const inv = await teamApi.myInvitations();
+      setInvitations(Array.isArray(inv) ? inv : []);
+    } catch (e) { setInvitations([]); }
   }, [currentUser]);
 
   useEffect(() => { loadNotifs(); }, [loadNotifs]);
+
+  // 30초마다 받은 초대 폴링 (실시간 WebSocket 보강)
+  useEffect(() => {
+    if (!currentUser) return;
+    const t = setInterval(() => { loadNotifs(); }, 30000);
+    return () => clearInterval(t);
+  }, [currentUser, loadNotifs]);
 
   const handleLogout = async () => {
     try { await authApi.logout(); } catch { /* ignore */ }
@@ -129,7 +159,7 @@ export default function App() {
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 8px', marginBottom: 24 }}>
           <div style={{ width: 28, height: 28, borderRadius: 7, background: 'linear-gradient(135deg,#0040a1,#0056d2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, color: '#fff' }}>💊</div>
-          <h1 style={{ fontFamily: 'Manrope', fontSize: 15, fontWeight: 800, letterSpacing: '-.03em', color: 'var(--ac)' }}>PharmScheduler</h1>
+          <h1 style={{ fontFamily: 'Manrope', fontSize: 15, fontWeight: 800, letterSpacing: '-.03em', color: 'var(--ac)' }}>MediSync</h1>
         </div>
         <nav style={{ display: 'flex', flexDirection: 'column', gap: 2, flex: 1 }}>
           {NAV.map(n => {
@@ -150,8 +180,14 @@ export default function App() {
           })}
         </nav>
         <div style={{ borderTop: '1px solid var(--bd-s)', paddingTop: 8 }}>
-          <button style={{ display: 'flex', alignItems: 'center', gap: 9, padding: '9px 12px', borderRadius: 10, fontSize: 13, color: 'var(--t3)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%' }}>
-            <Settings size={17} style={{ opacity: .5 }} /> 설정
+          <button onClick={() => navTo('settings')} style={{
+            display: 'flex', alignItems: 'center', gap: 9, padding: '9px 12px', borderRadius: 10,
+            fontSize: 13, fontWeight: page === 'settings' ? 600 : 450,
+            color: page === 'settings' ? 'var(--ac)' : 'var(--t3)',
+            background: page === 'settings' ? 'var(--ac-d)' : 'none',
+            border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%', textAlign: 'left',
+          }}>
+            <Settings size={17} style={{ opacity: page === 'settings' ? 1 : .5 }} /> 설정
           </button>
         </div>
       </aside>
@@ -191,7 +227,7 @@ export default function App() {
               flexShrink: 0,
             }}>
               <Bell size={15} />
-              {unread > 0 && <span style={{ position: 'absolute', top: 6, right: 6, width: 6, height: 6, borderRadius: '50%', background: 'var(--rd)', border: '2px solid var(--bg-1)' }} />}
+              {(unread > 0 || invitations.length > 0) && <span style={{ position: 'absolute', top: 6, right: 6, width: 6, height: 6, borderRadius: '50%', background: 'var(--rd)', border: '2px solid var(--bg-1)' }} />}
             </button>
 
             {/* 프로필 드롭다운 */}
@@ -246,16 +282,31 @@ export default function App() {
           </div>
         </header>
         <div style={{ padding: isMobile ? '12px 10px' : '20px 24px' }}>
-          {page === 'dashboard' && <Dashboard onNavigate={navTo} />}
-          {page === 'schedule' && <Schedule onNavigate={navTo} />}
-          {page === 'my-doctors' && <MyDoctors onNavigate={navTo} initialDoctorId={pageProps.doctorId} />}
+          {page === 'dashboard' && <Dashboard onNavigate={navTo} currentUser={currentUser} teamMembers={teamMembers} />}
+          {page === 'schedule' && <Schedule onNavigate={navTo} currentUser={currentUser} />}
+          {page === 'my-doctors' && <MyDoctors onNavigate={navTo} initialDoctorId={pageProps.doctorId} currentUser={currentUser} teamMembers={teamMembers} />}
           {page === 'memos' && <Memos initialFilters={pageProps.filters || {}} onNavigate={navTo} />}
           {page === 'browse' && <BrowseDoctors onNavigate={navTo} />}
-          {page === 'conferences' && <Conferences onNavigate={navTo} mode={pageProps.mode} />}
+          {page === 'conferences' && <Conferences onNavigate={navTo} mode={pageProps.mode} currentUser={currentUser} />}
+          {page === 'team' && <Team currentUser={currentUser} onTeamChanged={async () => {
+            try { const me = await authApi.me(); setCurrentUser(me); } catch { /* ignore */ }
+            reloadTeam();
+          }} />}
+          {page === 'settings' && <SettingsPage currentUser={currentUser} onUpdated={setCurrentUser} />}
         </div>
       </main>
 
-      <NotificationPanel open={notifOpen} onClose={() => setNotifOpen(false)} notifications={notifications} onRefresh={loadNotifs} onNavigate={navTo} />
+      <NotificationPanel
+        open={notifOpen}
+        onClose={() => setNotifOpen(false)}
+        notifications={notifications}
+        invitations={invitations}
+        onRefresh={loadNotifs}
+        onNavigate={navTo}
+        onTeamChanged={async () => {
+          try { const me = await authApi.me(); setCurrentUser(me); } catch { /* ignore */ }
+        }}
+      />
     </div>
   );
 }

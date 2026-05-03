@@ -23,7 +23,8 @@ const SLOT_NAMES = { morning: '오전', afternoon: '오후', evening: '야간' }
 
 /* MiniCalendar 는 ScheduleCalendar (frontend/src/components/ScheduleCalendar.jsx) 로 통합되어 제거됨. */
 
-export default function MyDoctors({ onNavigate, initialDoctorId }) {
+export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, teamMembers = [] }) {
+  const hasTeam = !!currentUser?.team_id;
   // 'active' (기본, 정상 활성 내 교수) | 'inactive' (이직/퇴직/오인 등록 처리된 의사 — 복원 가능)
   const [view, setView] = useState('active');
   const { data: doctors, loading, refresh } = useCachedApi(
@@ -71,10 +72,12 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
     setPlanStep('select-time');
   };
 
-  const handlePlanConfirmTime = async ({ doctor, dateStr, timeHHMM, notes }) => {
+  const handlePlanConfirmTime = async ({ doctor, dateStr, timeHHMM, notes, visibility, recipient_user_ids }) => {
     const dt = `${dateStr}T${timeHHMM}:00`;
     const payload = { doctor_id: doctor.id, visit_date: dt, status: '예정' };
     if (notes) payload.notes = notes;
+    if (visibility) payload.visibility = visibility;
+    if (recipient_user_ids) payload.recipient_user_ids = recipient_user_ids;
     try {
       await visitApi.create(doctor.id, payload);
       invalidate('my-visits');
@@ -294,6 +297,9 @@ export default function MyDoctors({ onNavigate, initialDoctorId }) {
         todayStr={todayStr}
         onBack={() => setPlanStep('hint-popup')}
         onConfirm={handlePlanConfirmTime}
+        hasTeam={hasTeam}
+        teamMembers={teamMembers}
+        currentUserId={currentUser?.id}
       />
     </>
   );

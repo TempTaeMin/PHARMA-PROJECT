@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { ChevronUp, ChevronDown, X } from 'lucide-react';
+import RecipientPicker from './RecipientPicker.jsx';
 
 function formatKoreanDate(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -11,12 +12,17 @@ function pad2(n) {
   return String(n).padStart(2, '0');
 }
 
-export default function PersonalEventEditor({ open, initialDate, onClose, onSubmit }) {
+export default function PersonalEventEditor({
+  open, initialDate, onClose, onSubmit,
+  hasTeam = false, teamMembers = [], currentUserId = null,
+}) {
   const [dateStr, setDateStr] = useState(initialDate);
   const [hour, setHour] = useState(9);
   const [minute, setMinute] = useState(0);
   const [title, setTitle] = useState('');
   const [notes, setNotes] = useState('');
+  const [shareTeam, setShareTeam] = useState(false);
+  const [recipientIds, setRecipientIds] = useState([]);
   const [submitting, setSubmitting] = useState(false);
   const dateInputRef = useRef(null);
 
@@ -27,6 +33,8 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
     setMinute(0);
     setTitle('');
     setNotes('');
+    setShareTeam(false);
+    setRecipientIds([]);
   }, [open, initialDate]);
 
   if (!open) return null;
@@ -34,8 +42,11 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
   const bumpHour = (d) => setHour((h) => (h + 24 + d) % 24);
   const bumpMinute = (d) => setMinute((m) => (m + 60 + d * 5) % 60);
 
+  const isShared = shareTeam && hasTeam;
+  const canShare = !isShared || recipientIds.length > 0;
+
   const handleSubmit = async () => {
-    if (submitting) return;
+    if (submitting || !canShare) return;
     setSubmitting(true);
     try {
       await onSubmit?.({
@@ -43,6 +54,8 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
         timeHHMM: `${pad2(hour)}:${pad2(minute)}`,
         title: title.trim() || '내 일정',
         notes: notes.trim() || null,
+        visibility: isShared ? 'team' : 'private',
+        recipient_user_ids: isShared ? recipientIds : null,
       });
     } finally {
       setSubmitting(false);
@@ -189,6 +202,40 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
         </div>
       </div>
 
+      {/* ── 팀 공유 토글 + 수신자 선택 ── */}
+      {hasTeam && (
+        <div style={{
+          padding: '10px 16px 12px', borderTop: '1px solid var(--bd-s)',
+          display: 'flex', flexDirection: 'column', gap: 10,
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <label style={{
+              display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer',
+              fontSize: 12, color: 'var(--t2)',
+            }}>
+              <input
+                type="checkbox"
+                checked={shareTeam}
+                onChange={(e) => setShareTeam(e.target.checked)}
+                style={{ accentColor: 'var(--ac)' }}
+              />
+              팀에게 공유
+            </label>
+            <span style={{ fontSize: 10, color: 'var(--t3)', marginLeft: 'auto' }}>
+              (선택한 팀원만 이 일정을 봅니다)
+            </span>
+          </div>
+          {shareTeam && (
+            <RecipientPicker
+              members={teamMembers}
+              value={recipientIds}
+              onChange={setRecipientIds}
+              currentUserId={currentUserId}
+            />
+          )}
+        </div>
+      )}
+
       {/* ── 하단 CTA ── */}
       <div style={{
         padding: '12px 16px 16px', borderTop: '1px solid var(--bd-s)',
@@ -196,17 +243,17 @@ export default function PersonalEventEditor({ open, initialDate, onClose, onSubm
       }}>
         <button
           onClick={handleSubmit}
-          disabled={submitting}
+          disabled={submitting || !canShare}
           style={{
             width: '100%', height: 48, border: 'none', borderRadius: 12,
             background: 'var(--ac)', color: '#fff',
             fontSize: 14, fontWeight: 800, letterSpacing: '-.01em',
-            cursor: submitting ? 'wait' : 'pointer', fontFamily: 'inherit',
+            cursor: submitting || !canShare ? 'not-allowed' : 'pointer', fontFamily: 'inherit',
             boxShadow: '0 6px 18px rgba(0,64,161,.22)',
-            opacity: submitting ? 0.7 : 1,
+            opacity: submitting || !canShare ? 0.6 : 1,
           }}
         >
-          {submitting ? '등록 중…' : '일정 등록 완료'}
+          {submitting ? '등록 중…' : (isShared && !canShare ? '수신자 1명 이상 선택' : '일정 등록 완료')}
         </button>
       </div>
       </div>

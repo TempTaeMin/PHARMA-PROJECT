@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { X, Bell, RefreshCw, AlertTriangle, GraduationCap, ChevronRight, UserMinus, ArrowRightLeft, Check } from 'lucide-react';
-import { notificationApi, academicApi, doctorApi } from '../api/client';
+import { X, Bell, RefreshCw, AlertTriangle, GraduationCap, ChevronRight, UserMinus, ArrowRightLeft, Check, Users, UserPlus } from 'lucide-react';
+import { notificationApi, academicApi, doctorApi, teamApi } from '../api/client';
 
-export default function NotificationPanel({ open, onClose, notifications, onRefresh, onNavigate }) {
+export default function NotificationPanel({ open, onClose, notifications, invitations = [], onRefresh, onNavigate, onTeamChanged }) {
   const [tab, setTab] = useState('work');
   const [lecturerEvents, setLecturerEvents] = useState([]);
 
@@ -52,6 +52,8 @@ export default function NotificationPanel({ open, onClose, notifications, onRefr
     if (type === 'doctor_transfer_candidate') return <ArrowRightLeft size={12} style={{ color: 'var(--ac)' }} />;
     if (type === 'visit_reminder') return <Bell size={12} style={{ color: 'var(--ac)' }} />;
     if (type === 'overdue_warning') return <AlertTriangle size={12} style={{ color: 'var(--rd)' }} />;
+    if (type === 'team_visit_shared') return <Users size={12} style={{ color: '#6d28d9' }} />;
+    if (type === 'team_invitation_accepted') return <Check size={12} style={{ color: '#15803d' }} />;
     return <Bell size={12} style={{ color: 'var(--t3)' }} />;
   };
 
@@ -61,6 +63,8 @@ export default function NotificationPanel({ open, onClose, notifications, onRefr
     if (type === 'doctor_transfer_candidate') return { text: '이직 후보', color: 'var(--ac)' };
     if (type === 'visit_reminder') return { text: '리마인더', color: 'var(--ac)' };
     if (type === 'overdue_warning') return { text: '미방문 경고', color: 'var(--rd)' };
+    if (type === 'team_visit_shared') return { text: '팀 일정 공유', color: '#6d28d9' };
+    if (type === 'team_invitation_accepted') return { text: '팀 합류', color: '#15803d' };
     return { text: '알림', color: 'var(--t3)' };
   };
 
@@ -91,10 +95,35 @@ export default function NotificationPanel({ open, onClose, notifications, onRefr
     }
   };
 
+  const acceptInvite = async (inv) => {
+    try {
+      await teamApi.acceptInvite(inv.id);
+      onRefresh?.();
+      onTeamChanged?.();
+    } catch (e) {
+      alert('수락 실패: ' + e.message);
+    }
+  };
+
+  const declineInvite = async (inv) => {
+    if (!confirm(`'${inv.team_name}' 팀 초대를 거절할까요?`)) return;
+    try {
+      await teamApi.declineInvite(inv.id);
+      onRefresh?.();
+    } catch (e) {
+      alert('거절 실패: ' + e.message);
+    }
+  };
+
   return (
     <>
-      {/* Overlay */}
-      {open && <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 49, animation: 'fadeIn .15s' }} />}
+      {/* Overlay — 클릭 시 패널 닫힘 */}
+      {open && (
+        <div
+          onClick={onClose}
+          style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.5)', zIndex: 49, animation: 'fadeIn .15s', cursor: 'pointer' }}
+        />
+      )}
 
       {/* Panel */}
       <div style={{
@@ -138,6 +167,59 @@ export default function NotificationPanel({ open, onClose, notifications, onRefr
 
         {/* List */}
         <div style={{ flex: 1, overflowY: 'auto', padding: '12px 14px' }}>
+          {/* 받은 팀 초대 — 업무 탭에서만 노출, 최상단 */}
+          {tab === 'work' && invitations.length > 0 && (
+            <div style={{
+              marginBottom: 12, padding: 12, borderRadius: 10,
+              background: '#ede9fe', border: '1px solid #c4b5fd',
+            }}>
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10,
+                color: '#6d28d9', fontSize: 12, fontWeight: 800, fontFamily: 'Manrope',
+              }}>
+                <UserPlus size={14} />
+                받은 팀 초대 ({invitations.length})
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                {invitations.map(inv => (
+                  <div key={inv.id} style={{
+                    padding: 10, borderRadius: 8,
+                    background: 'var(--bg-1)', border: '1px solid #c4b5fd',
+                  }}>
+                    <div style={{
+                      fontSize: 13, fontWeight: 700, color: 'var(--t1)', marginBottom: 3,
+                      display: 'flex', alignItems: 'center', gap: 6,
+                    }}>
+                      <Users size={12} style={{ color: '#6d28d9' }} />
+                      {inv.team_name}
+                    </div>
+                    <div style={{ fontSize: 11, color: 'var(--t3)', marginBottom: 8 }}>
+                      <b>{inv.inviter_name || inv.inviter_email}</b> 님이 초대했습니다
+                    </div>
+                    <div style={{ display: 'flex', gap: 6 }}>
+                      <button onClick={() => acceptInvite(inv)} style={{
+                        flex: 1, padding: '7px 10px', borderRadius: 6,
+                        background: '#6d28d9', color: '#fff', border: 'none',
+                        fontSize: 11, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+                        display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 4,
+                      }}>
+                        <Check size={11} /> 수락
+                      </button>
+                      <button onClick={() => declineInvite(inv)} style={{
+                        flex: 1, padding: '7px 10px', borderRadius: 6,
+                        background: 'var(--bg-2)', color: 'var(--t2)',
+                        border: '1px solid var(--bd-s)',
+                        fontSize: 11, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
+                      }}>
+                        거절
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* 스케줄 변경 탭 전용: 내 의료진 참여 학회 요약 */}
           {tab === 'schedule_change' && lecturerEvents.length > 0 && (
             <div style={{
@@ -189,7 +271,9 @@ export default function NotificationPanel({ open, onClose, notifications, onRefr
             </div>
           )}
 
-          {filtered.length === 0 && (tab !== 'schedule_change' || lecturerEvents.length === 0) ? (
+          {filtered.length === 0
+            && (tab !== 'work' || invitations.length === 0)
+            && (tab !== 'schedule_change' || lecturerEvents.length === 0) ? (
             <div style={{ textAlign: 'center', padding: 40 }}>
               <Bell size={24} style={{ color: 'var(--t3)', marginBottom: 8, opacity: .3 }} />
               <div style={{ fontSize: 13, color: 'var(--t3)' }}>알림이 없습니다</div>

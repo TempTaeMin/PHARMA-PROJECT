@@ -12,6 +12,7 @@ import AcademicEventCreateModal from '../components/AcademicEventCreateModal';
 import AcademicEventModal from '../components/AcademicEventModal';
 import WorkTypeChooser from '../components/WorkTypeChooser';
 import WorkAnnouncementEditor from '../components/WorkAnnouncementEditor';
+import ShareVisitModal from '../components/ShareVisitModal';
 import { useMonthCalendar } from '../hooks/useMonthCalendar';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
@@ -21,7 +22,8 @@ function ymd(y, m, d) {
   return `${y}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
 }
 
-export default function Dashboard({ onNavigate }) {
+export default function Dashboard({ onNavigate, currentUser, teamMembers = [] }) {
+  const hasTeam = !!currentUser?.team_id;
   const now = new Date();
   const todayStr = ymd(now.getFullYear(), now.getMonth(), now.getDate());
 
@@ -47,6 +49,8 @@ export default function Dashboard({ onNavigate }) {
 
   // ─ 일정 상세/수정 모달 state ─
   const [detailVisit, setDetailVisit] = useState(null);
+  // ─ 공유 모달 state (카드 우상단 공유 버튼) ─
+  const [shareVisit, setShareVisit] = useState(null);
 
   const { year, month } = view;
   const {
@@ -133,17 +137,23 @@ export default function Dashboard({ onNavigate }) {
     else if (type === 'announcement') setFlowStep('work-announcement');
   };
 
-  const handleSubmitPersonal = async ({ dateStr, timeHHMM, title, notes }) => {
+  const handleSubmitPersonal = async ({ dateStr, timeHHMM, title, notes, visibility, recipient_user_ids }) => {
     const dt = `${dateStr}T${timeHHMM}:00`;
-    await visitApi.createPersonal({ visit_date: dt, title, notes, status: '예정' });
+    await visitApi.createPersonal({
+      visit_date: dt, title, notes, status: '예정', visibility,
+      recipient_user_ids: recipient_user_ids ?? null,
+    });
     refresh();
     handleSelectDate(dateStr);
     closeFlow();
   };
 
-  const handleSubmitAnnouncement = async ({ dateStr, title, content }) => {
+  const handleSubmitAnnouncement = async ({ dateStr, title, content, visibility, recipient_user_ids }) => {
     const dt = `${dateStr}T00:00:00`;
-    await visitApi.createAnnouncement({ visit_date: dt, title, notes: content });
+    await visitApi.createAnnouncement({
+      visit_date: dt, title, notes: content, visibility,
+      recipient_user_ids: recipient_user_ids ?? null,
+    });
     refresh();
     handleSelectDate(dateStr);
     closeFlow();
@@ -164,8 +174,10 @@ export default function Dashboard({ onNavigate }) {
     setFlowStep('select-time');
   };
 
-  const handleConfirmTime = async ({ doctor, dateStr, timeHHMM, notes }) => {
-    await actions.addPlanned(doctor.id, dateStr, 'morning', { timeHHMM, notes });
+  const handleConfirmTime = async ({ doctor, dateStr, timeHHMM, notes, visibility, recipient_user_ids }) => {
+    await actions.addPlanned(doctor.id, dateStr, 'morning', {
+      timeHHMM, notes, visibility, recipient_user_ids,
+    });
     // 선택 날짜를 예정 추가한 날짜로 맞춰 바로 보이도록
     handleSelectDate(dateStr);
     closeFlow();
@@ -197,7 +209,11 @@ export default function Dashboard({ onNavigate }) {
   };
 
   const submitComplete = async () => {
-    if (!completeStatus || !completing) return;
+    if (!completing) return;
+    if (!completeStatus) {
+      alert('방문 결과를 선택해주세요.');
+      return;
+    }
     try {
       // 1) visit_logs 상태/사후 메모 업데이트. 사전 메모(notes)는 보존.
       await actions.updateVisit(completing, {
@@ -291,12 +307,16 @@ export default function Dashboard({ onNavigate }) {
           todayStr={todayStr}
           visits={selectedVisits}
           events={selectedEvents}
+          visitsByDate={visitsByDate}
+          eventsByDate={eventsByDate}
           onSelectDate={handleSelectDate}
           onComplete={openComplete}
           onCancel={cancelPlanned}
           onOpenDetail={setDetailVisit}
           onOpenAcademic={setAcademicModalEvent}
           onOpenMonth={() => onNavigate?.('schedule')}
+          onShare={setShareVisit}
+          hasTeam={hasTeam}
         />
       )}
 
@@ -367,6 +387,9 @@ export default function Dashboard({ onNavigate }) {
         todayStr={todayStr}
         onBack={() => setFlowStep('hint-popup')}
         onConfirm={handleConfirmTime}
+        hasTeam={hasTeam}
+        teamMembers={teamMembers}
+        currentUserId={currentUser?.id}
       />
       <WorkTypeChooser
         open={flowStep === 'personal-type'}
@@ -378,12 +401,18 @@ export default function Dashboard({ onNavigate }) {
         initialDate={selected}
         onClose={closeFlow}
         onSubmit={handleSubmitPersonal}
+        hasTeam={hasTeam}
+        teamMembers={teamMembers}
+        currentUserId={currentUser?.id}
       />
       <WorkAnnouncementEditor
         open={flowStep === 'work-announcement'}
         initialDate={selected}
         onClose={closeFlow}
         onSubmit={handleSubmitAnnouncement}
+        hasTeam={hasTeam}
+        teamMembers={teamMembers}
+        currentUserId={currentUser?.id}
       />
       <AcademicEventCreateModal
         open={flowStep === 'academic-event'}
@@ -397,6 +426,8 @@ export default function Dashboard({ onNavigate }) {
         open={!!academicModalEvent}
         event={academicModalEvent}
         onClose={() => setAcademicModalEvent(null)}
+        hasTeam={hasTeam}
+        currentUserId={currentUser?.id}
         onUpdated={() => {
           invalidate('academic');
           refreshAcademic();
@@ -415,6 +446,29 @@ export default function Dashboard({ onNavigate }) {
           await actions.cancelPlanned(visit);
         }}
         onComplete={openComplete}
+        onShare={setShareVisit}
+        hasTeam={hasTeam}
+      />
+
+      {/* ── 공유 설정 Modal (카드 우상단 / 상세 모달 내부 공유 버튼) ── */}
+      <ShareVisitModal
+        open={!!shareVisit}
+        visit={shareVisit}
+        teamMembers={teamMembers}
+        currentUserId={currentUser?.id}
+        onClose={() => setShareVisit(null)}
+        onSaved={(updated) => {
+          setShareVisit(null);
+          // 상세 모달이 같은 visit 을 보고 있으면 즉시 visibility/recipients 반영
+          if (updated && detailVisit && detailVisit.id === updated.id) {
+            setDetailVisit({
+              ...detailVisit,
+              visibility: updated.visibility,
+              recipient_user_ids: updated.recipient_user_ids ?? [],
+            });
+          }
+          refresh();
+        }}
       />
 
       {/* ── Complete Modal (raw + AI 2영역) ── */}
@@ -566,11 +620,7 @@ export default function Dashboard({ onNavigate }) {
 
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end', marginTop: 14 }}>
               <button onClick={closeComplete} style={btnGhost}>취소</button>
-              <button
-                onClick={submitComplete}
-                disabled={!completeStatus}
-                style={{ ...btnPrimary, opacity: completeStatus ? 1 : .5 }}
-              >저장</button>
+              <button onClick={submitComplete} style={btnPrimary}>저장</button>
             </div>
           </div>
         </div>

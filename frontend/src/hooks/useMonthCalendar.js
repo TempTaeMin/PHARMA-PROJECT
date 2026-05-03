@@ -119,7 +119,7 @@ export function useMonthCalendar(year, month) {
   }, [refreshDash, refreshVisits]);
 
   const addPlanned = useCallback(async (doctorId, dateStr, slot = 'morning', opts = {}) => {
-    const { timeHHMM, notes } = opts;
+    const { timeHHMM, notes, visibility, recipient_user_ids } = opts;
     const time = timeHHMM
       ? `${timeHHMM}:00`
       : slot === 'afternoon' ? '13:00:00'
@@ -129,6 +129,8 @@ export function useMonthCalendar(year, month) {
     const dt = `${dateStr}T${time}`;
     const payload = { doctor_id: doctorId, visit_date: dt, status: '예정' };
     if (notes) payload.notes = notes;
+    if (visibility) payload.visibility = visibility;
+    if (recipient_user_ids) payload.recipient_user_ids = recipient_user_ids;
     await visitApi.create(doctorId, payload);
     refresh();
   }, [refresh]);

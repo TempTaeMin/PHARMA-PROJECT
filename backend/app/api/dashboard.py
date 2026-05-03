@@ -4,14 +4,31 @@ from calendar import monthrange
 
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, func, or_
+from sqlalchemy import select, func, or_, and_
 from sqlalchemy.orm import selectinload
 from datetime import datetime, timedelta
 from app.auth.deps import get_current_user
 from app.models.connection import get_db
 from app.models.database import (
-    Doctor, Hospital, ScheduleChange, User, UserDoctorGrade, VisitLog, VisitMemo,
+    Doctor, Hospital, ScheduleChange, User, UserDoctorGrade,
+    VisitLog, VisitMemo,
 )
+
+
+async def _visit_user_filter(db: AsyncSession, user_id: int):
+    """본인 일정 + 본인이 수신자로 지정된 visibility='team' 일정 합집합 조건.
+
+    선택 공유 모델에서는 visit_log_recipients 테이블 참조로 본인 포함 여부를 판정.
+    팀 미소속이어도 다른 팀의 누군가가 본인을 수신자로 지정했다면 노출되지만 — 1.0
+    OAuth 가입 흐름상 모든 사용자는 1인 팀을 가지므로 사실상 같은 팀 안에서만 가능.
+    """
+    return or_(
+        VisitLog.user_id == user_id,
+        and_(
+            VisitLog.visibility == "team",
+            VisitLog.recipients.any(User.id == user_id),
+        ),
+    )
 
 router = APIRouter(prefix="/api/dashboard", tags=["대시보드"])
 
@@ -99,21 +116,23 @@ async def get_dashboard(
             "last_visit_date": last_visit,
         })
 
-    # 최근 방문 기록 (30일) — 현재 사용자 본인 것만
+    # 최근 방문 기록 (30일) — 본인 일정 + 팀 공유 일정 합집합
     doctor_ids = [d.id for d in doctors]
     visit_list = []
     if doctor_ids:
+        user_filter = await _visit_user_filter(db, user.id)
         visit_query = (
-            select(VisitLog)
+            select(VisitLog, User.name)
+            .outerjoin(User, VisitLog.user_id == User.id)
             .where(
-                VisitLog.user_id == user.id,
+                user_filter,
                 VisitLog.doctor_id.in_(doctor_ids),
                 VisitLog.visit_date >= today - timedelta(days=30),
             )
             .order_by(VisitLog.visit_date.desc())
             .limit(20)
         )
-        visit_result = await db.execute(visit_query)
+        visit_rows = (await db.execute(visit_query)).all()
         name_map = {d.id: d.name for d in doctors}
         hosp_map = {d.id: (d.hospital.name if d.hospital else "") for d in doctors}
         visit_list = [
@@ -125,8 +144,12 @@ async def get_dashboard(
                 "visit_date": v.visit_date.isoformat() if v.visit_date else None,
                 "status": v.status,
                 "product": v.product,
+                "visibility": v.visibility or "private",
+                "owner_user_id": v.user_id,
+                "owner_name": owner_name,
+                "is_mine": v.user_id == user.id,
             }
-            for v in visit_result.scalars().all()
+            for v, owner_name in visit_rows
         ]
 
     # 최근 일정 변경 (7일)
@@ -191,14 +214,23 @@ async def my_visits(
     )).scalars().all()
     grade_by_doctor = {g.doctor_id: g.grade for g in grade_rows}
 
+    user_filter = await _visit_user_filter(db, user.id)
     query = (
-        select(VisitLog, Doctor, Hospital, VisitMemo)
+        # 메모는 본인 것만 join (VisitMemo.user_id == user.id 조건)
+        select(VisitLog, Doctor, Hospital, VisitMemo, User.name)
         .outerjoin(Doctor, VisitLog.doctor_id == Doctor.id)
         .outerjoin(Hospital, Doctor.hospital_id == Hospital.id)
-        .outerjoin(VisitMemo, VisitMemo.visit_log_id == VisitLog.id)
+        .outerjoin(
+            VisitMemo,
+            and_(VisitMemo.visit_log_id == VisitLog.id, VisitMemo.user_id == user.id),
+        )
+        .outerjoin(User, VisitLog.user_id == User.id)
         .where(
-            VisitLog.user_id == user.id,
+            user_filter,
             or_(
+                # 공유받은 일정은 등급 무관하게 모두 노출 (수신자가 명시적으로 선택받음)
+                VisitLog.user_id != user.id,
+                # 본인 일정: 등급 매긴 의사 또는 개인/공지 카테고리만
                 Doctor.id.in_(graded_sub),
                 VisitLog.category.in_(["personal", "announcement"]),
             ),
@@ -235,6 +267,11 @@ async def my_visits(
             "next_action": v.next_action,
             "ai_summary": _parse_ai(m.ai_summary) if m else None,
             "memo_id": m.id if m else None,
+            "visibility": v.visibility or "private",
+            "recipient_user_ids": v.recipient_user_ids if v.user_id == user.id else [],
+            "owner_user_id": v.user_id,
+            "owner_name": owner_name,
+            "is_mine": v.user_id == user.id,
         }
-        for v, d, h, m in rows
+        for v, d, h, m, owner_name in rows
     ]

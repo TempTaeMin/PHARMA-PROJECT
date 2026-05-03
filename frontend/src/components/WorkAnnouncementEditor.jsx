@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Megaphone, X } from 'lucide-react';
+import RecipientPicker from './RecipientPicker.jsx';
 
 function formatKoreanDate(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -7,23 +8,37 @@ function formatKoreanDate(dateStr) {
   return `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일 (${dow})`;
 }
 
-export default function WorkAnnouncementEditor({ open, initialDate, onClose, onSubmit }) {
+export default function WorkAnnouncementEditor({
+  open, initialDate, onClose, onSubmit,
+  hasTeam = false, teamMembers = [], currentUserId = null,
+}) {
   const [dateStr, setDateStr] = useState(initialDate);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [shareTeam, setShareTeam] = useState(true);  // 공지는 디폴트 ON
+  const [recipientIds, setRecipientIds] = useState([]);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
   const dateRef = useRef(null);
 
+  // 모달 열릴 때 모든 동료 자동 선택 (공지 디폴트 = 전체)
   useEffect(() => {
     if (!open) return;
     setDateStr(initialDate);
     setTitle('');
     setContent('');
+    setShareTeam(true);
+    const others = (teamMembers || [])
+      .filter((m) => m.user_id !== currentUserId)
+      .map((m) => m.user_id);
+    setRecipientIds(others);
     setError('');
-  }, [open, initialDate]);
+  }, [open, initialDate, teamMembers, currentUserId]);
 
   if (!open) return null;
+
+  const isShared = shareTeam && hasTeam;
+  const canShare = !isShared || recipientIds.length > 0;
 
   const handleSubmit = async () => {
     if (submitting) return;
@@ -35,6 +50,10 @@ export default function WorkAnnouncementEditor({ open, initialDate, onClose, onS
       setError('공지 내용을 입력하세요');
       return;
     }
+    if (isShared && recipientIds.length === 0) {
+      setError('공유 받을 팀원을 1명 이상 선택하세요');
+      return;
+    }
     setSubmitting(true);
     setError('');
     try {
@@ -42,6 +61,8 @@ export default function WorkAnnouncementEditor({ open, initialDate, onClose, onS
         dateStr,
         title: title.trim(),
         content: content.trim(),
+        visibility: isShared ? 'team' : 'private',
+        recipient_user_ids: isShared ? recipientIds : null,
       });
     } catch (e) {
       setError(e.message || '저장 실패');
@@ -132,13 +153,44 @@ export default function WorkAnnouncementEditor({ open, initialDate, onClose, onS
           />
         </FieldBox>
 
-        <div style={{
-          marginTop: 4, padding: '10px 12px', borderRadius: 10,
-          background: 'var(--bg-2)', color: 'var(--t3)',
-          fontSize: 11, fontWeight: 500, lineHeight: 1.5,
-        }}>
-          팀원 공유 기능은 추후 추가될 예정입니다. 현재는 본인 일정에만 기록됩니다.
-        </div>
+        {hasTeam ? (
+          <>
+            <div style={{
+              marginTop: 4, padding: '10px 12px', borderRadius: 10,
+              background: 'var(--bg-2)', color: 'var(--t2)',
+              fontSize: 11, fontWeight: 500, lineHeight: 1.5,
+              display: 'flex', alignItems: 'center', gap: 8,
+            }}>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input
+                  type="checkbox"
+                  checked={shareTeam}
+                  onChange={(e) => setShareTeam(e.target.checked)}
+                  style={{ accentColor: 'var(--ac)' }}
+                />
+                팀에게 공유 (선택한 팀원에게만 공지)
+              </label>
+            </div>
+            {shareTeam && (
+              <div style={{ marginTop: 10 }}>
+                <RecipientPicker
+                  members={teamMembers}
+                  value={recipientIds}
+                  onChange={setRecipientIds}
+                  currentUserId={currentUserId}
+                />
+              </div>
+            )}
+          </>
+        ) : (
+          <div style={{
+            marginTop: 4, padding: '10px 12px', borderRadius: 10,
+            background: 'var(--bg-2)', color: 'var(--t3)',
+            fontSize: 11, fontWeight: 500, lineHeight: 1.5,
+          }}>
+            팀에 속해있지 않아 본인에게만 표시됩니다. 팀 관리에서 팀을 만들어보세요.
+          </div>
+        )}
 
         {error && (
           <div style={{
@@ -157,17 +209,17 @@ export default function WorkAnnouncementEditor({ open, initialDate, onClose, onS
       }}>
         <button
           onClick={handleSubmit}
-          disabled={submitting}
+          disabled={submitting || !canShare}
           style={{
             width: '100%', height: 48, border: 'none', borderRadius: 12,
             background: 'var(--ac)', color: '#fff',
             fontSize: 14, fontWeight: 800, letterSpacing: '-.01em',
-            cursor: submitting ? 'wait' : 'pointer', fontFamily: 'inherit',
+            cursor: submitting || !canShare ? 'not-allowed' : 'pointer', fontFamily: 'inherit',
             boxShadow: '0 6px 18px rgba(0,64,161,.22)',
-            opacity: submitting ? 0.7 : 1,
+            opacity: submitting || !canShare ? 0.6 : 1,
           }}
         >
-          {submitting ? '등록 중…' : '공지 등록'}
+          {submitting ? '등록 중…' : (isShared && !canShare ? '수신자 1명 이상 선택' : '공지 등록')}
         </button>
       </div>
       </div>

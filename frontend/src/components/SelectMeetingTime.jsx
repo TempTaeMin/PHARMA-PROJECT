@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from 'react';
 import { Calendar, Check, ChevronUp, ChevronDown, MapPin, X } from 'lucide-react';
+import RecipientPicker from './RecipientPicker.jsx';
 
 const GRADE_CHIP = {
   A: { bg: '#ffdad6', c: '#ba1a1a' },
@@ -18,12 +19,15 @@ const MINUTE_STEP = 10;
  */
 export default function SelectMeetingTime({
   open, doctor, initialDate, todayStr, onBack, onConfirm,
+  hasTeam = false, teamMembers = [], currentUserId = null,
 }) {
   const [dateStr, setDateStr] = useState(initialDate || todayStr);
   const [dateEdit, setDateEdit] = useState(false);
   const [hour, setHour] = useState(9);
   const [minute, setMinute] = useState(0);
   const [notes, setNotes] = useState('');
+  const [shareTeam, setShareTeam] = useState(false);
+  const [recipientIds, setRecipientIds] = useState([]);
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
@@ -33,6 +37,8 @@ export default function SelectMeetingTime({
     setHour(9);
     setMinute(0);
     setNotes('');
+    setShareTeam(false);
+    setRecipientIds([]);
   }, [open, initialDate, todayStr]);
 
   // 참고용 — 해당 요일 정규 진료시간
@@ -76,8 +82,11 @@ export default function SelectMeetingTime({
   const decM = () => setMinute((minute - MINUTE_STEP + 60) % 60);
 
   const timeHHMM = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+  const isShared = shareTeam && hasTeam;
+  const canShare = !isShared || recipientIds.length > 0;
 
   const handleConfirm = async () => {
+    if (!canShare) return;
     setSaving(true);
     try {
       await onConfirm({
@@ -85,6 +94,8 @@ export default function SelectMeetingTime({
         dateStr,
         timeHHMM,
         notes: notes.trim() || null,
+        visibility: isShared ? 'team' : 'private',
+        recipient_user_ids: isShared ? recipientIds : null,
       });
     } catch (e) {
       alert('저장 실패: ' + e.message);
@@ -291,6 +302,43 @@ export default function SelectMeetingTime({
         }}>
           {notes.length} / 500
         </div>
+
+        {/* 팀 공유 — 선택한 팀원만 이 방문 일정을 볼 수 있음 */}
+        {hasTeam && (
+          <div style={{ marginTop: 16 }}>
+            <SectionLabel>팀 공유</SectionLabel>
+            <div style={{
+              padding: '10px 12px', borderRadius: 12,
+              background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
+              display: 'flex', alignItems: 'center', gap: 8,
+              marginBottom: shareTeam ? 10 : 0,
+            }}>
+              <label style={{
+                display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer',
+                fontSize: 12, color: 'var(--t2)',
+              }}>
+                <input
+                  type="checkbox"
+                  checked={shareTeam}
+                  onChange={(e) => setShareTeam(e.target.checked)}
+                  style={{ accentColor: 'var(--ac)' }}
+                />
+                팀원에게 공유
+              </label>
+              <span style={{ fontSize: 10, color: 'var(--t3)', marginLeft: 'auto' }}>
+                선택한 팀원만 이 방문을 봅니다
+              </span>
+            </div>
+            {shareTeam && (
+              <RecipientPicker
+                members={teamMembers}
+                value={recipientIds}
+                onChange={setRecipientIds}
+                currentUserId={currentUserId}
+              />
+            )}
+          </div>
+        )}
       </div>
 
       {/* 하단 완료 버튼 */}
@@ -301,23 +349,23 @@ export default function SelectMeetingTime({
       }}>
         <button
           onClick={handleConfirm}
-          disabled={saving}
+          disabled={saving || !canShare}
           style={{
             width: '100%', padding: '13px 20px', borderRadius: 12,
             background: 'var(--ac)',
             color: '#fff', border: 'none',
             fontSize: 14, fontWeight: 800, fontFamily: 'inherit',
-            cursor: saving ? 'not-allowed' : 'pointer',
+            cursor: saving || !canShare ? 'not-allowed' : 'pointer',
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-            opacity: saving ? .7 : 1,
+            opacity: saving || !canShare ? .6 : 1,
           }}
         >
-          {saving ? '저장 중…' : (
+          {saving ? '저장 중…' : (isShared && !canShare ? '수신자 1명 이상 선택' : (
             <>
               일정 등록 완료
               <Check size={18} />
             </>
-          )}
+          ))}
         </button>
       </div>
       </div>

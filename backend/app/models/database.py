@@ -1,10 +1,18 @@
-"""Database models for PharmScheduler"""
+"""Database models for MediSync"""
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, Text, ForeignKey, UniqueConstraint, Enum as SQLEnum
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, Text, ForeignKey, UniqueConstraint, Table, Enum as SQLEnum
 from sqlalchemy.orm import relationship, declarative_base
 import enum
 
 Base = declarative_base()
+
+
+visit_log_recipients = Table(
+    "visit_log_recipients",
+    Base.metadata,
+    Column("visit_log_id", Integer, ForeignKey("visit_logs.id", ondelete="CASCADE"), primary_key=True),
+    Column("recipient_user_id", Integer, ForeignKey("users.id", ondelete="CASCADE"), primary_key=True),
+)
 
 
 class VisitGrade(str, enum.Enum):
@@ -49,6 +57,20 @@ class TeamMember(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
 
+class TeamInvitation(Base):
+    """팀 초대 (받는 사용자가 수락해야 멤버로 등록)."""
+    __tablename__ = "team_invitations"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    team_id = Column(Integer, ForeignKey("teams.id"), nullable=False, index=True)
+    inviter_user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    invitee_user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    status = Column(String(20), default="pending", nullable=False, index=True)
+    # "pending" | "accepted" | "declined" | "cancelled"
+    created_at = Column(DateTime, default=datetime.utcnow)
+    responded_at = Column(DateTime, nullable=True)
+
+
 # ─────────── 사용자별 의견 (글로벌 마스터에서 분리) ───────────
 
 class UserDoctorGrade(Base):
@@ -83,6 +105,18 @@ class UserAcademicPin(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
     event_id = Column(Integer, ForeignKey("academic_events.id"), nullable=False, index=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class TeamAcademicPin(Base):
+    """학회 일정 핀 (팀 단위). UserAcademicPin 과 독립적으로 토글."""
+    __tablename__ = "team_academic_pins"
+    __table_args__ = (UniqueConstraint("team_id", "event_id", name="uq_team_academic_pin"),)
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    team_id = Column(Integer, ForeignKey("teams.id"), nullable=False, index=True)
+    event_id = Column(Integer, ForeignKey("academic_events.id"), nullable=False, index=True)
+    pinned_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
 
 
@@ -208,6 +242,7 @@ class VisitLog(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
     doctor_id = Column(Integer, ForeignKey("doctors.id", ondelete="SET NULL"), nullable=True)
     visit_date = Column(DateTime, nullable=False)
+    visibility = Column(String(20), default="private", nullable=False, index=True)  # "private" | "team"
     status = Column(String(20))  # "성공", "부재", "거절", "예정"
     product = Column(String(200))  # 디테일링 제품
     notes = Column(Text)  # 사전 메모 (교수 방문) / 단일 메모 (업무·공지)
@@ -222,6 +257,15 @@ class VisitLog(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
     doctor = relationship("Doctor", back_populates="visit_logs")
+    recipients = relationship(
+        "User",
+        secondary=visit_log_recipients,
+        lazy="selectin",
+    )
+
+    @property
+    def recipient_user_ids(self) -> list[int]:
+        return [u.id for u in (self.recipients or [])]
 
 
 class AcademicOrganizer(Base):

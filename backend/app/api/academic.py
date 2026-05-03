@@ -12,7 +12,7 @@ from sqlalchemy import select, or_
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from app.auth.deps import get_current_user
+from app.auth.deps import get_current_user, get_my_team_id
 from app.models.connection import get_db
 from app.models.database import (
     AcademicEvent,
@@ -20,6 +20,7 @@ from app.models.database import (
     AcademicOrganizer,
     Doctor,
     Hospital,
+    TeamAcademicPin,
     User,
     UserAcademicPin,
     UserDoctorGrade,
@@ -161,10 +162,16 @@ def _parse_lectures_json(raw: Optional[str]) -> list[dict]:
         return []
 
 
-def _event_to_dict(e: AcademicEvent, pinned_event_ids: Optional[set[int]] = None) -> dict:
-    """is_pinned 는 사용자별 (UserAcademicPin) 로 분리됐으므로, 호출자가 미리
-    조회한 pinned_event_ids set 를 전달한다."""
-    is_pinned = bool(pinned_event_ids and e.id in pinned_event_ids)
+def _event_to_dict(
+    e: AcademicEvent,
+    pinned_event_ids: Optional[set[int]] = None,
+    team_pinned_event_ids: Optional[set[int]] = None,
+    team_pin_owner_map: Optional[dict[int, dict]] = None,
+) -> dict:
+    """is_pinned 는 사용자 핀 OR 팀 핀. 별도 플래그도 함께 반환."""
+    pinned_by_user = bool(pinned_event_ids and e.id in pinned_event_ids)
+    pinned_by_team = bool(team_pinned_event_ids and e.id in team_pinned_event_ids)
+    owner = (team_pin_owner_map or {}).get(e.id) if pinned_by_team else None
     return {
         "id": e.id,
         "name": e.name,
@@ -183,7 +190,11 @@ def _event_to_dict(e: AcademicEvent, pinned_event_ids: Optional[set[int]] = None
         "event_code": e.event_code,
         "detail_url_external": e.detail_url_external,
         "classification_status": e.classification_status,
-        "is_pinned": is_pinned,
+        "is_pinned": pinned_by_user or pinned_by_team,
+        "is_pinned_by_user": pinned_by_user,
+        "is_pinned_by_team": pinned_by_team,
+        "team_pinned_by_user_id": owner.get("user_id") if owner else None,
+        "team_pinned_by_name": owner.get("user_name") if owner else None,
         "departments": sorted({d.department for d in e.departments}),
         "lectures": _parse_lectures_json(e.lectures_json),
         "updated_at": e.updated_at.isoformat() if e.updated_at else None,
@@ -197,6 +208,33 @@ async def _user_pinned_event_ids(
     q = select(UserAcademicPin.event_id).where(UserAcademicPin.user_id == user_id)
     if event_ids:
         q = q.where(UserAcademicPin.event_id.in_(event_ids))
+    rows = (await db.execute(q)).scalars().all()
+    return set(rows)
+
+
+async def _team_pin_owner_map(
+    db: AsyncSession, team_id: Optional[int], event_ids: Optional[list[int]] = None
+) -> dict[int, dict]:
+    """팀 핀된 event_id → {user_id, user_name} 매핑. 카드/상세에서 '누가 공유했나' 표시용."""
+    if not team_id or not event_ids:
+        return {}
+    q = (
+        select(TeamAcademicPin.event_id, TeamAcademicPin.pinned_by_user_id, User.name)
+        .outerjoin(User, User.id == TeamAcademicPin.pinned_by_user_id)
+        .where(TeamAcademicPin.team_id == team_id, TeamAcademicPin.event_id.in_(event_ids))
+    )
+    rows = (await db.execute(q)).all()
+    return {ev_id: {"user_id": uid, "user_name": uname} for ev_id, uid, uname in rows}
+
+
+async def _team_pinned_event_ids(
+    db: AsyncSession, team_id: Optional[int], event_ids: Optional[list[int]] = None
+) -> set[int]:
+    if not team_id:
+        return set()
+    q = select(TeamAcademicPin.event_id).where(TeamAcademicPin.team_id == team_id)
+    if event_ids:
+        q = q.where(TeamAcademicPin.event_id.in_(event_ids))
     rows = (await db.execute(q)).scalars().all()
     return set(rows)
 
@@ -312,16 +350,26 @@ async def _enrich_events_with_summary(
     events: list[AcademicEvent], db: AsyncSession, user_id: int
 ) -> list[dict]:
     """list/upcoming/unclassified 공통 응답 빌더.
-    각 event 에 matched_doctor_count/names, organizer_homepage, is_pinned(user별) 주입.
+    각 event 에 matched_doctor_count/names, organizer_homepage, is_pinned(user/team),
+    team_pinned_by_name 주입.
     """
-    pinned = await _user_pinned_event_ids(db, user_id, [e.id for e in events])
+    event_ids = [e.id for e in events]
+    pinned = await _user_pinned_event_ids(db, user_id, event_ids)
+    team_id = await get_my_team_id(db, user_id)
+    team_pinned = await _team_pinned_event_ids(db, team_id, event_ids)
+    team_pin_owners = await _team_pin_owner_map(db, team_id, event_ids)
     matched = await _summarize_matched_lecturers(events, db, user_id)
     homepages = await _organizer_homepages(
         {e.organizer_id for e in events if e.organizer_id}, db
     )
     result = []
     for e in events:
-        d = _event_to_dict(e, pinned_event_ids=pinned)
+        d = _event_to_dict(
+            e,
+            pinned_event_ids=pinned,
+            team_pinned_event_ids=team_pinned,
+            team_pin_owner_map=team_pin_owners,
+        )
         m = matched.get(e.id, {"count": 0, "names": []})
         d["matched_doctor_count"] = m["count"]
         d["matched_doctor_names"] = m["names"]
@@ -475,18 +523,23 @@ async def list_my_schedule_events(
     db: AsyncSession = Depends(get_db),
     user: User = Depends(get_current_user),
 ):
-    """Schedule.jsx 월간 아젠다용. source='manual' OR 사용자 pin 합집합."""
+    """Schedule.jsx 월간 아젠다용. source='manual' OR 사용자/팀 pin 합집합."""
     pinned_sub = select(UserAcademicPin.event_id).where(UserAcademicPin.user_id == user.id)
+    team_id = await get_my_team_id(db, user.id)
+    pin_conditions = [
+        AcademicEvent.source == "manual",
+        AcademicEvent.id.in_(pinned_sub),
+    ]
+    if team_id:
+        team_pinned_sub = select(TeamAcademicPin.event_id).where(TeamAcademicPin.team_id == team_id)
+        pin_conditions.append(AcademicEvent.id.in_(team_pinned_sub))
     query = (
         select(AcademicEvent)
         .options(selectinload(AcademicEvent.departments))
         .where(
             AcademicEvent.start_date >= start,
             AcademicEvent.start_date <= end,
-            or_(
-                AcademicEvent.source == "manual",
-                AcademicEvent.id.in_(pinned_sub),
-            ),
+            or_(*pin_conditions),
         )
         .order_by(AcademicEvent.start_date.asc())
     )
@@ -654,44 +707,89 @@ async def create_event(
         .where(AcademicEvent.id == event.id)
     )).scalar_one()
     pinned = await _user_pinned_event_ids(db, user.id, [event.id])
-    return _event_to_dict(event, pinned_event_ids=pinned)
+    team_id = await get_my_team_id(db, user.id)
+    team_pinned = await _team_pinned_event_ids(db, team_id, [event.id])
+    owners = await _team_pin_owner_map(db, team_id, [event.id])
+    return _event_to_dict(event, pinned_event_ids=pinned, team_pinned_event_ids=team_pinned, team_pin_owner_map=owners)
 
 
 @router.post("/academic-events/{event_id}/pin")
 async def pin_event(
     event_id: int,
+    scope: str = Query("user", description="user | team"),
     db: AsyncSession = Depends(get_db),
     user: User = Depends(get_current_user),
 ):
-    """학회 일정을 현재 사용자의 '내 일정' 에 노출하도록 pin (UserAcademicPin)."""
+    """학회 일정 핀. scope=user(기본) 는 본인 일정, scope=team 은 팀 전체 공유."""
     event = (await db.execute(
         select(AcademicEvent).where(AcademicEvent.id == event_id)
     )).scalar_one_or_none()
     if not event:
         raise HTTPException(404, "event not found")
 
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    if event.start_date and event.start_date < today_str:
+        # 과거 학회 신규 핀 방지 (이미 핀이면 그대로)
+        pass
+
+    if scope == "team":
+        team_id = await get_my_team_id(db, user.id)
+        if not team_id:
+            raise HTTPException(400, "팀에 속해있지 않아 팀 핀을 할 수 없습니다.")
+        existing = (await db.execute(
+            select(TeamAcademicPin).where(
+                TeamAcademicPin.team_id == team_id,
+                TeamAcademicPin.event_id == event_id,
+            )
+        )).scalar_one_or_none()
+        if event.start_date and event.start_date < today_str and not existing:
+            raise HTTPException(400, "이미 종료된 학회는 새로 등록할 수 없습니다.")
+        if not existing:
+            db.add(TeamAcademicPin(
+                team_id=team_id, event_id=event_id, pinned_by_user_id=user.id
+            ))
+            await db.commit()
+        return {"status": "pinned", "id": event_id, "scope": "team", "is_pinned": True}
+
+    # 기본: 사용자 핀
     existing = (await db.execute(
         select(UserAcademicPin).where(
             UserAcademicPin.user_id == user.id, UserAcademicPin.event_id == event_id
         )
     )).scalar_one_or_none()
-
-    today_str = datetime.now().strftime("%Y-%m-%d")
     if event.start_date and event.start_date < today_str and not existing:
         raise HTTPException(400, "이미 종료된 학회는 새로 등록할 수 없습니다.")
-
     if not existing:
         db.add(UserAcademicPin(user_id=user.id, event_id=event_id))
         await db.commit()
-    return {"status": "pinned", "id": event_id, "is_pinned": True}
+    return {"status": "pinned", "id": event_id, "scope": "user", "is_pinned": True}
 
 
 @router.delete("/academic-events/{event_id}/pin")
 async def unpin_event(
     event_id: int,
+    scope: str = Query("user", description="user | team"),
     db: AsyncSession = Depends(get_db),
     user: User = Depends(get_current_user),
 ):
+    if scope == "team":
+        team_id = await get_my_team_id(db, user.id)
+        if not team_id:
+            raise HTTPException(400, "팀에 속해있지 않습니다.")
+        existing = (await db.execute(
+            select(TeamAcademicPin).where(
+                TeamAcademicPin.team_id == team_id,
+                TeamAcademicPin.event_id == event_id,
+            )
+        )).scalar_one_or_none()
+        if existing:
+            # 공유한 본인만 팀 핀 해제 가능. 다른 팀원은 본인 일정에서만 핀 해제.
+            if existing.pinned_by_user_id != user.id:
+                raise HTTPException(403, "팀 일정 공유는 처음 등록한 사용자만 해제할 수 있습니다. 본인 일정에서 빼려면 '내 일정 해제' 를 사용하세요.")
+            await db.delete(existing)
+            await db.commit()
+        return {"status": "unpinned", "id": event_id, "scope": "team", "is_pinned": False}
+
     existing = (await db.execute(
         select(UserAcademicPin).where(
             UserAcademicPin.user_id == user.id, UserAcademicPin.event_id == event_id
@@ -700,7 +798,7 @@ async def unpin_event(
     if existing:
         await db.delete(existing)
         await db.commit()
-    return {"status": "unpinned", "id": event_id, "is_pinned": False}
+    return {"status": "unpinned", "id": event_id, "scope": "user", "is_pinned": False}
 
 
 @router.get("/academic-events/{event_id}")
@@ -717,7 +815,10 @@ async def get_event(
     if not event:
         raise HTTPException(404, "event not found")
     pinned = await _user_pinned_event_ids(db, user.id, [event.id])
-    payload = _event_to_dict(event, pinned_event_ids=pinned)
+    team_id = await get_my_team_id(db, user.id)
+    team_pinned = await _team_pinned_event_ids(db, team_id, [event.id])
+    owners = await _team_pin_owner_map(db, team_id, [event.id])
+    payload = _event_to_dict(event, pinned_event_ids=pinned, team_pinned_event_ids=team_pinned, team_pin_owner_map=owners)
     payload["lectures"] = await _enrich_lectures_with_doctors(
         payload["lectures"], db, user.id
     )
@@ -772,7 +873,10 @@ async def update_event_departments(
     await db.commit()
     await db.refresh(event)
     pinned = await _user_pinned_event_ids(db, user.id, [event.id])
-    return _event_to_dict(event, pinned_event_ids=pinned)
+    team_id = await get_my_team_id(db, user.id)
+    team_pinned = await _team_pinned_event_ids(db, team_id, [event.id])
+    owners = await _team_pin_owner_map(db, team_id, [event.id])
+    return _event_to_dict(event, pinned_event_ids=pinned, team_pinned_event_ids=team_pinned, team_pin_owner_map=owners)
 
 
 @router.post("/academic-events/reclassify")

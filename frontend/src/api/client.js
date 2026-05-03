@@ -29,8 +29,25 @@ async function request(path, options = {}) {
 // ─── Auth ───
 export const authApi = {
   me: () => request('/auth/me'),
+  updateMe: (data) => request('/auth/me', { method: 'PATCH', body: JSON.stringify(data) }),
   logout: () => request('/auth/logout', { method: 'POST' }),
   loginUrl: () => `${API_BASE}/auth/google/login`,
+};
+
+// ─── Teams ───
+export const teamApi = {
+  me: () => request('/api/teams/me'),
+  create: (name) => request('/api/teams', { method: 'POST', body: JSON.stringify({ name }) }),
+  rename: (name) => request('/api/teams/me', { method: 'PATCH', body: JSON.stringify({ name }) }),
+  invite: (email) => request('/api/teams/me/invite', { method: 'POST', body: JSON.stringify({ email }) }),
+  removeMember: (userId) => request(`/api/teams/me/members/${userId}`, { method: 'DELETE' }),
+  leave: () => request('/api/teams/me/leave', { method: 'POST' }),
+  // 초대 (받은/보낸 + 응답)
+  myInvitations: () => request('/api/teams/me/invitations'),
+  sentInvitations: () => request('/api/teams/me/sent-invitations'),
+  acceptInvite: (id) => request(`/api/teams/invitations/${id}/accept`, { method: 'POST' }),
+  declineInvite: (id) => request(`/api/teams/invitations/${id}/decline`, { method: 'POST' }),
+  cancelInvite: (id) => request(`/api/teams/me/invitations/${id}`, { method: 'DELETE' }),
 };
 
 // ─── Hospitals ───
@@ -138,8 +155,8 @@ export const academicApi = {
   getById: (id) => request(`/api/academic-events/${id}`),
   create: (data) => request('/api/academic-events', { method: 'POST', body: JSON.stringify(data) }),
   delete: (id) => request(`/api/academic-events/${id}`, { method: 'DELETE' }),
-  pin: (id) => request(`/api/academic-events/${id}/pin`, { method: 'POST' }),
-  unpin: (id) => request(`/api/academic-events/${id}/pin`, { method: 'DELETE' }),
+  pin: (id, scope = 'user') => request(`/api/academic-events/${id}/pin?scope=${scope}`, { method: 'POST' }),
+  unpin: (id, scope = 'user') => request(`/api/academic-events/${id}/pin?scope=${scope}`, { method: 'DELETE' }),
   sync: () => request('/api/academic-events/sync', { method: 'POST' }),
   updateEventDepartments: (id, departments) =>
     request(`/api/academic-events/${id}/departments`, {

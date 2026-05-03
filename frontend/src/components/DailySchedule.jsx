@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { CheckCircle, Trash2, ChevronLeft, ChevronRight, RotateCcw, BookOpen, MapPin, Megaphone } from 'lucide-react';
+import { CheckCircle, Trash2, ChevronLeft, ChevronRight, BookOpen, MapPin, Megaphone, Users } from 'lucide-react';
 
 const DOW_KO = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
 const DOW_SHORT = ['일', '월', '화', '수', '목', '금', '토'];
@@ -49,14 +49,18 @@ function hhmm(visitDate) {
 export default function DailySchedule({
   dateStr,
   todayStr,
-  visits = [],            // VisitLog[]
+  visits = [],            // VisitLog[] — 선택된 날짜의 visit
   events = [],            // AcademicEvent[] — 해당 날짜에 진행되는 학회/심포지엄
+  visitsByDate = {},      // { 'YYYY-MM-DD': VisitLog[] } — 주간 스트립 카운트용
+  eventsByDate = {},      // { 'YYYY-MM-DD': AcademicEvent[] } — 주간 스트립 카운트용
   onSelectDate,
   onComplete,
   onCancel,
   onOpenDetail,           // 카드 본문 클릭 → 상세 모달
   onOpenAcademic,         // 학회 카드 클릭 → 학회 상세 모달
   onOpenMonth,            // "전체 일정 확인" 버튼
+  onShare,                // 카드 우상단 공유 버튼 클릭 → 공유 모달
+  hasTeam = false,
 }) {
   const dateObj = dateStr ? new Date(dateStr + 'T00:00:00') : new Date();
 
@@ -160,22 +164,14 @@ export default function DailySchedule({
               aria-label="오늘로 이동"
               title="오늘로 이동"
               style={{
-                width: 28, height: 28, borderRadius: '50%',
+                height: 34, padding: '0 12px', borderRadius: 9,
                 background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
-                color: 'var(--t3)', cursor: 'pointer', fontFamily: 'inherit',
+                color: 'var(--t2)', cursor: 'pointer', fontFamily: 'inherit',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                transition: 'color .15s, border-color .15s',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.color = 'var(--ac)';
-                e.currentTarget.style.borderColor = 'var(--ac)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.color = 'var(--t3)';
-                e.currentTarget.style.borderColor = 'var(--bd-s)';
+                fontSize: 12, fontWeight: 600,
               }}
             >
-              <RotateCcw size={13} />
+              오늘
             </button>
           )}
           <button
@@ -221,11 +217,13 @@ export default function DailySchedule({
           const dow = obj.getDay(); // 0=일, 6=토
           const weekendColor = dow === 0 ? 'var(--rd)' : dow === 6 ? 'var(--bl)' : null;
           const textColor = isSelected ? '#fff' : (weekendColor || 'var(--t1)');
+          const visitCount = (visitsByDate[d] || []).length;
           return (
             <button
               key={d}
               onClick={() => onSelectDate?.(d)}
               style={{
+                position: 'relative',
                 flex: 1, minWidth: 48, padding: '10px 4px',
                 borderRadius: 12, cursor: 'pointer',
                 fontFamily: 'inherit',
@@ -247,11 +245,33 @@ export default function DailySchedule({
               }}>
                 {obj.getDate()}
               </span>
-              {isToday && !isSelected && (
+              {/* 오늘 점 — 항상 4px 자리 reserve, 오늘이 아니면 투명 */}
+              <span style={{
+                width: 4, height: 4, borderRadius: '50%',
+                background: (isToday && !isSelected) ? 'var(--ac)' : 'transparent',
+                marginTop: 1,
+                flexShrink: 0,
+              }} />
+              {/* 일정 개수 배지 (우상단) — 파스텔 빨강 톤 */}
+              {visitCount > 0 && (
                 <span style={{
-                  width: 4, height: 4, borderRadius: '50%',
-                  background: 'var(--ac)', marginTop: 1,
-                }} />
+                  position: 'absolute',
+                  top: 3, right: 3,
+                  minWidth: 11, height: 11,
+                  padding: '0 2px',
+                  borderRadius: 6,
+                  background: isSelected ? 'rgba(255,255,255,.85)' : 'rgba(239, 68, 68, .18)',
+                  color: isSelected ? '#dc2626' : 'rgba(220, 38, 38, .85)',
+                  fontSize: 8,
+                  fontWeight: 700,
+                  fontFamily: 'Manrope',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  lineHeight: 1,
+                  boxSizing: 'border-box',
+                  pointerEvents: 'none',
+                }}>
+                  {visitCount}
+                </span>
               )}
             </button>
           );
@@ -337,7 +357,7 @@ export default function DailySchedule({
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{
-                  display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2,
+                  display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2, flexWrap: 'wrap',
                 }}>
                   <span style={{
                     padding: '1px 6px', borderRadius: 4,
@@ -351,6 +371,19 @@ export default function DailySchedule({
                   }}>
                     {an.title || '업무공지'}
                   </span>
+                  {an.is_mine === false && (
+                    <span
+                      title={an.owner_name ? `${an.owner_name} 님이 공유` : '공유받은 공지'}
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                        width: 18, height: 18, borderRadius: 4,
+                        background: '#ede9fe', color: '#6d28d9',
+                        flexShrink: 0,
+                      }}
+                    >
+                      <Users size={11} />
+                    </span>
+                  )}
                 </div>
                 {an.notes && (
                   <div style={{
@@ -397,7 +430,7 @@ export default function DailySchedule({
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{
-                  display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2,
+                  display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2, flexWrap: 'wrap',
                 }}>
                   <span style={{
                     padding: '1px 6px', borderRadius: 4,
@@ -411,6 +444,19 @@ export default function DailySchedule({
                   }}>
                     {ev.name}
                   </span>
+                  {ev.is_pinned_by_team && !ev.is_pinned_by_user && (
+                    <span
+                      title={ev.team_pinned_by_name ? `${ev.team_pinned_by_name} 님이 공유` : '팀 공유 학회'}
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                        width: 18, height: 18, borderRadius: 4,
+                        background: '#ede9fe', color: '#6d28d9',
+                        flexShrink: 0,
+                      }}
+                    >
+                      <Users size={11} />
+                    </span>
+                  )}
                 </div>
                 {(ev.location || ev.organizer_name) && (
                   <div style={{
@@ -450,6 +496,8 @@ export default function DailySchedule({
               onComplete={onComplete}
               onCancel={onCancel}
               onOpenDetail={onOpenDetail}
+              onShare={onShare}
+              hasTeam={hasTeam}
             />
           ))}
         </div>
@@ -458,7 +506,7 @@ export default function DailySchedule({
   );
 }
 
-function TimelineRow({ item, isNextUp, onComplete, onCancel, onOpenDetail }) {
+function TimelineRow({ item, isNextUp, onComplete, onCancel, onOpenDetail, onShare, hasTeam }) {
   const theme = STATUS_THEME[item.visit.status] || STATUS_THEME.예정;
   const accent = isNextUp ? '#0369a1' : theme.accent;
 
@@ -501,13 +549,15 @@ function TimelineRow({ item, isNextUp, onComplete, onCancel, onOpenDetail }) {
           onComplete={onComplete}
           onCancel={onCancel}
           onOpenDetail={onOpenDetail}
+          onShare={onShare}
+          hasTeam={hasTeam}
         />
       </div>
     </div>
   );
 }
 
-function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail }) {
+function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail, onShare, hasTeam }) {
   const isPlanned = visit.status === '예정';
   const isAnnouncement = visit.category === 'announcement';
   const isPersonal = visit.category === 'personal' || (!visit.doctor_name && !isAnnouncement);
@@ -524,6 +574,8 @@ function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail 
   const badgeColor = isAnnouncement
     ? '#b45309'
     : (isPersonal ? 'var(--ac)' : (isNextUp ? '#fff' : theme.c));
+  const isMine = visit.is_mine !== false;
+  const isShared = visit.visibility === 'team';
   return (
     <div
       onClick={() => onOpenDetail?.(visit)}
@@ -532,10 +584,31 @@ function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail 
         background: cardBg,
         border: `1px solid ${cardBorder}`,
         boxShadow: isNextUp ? `0 4px 14px ${theme.accent}22` : '0 1px 4px rgba(0,0,0,.03)',
-        cursor: 'pointer',
+        cursor: 'pointer', position: 'relative',
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+      {/* 우상단 공유 버튼 — 본인 일정 + 팀 있을 때만 표시 */}
+      {isMine && hasTeam && (
+        <button
+          onClick={(e) => { e.stopPropagation(); onShare?.(visit); }}
+          aria-label="일정 공유"
+          title={isShared ? '공유 설정 변경' : '팀원과 공유'}
+          style={{
+            position: 'absolute', top: 8, right: 8,
+            display: 'flex', alignItems: 'center', gap: 4,
+            padding: '4px 8px', borderRadius: 7,
+            background: isShared ? '#dcfce7' : 'var(--bg-2)',
+            color: isShared ? '#15803d' : 'var(--t2)',
+            border: `1px solid ${isShared ? '#86efac' : 'var(--bd-s)'}`,
+            cursor: 'pointer', fontFamily: 'inherit',
+            fontSize: 10, fontWeight: 700,
+          }}
+        >
+          <Users size={11} /> {isShared ? '공유 중' : '공유'}
+        </button>
+      )}
+
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6, flexWrap: 'wrap', paddingRight: isMine && hasTeam ? 70 : 0 }}>
         <span style={{
           padding: '2px 7px', borderRadius: 5,
           fontSize: 9, fontWeight: 800, letterSpacing: '.05em',
@@ -546,6 +619,19 @@ function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail 
           {badgeLabel}
         </span>
         {!isPersonal && !isAnnouncement && isNextUp && <span style={{ fontSize: 10, color: '#b91c1c', fontWeight: 700 }}>곧 시작</span>}
+        {visit.is_mine === false && (
+          <span
+            title={visit.owner_name ? `${visit.owner_name} 님이 공유` : '공유받은 일정'}
+            style={{
+              display: 'inline-flex', alignItems: 'center',
+              width: 18, height: 18, borderRadius: 4,
+              background: '#ede9fe', color: '#6d28d9',
+              justifyContent: 'center',
+            }}
+          >
+            <Users size={11} />
+          </span>
+        )}
       </div>
       <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--t1)', marginBottom: 3 }}>
         {isAnnouncement

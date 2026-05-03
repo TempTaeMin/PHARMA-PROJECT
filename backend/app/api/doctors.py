@@ -6,7 +6,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
-from app.auth.deps import get_current_user
+from app.auth.deps import get_current_user, get_my_team_id
 from app.models.connection import get_db
 from app.models.database import (
     Doctor, Hospital, DoctorSchedule, DoctorDateSchedule, User,
@@ -483,24 +483,45 @@ async def create_visit_log(
     db: AsyncSession = Depends(get_db),
     user: User = Depends(get_current_user),
 ):
-    """방문 기록을 등록합니다. doctor/hospital snapshot 도 함께 저장."""
+    """방문 기록을 등록합니다. doctor/hospital snapshot 도 함께 저장.
+    visibility: 'private'(기본) | 'team'. 'team' 시 recipient_user_ids 필수."""
+    from app.api.visits import _broadcast_visit_shared, _validate_recipients, _apply_recipients
+
     doctor = (await db.execute(
         select(Doctor).options(selectinload(Doctor.hospital)).where(Doctor.id == doctor_id)
     )).scalar_one_or_none()
     if not doctor:
         raise HTTPException(404, "의료진을 찾을 수 없습니다.")
 
+    payload = data.model_dump(exclude={"doctor_id"})
+    visibility = payload.pop("visibility", None) or "private"
+    payload.pop("recipient_user_ids", None)  # 별도 처리
+    if visibility not in ("private", "team"):
+        raise HTTPException(400, "visibility 는 'private' 또는 'team' 이어야 합니다.")
+    recipient_ids: list[int] = []
+    if visibility == "team":
+        recipient_ids = await _validate_recipients(db, user, data.recipient_user_ids)
+
     visit = VisitLog(
         user_id=user.id,
         doctor_id=doctor_id,
-        **data.model_dump(exclude={"doctor_id"}),
+        **payload,
+        visibility=visibility,
         doctor_name_snapshot=doctor.name,
         doctor_dept_snapshot=doctor.department,
         hospital_name_snapshot=doctor.hospital.name if doctor.hospital else None,
     )
     db.add(visit)
+    await db.flush()
+    if recipient_ids:
+        await _apply_recipients(db, visit, recipient_ids)
     await db.commit()
     await db.refresh(visit)
+    if visibility == "team":
+        try:
+            await _broadcast_visit_shared(db, visit, user, action="created", recipient_ids=recipient_ids)
+        except Exception:
+            pass
     return VisitLogResponse.model_validate(visit)
 
 
@@ -528,18 +549,49 @@ async def update_visit_log(
     db: AsyncSession = Depends(get_db),
     user: User = Depends(get_current_user),
 ):
-    """방문 기록 수정. 예정(계획) → 실행 결과 전환에도 사용."""
+    """방문 기록 수정. owner 는 전체 필드, recipient 는 결과 입력 필드만 수정 가능."""
+    from app.api.visits import (
+        _broadcast_visit_shared, _broadcast_visit_removed, _broadcast_visit_diff,
+        _validate_recipients, _apply_recipients,
+    )
+    from app.api.dashboard import _visit_user_filter
+
+    user_filter = await _visit_user_filter(db, user.id)
     visit = (await db.execute(
         select(VisitLog).where(
             VisitLog.id == visit_id,
             VisitLog.doctor_id == doctor_id,
-            VisitLog.user_id == user.id,
+            user_filter,
         )
     )).scalar_one_or_none()
     if not visit:
         raise HTTPException(404, "방문 기록을 찾을 수 없습니다.")
 
-    allowed = {"status", "product", "notes", "post_notes", "next_action", "visit_date"}
+    is_owner = visit.user_id == user.id
+
+    # recipient 는 결과 입력 필드만 수정 가능 — visibility/recipient_user_ids/날짜/제목/사전메모 차단
+    if not is_owner:
+        recipient_allowed = {"status", "post_notes", "next_action", "product"}
+        for key, value in data.items():
+            if key not in recipient_allowed:
+                continue
+            setattr(visit, key, value)
+        await db.commit()
+        await db.refresh(visit)
+        return VisitLogResponse.model_validate(visit)
+
+    # owner 경로 — 기존 로직
+    prev_visibility = visit.visibility or "private"
+    prev_recipient_ids = [u.id for u in (visit.recipients or [])]
+    allowed = {"status", "product", "notes", "post_notes", "next_action", "visit_date", "visibility"}
+    if "visibility" in data:
+        v = data["visibility"]
+        if v not in ("private", "team"):
+            raise HTTPException(400, "visibility 는 'private' 또는 'team' 이어야 합니다.")
+        if v == "team":
+            my_team_id = await get_my_team_id(db, user.id)
+            if not my_team_id:
+                raise HTTPException(400, "팀에 속해있지 않아 팀 공유로 변경할 수 없습니다.")
     for key, value in data.items():
         if key not in allowed:
             continue
@@ -547,8 +599,32 @@ async def update_visit_log(
             value = datetime.fromisoformat(value.replace("Z", "+00:00"))
         setattr(visit, key, value)
 
+    new_visibility = visit.visibility or "private"
+    new_recipient_ids = list(prev_recipient_ids)
+    recipients_provided = "recipient_user_ids" in data
+
+    if new_visibility == "team":
+        if recipients_provided:
+            new_recipient_ids = await _validate_recipients(db, user, data.get("recipient_user_ids"))
+            await _apply_recipients(db, visit, new_recipient_ids)
+        elif prev_visibility != "team":
+            raise HTTPException(400, "팀 공유로 변경할 때는 recipient_user_ids 가 필요합니다.")
+    elif prev_visibility == "team":
+        await _apply_recipients(db, visit, [])
+        new_recipient_ids = []
+
     await db.commit()
     await db.refresh(visit)
+
+    try:
+        if prev_visibility != "team" and new_visibility == "team":
+            await _broadcast_visit_shared(db, visit, user, action="updated_to_team", recipient_ids=new_recipient_ids)
+        elif prev_visibility == "team" and new_visibility != "team":
+            await _broadcast_visit_removed(db, visit, user, prev_recipient_ids)
+        elif prev_visibility == "team" and new_visibility == "team":
+            await _broadcast_visit_diff(db, visit, user, prev_recipient_ids, new_recipient_ids)
+    except Exception:
+        pass
     return VisitLogResponse.model_validate(visit)
 
 
@@ -560,6 +636,8 @@ async def delete_visit_log(
     user: User = Depends(get_current_user),
 ):
     """예정된 방문만 삭제 가능. 이미 실행된 기록은 보호."""
+    from app.api.visits import _broadcast_visit_removed
+
     visit = (await db.execute(
         select(VisitLog).where(
             VisitLog.id == visit_id,
@@ -572,6 +650,14 @@ async def delete_visit_log(
     if visit.status != "예정":
         raise HTTPException(400, "실행된 방문 기록은 삭제할 수 없습니다.")
 
+    is_team = (visit.visibility or "private") == "team"
+    old_ids = [u.id for u in (visit.recipients or [])] if is_team else []
+
     await db.delete(visit)
     await db.commit()
+    if is_team and old_ids:
+        try:
+            await _broadcast_visit_removed(db, visit, user, old_ids)
+        except Exception:
+            pass
     return {"deleted": visit_id}

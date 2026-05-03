@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { X, Calendar, MapPin, BookOpen, Users, Hash, Tag, ExternalLink, Presentation, ChevronDown, ChevronUp, Pin, Share2, Landmark, GraduationCap } from 'lucide-react';
+import { X, Calendar, MapPin, BookOpen, Users, Hash, Tag, ExternalLink, Presentation, ChevronDown, ChevronUp, Pin, Landmark, GraduationCap } from 'lucide-react';
 import { academicApi } from '../api/client';
 
 const GRADE_COLORS = {
@@ -35,12 +35,14 @@ function fmtRange(start, end) {
   return `${fmtDate(start)} ~ ${fmtDate(end)}`;
 }
 
-export default function AcademicEventModal({ open, event, onClose, onNavigateDoctor, onUpdated, pickMode = false, onPicked }) {
+export default function AcademicEventModal({ open, event, onClose, onNavigateDoctor, onUpdated, pickMode = false, onPicked, hasTeam = false, currentUserId = null }) {
   const [enriched, setEnriched] = useState(null);
   const [loading, setLoading] = useState(false);
   const [sessionsOpen, setSessionsOpen] = useState(false);
   const [pinBusy, setPinBusy] = useState(false);
-  const [isPinned, setIsPinned] = useState(false);
+  const [isPinnedByUser, setIsPinnedByUser] = useState(false);
+  const [isPinnedByTeam, setIsPinnedByTeam] = useState(false);
+  const isPinned = isPinnedByUser || isPinnedByTeam;
 
   useEffect(() => {
     if (!open || !event?.id) {
@@ -50,17 +52,19 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
     }
     let cancelled = false;
     setLoading(true);
-    setIsPinned(!!event.is_pinned);
+    setIsPinnedByUser(!!event.is_pinned_by_user);
+    setIsPinnedByTeam(!!event.is_pinned_by_team);
     academicApi.getById(event.id)
       .then(data => {
         if (cancelled) return;
         setEnriched(data);
-        setIsPinned(!!data.is_pinned);
+        setIsPinnedByUser(!!data.is_pinned_by_user);
+        setIsPinnedByTeam(!!data.is_pinned_by_team);
       })
       .catch(err => { if (!cancelled) console.error('[AcademicEventModal] fetch failed', err); })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
-  }, [open, event?.id, event?.is_pinned]);
+  }, [open, event?.id, event?.is_pinned_by_user, event?.is_pinned_by_team]);
 
   if (!open || !event) return null;
 
@@ -76,30 +80,51 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
     if (pinBusy) return;
     setPinBusy(true);
     try {
-      if (isPinned) {
-        if (pickMode) {
-          onPicked?.();
-          return;
-        }
-        if (!window.confirm('내 일정에서 제거할까요?')) {
-          setPinBusy(false);
-          return;
-        }
-        await academicApi.unpin(ev.id);
-        setIsPinned(false);
-        if (onUpdated) onUpdated();
+      if (isPinnedByUser) {
+        if (pickMode) { onPicked?.(); return; }
+        if (!window.confirm('내 일정에서 제거할까요?')) { setPinBusy(false); return; }
+        await academicApi.unpin(ev.id, 'user');
+        setIsPinnedByUser(false);
+        onUpdated?.();
       } else {
-        await academicApi.pin(ev.id);
-        setIsPinned(true);
-        if (onUpdated) onUpdated();
-        if (pickMode) {
-          onPicked?.();
-          return;
-        }
+        await academicApi.pin(ev.id, 'user');
+        setIsPinnedByUser(true);
+        onUpdated?.();
+        if (pickMode) { onPicked?.(); return; }
       }
     } catch (err) {
       console.error('[AcademicEventModal] pin toggle failed', err);
       alert('처리에 실패했습니다');
+    } finally {
+      setPinBusy(false);
+    }
+  }
+
+  async function handleToggleTeamPin() {
+    if (pinBusy) return;
+    setPinBusy(true);
+    try {
+      if (isPinnedByTeam) {
+        if (!window.confirm('팀 일정에서 제거할까요? 팀원 모두에게 영향이 갑니다.')) {
+          setPinBusy(false); return;
+        }
+        await academicApi.unpin(ev.id, 'team');
+        setIsPinnedByTeam(false);
+      } else {
+        await academicApi.pin(ev.id, 'team');
+        setIsPinnedByTeam(true);
+      }
+      // pinned_by_user_id 등 메타가 바뀌었으므로 enriched 도 갱신해야 권한 분기가 즉시 반영됨
+      try {
+        const fresh = await academicApi.getById(ev.id);
+        setEnriched(fresh);
+        setIsPinnedByUser(!!fresh.is_pinned_by_user);
+        setIsPinnedByTeam(!!fresh.is_pinned_by_team);
+      } catch { /* 이미 위에서 로컬 state 갱신됨 */ }
+      onUpdated?.();
+    } catch (err) {
+      console.error('[AcademicEventModal] team pin toggle failed', err);
+      alert(err.message || '처리에 실패했습니다');
     } finally {
       setPinBusy(false);
     }
@@ -134,6 +159,17 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
                   background: '#fef3c7', color: '#b45309', fontFamily: 'Manrope',
                 }}>
                   <Pin size={10} /> 내 일정
+                </span>
+              )}
+              {ev.is_pinned_by_team && ev.team_pinned_by_name && (
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 3,
+                  padding: '3px 8px', borderRadius: 5,
+                  fontSize: 10, fontWeight: 800, letterSpacing: '.05em',
+                  background: '#ede9fe', color: '#6d28d9',
+                  border: '1px solid #c4b5fd', fontFamily: 'Manrope',
+                }}>
+                  <Users size={10} /> {ev.team_pinned_by_name} 님이 공유
                 </span>
               )}
             </div>
@@ -373,6 +409,31 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
                     이전에 등록한 학회는 그대로 유지·해제 가능합니다.
                   </div>
                 )}
+                {hasTeam && !blockNewPin && (() => {
+                  // 팀 공유된 학회의 제거 버튼은 공유한 본인에게만 노출.
+                  // 다른 팀원은 본인 일정 핀(위 '내 일정 등록') 만 해제하면 됨.
+                  const isTeamPinOwner = !!currentUserId && ev.team_pinned_by_user_id === currentUserId;
+                  if (isPinnedByTeam && !isTeamPinOwner) return null;
+                  return (
+                    <button
+                      onClick={handleToggleTeamPin}
+                      disabled={pinBusy}
+                      style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+                        padding: '11px 16px', borderRadius: 10,
+                        cursor: pinBusy ? 'wait' : 'pointer',
+                        fontSize: 13, fontWeight: 700, fontFamily: 'inherit',
+                        border: '1px solid ' + (isPinnedByTeam ? '#7c3aed' : 'var(--bd-s)'),
+                        background: isPinnedByTeam ? '#ede9fe' : 'var(--bg-1)',
+                        color: isPinnedByTeam ? '#6d28d9' : 'var(--t2)',
+                        opacity: pinBusy ? .6 : 1,
+                      }}
+                    >
+                      <Users size={14} />
+                      {isPinnedByTeam ? '팀 일정에서 제거' : '팀 일정에 공유'}
+                    </button>
+                  );
+                })()}
               </>
             );
           })()}
@@ -412,21 +473,6 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
               <Landmark size={12} /> {ev.organizer_name || '주최단체'} 홈페이지
             </a>
           )}
-
-          {/* 팀 공지 — 준비 중 */}
-          <button
-            disabled
-            title="팀 공유 준비 중"
-            style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-              padding: '9px 14px', borderRadius: 10,
-              background: 'var(--bg-2)', color: 'var(--t3)',
-              border: '1px dashed var(--bd-s)', cursor: 'not-allowed',
-              fontSize: 11, fontWeight: 700, fontFamily: 'inherit',
-            }}
-          >
-            <Share2 size={12} /> 팀 공지로 공유 (준비 중)
-          </button>
         </div>
       </div>
     </div>

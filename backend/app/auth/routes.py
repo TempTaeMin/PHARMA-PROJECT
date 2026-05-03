@@ -6,6 +6,7 @@ from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.responses import RedirectResponse
+from pydantic import BaseModel
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -80,7 +81,8 @@ async def google_callback(request: Request, db: AsyncSession = Depends(get_db)):
     )).scalar_one_or_none()
     if user:
         user.email = email
-        user.name = name
+        # name 은 사용자가 직접 변경 가능하므로 매 로그인마다 Google name 으로 덮어쓰지 않음.
+        # 신규 가입 시에만 Google name 을 초기값으로 사용.
         user.picture = picture
         user.last_login_at = datetime.utcnow()
     else:
@@ -95,7 +97,8 @@ async def google_callback(request: Request, db: AsyncSession = Depends(get_db)):
     await db.commit()
     await db.refresh(user)
 
-    await _ensure_team(db, user)
+    # 팀 자동 생성 안 함 — 사용자가 명시적으로 "팀 만들기" 액션을 해야 팀 생성됨
+    # (1.0 팀 공유 정책: 팀 소속은 선택적)
 
     request.session["user_id"] = user.id
     return RedirectResponse(url=_frontend_url())
@@ -106,6 +109,32 @@ async def me(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
+    tm = (await db.execute(
+        select(TeamMember).where(TeamMember.user_id == user.id).limit(1)
+    )).scalar_one_or_none()
+    return _serialize_user(user, team_id=tm.team_id if tm else None)
+
+
+class ProfileUpdate(BaseModel):
+    name: Optional[str] = None
+
+
+@router.patch("/me", summary="프로필 수정 (이름/닉네임)")
+async def update_me(
+    payload: ProfileUpdate,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    if payload.name is not None:
+        new_name = payload.name.strip()
+        if not new_name:
+            raise HTTPException(status_code=400, detail="이름을 비울 수 없습니다.")
+        if len(new_name) > 200:
+            raise HTTPException(status_code=400, detail="이름이 너무 깁니다 (최대 200자).")
+        user.name = new_name
+    await db.commit()
+    await db.refresh(user)
+
     tm = (await db.execute(
         select(TeamMember).where(TeamMember.user_id == user.id).limit(1)
     )).scalar_one_or_none()
