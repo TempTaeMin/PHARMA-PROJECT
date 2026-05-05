@@ -20,6 +20,182 @@
 
 ---
 
+## 2026-05-05 ~ 05-06 — 베타 배포 (가비아 Gen2 + Docker Compose + Caddy HTTPS) + 운영 데이터 마이그 + 모바일 뒤로가기 + PWA
+
+### 인프라 발주 / 도메인 / DNS
+
+- **가비아 클라우드 Gen2** Standard 2vCore/2GB/50GB SSD (Gen1 신규 막힘 → Gen2). Ubuntu 22.04, IP `139.150.81.16`
+- 도메인 `medisync.co.kr` (가비아 도메인)
+- DNS A 레코드 `@` + `www` → 서버 IP, TTL 600
+- 가비아 보안그룹: 22 / 80 / 443 인바운드 (운영 처음엔 80 누락 → 추가 후 정상)
+- Google OAuth Console 에 운영 redirect URI / JS origin 추가
+
+### Docker Compose 4서비스 운영
+
+- 서비스: `db` (postgres:16-alpine) / `api` (FastAPI Playwright) / `frontend` (nginx) / `caddy` (자동 Let's Encrypt)
+- Celery worker/beat/redis 는 베타엔 미가동 — 자동 크롤링 없음 (수동 `POST /api/scheduler/run/{HOSP}`)
+- `Caddyfile` — `/api/*`, `/auth/*`, `/health` → backend, 그 외 → frontend SPA
+- `.env.production` (git 미커밋, scp 업로드) — DB 비번 / SESSION_SECRET_KEY 자동 생성, OAuth/AI 키는 `backend/.env` 의 dev 값 그대로 (회전 권장 backlog)
+
+### 빌드 단계에서 잡은 호환성 이슈
+
+- `playwright install --with-deps chromium` 실패 → 베이스 이미지 `mcr.microsoft.com/playwright/python:v1.47.0-jammy` 로 교체 (chromium + deps 미리 포함)
+- 프론트 Dockerfile 의 `COPY <<'EOF'` heredoc 이 legacy builder 미지원 → `frontend/nginx.conf` 별도 파일로 분리
+- 우분투 apt 의 `docker-compose` v1 이 Docker 28 과 깨짐(`KeyError: 'ContainerConfig'`) → Docker 공식 v2 plugin 설치 (`/usr/local/lib/docker/cli-plugins/docker-compose` v2.30.3)
+- v1 은 `.env.production` 자동 인식 안 함 → `.env.production` 을 `.env` 로 복사 후 v2 가 변수 보간 (현재 v2 가 `--env-file` 도 지원)
+- node 빌드 vite/rolldown 메모리 부족(2GB RAM) → `/swapfile` 2GB 추가 (`/etc/fstab` 영구 등록)
+
+### Seed / Alembic
+
+- `backend/app/main.py` lifespan: `ENABLE_SEED` 환경변수로 분기 (`true` 일 때만 시드, default `true` 로 dev 친화)
+- `backend/app/models/seed.py:seed_memo_templates` 가 `user_id=1` 없으면 skip (OAuth 첫 로그인 전 빈 DB FK 위반 방지)
+- 누락 마이그레이션 commit: `b1f3a92d4e6c_visit_memo_authorship`, `c2a8d31f7b9e_visit_memo_unique`
+- 운영 DB: `alembic stamp head` 로 init_db() 의 create_all + alembic_version 동기화
+
+### dev SQLite → 운영 Postgres 데이터 마이그레이션 (★ 핵심)
+
+- 처음 베타 부팅엔 `seed_database()` 의 29개 병원 + 7명 샘플만. 의료진 명단 / 학회 일정 비어있음.
+- `backend/scripts/migrate_dev_to_prod.py` 작성 — sync SQLAlchemy 로 양쪽 reflect → ID 보존 INSERT → Postgres SEQUENCE 재설정.
+- 옮긴 마스터: `hospitals` 146 / `doctors` 12,599 / `doctor_schedules` 15,776 / `doctor_date_schedules` 39,956 / `academic_organizers` 199 / `academic_events` 714 / `academic_event_departments` 1,788 = 약 71k row.
+- 옮기지 않음: `users`, `teams`, `team_members`, `user_doctor_grades`, `user_doctor_memos`, `user_academic_pins`, `visit_logs`, `visits_memo`, `visit_log_recipients`, `memo_templates`, `reports`, `schedule_changes`, `crawl_logs` (운영자가 OAuth 후 새로 만들어감)
+- 백업: `~/medisync/pre-migrate-backup.sql.gz` (499K)
+- 실행 흐름: `docker cp` 으로 SQLite + 스크립트 → api 컨테이너 → `pip install psycopg2-binary` (ad-hoc) → dry-run → `MIGRATE_CONFIRM=yes`
+
+### 모바일 뒤로가기 (frontend/src/App.jsx)
+
+- 기존: `useState('dashboard')` 만 — URL 안 바뀌어 history 1 entry. 시스템 뒤로가기 = 외부 이탈
+- 수정: `navTo` 가 `history.pushState({page, props}, '', path)` 동기화. URL 도 `/`, `/schedule`, `/memos` 등으로 변경
+- popstate 이벤트 → `e.state` 의 page 로 복원, 사이드바/notif/profile 자동 닫힘
+- 첫 마운트 시 `window.history.replaceState` 로 현재 page 박아둠 (popstate fallback)
+- `pageFromPath()` — 직접 URL 입력 / 새로고침 시 첫 segment 로 페이지 결정 (`PAGE_IDS` whitelist)
+- 모달 (NotificationPanel, sidebar, profile) 의 뒤로가기 닫기는 backlog
+
+### PWA
+
+- `frontend/public/manifest.json` — name / display:standalone / icons (192, 512, maskable-512) / theme-color `#0040a1`
+- `frontend/public/sw.js` — 최소 PWA 자격용. install/activate 만, fetch 핸들러는 네트워크 우선 (캐싱 없음 → 베타 단계 새 버전 즉시 보임)
+- `frontend/public/icons/` — Python PIL 로 자동 생성된 단순 'M' 로고 192/512 PNG + `apple-touch-icon` (180px)
+- `frontend/index.html` — manifest link, theme-color, apple-touch-icon, apple-mobile-web-app-* 메타
+- `frontend/src/main.jsx` — `import.meta.env.PROD` 일 때만 `navigator.serviceWorker.register('/sw.js')`
+- 모바일 Chrome / Safari 메뉴 → "홈 화면에 추가" 가능
+
+### 후속 / 백로그
+
+- **API 키 회전** — 현재 `backend/.env` dev 키를 운영에서 그대로 사용. 베타 안정 후 회전 필요
+- **DB pg_dump 백업 cron** — `~/medisync/scripts/...` 에 cron 등록 안 됨. 운영자가 직접 추가 필요 (plan Phase 6 의 `0 2 * * *` 라인)
+- **Celery 자동 크롤링** — 베타엔 미가동. 사용자 활성도 보고 도입 결정
+- **로컬에 commit 안 된 dev 변경** — 사용자가 진행 중인 다른 frontend/backend 수정들 (Dashboard.jsx, Schedule.jsx 등) 은 그대로 untracked. 본인이 정리 필요
+- **모바일 모달 뒤로가기** — Notif/Sidebar/Profile 도 뒤로가기로 닫히게 향후
+- **PWA 캐싱** — sw.js 가 네트워크 패스스루만. 진짜 오프라인 지원은 향후
+
+### 운영 인프라 정보 (요약)
+
+| 항목 | 값 |
+|---|---|
+| 서버 | 가비아 Gen2 Standard 2vCore/2GB, IP `139.150.81.16` |
+| OS | Ubuntu 22.04 LTS |
+| 도메인 | `medisync.co.kr` (가비아) |
+| SSH 키 | `C:\Users\ParkNam\Desktop\pharma-project\medisync-key.pem` (icacls 권한 r) |
+| 코드 위치 | `~/medisync/` (deploy 유저 X, ubuntu 유저) |
+| 운영 .env | `~/medisync/.env` + `.env.production` (동일 내용) |
+| Docker Compose | v2.30.3 plugin (`/usr/local/lib/docker/cli-plugins/`) |
+| Swap | `/swapfile` 2GB (영구) |
+| HTTPS 인증서 | Caddy 자동 갱신 (Let's Encrypt) |
+| pre-migrate 백업 | `~/medisync/pre-migrate-backup.sql.gz` |
+
+---
+
+## 2026-05-04 ~ 05-05 — 결과 메모 댓글 모델 도입 + raw 누출 버그 정리 + 보고서/UX 보강
+
+### 1) 결과 메모 "댓글" 모델 도입 (메인 작업)
+
+배경: 사수+부사수가 같은 visit 에 동행하는 경우, 각자 본인 결과 메모 + AI 정리를 갖고, AI 정리본은 visit 관계자 모두에게 보이며, raw 결과 메모는 본인만 보는 모델로 정리. 기존엔 `visit_logs.post_notes` 단일 컬럼이 모두 공유라 사수가 적은 raw 가 부사수 모달에 노출되거나, 박유미가 정리한 raw 가 남기석에게 보이는 누출이 있었음.
+
+**데이터 모델**
+
+| 데이터 | 저장 | 노출 정책 | 쓰기 권한 |
+|---|---|---|---|
+| raw 결과 메모 | `VisitMemo.raw_memo` (사용자별 row 1개) | 본인만 | 본인만 |
+| AI 정리본 | `VisitMemo.ai_summary` | visit 관계자 전원 | 본인만 |
+
+핵심 규칙:
+- visit_log 당 사용자별 `VisitMemo` 0~1개 — `UNIQUE(visit_log_id, user_id)` 제약 (alembic `c2a8d31f7b9e`)
+- 가장 먼저 `created_at` 인 메모 = root("원본"), 나머지 = 댓글
+- 본인 row 만 수정/삭제. 다른 사람 거 read-only
+- root 작성자가 자기 메모 지우면 다음 created_at 이 자동 root 승격 (응답 단계 계산)
+
+**Backend**
+- `models/database.py` — `VisitMemo` 에 `UNIQUE(visit_log_id, user_id)`, `VisitLog.memos` relationship (selectinload 가능). VisitLog 에 `notes_author_id/notes_updated_at/post_notes_author_id/post_notes_updated_at` 컬럼 추가 (alembic `b1f3a92d4e6c`) — 누가 언제 메모 정리했는지 추적용.
+- `api/dashboard.py:my_visits` — VisitMemo join 을 user_id 제한 제거하고 visit 별 모든 댓글 일괄 로딩. 응답에 `memos: [{id, user_id, author_name, raw_memo(본인일 때만), ai_summary, is_root, is_mine, created_at, updated_at}]` 배열 + `comment_count`. 호환 위해 `ai_summary`/`memo_id` 는 root/본인 값으로 채움. `post_notes` 폴백은 본인 raw 만 (legacy 컬럼 노출 차단).
+- `api/dashboard.py:dashboard` — `recent_visits` 에 `comment_count` + `comment_authors`(최근 2명, 본인 제외).
+- `api/visits.py` — `apply_memo_authorship` 헬퍼 (notes/post_notes 변경 시 author/시각 갱신), `upsert_my_raw_memo` 헬퍼 (본인 VisitMemo.raw_memo upsert), `author_name_map` 헬퍼. PATCH 흐름에서 `visit_logs.post_notes` 컬럼은 setattr 안 함 (다른 사람한테 누출 차단), 본인 VisitMemo.raw_memo 에만 저장. `ai_summarize_visit` 의 메모 조회에 `user_id == user.id` 필터 추가 — 안 그러면 다른 사람 메모를 덮어쓰는 critical 버그.
+- `api/doctors.py:update_visit_log` — 동일 정책 (owner/recipient 양쪽 분기).
+- `api/memos.py:list_memos` — `_visit_user_filter` 로 본인이 관계된 visit 의 모든 댓글 노출. 다른 사람 raw_memo 는 strip. 응답에 `is_root`/`is_mine`/`author_name` 포함.
+- `api/visits.py:_validate_recipients` — 에러 메시지에 "본인 외 1명 이상" 명시.
+
+**Frontend**
+- `components/VisitDetailModal.jsx` — AI 정리 영역을 `MemoThread` 카드 트리로 교체 (root 첫 카드, 들여쓴 댓글 카드들, 본인 카드 강조 배경 + "(나)" 라벨). raw 입력 박스에 "본인만 보여요" 헬퍼. AI 정리 카드가 하나라도 있으면 raw 박스 자동 접힘 + "원본 보기" 토글. `localMemos` optimistic state — AI 정리 직후 본인 카드 즉시 스레드에 반영. `MemoAuthorLine` 컴포넌트 + `_relativeKo()` 헬퍼.
+- `components/DailySchedule.jsx` / `pages/Schedule.jsx` — 미리보기 폴백 우선순위 재정의: **본인 AI > root(공유본) AI > 본인 raw > 사전 메모**. 다른 사람 raw 는 절대 미리보기에 안 뜨도록. "💬 추가 메모 N · ○○○" chip 추가.
+- `pages/Memos.jsx` — visit 단위 그룹핑 (root + 들여쓴 댓글). 다른 사람 카드에 `by ○○` chip. 본인 카드만 편집/삭제 컨트롤. "내 메모만" 토글 (localStorage `memos-mine-only`) — 일일 보고서 작성 시 본인 거만 추리기 위함.
+- `hooks/useMonthCalendar.js` — `refresh()` 가 Promise 반환하도록 변경, `updateVisit` 가 await — 저장 후 카드 즉시 갱신 (이전엔 fire-and-forget 라 미리보기 stale).
+
+**마이그레이션 / 데이터 정리**
+- alembic 두 revision: `b1f3a92d4e6c`(post_notes_author 등 4 컬럼), `c2a8d31f7b9e`(VisitMemo UNIQUE).
+- dual-write 시기에 누출돼있던 `visit_logs.post_notes` 6건 일괄 NULL 화 (사용자 OK 받음). 새 모델에선 컬럼 자체 deprecate, 응답에서 본인 raw 만 노출.
+
+### 2) Critical 버그 fix
+
+- **박인자 교수 진료과** (서울아산병원, id=341) — `방사선종양학과` 로 잘못 등록되어 있었음. 원인: `services/crawl_service.py:_update_doctor_info` 가 기존 의사 갱신 시 `department` 를 안 건드림 → 처음 잘못 등록되면 영구 고착. fix: `if crawled.department: doctor.department = crawled.department` 추가 (빈값은 무시). 박인자 교수 데이터 즉시 `대장항문외과` 로 정정.
+- **AI 정리 시 다른 사람 메모 덮어쓰기** — `ai_summarize_visit` 의 VisitMemo 조회에 user_id 필터 누락. 박유미가 정리하면 남기석 메모가 덮어쓰여짐. user_id 필터 추가로 해결.
+- **raw 누출 chain** — 박유미 owner 모달에서 dual-write 시기 잔존 데이터(visit_logs.post_notes) 가 본인 raw 인 줄 알고 표시 → 박유미가 AI 정리하면 박유미 메모에 남기석 raw + AI 결과 저장 → 모두에게 노출. 폴백 경로 전부 제거 + legacy 데이터 클리어로 차단.
+
+### 3) Dialog 컴포넌트 + 전역 alert/confirm 일관
+
+배경: native `alert("localhost:5173의 메시지")` 가 일관성 깨고 엣지 브라우저 default UI 그대로 노출되어 거슬림.
+
+- `components/Dialog.jsx` — 단일 큐 기반 모달 호스트. tone (`info`/`success`/`warning`/`danger`) + title/message + 확인/취소 버튼. ESC 닫기, 자동 포커스, 백드롭 클릭 닫기 (alert 한정).
+- `utils/dialog.js` — Promise API: `showAlert(msg, opts)`, `showConfirm(msg, opts)`, `showError(err, opts)`.
+- `App.jsx` 에 `<DialogHost />` 마운트 (인증 체크 / 로그인 / 메인 모두).
+- 13개 파일의 `alert()`/`confirm()` 30+ 군데 모두 새 헬퍼로 교체 (VisitDetailModal, SelectMeetingTime, ShareVisitModal, AddVisitModal, Schedule, Dashboard, MyDoctors, Team, NotificationPanel, AcademicEventDetailModal/Modal, BrowseDoctors, MemoDetail/Editor, ReportDetail, TemplateSettings).
+
+**공유 실패 가드 강화**
+- `ShareVisitModal` / `SelectMeetingTime` 에서 PATCH 직전 `currentUserId !== id` 본인 strip 한 번 더 (RecipientPicker 가드와 무관하게 본인 들어가는 경로 차단).
+- `ShareVisitModal` useEffect deps 를 `[open, visit?.id]` 로 좁혀 visit 객체 reference 변경 시 사용자 입력 보존.
+- 백엔드 `_validate_recipients` 메시지: "본인 외 팀원 1명 이상" 명시.
+
+### 4) 일일 보고서 — 동료 메모 추가 가능
+
+배경: 사수+부사수 모델에서 일일 보고서 작성 시 동료가 정리한 AI 메모를 본인 보고서에 같이 묶을 수 있어야 함.
+
+- `api/reports.py:_collect_items_from_memos` — `VisitMemo.user_id == user_id` 강제 필터 제거. 본인 메모 + 본인이 관계된 visit 의 다른 사람 메모 통과. 단 다른 사람 거는 `raw_memo` strip, `ai_summary_text` 만 입력으로 사용 (raw 누출 차단). `author_name`/`is_mine` 메타 포함.
+- `services/ai_memo.py` prompt 빌더 — 동료 메모 블록에 "작성자: ○○ (동료가 정리한 공유 메모)" meta 추가. LLM 이 출처 구분 가능.
+- `components/ReportGenerator.jsx` — 초기 체크 = 본인 메모만. 동료 메모는 후보로 노출되지만 명시적 선택 필요. 상단 안내 배너 + "내 거만" 빠른 선택 버튼. ItemRow 에 보라색 `by ○○○` chip.
+
+### 5) 보고서 탭 일일/주간 필터
+
+- `pages/Memos.jsx` reports 탭에 chip 그룹: `전체 N · 일일 N · 주간 N`. 클라이언트 필터.
+- 필터 적용 후 빈 상태일 땐 "전체 보고서 보기" 안내로 빠른 복귀.
+- state 는 메모리상 (페이지 떠나면 `'all'` 초기화).
+
+### 6) 기타 작은 변경
+
+- 메모 페이지 "내 메모만" 토글 (localStorage 영속).
+- `crawl_service.py:_update_doctor_info` 에 department 갱신 추가 (위 박인자 fix 의 본질적 해결).
+
+---
+
+### 진행 중 / 내일 (2026-05-06) 할 일
+
+- **팀관리 재논의** — 팀 초대/탈퇴/역할 흐름 최종 확인. 1인 팀 default 외 멀티 멤버 시나리오 UX 점검.
+- **최종 확인** — 위 댓글 모델 도입 후 사수/부사수 시나리오 end-to-end 수동 테스트, AI 정리 우선순위/접기 동작, alert 모달 모든 경로 확인.
+- **배포 일정 잡기** — 어제(5/3) 논의하던 가비아 g1 + Postgres + 월1회 크롤링 배포 plan (`async-swimming-axolotl.md`) 확정 + 출시일 결정.
+
+### 보류 항목
+
+- **메모 통합 기능** — visit 단위 본인+동료 메모 AI 종합 (Reports 패턴 재활용). 결과물 형태(별도 보고서 vs 본인 메모 import) 와 공개 범위 결정 필요. 사용자가 "조금 더 고민" 이라 보류 (`.claude/plans/validated-inventing-sloth.md` 에 stub 남김).
+
+---
+
 ## 2026-04-29 — MR 일일/주간 보고서 시스템 + AI 백본 교체 + 메모 UX 보강
 
 ### 1) 보고서 시스템 신규 (메인 작업)
