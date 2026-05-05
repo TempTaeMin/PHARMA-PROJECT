@@ -1,4 +1,6 @@
-FROM python:3.11-slim
+# Playwright 공식 베이스 이미지 — chromium + 모든 시스템 의존성 미리 설치됨.
+# Ubuntu 22.04 의 apt --with-deps 충돌 회피.
+FROM mcr.microsoft.com/playwright/python:v1.47.0-jammy
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -7,19 +9,16 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
-# 빌드/런타임 시스템 패키지 (asyncpg, lxml, fonts-liberation for Playwright)
+# asyncpg 빌드용 libpq-dev + 한글 폰트
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
     libpq-dev \
-    curl \
     fonts-noto-cjk \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# Playwright Chromium + 의존 라이브러리 설치 (수동 크롤링용)
-RUN playwright install --with-deps chromium
+# chromium 은 베이스 이미지에 이미 포함 — playwright install 불필요
 
 COPY . .
 
