@@ -11,6 +11,7 @@ import Team from './pages/Team';
 import SettingsPage from './pages/Settings';
 import Login from './pages/Login';
 import NotificationPanel from './components/NotificationPanel';
+import DialogHost from './components/Dialog';
 
 const NAV = [
   { id: 'dashboard', label: '내 일정', icon: LayoutDashboard },
@@ -22,8 +23,21 @@ const NAV = [
   { id: 'team', label: '팀 관리', icon: Users },
 ];
 
+const PAGE_IDS = [...NAV.map(n => n.id), 'settings'];
+
+// URL 의 첫 path segment 로 초기 페이지 결정 — 직접 URL 입력 / 새로고침 / 뒤로가기 대응.
+function pageFromPath() {
+  if (typeof window === 'undefined') return 'dashboard';
+  const seg = window.location.pathname.replace(/^\/+/, '').split('/')[0];
+  return PAGE_IDS.includes(seg) ? seg : 'dashboard';
+}
+
+function pathForPage(p) {
+  return p === 'dashboard' ? '/' : `/${p}`;
+}
+
 export default function App() {
-  const [page, setPage] = useState('dashboard');
+  const [page, setPage] = useState(pageFromPath);
   const [pageProps, setPageProps] = useState({});
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [notifOpen, setNotifOpen] = useState(false);
@@ -120,11 +134,47 @@ export default function App() {
   };
 
   const unread = notifications.filter(n => !n.read).length;
-  const navTo = (p, props = {}) => {
+
+  // 페이지 이동 — history.pushState 동기화로 모바일 뒤로가기 정상 동작.
+  const navTo = useCallback((p, props = {}) => {
+    if (typeof window !== 'undefined') {
+      window.history.pushState({ page: p, props }, '', pathForPage(p));
+    }
     setPage(p);
     setPageProps(props);
     setSidebarOpen(false);
-  };
+    setNotifOpen(false);
+  }, []);
+
+  // 첫 마운트 시 현재 page 를 history.state 에 박아둠 (popstate 시 fallback 용).
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const st = window.history.state;
+    if (!st || st.page === undefined) {
+      window.history.replaceState({ page, props: pageProps }, '', pathForPage(page));
+    }
+    // 첫 마운트만
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // 시스템 뒤로가기/앞으로가기 — state 에서 page 복원, 없으면 URL 에서 다시 읽음.
+  useEffect(() => {
+    const onPopState = (e) => {
+      const st = e.state;
+      if (st && PAGE_IDS.includes(st.page)) {
+        setPage(st.page);
+        setPageProps(st.props || {});
+      } else {
+        setPage(pageFromPath());
+        setPageProps({});
+      }
+      setSidebarOpen(false);
+      setNotifOpen(false);
+      setProfileOpen(false);
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
 
   const sidebarVisible = !isMobile || sidebarOpen;
 
@@ -134,11 +184,19 @@ export default function App() {
       <div style={{
         minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
         color: 'var(--t3)', fontSize: 13, background: 'var(--bg-0)',
-      }}>로딩 중…</div>
+      }}>
+        로딩 중…
+        <DialogHost />
+      </div>
     );
   }
   if (!currentUser) {
-    return <Login />;
+    return (
+      <>
+        <Login />
+        <DialogHost />
+      </>
+    );
   }
 
   return (
@@ -307,6 +365,7 @@ export default function App() {
           try { const me = await authApi.me(); setCurrentUser(me); } catch { /* ignore */ }
         }}
       />
+      <DialogHost />
     </div>
   );
 }
