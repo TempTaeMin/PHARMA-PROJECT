@@ -2,8 +2,8 @@
 # DOMAIN 환경변수는 docker-compose.yml 에서 주입.
 
 {$DOMAIN} {
-	# /api/* 와 /auth/* 만 백엔드로 프록시 (WS 포함, Caddy 가 자동 upgrade)
-	@backend path /api/* /auth/*
+	# /api/*, /auth/*, /health 백엔드로 프록시 (WS 포함, Caddy 가 자동 upgrade)
+	@backend path /api/* /auth/* /health
 	reverse_proxy @backend api:8000
 
 	# 그 외는 프론트(nginx) — SPA fallback 은 nginx 측 try_files 가 처리
