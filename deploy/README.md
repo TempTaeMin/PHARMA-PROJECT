@@ -1,4 +1,7 @@
-# 배포 템플릿
+# 배포 템플릿 (비-Docker 대안 — 현재 사용 안 함)
+
+> **현재 베타 배포는 루트의 `docker-compose.yml` + `Caddyfile` 로 진행한다.**
+> 이 폴더의 파일은 Docker 를 걷어내고 호스트에 직접 설치(systemd + nginx + apt postgres) 하는 대안 자료. 향후 가벼운 단일-호스트 운영이 필요해질 때 참고용.
 
 가비아 g1 / Ubuntu 22.04 / Postgres 16 / nginx + Let's Encrypt 기준 배포 자료.
 

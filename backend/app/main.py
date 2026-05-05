@@ -37,8 +37,11 @@ logging.basicConfig(
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await init_db()
-    async with async_session() as db:
-        await seed_database(db)
+    # 운영에서는 ENABLE_SEED=true 인 경우에만 시드 데이터 삽입.
+    # seed_database() 는 idempotent — 누락된 병원만 추가, 시드 이미 있으면 교수 데이터는 건너뜀.
+    if os.getenv("ENABLE_SEED", "true").lower() == "true":
+        async with async_session() as db:
+            await seed_database(db)
     logging.getLogger(__name__).info("MediSync v0.4.0 시작")
     yield
     logging.getLogger(__name__).info("MediSync 종료")
