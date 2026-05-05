@@ -1,7 +1,7 @@
 """DB 초기 시드 데이터"""
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from app.models.database import Hospital, Doctor, DoctorSchedule, VisitLog, MemoTemplate
+from app.models.database import Hospital, Doctor, DoctorSchedule, VisitLog, MemoTemplate, User
 from datetime import datetime, timedelta
 import json
 import logging
@@ -72,7 +72,12 @@ DEFAULT_MEMO_TEMPLATE_FIELDS = [
 
 
 async def seed_memo_templates(db: AsyncSession):
-    """기본 메모 템플릿(user_id=1)이 없으면 생성."""
+    """기본 메모 템플릿(user_id=1)이 없으면 생성. user 가 아직 없으면 skip
+    (OAuth 첫 로그인 후 user 생성됨 — 그 후 부팅 때 시드되거나 OAuth 콜백에서 별도 생성)."""
+    user = (await db.execute(select(User).where(User.id == 1))).scalar_one_or_none()
+    if user is None:
+        logger.info("user_id=1 없음 — 메모 템플릿 시드 건너뜀 (첫 OAuth 로그인 대기)")
+        return
     existing = (
         await db.execute(select(MemoTemplate).where(MemoTemplate.user_id == 1))
     ).scalars().first()
