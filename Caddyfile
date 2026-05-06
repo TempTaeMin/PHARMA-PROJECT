@@ -1,6 +1,11 @@
 # MediSync Caddyfile — HTTPS 자동 발급(Let's Encrypt) + 라우팅
 # DOMAIN 환경변수는 docker-compose.yml 에서 주입.
 
+# www → apex 리다이렉트 (canonical URL 한 곳으로 모음)
+www.{$DOMAIN} {
+	redir https://{$DOMAIN}{uri} permanent
+}
+
 {$DOMAIN} {
 	# /api/*, /auth/*, /health 백엔드로 프록시 (WS 포함, Caddy 가 자동 upgrade)
 	@backend path /api/* /auth/* /health
