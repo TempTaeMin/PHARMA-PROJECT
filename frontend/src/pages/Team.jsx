@@ -518,14 +518,14 @@ export default function Team({ currentUser, onTeamChanged }) {
                     onClick={() => handleTransfer(m)}
                     style={{
                       padding: '6px 10px', borderRadius: 6,
-                      background: '#fef3c7', color: '#92400e',
-                      border: '1px solid #fcd34d',
+                      background: 'var(--ac-d)', color: 'var(--ac)',
+                      border: '1px solid var(--ac)',
                       fontSize: 10, fontWeight: 700, fontFamily: 'inherit', cursor: 'pointer',
                       display: 'inline-flex', alignItems: 'center', gap: 3, whiteSpace: 'nowrap',
                     }}
-                    title="리더 권한 양도"
+                    title="이 멤버에게 리더 권한을 양도합니다"
                   >
-                    <Crown size={10} /> 리더로
+                    <ArrowRightLeft size={10} /> 권한 양도
                   </button>
                   <button onClick={() => handleRemove(m)} style={iconBtn(true)} title="제거">
                     <Trash2 size={13} />
