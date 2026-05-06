@@ -178,28 +178,25 @@ class KumcBaseCrawler:
             return self._cached_data
 
         async with httpx.AsyncClient(headers=self.headers, timeout=30, follow_redirects=True) as client:
-            # 1. doctorApi에서 의사 상세 정보 (이름, 전문분야, 직위 등)
+            # 1. doctorApi에서 의사 상세 정보 — 보강용 (specialty, position, profile_url)
+            #    매칭 안 되어도 의사 등록은 막지 않는다.
+            #    KUMC 는 doctorApi (교수 인증용 풀) 와 getDoctorList (외래 진료 의사 풀) 가
+            #    분리돼서, doctorApi 매칭을 의무화하면 외래 진료 의사가 누락된다 (유양재 같이).
+            #    cf. 사용자 보고 2026-05: 고대구로 간센터(내과) 유양재 — 외래 schedule 있는데
+            #    doctorApi 응답에 없어서 누락됐던 케이스.
             raw_docs = await self._fetch_doctor_list(client)
-            doc_info = {}  # drNo → {name, specialty, position, ...}
-            allowed_positions = {"교수", "부교수", "조교수", "임상교수", "임상부교수", "임상조교수"}
+            doc_info_by_name: dict[str, dict] = {}  # name → 보강 정보
             for doc in raw_docs:
-                dr_no = doc.get("drNo")
-                if not dr_no or dr_no in doc_info:
+                name = (doc.get("drName") or "").strip()
+                if not name or name in doc_info_by_name:
                     continue
-                name = doc.get("drName", "").strip()
-                if not name:
-                    continue
-                position = doc.get("hptlJobTitle", "").strip()
-                if position not in allowed_positions:
-                    continue
-                doc_info[dr_no] = {
-                    "name": name,
+                doc_info_by_name[name] = {
                     "department": doc.get("deptNm", ""),
                     "specialty": doc.get("special", ""),
-                    "position": position,
-                    "_dr_no": str(dr_no),
+                    "position": (doc.get("hptlJobTitle") or "").strip(),
+                    "_dr_no": str(doc.get("drNo") or ""),
                 }
-            logger.info(f"[{self.hospital_code}] 교수급 {len(doc_info)}명 (필터 후)")
+            logger.info(f"[{self.hospital_code}] doctorApi 보강 후보 {len(doc_info_by_name)}명")
 
             # 2. getDepartmentList + getDoctorList로 mddrId(스케줄 API용 empId) 수집
             depts = await self._fetch_departments()
@@ -231,16 +228,13 @@ class KumcBaseCrawler:
                     if mddr_id in all_doctors:
                         continue
 
-                    # doctorApi 정보와 이름 매칭으로 보강 (교수급만)
-                    info = {}
-                    for dr_no, di in doc_info.items():
-                        if di["name"] == name:
-                            info = di
-                            break
-
-                    # doctorApi에 매칭되지 않으면 교수급이 아니므로 제외
-                    if not info:
-                        continue
+                    # doctorApi 보강 정보 (있으면 사용, 없어도 등록 진행)
+                    info = doc_info_by_name.get(name, {})
+                    dr_no = info.get("_dr_no", "")
+                    profile_url = (
+                        f"https://{self.hp_cd.lower()}.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo={dr_no}"
+                        if dr_no else ""
+                    )
 
                     ext_id = f"{self.hospital_code}-{mddr_id}"
                     all_doctors[mddr_id] = {
@@ -248,10 +242,10 @@ class KumcBaseCrawler:
                         "name": name, "department": dept_nm,
                         "position": info.get("position", ""),
                         "specialty": info.get("specialty", ""),
-                        "profile_url": f"https://{self.hp_cd.lower()}.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo={info.get('_dr_no', '')}",
+                        "profile_url": profile_url,
                         "notes": "", "schedules": [],
                         "_mddr_id": mddr_id, "_mcdp_cd": mcdp_cd,
-                        "_dr_no": info.get("_dr_no", ""),
+                        "_dr_no": dr_no,
                     }
 
             # 3. 스케줄 조회
