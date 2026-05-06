@@ -10,12 +10,18 @@ API:
   doctorTreatment.hoursPm[0~5] → 월~토 오후
 """
 import logging
+import ssl
 import httpx
 from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
 TIME_RANGES = {"morning": ("09:00", "12:00"), "afternoon": ("13:00", "17:00")}
+
+# CMC 서버는 weak RSA signature 만 받아주는 구형 TLS 스택 — OpenSSL 기본 SECLEVEL=2 가
+# 핸드셰이크에서 WRONG_SIGNATURE_TYPE 으로 끊어버림. SECLEVEL=1 로 낮춰야 통과.
+_SSL_CONTEXT = ssl.create_default_context()
+_SSL_CONTEXT.set_ciphers("DEFAULT@SECLEVEL=1")
 
 
 class CmcBaseCrawler:
@@ -41,7 +47,7 @@ class CmcBaseCrawler:
         all_doctors: dict[str, dict] = {}  # drNo → doctor dict (중복 제거)
         async with httpx.AsyncClient(
             headers=self.headers, cookies=self.cookies,
-            timeout=30, follow_redirects=True,
+            timeout=30, follow_redirects=True, verify=_SSL_CONTEXT,
         ) as client:
             try:
                 resp = await client.get(f"{self.base_url}/api/department", params={"deptClsf": "A"})
@@ -146,7 +152,7 @@ class CmcBaseCrawler:
     async def get_departments(self) -> list[dict]:
         async with httpx.AsyncClient(
             headers=self.headers, cookies=self.cookies,
-            timeout=30, follow_redirects=True,
+            timeout=30, follow_redirects=True, verify=_SSL_CONTEXT,
         ) as client:
             resp = await client.get(f"{self.base_url}/api/department", params={"deptClsf": "A"})
             resp.raise_for_status()
@@ -177,7 +183,7 @@ class CmcBaseCrawler:
         dr_no = staff_id.replace(prefix, "") if staff_id.startswith(prefix) else staff_id
         async with httpx.AsyncClient(
             headers=self.headers, cookies=self.cookies,
-            timeout=30, follow_redirects=True,
+            timeout=30, follow_redirects=True, verify=_SSL_CONTEXT,
         ) as client:
             try:
                 resp = await client.get(f"{self.base_url}/api/doctor", params={"drNo": dr_no})
