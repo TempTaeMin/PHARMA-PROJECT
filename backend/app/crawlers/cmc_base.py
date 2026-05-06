@@ -173,14 +173,21 @@ class CmcBaseCrawler:
         empty = {"staff_id": staff_id, "name": "", "department": "", "position": "",
                  "specialty": "", "profile_url": "", "notes": "", "schedules": []}
 
+        # 레거시 데이터 호환: 옛 크롤러는 모든 CMC 병원에 'CMC-' prefix 를 썼다.
+        # 새 포맷 'CMCSEOUL-D...' / 옛 포맷 'CMC-D...' 둘 다 같은 dr_no 로 정규화.
+        dr_no_only = staff_id.split("-", 1)[1] if "-" in staff_id else staff_id
+        prefix = f"{self.hospital_code}-"
+        normalized_id = f"{prefix}{dr_no_only}"
+
         if self._cached_data is not None:
             for d in self._cached_data:
-                if d["staff_id"] == staff_id or d["external_id"] == staff_id:
+                cached_id = d.get("external_id") or d.get("staff_id") or ""
+                cached_no = cached_id.split("-", 1)[1] if "-" in cached_id else cached_id
+                if cached_id in (staff_id, normalized_id) or cached_no == dr_no_only:
                     return self._to_schedule_dict(d)
             return empty
 
-        prefix = f"{self.hospital_code}-"
-        dr_no = staff_id.replace(prefix, "") if staff_id.startswith(prefix) else staff_id
+        dr_no = dr_no_only
         async with httpx.AsyncClient(
             headers=self.headers, cookies=self.cookies,
             timeout=30, follow_redirects=True, verify=_SSL_CONTEXT,
