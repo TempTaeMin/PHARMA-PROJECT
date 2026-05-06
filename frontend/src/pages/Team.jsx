@@ -17,6 +17,8 @@ export default function Team({ currentUser, onTeamChanged }) {
 
   const [creating, setCreating] = useState(false);
   const [newTeamName, setNewTeamName] = useState('');
+  // 팀 소속 상태에서 "+ 새 팀 만들기" 폼 열림 여부
+  const [showNewTeamForm, setShowNewTeamForm] = useState(false);
 
   const [renaming, setRenaming] = useState(false);
   const [renameValue, setRenameValue] = useState('');
@@ -56,6 +58,7 @@ export default function Team({ currentUser, onTeamChanged }) {
     try {
       await teamApi.create(name);
       setNewTeamName('');
+      setShowNewTeamForm(false);
       await load();
       onTeamChanged?.();
     } catch (e) {
@@ -237,6 +240,63 @@ export default function Team({ currentUser, onTeamChanged }) {
         {!isOwner && (
           <button onClick={handleLeave} style={btnDanger}>
             <LogOut size={13} /> 탈퇴
+          </button>
+        )}
+      </div>
+
+      {/* 새 팀 만들기 — 멀티팀 지원, 위에서 본 팀과 별개의 팀을 추가로 생성 */}
+      <div style={{
+        padding: '12px 16px', borderRadius: 12, background: 'var(--bg-1)',
+        border: '1px dashed var(--bd-s)', marginBottom: 14,
+      }}>
+        {showNewTeamForm ? (
+          <>
+            <div style={{
+              fontSize: 11, fontWeight: 800, color: 'var(--t3)',
+              letterSpacing: '.04em', marginBottom: 8,
+            }}>
+              <Plus size={11} style={{ marginRight: 4, verticalAlign: 'middle' }} />
+              새 팀 만들기
+            </div>
+            <div style={{ display: 'flex', gap: 6 }}>
+              <input
+                value={newTeamName}
+                onChange={e => setNewTeamName(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleCreate()}
+                placeholder="팀 이름 (예: 내과 영업3팀)"
+                autoFocus
+                style={inputStyle}
+              />
+              <button
+                onClick={handleCreate}
+                disabled={creating || !newTeamName.trim()}
+                style={{ ...btnPrimary, opacity: (creating || !newTeamName.trim()) ? .5 : 1 }}
+              >
+                {creating ? '만드는 중…' : '만들기'}
+              </button>
+              <button
+                onClick={() => { setShowNewTeamForm(false); setNewTeamName(''); setErr(null); }}
+                style={iconBtn()}
+                title="취소"
+              >
+                <X size={14} />
+              </button>
+            </div>
+            <div style={{ fontSize: 10, color: 'var(--t3)', marginTop: 6, lineHeight: 1.5 }}>
+              만들면 새 팀이 자동으로 활성 팀으로 전환돼요. 사이드바 상단의 팀 dropdown 으로 언제든 다시 이 팀으로 돌아올 수 있어요.
+            </div>
+          </>
+        ) : (
+          <button
+            onClick={() => setShowNewTeamForm(true)}
+            style={{
+              width: '100%', padding: '8px 12px', borderRadius: 8,
+              background: 'transparent', border: 'none', color: 'var(--ac)',
+              fontSize: 12, fontWeight: 700, fontFamily: 'inherit', cursor: 'pointer',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5,
+            }}
+          >
+            <Plus size={13} /> 새 팀 만들기
           </button>
         )}
       </div>
