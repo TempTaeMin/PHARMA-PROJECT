@@ -306,7 +306,9 @@ Feedback (feedback.py) — 5/6 추가
 
 ## 로컬 실행
 
-- Backend: `cd backend && python run.py` (또는 `uvicorn app.main:app --reload`)
+- Backend: `cd backend && alembic upgrade head && python run.py` (또는 `uvicorn app.main:app --reload`)
+  - 첫 실행 / 새 마이그 추가 시 `alembic upgrade head` 필수. `init_db()` 가 더 이상 schema 자동 생성 안 함.
+  - 옛 dev DB 가 alembic_version 없으면 `alembic stamp head` 먼저 (한 번만).
 - Frontend: `cd frontend && npm run dev`
 - DB: 로컬 SQLite `backend/pharma_scheduler.db`. 운영 Postgres 는 `~/medisync/.env.production` 의 DATABASE_URL
 - 크롤러 단독 실행: `python backend/scripts/verify_crawler.py [HOSPITAL_CODE]`
@@ -332,6 +334,8 @@ docker compose logs api --tail=30
 ```
 
 **금지**: `alembic stamp head` 만 돌리고 실제 ALTER 안 하는 건 절대 금지. 5/6 시점에서 이걸로 visit_logs 4컬럼 + visits_memo 가 운영에서 깨졌었다.
+
+**참고**: `init_db()` 는 이제 schema 를 자동 생성하지 않는다 (5/6 정리). 이전엔 `Base.metadata.create_all` 이 컨테이너 시작 시 새 모델을 자동 테이블화해서 alembic 의 `op.create_table` 과 DuplicateTableError 로 충돌, 결과적으로 마이그가 조용히 깨졌다. 새 모델 추가 시 alembic 마이그 작성 + 운영에서 `alembic upgrade head` 가 단일 진실.
 
 ---
 
