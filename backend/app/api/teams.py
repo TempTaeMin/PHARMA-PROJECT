@@ -518,6 +518,67 @@ async def remove_member(
     return {"ok": True, "removed_user_id": user_id}
 
 
+@router.post("/me/transfer/{user_id}", summary="리더 권한 양도 (활성 팀)")
+async def transfer_ownership(
+    user_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """현재 활성 팀의 리더가 다른 일반 멤버에게 owner 권한을 양도.
+    본인 role: owner→member, 대상자 role: member→owner. Team.owner_user_id 도 갱신."""
+    info = await _load_my_team(db, user.id)
+    if not info:
+        raise HTTPException(status_code=404, detail="속한 팀이 없습니다.")
+    team, my_role = info
+    if my_role != "owner":
+        raise HTTPException(status_code=403, detail="리더만 권한을 양도할 수 있습니다.")
+    if user_id == user.id:
+        raise HTTPException(status_code=400, detail="본인에게는 양도할 수 없습니다.")
+
+    target_tm = (await db.execute(
+        select(TeamMember).where(
+            TeamMember.team_id == team.id, TeamMember.user_id == user_id,
+        )
+    )).scalar_one_or_none()
+    if not target_tm:
+        raise HTTPException(status_code=400, detail="대상자가 같은 팀의 멤버가 아닙니다.")
+    if target_tm.role == "owner":
+        raise HTTPException(status_code=400, detail="이미 리더입니다.")
+
+    my_tm = (await db.execute(
+        select(TeamMember).where(
+            TeamMember.team_id == team.id, TeamMember.user_id == user.id,
+        )
+    )).scalar_one_or_none()
+    if not my_tm:
+        # 방어적 — _load_my_team 가 my_role='owner' 였는데 row 없을 리 없음
+        raise HTTPException(status_code=500, detail="본인 팀 멤버 row 가 없습니다.")
+
+    my_tm.role = "member"
+    target_tm.role = "owner"
+    team.owner_user_id = user_id
+    await db.commit()
+
+    # 새 owner 에게 알림
+    try:
+        await notification_manager.send_to_user(
+            str(user_id),
+            {
+                "type": "team_ownership_transferred",
+                "data": {
+                    "team_id": team.id,
+                    "team_name": team.name,
+                    "previous_owner_name": user.name or user.email,
+                    "message": f"{user.name or user.email} 님이 '{team.name}' 팀의 리더 권한을 양도했습니다.",
+                },
+            },
+        )
+    except Exception as e:
+        logger.warning(f"권한 양도 알림 발송 실패: {e}")
+
+    return {"ok": True, "team_id": team.id, "new_owner_id": user_id}
+
+
 @router.post("/me/leave", summary="팀 탈퇴")
 async def leave_team(
     db: AsyncSession = Depends(get_db),
@@ -536,8 +597,8 @@ async def leave_team(
     if my_role == "owner" and member_count > 1:
         raise HTTPException(
             status_code=400,
-            detail="리더은 다른 멤버에게 권한을 위임한 후에 탈퇴할 수 있습니다 (1.x 지원 예정). "
-                   "현재는 모든 멤버를 먼저 제거하거나, 팀 자체를 삭제하세요.",
+            detail="리더는 다른 멤버에게 권한을 양도한 후에 탈퇴할 수 있어요. "
+                   "팀 관리 화면 → 멤버 카드의 '리더로' 버튼으로 양도하세요.",
         )
 
     # 본인 멤버십 삭제

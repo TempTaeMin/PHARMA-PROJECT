@@ -44,6 +44,7 @@ export const teamApi = {
   rename: (name) => request('/api/teams/me', { method: 'PATCH', body: JSON.stringify({ name }) }),
   invite: (email) => request('/api/teams/me/invite', { method: 'POST', body: JSON.stringify({ email }) }),
   removeMember: (userId) => request(`/api/teams/me/members/${userId}`, { method: 'DELETE' }),
+  transferOwnership: (userId) => request(`/api/teams/me/transfer/${userId}`, { method: 'POST' }),
   leave: () => request('/api/teams/me/leave', { method: 'POST' }),
   // 초대 (받은/보낸 + 응답)
   myInvitations: () => request('/api/teams/me/invitations'),

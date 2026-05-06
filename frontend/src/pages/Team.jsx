@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Users, UserPlus, Trash2, Edit3, LogOut, Plus, Mail, Crown, X, Check, Clock } from 'lucide-react';
+import { Users, UserPlus, Trash2, Edit3, LogOut, Plus, Mail, Crown, X, Check, Clock, ArrowRightLeft } from 'lucide-react';
 import { teamApi } from '../api/client';
-import { showConfirm } from '../utils/dialog';
+import { invalidate } from '../api/cache';
+import { showConfirm, showError } from '../utils/dialog';
 
 /**
  * 팀 관리 페이지.
@@ -9,11 +10,13 @@ import { showConfirm } from '../utils/dialog';
  * - 팀 소속: 멤버 목록 + (리더) 초대/제거, (멤버) 탈퇴
  */
 export default function Team({ currentUser, onTeamChanged }) {
-  const [data, setData] = useState(null); // { team, role, members }
+  const [data, setData] = useState(null); // { team, role, members } — 활성 팀 상세
+  const [allTeams, setAllTeams] = useState([]); // [{id, name, role, is_active}] — 모든 소속 팀
   const [sentInvites, setSentInvites] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
   const [info, setInfo] = useState(null);
+  const [switching, setSwitching] = useState(false);
 
   const [creating, setCreating] = useState(false);
   const [newTeamName, setNewTeamName] = useState('');
@@ -29,8 +32,12 @@ export default function Team({ currentUser, onTeamChanged }) {
   const load = async () => {
     setLoading(true);
     try {
-      const r = await teamApi.me();
+      const [r, allRes] = await Promise.all([
+        teamApi.me(),
+        teamApi.myTeams().catch(() => ({ teams: [], active_team_id: null })),
+      ]);
       setData(r);
+      setAllTeams(Array.isArray(allRes?.teams) ? allRes.teams : []);
       setErr(null);
       // 리더이면 보낸 초대도 가져오기
       if (r?.role === 'owner') {
@@ -48,7 +55,39 @@ export default function Team({ currentUser, onTeamChanged }) {
     }
   };
 
-  useEffect(() => { load(); }, []);
+  // 사이드바 팀 dropdown 으로 활성 팀 전환 시 currentUser.active_team_id 가 갱신됨 →
+  // 이 deps 변화로 자동 재로드. mount 시점만 fetch 하던 옛 방식이 짜증나는 stale 화면을 만듦.
+  useEffect(() => { load(); }, [currentUser?.active_team_id]);
+
+  const handleSwitch = async (teamId) => {
+    if (switching || teamId === data?.team?.id) return;
+    setSwitching(true);
+    try {
+      await teamApi.switchActive(teamId);
+      ['my-doctors', 'doctors', 'my-visits', 'dashboard', 'memos', 'academic'].forEach(invalidate);
+      onTeamChanged?.();
+      // currentUser.active_team_id 가 부모에서 갱신되면 useEffect 가 자동 reload
+    } catch (e) {
+      showError(e, { title: '팀 전환 실패' });
+    } finally {
+      setSwitching(false);
+    }
+  };
+
+  const handleTransfer = async (member) => {
+    const ok = await showConfirm(
+      `정말 "${member.name || member.email}" 님에게 리더 권한을 넘기시겠습니까?\n\n본인은 이 팀의 일반 멤버가 되어 팀 이름 변경 / 초대 / 멤버 제거 권한이 사라집니다.`,
+      { tone: 'danger', confirmLabel: '권한 넘기기', cancelLabel: '취소' }
+    );
+    if (!ok) return;
+    try {
+      await teamApi.transferOwnership(member.user_id);
+      await load();
+      onTeamChanged?.();
+    } catch (e) {
+      showError(e, { title: '권한 양도 실패' });
+    }
+  };
 
   const handleCreate = async () => {
     const name = newTeamName.trim();
@@ -189,8 +228,107 @@ export default function Team({ currentUser, onTeamChanged }) {
 
   // ── 팀 소속 ──
   const isOwner = data.role === 'owner';
+  const activeTeamId = data?.team?.id;
   return (
     <div style={{ maxWidth: 720, margin: '0 auto' }}>
+      {/* 내 팀 list — 멀티팀 한눈에 + 활성 팀 전환 + 새 팀 만들기 */}
+      <div style={{
+        padding: '14px 16px', borderRadius: 12, background: 'var(--bg-1)',
+        border: '1px solid var(--bd-s)', marginBottom: 14,
+      }}>
+        <div style={{
+          fontSize: 11, fontWeight: 800, color: 'var(--t3)',
+          letterSpacing: '.04em', marginBottom: 10,
+          display: 'flex', alignItems: 'center', gap: 5,
+        }}>
+          <Users size={11} /> 내 팀 ({allTeams.length})
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+          {allTeams.map(t => {
+            const active = t.id === activeTeamId;
+            return (
+              <button
+                key={t.id}
+                onClick={() => handleSwitch(t.id)}
+                disabled={switching || active}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 8,
+                  padding: '10px 12px', borderRadius: 10,
+                  background: active ? 'var(--ac-d)' : 'var(--bg-2)',
+                  color: active ? 'var(--ac)' : 'var(--t1)',
+                  border: active ? '1px solid var(--ac)' : '1px solid var(--bd-s)',
+                  cursor: active ? 'default' : 'pointer',
+                  fontFamily: 'inherit', textAlign: 'left',
+                  opacity: switching && !active ? .5 : 1,
+                }}
+              >
+                <span style={{ flex: 1, fontSize: 13, fontWeight: active ? 700 : 600 }}>
+                  {t.name}
+                </span>
+                {t.role === 'owner' && (
+                  <span style={ownerBadge}><Crown size={9} /> 리더</span>
+                )}
+                {!active && (
+                  <span style={{ fontSize: 10, color: 'var(--t3)', display: 'flex', alignItems: 'center', gap: 3 }}>
+                    <ArrowRightLeft size={10} /> 전환
+                  </span>
+                )}
+                {active && <Check size={13} />}
+              </button>
+            );
+          })}
+
+          {/* + 새 팀 만들기 카드 */}
+          {showNewTeamForm ? (
+            <div style={{
+              padding: '10px 12px', borderRadius: 10,
+              background: 'var(--bg-2)', border: '1px dashed var(--bd-s)',
+            }}>
+              <div style={{ display: 'flex', gap: 6 }}>
+                <input
+                  value={newTeamName}
+                  onChange={e => setNewTeamName(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && handleCreate()}
+                  placeholder="팀 이름 (예: 내과 영업3팀)"
+                  autoFocus
+                  style={inputStyle}
+                />
+                <button
+                  onClick={handleCreate}
+                  disabled={creating || !newTeamName.trim()}
+                  style={{ ...btnPrimary, opacity: (creating || !newTeamName.trim()) ? .5 : 1 }}
+                >
+                  {creating ? '…' : '만들기'}
+                </button>
+                <button
+                  onClick={() => { setShowNewTeamForm(false); setNewTeamName(''); setErr(null); }}
+                  style={iconBtn()}
+                  title="취소"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+              <div style={{ fontSize: 10, color: 'var(--t3)', marginTop: 6 }}>
+                만들면 새 팀이 자동 활성 팀으로 전환됩니다.
+              </div>
+            </div>
+          ) : (
+            <button
+              onClick={() => setShowNewTeamForm(true)}
+              style={{
+                padding: '10px 12px', borderRadius: 10,
+                background: 'transparent', border: '1px dashed var(--bd-s)',
+                color: 'var(--ac)', fontSize: 12, fontWeight: 700, fontFamily: 'inherit',
+                cursor: 'pointer',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5,
+              }}
+            >
+              <Plus size={13} /> 새 팀 만들기
+            </button>
+          )}
+        </div>
+      </div>
+
       {/* 팀 헤더 */}
       <div style={{
         padding: '20px 22px', borderRadius: 14, background: 'var(--bg-1)',
@@ -240,63 +378,6 @@ export default function Team({ currentUser, onTeamChanged }) {
         {!isOwner && (
           <button onClick={handleLeave} style={btnDanger}>
             <LogOut size={13} /> 탈퇴
-          </button>
-        )}
-      </div>
-
-      {/* 새 팀 만들기 — 멀티팀 지원, 위에서 본 팀과 별개의 팀을 추가로 생성 */}
-      <div style={{
-        padding: '12px 16px', borderRadius: 12, background: 'var(--bg-1)',
-        border: '1px dashed var(--bd-s)', marginBottom: 14,
-      }}>
-        {showNewTeamForm ? (
-          <>
-            <div style={{
-              fontSize: 11, fontWeight: 800, color: 'var(--t3)',
-              letterSpacing: '.04em', marginBottom: 8,
-            }}>
-              <Plus size={11} style={{ marginRight: 4, verticalAlign: 'middle' }} />
-              새 팀 만들기
-            </div>
-            <div style={{ display: 'flex', gap: 6 }}>
-              <input
-                value={newTeamName}
-                onChange={e => setNewTeamName(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && handleCreate()}
-                placeholder="팀 이름 (예: 내과 영업3팀)"
-                autoFocus
-                style={inputStyle}
-              />
-              <button
-                onClick={handleCreate}
-                disabled={creating || !newTeamName.trim()}
-                style={{ ...btnPrimary, opacity: (creating || !newTeamName.trim()) ? .5 : 1 }}
-              >
-                {creating ? '만드는 중…' : '만들기'}
-              </button>
-              <button
-                onClick={() => { setShowNewTeamForm(false); setNewTeamName(''); setErr(null); }}
-                style={iconBtn()}
-                title="취소"
-              >
-                <X size={14} />
-              </button>
-            </div>
-            <div style={{ fontSize: 10, color: 'var(--t3)', marginTop: 6, lineHeight: 1.5 }}>
-              만들면 새 팀이 자동으로 활성 팀으로 전환돼요. 사이드바 상단의 팀 dropdown 으로 언제든 다시 이 팀으로 돌아올 수 있어요.
-            </div>
-          </>
-        ) : (
-          <button
-            onClick={() => setShowNewTeamForm(true)}
-            style={{
-              width: '100%', padding: '8px 12px', borderRadius: 8,
-              background: 'transparent', border: 'none', color: 'var(--ac)',
-              fontSize: 12, fontWeight: 700, fontFamily: 'inherit', cursor: 'pointer',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5,
-            }}
-          >
-            <Plus size={13} /> 새 팀 만들기
           </button>
         )}
       </div>
@@ -432,9 +513,24 @@ export default function Team({ currentUser, onTeamChanged }) {
                 <div style={{ fontSize: 11, color: 'var(--t3)', marginTop: 2 }}>{m.email}</div>
               </div>
               {isOwner && m.role !== 'owner' && (
-                <button onClick={() => handleRemove(m)} style={iconBtn(true)} title="제거">
-                  <Trash2 size={13} />
-                </button>
+                <>
+                  <button
+                    onClick={() => handleTransfer(m)}
+                    style={{
+                      padding: '6px 10px', borderRadius: 6,
+                      background: '#fef3c7', color: '#92400e',
+                      border: '1px solid #fcd34d',
+                      fontSize: 10, fontWeight: 700, fontFamily: 'inherit', cursor: 'pointer',
+                      display: 'inline-flex', alignItems: 'center', gap: 3, whiteSpace: 'nowrap',
+                    }}
+                    title="리더 권한 양도"
+                  >
+                    <Crown size={10} /> 리더로
+                  </button>
+                  <button onClick={() => handleRemove(m)} style={iconBtn(true)} title="제거">
+                    <Trash2 size={13} />
+                  </button>
+                </>
               )}
             </div>
           ))}
