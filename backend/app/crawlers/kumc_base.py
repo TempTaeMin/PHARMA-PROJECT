@@ -75,10 +75,21 @@ class KumcBaseCrawler:
             return []
 
     async def _fetch_doctor_schedule(self, client: httpx.AsyncClient, emp_id: str, mcdp_cd: str) -> dict:
-        """개별 의사 3개월 스케줄 조회 → 주간 패턴 + 날짜별 스케줄 반환"""
+        """개별 의사 3개월 스케줄 조회 → 주간 패턴 + 날짜별 스케줄 반환
+
+        KUMC API 는 휴진일을 응답에서 누락하는 방식으로 표현한다 (5/21 같이 그 날만
+        휴진이면 응답에 5/21 자체가 없음). frontend ScheduleCalendar /
+        useMonthCalendar 가 '그 날 date_schedule 없으면 주간 schedules 폴백' 으로
+        동작하기 때문에, 휴진일이 평소 정기 진료일로 잘못 표시된다.
+
+        해결 — raw 응답을 받은 뒤, 그 의사의 정기 진료 (dow, slot) 패턴 중 응답에
+        누락된 날짜를 모두 status='휴진' 의 date_schedule 행으로 명시. 비-정기 슬롯은
+        채우지 않음 (데이터 폭증 방지).
+        """
         today = datetime.now()
+        days_ahead = 90
         start = today.strftime("%Y%m%d")
-        end = (today + timedelta(days=90)).strftime("%Y%m%d")
+        end = (today + timedelta(days=days_ahead)).strftime("%Y%m%d")
 
         try:
             resp = await client.get(
@@ -101,6 +112,7 @@ class KumcBaseCrawler:
         # 날짜별 스케줄 수집 + 요일 기반 집계
         date_schedules = []
         day_slots = {}  # (day_of_week, time_slot) → location
+        present_pairs = set()  # (formatted_date, slot) — 진료로 응답된 (날짜, 슬롯)
         for entry in entries:
             date_str = entry.get("mdcrYmd", "")
             if not date_str:
@@ -118,6 +130,7 @@ class KumcBaseCrawler:
 
             if am == "1":
                 day_slots[(dow, "morning")] = dept_nm or "외래"
+                present_pairs.add((formatted_date, "morning"))
                 date_schedules.append({
                     "schedule_date": formatted_date, "time_slot": "morning",
                     "start_time": "09:00", "end_time": "12:00",
@@ -125,10 +138,30 @@ class KumcBaseCrawler:
                 })
             if pm == "1":
                 day_slots[(dow, "afternoon")] = dept_nm or "외래"
+                present_pairs.add((formatted_date, "afternoon"))
                 date_schedules.append({
                     "schedule_date": formatted_date, "time_slot": "afternoon",
                     "start_time": "13:00", "end_time": "17:00",
                     "location": dept_nm or "외래", "status": "진료",
+                })
+
+        # 휴진일 명시 채움 — 정기 (dow, slot) 패턴에 매칭되지만 raw 응답에 누락된 날짜
+        for offset in range(days_ahead + 1):
+            day = today + timedelta(days=offset)
+            formatted = day.strftime("%Y-%m-%d")
+            dow = day.weekday()
+            for slot in ("morning", "afternoon"):
+                key = (dow, slot)
+                if key not in day_slots:
+                    continue
+                if (formatted, slot) in present_pairs:
+                    continue
+                start_t, end_t = TIME_RANGES[slot]
+                date_schedules.append({
+                    "schedule_date": formatted, "time_slot": slot,
+                    "start_time": start_t, "end_time": end_t,
+                    "location": day_slots[key],
+                    "status": "휴진",
                 })
 
         schedules = []
