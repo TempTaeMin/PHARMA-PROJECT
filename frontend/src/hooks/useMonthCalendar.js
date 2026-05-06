@@ -48,9 +48,15 @@ export function useMonthCalendar(year, month) {
         let safety = 200;  // 잘못된 데이터로 무한루프 방지 (~6개월)
         while (cur <= v.announce_end_date && safety-- > 0) {
           (map[cur] ||= []).push(v);
+          // ★ toISOString() 은 UTC 로 변환되어 KST 자정 → UTC 전날 15시
+          // → slice(0,10) 가 같은 날짜를 반환해 무한루프(safety 200 까지)에 빠진다.
+          // 로컬 시간 기준 YMD 로 직접 포맷해야 정확히 다음 날.
           const d = new Date(cur + 'T00:00:00');
           d.setDate(d.getDate() + 1);
-          cur = d.toISOString().slice(0, 10);
+          const y = d.getFullYear();
+          const m = String(d.getMonth() + 1).padStart(2, '0');
+          const dd = String(d.getDate()).padStart(2, '0');
+          cur = `${y}-${m}-${dd}`;
         }
         return;
       }
