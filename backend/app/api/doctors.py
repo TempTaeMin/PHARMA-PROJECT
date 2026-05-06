@@ -370,11 +370,21 @@ async def update_doctor(
                 new_target.linked_doctor_id = doctor.id
 
     await db.commit()
-    await db.refresh(doctor)
     grade_map = await _load_user_doctor_grades(db, user.id, [doctor_id])
     memo_map = await _load_user_doctor_memos(db, user.id, [doctor_id])
+    # commit 직후 doctor 의 relationship 이 expire 되므로 hospital 까지 eager-load 한
+    # fresh row 로 응답 — 그래야 hospital_name / linked_doctor 가 None 이 아닌 채로 옴.
+    fresh = (await db.execute(
+        select(Doctor)
+        .options(
+            selectinload(Doctor.hospital),
+            selectinload(Doctor.linked_doctor).selectinload(Doctor.hospital),
+            selectinload(Doctor.visit_logs),
+        )
+        .where(Doctor.id == doctor_id)
+    )).scalar_one()
     return _doctor_to_response_dict(
-        doctor,
+        fresh,
         user_grade=grade_map.get(doctor_id),
         user_memo=memo_map.get(doctor_id),
     )
