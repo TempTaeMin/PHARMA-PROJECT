@@ -445,7 +445,11 @@ export default function App() {
         }}
       />
       <FeedbackModal open={showFeedback} onClose={() => setShowFeedback(false)} />
-      <PwaInstallHint />
+      {/* PwaInstallHint 일시 비활성 — iOS=Safari / Galaxy=Samsung Internet|Chrome 분기가
+          현재 너무 단순(UA 로 OS 만 보고 Android=Chrome 으로 가정)이라 Samsung Internet
+          사용자한테 "Chrome 메뉴" 안내가 떠서 혼란. 브라우저별 정확한 분기로 재설계
+          후 다시 활성화. 컴포넌트 파일은 보존. */}
+      {/* <PwaInstallHint /> */}
       <ChangelogModal />
       <DialogHost />
     </div>
