@@ -478,25 +478,27 @@ export default function Team({ currentUser, onTeamChanged }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {data.members.map(m => (
             <div key={m.user_id} style={{
+              // flex-wrap: 좁은 화면에서 액션 버튼이 이름·이메일 위로 겹치지 않게 다음 줄로.
               display: 'flex', alignItems: 'center', gap: 12,
               padding: '10px 12px', borderRadius: 10,
               background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
+              flexWrap: 'wrap',
             }}>
               {m.picture ? (
                 <img src={m.picture} alt="" referrerPolicy="no-referrer" style={{
-                  width: 36, height: 36, borderRadius: '50%', objectFit: 'cover',
+                  width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', flexShrink: 0,
                 }} />
               ) : (
                 <div style={{
                   width: 36, height: 36, borderRadius: '50%', background: 'var(--ac-d)',
                   color: 'var(--ac)', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 14, fontWeight: 700,
+                  fontSize: 14, fontWeight: 700, flexShrink: 0,
                 }}>
                   {(m.name || m.email)[0].toUpperCase()}
                 </div>
               )}
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <div style={{ flex: '1 1 160px', minWidth: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
                   <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)' }}>
                     {m.name || '이름 없음'}
                   </span>
@@ -510,10 +512,16 @@ export default function Team({ currentUser, onTeamChanged }) {
                     }}>나</span>
                   )}
                 </div>
-                <div style={{ fontSize: 11, color: 'var(--t3)', marginTop: 2 }}>{m.email}</div>
+                <div style={{
+                  fontSize: 11, color: 'var(--t3)', marginTop: 2,
+                  overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                }}>{m.email}</div>
               </div>
               {isOwner && m.role !== 'owner' && (
-                <>
+                <div style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 6,
+                  marginLeft: 'auto', flexShrink: 0,
+                }}>
                   <button
                     onClick={() => handleTransfer(m)}
                     style={{
@@ -530,7 +538,7 @@ export default function Team({ currentUser, onTeamChanged }) {
                   <button onClick={() => handleRemove(m)} style={iconBtn(true)} title="제거">
                     <Trash2 size={13} />
                   </button>
-                </>
+                </div>
               )}
             </div>
           ))}
@@ -543,7 +551,9 @@ export default function Team({ currentUser, onTeamChanged }) {
 }
 
 const inputStyle = {
-  flex: 1, padding: '9px 12px', borderRadius: 8,
+  // minWidth 0 — flex container 안에서 input 이 자연스럽게 줄어들어 옆 버튼이
+  // 화면 밖으로 밀려나지 않게 (특히 모바일 좁은 폭).
+  flex: 1, minWidth: 0, padding: '9px 12px', borderRadius: 8,
   background: 'var(--bg-2)', border: '1px solid var(--bd)',
   fontSize: 13, color: 'var(--t1)', fontFamily: 'inherit', outline: 'none',
 };

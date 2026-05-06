@@ -618,7 +618,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
       {/* 고정 헤더 영역 */}
       <div style={{ position: 'sticky', top: 49, zIndex: 5, background: 'var(--bg-0)', marginLeft: -24, marginRight: -24, paddingLeft: 24, paddingRight: 24, paddingTop: 4, paddingBottom: 4 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10, flexWrap: 'wrap' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', borderRadius: 7, padding: '6px 10px', flex: 1, maxWidth: 280 }}><Search size={14} style={{ color: 'var(--t3)' }} /><input placeholder="교수명, 진료과 검색" value={searchQ} onChange={e => setSearchQ(e.target.value)} style={{ border: 'none', background: 'none', outline: 'none', color: 'var(--t1)', fontSize: 12.5, width: '100%' }} /></div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 7, background: 'var(--bg-2)', border: '1px solid var(--bd)', borderRadius: 7, padding: '6px 10px', flex: '1 1 240px', minWidth: 0, maxWidth: 280 }}><Search size={14} style={{ color: 'var(--t3)', flexShrink: 0 }} /><input placeholder="교수명, 진료과 검색" value={searchQ} onChange={e => setSearchQ(e.target.value)} style={{ border: 'none', background: 'none', outline: 'none', color: 'var(--t1)', fontSize: 12.5, width: '100%', minWidth: 0 }} /></div>
           <span style={{ fontSize: 12, color: 'var(--t3)' }}>{filtered.length}명</span>
           {view === 'active' && (
             <button onClick={() => setShowManual(true)} style={{
