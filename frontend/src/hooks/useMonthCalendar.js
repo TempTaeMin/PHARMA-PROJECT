@@ -39,6 +39,21 @@ export function useMonthCalendar(year, month) {
   const visitsByDate = useMemo(() => {
     const map = {};
     visits.forEach(v => {
+      // 업무공지 (announcement): 게시 기간 동안 매일 같은 카드 노출
+      if (
+        v.category === 'announcement' &&
+        v.announce_start_date && v.announce_end_date
+      ) {
+        let cur = v.announce_start_date;
+        let safety = 200;  // 잘못된 데이터로 무한루프 방지 (~6개월)
+        while (cur <= v.announce_end_date && safety-- > 0) {
+          (map[cur] ||= []).push(v);
+          const d = new Date(cur + 'T00:00:00');
+          d.setDate(d.getDate() + 1);
+          cur = d.toISOString().slice(0, 10);
+        }
+        return;
+      }
       const date = (v.visit_date || '').slice(0, 10);
       if (!date) return;
       (map[date] ||= []).push(v);

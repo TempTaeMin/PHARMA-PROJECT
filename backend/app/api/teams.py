@@ -1,10 +1,14 @@
 """팀 관리 API — 팀 생성/멤버 초대(승인 흐름)/제거/탈퇴/이름 변경.
 
-1.0 정책:
-- 신규 가입자는 팀 미소속 (혼자 사용 가능)
-- 팀 생성은 명시 액션. 생성자가 owner
-- 한 사람당 한 팀
+1.x 멀티팀 정책 (2026-05-06):
+- 신규 가입자는 팀 미소속
+- 한 사용자가 여러 팀의 owner 또는 member 가능
+- "활성 팀" 개념 — `users.active_team_id` 가 일정/메모/공지의 기본 컨텍스트
+- 사이드바 dropdown 에서 활성 팀 전환 (`POST /api/teams/me/switch/{team_id}`)
+- `GET /api/teams/me/list` — 모든 소속 팀 (전환 dropdown 용)
+- `GET /api/teams/me` — 활성 팀 상세 (멤버 포함)
 - 초대는 invitation row 만 생성 → 받는 사용자가 수락해야 멤버 등록
+- 수락 시 새 팀이 자동으로 active 가 됨
 """
 import logging
 from datetime import datetime
@@ -64,16 +68,40 @@ async def _isolate_visits_for_user(db: AsyncSession, user_id: int) -> None:
 
 
 async def _load_my_team(db: AsyncSession, user_id: int) -> Optional[tuple[Team, str]]:
-    """본인 팀 + 본인 role. 미소속이면 None."""
+    """현재 **활성** 팀 + 본인 role. 미소속이면 None.
+    active_team_id 가 박혀있으면 그 팀, 아니면 가장 오래된 멤버십."""
+    active_team_id = await get_my_team_id(db, user_id)
+    if not active_team_id:
+        return None
     row = (await db.execute(
         select(Team, TeamMember.role)
         .join(TeamMember, Team.id == TeamMember.team_id)
-        .where(TeamMember.user_id == user_id)
+        .where(TeamMember.user_id == user_id, TeamMember.team_id == active_team_id)
         .limit(1)
     )).first()
     if not row:
         return None
     return row[0], row[1]
+
+
+async def _set_active_team(db: AsyncSession, user_id: int, team_id: Optional[int]) -> None:
+    """활성 팀 변경. None 이면 unset (팀 미소속 상태로). 멤버 검증은 호출자 책임."""
+    user = (await db.execute(select(User).where(User.id == user_id))).scalar_one_or_none()
+    if user:
+        user.active_team_id = team_id
+
+
+async def _resolve_new_active_after_leave(
+    db: AsyncSession, user_id: int, leaving_team_id: int,
+) -> Optional[int]:
+    """팀을 떠날 때 다음 활성 팀 결정. 다른 멤버십이 있으면 가장 오래된 거, 없으면 None."""
+    other = (await db.execute(
+        select(TeamMember).where(
+            TeamMember.user_id == user_id,
+            TeamMember.team_id != leaving_team_id,
+        ).order_by(TeamMember.id.asc()).limit(1)
+    )).scalar_one_or_none()
+    return other.team_id if other else None
 
 
 @router.get("/me", summary="내 팀 정보")
@@ -111,41 +139,17 @@ async def create_team(
     db: AsyncSession = Depends(get_db),
     user: User = Depends(get_current_user),
 ):
+    """멀티팀 정책 — 본인이 이미 다른 팀(들) 의 owner/member 여도 새 팀 생성 가능.
+    새로 만든 팀이 자동으로 active_team 으로 설정됨."""
     name = (payload.name or "").strip()
     if not name:
         raise HTTPException(status_code=400, detail="팀 이름을 입력해주세요.")
-
-    existing = await get_my_team_id(db, user.id)
-    if existing:
-        # 본인이 1인 팀(혼자만 멤버 + 본인이 owner)이면 자동 정리 후 새 팀 생성
-        # — OAuth 초기 자동 생성 1인 팀의 잔재를 매끄럽게 처리
-        member_count = (await db.execute(
-            select(func.count()).select_from(TeamMember).where(TeamMember.team_id == existing)
-        )).scalar() or 0
-        existing_team = (await db.execute(
-            select(Team).where(Team.id == existing)
-        )).scalar_one_or_none()
-        if member_count == 1 and existing_team and existing_team.owner_user_id == user.id:
-            my_tm = (await db.execute(
-                select(TeamMember).where(
-                    TeamMember.team_id == existing, TeamMember.user_id == user.id,
-                )
-            )).scalar_one_or_none()
-            if my_tm:
-                await db.delete(my_tm)
-            if existing_team:
-                await db.delete(existing_team)
-            await db.flush()
-        else:
-            raise HTTPException(
-                status_code=400,
-                detail="이미 다른 팀에 속해있습니다. 기존 팀에서 탈퇴 후 다시 시도하세요.",
-            )
 
     team = Team(name=name, owner_user_id=user.id)
     db.add(team)
     await db.flush()
     db.add(TeamMember(team_id=team.id, user_id=user.id, role="owner"))
+    await _set_active_team(db, user.id, team.id)
     await db.commit()
     await db.refresh(team)
     return {
@@ -159,7 +163,54 @@ async def create_team(
     }
 
 
-@router.patch("/me", summary="팀 이름 변경 (팀장)")
+@router.get("/me/list", summary="내 모든 소속 팀 (멀티팀 dropdown)")
+async def list_my_teams(
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """사이드바 팀 전환 dropdown 용 — 모든 소속 팀 + 활성 팀 표시."""
+    rows = (await db.execute(
+        select(Team, TeamMember.role)
+        .join(TeamMember, Team.id == TeamMember.team_id)
+        .where(TeamMember.user_id == user.id)
+        .order_by(TeamMember.id.asc())
+    )).all()
+    active_team_id = await get_my_team_id(db, user.id)
+    return {
+        "active_team_id": active_team_id,
+        "teams": [
+            {
+                "id": t.id,
+                "name": t.name,
+                "owner_user_id": t.owner_user_id,
+                "role": role,
+                "is_active": t.id == active_team_id,
+            }
+            for t, role in rows
+        ],
+    }
+
+
+@router.post("/me/switch/{team_id}", summary="활성 팀 전환")
+async def switch_active_team(
+    team_id: int,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """사이드바 팀 dropdown 에서 클릭 시 호출. 본인이 멤버인 팀만 활성화 가능."""
+    is_member = (await db.execute(
+        select(TeamMember).where(
+            TeamMember.team_id == team_id, TeamMember.user_id == user.id,
+        )
+    )).scalar_one_or_none()
+    if not is_member:
+        raise HTTPException(status_code=403, detail="해당 팀의 멤버가 아닙니다.")
+    await _set_active_team(db, user.id, team_id)
+    await db.commit()
+    return {"active_team_id": team_id}
+
+
+@router.patch("/me", summary="팀 이름 변경 (리더)")
 async def rename_my_team(
     payload: TeamRename,
     db: AsyncSession = Depends(get_db),
@@ -170,7 +221,7 @@ async def rename_my_team(
         raise HTTPException(status_code=404, detail="속한 팀이 없습니다.")
     team, my_role = info
     if my_role != "owner":
-        raise HTTPException(status_code=403, detail="팀장만 팀 이름을 변경할 수 있습니다.")
+        raise HTTPException(status_code=403, detail="리더만 팀 이름을 변경할 수 있습니다.")
     name = (payload.name or "").strip()
     if not name:
         raise HTTPException(status_code=400, detail="팀 이름을 입력해주세요.")
@@ -179,7 +230,7 @@ async def rename_my_team(
     return {"id": team.id, "name": team.name}
 
 
-@router.post("/me/invite", summary="멤버 초대 (팀장)")
+@router.post("/me/invite", summary="멤버 초대 (리더)")
 async def invite_member(
     payload: TeamInvite,
     db: AsyncSession = Depends(get_db),
@@ -192,7 +243,7 @@ async def invite_member(
         raise HTTPException(status_code=404, detail="속한 팀이 없습니다. 먼저 팀을 만드세요.")
     team, my_role = info
     if my_role != "owner":
-        raise HTTPException(status_code=403, detail="팀장만 멤버를 초대할 수 있습니다.")
+        raise HTTPException(status_code=403, detail="리더만 멤버를 초대할 수 있습니다.")
 
     email = (payload.email or "").strip().lower()
     if not email:
@@ -207,7 +258,7 @@ async def invite_member(
             detail="해당 이메일로 가입한 사용자가 없습니다. 초대할 사람이 먼저 한 번 로그인해야 합니다.",
         )
     if target.id == user.id:
-        raise HTTPException(status_code=400, detail="본인은 이미 팀장입니다.")
+        raise HTTPException(status_code=400, detail="본인은 이미 리더입니다.")
 
     # 이미 같은 팀 멤버?
     already_member = (await db.execute(
@@ -297,7 +348,7 @@ async def list_my_invitations(
     ]
 
 
-@router.get("/me/sent-invitations", summary="팀이 보낸 pending 초대 (팀장)")
+@router.get("/me/sent-invitations", summary="팀이 보낸 pending 초대 (리더)")
 async def list_sent_invitations(
     db: AsyncSession = Depends(get_db),
     user: User = Depends(get_current_user),
@@ -345,48 +396,26 @@ async def accept_invitation(
     if inv.status != "pending":
         raise HTTPException(status_code=400, detail=f"이미 처리된 초대입니다 (status={inv.status}).")
 
-    # 본인이 다른 팀에 속해있다면 — 1인 팀이면 자동 정리, 아니면 거부
-    existing_team_id = await get_my_team_id(db, user.id)
-    if existing_team_id == inv.team_id:
+    # 멀티팀 정책 — 다른 팀에 이미 있어도 OK. 단 같은 팀에 이미 멤버면 status 만 갱신.
+    already_member = (await db.execute(
+        select(TeamMember).where(
+            TeamMember.team_id == inv.team_id, TeamMember.user_id == user.id,
+        )
+    )).scalar_one_or_none()
+    if already_member:
         inv.status = "accepted"
         inv.responded_at = datetime.utcnow()
         await db.commit()
         return {"status": "accepted", "team_id": inv.team_id}
-    if existing_team_id:
-        member_count = (await db.execute(
-            select(func.count()).select_from(TeamMember).where(TeamMember.team_id == existing_team_id)
-        )).scalar() or 0
-        existing_team = (await db.execute(
-            select(Team).where(Team.id == existing_team_id)
-        )).scalar_one_or_none()
-        is_solo_owner = (
-            member_count == 1
-            and existing_team is not None
-            and existing_team.owner_user_id == user.id
-        )
-        if not is_solo_owner:
-            raise HTTPException(
-                status_code=400,
-                detail="이미 다른 팀에 속해있습니다. 기존 팀에서 탈퇴 후 다시 시도하세요.",
-            )
-        # 1인 팀 정리
-        my_tm = (await db.execute(
-            select(TeamMember).where(
-                TeamMember.team_id == existing_team_id, TeamMember.user_id == user.id,
-            )
-        )).scalar_one_or_none()
-        if my_tm:
-            await db.delete(my_tm)
-        if existing_team:
-            await db.delete(existing_team)
-        await db.flush()
 
     db.add(TeamMember(team_id=inv.team_id, user_id=user.id, role="member"))
     inv.status = "accepted"
     inv.responded_at = datetime.utcnow()
+    # 새 팀을 활성 팀으로 자동 전환 — 가입 직후 메모/일정이 새 팀 컨텍스트에서 동작
+    await _set_active_team(db, user.id, inv.team_id)
     await db.commit()
 
-    # 팀장에게 수락 알림
+    # 리더에게 수락 알림
     try:
         team = (await db.execute(select(Team).where(Team.id == inv.team_id))).scalar_one_or_none()
         await notification_manager.send_to_user(
@@ -428,7 +457,7 @@ async def decline_invitation(
     return {"status": "declined"}
 
 
-@router.delete("/me/invitations/{invitation_id}", summary="보낸 초대 취소 (팀장)")
+@router.delete("/me/invitations/{invitation_id}", summary="보낸 초대 취소 (리더)")
 async def cancel_invitation(
     invitation_id: int,
     db: AsyncSession = Depends(get_db),
@@ -439,7 +468,7 @@ async def cancel_invitation(
         raise HTTPException(status_code=404, detail="속한 팀이 없습니다.")
     team, my_role = info
     if my_role != "owner":
-        raise HTTPException(status_code=403, detail="팀장만 초대를 취소할 수 있습니다.")
+        raise HTTPException(status_code=403, detail="리더만 초대를 취소할 수 있습니다.")
     inv = (await db.execute(
         select(TeamInvitation).where(
             TeamInvitation.id == invitation_id,
@@ -454,7 +483,7 @@ async def cancel_invitation(
     return {"status": "cancelled", "id": invitation_id}
 
 
-@router.delete("/me/members/{user_id}", summary="멤버 제거 (팀장)")
+@router.delete("/me/members/{user_id}", summary="멤버 제거 (리더)")
 async def remove_member(
     user_id: int,
     db: AsyncSession = Depends(get_db),
@@ -465,7 +494,7 @@ async def remove_member(
         raise HTTPException(status_code=404, detail="속한 팀이 없습니다.")
     team, my_role = info
     if my_role != "owner":
-        raise HTTPException(status_code=403, detail="팀장만 멤버를 제거할 수 있습니다.")
+        raise HTTPException(status_code=403, detail="리더만 멤버를 제거할 수 있습니다.")
     if user_id == user.id:
         raise HTTPException(status_code=400, detail="본인은 이 메뉴로 제거할 수 없습니다. 팀 탈퇴를 사용하세요.")
 
@@ -478,6 +507,13 @@ async def remove_member(
         raise HTTPException(status_code=404, detail="해당 멤버가 팀에 없습니다.")
     await _isolate_visits_for_user(db, user_id)
     await db.delete(tm)
+
+    # 제거된 멤버의 active_team 이 이 팀이었으면 다른 팀으로 자동 전환
+    removed_user = (await db.execute(select(User).where(User.id == user_id))).scalar_one_or_none()
+    if removed_user and removed_user.active_team_id == team.id:
+        new_active = await _resolve_new_active_after_leave(db, user_id, team.id)
+        removed_user.active_team_id = new_active
+
     await db.commit()
     return {"ok": True, "removed_user_id": user_id}
 
@@ -500,7 +536,7 @@ async def leave_team(
     if my_role == "owner" and member_count > 1:
         raise HTTPException(
             status_code=400,
-            detail="팀장은 다른 멤버에게 권한을 위임한 후에 탈퇴할 수 있습니다 (1.x 지원 예정). "
+            detail="리더은 다른 멤버에게 권한을 위임한 후에 탈퇴할 수 있습니다 (1.x 지원 예정). "
                    "현재는 모든 멤버를 먼저 제거하거나, 팀 자체를 삭제하세요.",
         )
 
@@ -514,9 +550,13 @@ async def leave_team(
         await _isolate_visits_for_user(db, user.id)
         await db.delete(my_tm)
 
+    # 떠나는 팀이 active 였으면 다른 팀(가장 오래된 멤버십) 으로 자동 전환. 없으면 None.
+    new_active = await _resolve_new_active_after_leave(db, user.id, team.id)
+    await _set_active_team(db, user.id, new_active)
+
     # 마지막 멤버였으면 팀도 삭제
     if member_count <= 1:
         await db.delete(team)
 
     await db.commit()
-    return {"ok": True}
+    return {"ok": True, "new_active_team_id": new_active}

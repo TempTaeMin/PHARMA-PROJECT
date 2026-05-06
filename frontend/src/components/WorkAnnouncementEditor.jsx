@@ -12,19 +12,23 @@ export default function WorkAnnouncementEditor({
   open, initialDate, onClose, onSubmit,
   hasTeam = false, teamMembers = [], currentUserId = null,
 }) {
-  const [dateStr, setDateStr] = useState(initialDate);
+  // 게시 기간 — 시작/종료. 디폴트는 initialDate 1일짜리.
+  const [startStr, setStartStr] = useState(initialDate);
+  const [endStr, setEndStr] = useState(initialDate);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [shareTeam, setShareTeam] = useState(true);  // 공지는 디폴트 ON
   const [recipientIds, setRecipientIds] = useState([]);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
-  const dateRef = useRef(null);
+  const startRef = useRef(null);
+  const endRef = useRef(null);
 
   // 모달 열릴 때 모든 동료 자동 선택 (공지 디폴트 = 전체)
   useEffect(() => {
     if (!open) return;
-    setDateStr(initialDate);
+    setStartStr(initialDate);
+    setEndStr(initialDate);
     setTitle('');
     setContent('');
     setShareTeam(true);
@@ -50,6 +54,12 @@ export default function WorkAnnouncementEditor({
       setError('공지 내용을 입력하세요');
       return;
     }
+    if (!startStr || !endStr) {
+      setError('게시 시작일과 종료일을 모두 입력하세요');
+      return;
+    }
+    // 사용자가 시작 > 종료 로 입력하면 자동 swap
+    const [start, end] = startStr <= endStr ? [startStr, endStr] : [endStr, startStr];
     if (isShared && recipientIds.length === 0) {
       setError('공유 받을 팀원을 1명 이상 선택하세요');
       return;
@@ -58,7 +68,10 @@ export default function WorkAnnouncementEditor({
     setError('');
     try {
       await onSubmit?.({
-        dateStr,
+        // dateStr 은 visit_date (게시 시작일) 로 사용 — backend 가 announce_* 우선
+        dateStr: start,
+        announce_start_date: start,
+        announce_end_date: end,
         title: title.trim(),
         content: content.trim(),
         visibility: isShared ? 'team' : 'private',
@@ -113,22 +126,50 @@ export default function WorkAnnouncementEditor({
       <div style={{
         flex: 1, overflowY: 'auto', padding: '18px 16px 20px',
       }}>
-        <SectionLabel>공지 날짜</SectionLabel>
-        <FieldBox
-          onClick={() => dateRef.current?.showPicker?.() ?? dateRef.current?.click()}
-          clickable
-        >
-          <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--t1)' }}>
-            {formatKoreanDate(dateStr)}
-          </div>
-          <input
-            ref={dateRef}
-            type="date"
-            value={dateStr}
-            onChange={(e) => e.target.value && setDateStr(e.target.value)}
-            style={hiddenDateInput}
-          />
-        </FieldBox>
+        <SectionLabel>게시 기간 *</SectionLabel>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', gap: 8, alignItems: 'center', marginBottom: 16 }}>
+          <FieldBox
+            onClick={() => startRef.current?.showPicker?.() ?? startRef.current?.click()}
+            clickable
+            inline
+          >
+            <div style={{ fontSize: 11, color: 'var(--t3)', marginBottom: 2 }}>시작</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--t1)' }}>
+              {formatKoreanDate(startStr)}
+            </div>
+            <input
+              ref={startRef}
+              type="date"
+              value={startStr}
+              onChange={(e) => {
+                if (!e.target.value) return;
+                setStartStr(e.target.value);
+                // 시작 > 기존 종료면 종료도 같이 밀어서 일관성 유지
+                if (e.target.value > endStr) setEndStr(e.target.value);
+              }}
+              style={hiddenDateInput}
+            />
+          </FieldBox>
+          <span style={{ color: 'var(--t3)', fontSize: 13, fontWeight: 600 }}>~</span>
+          <FieldBox
+            onClick={() => endRef.current?.showPicker?.() ?? endRef.current?.click()}
+            clickable
+            inline
+          >
+            <div style={{ fontSize: 11, color: 'var(--t3)', marginBottom: 2 }}>종료</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--t1)' }}>
+              {formatKoreanDate(endStr)}
+            </div>
+            <input
+              ref={endRef}
+              type="date"
+              value={endStr}
+              min={startStr}
+              onChange={(e) => e.target.value && setEndStr(e.target.value)}
+              style={hiddenDateInput}
+            />
+          </FieldBox>
+        </div>
 
         <SectionLabel>제목 *</SectionLabel>
         <FieldBox>
@@ -238,14 +279,15 @@ function SectionLabel({ children }) {
   );
 }
 
-function FieldBox({ children, onClick, clickable }) {
+function FieldBox({ children, onClick, clickable, inline }) {
   return (
     <div
       onClick={onClick}
       style={{
-        padding: '14px 16px', borderRadius: 14,
+        padding: inline ? '10px 12px' : '14px 16px',
+        borderRadius: inline ? 10 : 14,
         background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
-        marginBottom: 16, position: 'relative',
+        marginBottom: inline ? 0 : 16, position: 'relative',
         cursor: clickable ? 'pointer' : 'text',
       }}
     >

@@ -238,6 +238,8 @@ async def my_visits(
     last_day = monthrange(year, month)[1]
     start = datetime(year, month, 1, 0, 0, 0)
     end = datetime(year, month, last_day, 23, 59, 59)
+    start_str = f"{year:04d}-{month:02d}-01"
+    end_str = f"{year:04d}-{month:02d}-{last_day:02d}"
 
     graded_sub = select(UserDoctorGrade.doctor_id).where(
         UserDoctorGrade.user_id == user.id,
@@ -248,6 +250,34 @@ async def my_visits(
     )).scalars().all()
     grade_by_doctor = {g.doctor_id: g.grade for g in grade_rows}
 
+    # 공지 케이스: 게시 기간(announce_start/end) 이 이 달과 겹치는 행, 옛 행은 visit_date 폴백
+    announcement_period_overlap = and_(
+        VisitLog.category == "announcement",
+        or_(
+            and_(
+                VisitLog.announce_start_date.isnot(None),
+                VisitLog.announce_start_date <= end_str,
+                VisitLog.announce_end_date >= start_str,
+            ),
+            and_(
+                VisitLog.announce_start_date.is_(None),
+                VisitLog.visit_date >= start,
+                VisitLog.visit_date <= end,
+            ),
+        ),
+    )
+    # 비-공지 케이스: visit_date 가 이 달 + 등급/personal/공유 매칭
+    non_announcement_match = and_(
+        VisitLog.category != "announcement",
+        VisitLog.visit_date >= start,
+        VisitLog.visit_date <= end,
+        or_(
+            VisitLog.user_id != user.id,  # 공유받은 일정 (등급 무관)
+            Doctor.id.in_(graded_sub),
+            VisitLog.category == "personal",
+        ),
+    )
+
     user_filter = await _visit_user_filter(db, user.id)
     query = (
         select(VisitLog, Doctor, Hospital, User.name)
@@ -256,15 +286,7 @@ async def my_visits(
         .outerjoin(User, VisitLog.user_id == User.id)
         .where(
             user_filter,
-            or_(
-                # 공유받은 일정은 등급 무관하게 모두 노출 (수신자가 명시적으로 선택받음)
-                VisitLog.user_id != user.id,
-                # 본인 일정: 등급 매긴 의사 또는 개인/공지 카테고리만
-                Doctor.id.in_(graded_sub),
-                VisitLog.category.in_(["personal", "announcement"]),
-            ),
-            VisitLog.visit_date >= start,
-            VisitLog.visit_date <= end,
+            or_(non_announcement_match, announcement_period_overlap),
         )
         .order_by(VisitLog.visit_date.asc())
     )
@@ -361,5 +383,7 @@ async def my_visits(
             "post_notes_author_id": v.post_notes_author_id,
             "post_notes_author_name": author_map.get(v.post_notes_author_id) if v.post_notes_author_id else None,
             "post_notes_updated_at": v.post_notes_updated_at.isoformat() if v.post_notes_updated_at else None,
+            "announce_start_date": v.announce_start_date,
+            "announce_end_date": v.announce_end_date,
         })
     return result

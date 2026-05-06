@@ -136,7 +136,7 @@ export default function RecipientPicker({
                   <span style={{
                     marginLeft: 6, fontSize: 10, color: 'var(--ac)', fontWeight: 700,
                   }}>
-                    팀장
+                    리더
                   </span>
                 )}
               </span>

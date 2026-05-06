@@ -149,14 +149,22 @@ export default function Dashboard({ onNavigate, currentUser, teamMembers = [] })
     closeFlow();
   };
 
-  const handleSubmitAnnouncement = async ({ dateStr, title, content, visibility, recipient_user_ids }) => {
-    const dt = `${dateStr}T00:00:00`;
+  const handleSubmitAnnouncement = async ({
+    dateStr, announce_start_date, announce_end_date,
+    title, content, visibility, recipient_user_ids,
+  }) => {
+    const start = announce_start_date || dateStr;
+    const end = announce_end_date || start;
+    const dt = `${start}T00:00:00`;
     await visitApi.createAnnouncement({
-      visit_date: dt, title, notes: content, visibility,
+      visit_date: dt,
+      announce_start_date: start,
+      announce_end_date: end,
+      title, notes: content, visibility,
       recipient_user_ids: recipient_user_ids ?? null,
     });
     refresh();
-    handleSelectDate(dateStr);
+    handleSelectDate(start);
     closeFlow();
   };
 

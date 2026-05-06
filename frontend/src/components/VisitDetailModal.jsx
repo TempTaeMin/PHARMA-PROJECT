@@ -297,23 +297,44 @@ export default function VisitDetailModal({
           }}><X size={20} /></button>
         </div>
 
-        {/* 날짜 */}
+        {/* 날짜 — 공지는 게시 기간, 그 외는 방문 날짜 */}
         <div style={{ marginTop: 18 }}>
-          <SectionLabel icon={<Calendar size={12} />}>방문 날짜</SectionLabel>
-          <input
-            type="date"
-            value={dateStr}
-            disabled={!isPlanned || !isMine}
-            onChange={e => setDateStr(e.target.value)}
-            style={{
-              width: '100%', padding: '11px 13px', borderRadius: 10,
-              border: '1px solid var(--bd-s)',
-              background: (isPlanned && isMine) ? 'var(--bg-1)' : 'var(--bg-2)',
-              fontSize: 14, fontFamily: 'inherit', color: 'var(--t1)',
-              boxSizing: 'border-box',
-              opacity: (isPlanned && isMine) ? 1 : .7,
-            }}
-          />
+          {isAnnouncement ? (
+            <>
+              <SectionLabel icon={<Calendar size={12} />}>게시 기간</SectionLabel>
+              <div style={{
+                padding: '11px 13px', borderRadius: 10,
+                border: '1px solid var(--bd-s)', background: 'var(--bg-2)',
+                fontSize: 14, color: 'var(--t1)',
+              }}>
+                {visit.announce_start_date && visit.announce_end_date ? (
+                  visit.announce_start_date === visit.announce_end_date
+                    ? <span>{visit.announce_start_date} (1일)</span>
+                    : <span>{visit.announce_start_date} ~ {visit.announce_end_date}</span>
+                ) : (
+                  <span style={{ color: 'var(--t3)' }}>{dateStr}</span>
+                )}
+              </div>
+            </>
+          ) : (
+            <>
+              <SectionLabel icon={<Calendar size={12} />}>방문 날짜</SectionLabel>
+              <input
+                type="date"
+                value={dateStr}
+                disabled={!isPlanned || !isMine}
+                onChange={e => setDateStr(e.target.value)}
+                style={{
+                  width: '100%', padding: '11px 13px', borderRadius: 10,
+                  border: '1px solid var(--bd-s)',
+                  background: (isPlanned && isMine) ? 'var(--bg-1)' : 'var(--bg-2)',
+                  fontSize: 14, fontFamily: 'inherit', color: 'var(--t1)',
+                  boxSizing: 'border-box',
+                  opacity: (isPlanned && isMine) ? 1 : .7,
+                }}
+              />
+            </>
+          )}
         </div>
 
         {/* 시간 (공지는 없음) */}

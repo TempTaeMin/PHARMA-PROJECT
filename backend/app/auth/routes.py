@@ -23,15 +23,40 @@ def _frontend_url() -> str:
     return os.getenv("FRONTEND_URL", "http://localhost:5173")
 
 
-def _serialize_user(user: User, team_id: Optional[int] = None) -> dict:
+def _serialize_user(
+    user: User,
+    team_id: Optional[int] = None,
+    teams: Optional[list[dict]] = None,
+) -> dict:
     return {
         "id": user.id,
         "email": user.email,
         "name": user.name,
         "picture": user.picture,
+        # 활성 팀 — 멀티팀 정책에서 일정/메모/공지의 기본 컨텍스트
         "team_id": team_id,
+        "active_team_id": team_id,
+        # 모든 소속 팀 — 사이드바 dropdown 용
+        "teams": teams or [],
         "created_at": user.created_at.isoformat() if user.created_at else None,
     }
+
+
+async def _load_user_teams(db: AsyncSession, user_id: int) -> tuple[Optional[int], list[dict]]:
+    """활성 팀 id + 모든 소속 팀 list 한 번에 조회."""
+    from app.auth.deps import get_my_team_id
+    rows = (await db.execute(
+        select(Team, TeamMember.role)
+        .join(TeamMember, Team.id == TeamMember.team_id)
+        .where(TeamMember.user_id == user_id)
+        .order_by(TeamMember.id.asc())
+    )).all()
+    active_id = await get_my_team_id(db, user_id)
+    teams = [
+        {"id": t.id, "name": t.name, "role": role, "is_active": t.id == active_id}
+        for t, role in rows
+    ]
+    return active_id, teams
 
 
 async def _ensure_team(db: AsyncSession, user: User) -> int:
@@ -109,10 +134,8 @@ async def me(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    tm = (await db.execute(
-        select(TeamMember).where(TeamMember.user_id == user.id).limit(1)
-    )).scalar_one_or_none()
-    return _serialize_user(user, team_id=tm.team_id if tm else None)
+    active_id, teams = await _load_user_teams(db, user.id)
+    return _serialize_user(user, team_id=active_id, teams=teams)
 
 
 class ProfileUpdate(BaseModel):
@@ -135,10 +158,8 @@ async def update_me(
     await db.commit()
     await db.refresh(user)
 
-    tm = (await db.execute(
-        select(TeamMember).where(TeamMember.user_id == user.id).limit(1)
-    )).scalar_one_or_none()
-    return _serialize_user(user, team_id=tm.team_id if tm else None)
+    active_id, teams = await _load_user_teams(db, user.id)
+    return _serialize_user(user, team_id=active_id, teams=teams)
 
 
 @router.post("/logout", summary="로그아웃")

@@ -318,6 +318,8 @@ async def _visit_to_dict(visit: VisitLog, db: AsyncSession) -> dict:
         "post_notes_author_id": visit.post_notes_author_id,
         "post_notes_author_name": name_map.get(visit.post_notes_author_id) if visit.post_notes_author_id else None,
         "post_notes_updated_at": visit.post_notes_updated_at.isoformat() if visit.post_notes_updated_at else None,
+        "announce_start_date": visit.announce_start_date,
+        "announce_end_date": visit.announce_end_date,
     }
 
 
@@ -457,6 +459,11 @@ async def create_announcement(
     recipient_ids: list[int] = []
     if visibility == "team":
         recipient_ids = await _validate_recipients(db, user, data.recipient_user_ids)
+    # 게시 기간 — 명시 없으면 visit_date 의 date 1일짜리. start > end 면 자동 swap.
+    start = (data.announce_start_date or data.visit_date.strftime("%Y-%m-%d"))[:10]
+    end = (data.announce_end_date or start)[:10]
+    if start > end:
+        start, end = end, start
     visit = VisitLog(
         user_id=user.id,
         doctor_id=None,
@@ -466,6 +473,8 @@ async def create_announcement(
         title=title,
         category="announcement",
         visibility=visibility,
+        announce_start_date=start,
+        announce_end_date=end,
     )
     apply_memo_authorship(visit, user, prev_notes=None, prev_post_notes=None)
     db.add(visit)

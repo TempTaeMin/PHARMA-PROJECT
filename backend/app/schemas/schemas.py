@@ -172,12 +172,17 @@ class PersonalEventCreate(BaseModel):
 
 
 class AnnouncementCreate(BaseModel):
-    """업무공지 등록 스키마. 디폴트 'team' (공지는 팀 공유 의도)."""
+    """업무공지 등록 스키마. 디폴트 'team' (공지는 팀 공유 의도).
+
+    게시 기간 (announce_start_date / announce_end_date) 우선. 미지정 시 visit_date
+    의 date 부분으로 폴백 (1일 공지)."""
     visit_date: datetime
     title: str
     notes: Optional[str] = None
     visibility: Optional[str] = None  # 미지정 시 'team' 디폴트
     recipient_user_ids: Optional[list[int]] = None
+    announce_start_date: Optional[str] = None  # 'YYYY-MM-DD'
+    announce_end_date: Optional[str] = None  # 'YYYY-MM-DD'
 
 
 # --- Academic Organizer ---

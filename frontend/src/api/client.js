@@ -37,6 +37,9 @@ export const authApi = {
 // ─── Teams ───
 export const teamApi = {
   me: () => request('/api/teams/me'),
+  // 멀티팀 — 모든 소속 팀 list (dropdown 용) + 활성 팀 전환
+  myTeams: () => request('/api/teams/me/list'),
+  switchActive: (teamId) => request(`/api/teams/me/switch/${teamId}`, { method: 'POST' }),
   create: (name) => request('/api/teams', { method: 'POST', body: JSON.stringify({ name }) }),
   rename: (name) => request('/api/teams/me', { method: 'PATCH', body: JSON.stringify({ name }) }),
   invite: (email) => request('/api/teams/me/invite', { method: 'POST', body: JSON.stringify({ email }) }),

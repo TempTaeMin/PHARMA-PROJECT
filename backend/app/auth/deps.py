@@ -24,11 +24,45 @@ async def get_current_user(
 
 
 async def get_my_team_id(db: AsyncSession, user_id: int) -> Optional[int]:
-    """현재 사용자의 소속 팀 id. 팀 미소속이면 None."""
+    """현재 사용자의 **활성** 팀 id. 멀티팀 정책에서 일정/메모/공지의 default 컨텍스트.
+
+    우선순위:
+      1) users.active_team_id (사이드바 dropdown 으로 사용자가 선택)
+      2) (폴백) 첫 TeamMember.team_id — active 가 아직 안 박힌 마이그 직후 등
+      3) 팀 미소속이면 None
+    """
+    user = (await db.execute(
+        select(User).where(User.id == user_id)
+    )).scalar_one_or_none()
+    if not user:
+        return None
+
+    if user.active_team_id is not None:
+        # active_team 에 실제로 멤버인지 검증 — 떠난 팀이 stale 로 남는 경우 방지
+        is_member = (await db.execute(
+            select(TeamMember).where(
+                TeamMember.team_id == user.active_team_id,
+                TeamMember.user_id == user_id,
+            ).limit(1)
+        )).scalar_one_or_none()
+        if is_member:
+            return user.active_team_id
+
+    # 폴백 — 가장 오래된 멤버십을 active 로 간주
     tm = (await db.execute(
-        select(TeamMember).where(TeamMember.user_id == user_id).limit(1)
+        select(TeamMember).where(TeamMember.user_id == user_id)
+        .order_by(TeamMember.id.asc()).limit(1)
     )).scalar_one_or_none()
     return tm.team_id if tm else None
+
+
+async def get_my_team_ids(db: AsyncSession, user_id: int) -> list[int]:
+    """현재 사용자의 모든 소속 팀 id list (멀티팀 지원)."""
+    rows = (await db.execute(
+        select(TeamMember.team_id).where(TeamMember.user_id == user_id)
+        .order_by(TeamMember.id.asc())
+    )).scalars().all()
+    return list(rows)
 
 
 async def get_team_member_ids(db: AsyncSession, team_id: int) -> list[int]:

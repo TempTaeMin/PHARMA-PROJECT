@@ -6,7 +6,7 @@ import { showConfirm } from '../utils/dialog';
 /**
  * 팀 관리 페이지.
  * - 팀 미소속: 빈 상태 + "팀 만들기" 버튼
- * - 팀 소속: 멤버 목록 + (팀장) 초대/제거, (멤버) 탈퇴
+ * - 팀 소속: 멤버 목록 + (리더) 초대/제거, (멤버) 탈퇴
  */
 export default function Team({ currentUser, onTeamChanged }) {
   const [data, setData] = useState(null); // { team, role, members }
@@ -30,7 +30,7 @@ export default function Team({ currentUser, onTeamChanged }) {
       const r = await teamApi.me();
       setData(r);
       setErr(null);
-      // 팀장이면 보낸 초대도 가져오기
+      // 리더이면 보낸 초대도 가져오기
       if (r?.role === 'owner') {
         try {
           const sent = await teamApi.sentInvitations();
@@ -160,7 +160,7 @@ export default function Team({ currentUser, onTeamChanged }) {
           </div>
           <div style={{ fontSize: 13, color: 'var(--t3)', lineHeight: 1.6, marginBottom: 24 }}>
             혼자 사용하셔도 모든 기능을 그대로 쓸 수 있어요.<br />
-            동료와 일정·공지·학회 핀을 공유하려면 팀을 만들거나 팀장에게 초대를 받으세요.
+            동료와 일정·공지·학회 핀을 공유하려면 팀을 만들거나 리더에게 초대를 받으세요.
           </div>
           <div style={{ display: 'flex', gap: 8, maxWidth: 360, margin: '0 auto' }}>
             <input
@@ -231,7 +231,7 @@ export default function Team({ currentUser, onTeamChanged }) {
             </div>
           )}
           <div style={{ fontSize: 11, color: 'var(--t3)', marginTop: 4 }}>
-            멤버 {data.members.length}명 · 본인 역할: {isOwner ? '팀장' : '팀원'}
+            멤버 {data.members.length}명 · 본인 역할: {isOwner ? '리더' : '팀원'}
           </div>
         </div>
         {!isOwner && (
@@ -241,7 +241,7 @@ export default function Team({ currentUser, onTeamChanged }) {
         )}
       </div>
 
-      {/* 멤버 초대 (팀장 only) */}
+      {/* 멤버 초대 (리더 only) */}
       {isOwner && (
         <div style={{
           padding: '14px 16px', borderRadius: 12, background: 'var(--bg-1)',
@@ -288,7 +288,7 @@ export default function Team({ currentUser, onTeamChanged }) {
         </div>
       )}
 
-      {/* 보낸 초대 (pending) — 팀장만 */}
+      {/* 보낸 초대 (pending) — 리더만 */}
       {isOwner && sentInvites.length > 0 && (
         <div style={{
           padding: '14px 16px', borderRadius: 12, background: 'var(--bg-1)',
@@ -360,7 +360,7 @@ export default function Team({ currentUser, onTeamChanged }) {
                     {m.name || '이름 없음'}
                   </span>
                   {m.role === 'owner' && (
-                    <span style={ownerBadge}><Crown size={9} /> 팀장</span>
+                    <span style={ownerBadge}><Crown size={9} /> 리더</span>
                   )}
                   {m.user_id === currentUser?.id && (
                     <span style={{

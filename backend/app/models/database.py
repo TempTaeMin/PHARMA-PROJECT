@@ -32,12 +32,15 @@ class User(Base):
     email = Column(String(200), unique=True, nullable=False, index=True)
     name = Column(String(200))
     picture = Column(String(500))
+    # 멀티팀 — 사용자가 여러 팀에 소속될 수 있고, 그 중 "현재 활성 팀" 1개. 일정/메모/공지의
+    # 기본 컨텍스트가 되며 사이드바 팀 전환 dropdown 으로 변경. NULL 은 팀 미소속.
+    active_team_id = Column(Integer, ForeignKey("teams.id", ondelete="SET NULL"), nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     last_login_at = Column(DateTime, default=datetime.utcnow)
 
 
 class Team(Base):
-    """팀. 1.0 에서는 가입 시 자동 생성되는 1인 팀이 전부 (멤버 초대 UI 는 후속)."""
+    """팀. 멀티팀 정책(2026-05-06): 한 user 가 여러 팀의 owner 또는 member 가능."""
     __tablename__ = "teams"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -250,6 +253,11 @@ class VisitLog(Base):
     next_action = Column(Text)  # 다음 액션
     category = Column(String(20), default='professor')  # 'professor' | 'personal' | 'announcement' | 'etc'
     title = Column(String(200))  # 개인 일정 제목 등
+    # 업무공지(category='announcement') 게시 기간. 단일 visit_date 가 아니라 기간 동안 매일 노출.
+    # 'YYYY-MM-DD' 문자열로 저장 (DB date 타입 비호환 회피, doctor_date_schedules 와 같은 컨벤션).
+    # NULL 이면 visit_date 의 date 부분으로 폴백 (1일 공지 호환).
+    announce_start_date = Column(String(10), nullable=True, index=True)
+    announce_end_date = Column(String(10), nullable=True, index=True)
     # 의사 record 가 사라져도 누구를 만났는지 보존하기 위한 snapshot
     doctor_name_snapshot = Column(String(100), nullable=True)
     doctor_dept_snapshot = Column(String(200), nullable=True)

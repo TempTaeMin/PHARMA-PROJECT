@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { LayoutDashboard, Star, Building2, BookOpen, Settings, Bell, Menu, CalendarDays, FileText, LogOut, User as UserIcon, Users, MessageSquarePlus, Inbox } from 'lucide-react';
 import { authApi, notificationApi, setUnauthorizedHandler, teamApi, feedbackApi } from './api/client';
+import { invalidate } from './api/cache';
 import Dashboard from './pages/Dashboard';
 import MyDoctors from './pages/MyDoctors';
 import BrowseDoctors from './pages/BrowseDoctors';
@@ -16,6 +17,7 @@ import DialogHost from './components/Dialog';
 import FeedbackModal from './components/FeedbackModal';
 import PwaInstallHint from './components/PwaInstallHint';
 import ChangelogModal from './components/ChangelogModal';
+import TeamSwitcher from './components/TeamSwitcher';
 
 const NAV = [
   { id: 'dashboard', label: '내 일정', icon: LayoutDashboard },
@@ -243,10 +245,22 @@ export default function App() {
           boxShadow: sidebarOpen ? '0 10px 36px rgba(0,0,0,.22)' : 'none',
         } : {}),
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 8px', marginBottom: 24 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 8px', marginBottom: 12 }}>
           <div style={{ width: 28, height: 28, borderRadius: 7, background: 'linear-gradient(135deg,#0040a1,#0056d2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, color: '#fff' }}>💊</div>
           <h1 style={{ fontFamily: 'Manrope', fontSize: 15, fontWeight: 800, letterSpacing: '-.03em', color: 'var(--ac)' }}>MediSync</h1>
         </div>
+        <TeamSwitcher
+          currentUser={currentUser}
+          onSwitched={async () => {
+            try {
+              const me = await authApi.me();
+              setCurrentUser(me);
+              reloadTeam();
+              // 팀이 바뀌면 모든 팀 컨텍스트 데이터 invalidate
+              ['my-doctors', 'doctors', 'my-visits', 'dashboard', 'memos', 'academic'].forEach(invalidate);
+            } catch { /* ignore */ }
+          }}
+        />
         <nav style={{ display: 'flex', flexDirection: 'column', gap: 2, flex: 1 }}>
           {NAV.map(n => {
             const Icon = n.icon;
