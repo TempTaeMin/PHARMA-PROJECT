@@ -131,7 +131,8 @@ export default function NotificationPanel({ open, onClose, notifications, invita
 
       {/* Panel */}
       <div style={{
-        position: 'fixed', right: 0, top: 0, bottom: 0, width: 380, maxWidth: '100vw',
+        position: 'fixed', right: 0, top: 0, bottom: 0,
+        width: 'min(380px, 92vw)',
         background: 'var(--bg-1)', borderLeft: '1px solid var(--bd-s)', zIndex: 50,
         transform: open ? 'translateX(0)' : 'translateX(100%)',
         transition: 'transform .25s cubic-bezier(.4,0,.2,1)',

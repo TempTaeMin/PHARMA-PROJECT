@@ -529,17 +529,7 @@ export default function Conferences({ onNavigate, mode, currentUser }) {
                   </div>
 
                   {(e.departments && e.departments.length > 0) ? (
-                    <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginTop: 8 }}>
-                      {e.departments.map(d => {
-                        const col = deptColor(d);
-                        return (
-                          <span key={d} style={{
-                            padding: '3px 8px', borderRadius: 12, fontSize: 10, fontWeight: 600,
-                            background: col.bg, color: col.c,
-                          }}>{d}</span>
-                        );
-                      })}
-                    </div>
+                    <DeptChips departments={e.departments} />
                   ) : e.classification_status === 'unclassified' ? (
                     <div style={{
                       display: 'inline-flex', alignItems: 'center', gap: 4,
@@ -603,3 +593,48 @@ const dateInputStyle = {
   color: 'var(--t1)', fontSize: 11, fontFamily: "'JetBrains Mono'",
   outline: 'none',
 };
+
+const DEPT_VISIBLE_LIMIT = 4;
+
+function DeptChips({ departments }) {
+  const [expanded, setExpanded] = useState(false);
+  const total = departments.length;
+  const overflow = total > DEPT_VISIBLE_LIMIT;
+  const visible = expanded || !overflow ? departments : departments.slice(0, DEPT_VISIBLE_LIMIT);
+  const hidden = overflow && !expanded ? total - DEPT_VISIBLE_LIMIT : 0;
+  return (
+    <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginTop: 8 }}>
+      {visible.map(d => {
+        const col = deptColor(d);
+        return (
+          <span key={d} style={{
+            padding: '3px 8px', borderRadius: 12, fontSize: 10, fontWeight: 600,
+            background: col.bg, color: col.c,
+          }}>{d}</span>
+        );
+      })}
+      {hidden > 0 && (
+        <button
+          type="button"
+          onClick={(ev) => { ev.stopPropagation(); setExpanded(true); }}
+          style={{
+            padding: '3px 9px', borderRadius: 12, fontSize: 10, fontWeight: 700,
+            background: 'var(--bg-2)', color: 'var(--t2)',
+            border: '1px solid var(--bd-s)', cursor: 'pointer', fontFamily: 'inherit',
+          }}
+        >+{hidden}</button>
+      )}
+      {expanded && overflow && (
+        <button
+          type="button"
+          onClick={(ev) => { ev.stopPropagation(); setExpanded(false); }}
+          style={{
+            padding: '3px 9px', borderRadius: 12, fontSize: 10, fontWeight: 600,
+            background: 'transparent', color: 'var(--t3)',
+            border: '1px solid var(--bd-s)', cursor: 'pointer', fontFamily: 'inherit',
+          }}
+        >접기</button>
+      )}
+    </div>
+  );
+}

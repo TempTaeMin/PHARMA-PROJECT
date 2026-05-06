@@ -107,10 +107,18 @@ def _doctor_to_response_dict(
     base = DoctorResponse.model_validate(doctor).model_dump()
     base["visit_grade"] = user_grade
     base["memo"] = user_memo
+    # hospital 관계가 selectinload 안 된 상태(create/update 직후)면 lazy access 가
+    # async 컨텍스트에서 MissingGreenlet 으로 터진다. 호출자가 hospital_name 을
+    # 명시했거나 — 그게 없으면 try/except 로 보호. 같은 패턴을 linked_doctor 에 이미 적용 중.
+    hospital = None
+    try:
+        hospital = doctor.hospital
+    except Exception:
+        hospital = None
     base["hospital_name"] = hospital_name if hospital_name is not None else (
-        doctor.hospital.name if doctor.hospital else None
+        hospital.name if hospital else None
     )
-    base["hospital_source"] = doctor.hospital.source if doctor.hospital else None
+    base["hospital_source"] = hospital.source if hospital else None
 
     # 최근 방문일 — visit_logs 가 selectinload 으로 로딩된 경우만 계산 (N+1 회피)
     try:
@@ -272,8 +280,18 @@ async def create_doctor(
         await _upsert_user_memo(db, user.id, doctor.id, user_memo)
     if user_grade or user_memo:
         await db.commit()
+    # hospital 까지 eager-load 한 fresh row 로 응답 — async 에서 lazy access 차단
+    fresh = (await db.execute(
+        select(Doctor)
+        .options(
+            selectinload(Doctor.hospital),
+            selectinload(Doctor.linked_doctor).selectinload(Doctor.hospital),
+            selectinload(Doctor.visit_logs),
+        )
+        .where(Doctor.id == doctor.id)
+    )).scalar_one()
     return _doctor_to_response_dict(
-        doctor, user_grade=user_grade, user_memo=user_memo,
+        fresh, user_grade=user_grade, user_memo=user_memo,
     )
 
 
@@ -292,7 +310,15 @@ async def update_doctor(
 
     is_active=False 로 전환 시 deactivated_at 자동 설정. True 복귀 시 자동 클리어.
     """
-    query = select(Doctor).where(Doctor.id == doctor_id)
+    query = (
+        select(Doctor)
+        .options(
+            selectinload(Doctor.hospital),
+            selectinload(Doctor.linked_doctor).selectinload(Doctor.hospital),
+            selectinload(Doctor.visit_logs),
+        )
+        .where(Doctor.id == doctor_id)
+    )
     result = await db.execute(query)
     doctor = result.scalar_one_or_none()
     if not doctor:

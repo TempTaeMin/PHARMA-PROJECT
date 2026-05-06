@@ -249,10 +249,10 @@ export default function ManualDoctorModal({ open, onClose, onCreated }) {
               <div style={{ marginBottom: 12, fontSize: 12, color: 'var(--t3)' }}>
                 요일 × 오전/오후 셀을 클릭해 진료시간을 표시하세요. 비워둬도 등록 가능합니다.
               </div>
-              {/* 시간 입력 */}
-              <div style={{ display: 'flex', gap: 8, marginBottom: 14 }}>
+              {/* 시간 입력 — 좁은 폰에선 세로로 스택 */}
+              <div style={{ display: 'flex', gap: 8, marginBottom: 14, flexWrap: 'wrap' }}>
                 {['morning', 'afternoon'].map(slot => (
-                  <div key={slot} style={{ flex: 1, padding: 10, borderRadius: 7, background: 'var(--bg-2)', border: '1px solid var(--bd-s)' }}>
+                  <div key={slot} style={{ flex: '1 1 220px', minWidth: 0, padding: 10, borderRadius: 7, background: 'var(--bg-2)', border: '1px solid var(--bd-s)' }}>
                     <div style={{ fontSize: 11, color: 'var(--t3)', marginBottom: 4 }}>
                       {slot === 'morning' ? '오전' : '오후'} 시간
                     </div>
@@ -261,14 +261,14 @@ export default function ManualDoctorModal({ open, onClose, onCreated }) {
                         type="time"
                         value={slotTimes[slot].start}
                         onChange={e => setSlotTimes(p => ({ ...p, [slot]: { ...p[slot], start: e.target.value } }))}
-                        style={{ flex: 1, padding: 5, borderRadius: 5, background: 'var(--bg-1)', border: '1px solid var(--bd)', color: 'var(--t1)', fontSize: 12, fontFamily: "'JetBrains Mono'" }}
+                        style={{ flex: 1, minWidth: 0, padding: 5, borderRadius: 5, background: 'var(--bg-1)', border: '1px solid var(--bd)', color: 'var(--t1)', fontSize: 12, fontFamily: "'JetBrains Mono'" }}
                       />
                       <span style={{ fontSize: 11, color: 'var(--t3)' }}>~</span>
                       <input
                         type="time"
                         value={slotTimes[slot].end}
                         onChange={e => setSlotTimes(p => ({ ...p, [slot]: { ...p[slot], end: e.target.value } }))}
-                        style={{ flex: 1, padding: 5, borderRadius: 5, background: 'var(--bg-1)', border: '1px solid var(--bd)', color: 'var(--t1)', fontSize: 12, fontFamily: "'JetBrains Mono'" }}
+                        style={{ flex: 1, minWidth: 0, padding: 5, borderRadius: 5, background: 'var(--bg-1)', border: '1px solid var(--bd)', color: 'var(--t1)', fontSize: 12, fontFamily: "'JetBrains Mono'" }}
                       />
                     </div>
                   </div>
