@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { LayoutDashboard, Star, Building2, BookOpen, Settings, Bell, Menu, CalendarDays, FileText, LogOut, User as UserIcon, Users } from 'lucide-react';
-import { authApi, notificationApi, setUnauthorizedHandler, teamApi } from './api/client';
+import { LayoutDashboard, Star, Building2, BookOpen, Settings, Bell, Menu, CalendarDays, FileText, LogOut, User as UserIcon, Users, MessageSquarePlus, Inbox } from 'lucide-react';
+import { authApi, notificationApi, setUnauthorizedHandler, teamApi, feedbackApi } from './api/client';
 import Dashboard from './pages/Dashboard';
 import MyDoctors from './pages/MyDoctors';
 import BrowseDoctors from './pages/BrowseDoctors';
@@ -9,9 +9,13 @@ import Schedule from './pages/Schedule';
 import Memos from './pages/Memos';
 import Team from './pages/Team';
 import SettingsPage from './pages/Settings';
+import AdminFeedback from './pages/AdminFeedback';
 import Login from './pages/Login';
 import NotificationPanel from './components/NotificationPanel';
 import DialogHost from './components/Dialog';
+import FeedbackModal from './components/FeedbackModal';
+import PwaInstallHint from './components/PwaInstallHint';
+import ChangelogModal from './components/ChangelogModal';
 
 const NAV = [
   { id: 'dashboard', label: '내 일정', icon: LayoutDashboard },
@@ -23,7 +27,11 @@ const NAV = [
   { id: 'team', label: '팀 관리', icon: Users },
 ];
 
-const PAGE_IDS = [...NAV.map(n => n.id), 'settings'];
+const PAGE_IDS = [...NAV.map(n => n.id), 'settings', 'admin-feedback'];
+
+// admin 가드 — 백엔드 ADMIN_EMAILS env 와 동기화 필요. 프론트는 UI 분기만, 보안은 백엔드 의존.
+const ADMIN_EMAILS = ['namgiggo1@gmail.com'];
+const isAdminEmail = (email) => !!email && ADMIN_EMAILS.includes(email.toLowerCase());
 
 // URL 의 첫 path segment 로 초기 페이지 결정 — 직접 URL 입력 / 새로고침 / 뒤로가기 대응.
 function pageFromPath() {
@@ -51,6 +59,8 @@ export default function App() {
   const [authChecking, setAuthChecking] = useState(true);
   const [profileOpen, setProfileOpen] = useState(false);
   const profileRef = useRef(null);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [adminFeedbackUnread, setAdminFeedbackUnread] = useState(0);
   const [teamMembers, setTeamMembers] = useState([]);
 
   const reloadTeam = useCallback(async () => {
@@ -126,6 +136,24 @@ export default function App() {
     const t = setInterval(() => { loadNotifs(); }, 30000);
     return () => clearInterval(t);
   }, [currentUser, loadNotifs]);
+
+  // admin: 사이드바 뱃지용 미처리 피드백 카운트 (60초 폴링)
+  useEffect(() => {
+    if (!isAdminEmail(currentUser?.email)) {
+      setAdminFeedbackUnread(0);
+      return;
+    }
+    let cancelled = false;
+    const fetchSummary = async () => {
+      try {
+        const s = await feedbackApi.summary();
+        if (!cancelled) setAdminFeedbackUnread(s.unread_count || 0);
+      } catch { /* ignore */ }
+    };
+    fetchSummary();
+    const t = setInterval(fetchSummary, 60000);
+    return () => { cancelled = true; clearInterval(t); };
+  }, [currentUser]);
 
   const handleLogout = async () => {
     try { await authApi.logout(); } catch { /* ignore */ }
@@ -238,6 +266,29 @@ export default function App() {
           })}
         </nav>
         <div style={{ borderTop: '1px solid var(--bd-s)', paddingTop: 8 }}>
+          {isAdminEmail(currentUser?.email) && (
+            <button onClick={() => navTo('admin-feedback')} style={{
+              display: 'flex', alignItems: 'center', gap: 9, padding: '9px 12px', borderRadius: 10,
+              fontSize: 13, fontWeight: page === 'admin-feedback' ? 600 : 450,
+              color: page === 'admin-feedback' ? 'var(--ac)' : 'var(--t3)',
+              background: page === 'admin-feedback' ? 'var(--ac-d)' : 'none',
+              border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%', textAlign: 'left',
+              marginBottom: 4,
+            }}>
+              <Inbox size={17} style={{ opacity: page === 'admin-feedback' ? 1 : .5 }} />
+              <span style={{ flex: 1 }}>피드백 관리</span>
+              {adminFeedbackUnread > 0 && (
+                <span style={{
+                  minWidth: 18, height: 18, padding: '0 5px', borderRadius: 9,
+                  background: 'var(--rd)', color: '#fff',
+                  fontSize: 10, fontWeight: 700, fontFamily: "'JetBrains Mono'",
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  {adminFeedbackUnread > 99 ? '99+' : adminFeedbackUnread}
+                </span>
+              )}
+            </button>
+          )}
           <button onClick={() => navTo('settings')} style={{
             display: 'flex', alignItems: 'center', gap: 9, padding: '9px 12px', borderRadius: 10,
             fontSize: 13, fontWeight: page === 'settings' ? 600 : 450,
@@ -327,6 +378,17 @@ export default function App() {
                       {currentUser.email}
                     </div>
                   </div>
+                  <button
+                    onClick={() => { setProfileOpen(false); setShowFeedback(true); }}
+                    style={{
+                      width: '100%', padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8,
+                      border: 'none', borderBottom: '1px solid var(--bd-s)',
+                      background: 'none', cursor: 'pointer', fontFamily: 'inherit',
+                      fontSize: 12, color: 'var(--t2)', textAlign: 'left',
+                    }}
+                  >
+                    <MessageSquarePlus size={13} /> 피드백 보내기
+                  </button>
                   <button onClick={handleLogout} style={{
                     width: '100%', padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8,
                     border: 'none', background: 'none', cursor: 'pointer', fontFamily: 'inherit',
@@ -351,6 +413,9 @@ export default function App() {
             reloadTeam();
           }} />}
           {page === 'settings' && <SettingsPage currentUser={currentUser} onUpdated={setCurrentUser} />}
+          {page === 'admin-feedback' && isAdminEmail(currentUser?.email) && (
+            <AdminFeedback onSummaryChange={setAdminFeedbackUnread} />
+          )}
         </div>
       </main>
 
@@ -365,6 +430,9 @@ export default function App() {
           try { const me = await authApi.me(); setCurrentUser(me); } catch { /* ignore */ }
         }}
       />
+      <FeedbackModal open={showFeedback} onClose={() => setShowFeedback(false)} />
+      <PwaInstallHint />
+      <ChangelogModal />
       <DialogHost />
     </div>
   );

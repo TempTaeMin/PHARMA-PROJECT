@@ -226,6 +226,23 @@ export const reportApi = {
   docxUrl: (id) => `${API_BASE}/api/reports/${id}/docx`,
 };
 
+// ─── Feedback (베타 테스터) ───
+export const feedbackApi = {
+  // 누구나 (로그인 후) 사용
+  create: (data) => request('/api/feedback/', { method: 'POST', body: JSON.stringify(data) }),
+  // admin 전용
+  list: (params = {}) => {
+    const qs = new URLSearchParams(
+      Object.entries(params).filter(([, v]) => v !== undefined && v !== null && v !== '')
+    ).toString();
+    return request(`/api/feedback/${qs ? '?' + qs : ''}`);
+  },
+  summary: () => request('/api/feedback/summary'),
+  setHandled: (id, handled) =>
+    request(`/api/feedback/${id}`, { method: 'PATCH', body: JSON.stringify({ handled }) }),
+  remove: (id) => request(`/api/feedback/${id}`, { method: 'DELETE' }),
+};
+
 // ─── Notifications ───
 export const notificationApi = {
   list: (limit = 20, unreadOnly = false) =>

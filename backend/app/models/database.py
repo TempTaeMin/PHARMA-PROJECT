@@ -430,3 +430,19 @@ class CrawlLog(Base):
     error_message = Column(Text)
     started_at = Column(DateTime, default=datetime.utcnow)
     finished_at = Column(DateTime)
+
+
+class Feedback(Base):
+    """베타 테스터 피드백 — 앱 안에서 보낸 버그/제안/기타 의견."""
+    __tablename__ = "feedbacks"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True, index=True)
+    category = Column(String(20), nullable=False)  # "bug" | "suggestion" | "other"
+    message = Column(Text, nullable=False)
+    page_path = Column(String(255), nullable=True)  # 작성 시점 URL path
+    user_agent = Column(String(500), nullable=True)
+    handled = Column(Boolean, default=False, nullable=False, index=True)  # admin 처리 표시
+    created_at = Column(DateTime, default=datetime.utcnow, index=True)
+
+    user = relationship("User")
