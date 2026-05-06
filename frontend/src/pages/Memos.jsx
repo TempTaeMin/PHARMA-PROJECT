@@ -68,6 +68,10 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
   const [doctorFilter, setDoctorFilter] = useState(initialFilters.doctor_id || null);
   const [hospitalFilter, setHospitalFilter] = useState(null);
   const [typeFilter, setTypeFilter] = useState(null);
+  // "내 메모만" — 일일 보고서 작성 시 본인 메모만 골라 보기 위함. localStorage 로 유지.
+  const [mineOnly, setMineOnly] = useState(() => {
+    try { return localStorage.getItem('memos-mine-only') === '1'; } catch { return false; }
+  });
   const [fromDate, setFromDate] = useState(enteredWithDoctor ? '' : DEFAULT_FROM);
   const [toDate, setToDate] = useState(enteredWithDoctor ? '' : DEFAULT_TO);
   const [showFilters, setShowFilters] = useState(true);
@@ -81,6 +85,7 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
   // 보고서 관련 상태
   const [reports, setReports] = useState([]);
   const [reportsLoading, setReportsLoading] = useState(false);
+  const [reportTypeFilter, setReportTypeFilter] = useState('all'); // 'all' | 'daily' | 'weekly'
   const [selectedMemoIds, setSelectedMemoIds] = useState(() => new Set());
   const [reportGenOpen, setReportGenOpen] = useState(false);
   const [reportGenMode, setReportGenMode] = useState('daily'); // 'daily' | 'daily-from-memos' | 'weekly'
@@ -150,9 +155,10 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
       if (toDate) params.to = toDate;
       // hospital_id 필터 필요시 doctors에서 hospital → id 매핑 필요. 일단 client-side로 필터.
       const list = await memoApi.list(params);
-      const filtered = hospitalFilter
+      let filtered = hospitalFilter
         ? list.filter(m => m.hospital_name === hospitalFilter)
         : list;
+      if (mineOnly) filtered = filtered.filter(m => m.is_mine !== false);
       setMemos(filtered);
     } catch (e) {
       console.error(e);
@@ -160,7 +166,7 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
     } finally {
       setLoading(false);
     }
-  }, [doctorFilter, typeFilter, q, fromDate, toDate, hospitalFilter]);
+  }, [doctorFilter, typeFilter, q, fromDate, toDate, hospitalFilter, mineOnly]);
 
   useEffect(() => { loadMemos(); }, [loadMemos]);
 
@@ -181,7 +187,16 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
   const selectedDoctor = doctors.find(d => d.id === doctorFilter) || null;
   const dateChanged = fromDate !== DEFAULT_FROM || toDate !== DEFAULT_TO;
   const anyFilter =
-    doctorFilter || hospitalFilter || typeFilter || dateChanged || q.trim();
+    doctorFilter || hospitalFilter || typeFilter || dateChanged || q.trim() || mineOnly;
+
+  // mineOnly 토글은 localStorage 에 영속 — 일일 보고서 작성 흐름에서 매번 다시 켜지 않게
+  const toggleMineOnly = () => {
+    setMineOnly(v => {
+      const next = !v;
+      try { localStorage.setItem('memos-mine-only', next ? '1' : '0'); } catch { /* ignore */ }
+      return next;
+    });
+  };
 
   const clearFilters = () => {
     setDoctorFilter(null);
@@ -191,6 +206,7 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
     setToDate(DEFAULT_TO);
     setQ('');
     setDocQ('');
+    if (mineOnly) toggleMineOnly();
   };
 
   // ─ 액션: 저장 후 리스트 갱신 + 상세 진입 ─
@@ -405,6 +421,19 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
             </div>
           </FilterRow>
 
+          {/* 작성자 — 일일 보고서 작성 시 본인 거만 추리기 */}
+          <FilterRow label="작성자">
+            <div style={{ display: 'flex', gap: 5, alignItems: 'center' }}>
+              <ChipBtn active={!mineOnly} onClick={() => mineOnly && toggleMineOnly()}>전체</ChipBtn>
+              <ChipBtn active={mineOnly} onClick={() => !mineOnly && toggleMineOnly()}>내 메모만</ChipBtn>
+              {mineOnly && (
+                <span style={{ fontSize: 10, color: 'var(--t3)', marginLeft: 4 }}>
+                  공유받은 동료 메모는 숨겨져요
+                </span>
+              )}
+            </div>
+          </FilterRow>
+
           {/* 기간 */}
           <FilterRow label="기간">
             <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
@@ -435,7 +464,8 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
 
       {/* ── 보고서 탭 액션바 ── */}
       {view === 'reports' && (
-        <div style={{ display: 'flex', gap: 8, marginBottom: 12, flexWrap: 'wrap' }}>
+        <>
+        <div style={{ display: 'flex', gap: 8, marginBottom: 10, flexWrap: 'wrap' }}>
           <button
             onClick={() => { setReportGenMode('daily'); setReportGenPresetIds(null); setReportGenOpen(true); }}
             style={{
@@ -459,6 +489,29 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
             <CalendarDays size={13} /> 주간 보고서
           </button>
         </div>
+        {/* 보고서 종류 필터 */}
+        <div style={{ display: 'flex', gap: 5, marginBottom: 12, alignItems: 'center', flexWrap: 'wrap' }}>
+          <ChipBtn active={reportTypeFilter === 'all'} onClick={() => setReportTypeFilter('all')}>
+            전체 {reports.length > 0 && <span style={{ opacity: .6, marginLeft: 3 }}>{reports.length}</span>}
+          </ChipBtn>
+          <ChipBtn active={reportTypeFilter === 'daily'} onClick={() => setReportTypeFilter('daily')}>
+            일일
+            {reports.length > 0 && (
+              <span style={{ opacity: .6, marginLeft: 3 }}>
+                {reports.filter(r => r.report_type === 'daily').length}
+              </span>
+            )}
+          </ChipBtn>
+          <ChipBtn active={reportTypeFilter === 'weekly'} onClick={() => setReportTypeFilter('weekly')}>
+            주간
+            {reports.length > 0 && (
+              <span style={{ opacity: .6, marginLeft: 3 }}>
+                {reports.filter(r => r.report_type === 'weekly').length}
+              </span>
+            )}
+          </ChipBtn>
+        </div>
+        </>
       )}
 
       {/* ── 템플릿 관리 탭 ── */}
@@ -493,51 +546,128 @@ export default function Memos({ initialFilters = {}, onNavigate }) {
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8, paddingBottom: selectedMemoIds.size > 0 ? 80 : 0 }}>
-            {memos.map(m => (
-              <MemoCard
-                key={m.id}
-                memo={m}
-                onClick={() => setSelected(m)}
-                checked={selectedMemoIds.has(m.id)}
-                onToggleCheck={() => {
-                  setSelectedMemoIds(prev => {
-                    const next = new Set(prev);
-                    if (next.has(m.id)) next.delete(m.id);
-                    else next.add(m.id);
-                    return next;
-                  });
-                }}
-              />
-            ))}
+            {(() => {
+              // 같은 visit_log_id 메모 묶기 — 댓글 모델. is_root true 가 원본, 나머지는 댓글.
+              const groups = [];
+              const idxByVisit = new Map();
+              for (const m of memos) {
+                if (!m.visit_log_id) {
+                  groups.push({ root: m, replies: [] });
+                  continue;
+                }
+                if (idxByVisit.has(m.visit_log_id)) {
+                  const g = groups[idxByVisit.get(m.visit_log_id)];
+                  if (m.is_root && !g.root.is_root) {
+                    g.replies.push(g.root);
+                    g.root = m;
+                  } else if (m.is_root) {
+                    // 이미 root 가 있는데 또 root 면 첫 등장한 걸 유지하고 새 건 reply 로
+                    g.replies.push(m);
+                  } else {
+                    g.replies.push(m);
+                  }
+                } else {
+                  idxByVisit.set(m.visit_log_id, groups.length);
+                  groups.push({ root: m, replies: [] });
+                }
+              }
+              const renderToggle = (id) => () => {
+                setSelectedMemoIds(prev => {
+                  const next = new Set(prev);
+                  if (next.has(id)) next.delete(id);
+                  else next.add(id);
+                  return next;
+                });
+              };
+              return groups.map(g => (
+                <div key={g.root.id} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  <MemoCard
+                    memo={g.root}
+                    onClick={() => setSelected(g.root)}
+                    checked={selectedMemoIds.has(g.root.id)}
+                    onToggleCheck={g.root.is_mine !== false ? renderToggle(g.root.id) : undefined}
+                  />
+                  {g.replies.map(r => (
+                    <div key={r.id} style={{
+                      marginLeft: 24, position: 'relative',
+                    }}>
+                      <div style={{
+                        position: 'absolute', left: -14, top: 16, bottom: 16,
+                        width: 2, background: 'var(--bd-s)', borderRadius: 1,
+                      }} />
+                      <MemoCard
+                        memo={r}
+                        onClick={() => setSelected(r)}
+                        checked={selectedMemoIds.has(r.id)}
+                        onToggleCheck={r.is_mine !== false ? renderToggle(r.id) : undefined}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ));
+            })()}
           </div>
         )
       )}
 
       {/* 보고서 목록 */}
-      {view === 'reports' && (
-        reportsLoading && !reports.length ? (
-          <div style={{ padding: 60, textAlign: 'center', color: 'var(--t3)', fontSize: 13 }}>
-            로딩 중…
-          </div>
-        ) : reports.length === 0 ? (
-          <div style={{
-            padding: '60px 20px', textAlign: 'center',
-            background: 'var(--bg-1)', border: '1px dashed var(--bd-s)',
-            borderRadius: 14, color: 'var(--t3)', fontSize: 13,
-          }}>
-            아직 작성된 보고서가 없습니다.
-            <div style={{ fontSize: 11, marginTop: 6 }}>
-              위의 "일일 보고서" 또는 "주간 보고서" 버튼으로 시작하세요.
+      {view === 'reports' && (() => {
+        const filteredReports = reportTypeFilter === 'all'
+          ? reports
+          : reports.filter(r => r.report_type === reportTypeFilter);
+        if (reportsLoading && !reports.length) {
+          return (
+            <div style={{ padding: 60, textAlign: 'center', color: 'var(--t3)', fontSize: 13 }}>
+              로딩 중…
             </div>
-          </div>
-        ) : (
+          );
+        }
+        if (reports.length === 0) {
+          return (
+            <div style={{
+              padding: '60px 20px', textAlign: 'center',
+              background: 'var(--bg-1)', border: '1px dashed var(--bd-s)',
+              borderRadius: 14, color: 'var(--t3)', fontSize: 13,
+            }}>
+              아직 작성된 보고서가 없습니다.
+              <div style={{ fontSize: 11, marginTop: 6 }}>
+                위의 "일일 보고서" 또는 "주간 보고서" 버튼으로 시작하세요.
+              </div>
+            </div>
+          );
+        }
+        if (filteredReports.length === 0) {
+          const label = reportTypeFilter === 'daily' ? '일일' : '주간';
+          return (
+            <div style={{
+              padding: '40px 20px', textAlign: 'center',
+              background: 'var(--bg-1)', border: '1px dashed var(--bd-s)',
+              borderRadius: 14, color: 'var(--t3)', fontSize: 13,
+            }}>
+              {label} 보고서가 없습니다.
+              <div style={{ fontSize: 11, marginTop: 6 }}>
+                <button
+                  onClick={() => setReportTypeFilter('all')}
+                  style={{
+                    background: 'none', border: 'none', color: 'var(--ac)',
+                    fontSize: 11, cursor: 'pointer', fontFamily: 'inherit',
+                    textDecoration: 'underline',
+                  }}
+                >
+                  전체 보고서 보기
+                </button>
+              </div>
+            </div>
+          );
+        }
+        return (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {reports.map(r => (
+            {filteredReports.map(r => (
               <ReportCard key={r.id} report={r} onClick={() => setOpenedReport(r)} />
             ))}
           </div>
-        )
-      )}
+        );
+      })()}
 
       {/* ── floating 액션바 (메모 선택 시) ── */}
       {view === 'memos' && selectedMemoIds.size > 0 && (
@@ -736,6 +866,16 @@ function MemoCard({ memo, onClick, checked, onToggleCheck }) {
               display: 'flex', alignItems: 'center', gap: 3,
             }}>
               <Sparkles size={9} /> AI
+            </span>
+          )}
+          {memo.is_mine === false && memo.author_name && (
+            <span style={{
+              padding: '2px 7px', borderRadius: 5,
+              background: '#ede9fe', color: '#6d28d9',
+              fontSize: 9, fontWeight: 800, fontFamily: 'Manrope',
+              border: '1px solid #c4b5fd',
+            }}>
+              by {memo.author_name}
             </span>
           )}
         </div>

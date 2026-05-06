@@ -446,7 +446,14 @@ async def _broadcast_doctor_missing(doctor: Doctor, hospital: Hospital) -> None:
 
 
 def _update_doctor_info(doctor: Doctor, crawled: CrawledDoctor):
-    """교수 기본 정보 업데이트"""
+    """교수 기본 정보 업데이트.
+
+    빈 문자열은 무시 — 어떤 크롤러는 항목을 못 잡고 빈값으로 올 수 있어서, 그땐
+    기존 DB 값을 보존하는 게 안전. crawled 가 명시적으로 "" 로 클리어하고 싶다면
+    이 정책을 바꿔야 함 (현재 그런 사용 사례 없음).
+    """
+    if crawled.department:
+        doctor.department = crawled.department
     if crawled.position:
         doctor.position = crawled.position
     if crawled.specialty:

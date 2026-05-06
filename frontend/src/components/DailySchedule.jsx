@@ -652,24 +652,52 @@ function VisitCard({ visit, theme, isNextUp, onComplete, onCancel, onOpenDetail,
         </div>
       )}
       {(() => {
-        const aiDiscussion = visit.ai_summary?.summary?.['논의내용'];
-        const display = (aiDiscussion && String(aiDiscussion).trim()) || visit.notes;
-        if (!display) return null;
+        // 우선순위: 본인 AI > 본인 raw > root(공유본) AI > 사전 메모. 다른 사람 메모는 chip 으로만.
+        const memos = visit.memos || [];
+        const myMemo = memos.find(m => m.is_mine);
+        const rootMemo = memos[0];
+        const myAiDiscussion = myMemo?.ai_summary?.summary?.['논의내용'];
+        const rootAiDiscussion = (rootMemo && !rootMemo.is_mine)
+          ? rootMemo.ai_summary?.summary?.['논의내용']
+          : null;
+        const aiText = (myAiDiscussion && String(myAiDiscussion).trim())
+          || (rootAiDiscussion && String(rootAiDiscussion).trim())
+          || null;
+        const myRaw = myMemo?.raw_memo;
+        const isCompleted = visit.status && visit.status !== '예정';
+        const fallback = isCompleted ? (myRaw || visit.post_notes || visit.notes) : visit.notes;
+        const display = aiText || fallback;
+        const otherMemos = memos.filter(m => !m.is_mine);
+        const chipAuthor = otherMemos[0]?.author_name;
+        const showChip = otherMemos.length > 0;
+        if (!display && !showChip) return null;
         return (
-          <div style={{
-            fontSize: 11, color: 'var(--t2)', marginTop: 4, lineHeight: 1.45,
-            padding: '6px 8px', background: 'var(--bg-2)', borderRadius: 6,
-          }}>
-            {aiDiscussion && (
-              <span style={{
-                display: 'inline-block', marginRight: 5, padding: '1px 5px',
-                borderRadius: 3, fontSize: 9, fontWeight: 800,
-                background: 'var(--ac-d)', color: 'var(--ac)',
-                verticalAlign: 'middle',
-              }}>AI</span>
+          <>
+            {display && (
+              <div style={{
+                fontSize: 11, color: 'var(--t2)', marginTop: 4, lineHeight: 1.45,
+                padding: '6px 8px', background: 'var(--bg-2)', borderRadius: 6,
+              }}>
+                {aiText && (
+                  <span style={{
+                    display: 'inline-block', marginRight: 5, padding: '1px 5px',
+                    borderRadius: 3, fontSize: 9, fontWeight: 800,
+                    background: 'var(--ac-d)', color: 'var(--ac)',
+                    verticalAlign: 'middle',
+                  }}>AI</span>
+                )}
+                {display}
+              </div>
             )}
-            {display}
-          </div>
+            {showChip && (
+              <div style={{
+                marginTop: 5, fontSize: 10, color: 'var(--t3)',
+                display: 'flex', alignItems: 'center', gap: 4,
+              }}>
+                💬 추가 메모 {otherMemos.length}{chipAuthor ? ` · ${chipAuthor}` : ''}
+              </div>
+            )}
+          </>
         );
       })()}
       {isPlanned && !isPersonal && !isAnnouncement && (

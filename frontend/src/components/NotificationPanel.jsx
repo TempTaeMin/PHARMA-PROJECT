@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X, Bell, RefreshCw, AlertTriangle, GraduationCap, ChevronRight, UserMinus, ArrowRightLeft, Check, Users, UserPlus } from 'lucide-react';
 import { notificationApi, academicApi, doctorApi, teamApi } from '../api/client';
+import { showConfirm, showError } from '../utils/dialog';
 
 export default function NotificationPanel({ open, onClose, notifications, invitations = [], onRefresh, onNavigate, onTeamChanged }) {
   const [tab, setTab] = useState('work');
@@ -81,7 +82,7 @@ export default function NotificationPanel({ open, onClose, notifications, invita
       if (n.id) await notificationApi.markRead(n.id);
       onRefresh?.();
     } catch (e) {
-      alert('연결 실패: ' + e.message);
+      showError(e, { title: '연결 실패' });
     }
   };
 
@@ -101,17 +102,20 @@ export default function NotificationPanel({ open, onClose, notifications, invita
       onRefresh?.();
       onTeamChanged?.();
     } catch (e) {
-      alert('수락 실패: ' + e.message);
+      showError(e, { title: '수락 실패' });
     }
   };
 
   const declineInvite = async (inv) => {
-    if (!confirm(`'${inv.team_name}' 팀 초대를 거절할까요?`)) return;
+    const ok = await showConfirm(`'${inv.team_name}' 팀 초대를 거절할까요?`, {
+      tone: 'danger', confirmLabel: '거절', cancelLabel: '취소',
+    });
+    if (!ok) return;
     try {
       await teamApi.declineInvite(inv.id);
       onRefresh?.();
     } catch (e) {
-      alert('거절 실패: ' + e.message);
+      showError(e, { title: '거절 실패' });
     }
   };
 

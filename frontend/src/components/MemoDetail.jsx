@@ -3,6 +3,7 @@ import {
   ArrowLeft, Copy, FileDown, Edit3, Trash2, RefreshCw, Sparkles, FileText,
 } from 'lucide-react';
 import { memoApi } from '../api/client';
+import { showConfirm } from '../utils/dialog';
 
 const MEMO_TYPE_LABEL = { visit: '방문', meeting: '회의록', note: '노트' };
 
@@ -100,7 +101,10 @@ export default function MemoDetail({
   };
 
   const remove = async () => {
-    if (!confirm('이 메모를 삭제하시겠습니까? 복구할 수 없습니다.')) return;
+    const ok = await showConfirm('이 메모를 삭제하시겠습니까? 복구할 수 없습니다.', {
+      tone: 'danger', confirmLabel: '삭제', cancelLabel: '취소',
+    });
+    if (!ok) return;
     setBusy(true);
     try {
       await memoApi.remove(memo.id);

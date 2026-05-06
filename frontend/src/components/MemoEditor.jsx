@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { X, Sparkles, Save, Search, Calendar, RefreshCw } from 'lucide-react';
 import { memoApi } from '../api/client';
+import { showAlert, showError } from '../utils/dialog';
 
 const MEMO_TYPES = [
   { key: 'visit', label: '방문' },
@@ -104,7 +105,7 @@ export default function MemoEditor({
 
   const save = async () => {
     if (!rawMemo.trim()) {
-      alert('원본 메모를 입력해주세요.');
+      await showAlert('원본 메모를 입력해주세요.', { tone: 'warning' });
       return;
     }
     setSaving(true);
@@ -122,7 +123,7 @@ export default function MemoEditor({
       onSaved?.(saved);
       onClose?.();
     } catch (e) {
-      alert('저장 실패: ' + e.message);
+      showError(e, { title: '저장 실패' });
     } finally {
       setSaving(false);
     }
@@ -130,7 +131,7 @@ export default function MemoEditor({
 
   const aiOrganize = async () => {
     if (!rawMemo.trim()) {
-      alert('정리할 원본 메모를 입력해주세요.');
+      await showAlert('정리할 원본 메모를 입력해주세요.', { tone: 'warning' });
       return;
     }
     setAiLoading(true);

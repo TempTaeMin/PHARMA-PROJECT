@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X, Calendar, MapPin, BookOpen, Users, Hash, Tag, ExternalLink, Presentation, ChevronDown, ChevronUp, Pin, Landmark, GraduationCap } from 'lucide-react';
 import { academicApi } from '../api/client';
+import { showAlert, showConfirm, showError } from '../utils/dialog';
 
 const GRADE_COLORS = {
   A: { bg: '#fee2e2', c: '#b91c1c' },
@@ -82,7 +83,8 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
     try {
       if (isPinnedByUser) {
         if (pickMode) { onPicked?.(); return; }
-        if (!window.confirm('내 일정에서 제거할까요?')) { setPinBusy(false); return; }
+        const ok = await showConfirm('내 일정에서 제거할까요?', { tone: 'danger', confirmLabel: '제거', cancelLabel: '취소' });
+        if (!ok) { setPinBusy(false); return; }
         await academicApi.unpin(ev.id, 'user');
         setIsPinnedByUser(false);
         onUpdated?.();
@@ -94,7 +96,7 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
       }
     } catch (err) {
       console.error('[AcademicEventModal] pin toggle failed', err);
-      alert('처리에 실패했습니다');
+      showAlert('처리에 실패했어요', { tone: 'danger', title: '오류' });
     } finally {
       setPinBusy(false);
     }
@@ -105,9 +107,10 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
     setPinBusy(true);
     try {
       if (isPinnedByTeam) {
-        if (!window.confirm('팀 일정에서 제거할까요? 팀원 모두에게 영향이 갑니다.')) {
-          setPinBusy(false); return;
-        }
+        const ok = await showConfirm('팀 일정에서 제거할까요? 팀원 모두에게 영향이 갑니다.', {
+          tone: 'danger', confirmLabel: '제거', cancelLabel: '취소',
+        });
+        if (!ok) { setPinBusy(false); return; }
         await academicApi.unpin(ev.id, 'team');
         setIsPinnedByTeam(false);
       } else {
@@ -124,7 +127,7 @@ export default function AcademicEventModal({ open, event, onClose, onNavigateDoc
       onUpdated?.();
     } catch (err) {
       console.error('[AcademicEventModal] team pin toggle failed', err);
-      alert(err.message || '처리에 실패했습니다');
+      showError(err, { title: '처리 실패' });
     } finally {
       setPinBusy(false);
     }

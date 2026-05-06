@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X, Info, AlertCircle, Clock, GraduationCap, Calendar, Edit3 } from 'lucide-react';
 import { academicApi } from '../api/client';
+import { isClosedScheduleStatus, isKoreanPublicHoliday, isOpenOnKoreanPublicHoliday } from '../utils/koreanHolidays';
 
 const DOW_LABELS = ['월', '화', '수', '목', '금', '토', '일'];
 const FULL_DOW_LABELS = ['월', '화', '수', '목', '금', '토', '일'];
@@ -50,12 +51,17 @@ export default function DoctorScheduleHintPopup({ open, doctor, selectedDate, on
     Object.keys(matrix[selDow] || {}).length > 0;
   const overridesOnSelDate = (doctor.date_schedules || [])
     .filter(ds => ds.schedule_date === selectedDate);
-  const hasOpenOverride = overridesOnSelDate.some(ov => ov.status && ov.status !== '휴진');
+  const hasOpenOverride = overridesOnSelDate.some(ov => (
+    ov.status &&
+    !isClosedScheduleStatus(ov.status) &&
+    (!isKoreanPublicHoliday(selectedDate) || isOpenOnKoreanPublicHoliday(ov.status))
+  ));
   const hasClosedOverride = overridesOnSelDate.length > 0 &&
-    overridesOnSelDate.every(ov => ov.status === '휴진');
+    overridesOnSelDate.every(ov => isClosedScheduleStatus(ov.status));
+  const selectedHoliday = selectedDate ? isKoreanPublicHoliday(selectedDate) : false;
   const showNoClinicWarning = !!selectedDate && (
     hasClosedOverride ||
-    (overridesOnSelDate.length === 0 && !hasScheduleOnSelDow)
+    (overridesOnSelDate.length === 0 && (!hasScheduleOnSelDow || selectedHoliday))
   );
 
   return (
@@ -300,14 +306,16 @@ export default function DoctorScheduleHintPopup({ open, doctor, selectedDate, on
               <ConferenceGroup
                 title={`강사 참여 ${lecturerConferences.length}건`}
                 tone="strong"
+                itemLabel="강사"
                 events={lecturerConferences}
                 limit={3}
               />
             )}
             {departmentConferences.length > 0 && (
               <ConferenceGroup
-                title={`진료과 관련 ${departmentConferences.length}건`}
+                title={`${doctor.department || '진료과'} 관련 ${departmentConferences.length}건`}
                 tone="muted"
+                itemLabel={doctor.department || '진료과'}
                 events={departmentConferences}
                 limit={lecturerConferences.length > 0 ? 3 : 4}
               />
@@ -348,7 +356,7 @@ export default function DoctorScheduleHintPopup({ open, doctor, selectedDate, on
 
 // ──── Helpers ────
 
-function ConferenceGroup({ title, tone, events, limit }) {
+function ConferenceGroup({ title, tone, events, limit, itemLabel }) {
   const visible = events.slice(0, limit);
   const strong = tone === 'strong';
   return (
@@ -385,8 +393,9 @@ function ConferenceGroup({ title, tone, events, limit }) {
           <span style={{
             flexShrink: 0, fontSize: 10, fontWeight: 800,
             color: strong ? 'var(--ac)' : 'var(--t3)',
+            maxWidth: 90, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
           }}>
-            {strong ? '강사' : '진료과'}
+            {itemLabel || (strong ? '강사' : '진료과')}
           </span>
         </div>
       ))}

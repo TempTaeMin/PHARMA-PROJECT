@@ -232,6 +232,8 @@ def _build_report_prompt(
             meta.append(f"진료과: {m['department']}")
         if m.get("title"):
             meta.append(f"제목: {m['title']}")
+        if m.get("author_name") and not m.get("is_mine", True):
+            meta.append(f"작성자: {m['author_name']} (동료가 정리한 공유 메모)")
         meta_line = " · ".join(meta) if meta else "(메타 없음)"
         body = m.get("ai_summary_text") or m.get("raw_memo") or ""
         blocks.append(f"[{i}] {meta_line}\n{body}")

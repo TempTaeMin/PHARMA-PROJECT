@@ -2,6 +2,7 @@ import { useMemo, useCallback } from 'react';
 import { dashboardApi, visitApi } from '../api/client';
 import { useCachedApi } from './useCachedApi';
 import { invalidate } from '../api/cache';
+import { isClosedScheduleStatus, isKoreanPublicHoliday, isOpenOnKoreanPublicHoliday } from '../utils/koreanHolidays';
 
 const SLOT_ORDER = { morning: 0, afternoon: 1, evening: 2 };
 const GRADE_CYCLE_DAYS = { A: 7, B: 14, C: 30 };
@@ -56,9 +57,12 @@ export function useMonthCalendar(year, month) {
         const overrides = (doc.date_schedules || []).filter(ds => ds.schedule_date === dateStr);
         if (overrides.length > 0) {
           overrides.forEach(ov => {
-            if (ov.status === '휴진') return;
+            if (isClosedScheduleStatus(ov.status)) return;
+            if (isKoreanPublicHoliday(dateStr) && !isOpenOnKoreanPublicHoliday(ov.status)) return;
             items.push({ doctor: doc, slot: ov.time_slot, location: ov.location });
           });
+        } else if (isKoreanPublicHoliday(dateStr)) {
+          return;
         } else {
           (doc.schedules || []).filter(s => s.day_of_week === dow).forEach(s => {
             items.push({ doctor: doc, slot: s.time_slot, location: s.location });
@@ -114,8 +118,8 @@ export function useMonthCalendar(year, month) {
   const refresh = useCallback(() => {
     invalidate('my-visits');
     invalidate('dashboard');
-    refreshDash();
-    refreshVisits();
+    // Promise 반환 — caller 가 await 해서 새 데이터 적용 후 UI 액션 진행할 수 있게.
+    return Promise.all([refreshDash(), refreshVisits()]).catch(() => {});
   }, [refreshDash, refreshVisits]);
 
   const addPlanned = useCallback(async (doctorId, dateStr, slot = 'morning', opts = {}) => {
@@ -141,7 +145,8 @@ export function useMonthCalendar(year, month) {
     } else {
       await visitApi.updateFlat(visit.id, patch);
     }
-    refresh();
+    // await 해서 caller 가 close 전에 새 데이터 받음 — 카드 즉시 갱신
+    await refresh();
   }, [refresh]);
 
   const cancelPlanned = useCallback(async (visit) => {

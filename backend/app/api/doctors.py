@@ -485,7 +485,10 @@ async def create_visit_log(
 ):
     """방문 기록을 등록합니다. doctor/hospital snapshot 도 함께 저장.
     visibility: 'private'(기본) | 'team'. 'team' 시 recipient_user_ids 필수."""
-    from app.api.visits import _broadcast_visit_shared, _validate_recipients, _apply_recipients
+    from app.api.visits import (
+        _broadcast_visit_shared, _validate_recipients, _apply_recipients,
+        apply_memo_authorship,
+    )
 
     doctor = (await db.execute(
         select(Doctor).options(selectinload(Doctor.hospital)).where(Doctor.id == doctor_id)
@@ -511,6 +514,7 @@ async def create_visit_log(
         doctor_dept_snapshot=doctor.department,
         hospital_name_snapshot=doctor.hospital.name if doctor.hospital else None,
     )
+    apply_memo_authorship(visit, user, prev_notes=None, prev_post_notes=None)
     db.add(visit)
     await db.flush()
     if recipient_ids:
@@ -552,7 +556,8 @@ async def update_visit_log(
     """방문 기록 수정. owner 는 전체 필드, recipient 는 결과 입력 필드만 수정 가능."""
     from app.api.visits import (
         _broadcast_visit_shared, _broadcast_visit_removed, _broadcast_visit_diff,
-        _validate_recipients, _apply_recipients,
+        _validate_recipients, _apply_recipients, apply_memo_authorship,
+        upsert_my_raw_memo,
     )
     from app.api.dashboard import _visit_user_filter
 
@@ -571,11 +576,17 @@ async def update_visit_log(
 
     # recipient 는 결과 입력 필드만 수정 가능 — visibility/recipient_user_ids/날짜/제목/사전메모 차단
     if not is_owner:
-        recipient_allowed = {"status", "post_notes", "next_action", "product"}
+        # post_notes 는 본인 VisitMemo.raw_memo 로 분기 — visit_logs 단일 컬럼은 안 건드림
+        recipient_allowed = {"status", "next_action", "product"}
+        prev_notes = visit.notes
+        prev_post_notes = visit.post_notes
         for key, value in data.items():
             if key not in recipient_allowed:
                 continue
             setattr(visit, key, value)
+        apply_memo_authorship(visit, user, prev_notes, prev_post_notes)
+        if "post_notes" in data:
+            await upsert_my_raw_memo(db, visit, user, data.get("post_notes"))
         await db.commit()
         await db.refresh(visit)
         return VisitLogResponse.model_validate(visit)
@@ -583,7 +594,10 @@ async def update_visit_log(
     # owner 경로 — 기존 로직
     prev_visibility = visit.visibility or "private"
     prev_recipient_ids = [u.id for u in (visit.recipients or [])]
-    allowed = {"status", "product", "notes", "post_notes", "next_action", "visit_date", "visibility"}
+    prev_notes = visit.notes
+    prev_post_notes = visit.post_notes
+    # post_notes 는 본인 VisitMemo.raw_memo 로만 — visit_logs 단일 컬럼 안 건드림
+    allowed = {"status", "product", "notes", "next_action", "visit_date", "visibility"}
     if "visibility" in data:
         v = data["visibility"]
         if v not in ("private", "team"):
@@ -612,6 +626,11 @@ async def update_visit_log(
     elif prev_visibility == "team":
         await _apply_recipients(db, visit, [])
         new_recipient_ids = []
+
+    apply_memo_authorship(visit, user, prev_notes, prev_post_notes)
+
+    if "post_notes" in data:
+        await upsert_my_raw_memo(db, visit, user, data.get("post_notes"))
 
     await db.commit()
     await db.refresh(visit)

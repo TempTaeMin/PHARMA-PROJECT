@@ -1,6 +1,8 @@
 import { useMemo, useState, useEffect } from 'react';
 import { Calendar, Check, ChevronUp, ChevronDown, MapPin, X } from 'lucide-react';
 import RecipientPicker from './RecipientPicker.jsx';
+import { isClosedScheduleStatus, isKoreanPublicHoliday, isOpenOnKoreanPublicHoliday } from '../utils/koreanHolidays';
+import { showError } from '../utils/dialog';
 
 const GRADE_CHIP = {
   A: { bg: '#ffdad6', c: '#ba1a1a' },
@@ -49,7 +51,11 @@ export default function SelectMeetingTime({
 
     const overrides = (doctor.date_schedules || []).filter(ds => ds.schedule_date === dateStr);
     if (overrides.length > 0) {
-      const openOv = overrides.filter(ov => ov.status && ov.status !== '휴진');
+      const openOv = overrides.filter(ov => (
+        ov.status &&
+        !isClosedScheduleStatus(ov.status) &&
+        (!isKoreanPublicHoliday(dateStr) || isOpenOnKoreanPublicHoliday(ov.status))
+      ));
       if (openOv.length === 0) return { closed: true };
       return {
         entries: openOv.map(ov => ({
@@ -60,6 +66,8 @@ export default function SelectMeetingTime({
         overridden: true,
       };
     }
+
+    if (isKoreanPublicHoliday(dateStr)) return { closed: true };
 
     const weekly = (doctor.schedules || []).filter(s => s.day_of_week === dow);
     if (weekly.length === 0) return null;
@@ -82,8 +90,10 @@ export default function SelectMeetingTime({
   const decM = () => setMinute((minute - MINUTE_STEP + 60) % 60);
 
   const timeHHMM = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+  // 본인 ID 방어적 strip — RecipientPicker 가드와 무관하게 본인 들어가는 경로 차단
+  const cleanRecipientIds = recipientIds.filter((id) => id !== currentUserId);
   const isShared = shareTeam && hasTeam;
-  const canShare = !isShared || recipientIds.length > 0;
+  const canShare = !isShared || cleanRecipientIds.length > 0;
 
   const handleConfirm = async () => {
     if (!canShare) return;
@@ -95,10 +105,10 @@ export default function SelectMeetingTime({
         timeHHMM,
         notes: notes.trim() || null,
         visibility: isShared ? 'team' : 'private',
-        recipient_user_ids: isShared ? recipientIds : null,
+        recipient_user_ids: isShared ? cleanRecipientIds : null,
       });
     } catch (e) {
-      alert('저장 실패: ' + e.message);
+      showError(e, { title: '저장 실패' });
     } finally {
       setSaving(false);
     }

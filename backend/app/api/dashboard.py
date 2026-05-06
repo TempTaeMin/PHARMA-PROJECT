@@ -120,6 +120,7 @@ async def get_dashboard(
     doctor_ids = [d.id for d in doctors]
     visit_list = []
     if doctor_ids:
+        from app.api.visits import author_name_map
         user_filter = await _visit_user_filter(db, user.id)
         visit_query = (
             select(VisitLog, User.name)
@@ -135,6 +136,31 @@ async def get_dashboard(
         visit_rows = (await db.execute(visit_query)).all()
         name_map = {d.id: d.name for d in doctors}
         hosp_map = {d.id: (d.hospital.name if d.hospital else "") for d in doctors}
+        author_ids: list[int] = []
+        for v, _ in visit_rows:
+            if v.notes_author_id:
+                author_ids.append(v.notes_author_id)
+            if v.post_notes_author_id:
+                author_ids.append(v.post_notes_author_id)
+        author_map = await author_name_map(db, author_ids)
+
+        # 댓글 메타: 각 visit 별 댓글 수 + 최근 작성자 1~2명 이름
+        recent_visit_ids = [v.id for v, _ in visit_rows]
+        memo_meta: dict[int, dict] = {}
+        if recent_visit_ids:
+            meta_rows = (await db.execute(
+                select(VisitMemo.visit_log_id, VisitMemo.user_id, User.name)
+                .outerjoin(User, VisitMemo.user_id == User.id)
+                .where(VisitMemo.visit_log_id.in_(recent_visit_ids))
+                .order_by(VisitMemo.visit_log_id.asc(), VisitMemo.created_at.desc())
+            )).all()
+            for vid, uid, uname in meta_rows:
+                meta = memo_meta.setdefault(vid, {"count": 0, "authors": []})
+                meta["count"] += 1
+                # 최근순 정렬 — 본인 제외한 다른 작성자 최대 2명만 표시
+                if uid != user.id and uname and len(meta["authors"]) < 2 and uname not in meta["authors"]:
+                    meta["authors"].append(uname)
+
         visit_list = [
             {
                 "id": v.id,
@@ -148,6 +174,14 @@ async def get_dashboard(
                 "owner_user_id": v.user_id,
                 "owner_name": owner_name,
                 "is_mine": v.user_id == user.id,
+                "comment_count": max(0, memo_meta.get(v.id, {"count": 0})["count"] - 1),
+                "comment_authors": memo_meta.get(v.id, {"authors": []})["authors"],
+                "notes_author_id": v.notes_author_id,
+                "notes_author_name": author_map.get(v.notes_author_id) if v.notes_author_id else None,
+                "notes_updated_at": v.notes_updated_at.isoformat() if v.notes_updated_at else None,
+                "post_notes_author_id": v.post_notes_author_id,
+                "post_notes_author_name": author_map.get(v.post_notes_author_id) if v.post_notes_author_id else None,
+                "post_notes_updated_at": v.post_notes_updated_at.isoformat() if v.post_notes_updated_at else None,
             }
             for v, owner_name in visit_rows
         ]
@@ -216,14 +250,9 @@ async def my_visits(
 
     user_filter = await _visit_user_filter(db, user.id)
     query = (
-        # 메모는 본인 것만 join (VisitMemo.user_id == user.id 조건)
-        select(VisitLog, Doctor, Hospital, VisitMemo, User.name)
+        select(VisitLog, Doctor, Hospital, User.name)
         .outerjoin(Doctor, VisitLog.doctor_id == Doctor.id)
         .outerjoin(Hospital, Doctor.hospital_id == Hospital.id)
-        .outerjoin(
-            VisitMemo,
-            and_(VisitMemo.visit_log_id == VisitLog.id, VisitMemo.user_id == user.id),
-        )
         .outerjoin(User, VisitLog.user_id == User.id)
         .where(
             user_filter,
@@ -249,8 +278,60 @@ async def my_visits(
         except (TypeError, ValueError):
             return None
 
-    return [
-        {
+    from app.api.visits import author_name_map
+
+    # 댓글(VisitMemo) 일괄 로딩 — visit 별 정렬된 리스트로 그룹핑
+    visit_ids = [v.id for v, *_ in rows]
+    memos_by_visit: dict[int, list[tuple[VisitMemo, str | None]]] = {}
+    if visit_ids:
+        memo_query = (
+            select(VisitMemo, User.name)
+            .outerjoin(User, VisitMemo.user_id == User.id)
+            .where(VisitMemo.visit_log_id.in_(visit_ids))
+            .order_by(VisitMemo.visit_log_id.asc(), VisitMemo.created_at.asc())
+        )
+        for m, author_name in (await db.execute(memo_query)).all():
+            memos_by_visit.setdefault(m.visit_log_id, []).append((m, author_name))
+
+    author_ids: list[int] = []
+    for v, *_ in rows:
+        if v.notes_author_id:
+            author_ids.append(v.notes_author_id)
+        if v.post_notes_author_id:
+            author_ids.append(v.post_notes_author_id)
+    author_map = await author_name_map(db, author_ids)
+
+    def _build_memos(visit_id: int, is_visit_mine: bool) -> list[dict]:
+        """visit 의 댓글 리스트 — 본인 raw 만 노출, 나머지는 strip."""
+        items = memos_by_visit.get(visit_id, [])
+        out = []
+        for idx, (m, author_name) in enumerate(items):
+            mine = m.user_id == user.id
+            out.append({
+                "id": m.id,
+                "user_id": m.user_id,
+                "author_name": author_name,
+                "title": m.title,
+                "raw_memo": m.raw_memo if mine else None,
+                "ai_summary": _parse_ai(m.ai_summary),
+                "is_root": idx == 0,
+                "is_mine": mine,
+                "created_at": m.created_at.isoformat() if m.created_at else None,
+                "updated_at": m.updated_at.isoformat() if m.updated_at else None,
+            })
+        return out
+
+    result = []
+    for v, d, h, owner_name in rows:
+        is_mine = v.user_id == user.id
+        memos = _build_memos(v.id, is_mine)
+        # 호환 필드: 1.x 까지 유지. ai_summary/memo_id 는 root, post_notes 는 본인 raw 우선.
+        root_memo = memos[0] if memos else None
+        my_memo = next((m for m in memos if m["is_mine"]), None)
+        # raw 결과 메모는 본인 VisitMemo.raw_memo 만 신뢰. visit_logs.post_notes 는
+        # dual-write 시기에 다른 사람 raw 가 누출됐을 수 있으니 폴백 금지.
+        compat_post_notes = my_memo["raw_memo"] if my_memo else None
+        result.append({
             "id": v.id,
             "doctor_id": v.doctor_id,
             "doctor_name": d.name if d else None,
@@ -263,15 +344,22 @@ async def my_visits(
             "status": v.status,
             "product": v.product,
             "notes": v.notes,
-            "post_notes": v.post_notes,
+            "post_notes": compat_post_notes,
             "next_action": v.next_action,
-            "ai_summary": _parse_ai(m.ai_summary) if m else None,
-            "memo_id": m.id if m else None,
+            "ai_summary": root_memo["ai_summary"] if root_memo else None,
+            "memo_id": (my_memo["id"] if my_memo else (root_memo["id"] if root_memo else None)),
+            "memos": memos,
+            "comment_count": max(0, len(memos) - 1),
             "visibility": v.visibility or "private",
-            "recipient_user_ids": v.recipient_user_ids if v.user_id == user.id else [],
+            "recipient_user_ids": v.recipient_user_ids if is_mine else [],
             "owner_user_id": v.user_id,
             "owner_name": owner_name,
-            "is_mine": v.user_id == user.id,
-        }
-        for v, d, h, m, owner_name in rows
-    ]
+            "is_mine": is_mine,
+            "notes_author_id": v.notes_author_id,
+            "notes_author_name": author_map.get(v.notes_author_id) if v.notes_author_id else None,
+            "notes_updated_at": v.notes_updated_at.isoformat() if v.notes_updated_at else None,
+            "post_notes_author_id": v.post_notes_author_id,
+            "post_notes_author_name": author_map.get(v.post_notes_author_id) if v.post_notes_author_id else None,
+            "post_notes_updated_at": v.post_notes_updated_at.isoformat() if v.post_notes_updated_at else None,
+        })
+    return result

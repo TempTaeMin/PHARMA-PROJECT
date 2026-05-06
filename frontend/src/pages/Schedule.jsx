@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { academicApi } from '../api/client';
 import { invalidate } from '../api/cache';
+import { showAlert, showConfirm, showError } from '../utils/dialog';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { useMonthCalendar } from '../hooks/useMonthCalendar';
 import VisitDetailModal from '../components/VisitDetailModal';
@@ -125,7 +126,7 @@ export default function Schedule({ onNavigate }) {
   async function submitComplete() {
     if (!completing) return;
     if (!completeStatus) {
-      alert('방문 결과를 선택해주세요.');
+      await showAlert('방문 결과를 선택해주세요.', { tone: 'warning' });
       return;
     }
     try {
@@ -135,14 +136,17 @@ export default function Schedule({ onNavigate }) {
         post_notes: completeNotes || null,
       });
       setCompleting(null);
-    } catch (e) { alert('저장 실패: ' + e.message); }
+    } catch (e) { showError(e, { title: '저장 실패' }); }
   }
 
   async function cancelPlanned(visit) {
-    if (!confirm(`${visit.doctor_name || visit.title || '이 일정'} 을(를) 취소하시겠습니까?`)) return;
+    const ok = await showConfirm(`${visit.doctor_name || visit.title || '이 일정'} 을(를) 취소하시겠습니까?`, {
+      tone: 'danger', confirmLabel: '취소', cancelLabel: '돌아가기',
+    });
+    if (!ok) return;
     try {
       await actions.cancelPlanned(visit);
-    } catch (e) { alert('취소 실패: ' + e.message); }
+    } catch (e) { showError(e, { title: '취소 실패' }); }
   }
 
   // 주 스트립 스크롤 = 앵커 점프
@@ -511,24 +515,54 @@ function VisitCard({ visit, isNext, onComplete, onCancel, onOpen }) {
           {visit.hospital_name}{visit.department ? ` · ${visit.department}` : ''}
         </div>
         {(() => {
-          const aiDiscussion = visit.ai_summary?.summary?.['논의내용'];
-          const display = (aiDiscussion && String(aiDiscussion).trim()) || visit.notes;
-          if (!display) return null;
+          // 우선순위: 본인 AI 정리 > 본인 raw > root(공유본) AI > 사전 메모
+          // 다른 사람 메모는 미리보기에 안 띄움 (스레드는 모달에서만)
+          const memos = visit.memos || [];
+          const myMemo = memos.find(m => m.is_mine);
+          const rootMemo = memos[0];
+          const myAiDiscussion = myMemo?.ai_summary?.summary?.['논의내용'];
+          const rootAiDiscussion = (rootMemo && !rootMemo.is_mine)
+            ? rootMemo.ai_summary?.summary?.['논의내용']
+            : null;
+          const aiText = (myAiDiscussion && String(myAiDiscussion).trim())
+            || (rootAiDiscussion && String(rootAiDiscussion).trim())
+            || null;
+          const isCompleted = visit.status && visit.status !== '예정';
+          const myRaw = myMemo?.raw_memo;
+          const fallback = isCompleted ? (myRaw || visit.post_notes || visit.notes) : visit.notes;
+          const display = aiText || fallback;
+          // 댓글(추가 메모) chip — 본인 외 다른 사람 메모 수
+          const otherMemos = memos.filter(m => !m.is_mine);
+          const chipAuthor = otherMemos[0]?.author_name;
+          const showChip = otherMemos.length > 0;
+          if (!display && !showChip) return null;
           return (
-            <div style={{
-              fontSize: 11, color: 'var(--t2)', marginTop: 5, lineHeight: 1.45,
-              padding: '6px 8px', background: 'var(--bg-2)', borderRadius: 6,
-            }}>
-              {aiDiscussion && (
-                <span style={{
-                  display: 'inline-block', marginRight: 5, padding: '1px 5px',
-                  borderRadius: 3, fontSize: 9, fontWeight: 800,
-                  background: 'var(--ac-d)', color: 'var(--ac)',
-                  verticalAlign: 'middle',
-                }}>AI</span>
+            <>
+              {display && (
+                <div style={{
+                  fontSize: 11, color: 'var(--t2)', marginTop: 5, lineHeight: 1.45,
+                  padding: '6px 8px', background: 'var(--bg-2)', borderRadius: 6,
+                }}>
+                  {aiText && (
+                    <span style={{
+                      display: 'inline-block', marginRight: 5, padding: '1px 5px',
+                      borderRadius: 3, fontSize: 9, fontWeight: 800,
+                      background: 'var(--ac-d)', color: 'var(--ac)',
+                      verticalAlign: 'middle',
+                    }}>AI</span>
+                  )}
+                  {display}
+                </div>
               )}
-              {display}
-            </div>
+              {showChip && (
+                <div style={{
+                  marginTop: 5, fontSize: 10, color: 'var(--t3)',
+                  display: 'flex', alignItems: 'center', gap: 4,
+                }}>
+                  💬 추가 메모 {otherMemos.length}{chipAuthor ? ` · ${chipAuthor}` : ''}
+                </div>
+              )}
+            </>
           );
         })()}
         {isPlanned && (

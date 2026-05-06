@@ -17,7 +17,7 @@ from sqlalchemy.orm import selectinload
 
 from app.auth.deps import get_current_user
 from app.models.connection import get_db
-from app.models.database import Doctor, Hospital, MemoTemplate, Report, User, VisitMemo
+from app.models.database import Doctor, Hospital, MemoTemplate, Report, User, VisitLog, VisitMemo
 from app.schemas.schemas import ReportCreate, ReportResponse
 from app.services.ai_memo import summarize_report
 
@@ -91,30 +91,51 @@ def _ai_summary_to_text(ai_summary) -> str:
 async def _collect_items_from_memos(
     db: AsyncSession, memo_ids: list[int], user_id: int
 ) -> list[dict]:
+    """메모들을 보고서 입력으로 변환.
+
+    본인 메모: raw_memo + ai_summary_text 모두 사용.
+    공유받은 다른 사람 메모(visit_log 관계자 한정): ai_summary_text 만 사용 — raw 누출 방지.
+    visit 관계자 외 사람의 메모 ID 가 들어오면 무시.
+    """
     if not memo_ids:
         return []
-    query = (
-        select(VisitMemo)
-        .options(selectinload(VisitMemo.doctor).selectinload(Doctor.hospital))
-        .where(
-            VisitMemo.id.in_(memo_ids),
-            VisitMemo.user_id == user_id,
-        )
+    from app.api.dashboard import _visit_user_filter
+
+    user_filter = await _visit_user_filter(db, user_id)
+    accessible_visit_ids = (await db.execute(
+        select(VisitLog.id).where(user_filter)
+    )).scalars().all()
+    accessible_set = set(accessible_visit_ids)
+
+    # 본인 메모 OR 본인이 관계된 visit 의 메모만 통과
+    where_visibility = (
+        (VisitMemo.user_id == user_id)
+        | ((VisitMemo.visit_log_id.in_(accessible_set)) if accessible_set else False)
     )
-    rows = (await db.execute(query)).scalars().all()
-    rows.sort(key=lambda m: m.visit_date or datetime.min)
+    query = (
+        select(VisitMemo, User.name)
+        .options(selectinload(VisitMemo.doctor).selectinload(Doctor.hospital))
+        .outerjoin(User, VisitMemo.user_id == User.id)
+        .where(VisitMemo.id.in_(memo_ids), where_visibility)
+    )
+    rows = (await db.execute(query)).all()
+    rows.sort(key=lambda r: r[0].visit_date or datetime.min)
     items = []
-    for m in rows:
+    for m, author_name in rows:
         doc = m.doctor
         hosp = doc.hospital if doc else None
+        is_mine = m.user_id == user_id
         items.append({
             "visit_date": m.visit_date.strftime("%Y-%m-%d %H:%M") if m.visit_date else None,
             "doctor_name": doc.name if doc else (m.doctor_name_snapshot or ""),
             "hospital_name": hosp.name if hosp else (m.hospital_name_snapshot or ""),
             "department": doc.department if doc else (m.doctor_dept_snapshot or ""),
             "title": m.title,
-            "raw_memo": m.raw_memo,
+            # 다른 사람 거는 raw 누출 방지 — ai_summary_text 만 입력으로
+            "raw_memo": m.raw_memo if is_mine else None,
             "ai_summary_text": _ai_summary_to_text(_parse_ai(m.ai_summary)),
+            "author_name": author_name if not is_mine else None,
+            "is_mine": is_mine,
         })
     return items
 

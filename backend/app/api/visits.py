@@ -1,7 +1,8 @@
 """개인 일정/플랫 방문 로그 API"""
 import json
 import logging
-from typing import Iterable, Optional
+from datetime import datetime
+from typing import Any, Iterable, Optional
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
@@ -142,16 +143,27 @@ async def _validate_recipients(
     db: AsyncSession, owner: User, ids: Optional[list[int]]
 ) -> list[int]:
     """수신자 리스트 검증. 같은 팀의 본인 외 멤버여야 함. 빈 리스트는 거부."""
-    cleaned = [uid for uid in dict.fromkeys(ids or []) if uid != owner.id]
+    raw = list(ids or [])
+    deduped = list(dict.fromkeys(raw))
+    cleaned = [uid for uid in deduped if uid != owner.id]
     if not cleaned:
-        raise HTTPException(400, "팀 공유 일정은 1명 이상의 수신자를 선택해야 합니다.")
+        # raw 가 비어있던 케이스 vs 본인만 들어있던 케이스 구분
+        if raw and not deduped == cleaned:
+            raise HTTPException(
+                400,
+                "본인은 수신자로 선택할 수 없어요. 본인 외 팀원 1명 이상을 선택해주세요.",
+            )
+        raise HTTPException(
+            400,
+            "팀 공유 일정은 본인 외 팀원 1명 이상을 수신자로 선택해야 해요.",
+        )
     my_team_id = await get_my_team_id(db, owner.id)
     if not my_team_id:
-        raise HTTPException(400, "팀에 속해있지 않아 팀 공유 일정을 만들 수 없습니다.")
+        raise HTTPException(400, "팀에 속해있지 않아 팀 공유 일정을 만들 수 없어요. 먼저 팀을 만들거나 초대받으세요.")
     member_ids = set(await get_team_member_ids(db, my_team_id))
     invalid = [uid for uid in cleaned if uid not in member_ids]
     if invalid:
-        raise HTTPException(400, f"같은 팀이 아닌 사용자가 포함됐습니다: {invalid}")
+        raise HTTPException(400, f"같은 팀이 아닌 사용자가 포함됐어요: {invalid}")
     return cleaned
 
 
@@ -169,6 +181,87 @@ async def _apply_recipients(
             visit_log_recipients.insert(),
             [{"visit_log_id": visit.id, "recipient_user_id": uid} for uid in ids],
         )
+
+
+def _norm_text(value: Any) -> Optional[str]:
+    """공백만 추가/제거된 변경은 무시하기 위해 strip + 빈문자열 → None 정규화."""
+    if value is None:
+        return None
+    s = str(value).strip()
+    return s or None
+
+
+def apply_memo_authorship(
+    visit: VisitLog,
+    user: User,
+    prev_notes: Any,
+    prev_post_notes: Any,
+) -> None:
+    """visit.notes / visit.post_notes 가 prev 와 의미상 다르면 작성자/시각 갱신.
+
+    공유 일정에서 누가 결과 메모를 정리했는지 추적하기 위함.
+    값이 비워지면 author_id 도 None 으로 클리어.
+    """
+    now = datetime.utcnow()
+    new_notes = _norm_text(visit.notes)
+    new_post_notes = _norm_text(visit.post_notes)
+    if _norm_text(prev_notes) != new_notes:
+        visit.notes_author_id = user.id if new_notes is not None else None
+        visit.notes_updated_at = now if new_notes is not None else None
+    if _norm_text(prev_post_notes) != new_post_notes:
+        visit.post_notes_author_id = user.id if new_post_notes is not None else None
+        visit.post_notes_updated_at = now if new_post_notes is not None else None
+
+
+async def upsert_my_raw_memo(
+    db: AsyncSession,
+    visit: VisitLog,
+    user: User,
+    raw_memo: Any,
+) -> Optional[VisitMemo]:
+    """본인 VisitMemo.raw_memo 를 upsert. 댓글 모델의 1단계 dual-write.
+
+    - 기존 row 없음 + 새 raw 비어있음: no-op
+    - 기존 row 없음 + 새 raw 있음: 신규 row 생성 (doctor/hospital snapshot 포함)
+    - 기존 row 있음: raw_memo 갱신 (ai_summary 보존). 빈 문자열도 허용 — ai_summary
+      가 있으면 row 자체는 보존.
+    """
+    cleaned = _norm_text(raw_memo) or ""
+    existing = (await db.execute(
+        select(VisitMemo).where(
+            VisitMemo.visit_log_id == visit.id,
+            VisitMemo.user_id == user.id,
+        )
+    )).scalar_one_or_none()
+
+    if existing is None:
+        if not cleaned:
+            return None
+        doctor = None
+        hospital = None
+        if visit.doctor_id:
+            doctor = (await db.execute(
+                select(Doctor).options(selectinload(Doctor.hospital))
+                .where(Doctor.id == visit.doctor_id)
+            )).scalar_one_or_none()
+            hospital = doctor.hospital if doctor else None
+        memo = VisitMemo(
+            user_id=user.id,
+            doctor_id=visit.doctor_id,
+            visit_log_id=visit.id,
+            visit_date=visit.visit_date,
+            memo_type="visit" if visit.doctor_id else "note",
+            title=visit.title,
+            raw_memo=cleaned,
+            doctor_name_snapshot=doctor.name if doctor else None,
+            doctor_dept_snapshot=doctor.department if doctor else None,
+            hospital_name_snapshot=hospital.name if hospital else None,
+        )
+        db.add(memo)
+        return memo
+
+    existing.raw_memo = cleaned
+    return existing
 
 
 _VALID_VISIBILITIES = {"private", "team"}
@@ -191,7 +284,23 @@ async def _resolve_visibility(
     return value
 
 
-def _visit_to_dict(visit: VisitLog) -> dict:
+async def author_name_map(
+    db: AsyncSession, ids: Iterable[Optional[int]]
+) -> dict[int, str]:
+    """user_id → display name(name 우선, 없으면 email) 매핑 batch 조회."""
+    cleaned = {i for i in ids if i}
+    if not cleaned:
+        return {}
+    rows = (await db.execute(
+        select(User.id, User.name, User.email).where(User.id.in_(cleaned))
+    )).all()
+    return {r.id: (r.name or r.email or "") for r in rows}
+
+
+async def _visit_to_dict(visit: VisitLog, db: AsyncSession) -> dict:
+    name_map = await author_name_map(
+        db, [visit.notes_author_id, visit.post_notes_author_id]
+    )
     return {
         "id": visit.id,
         "doctor_id": None,
@@ -203,6 +312,12 @@ def _visit_to_dict(visit: VisitLog) -> dict:
         "category": visit.category,
         "visibility": visit.visibility or "private",
         "recipient_user_ids": [u.id for u in (visit.recipients or [])],
+        "notes_author_id": visit.notes_author_id,
+        "notes_author_name": name_map.get(visit.notes_author_id) if visit.notes_author_id else None,
+        "notes_updated_at": visit.notes_updated_at.isoformat() if visit.notes_updated_at else None,
+        "post_notes_author_id": visit.post_notes_author_id,
+        "post_notes_author_name": name_map.get(visit.post_notes_author_id) if visit.post_notes_author_id else None,
+        "post_notes_updated_at": visit.post_notes_updated_at.isoformat() if visit.post_notes_updated_at else None,
     }
 
 
@@ -227,6 +342,7 @@ async def create_personal_event(
         category="personal",
         visibility=visibility,
     )
+    apply_memo_authorship(visit, user, prev_notes=None, prev_post_notes=None)
     db.add(visit)
     await db.flush()
     if recipient_ids:
@@ -234,7 +350,7 @@ async def create_personal_event(
     await db.commit()
     await db.refresh(visit)
     await _broadcast_visit_shared(db, visit, user, action="created", recipient_ids=recipient_ids)
-    return _visit_to_dict(visit)
+    return await _visit_to_dict(visit, db)
 
 
 @router.delete("/{visit_id}", summary="방문 로그 삭제 (개인/공지 포함)")
@@ -273,7 +389,11 @@ async def update_visit_flat(
         raise HTTPException(404, "visit not found")
     prev_visibility = visit.visibility or "private"
     prev_recipient_ids = [u.id for u in (visit.recipients or [])]
-    allowed = {"status", "notes", "post_notes", "title", "visit_date", "visibility"}
+    prev_notes = visit.notes
+    prev_post_notes = visit.post_notes
+    # post_notes 는 visit_logs 단일 컬럼이라 setattr 하면 전원에게 노출됨.
+    # 본인 VisitMemo.raw_memo 로만 저장 — upsert_my_raw_memo 사용.
+    allowed = {"status", "notes", "title", "visit_date", "visibility"}
     if "visibility" in data:
         data["visibility"] = await _resolve_visibility(
             data.get("visibility"), db, user, default="private"
@@ -302,6 +422,12 @@ async def update_visit_flat(
         await _apply_recipients(db, visit, [])
         new_recipient_ids = []
 
+    apply_memo_authorship(visit, user, prev_notes, prev_post_notes)
+
+    # post_notes 는 본인 VisitMemo.raw_memo 에만 — visit_logs 단일 컬럼 안 건드림
+    if "post_notes" in data and visit.doctor_id is not None:
+        await upsert_my_raw_memo(db, visit, user, data.get("post_notes"))
+
     await db.commit()
     await db.refresh(visit)
 
@@ -311,7 +437,7 @@ async def update_visit_flat(
         await _broadcast_visit_removed(db, visit, user, prev_recipient_ids)
     elif prev_visibility == "team" and new_visibility == "team":
         await _broadcast_visit_diff(db, visit, user, prev_recipient_ids, new_recipient_ids)
-    return _visit_to_dict(visit)
+    return await _visit_to_dict(visit, db)
 
 
 @router.post("/announcement", summary="업무공지 등록")
@@ -341,6 +467,7 @@ async def create_announcement(
         category="announcement",
         visibility=visibility,
     )
+    apply_memo_authorship(visit, user, prev_notes=None, prev_post_notes=None)
     db.add(visit)
     await db.flush()
     if recipient_ids:
@@ -348,7 +475,7 @@ async def create_announcement(
     await db.commit()
     await db.refresh(visit)
     await _broadcast_visit_shared(db, visit, user, action="created", recipient_ids=recipient_ids)
-    return _visit_to_dict(visit)
+    return await _visit_to_dict(visit, db)
 
 
 # ─────────── AI 정리 ───────────
@@ -403,13 +530,24 @@ async def ai_summarize_visit(
     override = (payload.raw_memo or "").strip() if payload.raw_memo is not None else ""
     if override:
         raw_source = override
-        # DB 에도 반영 — 사전/사후/단일 구분에 따라 분기
-        if is_professor:
-            visit.post_notes = override
-        else:
+        # 교수 방문: raw 는 본인 VisitMemo.raw_memo 에만 저장 (아래 memo upsert 흐름에서 채움).
+        # visit_logs.post_notes 는 단일 공유 컬럼이라 건드리면 다른 사람한테 노출됨.
+        if not is_professor:
+            prev_notes = visit.notes
             visit.notes = override
+            apply_memo_authorship(visit, user, prev_notes, visit.post_notes)
     else:
-        raw_source = ((visit.post_notes if is_professor else visit.notes) or "").strip()
+        # 본인 raw 만 사용. visit_logs.post_notes 는 누출 위험으로 폴백 안 함.
+        if is_professor:
+            my_memo_existing = (await db.execute(
+                select(VisitMemo).where(
+                    VisitMemo.visit_log_id == visit.id,
+                    VisitMemo.user_id == user.id,
+                )
+            )).scalar_one_or_none()
+            raw_source = ((my_memo_existing.raw_memo if my_memo_existing else "") or "").strip()
+        else:
+            raw_source = (visit.notes or "").strip()
     if not raw_source:
         label = "결과 메모" if is_professor else "메모"
         raise HTTPException(400, f"{label}가 비어 있어 AI 정리할 내용이 없습니다.")
@@ -453,8 +591,12 @@ async def ai_summarize_visit(
         kind = "announcement" if visit.category == "announcement" else "personal"
         result = await summarize_freeform(raw_memo=raw_source, kind=kind)
 
+    # 본인 메모만 찾기 — user_id 필터 빼면 다른 사람 메모를 덮어쓰는 버그.
     memo = (await db.execute(
-        select(VisitMemo).where(VisitMemo.visit_log_id == visit.id).limit(1)
+        select(VisitMemo).where(
+            VisitMemo.visit_log_id == visit.id,
+            VisitMemo.user_id == user.id,
+        ).limit(1)
     )).scalar_one_or_none()
 
     ai_json = json.dumps(result, ensure_ascii=False)

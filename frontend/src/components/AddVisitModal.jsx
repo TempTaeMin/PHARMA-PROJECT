@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { X, Search, Plus } from 'lucide-react';
+import { showError } from '../utils/dialog';
 
 const GC = {
   A: { c: '#ba1a1a', bg: '#ffdad6' },
@@ -48,7 +49,7 @@ export default function AddVisitModal({ open, dateStr, doctors = [], onClose, on
       setSelectedSlot('morning');
       onClose();
     } catch (e) {
-      alert('추가 실패: ' + e.message);
+      showError(e, { title: '추가 실패' });
     } finally {
       setSaving(false);
     }

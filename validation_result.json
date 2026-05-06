@@ -3,412 +3,1493 @@
     "code": "AJOUMC",
     "name": "아주대병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:57:19.634376",
-    "verdict": "OK",
-    "elapsed": 61.5,
+    "started_at": "2026-05-04T13:01:43.687212",
+    "verdict": "WARN",
+    "elapsed": 63.0,
     "error": null,
-    "n_doctors": 356,
+    "n_doctors": 357,
     "n_departments": 42,
-    "empty_schedule_ratio": 28.7,
+    "empty_schedule_ratio": 32.8,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\AJOUMC_20260421T155821.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 117명",
+        "samples": [
+          {
+            "doctor": "김규남",
+            "dept": "가정의학과",
+            "external_id": "AJOUMC-297"
+          },
+          {
+            "doctor": "정수지",
+            "dept": "가정의학과",
+            "external_id": "AJOUMC-708"
+          },
+          {
+            "doctor": "이석훈",
+            "dept": "가정의학과",
+            "external_id": "AJOUMC-520"
+          },
+          {
+            "doctor": "김영롱",
+            "dept": "감염내과",
+            "external_id": "AJOUMC-549"
+          },
+          {
+            "doctor": "유진세",
+            "dept": "급성기일반내과",
+            "external_id": "AJOUMC-815"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\AJOUMC_20260504T130246.json"
   },
   {
     "code": "AMC",
     "name": "서울아산병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:57:19.634376",
-    "verdict": "OK",
-    "elapsed": 158.6,
-    "error": null,
-    "n_doctors": 979,
-    "n_departments": 49,
-    "empty_schedule_ratio": 49.7,
-    "findings": [],
+    "started_at": "2026-05-04T13:01:43.688209",
+    "verdict": "FAIL",
+    "elapsed": 180.0,
+    "error": "Timeout after 180.0s",
+    "findings": [
+      {
+        "check": "C1",
+        "msg": "Timeout after 180.0s"
+      }
+    ],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\AMC_20260421T155958.json"
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0
   },
   {
     "code": "ANSEONG",
     "name": "경기도의료원 안성병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:57:19.634376",
+    "started_at": "2026-05-04T13:01:43.688209",
     "verdict": "OK",
     "elapsed": 4.0,
     "error": null,
-    "n_doctors": 22,
-    "n_departments": 14,
+    "n_doctors": 24,
+    "n_departments": 15,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\ANSEONG_20260421T155723.json"
+    "snapshot": "scripts\\verification_snapshots\\ANSEONG_20260504T130147.json"
   },
   {
     "code": "ASSM",
     "name": "안성성모병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:57:19.634376",
+    "started_at": "2026-05-04T13:01:43.688209",
     "verdict": "OK",
-    "elapsed": 0.6,
+    "elapsed": 1.0,
     "error": null,
-    "n_doctors": 29,
+    "n_doctors": 28,
     "n_departments": 15,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\ASSM_20260421T155720.json"
+    "snapshot": "scripts\\verification_snapshots\\ASSM_20260504T130144.json"
   },
   {
     "code": "AYSAM",
     "name": "안양샘병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:57:20.261284",
-    "verdict": "OK",
-    "elapsed": 4.7,
+    "started_at": "2026-05-04T13:01:44.755640",
+    "verdict": "WARN",
+    "elapsed": 4.9,
     "error": null,
-    "n_doctors": 64,
+    "n_doctors": 65,
     "n_departments": 28,
-    "empty_schedule_ratio": 1.6,
+    "empty_schedule_ratio": 1.5,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\AYSAM_20260421T155724.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 1명",
+        "samples": [
+          {
+            "doctor": "이주영",
+            "dept": "감염내과",
+            "external_id": "AYSAM-ifmedical-131"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\AYSAM_20260504T130149.json"
+  },
+  {
+    "code": "BCSEJONG",
+    "name": "부천세종병원",
+    "region": "경기",
+    "started_at": "2026-05-04T13:01:47.694873",
+    "verdict": "WARN",
+    "elapsed": 37.3,
+    "error": null,
+    "n_doctors": 86,
+    "n_departments": 27,
+    "empty_schedule_ratio": 30.2,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 26명",
+        "samples": [
+          {
+            "doctor": "이영비",
+            "dept": "가정의학과",
+            "external_id": "BCSEJONG-2230000000-20110022"
+          },
+          {
+            "doctor": "민경범",
+            "dept": "마취통증의학과",
+            "external_id": "BCSEJONG-2090000000-20240208"
+          },
+          {
+            "doctor": "박종광",
+            "dept": "마취통증의학과",
+            "external_id": "BCSEJONG-2090000000-20240633"
+          },
+          {
+            "doctor": "윤태균",
+            "dept": "마취통증의학과",
+            "external_id": "BCSEJONG-2090000000-20180052"
+          },
+          {
+            "doctor": "박재영",
+            "dept": "병리과",
+            "external_id": "BCSEJONG-2210000000-20170645"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\BCSEJONG_20260504T130224.json"
+  },
+  {
+    "code": "BCWOORI",
+    "name": "부천우리병원",
+    "region": "경기",
+    "started_at": "2026-05-04T13:01:49.632948",
+    "verdict": "WARN",
+    "elapsed": 0.7,
+    "error": null,
+    "n_doctors": 22,
+    "n_departments": 13,
+    "empty_schedule_ratio": 36.4,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 8명",
+        "samples": [
+          {
+            "doctor": "황주철",
+            "dept": "내과",
+            "external_id": "BCWOORI-70025cc45a"
+          },
+          {
+            "doctor": "이건우",
+            "dept": "내과",
+            "external_id": "BCWOORI-682ca3fc1b"
+          },
+          {
+            "doctor": "이승철",
+            "dept": "응급실",
+            "external_id": "BCWOORI-db74c545fa"
+          },
+          {
+            "doctor": "전진욱",
+            "dept": "응급실",
+            "external_id": "BCWOORI-33aab556fc"
+          },
+          {
+            "doctor": "이태윤",
+            "dept": "영상의학과",
+            "external_id": "BCWOORI-80b776e00c"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\BCWOORI_20260504T130150.json"
   },
   {
     "code": "BEDRO",
     "name": "강남베드로병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:57:23.721071",
-    "verdict": "OK",
-    "elapsed": 0.9,
+    "started_at": "2026-05-04T13:01:50.349474",
+    "verdict": "WARN",
+    "elapsed": 0.8,
     "error": null,
-    "n_doctors": 35,
+    "n_doctors": 36,
     "n_departments": 17,
-    "empty_schedule_ratio": 8.6,
+    "empty_schedule_ratio": 11.1,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\BEDRO_20260421T155724.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 4명",
+        "samples": [
+          {
+            "doctor": "김재웅",
+            "dept": "신경외과",
+            "external_id": "BEDRO-1-5"
+          },
+          {
+            "doctor": "이종진",
+            "dept": "마취통증의학과",
+            "external_id": "BEDRO-14-2"
+          },
+          {
+            "doctor": "지슬기",
+            "dept": "마취통증의학과",
+            "external_id": "BEDRO-14-3"
+          },
+          {
+            "doctor": "박인경",
+            "dept": "마취통증의학과",
+            "external_id": "BEDRO-14-4"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\BEDRO_20260504T130151.json"
   },
   {
     "code": "BESEOUL",
     "name": "베스티안서울병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:57:24.655233",
-    "verdict": "OK",
-    "elapsed": 1.7,
+    "started_at": "2026-05-04T13:01:51.177542",
+    "verdict": "WARN",
+    "elapsed": 1.4,
     "error": null,
     "n_doctors": 8,
     "n_departments": 4,
     "empty_schedule_ratio": 37.5,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\BESEOUL_20260421T155726.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 3명",
+        "samples": [
+          {
+            "doctor": "조진경",
+            "dept": "소아화상",
+            "external_id": "BESEOUL-child-72c54df6"
+          },
+          {
+            "doctor": "윤천재",
+            "dept": "화상외과",
+            "external_id": "BESEOUL-adult-d9a05c96"
+          },
+          {
+            "doctor": "이종구",
+            "dept": "화상재건",
+            "external_id": "BESEOUL-recon-95c31b17"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\BESEOUL_20260504T130152.json"
   },
   {
     "code": "BRMH",
     "name": "서울특별시 보라매병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:57:24.999313",
-    "verdict": "OK",
-    "elapsed": 8.5,
+    "started_at": "2026-05-04T13:01:52.625260",
+    "verdict": "WARN",
+    "elapsed": 10.1,
     "error": null,
     "n_doctors": 176,
     "n_departments": 29,
-    "empty_schedule_ratio": 20.5,
+    "empty_schedule_ratio": 24.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\BRMH_20260421T155733.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 43명",
+        "samples": [
+          {
+            "doctor": "김대식",
+            "dept": "공공의학과",
+            "external_id": "BRMH-216"
+          },
+          {
+            "doctor": "임상강사1",
+            "dept": "내분비대사내과",
+            "external_id": "BRMH-252"
+          },
+          {
+            "doctor": "김재우",
+            "dept": "성형외과",
+            "external_id": "BRMH-473"
+          },
+          {
+            "doctor": "최지은",
+            "dept": "소아청소년과",
+            "external_id": "BRMH-367"
+          },
+          {
+            "doctor": "김혜진",
+            "dept": "소아청소년과",
+            "external_id": "BRMH-504"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\BRMH_20260504T130202.json"
   },
   {
     "code": "BUMIN",
     "name": "서울부민병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:57:26.464107",
-    "verdict": "OK",
-    "elapsed": 4.0,
+    "started_at": "2026-05-04T13:02:02.695566",
+    "verdict": "WARN",
+    "elapsed": 2.8,
     "error": null,
-    "n_doctors": 52,
+    "n_doctors": 55,
     "n_departments": 23,
-    "empty_schedule_ratio": 36.5,
+    "empty_schedule_ratio": 40.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\BUMIN_20260421T155730.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 22명",
+        "samples": [
+          {
+            "doctor": "양희진",
+            "dept": "인공신장센터",
+            "external_id": "BUMIN-4-198"
+          },
+          {
+            "doctor": "안현준",
+            "dept": "부민 라이프케어센터 서울",
+            "external_id": "BUMIN-5-415"
+          },
+          {
+            "doctor": "김동훈",
+            "dept": "부민 라이프케어센터 서울",
+            "external_id": "BUMIN-5-418"
+          },
+          {
+            "doctor": "김정현",
+            "dept": "부민 라이프케어센터 서울",
+            "external_id": "BUMIN-5-420"
+          },
+          {
+            "doctor": "최욱열",
+            "dept": "부민 라이프케어센터 서울",
+            "external_id": "BUMIN-5-454"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\BUMIN_20260504T130205.json"
   },
   {
     "code": "CAU",
     "name": "중앙대병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:57:30.420243",
-    "verdict": "OK",
-    "elapsed": 40.2,
+    "started_at": "2026-05-04T13:02:05.576057",
+    "verdict": "WARN",
+    "elapsed": 52.5,
     "error": null,
     "n_doctors": 247,
     "n_departments": 36,
-    "empty_schedule_ratio": 38.1,
+    "empty_schedule_ratio": 41.3,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CAU_20260421T155810.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 102명",
+        "samples": [
+          {
+            "doctor": "강신혁",
+            "dept": "성형외과",
+            "external_id": "CAU-01361"
+          },
+          {
+            "doctor": "강정우",
+            "dept": "소아청소년과",
+            "external_id": "CAU-01894"
+          },
+          {
+            "doctor": "강현",
+            "dept": "마취통증의학과",
+            "external_id": "CAU-00864"
+          },
+          {
+            "doctor": "고미희",
+            "dept": "응급의학과",
+            "external_id": "CAU-01820"
+          },
+          {
+            "doctor": "고재현",
+            "dept": "정형외과",
+            "external_id": "CAU-01987"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CAU_20260504T130258.json"
   },
   {
     "code": "CAUGM",
     "name": "중앙대학교광명병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:57:33.441847",
-    "verdict": "OK",
-    "elapsed": 69.4,
+    "started_at": "2026-05-04T13:02:24.988945",
+    "verdict": "WARN",
+    "elapsed": 92.0,
     "error": null,
-    "n_doctors": 229,
+    "n_doctors": 228,
     "n_departments": 40,
-    "empty_schedule_ratio": 39.7,
+    "empty_schedule_ratio": 42.1,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CAUGM_20260421T155842.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 96명",
+        "samples": [
+          {
+            "doctor": "강세진",
+            "dept": "마취통증의학과",
+            "external_id": "CAUGM-85-1201-01806"
+          },
+          {
+            "doctor": "강수연",
+            "dept": "응급의학과",
+            "external_id": "CAUGM-86-952-01528"
+          },
+          {
+            "doctor": "강지영",
+            "dept": "소하검진센터",
+            "external_id": "CAUGM-118-1185-01776"
+          },
+          {
+            "doctor": "강흥식",
+            "dept": "영상의학과",
+            "external_id": "CAUGM-114-1031-01602"
+          },
+          {
+            "doctor": "고은별",
+            "dept": "입원내과",
+            "external_id": "CAUGM-88-1259-01905"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CAUGM_20260504T130356.json"
+  },
+  {
+    "code": "CBNUH",
+    "name": "충북대학교병원",
+    "region": "충북",
+    "started_at": "2026-05-04T13:02:46.695916",
+    "verdict": "WARN",
+    "elapsed": 5.0,
+    "error": null,
+    "n_doctors": 192,
+    "n_departments": 46,
+    "empty_schedule_ratio": 27.6,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 259건",
+        "samples": [
+          {
+            "doctor": "정혜원",
+            "dept": "감염내과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "정혜원",
+            "dept": "감염내과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김희성",
+            "dept": "감염내과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김희성",
+            "dept": "감염내과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "오태근",
+            "dept": "내분비내과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 52명",
+        "samples": [
+          {
+            "doctor": "강민규",
+            "dept": "알레르기내과",
+            "external_id": "CBNUH-34"
+          },
+          {
+            "doctor": "김희경",
+            "dept": "혈액종양내과",
+            "external_id": "CBNUH-38"
+          },
+          {
+            "doctor": "신윤미",
+            "dept": "호흡기내과",
+            "external_id": "CBNUH-46"
+          },
+          {
+            "doctor": "김상태",
+            "dept": "마취통증의학과",
+            "external_id": "CBNUH-82"
+          },
+          {
+            "doctor": "배진호",
+            "dept": "마취통증의학과",
+            "external_id": "CBNUH-83"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CBNUH_20260504T130251.json"
   },
   {
     "code": "CGSS",
     "name": "청구성심병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:58:10.611781",
-    "verdict": "OK",
-    "elapsed": 6.8,
+    "started_at": "2026-05-04T13:02:51.720925",
+    "verdict": "WARN",
+    "elapsed": 7.2,
     "error": null,
     "n_doctors": 23,
     "n_departments": 13,
     "empty_schedule_ratio": 39.1,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CGSS_20260421T155817.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 9명",
+        "samples": [
+          {
+            "doctor": "백승원",
+            "dept": "응급의학과",
+            "external_id": "CGSS-61"
+          },
+          {
+            "doctor": "문지형",
+            "dept": "응급의학과",
+            "external_id": "CGSS-27184"
+          },
+          {
+            "doctor": "박도영",
+            "dept": "응급의학과",
+            "external_id": "CGSS-45588"
+          },
+          {
+            "doctor": "유재영",
+            "dept": "응급의학과",
+            "external_id": "CGSS-44174"
+          },
+          {
+            "doctor": "최희령",
+            "dept": "마취통증의학과",
+            "external_id": "CGSS-66"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CGSS_20260504T130258.json"
   },
   {
     "code": "CHABD",
     "name": "분당차병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:58:17.384171",
-    "verdict": "OK",
-    "elapsed": 81.1,
+    "started_at": "2026-05-04T13:02:58.074919",
+    "verdict": "WARN",
+    "elapsed": 71.5,
     "error": null,
     "n_doctors": 171,
     "n_departments": 28,
     "empty_schedule_ratio": 16.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CHABD_20260421T155938.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 28명",
+        "samples": [
+          {
+            "doctor": "고광현",
+            "dept": "소화기내과",
+            "external_id": "CHABD-Gastroenterology_AA11361"
+          },
+          {
+            "doctor": "권창일",
+            "dept": "소화기내과",
+            "external_id": "CHABD-Gastroenterology_AA11681"
+          },
+          {
+            "doctor": "신석표",
+            "dept": "소화기내과",
+            "external_id": "CHABD-Gastroenterology_AA13531"
+          },
+          {
+            "doctor": "성민제",
+            "dept": "소화기내과",
+            "external_id": "CHABD-Gastroenterology_AA13231"
+          },
+          {
+            "doctor": "유지훈",
+            "dept": "소화기내과",
+            "external_id": "CHABD-Gastroenterology_26022705"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CHABD_20260504T130409.json"
   },
   {
     "code": "CHAGN",
     "name": "강남차병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:58:21.158198",
-    "verdict": "OK",
-    "elapsed": 12.5,
+    "started_at": "2026-05-04T13:02:58.947586",
+    "verdict": "WARN",
+    "elapsed": 15.6,
     "error": null,
     "n_doctors": 113,
     "n_departments": 17,
     "empty_schedule_ratio": 32.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CHAGN_20260421T155833.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 37명",
+        "samples": [
+          {
+            "doctor": "남수경",
+            "dept": "소아청소년과",
+            "external_id": "CHAGN-pediatrics-p2445"
+          },
+          {
+            "doctor": "김호",
+            "dept": "소아청소년과",
+            "external_id": "CHAGN-pediatrics-p2646"
+          },
+          {
+            "doctor": "방은치",
+            "dept": "마취통증의학과",
+            "external_id": "CHAGN-list/anesthesia-p276"
+          },
+          {
+            "doctor": "김명옥",
+            "dept": "마취통증의학과",
+            "external_id": "CHAGN-list/anesthesia-p2277"
+          },
+          {
+            "doctor": "강용인",
+            "dept": "마취통증의학과",
+            "external_id": "CHAGN-list/anesthesia-p274"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CHAGN_20260504T130314.json"
   },
   {
     "code": "CHAIS",
     "name": "일산차병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:58:33.695034",
-    "verdict": "OK",
-    "elapsed": 58.0,
+    "started_at": "2026-05-04T13:03:14.528961",
+    "verdict": "WARN",
+    "elapsed": 38.5,
     "error": null,
-    "n_doctors": 179,
-    "n_departments": 37,
-    "empty_schedule_ratio": 36.9,
+    "n_doctors": 190,
+    "n_departments": 39,
+    "empty_schedule_ratio": 34.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CHAIS_20260421T155931.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 66명",
+        "samples": [
+          {
+            "doctor": "김지윤",
+            "dept": "소화기내과",
+            "external_id": "CHAIS-department_gastroenterology-p2615"
+          },
+          {
+            "doctor": "이창진",
+            "dept": "소아청소년과",
+            "external_id": "CHAIS-department_pediatrics-12341243"
+          },
+          {
+            "doctor": "이원석",
+            "dept": "소아청소년과",
+            "external_id": "CHAIS-department_pediatrics-AG24121"
+          },
+          {
+            "doctor": "이근무",
+            "dept": "소아청소년과",
+            "external_id": "CHAIS-department_pediatrics-IL0062"
+          },
+          {
+            "doctor": "이흔지",
+            "dept": "소아청소년과",
+            "external_id": "CHAIS-department_pediatrics-20240229"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CHAIS_20260504T130353.json"
   },
   {
     "code": "CHAMJE",
     "name": "참조은병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:58:42.807395",
-    "verdict": "OK",
-    "elapsed": 11.2,
+    "started_at": "2026-05-04T13:03:53.030182",
+    "verdict": "WARN",
+    "elapsed": 17.5,
     "error": null,
-    "n_doctors": 73,
+    "n_doctors": 70,
     "n_departments": 22,
-    "empty_schedule_ratio": 5.5,
+    "empty_schedule_ratio": 5.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CHAMJE_20260421T155853.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 4명",
+        "samples": [
+          {
+            "doctor": "이태규",
+            "dept": "마취통증의학과",
+            "external_id": "CHAMJE-74"
+          },
+          {
+            "doctor": "박슬기",
+            "dept": "마취통증의학과",
+            "external_id": "CHAMJE-73"
+          },
+          {
+            "doctor": "정승환",
+            "dept": "마취통증의학과",
+            "external_id": "CHAMJE-75"
+          },
+          {
+            "doctor": "오쌍용",
+            "dept": "소화기내과",
+            "external_id": "CHAMJE-32"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CHAMJE_20260504T130410.json"
+  },
+  {
+    "code": "CHNUH",
+    "name": "충남대학교병원",
+    "region": "대전",
+    "started_at": "2026-05-04T13:03:56.955876",
+    "verdict": "WARN",
+    "elapsed": 8.1,
+    "error": null,
+    "n_doctors": 259,
+    "n_departments": 34,
+    "empty_schedule_ratio": 8.9,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C8",
+        "msg": "격주 근무인데 notes 미반영 4명",
+        "samples": [
+          {
+            "doctor": "안소영",
+            "dept": "재활의학과"
+          },
+          {
+            "doctor": "최자영",
+            "dept": "재활의학과"
+          },
+          {
+            "doctor": "김상범",
+            "dept": "정형외과"
+          },
+          {
+            "doctor": "윤자영",
+            "dept": "정형외과"
+          }
+        ]
+      },
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 538건",
+        "samples": [
+          {
+            "doctor": "김성수",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김성수",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김성수",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김성수",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김성수",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 17명",
+        "samples": [
+          {
+            "doctor": "신용섭",
+            "dept": "마취통증의학과",
+            "external_id": "CHNUH-DC00000065"
+          },
+          {
+            "doctor": "최아영",
+            "dept": "소아청소년과",
+            "external_id": "CHNUH-H000164918"
+          },
+          {
+            "doctor": "김병찬",
+            "dept": "소아청소년과",
+            "external_id": "CHNUH-H000170538"
+          },
+          {
+            "doctor": "오락균",
+            "dept": "외과",
+            "external_id": "CHNUH-H000188504"
+          },
+          {
+            "doctor": "유인술",
+            "dept": "응급의학과",
+            "external_id": "CHNUH-DC00000106"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CHNUH_20260504T130405.json"
   },
   {
     "code": "CM",
     "name": "CM병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:58:53.979756",
-    "verdict": "OK",
-    "elapsed": 0.9,
+    "started_at": "2026-05-04T13:04:05.097966",
+    "verdict": "WARN",
+    "elapsed": 1.2,
     "error": null,
     "n_doctors": 25,
     "n_departments": 17,
     "empty_schedule_ratio": 24.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CM_20260421T155854.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 6명",
+        "samples": [
+          {
+            "doctor": "유성열",
+            "dept": "마취통증의학과",
+            "external_id": "CM-21"
+          },
+          {
+            "doctor": "최승연",
+            "dept": "마취통증의학과",
+            "external_id": "CM-52"
+          },
+          {
+            "doctor": "김동오",
+            "dept": "영상의학과",
+            "external_id": "CM-23"
+          },
+          {
+            "doctor": "황수연",
+            "dept": "영상의학과",
+            "external_id": "CM-53"
+          },
+          {
+            "doctor": "양성은",
+            "dept": "진단검사의학과",
+            "external_id": "CM-25"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CM_20260504T130406.json"
   },
   {
     "code": "CMCBC",
     "name": "부천성모병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:58:54.908147",
-    "verdict": "OK",
-    "elapsed": 12.7,
+    "started_at": "2026-05-04T13:04:06.346548",
+    "verdict": "WARN",
+    "elapsed": 0.1,
     "error": null,
-    "n_doctors": 164,
-    "n_departments": 39,
-    "empty_schedule_ratio": 30.5,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CMCBC_20260421T155907.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CMCBC_20260504T130406.json"
   },
   {
     "code": "CMCEP",
     "name": "은평성모병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:59:07.616018",
-    "verdict": "OK",
-    "elapsed": 19.8,
+    "started_at": "2026-05-04T13:04:06.428330",
+    "verdict": "WARN",
+    "elapsed": 0.1,
     "error": null,
-    "n_doctors": 235,
-    "n_departments": 39,
-    "empty_schedule_ratio": 33.2,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CMCEP_20260421T155927.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CMCEP_20260504T130406.json"
   },
   {
     "code": "CMCIC",
     "name": "인천성모병원",
     "region": "인천",
-    "started_at": "2026-04-21T15:59:27.433422",
-    "verdict": "OK",
-    "elapsed": 37.1,
+    "started_at": "2026-05-04T13:04:06.517430",
+    "verdict": "WARN",
+    "elapsed": 40.1,
     "error": null,
-    "n_doctors": 255,
+    "n_doctors": 263,
     "n_departments": 38,
-    "empty_schedule_ratio": 32.9,
+    "empty_schedule_ratio": 36.1,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CMCIC_20260421T160004.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 95명",
+        "samples": [
+          {
+            "doctor": "강성희",
+            "dept": "마취통증의학과",
+            "external_id": "CMCIC-54"
+          },
+          {
+            "doctor": "조은정",
+            "dept": "마취통증의학과",
+            "external_id": "CMCIC-53"
+          },
+          {
+            "doctor": "장연",
+            "dept": "마취통증의학과",
+            "external_id": "CMCIC-12"
+          },
+          {
+            "doctor": "이영준",
+            "dept": "마취통증의학과",
+            "external_id": "CMCIC-56"
+          },
+          {
+            "doctor": "김달아",
+            "dept": "마취통증의학과",
+            "external_id": "CMCIC-57"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CMCIC_20260504T130446.json"
   },
   {
     "code": "CMCSEOUL",
     "name": "서울성모병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:59:31.718142",
-    "verdict": "OK",
-    "elapsed": 36.8,
+    "started_at": "2026-05-04T13:04:09.535057",
+    "verdict": "WARN",
+    "elapsed": 0.1,
     "error": null,
-    "n_doctors": 574,
-    "n_departments": 45,
-    "empty_schedule_ratio": 37.1,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CMCSEOUL_20260421T160008.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CMCSEOUL_20260504T130409.json"
   },
   {
     "code": "CMCSV",
     "name": "성빈센트병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:59:38.469652",
-    "verdict": "OK",
-    "elapsed": 20.4,
+    "started_at": "2026-05-04T13:04:09.613212",
+    "verdict": "WARN",
+    "elapsed": 0.8,
     "error": null,
-    "n_doctors": 253,
-    "n_departments": 39,
-    "empty_schedule_ratio": 29.6,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CMCSV_20260421T155958.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CMCSV_20260504T130410.json"
   },
   {
     "code": "CMCUJB",
     "name": "의정부성모병원",
     "region": "경기",
-    "started_at": "2026-04-21T15:59:58.233973",
-    "verdict": "OK",
-    "elapsed": 12.3,
+    "started_at": "2026-05-04T13:04:10.418063",
+    "verdict": "WARN",
+    "elapsed": 0.1,
     "error": null,
-    "n_doctors": 187,
-    "n_departments": 40,
-    "empty_schedule_ratio": 35.8,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CMCUJB_20260421T160010.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CMCUJB_20260504T130410.json"
   },
   {
     "code": "CMCYD",
     "name": "여의도성모병원",
     "region": "서울",
-    "started_at": "2026-04-21T15:59:58.921138",
-    "verdict": "OK",
-    "elapsed": 13.2,
+    "started_at": "2026-05-04T13:04:10.493176",
+    "verdict": "WARN",
+    "elapsed": 0.1,
     "error": null,
-    "n_doctors": 149,
-    "n_departments": 36,
-    "empty_schedule_ratio": 27.5,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\CMCYD_20260421T160012.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CMCYD_20260504T130410.json"
+  },
+  {
+    "code": "CUH",
+    "name": "조선대학교병원",
+    "region": "광주",
+    "started_at": "2026-05-04T13:04:10.564839",
+    "verdict": "WARN",
+    "elapsed": 3.9,
+    "error": null,
+    "n_doctors": 178,
+    "n_departments": 32,
+    "empty_schedule_ratio": 24.2,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 36명",
+        "samples": [
+          {
+            "doctor": "강다영",
+            "dept": "신장내과",
+            "external_id": "CUH-473-1024"
+          },
+          {
+            "doctor": "안태훈",
+            "dept": "마취통증의학과",
+            "external_id": "CUH-130-106"
+          },
+          {
+            "doctor": "정기태",
+            "dept": "마취통증의학과",
+            "external_id": "CUH-130-201"
+          },
+          {
+            "doctor": "김동준",
+            "dept": "마취통증의학과",
+            "external_id": "CUH-130-719"
+          },
+          {
+            "doctor": "조수연",
+            "dept": "마취통증의학과",
+            "external_id": "CUH-130-960"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\CUH_20260504T130414.json"
   },
   {
     "code": "DAEHAN",
     "name": "대한병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:04.509952",
-    "verdict": "OK",
+    "started_at": "2026-05-04T13:04:10.580797",
+    "verdict": "WARN",
     "elapsed": 0.2,
     "error": null,
     "n_doctors": 12,
     "n_departments": 8,
     "empty_schedule_ratio": 16.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\DAEHAN_20260421T160004.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 2명",
+        "samples": [
+          {
+            "doctor": "이가원",
+            "dept": "응급의학과",
+            "external_id": "DAEHAN-doctor_13"
+          },
+          {
+            "doctor": "이승재",
+            "dept": "응급의학과",
+            "external_id": "DAEHAN-doctor_14"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\DAEHAN_20260504T130410.json"
+  },
+  {
+    "code": "DAMC",
+    "name": "동아대학교병원",
+    "region": "부산",
+    "started_at": "2026-05-04T13:04:10.781061",
+    "verdict": "WARN",
+    "elapsed": 11.4,
+    "error": null,
+    "n_doctors": 138,
+    "n_departments": 35,
+    "empty_schedule_ratio": 23.9,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 250건",
+        "samples": [
+          {
+            "doctor": "박주성",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "박주성",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "박주성",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "한성호",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "한성호",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 33명",
+        "samples": [
+          {
+            "doctor": "최소론",
+            "dept": "마취통증의학과",
+            "external_id": "DAMC-08580"
+          },
+          {
+            "doctor": "정찬종",
+            "dept": "마취통증의학과",
+            "external_id": "DAMC-91791"
+          },
+          {
+            "doctor": "이태영",
+            "dept": "마취통증의학과",
+            "external_id": "DAMC-24253"
+          },
+          {
+            "doctor": "나서희",
+            "dept": "병리과",
+            "external_id": "DAMC-93768"
+          },
+          {
+            "doctor": "노미숙",
+            "dept": "병리과",
+            "external_id": "DAMC-96370"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\DAMC_20260504T130422.json"
+  },
+  {
+    "code": "DANWON",
+    "name": "단원병원",
+    "region": "경기",
+    "started_at": "2026-05-04T13:04:14.437737",
+    "verdict": "WARN",
+    "elapsed": 1.7,
+    "error": null,
+    "n_doctors": 58,
+    "n_departments": 25,
+    "empty_schedule_ratio": 3.4,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 2명",
+        "samples": [
+          {
+            "doctor": "조성욱",
+            "dept": "응급의학과",
+            "external_id": "DANWON-100111-5"
+          },
+          {
+            "doctor": "김지훈",
+            "dept": "응급의학과",
+            "external_id": "DANWON-100111-6"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\DANWON_20260504T130416.json"
   },
   {
     "code": "DAVOS",
     "name": "다보스병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:04.756417",
+    "started_at": "2026-05-04T13:04:16.119039",
     "verdict": "OK",
-    "elapsed": 2.4,
+    "elapsed": 3.9,
     "error": null,
-    "n_doctors": 38,
+    "n_doctors": 37,
     "n_departments": 17,
-    "empty_schedule_ratio": 31.6,
+    "empty_schedule_ratio": 29.7,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\DAVOS_20260421T160007.json"
+    "snapshot": "scripts\\verification_snapshots\\DAVOS_20260504T130420.json"
   },
   {
     "code": "DBJE",
     "name": "동부제일병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:07.112036",
+    "started_at": "2026-05-04T13:04:20.027122",
     "verdict": "OK",
-    "elapsed": 0.1,
+    "elapsed": 0.5,
     "error": null,
     "n_doctors": 17,
     "n_departments": 6,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\DBJE_20260421T160007.json"
+    "snapshot": "scripts\\verification_snapshots\\DBJE_20260504T130420.json"
+  },
+  {
+    "code": "DCMC",
+    "name": "대구가톨릭대학교병원",
+    "region": "대구",
+    "started_at": "2026-05-04T13:04:20.501480",
+    "verdict": "FAIL",
+    "elapsed": 180.0,
+    "error": "Timeout after 180.0s",
+    "findings": [
+      {
+        "check": "C1",
+        "msg": "Timeout after 180.0s"
+      }
+    ],
+    "warnings": [],
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0
+  },
+  {
+    "code": "DKUH",
+    "name": "단국대학교의과대학부속병원",
+    "region": "충남",
+    "started_at": "2026-05-04T13:04:22.158555",
+    "verdict": "WARN",
+    "elapsed": 12.3,
+    "error": null,
+    "n_doctors": 209,
+    "n_departments": 34,
+    "empty_schedule_ratio": 12.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 683건",
+        "samples": [
+          {
+            "doctor": "송일한",
+            "dept": "소화기내과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "송일한",
+            "dept": "소화기내과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "송일한",
+            "dept": "소화기내과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김홍자",
+            "dept": "소화기내과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김홍자",
+            "dept": "소화기내과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 23명",
+        "samples": [
+          {
+            "doctor": "신현덕",
+            "dept": "소화기내과",
+            "external_id": "DKUH-436021"
+          },
+          {
+            "doctor": "전민호",
+            "dept": "소화기내과",
+            "external_id": "DKUH-473797"
+          },
+          {
+            "doctor": "이응수",
+            "dept": "소화기내과",
+            "external_id": "DKUH-486815"
+          },
+          {
+            "doctor": "이명용",
+            "dept": "심장혈관내과",
+            "external_id": "DKUH-436120"
+          },
+          {
+            "doctor": "정현경",
+            "dept": "내분비대사내과",
+            "external_id": "DKUH-436050"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\DKUH_20260504T130434.json"
   },
   {
     "code": "DONGSHIN",
     "name": "동신병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:07.205530",
+    "started_at": "2026-05-04T13:04:34.496518",
     "verdict": "OK",
     "elapsed": 0.4,
     "error": null,
@@ -417,343 +1498,945 @@
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\DONGSHIN_20260421T160007.json"
+    "snapshot": "scripts\\verification_snapshots\\DONGSHIN_20260504T130434.json"
   },
   {
     "code": "DRH",
     "name": "대림성모병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:07.632940",
-    "verdict": "OK",
-    "elapsed": 14.6,
+    "started_at": "2026-05-04T13:04:34.892131",
+    "verdict": "WARN",
+    "elapsed": 19.7,
     "error": null,
     "n_doctors": 39,
     "n_departments": 17,
     "empty_schedule_ratio": 25.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\DRH_20260421T160022.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 10명",
+        "samples": [
+          {
+            "doctor": "이소민",
+            "dept": "영상의학과",
+            "external_id": "DRH-1-86"
+          },
+          {
+            "doctor": "박지윤",
+            "dept": "영상의학과",
+            "external_id": "DRH-1-117"
+          },
+          {
+            "doctor": "이유경",
+            "dept": "영상의학과",
+            "external_id": "DRH-1-142"
+          },
+          {
+            "doctor": "김하정",
+            "dept": "영상의학과",
+            "external_id": "DRH-1-155"
+          },
+          {
+            "doctor": "최혜경",
+            "dept": "영상의학과",
+            "external_id": "DRH-1-169"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\DRH_20260504T130454.json"
+  },
+  {
+    "code": "DSMC",
+    "name": "계명대학교동산병원",
+    "region": "대구",
+    "started_at": "2026-05-04T13:04:43.704380",
+    "verdict": "WARN",
+    "elapsed": 36.3,
+    "error": null,
+    "n_doctors": 266,
+    "n_departments": 42,
+    "empty_schedule_ratio": 3.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 755건",
+        "samples": [
+          {
+            "doctor": "김대현",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김대현",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "서영성",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "서영성",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "서영성",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 8명",
+        "samples": [
+          {
+            "doctor": "김지민",
+            "dept": "류마티스내과",
+            "external_id": "DSMC-202"
+          },
+          {
+            "doctor": "김창현",
+            "dept": "신경외과",
+            "external_id": "DSMC-198"
+          },
+          {
+            "doctor": "김재범",
+            "dept": "심장혈관흉부외과",
+            "external_id": "DSMC-419"
+          },
+          {
+            "doctor": "조순영",
+            "dept": "안과",
+            "external_id": "DSMC-515"
+          },
+          {
+            "doctor": "방승필",
+            "dept": "안과",
+            "external_id": "DSMC-610"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\DSMC_20260504T130520.json"
   },
   {
     "code": "DSWHOSP",
     "name": "동수원병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:08.529959",
-    "verdict": "OK",
-    "elapsed": 9.3,
+    "started_at": "2026-05-04T13:04:46.581302",
+    "verdict": "WARN",
+    "elapsed": 7.6,
     "error": null,
-    "n_doctors": 77,
-    "n_departments": 29,
-    "empty_schedule_ratio": 31.2,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\DSWHOSP_20260421T160017.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\DSWHOSP_20260504T130454.json"
   },
   {
     "code": "DUIH",
     "name": "동국대학교일산병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:10.545354",
-    "verdict": "OK",
-    "elapsed": 0.6,
+    "started_at": "2026-05-04T13:04:54.166204",
+    "verdict": "WARN",
+    "elapsed": 0.5,
     "error": null,
-    "n_doctors": 106,
+    "n_doctors": 105,
     "n_departments": 28,
-    "empty_schedule_ratio": 5.7,
+    "empty_schedule_ratio": 3.8,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\DUIH_20260421T160011.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 4명",
+        "samples": [
+          {
+            "doctor": "김남희",
+            "dept": "신경과",
+            "external_id": "DUIH-050178"
+          },
+          {
+            "doctor": "김예니",
+            "dept": "정신건강의학과",
+            "external_id": "DUIH-190841"
+          },
+          {
+            "doctor": "곽범석",
+            "dept": "외과",
+            "external_id": "DUIH-060124"
+          },
+          {
+            "doctor": "도한호",
+            "dept": "양한방 통합 뇌손상 집중 치료센터",
+            "external_id": "DUIH-100129"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\DUIH_20260504T130454.json"
   },
   {
     "code": "EULJINW",
     "name": "노원을지대학교병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:11.121271",
-    "verdict": "OK",
-    "elapsed": 2.8,
+    "started_at": "2026-05-04T13:04:54.555559",
+    "verdict": "WARN",
+    "elapsed": 4.4,
     "error": null,
-    "n_doctors": 133,
+    "n_doctors": 134,
     "n_departments": 32,
-    "empty_schedule_ratio": 13.5,
+    "empty_schedule_ratio": 14.2,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\EULJINW_20260421T160013.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 19명",
+        "samples": [
+          {
+            "doctor": "신정민",
+            "dept": "류마티스내과",
+            "external_id": "EULJINW-ABBHAA-20230286"
+          },
+          {
+            "doctor": "장혜원",
+            "dept": "마취통증의학과",
+            "external_id": "EULJINW-ABVAAA-20190266"
+          },
+          {
+            "doctor": "조혜연",
+            "dept": "마취통증의학과",
+            "external_id": "EULJINW-ABVAAA-20231169"
+          },
+          {
+            "doctor": "강수정",
+            "dept": "마취통증의학과",
+            "external_id": "EULJINW-ABVAAA-20260034"
+          },
+          {
+            "doctor": "오은혜",
+            "dept": "소아청소년과",
+            "external_id": "EULJINW-ABCAAA-20240165"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\EULJINW_20260504T130458.json"
   },
   {
     "code": "EUMCMK",
     "name": "이대목동병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:12.069900",
-    "verdict": "OK",
-    "elapsed": 168.4,
+    "started_at": "2026-05-04T13:04:54.653422",
+    "verdict": "WARN",
+    "elapsed": 154.3,
     "error": null,
     "n_doctors": 186,
     "n_departments": 34,
-    "empty_schedule_ratio": 7.0,
+    "empty_schedule_ratio": 6.5,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\EUMCMK_20260421T160300.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 12명",
+        "samples": [
+          {
+            "doctor": "최용주",
+            "dept": "마취통증의학과/통증클리닉",
+            "external_id": "EUMCMK-1011398"
+          },
+          {
+            "doctor": "강보경",
+            "dept": "마취통증의학과/통증클리닉",
+            "external_id": "EUMCMK-1011367"
+          },
+          {
+            "doctor": "박은경",
+            "dept": "마취통증의학과/통증클리닉",
+            "external_id": "EUMCMK-1002998"
+          },
+          {
+            "doctor": "유은영",
+            "dept": "마취통증의학과/통증클리닉",
+            "external_id": "EUMCMK-1003744"
+          },
+          {
+            "doctor": "일반의",
+            "dept": "산부인과",
+            "external_id": "EUMCMK-9002820"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\EUMCMK_20260504T130728.json"
   },
   {
     "code": "EUMCSL",
     "name": "이대서울병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:13.905186",
-    "verdict": "OK",
-    "elapsed": 190.9,
+    "started_at": "2026-05-04T13:04:58.936844",
+    "verdict": "WARN",
+    "elapsed": 166.2,
     "error": null,
-    "n_doctors": 182,
+    "n_doctors": 180,
     "n_departments": 29,
-    "empty_schedule_ratio": 3.3,
+    "empty_schedule_ratio": 2.8,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\EUMCSL_20260421T160324.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 5명",
+        "samples": [
+          {
+            "doctor": "김우신",
+            "dept": "내과",
+            "external_id": "EUMCSL-1004184"
+          },
+          {
+            "doctor": "유경하",
+            "dept": "소아청소년과",
+            "external_id": "EUMCSL-1001176"
+          },
+          {
+            "doctor": "박지윤",
+            "dept": "소아청소년과",
+            "external_id": "EUMCSL-1004506"
+          },
+          {
+            "doctor": "배현경",
+            "dept": "소아청소년과",
+            "external_id": "EUMCSL-1005699"
+          },
+          {
+            "doctor": "현동호",
+            "dept": "영상의학과",
+            "external_id": "EUMCSL-1024213"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\EUMCSL_20260504T130745.json"
   },
   {
     "code": "GANSEV",
     "name": "강남세브란스병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:17.830668",
-    "verdict": "OK",
-    "elapsed": 2.4,
+    "started_at": "2026-05-04T13:05:20.012937",
+    "verdict": "WARN",
+    "elapsed": 21.1,
     "error": null,
-    "n_doctors": 206,
-    "n_departments": 40,
-    "empty_schedule_ratio": 5.3,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GANSEV_20260421T160020.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\GANSEV_20260504T130541.json"
   },
   {
     "code": "GGPC",
     "name": "경기도의료원 포천병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:20.286123",
+    "started_at": "2026-05-04T13:05:41.095602",
     "verdict": "OK",
-    "elapsed": 22.5,
+    "elapsed": 1.4,
     "error": null,
     "n_doctors": 19,
     "n_departments": 16,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GGPC_20260421T160042.json"
+    "snapshot": "scripts\\verification_snapshots\\GGPC_20260504T130542.json"
   },
   {
     "code": "GGSW",
     "name": "경기도의료원 수원병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:22.225560",
+    "started_at": "2026-05-04T13:05:42.517759",
     "verdict": "OK",
-    "elapsed": 21.3,
+    "elapsed": 2.0,
     "error": null,
     "n_doctors": 37,
     "n_departments": 18,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GGSW_20260421T160043.json"
+    "snapshot": "scripts\\verification_snapshots\\GGSW_20260504T130544.json"
   },
   {
     "code": "GIL",
     "name": "길병원",
     "region": "인천",
-    "started_at": "2026-04-21T16:00:42.768272",
-    "verdict": "OK",
-    "elapsed": 7.6,
+    "started_at": "2026-05-04T13:05:44.471968",
+    "verdict": "WARN",
+    "elapsed": 7.5,
     "error": null,
-    "n_doctors": 299,
+    "n_doctors": 300,
     "n_departments": 35,
-    "empty_schedule_ratio": 30.1,
+    "empty_schedule_ratio": 34.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GIL_20260421T160050.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 104명",
+        "samples": [
+          {
+            "doctor": "이규래",
+            "dept": "가정의학과",
+            "external_id": "GIL-3899645"
+          },
+          {
+            "doctor": "이경천",
+            "dept": "마취통증의학과",
+            "external_id": "GIL-57068"
+          },
+          {
+            "doctor": "정월선",
+            "dept": "마취통증의학과",
+            "external_id": "GIL-52272"
+          },
+          {
+            "doctor": "이동철",
+            "dept": "마취통증의학과",
+            "external_id": "GIL-52784"
+          },
+          {
+            "doctor": "곽현정",
+            "dept": "마취통증의학과",
+            "external_id": "GIL-52847"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\GIL_20260504T130551.json"
   },
   {
     "code": "GMSA",
     "name": "광명성애병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:43.557434",
-    "verdict": "OK",
-    "elapsed": 5.8,
+    "started_at": "2026-05-04T13:05:51.981682",
+    "verdict": "WARN",
+    "elapsed": 5.1,
     "error": null,
     "n_doctors": 73,
     "n_departments": 28,
     "empty_schedule_ratio": 13.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GMSA_20260421T160049.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 10명",
+        "samples": [
+          {
+            "doctor": "박노원",
+            "dept": "가정의학과",
+            "external_id": "GMSA-SH1701-DT2558"
+          },
+          {
+            "doctor": "김경채",
+            "dept": "건강의학센터",
+            "external_id": "GMSA-SH1702-DT3137"
+          },
+          {
+            "doctor": "최봉규",
+            "dept": "건강의학센터",
+            "external_id": "GMSA-SH1702-DT3138"
+          },
+          {
+            "doctor": "홍연표",
+            "dept": "건강의학센터",
+            "external_id": "GMSA-SH1702-DT3193"
+          },
+          {
+            "doctor": "한미경",
+            "dept": "건강의학센터",
+            "external_id": "GMSA-SH1702-DT3136"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\GMSA_20260504T130557.json"
+  },
+  {
+    "code": "GNAH",
+    "name": "강릉아산병원",
+    "region": "강원",
+    "started_at": "2026-05-04T13:05:57.081442",
+    "verdict": "WARN",
+    "elapsed": 15.2,
+    "error": null,
+    "n_doctors": 148,
+    "n_departments": 33,
+    "empty_schedule_ratio": 27.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 40명",
+        "samples": [
+          {
+            "doctor": "성규완",
+            "dept": "마취통증의학과",
+            "external_id": "GNAH-138"
+          },
+          {
+            "doctor": "김성수",
+            "dept": "마취통증의학과",
+            "external_id": "GNAH-137"
+          },
+          {
+            "doctor": "정화성",
+            "dept": "마취통증의학과",
+            "external_id": "GNAH-140"
+          },
+          {
+            "doctor": "정의균",
+            "dept": "마취통증의학과",
+            "external_id": "GNAH-141"
+          },
+          {
+            "doctor": "김진선",
+            "dept": "마취통증의학과",
+            "external_id": "GNAH-142"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\GNAH_20260504T130612.json"
   },
   {
     "code": "GNHOSP",
     "name": "강남병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:49.325287",
-    "verdict": "OK",
+    "started_at": "2026-05-04T13:06:12.271649",
+    "verdict": "WARN",
     "elapsed": 5.0,
     "error": null,
-    "n_doctors": 46,
+    "n_doctors": 47,
     "n_departments": 20,
-    "empty_schedule_ratio": 2.2,
+    "empty_schedule_ratio": 4.3,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GNHOSP_20260421T160054.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 2명",
+        "samples": [
+          {
+            "doctor": "이순호",
+            "dept": "응급의학과",
+            "external_id": "GNHOSP-19_3350"
+          },
+          {
+            "doctor": "이미진",
+            "dept": "달빛어린이병원",
+            "external_id": "GNHOSP-24_3219"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\GNHOSP_20260504T130617.json"
+  },
+  {
+    "code": "GNUH2",
+    "name": "경상국립대학교병원",
+    "region": "경남",
+    "started_at": "2026-05-04T13:06:17.332156",
+    "verdict": "WARN",
+    "elapsed": 59.4,
+    "error": null,
+    "n_doctors": 188,
+    "n_departments": 46,
+    "empty_schedule_ratio": 19.7,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 37명",
+        "samples": [
+          {
+            "doctor": "조성희",
+            "dept": "정형외과",
+            "external_id": "GNUH2-OS-119015"
+          },
+          {
+            "doctor": "김성재",
+            "dept": "안과",
+            "external_id": "GNUH2-EY-23605"
+          },
+          {
+            "doctor": "하인봉",
+            "dept": "방사선종양학과",
+            "external_id": "GNUH2-RO-117037"
+          },
+          {
+            "doctor": "정진희",
+            "dept": "응급의학과",
+            "external_id": "GNUH2-EM-113106"
+          },
+          {
+            "doctor": "성애진",
+            "dept": "응급의학과",
+            "external_id": "GNUH2-EM-120026"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\GNUH2_20260504T130716.json"
   },
   {
     "code": "GOODM",
     "name": "굿모닝병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:50.355274",
-    "verdict": "OK",
-    "elapsed": 6.1,
+    "started_at": "2026-05-04T13:07:16.738843",
+    "verdict": "WARN",
+    "elapsed": 7.0,
     "error": null,
-    "n_doctors": 75,
+    "n_doctors": 76,
     "n_departments": 29,
-    "empty_schedule_ratio": 38.7,
+    "empty_schedule_ratio": 36.8,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GOODM_20260421T160056.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 28명",
+        "samples": [
+          {
+            "doctor": "이권일",
+            "dept": "응급의학과",
+            "external_id": "GOODM-47"
+          },
+          {
+            "doctor": "김정훈",
+            "dept": "응급의학과",
+            "external_id": "GOODM-45"
+          },
+          {
+            "doctor": "이선범",
+            "dept": "응급의학과",
+            "external_id": "GOODM-46"
+          },
+          {
+            "doctor": "이현재",
+            "dept": "응급의학과",
+            "external_id": "GOODM-220"
+          },
+          {
+            "doctor": "김동욱",
+            "dept": "응급의학과",
+            "external_id": "GOODM-203"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\GOODM_20260504T130723.json"
   },
   {
     "code": "GREEN",
     "name": "녹색병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:54.371713",
+    "started_at": "2026-05-04T13:07:20.540650",
     "verdict": "OK",
     "elapsed": 0.4,
     "error": null,
     "n_doctors": 27,
     "n_departments": 16,
-    "empty_schedule_ratio": 18.5,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GREEN_20260421T160054.json"
+    "snapshot": "scripts\\verification_snapshots\\GREEN_20260504T130720.json"
   },
   {
     "code": "GSS",
     "name": "구로성심병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:00:54.749498",
-    "verdict": "OK",
-    "elapsed": 4.1,
+    "started_at": "2026-05-04T13:07:20.962904",
+    "verdict": "WARN",
+    "elapsed": 2.1,
     "error": null,
-    "n_doctors": 34,
+    "n_doctors": 35,
     "n_departments": 20,
-    "empty_schedule_ratio": 47.1,
+    "empty_schedule_ratio": 48.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\GSS_20260421T160058.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 17명",
+        "samples": [
+          {
+            "doctor": "강정호",
+            "dept": "영상의학과",
+            "external_id": "GSS-ba9a1d3d41"
+          },
+          {
+            "doctor": "곽상훈",
+            "dept": "응급의학과",
+            "external_id": "GSS-6ad62cedd3"
+          },
+          {
+            "doctor": "김명중",
+            "dept": "응급의학과",
+            "external_id": "GSS-7fb2c0be0b"
+          },
+          {
+            "doctor": "김병성",
+            "dept": "직업환경의학과",
+            "external_id": "GSS-d2348b59fb"
+          },
+          {
+            "doctor": "김윤기",
+            "dept": "가정의학과",
+            "external_id": "GSS-50e23ffd79"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\GSS_20260504T130723.json"
   },
   {
     "code": "HALLYM",
     "name": "한림성심병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:56.503718",
+    "started_at": "2026-05-04T13:07:23.075382",
     "verdict": "OK",
-    "elapsed": 95.5,
+    "elapsed": 92.4,
     "error": null,
-    "n_doctors": 212,
+    "n_doctors": 211,
     "n_departments": 34,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HALLYM_20260421T160232.json"
+    "snapshot": "scripts\\verification_snapshots\\HALLYM_20260504T130855.json"
   },
   {
     "code": "HALLYMDT",
     "name": "한림대학교동탄성심병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:00:58.837830",
+    "started_at": "2026-05-04T13:07:23.754384",
     "verdict": "OK",
-    "elapsed": 74.4,
+    "elapsed": 66.2,
     "error": null,
     "n_doctors": 199,
     "n_departments": 31,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HALLYMDT_20260421T160213.json"
+    "snapshot": "scripts\\verification_snapshots\\HALLYMDT_20260504T130829.json"
   },
   {
     "code": "HALLYMHG",
     "name": "한림대학교한강성심병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:02:13.256297",
+    "started_at": "2026-05-04T13:07:28.982280",
     "verdict": "OK",
-    "elapsed": 5.5,
+    "elapsed": 5.2,
     "error": null,
     "n_doctors": 22,
     "n_departments": 9,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HALLYMHG_20260421T160218.json"
+    "snapshot": "scripts\\verification_snapshots\\HALLYMHG_20260504T130734.json"
   },
   {
     "code": "HALLYMKN",
     "name": "한림대학교강남성심병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:02:18.796870",
+    "started_at": "2026-05-04T13:07:34.192438",
     "verdict": "OK",
-    "elapsed": 56.9,
+    "elapsed": 54.4,
     "error": null,
     "n_doctors": 163,
     "n_departments": 30,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HALLYMKN_20260421T160315.json"
+    "snapshot": "scripts\\verification_snapshots\\HALLYMKN_20260504T130828.json"
+  },
+  {
+    "code": "HANDOH",
+    "name": "한도병원",
+    "region": "경기",
+    "started_at": "2026-05-04T13:07:45.174183",
+    "verdict": "OK",
+    "elapsed": 2.5,
+    "error": null,
+    "n_doctors": 59,
+    "n_departments": 23,
+    "empty_schedule_ratio": 0.0,
+    "findings": [],
+    "warnings": [],
+    "snapshot": "scripts\\verification_snapshots\\HANDOH_20260504T130747.json"
   },
   {
     "code": "HANIL",
     "name": "한일병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:02:32.006193",
-    "verdict": "OK",
-    "elapsed": 0.9,
+    "started_at": "2026-05-04T13:07:47.700367",
+    "verdict": "WARN",
+    "elapsed": 1.0,
     "error": null,
-    "n_doctors": 91,
+    "n_doctors": 92,
     "n_departments": 29,
-    "empty_schedule_ratio": 40.7,
+    "empty_schedule_ratio": 42.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HANIL_20260421T160232.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 39명",
+        "samples": [
+          {
+            "doctor": "강양자",
+            "dept": "마취통증의학과",
+            "external_id": "HANIL-19610022"
+          },
+          {
+            "doctor": "정유성",
+            "dept": "마취통증의학과",
+            "external_id": "HANIL-19510023"
+          },
+          {
+            "doctor": "유정영",
+            "dept": "마취통증의학과",
+            "external_id": "HANIL-21610001"
+          },
+          {
+            "doctor": "박윤선",
+            "dept": "마취통증의학과",
+            "external_id": "HANIL-25610015"
+          },
+          {
+            "doctor": "허지혜",
+            "dept": "영상의학과",
+            "external_id": "HANIL-17610018"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\HANIL_20260504T130748.json"
   },
   {
     "code": "HDGH",
     "name": "현대병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:02:32.877970",
+    "started_at": "2026-05-04T13:07:48.707898",
     "verdict": "OK",
-    "elapsed": 5.5,
+    "elapsed": 5.9,
     "error": null,
-    "n_doctors": 82,
+    "n_doctors": 84,
     "n_departments": 29,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HDGH_20260421T160238.json"
+    "snapshot": "scripts\\verification_snapshots\\HDGH_20260504T130754.json"
   },
   {
     "code": "HONGIK",
     "name": "홍익병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:02:38.448024",
+    "started_at": "2026-05-04T13:07:54.587623",
     "verdict": "OK",
     "elapsed": 0.5,
     "error": null,
-    "n_doctors": 51,
-    "n_departments": 21,
+    "n_doctors": 50,
+    "n_departments": 20,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HONGIK_20260421T160238.json"
+    "snapshot": "scripts\\verification_snapshots\\HONGIK_20260504T130755.json"
+  },
+  {
+    "code": "HSYUIL",
+    "name": "화성유일병원",
+    "region": "경기",
+    "started_at": "2026-05-04T13:07:55.081281",
+    "verdict": "WARN",
+    "elapsed": 0.8,
+    "error": null,
+    "n_doctors": 5,
+    "n_departments": 0,
+    "empty_schedule_ratio": 100.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      },
+      {
+        "check": "C6",
+        "msg": "스케줄 없는 의사 100% (5/5)"
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 5명",
+        "samples": [
+          {
+            "doctor": "고은정",
+            "dept": "",
+            "external_id": "HSYUIL-9bbb83170a"
+          },
+          {
+            "doctor": "박형도",
+            "dept": "",
+            "external_id": "HSYUIL-8f6a71c7d1"
+          },
+          {
+            "doctor": "서민우",
+            "dept": "",
+            "external_id": "HSYUIL-eaefd58429"
+          },
+          {
+            "doctor": "홍승수",
+            "dept": "",
+            "external_id": "HSYUIL-e42db769b0"
+          },
+          {
+            "doctor": "최창식",
+            "dept": "",
+            "external_id": "HSYUIL-e3c8645b36"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\HSYUIL_20260504T130755.json"
   },
   {
     "code": "HUIMYUNG",
     "name": "희명병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:02:38.977789",
+    "started_at": "2026-05-04T13:07:55.920629",
     "verdict": "OK",
     "elapsed": 0.3,
     "error": null,
@@ -762,95 +2445,286 @@
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HUIMYUNG_20260421T160239.json"
+    "snapshot": "scripts\\verification_snapshots\\HUIMYUNG_20260504T130756.json"
   },
   {
     "code": "HWAHONG",
     "name": "화홍병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:02:39.326794",
-    "verdict": "OK",
-    "elapsed": 2.0,
+    "started_at": "2026-05-04T13:07:56.241516",
+    "verdict": "WARN",
+    "elapsed": 2.6,
     "error": null,
     "n_doctors": 66,
     "n_departments": 24,
     "empty_schedule_ratio": 40.9,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HWAHONG_20260421T160241.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 27명",
+        "samples": [
+          {
+            "doctor": "이세호",
+            "dept": "응급의학과",
+            "external_id": "HWAHONG-188"
+          },
+          {
+            "doctor": "전세근",
+            "dept": "마취통증의학과",
+            "external_id": "HWAHONG-273"
+          },
+          {
+            "doctor": "박경배",
+            "dept": "마취통증의학과",
+            "external_id": "HWAHONG-184"
+          },
+          {
+            "doctor": "이해광",
+            "dept": "마취통증의학과",
+            "external_id": "HWAHONG-279"
+          },
+          {
+            "doctor": "이세형",
+            "dept": "영상의학과",
+            "external_id": "HWAHONG-274"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\HWAHONG_20260504T130758.json"
   },
   {
     "code": "HYEMIN",
     "name": "혜민병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:02:41.303043",
-    "verdict": "OK",
+    "started_at": "2026-05-04T13:07:58.852665",
+    "verdict": "WARN",
     "elapsed": 0.6,
     "error": null,
     "n_doctors": 43,
     "n_departments": 22,
     "empty_schedule_ratio": 18.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HYEMIN_20260421T160241.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 8명",
+        "samples": [
+          {
+            "doctor": "조해선",
+            "dept": "마취통증의학과",
+            "external_id": "HYEMIN-6df072b212"
+          },
+          {
+            "doctor": "장석환",
+            "dept": "영상의학과",
+            "external_id": "HYEMIN-6da1acb8eb"
+          },
+          {
+            "doctor": "오병연",
+            "dept": "응급의학과",
+            "external_id": "HYEMIN-c213854432"
+          },
+          {
+            "doctor": "전진우",
+            "dept": "응급의학과",
+            "external_id": "HYEMIN-33c0505ed6"
+          },
+          {
+            "doctor": "박지수",
+            "dept": "응급의학과",
+            "external_id": "HYEMIN-97d8749040"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\HYEMIN_20260504T130759.json"
   },
   {
     "code": "HYH",
     "name": "남양주한양병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:02:41.901334",
-    "verdict": "OK",
-    "elapsed": 6.4,
+    "started_at": "2026-05-04T13:07:59.478584",
+    "verdict": "WARN",
+    "elapsed": 7.1,
     "error": null,
-    "n_doctors": 33,
+    "n_doctors": 35,
     "n_departments": 20,
-    "empty_schedule_ratio": 36.4,
+    "empty_schedule_ratio": 37.1,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HYH_20260421T160248.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 13명",
+        "samples": [
+          {
+            "doctor": "·",
+            "dept": "비뇨기과",
+            "external_id": "HYH-14_6"
+          },
+          {
+            "doctor": "·",
+            "dept": "흉부혈관외과",
+            "external_id": "HYH-21_14"
+          },
+          {
+            "doctor": "황인순",
+            "dept": "마취통증의학과",
+            "external_id": "HYH-25_18"
+          },
+          {
+            "doctor": "서관용",
+            "dept": "진단검사의학과",
+            "external_id": "HYH-26_19"
+          },
+          {
+            "doctor": "안용식",
+            "dept": "영상의학과",
+            "external_id": "HYH-27_20"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\HYH_20260504T130806.json"
   },
   {
     "code": "HYJH",
     "name": "에이치플러스 양지병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:02:48.297456",
-    "verdict": "OK",
-    "elapsed": 1.9,
+    "started_at": "2026-05-04T13:08:06.625543",
+    "verdict": "WARN",
+    "elapsed": 2.5,
     "error": null,
-    "n_doctors": 70,
+    "n_doctors": 69,
     "n_departments": 22,
-    "empty_schedule_ratio": 30.0,
+    "empty_schedule_ratio": 30.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HYJH_20260421T160250.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 3명",
+        "samples": [
+          {
+            "doctor": "김형건",
+            "dept": "",
+            "external_id": "HYJH-323"
+          },
+          {
+            "doctor": "오정진",
+            "dept": "",
+            "external_id": "HYJH-343"
+          },
+          {
+            "doctor": "민선영",
+            "dept": "",
+            "external_id": "HYJH-257"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\HYJH_20260504T130809.json"
   },
   {
     "code": "HYUGR",
     "name": "한양대학교구리병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:02:50.304830",
-    "verdict": "OK",
-    "elapsed": 192.6,
+    "started_at": "2026-05-04T13:08:09.130194",
+    "verdict": "WARN",
+    "elapsed": 176.5,
     "error": null,
-    "n_doctors": 67,
-    "n_departments": 18,
-    "empty_schedule_ratio": 49.3,
+    "n_doctors": 81,
+    "n_departments": 20,
+    "empty_schedule_ratio": 43.2,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\HYUGR_20260421T160602.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 117건",
+        "samples": [
+          {
+            "doctor": "김지은",
+            "dept": "감염내과",
+            "date": "2026-05-24",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김지은",
+            "dept": "감염내과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김지은",
+            "dept": "감염내과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김지은",
+            "dept": "감염내과",
+            "date": "2026-06-06",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "이창범",
+            "dept": "내분비대사내과",
+            "date": "2026-05-24",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 35명",
+        "samples": [
+          {
+            "doctor": "염종훈",
+            "dept": "마취통증의학과",
+            "external_id": "HYUGR-1956874-112110"
+          },
+          {
+            "doctor": "조상윤",
+            "dept": "마취통증의학과",
+            "external_id": "HYUGR-1961611-112110"
+          },
+          {
+            "doctor": "심재항",
+            "dept": "마취통증의학과",
+            "external_id": "HYUGR-2011277-112110"
+          },
+          {
+            "doctor": "오미경",
+            "dept": "마취통증의학과",
+            "external_id": "HYUGR-2137498-112110"
+          },
+          {
+            "doctor": "박형준",
+            "dept": "마취통증의학과",
+            "external_id": "HYUGR-2226234-112110"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\HYUGR_20260504T131105.json"
   },
   {
     "code": "HYUMC",
     "name": "한양대병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:03:00.452697",
+    "started_at": "2026-05-04T13:08:28.669696",
     "verdict": "FAIL",
-    "elapsed": 300.0,
-    "error": "Timeout after 300.0s",
+    "elapsed": 180.0,
+    "error": "Timeout after 180.0s",
     "findings": [
       {
         "check": "C1",
-        "msg": "Timeout after 300.0s"
+        "msg": "Timeout after 180.0s"
       }
     ],
     "warnings": [],
@@ -862,232 +2736,1318 @@
     "code": "ICHEON",
     "name": "경기도의료원 이천병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:03:15.697335",
+    "started_at": "2026-05-04T13:08:29.956247",
     "verdict": "OK",
-    "elapsed": 10.7,
+    "elapsed": 2.7,
     "error": null,
     "n_doctors": 38,
     "n_departments": 16,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\ICHEON_20260421T160326.json"
+    "snapshot": "scripts\\verification_snapshots\\ICHEON_20260504T130832.json"
   },
   {
     "code": "INHA",
     "name": "인하대병원",
     "region": "인천",
-    "started_at": "2026-04-21T16:03:24.852176",
-    "verdict": "OK",
-    "elapsed": 19.7,
+    "started_at": "2026-05-04T13:08:32.603544",
+    "verdict": "WARN",
+    "elapsed": 16.5,
     "error": null,
-    "n_doctors": 268,
+    "n_doctors": 270,
     "n_departments": 35,
-    "empty_schedule_ratio": 32.8,
+    "empty_schedule_ratio": 33.3,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\INHA_20260421T160344.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 90명",
+        "samples": [
+          {
+            "doctor": "송장호",
+            "dept": "마취통증의학과",
+            "external_id": "INHA-63446"
+          },
+          {
+            "doctor": "임현경",
+            "dept": "마취통증의학과",
+            "external_id": "INHA-63417"
+          },
+          {
+            "doctor": "정종권",
+            "dept": "마취통증의학과",
+            "external_id": "INHA-63391"
+          },
+          {
+            "doctor": "한정욱",
+            "dept": "마취통증의학과",
+            "external_id": "INHA-63420"
+          },
+          {
+            "doctor": "김현주",
+            "dept": "마취통증의학과",
+            "external_id": "INHA-63349"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\INHA_20260504T130849.json"
   },
   {
     "code": "ISPAIK",
     "name": "인제대학교 일산백병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:03:26.415067",
-    "verdict": "OK",
-    "elapsed": 2.3,
+    "started_at": "2026-05-04T13:08:49.085909",
+    "verdict": "WARN",
+    "elapsed": 2.2,
     "error": null,
-    "n_doctors": 314,
+    "n_doctors": 317,
     "n_departments": 70,
-    "empty_schedule_ratio": 17.5,
+    "empty_schedule_ratio": 18.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\ISPAIK_20260421T160328.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 57명",
+        "samples": [
+          {
+            "doctor": "손준혁",
+            "dept": "간·담도·췌장암센터",
+            "external_id": "ISPAIK-2287"
+          },
+          {
+            "doctor": "김경우",
+            "dept": "마취통증의학과",
+            "external_id": "ISPAIK-648"
+          },
+          {
+            "doctor": "김준현",
+            "dept": "마취통증의학과",
+            "external_id": "ISPAIK-1231"
+          },
+          {
+            "doctor": "김수연",
+            "dept": "마취통증의학과",
+            "external_id": "ISPAIK-1989"
+          },
+          {
+            "doctor": "김지연",
+            "dept": "마취통증의학과",
+            "external_id": "ISPAIK-1230"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\ISPAIK_20260504T130851.json"
+  },
+  {
+    "code": "JAIN",
+    "name": "더자인병원",
+    "region": "경기",
+    "started_at": "2026-05-04T13:08:51.364929",
+    "verdict": "WARN",
+    "elapsed": 0.6,
+    "error": null,
+    "n_doctors": 32,
+    "n_departments": 15,
+    "empty_schedule_ratio": 25.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 8명",
+        "samples": [
+          {
+            "doctor": "서재경",
+            "dept": "응급센터",
+            "external_id": "JAIN-114"
+          },
+          {
+            "doctor": "윤형식",
+            "dept": "응급센터",
+            "external_id": "JAIN-110"
+          },
+          {
+            "doctor": "이선근",
+            "dept": "응급센터",
+            "external_id": "JAIN-146"
+          },
+          {
+            "doctor": "홍성민",
+            "dept": "응급센터",
+            "external_id": "JAIN-57"
+          },
+          {
+            "doctor": "김성훈",
+            "dept": "마취통증의학과",
+            "external_id": "JAIN-100"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\JAIN_20260504T130851.json"
+  },
+  {
+    "code": "JBUH",
+    "name": "전북대학교병원",
+    "region": "전북",
+    "started_at": "2026-05-04T13:08:51.967907",
+    "verdict": "WARN",
+    "elapsed": 19.0,
+    "error": null,
+    "n_doctors": 241,
+    "n_departments": 42,
+    "empty_schedule_ratio": 24.1,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 55명",
+        "samples": [
+          {
+            "doctor": "김동찬",
+            "dept": "마취통증의학과",
+            "external_id": "JBUH-AN-08105"
+          },
+          {
+            "doctor": "고성훈",
+            "dept": "마취통증의학과",
+            "external_id": "JBUH-AN-92221"
+          },
+          {
+            "doctor": "김덕규",
+            "dept": "마취통증의학과",
+            "external_id": "JBUH-AN-20322"
+          },
+          {
+            "doctor": "이주환",
+            "dept": "마취통증의학과",
+            "external_id": "JBUH-AN-26805"
+          },
+          {
+            "doctor": "이준호",
+            "dept": "마취통증의학과",
+            "external_id": "JBUH-AN-21759"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\JBUH_20260504T130910.json"
   },
   {
     "code": "JESAENG",
     "name": "분당제생병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:03:28.771946",
-    "verdict": "OK",
-    "elapsed": 9.2,
+    "started_at": "2026-05-04T13:08:55.448242",
+    "verdict": "WARN",
+    "elapsed": 10.5,
     "error": null,
-    "n_doctors": 120,
+    "n_doctors": 123,
     "n_departments": 32,
-    "empty_schedule_ratio": 27.5,
+    "empty_schedule_ratio": 27.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\JESAENG_20260421T160338.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 34명",
+        "samples": [
+          {
+            "doctor": "김가현",
+            "dept": "마취통증의학과",
+            "external_id": "JESAENG-1007130"
+          },
+          {
+            "doctor": "박주훈",
+            "dept": "마취통증의학과",
+            "external_id": "JESAENG-1006833"
+          },
+          {
+            "doctor": "정주영",
+            "dept": "마취통증의학과",
+            "external_id": "JESAENG-1006838"
+          },
+          {
+            "doctor": "최미영",
+            "dept": "마취통증의학과",
+            "external_id": "JESAENG-1006988"
+          },
+          {
+            "doctor": "최현규",
+            "dept": "마취통증의학과",
+            "external_id": "JESAENG-1006821"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\JESAENG_20260504T130905.json"
   },
   {
     "code": "JISAM",
     "name": "효산의료재단 지샘병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:03:38.018947",
-    "verdict": "OK",
-    "elapsed": 17.0,
+    "started_at": "2026-05-04T13:09:05.926118",
+    "verdict": "WARN",
+    "elapsed": 23.5,
     "error": null,
     "n_doctors": 89,
     "n_departments": 35,
     "empty_schedule_ratio": 7.9,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\JISAM_20260421T160355.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 251건",
+        "samples": [
+          {
+            "doctor": "이정호",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "이정호",
+            "dept": "가정의학과",
+            "date": "2026-06-06",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "이정호",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "조영규",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "강의규",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 7명",
+        "samples": [
+          {
+            "doctor": "길호영",
+            "dept": "마취통증의학과",
+            "external_id": "JISAM-346"
+          },
+          {
+            "doctor": "박종혁",
+            "dept": "신경외과",
+            "external_id": "JISAM-256"
+          },
+          {
+            "doctor": "전용식",
+            "dept": "영상의학과",
+            "external_id": "JISAM-266"
+          },
+          {
+            "doctor": "류소영",
+            "dept": "치과",
+            "external_id": "JISAM-348"
+          },
+          {
+            "doctor": "이지연",
+            "dept": "혈액종양내과",
+            "external_id": "JISAM-301"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\JISAM_20260504T130929.json"
+  },
+  {
+    "code": "JNUH",
+    "name": "전남대학교병원",
+    "region": "광주",
+    "started_at": "2026-05-04T13:09:10.997518",
+    "verdict": "WARN",
+    "elapsed": 7.0,
+    "error": null,
+    "n_doctors": 258,
+    "n_departments": 41,
+    "empty_schedule_ratio": 38.8,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 100명",
+        "samples": [
+          {
+            "doctor": "정해성",
+            "dept": "감염내과",
+            "external_id": "JNUH-IMD-ID00035"
+          },
+          {
+            "doctor": "곽한덕",
+            "dept": "대장항문외과",
+            "external_id": "JNUH-GSA-GE00083"
+          },
+          {
+            "doctor": "강지현",
+            "dept": "류마티스내과",
+            "external_id": "JNUH-IMR-RH00025"
+          },
+          {
+            "doctor": "윤명하",
+            "dept": "마취통증의학과",
+            "external_id": "JNUH-AN-AN00006"
+          },
+          {
+            "doctor": "곽상현",
+            "dept": "마취통증의학과",
+            "external_id": "JNUH-AN-AN00009"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\JNUH_20260504T130918.json"
+  },
+  {
+    "code": "JNUHHS",
+    "name": "화순전남대학교병원",
+    "region": "전남",
+    "started_at": "2026-05-04T13:09:18.092706",
+    "verdict": "WARN",
+    "elapsed": 7.1,
+    "error": null,
+    "n_doctors": 148,
+    "n_departments": 35,
+    "empty_schedule_ratio": 30.4,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 45명",
+        "samples": [
+          {
+            "doctor": "이아랑",
+            "dept": "감염내과",
+            "external_id": "JNUHHS-IMD-ID00034"
+          },
+          {
+            "doctor": "김희경",
+            "dept": "내분비대사내과",
+            "external_id": "JNUHHS-IME-ED00032"
+          },
+          {
+            "doctor": "윤지희",
+            "dept": "내분비대사내과",
+            "external_id": "JNUHHS-IME-ED00036"
+          },
+          {
+            "doctor": "이자람",
+            "dept": "대장항문외과",
+            "external_id": "JNUHHS-GSA-GE00095"
+          },
+          {
+            "doctor": "윤명하",
+            "dept": "마취통증의학과",
+            "external_id": "JNUHHS-AN-AN00006"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\JNUHHS_20260504T130925.json"
   },
   {
     "code": "JOUN",
     "name": "조은오산병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:03:44.550166",
-    "verdict": "OK",
-    "elapsed": 11.2,
+    "started_at": "2026-05-04T13:09:25.239529",
+    "verdict": "WARN",
+    "elapsed": 8.2,
     "error": null,
     "n_doctors": 42,
     "n_departments": 16,
     "empty_schedule_ratio": 7.1,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\JOUN_20260421T160355.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 3명",
+        "samples": [
+          {
+            "doctor": "정대관",
+            "dept": "내과",
+            "external_id": "JOUN-4_doctor233-33"
+          },
+          {
+            "doctor": "이재승",
+            "dept": "피부비뇨의학과",
+            "external_id": "JOUN-7_doctor36"
+          },
+          {
+            "doctor": "배인근",
+            "dept": "직업환경의학과",
+            "external_id": "JOUN-17_doctor21"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\JOUN_20260504T130933.json"
   },
   {
     "code": "KBSMC",
     "name": "강북삼성병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:03:55.026388",
-    "verdict": "OK",
-    "elapsed": 67.1,
+    "started_at": "2026-05-04T13:09:29.483207",
+    "verdict": "WARN",
+    "elapsed": 52.0,
     "error": null,
-    "n_doctors": 416,
+    "n_doctors": 413,
     "n_departments": 37,
-    "empty_schedule_ratio": 37.0,
+    "empty_schedule_ratio": 41.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KBSMC_20260421T160502.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 212건",
+        "samples": [
+          {
+            "doctor": "강재헌",
+            "dept": "가정의학과",
+            "date": "2026-06-06",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "강재헌",
+            "dept": "가정의학과",
+            "date": "2026-06-06",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "배예슬",
+            "dept": "가정의학과",
+            "date": "2026-06-06",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "배예슬",
+            "dept": "가정의학과",
+            "date": "2026-06-06",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "주은정",
+            "dept": "감염내과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 172명",
+        "samples": [
+          {
+            "doctor": "김윤홍",
+            "dept": "마취통증의학과",
+            "external_id": "KBSMC-33-5"
+          },
+          {
+            "doctor": "오은정",
+            "dept": "마취통증의학과",
+            "external_id": "KBSMC-434-5"
+          },
+          {
+            "doctor": "전주현",
+            "dept": "마취통증의학과",
+            "external_id": "KBSMC-425-5"
+          },
+          {
+            "doctor": "권도희",
+            "dept": "병리과",
+            "external_id": "KBSMC-47-7"
+          },
+          {
+            "doctor": "김한나",
+            "dept": "병리과",
+            "external_id": "KBSMC-59-7"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KBSMC_20260504T131021.json"
   },
   {
     "code": "KCCH",
     "name": "한국원자력의학원",
     "region": "서울",
-    "started_at": "2026-04-21T16:03:55.731772",
-    "verdict": "OK",
-    "elapsed": 38.5,
+    "started_at": "2026-05-04T13:09:33.442785",
+    "verdict": "WARN",
+    "elapsed": 60.4,
     "error": null,
     "n_doctors": 100,
     "n_departments": 29,
-    "empty_schedule_ratio": 26.0,
+    "empty_schedule_ratio": 25.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KCCH_20260421T160434.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 25명",
+        "samples": [
+          {
+            "doctor": "이지희",
+            "dept": "마취통증의학과",
+            "external_id": "KCCH-9"
+          },
+          {
+            "doctor": "이수남",
+            "dept": "마취통증의학과",
+            "external_id": "KCCH-7"
+          },
+          {
+            "doctor": "이소영",
+            "dept": "마취통증의학과",
+            "external_id": "KCCH-85"
+          },
+          {
+            "doctor": "이지연",
+            "dept": "마취통증의학과",
+            "external_id": "KCCH-63"
+          },
+          {
+            "doctor": "이승숙",
+            "dept": "병리과",
+            "external_id": "KCCH-105"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KCCH_20260504T131033.json"
   },
   {
     "code": "KDH",
     "name": "강동성심병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:04:34.221338",
-    "verdict": "OK",
-    "elapsed": 6.9,
+    "started_at": "2026-05-04T13:10:21.546693",
+    "verdict": "WARN",
+    "elapsed": 7.7,
     "error": null,
     "n_doctors": 140,
     "n_departments": 30,
-    "empty_schedule_ratio": 26.4,
+    "empty_schedule_ratio": 25.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KDH_20260421T160441.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 36명",
+        "samples": [
+          {
+            "doctor": "박수연",
+            "dept": "내분비내과",
+            "external_id": "KDH-180525"
+          },
+          {
+            "doctor": "박다희",
+            "dept": "소화기내과",
+            "external_id": "KDH-160119"
+          },
+          {
+            "doctor": "김유선",
+            "dept": "소화기내과",
+            "external_id": "KDH-230175"
+          },
+          {
+            "doctor": "전희중",
+            "dept": "신장내과",
+            "external_id": "KDH-150295"
+          },
+          {
+            "doctor": "김일석",
+            "dept": "마취통증의학과",
+            "external_id": "KDH-50361"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KDH_20260504T131029.json"
   },
   {
     "code": "KHNMC",
     "name": "강동경희대학교병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:04:41.122155",
-    "verdict": "OK",
-    "elapsed": 6.7,
+    "started_at": "2026-05-04T13:10:29.218959",
+    "verdict": "WARN",
+    "elapsed": 6.5,
     "error": null,
-    "n_doctors": 195,
+    "n_doctors": 194,
     "n_departments": 31,
-    "empty_schedule_ratio": 30.8,
+    "empty_schedule_ratio": 30.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KHNMC_20260421T160447.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 59명",
+        "samples": [
+          {
+            "doctor": "이봉재",
+            "dept": "마취통증의학과",
+            "external_id": "KHNMC-000129-98"
+          },
+          {
+            "doctor": "강종만",
+            "dept": "마취통증의학과",
+            "external_id": "KHNMC-000129-99"
+          },
+          {
+            "doctor": "허협",
+            "dept": "마취통증의학과",
+            "external_id": "KHNMC-000129-4938"
+          },
+          {
+            "doctor": "강화자",
+            "dept": "마취통증의학과",
+            "external_id": "KHNMC-000129-24000021"
+          },
+          {
+            "doctor": "권미영",
+            "dept": "마취통증의학과",
+            "external_id": "KHNMC-000129-25000271"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KHNMC_20260504T131035.json"
   },
   {
     "code": "KHU",
     "name": "경희대병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:04:47.778413",
-    "verdict": "OK",
-    "elapsed": 45.0,
+    "started_at": "2026-05-04T13:10:33.889731",
+    "verdict": "WARN",
+    "elapsed": 50.1,
     "error": null,
     "n_doctors": 211,
     "n_departments": 38,
-    "empty_schedule_ratio": 20.9,
+    "empty_schedule_ratio": 20.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KHU_20260421T160532.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 41명",
+        "samples": [
+          {
+            "doctor": "박성욱",
+            "dept": "마취통증의학과",
+            "external_id": "KHU-4826"
+          },
+          {
+            "doctor": "김미경",
+            "dept": "마취통증의학과",
+            "external_id": "KHU-7890"
+          },
+          {
+            "doctor": "최정현",
+            "dept": "마취통증의학과",
+            "external_id": "KHU-6874"
+          },
+          {
+            "doctor": "유안희",
+            "dept": "마취통증의학과",
+            "external_id": "KHU-6802"
+          },
+          {
+            "doctor": "이상호",
+            "dept": "마취통증의학과",
+            "external_id": "KHU-6889"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KHU_20260504T131123.json"
+  },
+  {
+    "code": "KNUH",
+    "name": "경북대학교병원",
+    "region": "대구",
+    "started_at": "2026-05-04T13:10:35.701577",
+    "verdict": "WARN",
+    "elapsed": 8.5,
+    "error": null,
+    "n_doctors": 231,
+    "n_departments": 41,
+    "empty_schedule_ratio": 0.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 517건",
+        "samples": [
+          {
+            "doctor": "고혜진",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "고혜진",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "박지연",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "홍희은",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "홍희은",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KNUH_20260504T131044.json"
+  },
+  {
+    "code": "KNUHCG",
+    "name": "칠곡경북대학교병원",
+    "region": "대구",
+    "started_at": "2026-05-04T13:10:44.259789",
+    "verdict": "WARN",
+    "elapsed": 13.2,
+    "error": null,
+    "n_doctors": 197,
+    "n_departments": 51,
+    "empty_schedule_ratio": 0.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 455건",
+        "samples": [
+          {
+            "doctor": "송지은",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "송지은",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "홍희은",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "어재은",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "강수정",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KNUHCG_20260504T131057.json"
+  },
+  {
+    "code": "KOSIN",
+    "name": "고신대학교복음병원",
+    "region": "부산",
+    "started_at": "2026-05-04T13:10:57.469326",
+    "verdict": "WARN",
+    "elapsed": 0.8,
+    "error": null,
+    "n_doctors": 194,
+    "n_departments": 41,
+    "empty_schedule_ratio": 23.7,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 46명",
+        "samples": [
+          {
+            "doctor": "김미향",
+            "dept": "진단검사의학과",
+            "external_id": "KOSIN-165"
+          },
+          {
+            "doctor": "계여곤",
+            "dept": "응급의학과",
+            "external_id": "KOSIN-140"
+          },
+          {
+            "doctor": "조영덕",
+            "dept": "영상의학과",
+            "external_id": "KOSIN-126"
+          },
+          {
+            "doctor": "홍유라",
+            "dept": "소아청소년과",
+            "external_id": "KOSIN-82"
+          },
+          {
+            "doctor": "이상신",
+            "dept": "정신건강의학과",
+            "external_id": "KOSIN-153"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KOSIN_20260504T131058.json"
   },
   {
     "code": "KUANAM",
     "name": "고대안암병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:05:02.104217",
-    "verdict": "OK",
-    "elapsed": 36.3,
+    "started_at": "2026-05-04T13:10:58.326112",
+    "verdict": "WARN",
+    "elapsed": 92.2,
     "error": null,
-    "n_doctors": 180,
+    "n_doctors": 182,
     "n_departments": 32,
-    "empty_schedule_ratio": 11.1,
+    "empty_schedule_ratio": 12.1,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KUANAM_20260421T160538.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 1건",
+        "samples": [
+          {
+            "doctor": "강성구",
+            "dept": "비뇨의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 22명",
+        "samples": [
+          {
+            "doctor": "성현영",
+            "dept": "마취통증의학과",
+            "external_id": "KUANAM-16072"
+          },
+          {
+            "doctor": "신현주",
+            "dept": "마취통증의학과",
+            "external_id": "KUANAM-08685"
+          },
+          {
+            "doctor": "신혜원",
+            "dept": "마취통증의학과",
+            "external_id": "KUANAM-01498"
+          },
+          {
+            "doctor": "유해선",
+            "dept": "마취통증의학과",
+            "external_id": "KUANAM-03204"
+          },
+          {
+            "doctor": "윤승주",
+            "dept": "마취통증의학과",
+            "external_id": "KUANAM-07B04"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KUANAM_20260504T131230.json"
   },
   {
     "code": "KUANSAN",
     "name": "고대안산병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:05:32.763350",
-    "verdict": "OK",
-    "elapsed": 26.3,
+    "started_at": "2026-05-04T13:11:05.654893",
+    "verdict": "WARN",
+    "elapsed": 25.5,
     "error": null,
     "n_doctors": 128,
     "n_departments": 25,
     "empty_schedule_ratio": 15.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KUANSAN_20260421T160559.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 4건",
+        "samples": [
+          {
+            "doctor": "이혜윤",
+            "dept": "유방내분비외과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "박진희",
+            "dept": "혈액종양내과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "이병현",
+            "dept": "혈액종양내과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "이세련",
+            "dept": "혈액종양내과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 20명",
+        "samples": [
+          {
+            "doctor": "김운영",
+            "dept": "마취통증의학과",
+            "external_id": "KUANSAN-01315"
+          },
+          {
+            "doctor": "김재환",
+            "dept": "마취통증의학과",
+            "external_id": "KUANSAN-97029"
+          },
+          {
+            "doctor": "신연식",
+            "dept": "마취통증의학과",
+            "external_id": "KUANSAN-03095"
+          },
+          {
+            "doctor": "이윤숙",
+            "dept": "마취통증의학과",
+            "external_id": "KUANSAN-01393"
+          },
+          {
+            "doctor": "주충희",
+            "dept": "마취통증의학과",
+            "external_id": "KUANSAN-20G31"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KUANSAN_20260504T131131.json"
   },
   {
     "code": "KUGURO",
     "name": "고대구로병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:05:38.462464",
-    "verdict": "OK",
-    "elapsed": 40.2,
+    "started_at": "2026-05-04T13:11:23.949571",
+    "verdict": "WARN",
+    "elapsed": 91.9,
     "error": null,
-    "n_doctors": 167,
+    "n_doctors": 163,
     "n_departments": 34,
-    "empty_schedule_ratio": 15.0,
+    "empty_schedule_ratio": 15.3,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KUGURO_20260421T160618.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 7건",
+        "samples": [
+          {
+            "doctor": "신주희",
+            "dept": "치과보존과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "신주희",
+            "dept": "치과보존과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "권택현",
+            "dept": "신경외과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "권택현",
+            "dept": "신경외과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "신정호",
+            "dept": "산부인과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 25명",
+        "samples": [
+          {
+            "doctor": "조민정",
+            "dept": "응급중환자외상외과",
+            "external_id": "KUGURO-23467"
+          },
+          {
+            "doctor": "공명훈",
+            "dept": "마취통증의학과",
+            "external_id": "KUGURO-91009"
+          },
+          {
+            "doctor": "김영성",
+            "dept": "마취통증의학과",
+            "external_id": "KUGURO-09394"
+          },
+          {
+            "doctor": "김혜빈",
+            "dept": "마취통증의학과",
+            "external_id": "KUGURO-22544"
+          },
+          {
+            "doctor": "김희주",
+            "dept": "마취통증의학과",
+            "external_id": "KUGURO-00486"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KUGURO_20260504T131255.json"
   },
   {
     "code": "KUH",
     "name": "건국대학교병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:05:59.092256",
-    "verdict": "OK",
-    "elapsed": 71.7,
+    "started_at": "2026-05-04T13:11:28.663605",
+    "verdict": "WARN",
+    "elapsed": 125.4,
     "error": null,
-    "n_doctors": 249,
+    "n_doctors": 252,
     "n_departments": 34,
-    "empty_schedule_ratio": 30.5,
+    "empty_schedule_ratio": 30.2,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\KUH_20260421T160710.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 9건",
+        "samples": [
+          {
+            "doctor": "박상오",
+            "dept": "응급의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "박상오",
+            "dept": "응급의학과",
+            "date": "2026-05-24",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "박상오",
+            "dept": "응급의학과",
+            "date": "2026-05-24",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "홍대영",
+            "dept": "응급의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "홍대영",
+            "dept": "응급의학과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 76명",
+        "samples": [
+          {
+            "doctor": "최효선",
+            "dept": "건강의학과",
+            "external_id": "KUH-20100154"
+          },
+          {
+            "doctor": "박소연",
+            "dept": "건강의학과",
+            "external_id": "KUH-20150598"
+          },
+          {
+            "doctor": "한혜진",
+            "dept": "건강의학과",
+            "external_id": "KUH-20120277"
+          },
+          {
+            "doctor": "홍미진",
+            "dept": "건강의학과",
+            "external_id": "KUH-20070066"
+          },
+          {
+            "doctor": "김소이",
+            "dept": "건강의학과",
+            "external_id": "KUH-20100158"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KUH_20260504T131334.json"
+  },
+  {
+    "code": "KYUH",
+    "name": "건양대학교병원",
+    "region": "대전",
+    "started_at": "2026-05-04T13:11:31.152489",
+    "verdict": "WARN",
+    "elapsed": 70.9,
+    "error": null,
+    "n_doctors": 170,
+    "n_departments": 34,
+    "empty_schedule_ratio": 34.1,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 287건",
+        "samples": [
+          {
+            "doctor": "강영우",
+            "dept": "소화기내과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "강영우",
+            "dept": "소화기내과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "강영우",
+            "dept": "소화기내과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "최용우",
+            "dept": "소화기내과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "최용우",
+            "dept": "소화기내과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 49명",
+        "samples": [
+          {
+            "doctor": "김창화",
+            "dept": "소화기내과",
+            "external_id": "KYUH-GAS-C7725F48BA21A1CF5D625AFA81C8C57E"
+          },
+          {
+            "doctor": "김용준",
+            "dept": "소화기내과",
+            "external_id": "KYUH-GAS-1774BBE08861259E6693F5416EA02641"
+          },
+          {
+            "doctor": "김준영",
+            "dept": "소화기내과",
+            "external_id": "KYUH-GAS-A61BAECF2355D63949B5A2A034547CC5"
+          },
+          {
+            "doctor": "신유진",
+            "dept": "신장내과",
+            "external_id": "KYUH-NEP-B40B09D8808A4270513CA8FCDD59B697"
+          },
+          {
+            "doctor": "장민정",
+            "dept": "소아청소년과",
+            "external_id": "KYUH-PED-AFE9F469A6F5FBC86BED379D4EBBFC71"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\KYUH_20260504T131242.json"
   },
   {
     "code": "MEDIFIELD",
     "name": "메디필드한강병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:06:02.876619",
+    "started_at": "2026-05-04T13:12:30.897514",
     "verdict": "WARN",
     "elapsed": 0.0,
     "error": null,
@@ -1101,15 +4061,15 @@
         "msg": "의사 수 부족 (1명)"
       }
     ],
-    "snapshot": "scripts\\verification_snapshots\\MEDIFIELD_20260421T160602.json"
+    "snapshot": "scripts\\verification_snapshots\\MEDIFIELD_20260504T131230.json"
   },
   {
     "code": "METRO",
     "name": "메트로병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:06:02.884589",
+    "started_at": "2026-05-04T13:12:30.908485",
     "verdict": "WARN",
-    "elapsed": 0.0,
+    "elapsed": 1.1,
     "error": null,
     "n_doctors": 0,
     "n_departments": 0,
@@ -1125,283 +4085,1166 @@
         "msg": "진료과 0개"
       }
     ],
-    "snapshot": "scripts\\verification_snapshots\\METRO_20260421T160602.json"
+    "snapshot": "scripts\\verification_snapshots\\METRO_20260504T131232.json"
+  },
+  {
+    "code": "MIZMEDI",
+    "name": "미즈메디병원",
+    "region": "서울",
+    "started_at": "2026-05-04T13:12:32.019778",
+    "verdict": "WARN",
+    "elapsed": 36.6,
+    "error": null,
+    "n_doctors": 78,
+    "n_departments": 14,
+    "empty_schedule_ratio": 42.3,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 7명",
+        "samples": [
+          {
+            "doctor": "서보름",
+            "dept": "진단검사의학과",
+            "external_id": "MIZMEDI-204"
+          },
+          {
+            "doctor": "신형옥",
+            "dept": "영상의학과",
+            "external_id": "MIZMEDI-207"
+          },
+          {
+            "doctor": "국가건강검진",
+            "dept": "",
+            "external_id": "MIZMEDI-178"
+          },
+          {
+            "doctor": "배우리",
+            "dept": "가정의학과",
+            "external_id": "MIZMEDI-231"
+          },
+          {
+            "doctor": "윤인경",
+            "dept": "영상의학과",
+            "external_id": "MIZMEDI-722"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\MIZMEDI_20260504T131308.json"
   },
   {
     "code": "MJSM",
     "name": "명지성모병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:06:02.886584",
+    "started_at": "2026-05-04T13:12:42.040491",
     "verdict": "OK",
-    "elapsed": 0.7,
+    "elapsed": 0.9,
     "error": null,
     "n_doctors": 35,
     "n_departments": 14,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\MJSM_20260421T160603.json"
+    "snapshot": "scripts\\verification_snapshots\\MJSM_20260504T131242.json"
   },
   {
     "code": "MYONGJI",
     "name": "명지병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:06:03.601333",
-    "verdict": "OK",
-    "elapsed": 17.5,
+    "started_at": "2026-05-04T13:12:42.916763",
+    "verdict": "WARN",
+    "elapsed": 17.4,
     "error": null,
     "n_doctors": 160,
     "n_departments": 34,
     "empty_schedule_ratio": 30.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\MYONGJI_20260421T160621.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 49명",
+        "samples": [
+          {
+            "doctor": "박준리",
+            "dept": "가정의학과",
+            "external_id": "MYONGJI-3-FM014"
+          },
+          {
+            "doctor": "박희열",
+            "dept": "가정의학과",
+            "external_id": "MYONGJI-4-FM019"
+          },
+          {
+            "doctor": "안지연",
+            "dept": "내분비내과",
+            "external_id": "MYONGJI-12-EN009"
+          },
+          {
+            "doctor": "민진혜",
+            "dept": "마취통증의학과",
+            "external_id": "MYONGJI-143-AN002"
+          },
+          {
+            "doctor": "이용경",
+            "dept": "마취통증의학과",
+            "external_id": "MYONGJI-15-AN008"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\MYONGJI_20260504T131300.json"
   },
   {
     "code": "NCC",
     "name": "국립암센터",
     "region": "경기",
-    "started_at": "2026-04-21T16:06:18.633807",
+    "started_at": "2026-05-04T13:12:55.819906",
     "verdict": "OK",
-    "elapsed": 130.6,
+    "elapsed": 40.8,
     "error": null,
     "n_doctors": 90,
     "n_departments": 12,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\NCC_20260421T160829.json"
+    "snapshot": "scripts\\verification_snapshots\\NCC_20260504T131336.json"
   },
   {
     "code": "NHIMC",
     "name": "국민건강보험공단 일산병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:06:21.052646",
-    "verdict": "OK",
-    "elapsed": 38.9,
+    "started_at": "2026-05-04T13:13:00.348801",
+    "verdict": "WARN",
+    "elapsed": 51.1,
     "error": null,
     "n_doctors": 252,
     "n_departments": 37,
     "empty_schedule_ratio": 49.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\NHIMC_20260421T160659.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 21건",
+        "samples": [
+          {
+            "doctor": "김영식",
+            "dept": "비뇨의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "마감"
+          },
+          {
+            "doctor": "김영식",
+            "dept": "비뇨의학과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "마감"
+          },
+          {
+            "doctor": "최종원",
+            "dept": "소화기내과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "마감"
+          },
+          {
+            "doctor": "최윤이",
+            "dept": "소화기내과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "마감"
+          },
+          {
+            "doctor": "이지은",
+            "dept": "신경과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "마감"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 125명",
+        "samples": [
+          {
+            "doctor": "송선옥",
+            "dept": "내분비내과",
+            "external_id": "NHIMC-4-171"
+          },
+          {
+            "doctor": "안은경",
+            "dept": "마취통증의학과",
+            "external_id": "NHIMC-17-113"
+          },
+          {
+            "doctor": "강상화",
+            "dept": "마취통증의학과",
+            "external_id": "NHIMC-17-5"
+          },
+          {
+            "doctor": "조정구",
+            "dept": "마취통증의학과",
+            "external_id": "NHIMC-17-114"
+          },
+          {
+            "doctor": "이재호",
+            "dept": "마취통증의학과",
+            "external_id": "NHIMC-17-6"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\NHIMC_20260504T131351.json"
   },
   {
     "code": "NMC",
     "name": "국립중앙의료원",
     "region": "서울",
-    "started_at": "2026-04-21T16:06:59.931598",
+    "started_at": "2026-05-04T13:13:08.612235",
     "verdict": "OK",
-    "elapsed": 6.2,
+    "elapsed": 9.1,
     "error": null,
-    "n_doctors": 86,
+    "n_doctors": 87,
     "n_departments": 27,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\NMC_20260421T160706.json"
+    "snapshot": "scripts\\verification_snapshots\\NMC_20260504T131317.json"
   },
   {
     "code": "NPH",
     "name": "경찰병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:06.173164",
-    "verdict": "OK",
-    "elapsed": 1.3,
+    "started_at": "2026-05-04T13:13:17.689149",
+    "verdict": "WARN",
+    "elapsed": 1.4,
     "error": null,
     "n_doctors": 67,
     "n_departments": 29,
     "empty_schedule_ratio": 13.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\NPH_20260421T160707.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 9명",
+        "samples": [
+          {
+            "doctor": "박태희",
+            "dept": "진단검사의학과",
+            "external_id": "NPH-04000-박태희"
+          },
+          {
+            "doctor": "이정은",
+            "dept": "영상의학과",
+            "external_id": "NPH-03700-이정은"
+          },
+          {
+            "doctor": "김호균",
+            "dept": "영상의학과",
+            "external_id": "NPH-03700-김호균"
+          },
+          {
+            "doctor": "정지윤",
+            "dept": "병리과",
+            "external_id": "NPH-03900-정지윤"
+          },
+          {
+            "doctor": "이진효",
+            "dept": "응급의학과",
+            "external_id": "NPH-04200-이진효"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\NPH_20260504T131319.json"
   },
   {
     "code": "OSHANKOOK",
     "name": "오산한국병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:07:07.470023",
-    "verdict": "OK",
-    "elapsed": 4.8,
+    "started_at": "2026-05-04T13:13:19.124004",
+    "verdict": "WARN",
+    "elapsed": 5.4,
     "error": null,
-    "n_doctors": 49,
-    "n_departments": 21,
-    "empty_schedule_ratio": 16.3,
+    "n_doctors": 51,
+    "n_departments": 23,
+    "empty_schedule_ratio": 15.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\OSHANKOOK_20260421T160712.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 8명",
+        "samples": [
+          {
+            "doctor": "�����������명��",
+            "dept": "��멸낵",
+            "external_id": "OSHANKOOK-727"
+          },
+          {
+            "doctor": "議�������蹂�������",
+            "dept": "���寃쎌�멸낵",
+            "external_id": "OSHANKOOK-639"
+          },
+          {
+            "doctor": "誘����吏���명��",
+            "dept": "������泥�������怨�",
+            "external_id": "OSHANKOOK-729"
+          },
+          {
+            "doctor": "怨����������湲���ㅼ��",
+            "dept": "���湲�������怨�",
+            "external_id": "OSHANKOOK-642"
+          },
+          {
+            "doctor": "媛�������怨쇱��",
+            "dept": "���湲�������怨�",
+            "external_id": "OSHANKOOK-643"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\OSHANKOOK_20260504T131324.json"
+  },
+  {
+    "code": "PAIKBS",
+    "name": "인제대학교 부산백병원",
+    "region": "부산",
+    "started_at": "2026-05-04T13:13:24.535166",
+    "verdict": "WARN",
+    "elapsed": 2.6,
+    "error": null,
+    "n_doctors": 361,
+    "n_departments": 75,
+    "empty_schedule_ratio": 10.8,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 39명",
+        "samples": [
+          {
+            "doctor": "이동준",
+            "dept": "권역모자의료센터",
+            "external_id": "PAIKBS-2109"
+          },
+          {
+            "doctor": "김소정",
+            "dept": "권역모자의료센터",
+            "external_id": "PAIKBS-2111"
+          },
+          {
+            "doctor": "배우종",
+            "dept": "마취통증의학과",
+            "external_id": "PAIKBS-2087"
+          },
+          {
+            "doctor": "김현태",
+            "dept": "마취통증의학과",
+            "external_id": "PAIKBS-2215"
+          },
+          {
+            "doctor": "최석환",
+            "dept": "마취통증의학과",
+            "external_id": "PAIKBS-2216"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\PAIKBS_20260504T131327.json"
   },
   {
     "code": "PARK",
     "name": "PMC박병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:07:10.843065",
+    "started_at": "2026-05-04T13:13:27.160994",
     "verdict": "OK",
-    "elapsed": 2.5,
+    "elapsed": 2.8,
     "error": null,
     "n_doctors": 14,
     "n_departments": 8,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\PARK_20260421T160713.json"
+    "snapshot": "scripts\\verification_snapshots\\PARK_20260504T131329.json"
+  },
+  {
+    "code": "PNUH",
+    "name": "부산대학교병원",
+    "region": "부산",
+    "started_at": "2026-05-04T13:13:29.904700",
+    "verdict": "WARN",
+    "elapsed": 20.9,
+    "error": null,
+    "n_doctors": 429,
+    "n_departments": 51,
+    "empty_schedule_ratio": 26.8,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 115명",
+        "samples": [
+          {
+            "doctor": "이문원",
+            "dept": "소화기내과",
+            "external_id": "PNUH-I1-97776"
+          },
+          {
+            "doctor": "김아란",
+            "dept": "류마티스내과",
+            "external_id": "PNUH-I8-118913"
+          },
+          {
+            "doctor": "김수홍",
+            "dept": "소아외과",
+            "external_id": "PNUH-GS2-2013198"
+          },
+          {
+            "doctor": "이숙민",
+            "dept": "신경과",
+            "external_id": "PNUH-NL-127004"
+          },
+          {
+            "doctor": "김영대",
+            "dept": "심장혈관흉부외과",
+            "external_id": "PNUH-TS-041164"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\PNUH_20260504T131350.json"
+  },
+  {
+    "code": "PNUYH",
+    "name": "양산부산대학교병원",
+    "region": "부산",
+    "started_at": "2026-05-04T13:13:34.101251",
+    "verdict": "WARN",
+    "elapsed": 6.0,
+    "error": null,
+    "n_doctors": 231,
+    "n_departments": 29,
+    "empty_schedule_ratio": 29.4,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 68명",
+        "samples": [
+          {
+            "doctor": "박은주",
+            "dept": "가정의학과",
+            "external_id": "PNUYH-FMC-2009096"
+          },
+          {
+            "doctor": "이영인",
+            "dept": "가정의학과",
+            "external_id": "PNUYH-FMC-2014083"
+          },
+          {
+            "doctor": "배지현",
+            "dept": "내분비대사내과",
+            "external_id": "PNUYH-EDC-2018266"
+          },
+          {
+            "doctor": "이승희",
+            "dept": "내분비대사내과",
+            "external_id": "PNUYH-EDC-2019322"
+          },
+          {
+            "doctor": "박상일",
+            "dept": "방사선종양학과",
+            "external_id": "PNUYH-RO-2025398"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\PNUYH_20260504T131340.json"
   },
   {
     "code": "PTSM",
     "name": "평택성모병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:07:12.268009",
-    "verdict": "OK",
-    "elapsed": 10.7,
+    "started_at": "2026-05-04T13:13:36.761359",
+    "verdict": "WARN",
+    "elapsed": 13.2,
     "error": null,
-    "n_doctors": 68,
+    "n_doctors": 69,
     "n_departments": 23,
-    "empty_schedule_ratio": 44.1,
+    "empty_schedule_ratio": 42.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\PTSM_20260421T160722.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 29명",
+        "samples": [
+          {
+            "doctor": "배상수",
+            "dept": "내시경센터",
+            "external_id": "PTSM-1753170846"
+          },
+          {
+            "doctor": "김보혜",
+            "dept": "내시경센터",
+            "external_id": "PTSM-1753170823"
+          },
+          {
+            "doctor": "서원우",
+            "dept": "내시경센터",
+            "external_id": "PTSM-1753170865"
+          },
+          {
+            "doctor": "전병민",
+            "dept": "내시경센터",
+            "external_id": "PTSM-1753170882"
+          },
+          {
+            "doctor": "박진민",
+            "dept": "내시경센터",
+            "external_id": "PTSM-1756947626"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\PTSM_20260504T131349.json"
+  },
+  {
+    "code": "SARANG",
+    "name": "사랑의병원",
+    "region": "경기",
+    "started_at": "2026-05-04T13:13:40.210971",
+    "verdict": "WARN",
+    "elapsed": 0.7,
+    "error": null,
+    "n_doctors": 41,
+    "n_departments": 12,
+    "empty_schedule_ratio": 29.3,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 12명",
+        "samples": [
+          {
+            "doctor": "박지현",
+            "dept": "마취통증의학과",
+            "external_id": "SARANG-79c129a123"
+          },
+          {
+            "doctor": "서동혁",
+            "dept": "마취통증의학과",
+            "external_id": "SARANG-47abdef19b"
+          },
+          {
+            "doctor": "한세희",
+            "dept": "마취통증의학과",
+            "external_id": "SARANG-159e8acb41"
+          },
+          {
+            "doctor": "한성민",
+            "dept": "응급의학과",
+            "external_id": "SARANG-c130507953"
+          },
+          {
+            "doctor": "배준일",
+            "dept": "응급의학과",
+            "external_id": "SARANG-2c114807ab"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SARANG_20260504T131340.json"
   },
   {
     "code": "SCHBC",
     "name": "부천순천향병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:07:13.311176",
-    "verdict": "OK",
-    "elapsed": 25.4,
+    "started_at": "2026-05-04T13:13:40.869666",
+    "verdict": "WARN",
+    "elapsed": 145.6,
     "error": null,
-    "n_doctors": 106,
-    "n_departments": 15,
-    "empty_schedule_ratio": 31.1,
+    "n_doctors": 240,
+    "n_departments": 37,
+    "empty_schedule_ratio": 30.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SCHBC_20260421T160738.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 89건",
+        "samples": [
+          {
+            "doctor": "김형철",
+            "dept": "간담췌외과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김철희",
+            "dept": "내분비대사내과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김철희",
+            "dept": "내분비대사내과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "목지오",
+            "dept": "내분비대사내과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "목지오",
+            "dept": "내분비대사내과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 73명",
+        "samples": [
+          {
+            "doctor": "최덕현",
+            "dept": "내분비대사내과",
+            "external_id": "SCHBC-406"
+          },
+          {
+            "doctor": "이정석",
+            "dept": "마취통증의학과",
+            "external_id": "SCHBC-791"
+          },
+          {
+            "doctor": "진희철",
+            "dept": "마취통증의학과",
+            "external_id": "SCHBC-790"
+          },
+          {
+            "doctor": "채원석",
+            "dept": "마취통증의학과",
+            "external_id": "SCHBC-789"
+          },
+          {
+            "doctor": "김상현",
+            "dept": "마취통증의학과",
+            "external_id": "SCHBC-788"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SCHBC_20260504T131606.json"
   },
   {
     "code": "SCHMC",
     "name": "순천향대학교서울병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:22.927437",
-    "verdict": "OK",
-    "elapsed": 16.3,
+    "started_at": "2026-05-04T13:13:49.971377",
+    "verdict": "WARN",
+    "elapsed": 148.3,
     "error": null,
-    "n_doctors": 68,
-    "n_departments": 12,
-    "empty_schedule_ratio": 41.2,
+    "n_doctors": 247,
+    "n_departments": 36,
+    "empty_schedule_ratio": 32.8,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SCHMC_20260421T160739.json"
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 137건",
+        "samples": [
+          {
+            "doctor": "유병욱",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "조현",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "조현",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "지영민",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "백수아",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 81명",
+        "samples": [
+          {
+            "doctor": "곽영환",
+            "dept": "가정의학과",
+            "external_id": "SCHMC-125"
+          },
+          {
+            "doctor": "곽영환",
+            "dept": "국제진료센터",
+            "external_id": "SCHMC-3566"
+          },
+          {
+            "doctor": "김상호",
+            "dept": "마취통증의학과",
+            "external_id": "SCHMC-757"
+          },
+          {
+            "doctor": "정지원",
+            "dept": "마취통증의학과",
+            "external_id": "SCHMC-385"
+          },
+          {
+            "doctor": "김문규",
+            "dept": "마취통증의학과",
+            "external_id": "SCHMC-1264"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SCHMC_20260504T131618.json"
+  },
+  {
+    "code": "SCSUH",
+    "name": "신천연합병원",
+    "region": "인천",
+    "started_at": "2026-05-04T13:13:50.765165",
+    "verdict": "WARN",
+    "elapsed": 6.7,
+    "error": null,
+    "n_doctors": 16,
+    "n_departments": 12,
+    "empty_schedule_ratio": 6.2,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 37건",
+        "samples": [
+          {
+            "doctor": "남준철",
+            "dept": "외과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "배수성",
+            "dept": "치과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "오경중",
+            "dept": "영상의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "홍미정",
+            "dept": "마취통증의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "윤창은",
+            "dept": "진단검사의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 1명",
+        "samples": [
+          {
+            "doctor": "나현진",
+            "dept": "돌봄의료센터",
+            "external_id": "SCSUH-72"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SCSUH_20260504T131357.json"
+  },
+  {
+    "code": "SCWH",
+    "name": "삼성창원병원",
+    "region": "경남",
+    "started_at": "2026-05-04T13:13:51.508571",
+    "verdict": "WARN",
+    "elapsed": 12.1,
+    "error": null,
+    "n_doctors": 176,
+    "n_departments": 34,
+    "empty_schedule_ratio": 31.8,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 89건",
+        "samples": [
+          {
+            "doctor": "김광민",
+            "dept": "소화기내과",
+            "date": "2026-06-06",
+            "slot": "morning",
+            "status": "마감"
+          },
+          {
+            "doctor": "고광철",
+            "dept": "소화기내과",
+            "date": "2026-06-06",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "심상군",
+            "dept": "소화기내과",
+            "date": "2026-06-06",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "이정원",
+            "dept": "소화기내과",
+            "date": "2026-06-06",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "성보람",
+            "dept": "소화기내과",
+            "date": "2026-06-06",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 56명",
+        "samples": [
+          {
+            "doctor": "박선영",
+            "dept": "신장내과",
+            "external_id": "SCWH-303"
+          },
+          {
+            "doctor": "옥지훈",
+            "dept": "산부인과",
+            "external_id": "SCWH-77"
+          },
+          {
+            "doctor": "전우영",
+            "dept": "소아청소년과",
+            "external_id": "SCWH-202"
+          },
+          {
+            "doctor": "김주영",
+            "dept": "소아청소년과",
+            "external_id": "SCWH-284"
+          },
+          {
+            "doctor": "최민환",
+            "dept": "소아청소년과",
+            "external_id": "SCWH-104"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SCWH_20260504T131403.json"
   },
   {
     "code": "SERAN",
     "name": "세란병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:38.754038",
+    "started_at": "2026-05-04T13:13:57.447410",
     "verdict": "OK",
-    "elapsed": 0.2,
+    "elapsed": 0.4,
     "error": null,
     "n_doctors": 12,
     "n_departments": 2,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SERAN_20260421T160738.json"
+    "snapshot": "scripts\\verification_snapshots\\SERAN_20260504T131357.json"
   },
   {
     "code": "SEVERANCE",
     "name": "세브란스병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:38.996376",
+    "started_at": "2026-05-04T13:13:57.868499",
     "verdict": "OK",
-    "elapsed": 7.2,
+    "elapsed": 7.4,
     "error": null,
-    "n_doctors": 393,
+    "n_doctors": 395,
     "n_departments": 40,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SEVERANCE_20260421T160746.json"
+    "snapshot": "scripts\\verification_snapshots\\SEVERANCE_20260504T131405.json"
   },
   {
     "code": "SGPAIK",
     "name": "인제대학교 상계백병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:39.192273",
-    "verdict": "OK",
-    "elapsed": 2.1,
+    "started_at": "2026-05-04T13:14:03.650535",
+    "verdict": "WARN",
+    "elapsed": 2.0,
     "error": null,
-    "n_doctors": 235,
+    "n_doctors": 237,
     "n_departments": 67,
-    "empty_schedule_ratio": 17.9,
+    "empty_schedule_ratio": 18.1,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SGPAIK_20260421T160741.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 43명",
+        "samples": [
+          {
+            "doctor": "김계민",
+            "dept": "마취통증의학과",
+            "external_id": "SGPAIK-1391"
+          },
+          {
+            "doctor": "이상석",
+            "dept": "마취통증의학과",
+            "external_id": "SGPAIK-1393"
+          },
+          {
+            "doctor": "유병훈",
+            "dept": "마취통증의학과",
+            "external_id": "SGPAIK-1392"
+          },
+          {
+            "doctor": "임윤희",
+            "dept": "마취통증의학과",
+            "external_id": "SGPAIK-1522"
+          },
+          {
+            "doctor": "전인정",
+            "dept": "마취통증의학과",
+            "external_id": "SGPAIK-1394"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SGPAIK_20260504T131405.json"
   },
   {
     "code": "SHH",
     "name": "서울현대병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:41.258612",
-    "verdict": "OK",
+    "started_at": "2026-05-04T13:14:05.248403",
+    "verdict": "WARN",
     "elapsed": 0.2,
     "error": null,
-    "n_doctors": 23,
+    "n_doctors": 22,
     "n_departments": 13,
-    "empty_schedule_ratio": 17.4,
+    "empty_schedule_ratio": 18.2,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SHH_20260421T160741.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 4명",
+        "samples": [
+          {
+            "doctor": "이주현",
+            "dept": "마취통증의학과",
+            "external_id": "SHH-18"
+          },
+          {
+            "doctor": "신지예",
+            "dept": "검진센터＆가정의학과",
+            "external_id": "SHH-22"
+          },
+          {
+            "doctor": "이쌍현",
+            "dept": "응급실",
+            "external_id": "SHH-26"
+          },
+          {
+            "doctor": "이창훈",
+            "dept": "응급실",
+            "external_id": "SHH-29"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SHH_20260504T131405.json"
   },
   {
     "code": "SMC",
     "name": "삼성서울병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:41.467875",
-    "verdict": "OK",
-    "elapsed": 43.9,
+    "started_at": "2026-05-04T13:14:05.432461",
+    "verdict": "WARN",
+    "elapsed": 43.7,
     "error": null,
-    "n_doctors": 730,
+    "n_doctors": 729,
     "n_departments": 57,
-    "empty_schedule_ratio": 40.8,
+    "empty_schedule_ratio": 40.2,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SMC_20260421T160825.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 293명",
+        "samples": [
+          {
+            "doctor": "이승후",
+            "dept": "감염내과",
+            "external_id": "SMC-3508"
+          },
+          {
+            "doctor": "변성훈",
+            "dept": "소화기내과",
+            "external_id": "SMC-3539"
+          },
+          {
+            "doctor": "김지연",
+            "dept": "소화기내과",
+            "external_id": "SMC-3538"
+          },
+          {
+            "doctor": "이나경",
+            "dept": "소화기내과",
+            "external_id": "SMC-3768"
+          },
+          {
+            "doctor": "윤도경",
+            "dept": "소화기내과",
+            "external_id": "SMC-3772"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SMC_20260504T131449.json"
   },
   {
     "code": "SMC2",
     "name": "서울의료원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:46.163155",
-    "verdict": "OK",
-    "elapsed": 5.0,
+    "started_at": "2026-05-04T13:14:05.697751",
+    "verdict": "WARN",
+    "elapsed": 4.1,
     "error": null,
-    "n_doctors": 164,
+    "n_doctors": 160,
     "n_departments": 37,
-    "empty_schedule_ratio": 28.0,
+    "empty_schedule_ratio": 26.9,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SMC2_20260421T160751.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 43명",
+        "samples": [
+          {
+            "doctor": "이수형",
+            "dept": "건강증진센터",
+            "external_id": "SMC2-HC-02353M"
+          },
+          {
+            "doctor": "강민승",
+            "dept": "건강증진센터",
+            "external_id": "SMC2-HC-02127"
+          },
+          {
+            "doctor": "윤루비",
+            "dept": "건강증진센터",
+            "external_id": "SMC2-HC-29419"
+          },
+          {
+            "doctor": "서지수",
+            "dept": "건강증진센터",
+            "external_id": "SMC2-HC-40001"
+          },
+          {
+            "doctor": "김현목",
+            "dept": "내분비대사내과",
+            "external_id": "SMC2-IME-04936"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SMC2_20260504T131409.json"
   },
   {
     "code": "SMGDB",
     "name": "서울특별시 동부병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:07:51.206620",
-    "verdict": "OK",
-    "elapsed": 0.1,
+    "started_at": "2026-05-04T13:14:09.824950",
+    "verdict": "WARN",
+    "elapsed": 0.2,
     "error": null,
     "n_doctors": 28,
     "n_departments": 16,
     "empty_schedule_ratio": 10.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SMGDB_20260421T160751.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 3명",
+        "samples": [
+          {
+            "doctor": "이계숙",
+            "dept": "진단검사의학과",
+            "external_id": "SMGDB-진단검사의학과-이계숙"
+          },
+          {
+            "doctor": "권양숙",
+            "dept": "영상의학과",
+            "external_id": "SMGDB-영상의학과-권양숙"
+          },
+          {
+            "doctor": "이창준",
+            "dept": "영상의학과",
+            "external_id": "SMGDB-영상의학과-이창준"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SMGDB_20260504T131410.json"
   },
   {
     "code": "SNJA",
     "name": "성남중앙병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:07:51.330422",
+    "started_at": "2026-05-04T13:14:10.014357",
     "verdict": "WARN",
     "elapsed": 0.0,
     "error": null,
@@ -1419,291 +5262,1083 @@
         "msg": "진료과 0개"
       }
     ],
-    "snapshot": "scripts\\verification_snapshots\\SNJA_20260421T160751.json"
+    "snapshot": "scripts\\verification_snapshots\\SNJA_20260504T131410.json"
   },
   {
     "code": "SNJUNG",
     "name": "성남정병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:07:51.331425",
+    "started_at": "2026-05-04T13:14:10.018346",
     "verdict": "OK",
-    "elapsed": 9.5,
+    "elapsed": 9.7,
     "error": null,
     "n_doctors": 23,
     "n_departments": 11,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SNJUNG_20260421T160800.json"
+    "snapshot": "scripts\\verification_snapshots\\SNJUNG_20260504T131419.json"
   },
   {
     "code": "SNMC",
     "name": "서울특별시 서남병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:08:00.567539",
-    "verdict": "OK",
-    "elapsed": 3.6,
+    "started_at": "2026-05-04T13:14:19.721208",
+    "verdict": "WARN",
+    "elapsed": 4.6,
     "error": null,
     "n_doctors": 39,
     "n_departments": 22,
     "empty_schedule_ratio": 10.3,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SNMC_20260421T160804.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 4명",
+        "samples": [
+          {
+            "doctor": "김은정",
+            "dept": "마취통증의학과 · 통증클리닉",
+            "external_id": "SNMC-92-34"
+          },
+          {
+            "doctor": "이정민",
+            "dept": "마취통증의학과 · 통증클리닉",
+            "external_id": "SNMC-265-34"
+          },
+          {
+            "doctor": "강한나",
+            "dept": "병리과",
+            "external_id": "SNMC-213-60"
+          },
+          {
+            "doctor": "정채림",
+            "dept": "진단검사의학과",
+            "external_id": "SNMC-42-35"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SNMC_20260504T131424.json"
   },
   {
     "code": "SNMCC",
     "name": "성남시의료원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:00.790978",
-    "verdict": "OK",
-    "elapsed": 26.7,
+    "started_at": "2026-05-04T13:14:24.654373",
+    "verdict": "WARN",
+    "elapsed": 15.3,
     "error": null,
-    "n_doctors": 75,
-    "n_departments": 29,
-    "empty_schedule_ratio": 46.7,
+    "n_doctors": 0,
+    "n_departments": 0,
+    "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SNMCC_20260421T160827.json"
+    "warnings": [
+      {
+        "check": "C2",
+        "msg": "의사 수 부족 (0명)"
+      },
+      {
+        "check": "C3",
+        "msg": "진료과 0개"
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SNMCC_20260504T131439.json"
   },
   {
     "code": "SNUBH",
     "name": "분당서울대병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:04.127592",
-    "verdict": "OK",
-    "elapsed": 11.8,
+    "started_at": "2026-05-04T13:14:39.913475",
+    "verdict": "WARN",
+    "elapsed": 9.3,
     "error": null,
-    "n_doctors": 392,
-    "n_departments": 31,
-    "empty_schedule_ratio": 2.6,
+    "n_doctors": 395,
+    "n_departments": 30,
+    "empty_schedule_ratio": 2.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SNUBH_20260421T160815.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 4명",
+        "samples": [
+          {
+            "doctor": "임상강사(족부)",
+            "dept": "정형외과",
+            "external_id": "SNUBH-JOS12"
+          },
+          {
+            "doctor": "임상강사(슬관절1)",
+            "dept": "정형외과",
+            "external_id": "SNUBH-JOS06"
+          },
+          {
+            "doctor": "임상강사(수부)",
+            "dept": "정형외과",
+            "external_id": "SNUBH-JRCFF"
+          },
+          {
+            "doctor": "임상강사(견관절)",
+            "dept": "정형외과",
+            "external_id": "SNUBH-JRCFA"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SNUBH_20260504T131449.json"
   },
   {
     "code": "SNUH",
     "name": "서울대학교병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:08:15.989201",
-    "verdict": "OK",
-    "elapsed": 2.7,
+    "started_at": "2026-05-04T13:14:49.169346",
+    "verdict": "WARN",
+    "elapsed": 2.0,
     "error": null,
-    "n_doctors": 483,
+    "n_doctors": 482,
     "n_departments": 91,
-    "empty_schedule_ratio": 1.4,
+    "empty_schedule_ratio": 1.5,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SNUH_20260421T160818.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 7명",
+        "samples": [
+          {
+            "doctor": "김중엽",
+            "dept": "호흡기내과",
+            "external_id": "SNUH-김중엽"
+          },
+          {
+            "doctor": "박상혁",
+            "dept": "간담췌외과",
+            "external_id": "SNUH-박상혁"
+          },
+          {
+            "doctor": "이호진",
+            "dept": "마취통증의학과",
+            "external_id": "SNUH-이호진"
+          },
+          {
+            "doctor": "윤수지",
+            "dept": "마취통증의학과",
+            "external_id": "SNUH-윤수지"
+          },
+          {
+            "doctor": "윤수혁",
+            "dept": "마취통증의학과",
+            "external_id": "SNUH-윤수혁"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SNUH_20260504T131451.json"
   },
   {
     "code": "SRCH",
     "name": "서울적십자병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:08:18.653955",
-    "verdict": "OK",
-    "elapsed": 8.8,
+    "started_at": "2026-05-04T13:14:49.220574",
+    "verdict": "WARN",
+    "elapsed": 8.2,
     "error": null,
     "n_doctors": 41,
     "n_departments": 24,
     "empty_schedule_ratio": 4.9,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SRCH_20260421T160827.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 2명",
+        "samples": [
+          {
+            "doctor": "전고운",
+            "dept": "마취통증의학과",
+            "external_id": "SRCH-C10-전고운"
+          },
+          {
+            "doctor": "서혜정",
+            "dept": "마취통증의학과",
+            "external_id": "SRCH-C10-서혜정"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SRCH_20260504T131457.json"
   },
   {
     "code": "SSHH",
     "name": "서울성심병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:08:25.441691",
-    "verdict": "OK",
-    "elapsed": 0.3,
+    "started_at": "2026-05-04T13:14:51.161248",
+    "verdict": "WARN",
+    "elapsed": 0.2,
     "error": null,
     "n_doctors": 29,
     "n_departments": 12,
     "empty_schedule_ratio": 6.9,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SSHH_20260421T160825.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 2명",
+        "samples": [
+          {
+            "doctor": "조용현",
+            "dept": "마취통증의학과",
+            "external_id": "SSHH-m0190421"
+          },
+          {
+            "doctor": "신옥영",
+            "dept": "마취통증의학과",
+            "external_id": "SSHH-마취통증의학과-신옥영"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SSHH_20260504T131451.json"
   },
   {
     "code": "SUNGAE",
     "name": "성애병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:08:25.705400",
-    "verdict": "OK",
-    "elapsed": 4.8,
+    "started_at": "2026-05-04T13:14:51.331221",
+    "verdict": "WARN",
+    "elapsed": 5.2,
     "error": null,
     "n_doctors": 59,
     "n_departments": 26,
-    "empty_schedule_ratio": 15.3,
+    "empty_schedule_ratio": 10.2,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SUNGAE_20260421T160830.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 6명",
+        "samples": [
+          {
+            "doctor": "신윤재",
+            "dept": "소화기내과",
+            "external_id": "SUNGAE-SH1591-DT3199"
+          },
+          {
+            "doctor": "한지선",
+            "dept": "소화기내과",
+            "external_id": "SUNGAE-SH1591-DT3207"
+          },
+          {
+            "doctor": "이진영",
+            "dept": "재활의학과",
+            "external_id": "SUNGAE-SH1614-DT2503"
+          },
+          {
+            "doctor": "유지혜",
+            "dept": "정신건강의학과",
+            "external_id": "SUNGAE-SH1604-DT2474"
+          },
+          {
+            "doctor": "김영진",
+            "dept": "진단검사의학과",
+            "external_id": "SUNGAE-SH1606-DT2480"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SUNGAE_20260504T131456.json"
   },
   {
     "code": "SWDS",
     "name": "수원덕산병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:27.471034",
-    "verdict": "OK",
+    "started_at": "2026-05-04T13:14:56.566020",
+    "verdict": "WARN",
     "elapsed": 2.0,
     "error": null,
     "n_doctors": 52,
     "n_departments": 29,
-    "empty_schedule_ratio": 38.5,
+    "empty_schedule_ratio": 40.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SWDS_20260421T160829.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 21명",
+        "samples": [
+          {
+            "doctor": "김재욱",
+            "dept": "내과",
+            "external_id": "SWDS-233"
+          },
+          {
+            "doctor": "김대희",
+            "dept": "마취통증의학과",
+            "external_id": "SWDS-177"
+          },
+          {
+            "doctor": "윤두균",
+            "dept": "마취통증의학과",
+            "external_id": "SWDS-222"
+          },
+          {
+            "doctor": "이종석",
+            "dept": "마취통증의학과",
+            "external_id": "SWDS-225"
+          },
+          {
+            "doctor": "장용수",
+            "dept": "부인과",
+            "external_id": "SWDS-218"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SWDS_20260504T131458.json"
   },
   {
     "code": "SWOORI",
     "name": "포천우리병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:27.476021",
-    "verdict": "OK",
-    "elapsed": 0.4,
+    "started_at": "2026-05-04T13:14:57.427383",
+    "verdict": "WARN",
+    "elapsed": 0.2,
     "error": null,
     "n_doctors": 63,
     "n_departments": 26,
     "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SWOORI_20260421T160827.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 63명",
+        "samples": [
+          {
+            "doctor": "장진",
+            "dept": "정형외과",
+            "external_id": "SWOORI-1-jangjin"
+          },
+          {
+            "doctor": "김승환",
+            "dept": "제2정형외과",
+            "external_id": "SWOORI-1-kimsh"
+          },
+          {
+            "doctor": "김응식",
+            "dept": "정형외과",
+            "external_id": "SWOORI-1-kimes"
+          },
+          {
+            "doctor": "강전형",
+            "dept": "정형외과",
+            "external_id": "SWOORI-1-kangjh"
+          },
+          {
+            "doctor": "고영록",
+            "dept": "정형외과",
+            "external_id": "SWOORI-1-koyr"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SWOORI_20260504T131457.json"
   },
   {
     "code": "SYMC",
     "name": "삼육서울병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:08:27.908700",
-    "verdict": "OK",
-    "elapsed": 2.6,
+    "started_at": "2026-05-04T13:14:57.685345",
+    "verdict": "WARN",
+    "elapsed": 0.5,
     "error": null,
-    "n_doctors": 90,
+    "n_doctors": 89,
     "n_departments": 30,
-    "empty_schedule_ratio": 16.7,
+    "empty_schedule_ratio": 18.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\SYMC_20260421T160830.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 16명",
+        "samples": [
+          {
+            "doctor": "조혜제",
+            "dept": "병리과",
+            "external_id": "SYMC-10203"
+          },
+          {
+            "doctor": "김규영",
+            "dept": "소화기내과",
+            "external_id": "SYMC-10420"
+          },
+          {
+            "doctor": "김경욱",
+            "dept": "소화기내과",
+            "external_id": "SYMC-10421"
+          },
+          {
+            "doctor": "임필용",
+            "dept": "소화기내과",
+            "external_id": "SYMC-10422"
+          },
+          {
+            "doctor": "최하나",
+            "dept": "신장내과",
+            "external_id": "SYMC-10423"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\SYMC_20260504T131458.json"
   },
   {
     "code": "UEMC",
     "name": "의정부을지대학교병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:29.252757",
-    "verdict": "OK",
-    "elapsed": 5.2,
+    "started_at": "2026-05-04T13:14:58.212514",
+    "verdict": "WARN",
+    "elapsed": 3.7,
     "error": null,
     "n_doctors": 173,
     "n_departments": 39,
     "empty_schedule_ratio": 8.7,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\UEMC_20260421T160834.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 15명",
+        "samples": [
+          {
+            "doctor": "김정환",
+            "dept": "가정의학과",
+            "external_id": "UEMC-ABPAAA-208168"
+          },
+          {
+            "doctor": "김지희",
+            "dept": "마취통증의학과",
+            "external_id": "UEMC-ABVAAA-20231580"
+          },
+          {
+            "doctor": "이근수",
+            "dept": "마취통증의학과",
+            "external_id": "UEMC-ABVAAA-20210386"
+          },
+          {
+            "doctor": "임현재",
+            "dept": "마취통증의학과",
+            "external_id": "UEMC-ABVAAA-20240001"
+          },
+          {
+            "doctor": "최서문",
+            "dept": "마취통증의학과",
+            "external_id": "UEMC-ABVAAA-20241199"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\UEMC_20260504T131501.json"
   },
   {
     "code": "UPAIK",
     "name": "의정부백병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:29.427057",
-    "verdict": "OK",
-    "elapsed": 0.9,
+    "started_at": "2026-05-04T13:14:58.508293",
+    "verdict": "WARN",
+    "elapsed": 0.8,
     "error": null,
     "n_doctors": 21,
     "n_departments": 14,
     "empty_schedule_ratio": 28.6,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\UPAIK_20260421T160830.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 6명",
+        "samples": [
+          {
+            "doctor": "이정우",
+            "dept": "응급의학과",
+            "external_id": "UPAIK-12-1"
+          },
+          {
+            "doctor": "김상희",
+            "dept": "응급의학과",
+            "external_id": "UPAIK-12-2"
+          },
+          {
+            "doctor": "박기영",
+            "dept": "응급의학과",
+            "external_id": "UPAIK-12-3"
+          },
+          {
+            "doctor": "박삼열",
+            "dept": "응급의학과",
+            "external_id": "UPAIK-12-4"
+          },
+          {
+            "doctor": "정지우",
+            "dept": "영상의학과",
+            "external_id": "UPAIK-14-1"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\UPAIK_20260504T131459.json"
+  },
+  {
+    "code": "UUH",
+    "name": "울산대학교병원",
+    "region": "울산",
+    "started_at": "2026-05-04T13:14:59.283880",
+    "verdict": "WARN",
+    "elapsed": 71.9,
+    "error": null,
+    "n_doctors": 260,
+    "n_departments": 36,
+    "empty_schedule_ratio": 33.1,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 362건",
+        "samples": [
+          {
+            "doctor": "정태흠",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "정태흠",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "정태흠",
+            "dept": "가정의학과",
+            "date": "2026-05-24",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "황혜아",
+            "dept": "가정의학과",
+            "date": "2026-05-24",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "전재범",
+            "dept": "감염내과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 59명",
+        "samples": [
+          {
+            "doctor": "김보경",
+            "dept": "건강의학과",
+            "external_id": "UUH-438"
+          },
+          {
+            "doctor": "김선정",
+            "dept": "건강의학과",
+            "external_id": "UUH-303"
+          },
+          {
+            "doctor": "김재영",
+            "dept": "건강의학과",
+            "external_id": "UUH-119"
+          },
+          {
+            "doctor": "성시정",
+            "dept": "건강의학과",
+            "external_id": "UUH-531"
+          },
+          {
+            "doctor": "이지민",
+            "dept": "건강의학과",
+            "external_id": "UUH-569"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\UUH_20260504T131611.json"
   },
   {
     "code": "VHS",
     "name": "중앙보훈병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:08:30.288535",
-    "verdict": "OK",
-    "elapsed": 4.3,
+    "started_at": "2026-05-04T13:15:01.921831",
+    "verdict": "WARN",
+    "elapsed": 3.0,
     "error": null,
-    "n_doctors": 170,
+    "n_doctors": 169,
     "n_departments": 36,
-    "empty_schedule_ratio": 14.7,
+    "empty_schedule_ratio": 14.2,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\VHS_20260421T160834.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 24명",
+        "samples": [
+          {
+            "doctor": "전희정",
+            "dept": "마취통증의학과(통증센터)",
+            "external_id": "VHS-104667"
+          },
+          {
+            "doctor": "조삼순",
+            "dept": "마취통증의학과(통증센터)",
+            "external_id": "VHS-104950"
+          },
+          {
+            "doctor": "김민아",
+            "dept": "병리과",
+            "external_id": "VHS-183338"
+          },
+          {
+            "doctor": "이미지",
+            "dept": "병리과",
+            "external_id": "VHS-114849"
+          },
+          {
+            "doctor": "이용상",
+            "dept": "치과병원 보철과",
+            "external_id": "VHS-109128"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\VHS_20260504T131504.json"
   },
   {
     "code": "WILLS",
     "name": "윌스기념병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:30.514322",
-    "verdict": "OK",
-    "elapsed": 23.4,
+    "started_at": "2026-05-04T13:15:04.967562",
+    "verdict": "WARN",
+    "elapsed": 28.6,
     "error": null,
-    "n_doctors": 90,
+    "n_doctors": 92,
     "n_departments": 23,
-    "empty_schedule_ratio": 25.6,
+    "empty_schedule_ratio": 23.9,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\WILLS_20260421T160853.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 22명",
+        "samples": [
+          {
+            "doctor": "안재범",
+            "dept": "척추센터",
+            "external_id": "WILLS-608"
+          },
+          {
+            "doctor": "이한규",
+            "dept": "척추센터",
+            "external_id": "WILLS-632"
+          },
+          {
+            "doctor": "윤임준",
+            "dept": "척추센터",
+            "external_id": "WILLS-631"
+          },
+          {
+            "doctor": "심정보",
+            "dept": "척추센터",
+            "external_id": "WILLS-703"
+          },
+          {
+            "doctor": "이원재",
+            "dept": "척추센터",
+            "external_id": "WILLS-702"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\WILLS_20260504T131533.json"
   },
   {
     "code": "WKGH",
     "name": "원광종합병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:30.567242",
-    "verdict": "OK",
-    "elapsed": 0.2,
+    "started_at": "2026-05-04T13:15:33.544522",
+    "verdict": "WARN",
+    "elapsed": 0.1,
     "error": null,
-    "n_doctors": 17,
-    "n_departments": 13,
+    "n_doctors": 15,
+    "n_departments": 12,
     "empty_schedule_ratio": 0.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\WKGH_20260421T160830.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 15명",
+        "samples": [
+          {
+            "doctor": "이경환",
+            "dept": "내과",
+            "external_id": "WKGH-881293de25"
+          },
+          {
+            "doctor": "손명진",
+            "dept": "신경과",
+            "external_id": "WKGH-cfa98fec02"
+          },
+          {
+            "doctor": "이형석",
+            "dept": "내과",
+            "external_id": "WKGH-e07c85afb7"
+          },
+          {
+            "doctor": "김정권",
+            "dept": "종합검진센터",
+            "external_id": "WKGH-d70ef5b285"
+          },
+          {
+            "doctor": "신교정",
+            "dept": "정신건강의학과",
+            "external_id": "WKGH-1f1d6bf88e"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\WKGH_20260504T131533.json"
+  },
+  {
+    "code": "WKUH",
+    "name": "원광대학교병원",
+    "region": "전북",
+    "started_at": "2026-05-04T13:15:33.654552",
+    "verdict": "WARN",
+    "elapsed": 17.4,
+    "error": null,
+    "n_doctors": 158,
+    "n_departments": 38,
+    "empty_schedule_ratio": 31.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 241건",
+        "samples": [
+          {
+            "doctor": "신새론",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "신새론",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김영준",
+            "dept": "감염내과",
+            "date": "2026-05-25",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김영준",
+            "dept": "감염내과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "이명수",
+            "dept": "관절류마티스내과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 49명",
+        "samples": [
+          {
+            "doctor": "한아름",
+            "dept": "가정의학과",
+            "external_id": "WKUH-173"
+          },
+          {
+            "doctor": "정종혁",
+            "dept": "관절류마티스내과",
+            "external_id": "WKUH-184"
+          },
+          {
+            "doctor": "김의중",
+            "dept": "소화기내과",
+            "external_id": "WKUH-526"
+          },
+          {
+            "doctor": "조재영",
+            "dept": "순환기내과",
+            "external_id": "WKUH-228"
+          },
+          {
+            "doctor": "정진원",
+            "dept": "순환기내과",
+            "external_id": "WKUH-693"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\WKUH_20260504T131551.json"
   },
   {
     "code": "WMCSB",
     "name": "원광대학교산본병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:30.822706",
-    "verdict": "OK",
-    "elapsed": 3.6,
+    "started_at": "2026-05-04T13:15:51.072687",
+    "verdict": "WARN",
+    "elapsed": 3.3,
     "error": null,
     "n_doctors": 45,
     "n_departments": 21,
     "empty_schedule_ratio": 40.0,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\WMCSB_20260421T160834.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 18명",
+        "samples": [
+          {
+            "doctor": "허솔미",
+            "dept": "소화기내과",
+            "external_id": "WMCSB-1-139"
+          },
+          {
+            "doctor": "박우행",
+            "dept": "소화기내과",
+            "external_id": "WMCSB-1-162"
+          },
+          {
+            "doctor": "박세희",
+            "dept": "산부인과",
+            "external_id": "WMCSB-14-124"
+          },
+          {
+            "doctor": "김교상",
+            "dept": "마취통증의학과",
+            "external_id": "WMCSB-17-24"
+          },
+          {
+            "doctor": "최유선",
+            "dept": "마취통증의학과",
+            "external_id": "WMCSB-17-60"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\WMCSB_20260504T131554.json"
   },
   {
     "code": "WOORIDUL",
     "name": "청담 우리들병원",
     "region": "서울",
-    "started_at": "2026-04-21T16:08:34.438596",
-    "verdict": "OK",
-    "elapsed": 17.8,
+    "started_at": "2026-05-04T13:15:54.455676",
+    "verdict": "WARN",
+    "elapsed": 18.0,
     "error": null,
-    "n_doctors": 29,
+    "n_doctors": 28,
     "n_departments": 9,
-    "empty_schedule_ratio": 44.8,
+    "empty_schedule_ratio": 46.4,
     "findings": [],
-    "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\WOORIDUL_20260421T160852.json"
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 13명",
+        "samples": [
+          {
+            "doctor": "이상호",
+            "dept": "척추진료부",
+            "external_id": "WOORIDUL-1"
+          },
+          {
+            "doctor": "배영식",
+            "dept": "흉추진료부 / 척추측만증 치료부",
+            "external_id": "WOORIDUL-18"
+          },
+          {
+            "doctor": "황의동",
+            "dept": "흉추진료부 / 척추측만증 치료부",
+            "external_id": "WOORIDUL-19"
+          },
+          {
+            "doctor": "이선우",
+            "dept": "척추진료부",
+            "external_id": "WOORIDUL-160"
+          },
+          {
+            "doctor": "허수영",
+            "dept": "척추진료부",
+            "external_id": "WOORIDUL-162"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\WOORIDUL_20260504T131612.json"
   },
   {
     "code": "YONGIN",
     "name": "용인세브란스병원",
     "region": "경기",
-    "started_at": "2026-04-21T16:08:34.451539",
+    "started_at": "2026-05-04T13:16:06.446403",
     "verdict": "OK",
-    "elapsed": 20.8,
+    "elapsed": 5.2,
     "error": null,
-    "n_doctors": 242,
+    "n_doctors": 245,
     "n_departments": 47,
     "empty_schedule_ratio": 0.0,
     "findings": [],
     "warnings": [],
-    "snapshot": "scripts\\verification_snapshots\\YONGIN_20260421T160855.json"
+    "snapshot": "scripts\\verification_snapshots\\YONGIN_20260504T131611.json"
+  },
+  {
+    "code": "YUMC",
+    "name": "영남대학교병원",
+    "region": "대구",
+    "started_at": "2026-05-04T13:16:11.165287",
+    "verdict": "WARN",
+    "elapsed": 2.8,
+    "error": null,
+    "n_doctors": 192,
+    "n_departments": 39,
+    "empty_schedule_ratio": 25.0,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 39명",
+        "samples": [
+          {
+            "doctor": "권희정",
+            "dept": "병리과",
+            "external_id": "YUMC-750"
+          },
+          {
+            "doctor": "김기백",
+            "dept": "신장내과",
+            "external_id": "YUMC-784"
+          },
+          {
+            "doctor": "김미은",
+            "dept": "건강증진센터",
+            "external_id": "YUMC-676"
+          },
+          {
+            "doctor": "김민종",
+            "dept": "병리과",
+            "external_id": "YUMC-708"
+          },
+          {
+            "doctor": "김세동",
+            "dept": "정형외과",
+            "external_id": "YUMC-800"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\YUMC_20260504T131613.json"
+  },
+  {
+    "code": "YWMC",
+    "name": "원주세브란스기독병원",
+    "region": "강원",
+    "started_at": "2026-05-04T13:16:11.659964",
+    "verdict": "WARN",
+    "elapsed": 8.7,
+    "error": null,
+    "n_doctors": 192,
+    "n_departments": 40,
+    "empty_schedule_ratio": 14.6,
+    "findings": [],
+    "warnings": [
+      {
+        "check": "C10",
+        "msg": "공휴일에 열린 날짜별 일정 350건",
+        "samples": [
+          {
+            "doctor": "김종구",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "afternoon",
+            "status": "진료"
+          },
+          {
+            "doctor": "김종구",
+            "dept": "가정의학과",
+            "date": "2026-05-25",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "김종구",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "박연철",
+            "dept": "가정의학과",
+            "date": "2026-05-05",
+            "slot": "morning",
+            "status": "진료"
+          },
+          {
+            "doctor": "정태하",
+            "dept": "가정의학과",
+            "date": "2026-06-03",
+            "slot": "afternoon",
+            "status": "진료"
+          }
+        ]
+      },
+      {
+        "check": "C11",
+        "msg": "일정 없음 안내 누락 28명",
+        "samples": [
+          {
+            "doctor": "최현준",
+            "dept": "방사선종양학과",
+            "external_id": "YWMC-RT-wGmghCccYDHlO8zHoYumGg.."
+          },
+          {
+            "doctor": "정상운",
+            "dept": "방사선종양학과",
+            "external_id": "YWMC-NA-방사선종양학과-정상운"
+          },
+          {
+            "doctor": "민세라",
+            "dept": "소아청소년과",
+            "external_id": "YWMC-NA-소아청소년과-민세라"
+          },
+          {
+            "doctor": "이진석",
+            "dept": "소아청소년과",
+            "external_id": "YWMC-NA-소아청소년과-이진석"
+          },
+          {
+            "doctor": "최재욱",
+            "dept": "소아청소년과",
+            "external_id": "YWMC-NA-소아청소년과-최재욱"
+          }
+        ]
+      }
+    ],
+    "snapshot": "scripts\\verification_snapshots\\YWMC_20260504T131620.json"
   }
 ]

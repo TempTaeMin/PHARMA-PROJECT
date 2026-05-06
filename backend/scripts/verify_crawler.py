@@ -51,6 +51,34 @@ from app.schemas.schemas import CrawlResult
 # 달력형 (월별 date_schedules) 을 반드시 지원해야 하는 병원
 CALENDAR_HOSPITALS = {"HYUMC", "KUH", "KCCH", "KBSMC"}
 
+KOREAN_PUBLIC_HOLIDAYS_2026 = {
+    "2026-01-01",
+    "2026-02-16",
+    "2026-02-17",
+    "2026-02-18",
+    "2026-03-01",
+    "2026-03-02",
+    "2026-05-05",
+    "2026-05-24",
+    "2026-05-25",
+    "2026-06-03",
+    "2026-06-06",
+    "2026-08-15",
+    "2026-08-17",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-10-03",
+    "2026-10-05",
+    "2026-10-09",
+    "2026-12-25",
+}
+
+NO_SCHEDULE_NOTE_KEYWORDS = (
+    "휴진", "휴무", "연수", "출장", "학회", "부재", "미공개", "문의", "예약",
+    "공개되어 있지", "진료시간표가 게시",
+)
+
 
 def _run_quality_checks(result: CrawlResult) -> dict:
     """CrawlResult 에 대해 C1~C9 중 실행-후 가능한 체크(C2~C9)를 수행."""
@@ -161,6 +189,47 @@ def _run_quality_checks(result: CrawlResult) -> dict:
                 "check": "C9",
                 "msg": "달력형 병원인데 date_schedules 전원 비어있음",
             })
+
+    # C10: 공휴일에 열린 날짜별 일정이 들어온 경우
+    holiday_open: list[dict] = []
+    for d in doctors:
+        for s in d.date_schedules or []:
+            schedule_date = s.get("schedule_date")
+            status = s.get("status") or ""
+            if schedule_date in KOREAN_PUBLIC_HOLIDAYS_2026 and status != "휴진":
+                holiday_open.append({
+                    "doctor": d.name,
+                    "dept": d.department,
+                    "date": schedule_date,
+                    "slot": s.get("time_slot", ""),
+                    "status": status,
+                })
+    if holiday_open:
+        warnings.append({
+            "check": "C10",
+            "msg": f"공휴일에 열린 날짜별 일정 {len(holiday_open)}건",
+            "samples": holiday_open[:5],
+        })
+
+    # C11: 일정이 없는데 설명도 없는 의사
+    no_schedule_no_note: list[dict] = []
+    for d in doctors:
+        if d.schedules or d.date_schedules:
+            continue
+        notes = (d.notes or "").strip()
+        if notes and any(kw in notes for kw in NO_SCHEDULE_NOTE_KEYWORDS):
+            continue
+        no_schedule_no_note.append({
+            "doctor": d.name,
+            "dept": d.department,
+            "external_id": d.external_id,
+        })
+    if no_schedule_no_note:
+        warnings.append({
+            "check": "C11",
+            "msg": f"일정 없음 안내 누락 {len(no_schedule_no_note)}명",
+            "samples": no_schedule_no_note[:5],
+        })
 
     return {
         "n_doctors": n,

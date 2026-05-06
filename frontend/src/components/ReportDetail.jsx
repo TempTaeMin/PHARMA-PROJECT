@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { X, Copy, FileDown, Trash2, RefreshCw, Sparkles, FileText, FileType } from 'lucide-react';
 import { reportApi } from '../api/client';
+import { showConfirm } from '../utils/dialog';
 
 /**
  * 보고서 상세 모달.
@@ -87,7 +88,10 @@ export default function ReportDetail({ open, report, onClose, onChanged }) {
   };
 
   const remove = async () => {
-    if (!confirm('이 보고서를 삭제하시겠습니까?')) return;
+    const ok = await showConfirm('이 보고서를 삭제하시겠습니까?', {
+      tone: 'danger', confirmLabel: '삭제', cancelLabel: '취소',
+    });
+    if (!ok) return;
     setBusy(true);
     try {
       await reportApi.remove(report.id);

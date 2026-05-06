@@ -17,6 +17,7 @@ import { useMonthCalendar } from '../hooks/useMonthCalendar';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
 import { memoApi, visitApi, academicApi, memoTemplateApi } from '../api/client';
+import { showAlert, showConfirm, showError } from '../utils/dialog';
 
 function ymd(y, m, d) {
   return `${y}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
@@ -211,7 +212,7 @@ export default function Dashboard({ onNavigate, currentUser, teamMembers = [] })
   const submitComplete = async () => {
     if (!completing) return;
     if (!completeStatus) {
-      alert('방문 결과를 선택해주세요.');
+      await showAlert('방문 결과를 선택해주세요.', { tone: 'warning' });
       return;
     }
     try {
@@ -246,14 +247,14 @@ export default function Dashboard({ onNavigate, currentUser, teamMembers = [] })
       }
       closeComplete();
     } catch (e) {
-      alert('저장 실패: ' + e.message);
+      showError(e, { title: '저장 실패' });
     }
   };
 
   // MR AI 정리: 메모가 없으면 먼저 생성 → /summarize 호출
   const handleAiOrganize = async () => {
     if (!rawMemo.trim()) {
-      alert('정리할 메모를 먼저 작성해주세요.');
+      await showAlert('정리할 메모를 먼저 작성해주세요.', { tone: 'warning' });
       return;
     }
     setAiLoading(true);
@@ -284,11 +285,14 @@ export default function Dashboard({ onNavigate, currentUser, teamMembers = [] })
   };
 
   const cancelPlanned = async (visit) => {
-    if (!confirm(`${visit.doctor_name} 예정을 취소하시겠습니까?`)) return;
+    const ok = await showConfirm(`${visit.doctor_name} 예정을 취소하시겠습니까?`, {
+      tone: 'danger', confirmLabel: '취소', cancelLabel: '돌아가기',
+    });
+    if (!ok) return;
     try {
       await actions.cancelPlanned(visit);
     } catch (e) {
-      alert('취소 실패: ' + e.message);
+      showError(e, { title: '취소 실패' });
     }
   };
 

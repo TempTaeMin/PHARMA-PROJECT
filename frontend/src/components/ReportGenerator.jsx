@@ -104,11 +104,13 @@ export default function ReportGenerator({
           const list = await memoApi.list({ from, to });
           if (!cancelled) {
             setMemos(list || []);
-            // daily-from-memos 모드면 presetMemoIds 유지, 아니면 전체 선택
+            // daily-from-memos 모드면 presetMemoIds 유지, 아니면 본인 메모만 기본 선택.
+            // 다른 사람(공유받은) 메모는 후보로 노출되지만 사용자가 명시적으로 추가해야 보고서에 들어감.
             if (mode === 'daily-from-memos' && presetMemoIds && presetMemoIds.length > 0) {
               setSelectedIds(new Set(presetMemoIds));
             } else {
-              setSelectedIds(new Set((list || []).map(m => m.id)));
+              const mineIds = (list || []).filter(m => m.is_mine !== false).map(m => m.id);
+              setSelectedIds(new Set(mineIds));
             }
           }
         }
@@ -138,6 +140,12 @@ export default function ReportGenerator({
   };
   const selectAll = () => setSelectedIds(new Set(items.map(it => it.id)));
   const selectNone = () => setSelectedIds(new Set());
+  // 메모 모드 한정 — 본인 거만 빠른 선택
+  const selectMineOnly = () => {
+    const mineIds = items.filter(it => it.is_mine !== false).map(it => it.id);
+    setSelectedIds(new Set(mineIds));
+  };
+  const hasOthers = !useReports && items.some(it => it.is_mine === false);
 
   const handleGenerate = async () => {
     if (selectedCount === 0) {
@@ -271,10 +279,21 @@ export default function ReportGenerator({
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
                 <SectionLabel>{useReports ? '일일 보고서' : '메모'} ({selectedCount}/{items.length})</SectionLabel>
                 <div style={{ display: 'flex', gap: 4 }}>
+                  {hasOthers && <button onClick={selectMineOnly} style={miniBtn}>내 거만</button>}
                   <button onClick={selectAll} style={miniBtn}>전체 선택</button>
                   <button onClick={selectNone} style={miniBtn}>해제</button>
                 </div>
               </div>
+              {hasOthers && (
+                <div style={{
+                  marginBottom: 8, padding: '8px 10px', borderRadius: 7,
+                  background: 'var(--ac-d)', color: 'var(--ac)',
+                  fontSize: 11, lineHeight: 1.45,
+                }}>
+                  💡 동료가 공유한 메모도 추가로 묶을 수 있어요. 기본은 내 메모만 선택돼 있고,
+                  필요한 것만 체크해서 보고서에 합치면 돼요.
+                </div>
+              )}
 
               {loading ? (
                 <div style={{ textAlign: 'center', padding: 30, color: 'var(--t3)', fontSize: 12 }}>불러오는 중…</div>
@@ -351,6 +370,7 @@ function ItemRow({ item, isReport, checked, onToggle }) {
   const preview = isReport
     ? aiPreview(item.ai_summary)
     : aiPreview(item.ai_summary) || (item.raw_memo || '').slice(0, 90);
+  const isOthers = !isReport && item.is_mine === false;
 
   return (
     <label style={{
@@ -367,7 +387,19 @@ function ItemRow({ item, isReport, checked, onToggle }) {
         style={{ marginTop: 3, accentColor: 'var(--ac)', flexShrink: 0 }}
       />
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)', marginBottom: 2 }}>{title}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2, flexWrap: 'wrap' }}>
+          <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)' }}>{title}</div>
+          {isOthers && item.author_name && (
+            <span style={{
+              padding: '1px 6px', borderRadius: 4,
+              background: '#ede9fe', color: '#6d28d9',
+              border: '1px solid #c4b5fd',
+              fontSize: 9, fontWeight: 800, fontFamily: 'Manrope',
+            }}>
+              by {item.author_name}
+            </span>
+          )}
+        </div>
         <div style={{ fontSize: 11, color: 'var(--t3)', marginBottom: 4 }}>{sub}</div>
         {preview && (
           <div style={{

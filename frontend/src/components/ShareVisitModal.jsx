@@ -23,15 +23,18 @@ export default function ShareVisitModal({
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
 
+  // visit 객체 reference 가 바뀌어도 같은 visit.id 면 useEffect 재실행 안 함 — 사용자 입력 보존
   useEffect(() => {
     if (!open || !visit) return;
     setRecipientIds(Array.isArray(visit.recipient_user_ids) ? [...visit.recipient_user_ids] : []);
     setError('');
-  }, [open, visit]);
+  }, [open, visit?.id]);  // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!open || !visit) return null;
 
-  const willShare = recipientIds.length > 0;
+  // 본인 ID 한 번 더 strip — RecipientPicker 가드와 무관한 어떤 경로로 본인 들어가도 차단
+  const cleanIds = recipientIds.filter((id) => id !== currentUserId);
+  const willShare = cleanIds.length > 0;
   const canSave = !saving;
 
   const handleSave = async () => {
@@ -41,7 +44,7 @@ export default function ShareVisitModal({
     try {
       const patch = {
         visibility: willShare ? 'team' : 'private',
-        recipient_user_ids: willShare ? recipientIds : [],
+        recipient_user_ids: willShare ? cleanIds : [],
       };
       const updated = visit.doctor_id
         ? await visitApi.update(visit.doctor_id, visit.id, patch)
@@ -137,7 +140,7 @@ export default function ShareVisitModal({
               boxShadow: canSave ? '0 4px 12px rgba(0,64,161,.18)' : 'none',
             }}
           >
-            {saving ? '저장 중…' : (willShare ? `${recipientIds.length}명에게 공유` : '비공개로 저장')}
+            {saving ? '저장 중…' : (willShare ? `${cleanIds.length}명에게 공유` : '비공개로 저장')}
           </button>
         </div>
       </div>

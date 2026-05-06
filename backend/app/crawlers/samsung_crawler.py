@@ -26,6 +26,32 @@ BASE_URL = "https://www.samsunghospital.com"
 
 TIME_RANGES = {"morning": ("09:00", "12:00"), "afternoon": ("13:00", "17:00")}
 
+# Samsung's schedule page can still expose ordinary weekly icons around public
+# holidays. Keep date-level closed overrides so UI code does not fall back to
+# the weekly pattern on those dates.
+SMC_CLOSED_DATES = {
+    "2026-01-01",
+    "2026-02-16",
+    "2026-02-17",
+    "2026-02-18",
+    "2026-03-01",
+    "2026-03-02",
+    "2026-05-05",
+    "2026-05-25",  # Substitute holiday for Buddha's Birthday.
+    "2026-06-03",
+    "2026-06-06",
+    "2026-08-15",
+    "2026-08-17",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-10-03",
+    "2026-10-05",
+    "2026-10-09",
+    "2026-12-25",
+    "2027-01-01",
+}
+
 DAY_CHAR_MAP = {"월": 0, "화": 1, "수": 2, "목": 3, "금": 4, "토": 5}
 
 LOCATION_MAP = {
@@ -180,6 +206,7 @@ class SamsungCrawler:
         """
         pattern_counts = {}
         date_schedules = []
+        parsed_dates = set()
 
         now = datetime.now()
         current_year = now.year
@@ -226,7 +253,9 @@ class SamsungCrawler:
                 if info["day"] is not None:
                     try:
                         datetime(current_year, current_month, info["day"])
-                        col_dates[ci] = f"{current_year}-{current_month:02d}-{info['day']:02d}"
+                        date_str = f"{current_year}-{current_month:02d}-{info['day']:02d}"
+                        col_dates[ci] = date_str
+                        parsed_dates.add(date_str)
                     except ValueError:
                         pass
 
@@ -295,7 +324,72 @@ class SamsungCrawler:
                 "location": location,
             })
 
+        date_schedules = self._apply_closed_date_overrides(
+            schedules, date_schedules, parsed_dates,
+        )
+
         return schedules, date_schedules
+
+    @staticmethod
+    def _apply_closed_date_overrides(
+        schedules: list[dict],
+        date_schedules: list[dict],
+        parsed_dates: set[str],
+    ) -> list[dict]:
+        """Add closed-day rows so date-aware consumers do not use weekly fallback."""
+        if not parsed_dates:
+            return date_schedules
+
+        closed_dates = sorted(parsed_dates & SMC_CLOSED_DATES)
+        if not closed_dates:
+            return date_schedules
+
+        filtered = [
+            ds for ds in date_schedules
+            if ds.get("schedule_date") not in SMC_CLOSED_DATES
+        ]
+        existing_keys = {
+            (ds.get("schedule_date"), ds.get("time_slot"), ds.get("location") or "")
+            for ds in filtered
+        }
+
+        schedules_by_dow: dict[int, list[dict]] = {}
+        for schedule in schedules:
+            try:
+                dow = int(schedule["day_of_week"])
+            except (KeyError, TypeError, ValueError):
+                continue
+            schedules_by_dow.setdefault(dow, []).append(schedule)
+
+        for closed_date in closed_dates:
+            try:
+                closed_dow = datetime.strptime(closed_date, "%Y-%m-%d").weekday()
+            except ValueError:
+                continue
+
+            for schedule in schedules_by_dow.get(closed_dow, []):
+                slot = schedule.get("time_slot") or ""
+                location = schedule.get("location") or ""
+                key = (closed_date, slot, location)
+                if key in existing_keys:
+                    continue
+                start, end = TIME_RANGES.get(slot, ("", ""))
+                filtered.append({
+                    "schedule_date": closed_date,
+                    "time_slot": slot,
+                    "start_time": start,
+                    "end_time": end,
+                    "location": location,
+                    "status": "\ud734\uc9c4",
+                })
+                existing_keys.add(key)
+
+        filtered.sort(key=lambda ds: (
+            ds.get("schedule_date") or "",
+            ds.get("time_slot") or "",
+            ds.get("location") or "",
+        ))
+        return filtered
 
     # ─── 전체 크롤링 ───
 

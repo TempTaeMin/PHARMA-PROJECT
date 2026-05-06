@@ -3,6 +3,7 @@ import { Search, Plus, Clock, AlertTriangle, ChevronLeft, ChevronRight, FileText
 import { doctorApi, visitApi, crawlApi, memoApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
+import { showConfirm, showError } from '../utils/dialog';
 import ManualDoctorModal from '../components/ManualDoctorModal';
 import ScheduleCalendar from '../components/ScheduleCalendar';
 import SelectVisitDate from '../components/SelectVisitDate';
@@ -88,7 +89,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
       setVisits(v);
       closePlanFlow();
     } catch (e) {
-      alert('일정 등록 실패: ' + e.message);
+      showError(e, { title: '일정 등록 실패' });
     }
   };
 
@@ -154,7 +155,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
       invalidate('my-visits');
       invalidate('dashboard');
       setTimeout(() => { setReportFor(null); setReportDone(false); refresh(); }, 1200);
-    } catch (e) { alert('저장 실패: ' + e.message); }
+    } catch (e) { showError(e, { title: '저장 실패' }); }
   };
 
   const docs = doctors || [];
@@ -187,18 +188,21 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
       setDetail(null);
       refresh();
     } catch (e) {
-      alert('처리 실패: ' + e.message);
+      showError(e, { title: '처리 실패' });
     }
   };
 
   const restoreDoctor = async (doc) => {
-    if (!confirm(`${doc.name} 교수를 다시 활성 상태로 복원하시겠습니까?`)) return;
+    const ok = await showConfirm(`${doc.name} 교수를 다시 활성 상태로 복원하시겠습니까?`, {
+      confirmLabel: '복원', cancelLabel: '취소',
+    });
+    if (!ok) return;
     try {
       await doctorApi.update(doc.id, { is_active: true });
       invalidate('my-doctors'); invalidate('doctors'); invalidate('academic');
       refresh();
     } catch (e) {
-      alert('복원 실패: ' + e.message);
+      showError(e, { title: '복원 실패' });
     }
   };
 
@@ -336,7 +340,7 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
           <button onClick={() => setDetail(null)} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 13, color: 'var(--t3)', cursor: 'pointer', background: 'none', border: 'none', fontFamily: 'inherit' }}><ChevronLeft size={16} /> 돌아가기</button>
           <div style={{ display: 'flex', gap: 6 }}>
             <button onClick={() => setDeactivateFor({ doctor: detail, reason: 'transferred' })} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--am)', cursor: 'pointer', background: 'none', border: '1px solid rgba(245,158,11,.3)', borderRadius: 6, padding: '5px 10px', fontFamily: 'inherit' }}><LogOut size={13} /> 이직/퇴직 처리</button>
-            <button onClick={async () => { if (!confirm(`${detail.name} 교수를 내 의료진에서 해제하시겠습니까?`)) return; await doctorApi.update(detail.id, { visit_grade: null }); invalidate('my-doctors'); invalidate('doctors'); invalidate('academic'); refresh(); setDetail(null); }} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--rd)', cursor: 'pointer', background: 'none', border: '1px solid rgba(248,113,113,.3)', borderRadius: 6, padding: '5px 10px', fontFamily: 'inherit' }}><UserMinus size={13} /> 내 의료진 해제</button>
+            <button onClick={async () => { const ok = await showConfirm(`${detail.name} 교수를 내 의료진에서 해제하시겠습니까?`, { tone: 'danger', confirmLabel: '해제', cancelLabel: '취소' }); if (!ok) return; await doctorApi.update(detail.id, { visit_grade: null }); invalidate('my-doctors'); invalidate('doctors'); invalidate('academic'); refresh(); setDetail(null); }} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--rd)', cursor: 'pointer', background: 'none', border: '1px solid rgba(248,113,113,.3)', borderRadius: 6, padding: '5px 10px', fontFamily: 'inherit' }}><UserMinus size={13} /> 내 의료진 해제</button>
           </div>
         </div>
         <div style={{ display: 'flex', gap: 16, marginBottom: 16, alignItems: 'flex-start' }}>

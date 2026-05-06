@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { isClosedScheduleStatus, isKoreanPublicHoliday, isOpenOnKoreanPublicHoliday } from '../utils/koreanHolidays';
 
 /**
  * 의사 진료 시간표 캘린더 — schedules(주간 정규) + dateSchedules(특정 날짜 override) 통합 표시.
@@ -8,11 +9,27 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
  *  1) 그 날짜의 dateSchedule 이 있으면 → 그것을 사용 (status='휴진' 이면 비어있는 셀)
  *  2) 없으면 그 요일의 schedules (day_of_week 매칭)
  *  3) 둘 다 없으면 비어있는 셀
+ *
+ * 선택 모드 (방문 날짜 선택 등):
+ *  - selected: 'YYYY-MM-DD' 형식의 선택된 날짜
+ *  - onSelect: (dateStr) => void  — 호출되면 셀이 클릭 가능해짐
+ *  - initialMonth: 'YYYY-MM' — 초기 보여줄 월 (없으면 오늘 기준)
  */
-export default function ScheduleCalendar({ schedules = [], dateSchedules = [], compact = false }) {
+export default function ScheduleCalendar({
+  schedules = [],
+  dateSchedules = [],
+  compact = false,
+  selected,
+  onSelect,
+  initialMonth,
+}) {
   const hasAny = (schedules?.length || 0) > 0 || (dateSchedules?.length || 0) > 0;
 
   const [view, setView] = useState(() => {
+    if (initialMonth && /^\d{4}-\d{2}$/.test(initialMonth)) {
+      const [y, m] = initialMonth.split('-').map(Number);
+      return { year: y, month: m - 1 };
+    }
     const now = new Date();
     return { year: now.getFullYear(), month: now.getMonth() };
   });
@@ -43,7 +60,8 @@ export default function ScheduleCalendar({ schedules = [], dateSchedules = [], c
     return Array.from(set).sort();
   }, [dateSchedules]);
 
-  if (!hasAny) return null;
+  // 선택 모드(onSelect 제공) 일 때는 일정이 없어도 날짜를 고를 수 있도록 캘린더는 그림
+  if (!hasAny && !onSelect) return null;
 
   const { year, month } = view;
   const firstDay = new Date(year, month, 1);
@@ -67,11 +85,17 @@ export default function ScheduleCalendar({ schedules = [], dateSchedules = [], c
     const overrides = dateMap[dateStr];
     if (overrides && overrides.length > 0) {
       // 휴진 entry 가 있으면 그날은 비어있는 것으로 간주
-      const hasRest = overrides.some(o => o.status === '휴진');
+      const hasRest = overrides.some(o => isClosedScheduleStatus(o.status));
       if (hasRest) return { am: false, pm: false, isOverride: true, isClosed: true, dateStr };
+      if (isKoreanPublicHoliday(dateStr) && !overrides.some(o => isOpenOnKoreanPublicHoliday(o.status))) {
+        return { am: false, pm: false, isOverride: true, isClosed: true, dateStr };
+      }
       const am = overrides.some(o => o.time_slot === 'morning');
       const pm = overrides.some(o => o.time_slot === 'afternoon');
       return { am, pm, isOverride: true, dateStr };
+    }
+    if (isKoreanPublicHoliday(dateStr)) {
+      return { am: false, pm: false, isOverride: true, isClosed: true, dateStr };
     }
     const dow = (startDow + d - 1) % 7;
     const regular = dowMap[dow] || [];
@@ -157,6 +181,7 @@ export default function ScheduleCalendar({ schedules = [], dateSchedules = [], c
           const dow = idx % 7;
           const { am, pm, isClosed, dateStr } = slotsForDate(c.d);
           const isToday = dateStr === todayStr;
+          const isSelected = onSelect && dateStr === selected;
           const isWeekend = dow === 5 || dow === 6;
           const dayColor = dow === 5 ? 'var(--bl)' : dow === 6 ? 'var(--rd)' : 'var(--t1)';
 
@@ -167,22 +192,38 @@ export default function ScheduleCalendar({ schedules = [], dateSchedules = [], c
           const dateFont = compact ? 12 : 14;
           const badgeRowDir = compact ? 'row' : 'column';
 
+          const borderColor = isSelected ? 'var(--ac)' : isToday ? 'var(--ac)' : 'var(--bd-s)';
+          const borderWidth = (isSelected || isToday) ? 2 : 1;
+          const cellBg = isSelected ? 'var(--ac-d)' : 'var(--bg-1)';
+          const dateColor = (isSelected || isToday) ? 'var(--ac)' : (isWeekend ? dayColor : 'var(--t1)');
+
+          const cellProps = onSelect ? {
+            onClick: () => onSelect(dateStr),
+            type: 'button',
+          } : {};
+          const Tag = onSelect ? 'button' : 'div';
+
           return (
-            <div
+            <Tag
               key={c.key}
+              {...cellProps}
               style={{
                 aspectRatio: '1 / 1', borderRadius: 10,
-                border: `${isToday ? 2 : 1}px solid ${isToday ? 'var(--ac)' : 'var(--bd-s)'}`,
-                background: 'var(--bg-1)',
+                border: `${borderWidth}px solid ${borderColor}`,
+                background: cellBg,
                 padding: compact ? '5px 4px 6px' : '8px 8px 10px',
                 display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
                 gap: compact ? 3 : 6,
                 minHeight: 0,
+                cursor: onSelect ? 'pointer' : 'default',
+                fontFamily: 'inherit',
+                textAlign: 'inherit',
+                transition: 'background .12s, border-color .12s',
               }}
             >
               <span style={{
                 fontFamily: 'Manrope', fontWeight: 700, fontSize: dateFont,
-                color: isToday ? 'var(--ac)' : (isWeekend ? dayColor : 'var(--t1)'),
+                color: dateColor,
                 lineHeight: 1,
                 textAlign: compact ? 'center' : 'left',
               }}>{c.d}</span>
@@ -218,7 +259,7 @@ export default function ScheduleCalendar({ schedules = [], dateSchedules = [], c
                   }}>휴진</span>
                 )}
               </div>
-            </div>
+            </Tag>
           );
         })}
       </div>

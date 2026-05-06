@@ -154,6 +154,10 @@ class VisitLogResponse(VisitLogCreate):
     id: int
     created_at: datetime
     recipient_user_ids: list[int] = []
+    notes_author_id: Optional[int] = None
+    notes_updated_at: Optional[datetime] = None
+    post_notes_author_id: Optional[int] = None
+    post_notes_updated_at: Optional[datetime] = None
     class Config:
         from_attributes = True
 

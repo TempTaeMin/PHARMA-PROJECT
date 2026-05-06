@@ -3,6 +3,7 @@ import { Search, ChevronRight, ChevronLeft, Star, RefreshCw, Clock, UserPlus, X,
 import { crawlApi } from '../api/client';
 import { useCachedApi } from '../hooks/useCachedApi';
 import { invalidate } from '../api/cache';
+import { showError } from '../utils/dialog';
 import HospitalLogo from '../components/HospitalLogo';
 import ScheduleCalendar from '../components/ScheduleCalendar';
 
@@ -189,7 +190,7 @@ export default function BrowseDoctors({ onNavigate }) {
       setRegisteredSet(prev => new Set([...prev, selectedDoctor.external_id]));
       // 등록 후 검색 화면 유지 — 사용자가 연속으로 다른 교수도 등록할 수 있도록
     } catch (e) {
-      alert('등록 실패: ' + e.message);
+      showError(e, { title: '등록 실패' });
     } finally {
       setRegistering(false);
     }
@@ -460,7 +461,12 @@ export default function BrowseDoctors({ onNavigate }) {
                           dateSchedules={schedule.date_schedules || []}
                         />
                       ) : (
-                        <div style={{ padding: '16px 0', textAlign: 'center', color: 'var(--t3)', fontSize: 12 }}>진료일정 정보 없음</div>
+                        <div style={{ padding: '16px 0', textAlign: 'center', color: 'var(--t3)', fontSize: 12, lineHeight: 1.5 }}>
+                          공개된 진료일정이 없습니다.
+                          <div style={{ marginTop: 4, fontSize: 11 }}>
+                            장기휴진, 장기연수, 단기연수 또는 병원 미공개 상태일 수 있습니다.
+                          </div>
+                        </div>
                       )}
                     </div>
                     {schedule.notes && (

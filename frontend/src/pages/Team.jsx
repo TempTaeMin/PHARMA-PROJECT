@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Users, UserPlus, Trash2, Edit3, LogOut, Plus, Mail, Crown, X, Check, Clock } from 'lucide-react';
 import { teamApi } from '../api/client';
+import { showConfirm } from '../utils/dialog';
 
 /**
  * 팀 관리 페이지.
@@ -96,7 +97,10 @@ export default function Team({ currentUser, onTeamChanged }) {
   };
 
   const handleCancelInvite = async (inv) => {
-    if (!confirm(`${inv.invitee_email} 에게 보낸 초대장을 취소할까요?`)) return;
+    const ok = await showConfirm(`${inv.invitee_email} 에게 보낸 초대장을 취소할까요?`, {
+      tone: 'danger', confirmLabel: '취소', cancelLabel: '돌아가기',
+    });
+    if (!ok) return;
     try {
       await teamApi.cancelInvite(inv.id);
       await load();
@@ -106,7 +110,10 @@ export default function Team({ currentUser, onTeamChanged }) {
   };
 
   const handleRemove = async (member) => {
-    if (!confirm(`${member.name || member.email} 님을 팀에서 제거하시겠습니까?`)) return;
+    const ok = await showConfirm(`${member.name || member.email} 님을 팀에서 제거하시겠습니까?`, {
+      tone: 'danger', confirmLabel: '제거', cancelLabel: '취소',
+    });
+    if (!ok) return;
     try {
       await teamApi.removeMember(member.user_id);
       await load();
@@ -116,7 +123,10 @@ export default function Team({ currentUser, onTeamChanged }) {
   };
 
   const handleLeave = async () => {
-    if (!confirm('팀에서 탈퇴하시겠습니까? 공유받던 팀 일정은 더 이상 보이지 않습니다.')) return;
+    const ok = await showConfirm('팀에서 탈퇴하시겠습니까? 공유받던 팀 일정은 더 이상 보이지 않습니다.', {
+      tone: 'danger', confirmLabel: '탈퇴', cancelLabel: '취소',
+    });
+    if (!ok) return;
     try {
       await teamApi.leave();
       await load();

@@ -254,6 +254,12 @@ class VisitLog(Base):
     doctor_name_snapshot = Column(String(100), nullable=True)
     doctor_dept_snapshot = Column(String(200), nullable=True)
     hospital_name_snapshot = Column(String(200), nullable=True)
+    # 메모 작성자/시각 — 공유 일정에서 누가 무엇을 정리했는지 코멘트로 표시.
+    # author 는 user 삭제돼도 record 보존 위해 SET NULL.
+    notes_author_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
+    notes_updated_at = Column(DateTime, nullable=True)
+    post_notes_author_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
+    post_notes_updated_at = Column(DateTime, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
     doctor = relationship("Doctor", back_populates="visit_logs")
@@ -261,6 +267,14 @@ class VisitLog(Base):
         "User",
         secondary=visit_log_recipients,
         lazy="selectin",
+    )
+    notes_author = relationship("User", foreign_keys=[notes_author_id])
+    post_notes_author = relationship("User", foreign_keys=[post_notes_author_id])
+    memos = relationship(
+        "VisitMemo",
+        primaryjoin="VisitLog.id == foreign(VisitMemo.visit_log_id)",
+        order_by="VisitMemo.created_at.asc()",
+        viewonly=True,
     )
 
     @property
@@ -350,8 +364,15 @@ class MemoTemplate(Base):
 
 
 class VisitMemo(Base):
-    """MR 방문 메모/회의록 (raw + AI 정리본)."""
+    """MR 방문 메모/회의록 (raw + AI 정리본).
+
+    공유 visit 에서는 한 visit 당 사용자별 1개씩 — 각 row 가 그 사용자의 "댓글"
+    역할. raw_memo 는 본인만, ai_summary 는 visit 관계자 전원에게 노출.
+    """
     __tablename__ = "visits_memo"
+    __table_args__ = (
+        UniqueConstraint("visit_log_id", "user_id", name="uq_visit_memo_visit_user"),
+    )
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)

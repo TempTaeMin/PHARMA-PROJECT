@@ -38,12 +38,24 @@ def _parse_ai(raw: Optional[str]):
         return raw
 
 
-def _serialize(memo: VisitMemo, doctor: Optional[Doctor] = None, hospital: Optional[Hospital] = None) -> dict:
+def _serialize(
+    memo: VisitMemo,
+    doctor: Optional[Doctor] = None,
+    hospital: Optional[Hospital] = None,
+    *,
+    current_user_id: Optional[int] = None,
+    author_name: Optional[str] = None,
+    is_root: Optional[bool] = None,
+) -> dict:
     doc = doctor or memo.doctor
     hosp = hospital or (doc.hospital if doc else None)
+    is_mine = current_user_id is not None and memo.user_id == current_user_id
     return {
         "id": memo.id,
         "user_id": memo.user_id,
+        "author_name": author_name,
+        "is_mine": is_mine if current_user_id is not None else None,
+        "is_root": is_root,
         "doctor_id": memo.doctor_id,
         "doctor_name": doc.name if doc else None,
         "hospital_name": hosp.name if hosp else None,
@@ -53,7 +65,8 @@ def _serialize(memo: VisitMemo, doctor: Optional[Doctor] = None, hospital: Optio
         "visit_date": memo.visit_date.isoformat() if memo.visit_date else None,
         "memo_type": memo.memo_type,
         "title": memo.title,
-        "raw_memo": memo.raw_memo,
+        # raw_memo 는 본인 것만 노출 — current_user_id 가 주어지지 않은 경로(레거시)는 그대로
+        "raw_memo": memo.raw_memo if (current_user_id is None or is_mine) else None,
         "ai_summary": _parse_ai(memo.ai_summary),
         "created_at": memo.created_at.isoformat() if memo.created_at else None,
         "updated_at": memo.updated_at.isoformat() if memo.updated_at else None,
@@ -113,7 +126,7 @@ async def create_memo(
     return _serialize(memo)
 
 
-@router.get("", summary="메모 목록")
+@router.get("", summary="메모 목록 — 본인 + 공유 visit 의 다른 사람 댓글")
 async def list_memos(
     doctor_id: Optional[int] = None,
     hospital_id: Optional[int] = None,
@@ -126,10 +139,26 @@ async def list_memos(
     db: AsyncSession = Depends(get_db),
     user: User = Depends(get_current_user),
 ):
+    """본인이 관계된 visit_log 의 모든 메모 노출. 다른 사람 메모는 raw_memo strip,
+    ai_summary 만 노출. is_root 는 같은 visit_log_id 내 created_at 가장 빠른 것."""
+    from app.api.dashboard import _visit_user_filter
+
+    user_filter = await _visit_user_filter(db, user.id)
+    accessible_visit_ids = (await db.execute(
+        select(VisitLog.id).where(user_filter)
+    )).scalars().all()
+    accessible_set = set(accessible_visit_ids)
+
+    # 본인 메모 OR 본인이 관계된 visit_log 의 모든 메모 (orphan 본인 메모 포함)
+    where_visibility = or_(
+        VisitMemo.user_id == user.id,
+        VisitMemo.visit_log_id.in_(accessible_set) if accessible_set else False,
+    )
     query = (
-        select(VisitMemo)
+        select(VisitMemo, User.name)
         .options(selectinload(VisitMemo.doctor).selectinload(Doctor.hospital))
-        .where(VisitMemo.user_id == user.id)
+        .outerjoin(User, VisitMemo.user_id == User.id)
+        .where(where_visibility)
     )
     if doctor_id:
         query = query.where(VisitMemo.doctor_id == doctor_id)
@@ -161,8 +190,28 @@ async def list_memos(
     query = query.order_by(VisitMemo.visit_date.desc().nullslast(), VisitMemo.id.desc())
     query = query.offset(offset).limit(limit)
 
-    rows = (await db.execute(query)).scalars().all()
-    return [_serialize(m) for m in rows]
+    rows = (await db.execute(query)).all()
+
+    # is_root 결정 — 같은 visit_log_id 안에서 created_at 가장 빠른 메모 한 개를 root 로
+    visit_ids_seen = {m.visit_log_id for m, _ in rows if m.visit_log_id}
+    root_ids: set[int] = set()
+    if visit_ids_seen:
+        root_rows = (await db.execute(
+            select(VisitMemo.visit_log_id, func.min(VisitMemo.id))
+            .where(VisitMemo.visit_log_id.in_(visit_ids_seen))
+            .group_by(VisitMemo.visit_log_id)
+        )).all()
+        root_ids = {row[1] for row in root_rows if row[1] is not None}
+
+    return [
+        _serialize(
+            m,
+            current_user_id=user.id,
+            author_name=author_name,
+            is_root=(m.id in root_ids) if m.visit_log_id else None,
+        )
+        for m, author_name in rows
+    ]
 
 
 @router.get("/{memo_id}", summary="메모 상세")

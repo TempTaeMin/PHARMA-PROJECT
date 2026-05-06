@@ -1,4 +1,5 @@
 import { X, BookOpen, Calendar, MapPin, Users, ExternalLink, Trash2, PinOff, GraduationCap } from 'lucide-react';
+import { showConfirm, showError } from '../utils/dialog';
 
 function formatKoreanDate(dateStr) {
   if (!dateStr) return '';
@@ -30,11 +31,12 @@ export default function AcademicEventDetailModal({ open, event, onClose, onDelet
     const msg = isManual
       ? `"${event.name}" 을(를) 삭제하시겠습니까?`
       : `"${event.name}" 을(를) 내 일정에서 제거하시겠습니까?`;
-    if (!confirm(msg)) return;
+    const ok = await showConfirm(msg, { tone: 'danger', confirmLabel: '삭제', cancelLabel: '취소' });
+    if (!ok) return;
     try {
       await onDelete?.(event);
     } catch (e) {
-      alert('처리 실패: ' + e.message);
+      showError(e, { title: '처리 실패' });
     }
   };
 

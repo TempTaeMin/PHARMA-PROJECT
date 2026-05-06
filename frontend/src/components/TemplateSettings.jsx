@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X, Plus, Trash2, Edit3, Star, Save, Sparkles, FileText, MessageSquare } from 'lucide-react';
 import { memoTemplateApi } from '../api/client';
+import { showConfirm } from '../utils/dialog';
 
 const MEMO_FIELD_PRESETS = [
   { key: '방문일시', group: '필수' },
@@ -131,7 +132,10 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
   });
 
   const remove = async (t) => {
-    if (!confirm(`"${t.name}" 템플릿을 삭제하시겠습니까?`)) return;
+    const ok = await showConfirm(`"${t.name}" 템플릿을 삭제하시겠습니까?`, {
+      tone: 'danger', confirmLabel: '삭제', cancelLabel: '취소',
+    });
+    if (!ok) return;
     try {
       await memoTemplateApi.remove(t.id);
       await load();
