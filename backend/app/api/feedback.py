@@ -6,10 +6,8 @@
 - PATCH /api/feedback/{id}   — admin 전용, handled 토글
 - DELETE /api/feedback/{id}  — admin 전용, 스팸 삭제
 
-admin 가드: env `ADMIN_EMAILS` (쉼표 구분) 와 current user.email 비교.
-env 비어있으면 모든 admin 엔드포인트 403 — 안전한 default.
+admin 가드는 `app.auth.deps.require_admin` 디펜던시로 통일.
 """
-import os
 import logging
 from datetime import datetime
 from typing import Optional
@@ -19,7 +17,7 @@ from pydantic import BaseModel, Field
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.auth.deps import get_current_user
+from app.auth.deps import get_current_user, require_admin
 from app.models.connection import get_db
 from app.models.database import Feedback, User
 
@@ -27,17 +25,6 @@ logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/feedback", tags=["피드백"])
 
 VALID_CATEGORIES = {"bug", "suggestion", "other"}
-
-
-def _admin_emails() -> set[str]:
-    raw = os.getenv("ADMIN_EMAILS", "")
-    return {e.strip().lower() for e in raw.split(",") if e.strip()}
-
-
-def _require_admin(user: User) -> None:
-    admins = _admin_emails()
-    if not admins or (user.email or "").lower() not in admins:
-        raise HTTPException(status_code=403, detail="관리자만 접근 가능합니다.")
 
 
 class FeedbackCreate(BaseModel):
@@ -89,10 +76,8 @@ async def create_feedback(
 @router.get("/summary", summary="피드백 요약 (admin)")
 async def feedback_summary(
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_current_user),
+    user: User = Depends(require_admin),
 ):
-    _require_admin(user)
-
     total = (await db.execute(select(func.count()).select_from(Feedback))).scalar_one()
     unread = (await db.execute(
         select(func.count()).select_from(Feedback).where(Feedback.handled == False)  # noqa: E712
@@ -116,10 +101,8 @@ async def list_feedback(
     limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0),
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_current_user),
+    user: User = Depends(require_admin),
 ):
-    _require_admin(user)
-
     q = select(Feedback, User).outerjoin(User, Feedback.user_id == User.id)
     if handled is not None:
         q = q.where(Feedback.handled == handled)
@@ -138,10 +121,8 @@ async def update_feedback(
     feedback_id: int,
     data: dict,
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_current_user),
+    user: User = Depends(require_admin),
 ):
-    _require_admin(user)
-
     fb = (await db.execute(
         select(Feedback).where(Feedback.id == feedback_id)
     )).scalar_one_or_none()
@@ -165,10 +146,8 @@ async def update_feedback(
 async def delete_feedback(
     feedback_id: int,
     db: AsyncSession = Depends(get_db),
-    user: User = Depends(get_current_user),
+    user: User = Depends(require_admin),
 ):
-    _require_admin(user)
-
     fb = (await db.execute(
         select(Feedback).where(Feedback.id == feedback_id)
     )).scalar_one_or_none()

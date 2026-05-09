@@ -11,6 +11,7 @@ import Memos from './pages/Memos';
 import Team from './pages/Team';
 import SettingsPage from './pages/Settings';
 import AdminFeedback from './pages/AdminFeedback';
+import AdminUsers from './pages/AdminUsers';
 import Login from './pages/Login';
 import NotificationPanel from './components/NotificationPanel';
 import DialogHost from './components/Dialog';
@@ -29,7 +30,7 @@ const NAV = [
   { id: 'team', label: '팀 관리', icon: Users },
 ];
 
-const PAGE_IDS = [...NAV.map(n => n.id), 'settings', 'admin-feedback'];
+const PAGE_IDS = [...NAV.map(n => n.id), 'settings', 'admin-feedback', 'admin-users'];
 
 // admin 가드 — 백엔드 ADMIN_EMAILS env 와 동기화 필요. 프론트는 UI 분기만, 보안은 백엔드 의존.
 const ADMIN_EMAILS = ['namgiggo1@gmail.com'];
@@ -281,27 +282,40 @@ export default function App() {
         </nav>
         <div style={{ borderTop: '1px solid var(--bd-s)', paddingTop: 8 }}>
           {isAdminEmail(currentUser?.email) && (
-            <button onClick={() => navTo('admin-feedback')} style={{
-              display: 'flex', alignItems: 'center', gap: 9, padding: '9px 12px', borderRadius: 10,
-              fontSize: 13, fontWeight: page === 'admin-feedback' ? 600 : 450,
-              color: page === 'admin-feedback' ? 'var(--ac)' : 'var(--t3)',
-              background: page === 'admin-feedback' ? 'var(--ac-d)' : 'none',
-              border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%', textAlign: 'left',
-              marginBottom: 4,
-            }}>
-              <Inbox size={17} style={{ opacity: page === 'admin-feedback' ? 1 : .5 }} />
-              <span style={{ flex: 1 }}>피드백 관리</span>
-              {adminFeedbackUnread > 0 && (
-                <span style={{
-                  minWidth: 18, height: 18, padding: '0 5px', borderRadius: 9,
-                  background: 'var(--rd)', color: '#fff',
-                  fontSize: 10, fontWeight: 700, fontFamily: "'JetBrains Mono'",
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  {adminFeedbackUnread > 99 ? '99+' : adminFeedbackUnread}
-                </span>
-              )}
-            </button>
+            <>
+              <button onClick={() => navTo('admin-users')} style={{
+                display: 'flex', alignItems: 'center', gap: 9, padding: '9px 12px', borderRadius: 10,
+                fontSize: 13, fontWeight: page === 'admin-users' ? 600 : 450,
+                color: page === 'admin-users' ? 'var(--ac)' : 'var(--t3)',
+                background: page === 'admin-users' ? 'var(--ac-d)' : 'none',
+                border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%', textAlign: 'left',
+                marginBottom: 4,
+              }}>
+                <Users size={17} style={{ opacity: page === 'admin-users' ? 1 : .5 }} />
+                <span style={{ flex: 1 }}>사용자 관리</span>
+              </button>
+              <button onClick={() => navTo('admin-feedback')} style={{
+                display: 'flex', alignItems: 'center', gap: 9, padding: '9px 12px', borderRadius: 10,
+                fontSize: 13, fontWeight: page === 'admin-feedback' ? 600 : 450,
+                color: page === 'admin-feedback' ? 'var(--ac)' : 'var(--t3)',
+                background: page === 'admin-feedback' ? 'var(--ac-d)' : 'none',
+                border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%', textAlign: 'left',
+                marginBottom: 4,
+              }}>
+                <Inbox size={17} style={{ opacity: page === 'admin-feedback' ? 1 : .5 }} />
+                <span style={{ flex: 1 }}>피드백 관리</span>
+                {adminFeedbackUnread > 0 && (
+                  <span style={{
+                    minWidth: 18, height: 18, padding: '0 5px', borderRadius: 9,
+                    background: 'var(--rd)', color: '#fff',
+                    fontSize: 10, fontWeight: 700, fontFamily: "'JetBrains Mono'",
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    {adminFeedbackUnread > 99 ? '99+' : adminFeedbackUnread}
+                  </span>
+                )}
+              </button>
+            </>
           )}
           <button onClick={() => navTo('settings')} style={{
             display: 'flex', alignItems: 'center', gap: 9, padding: '9px 12px', borderRadius: 10,
@@ -429,6 +443,9 @@ export default function App() {
           {page === 'settings' && <SettingsPage currentUser={currentUser} onUpdated={setCurrentUser} />}
           {page === 'admin-feedback' && isAdminEmail(currentUser?.email) && (
             <AdminFeedback onSummaryChange={setAdminFeedbackUnread} />
+          )}
+          {page === 'admin-users' && isAdminEmail(currentUser?.email) && (
+            <AdminUsers />
           )}
         </div>
       </main>

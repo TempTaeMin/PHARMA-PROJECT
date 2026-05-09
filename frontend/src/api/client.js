@@ -247,6 +247,24 @@ export const feedbackApi = {
   remove: (id) => request(`/api/feedback/${id}`, { method: 'DELETE' }),
 };
 
+// ─── Admin (사용자/팀 모니터링 — env ADMIN_EMAILS 일치 시) ───
+export const adminApi = {
+  stats: () => request('/api/admin/stats'),
+  users: () => request('/api/admin/users'),
+  user: (id) => request(`/api/admin/users/${id}`),
+  userVisits: (id, limit = 50) => request(`/api/admin/users/${id}/visits?limit=${limit}`),
+  userDoctors: (id, limit = 200) => request(`/api/admin/users/${id}/doctors?limit=${limit}`),
+  teams: () => request('/api/admin/teams'),
+  // 테스트 기간 활동 inspect
+  activeUsers: (since) =>
+    request(`/api/admin/active-users${since ? `?since=${encodeURIComponent(since)}` : ''}`),
+  userActivity: (id, since, limit = 200) => {
+    const p = new URLSearchParams({ limit: String(limit) });
+    if (since) p.set('since', since);
+    return request(`/api/admin/users/${id}/activity?${p.toString()}`);
+  },
+};
+
 // ─── Notifications ───
 export const notificationApi = {
   list: (limit = 20, unreadOnly = false) =>

@@ -27,6 +27,7 @@ from app.api.reports import router as reports_router
 from app.api.teams import router as teams_router
 from app.api.visits import router as visits_router
 from app.api.feedback import router as feedback_router
+from app.api.admin import router as admin_router
 from app.auth.routes import router as auth_router
 
 logging.basicConfig(
@@ -89,6 +90,7 @@ app.include_router(doctor_memos_router)
 app.include_router(reports_router)
 app.include_router(visits_router)
 app.include_router(feedback_router)
+app.include_router(admin_router)
 
 
 @app.get("/", tags=["헬스체크"])

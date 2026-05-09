@@ -1,4 +1,5 @@
 """인증 의존성 — Depends(get_current_user) 로 모든 사용자별 라우터에 주입."""
+import os
 from typing import Optional
 
 from fastapi import Depends, HTTPException, Request, status
@@ -20,6 +21,23 @@ async def get_current_user(
     if not user:
         request.session.clear()
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="사용자를 찾을 수 없습니다.")
+    return user
+
+
+def _admin_emails() -> set[str]:
+    raw = os.getenv("ADMIN_EMAILS", "")
+    return {e.strip().lower() for e in raw.split(",") if e.strip()}
+
+
+async def require_admin(user: User = Depends(get_current_user)) -> User:
+    """admin 라우터에 Depends(require_admin) 으로 주입.
+
+    env `ADMIN_EMAILS` (쉼표 구분) 와 user.email 을 비교. env 가 비어있으면
+    모든 호출이 403 — 안전한 default (실수로 풀린 인스턴스에서 admin API 가 열리는 걸 방지).
+    """
+    admins = _admin_emails()
+    if not admins or (user.email or "").lower() not in admins:
+        raise HTTPException(status_code=403, detail="관리자만 접근 가능합니다.")
     return user
 
 
