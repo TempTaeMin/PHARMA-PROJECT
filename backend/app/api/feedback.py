@@ -20,6 +20,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.auth.deps import get_current_user, require_admin
 from app.models.connection import get_db
 from app.models.database import Feedback, User
+from app.utils.timeutil import iso_utc
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/feedback", tags=["피드백"])
@@ -44,7 +45,7 @@ def _serialize(fb: Feedback, *, user: Optional[User] = None) -> dict:
         "page_path": fb.page_path,
         "user_agent": fb.user_agent,
         "handled": fb.handled,
-        "created_at": fb.created_at.isoformat() if fb.created_at else None,
+        "created_at": iso_utc(fb.created_at),
     }
 
 

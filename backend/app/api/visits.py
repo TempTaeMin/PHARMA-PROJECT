@@ -19,6 +19,7 @@ from app.models.database import (
 from app.notifications.manager import notification_manager
 from app.schemas.schemas import AnnouncementCreate, PersonalEventCreate, SummarizeRequest
 from app.services.ai_memo import organize_memo, summarize_freeform
+from app.utils.timeutil import iso_utc
 
 router = APIRouter(prefix="/api/visits", tags=["방문 로그"])
 
@@ -314,10 +315,10 @@ async def _visit_to_dict(visit: VisitLog, db: AsyncSession) -> dict:
         "recipient_user_ids": [u.id for u in (visit.recipients or [])],
         "notes_author_id": visit.notes_author_id,
         "notes_author_name": name_map.get(visit.notes_author_id) if visit.notes_author_id else None,
-        "notes_updated_at": visit.notes_updated_at.isoformat() if visit.notes_updated_at else None,
+        "notes_updated_at": iso_utc(visit.notes_updated_at),
         "post_notes_author_id": visit.post_notes_author_id,
         "post_notes_author_name": name_map.get(visit.post_notes_author_id) if visit.post_notes_author_id else None,
-        "post_notes_updated_at": visit.post_notes_updated_at.isoformat() if visit.post_notes_updated_at else None,
+        "post_notes_updated_at": iso_utc(visit.post_notes_updated_at),
         "announce_start_date": visit.announce_start_date,
         "announce_end_date": visit.announce_end_date,
     }

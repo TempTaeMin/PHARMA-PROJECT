@@ -22,6 +22,7 @@ from app.schemas.schemas import (
     VisitMemoUpdate,
 )
 from app.services.ai_memo import organize_memo
+from app.utils.timeutil import iso_utc
 
 logger = logging.getLogger(__name__)
 
@@ -68,8 +69,8 @@ def _serialize(
         # raw_memo 는 본인 것만 노출 — current_user_id 가 주어지지 않은 경로(레거시)는 그대로
         "raw_memo": memo.raw_memo if (current_user_id is None or is_mine) else None,
         "ai_summary": _parse_ai(memo.ai_summary),
-        "created_at": memo.created_at.isoformat() if memo.created_at else None,
-        "updated_at": memo.updated_at.isoformat() if memo.updated_at else None,
+        "created_at": iso_utc(memo.created_at),
+        "updated_at": iso_utc(memo.updated_at),
     }
 
 
@@ -337,7 +338,7 @@ def _template_to_dict(t: MemoTemplate) -> dict:
         "is_default": bool(t.is_default),
         "scope": t.scope or "memo",
         "default_report_type": t.default_report_type,
-        "created_at": t.created_at.isoformat() if t.created_at else None,
+        "created_at": iso_utc(t.created_at),
     }
 
 

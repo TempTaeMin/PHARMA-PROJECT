@@ -14,6 +14,7 @@ from sqlalchemy.orm import selectinload
 
 from app.auth.deps import get_current_user, get_my_team_id
 from app.models.connection import get_db
+from app.utils.timeutil import iso_utc
 from app.models.database import (
     AcademicEvent,
     AcademicEventDepartment,
@@ -197,8 +198,8 @@ def _event_to_dict(
         "team_pinned_by_name": owner.get("user_name") if owner else None,
         "departments": sorted({d.department for d in e.departments}),
         "lectures": _parse_lectures_json(e.lectures_json),
-        "updated_at": e.updated_at.isoformat() if e.updated_at else None,
-        "created_at": e.created_at.isoformat() if getattr(e, "created_at", None) else None,
+        "updated_at": iso_utc(e.updated_at),
+        "created_at": iso_utc(getattr(e, "created_at", None)),
     }
 
 

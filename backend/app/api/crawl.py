@@ -11,6 +11,7 @@ from app.models.database import (
     Hospital, Doctor, DoctorSchedule, DoctorDateSchedule, CrawlLog,
     User, UserDoctorGrade,
 )
+from app.utils.timeutil import iso_utc
 from app.services.crawl_service import (
     crawl_my_doctors,
     _sync_schedules,
@@ -119,7 +120,7 @@ async def browse_doctors(
         "hospital_code": hospital_code,
         "hospital_name": hospital.name,
         "doctors_count": len(doctors),
-        "last_crawled": last_log.started_at.isoformat() if last_log else None,
+        "last_crawled": iso_utc(last_log.started_at) if last_log else None,
         "doctors": [
             {
                 "id": d.id,

@@ -14,6 +14,7 @@ from app.auth.deps import get_current_user
 from app.auth.oauth import oauth
 from app.models.connection import get_db
 from app.models.database import Team, TeamMember, User
+from app.utils.timeutil import iso_utc
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/auth", tags=["인증"])
@@ -38,7 +39,7 @@ def _serialize_user(
         "active_team_id": team_id,
         # 모든 소속 팀 — 사이드바 dropdown 용
         "teams": teams or [],
-        "created_at": user.created_at.isoformat() if user.created_at else None,
+        "created_at": iso_utc(user.created_at),
     }
 
 

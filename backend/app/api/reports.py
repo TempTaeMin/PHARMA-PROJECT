@@ -20,6 +20,7 @@ from app.models.connection import get_db
 from app.models.database import Doctor, Hospital, MemoTemplate, Report, User, VisitLog, VisitMemo
 from app.schemas.schemas import ReportCreate, ReportResponse
 from app.services.ai_memo import summarize_report
+from app.utils.timeutil import iso_utc
 
 logger = logging.getLogger(__name__)
 
@@ -58,8 +59,8 @@ def _serialize(r: Report) -> dict:
         "raw_combined": r.raw_combined,
         "ai_summary": _parse_ai(r.ai_summary),
         "template_id": r.template_id,
-        "created_at": r.created_at.isoformat() if r.created_at else None,
-        "updated_at": r.updated_at.isoformat() if r.updated_at else None,
+        "created_at": iso_utc(r.created_at),
+        "updated_at": iso_utc(r.updated_at),
     }
 
 

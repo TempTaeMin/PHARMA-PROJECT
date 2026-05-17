@@ -9,6 +9,7 @@ from sqlalchemy.orm import selectinload
 from datetime import datetime, timedelta
 from app.auth.deps import get_current_user
 from app.models.connection import get_db
+from app.utils.timeutil import iso_utc
 from app.models.database import (
     Doctor, Hospital, ScheduleChange, User, UserDoctorGrade,
     VisitLog, VisitMemo,
@@ -178,10 +179,10 @@ async def get_dashboard(
                 "comment_authors": memo_meta.get(v.id, {"authors": []})["authors"],
                 "notes_author_id": v.notes_author_id,
                 "notes_author_name": author_map.get(v.notes_author_id) if v.notes_author_id else None,
-                "notes_updated_at": v.notes_updated_at.isoformat() if v.notes_updated_at else None,
+                "notes_updated_at": iso_utc(v.notes_updated_at),
                 "post_notes_author_id": v.post_notes_author_id,
                 "post_notes_author_name": author_map.get(v.post_notes_author_id) if v.post_notes_author_id else None,
-                "post_notes_updated_at": v.post_notes_updated_at.isoformat() if v.post_notes_updated_at else None,
+                "post_notes_updated_at": iso_utc(v.post_notes_updated_at),
             }
             for v, owner_name in visit_rows
         ]
@@ -209,7 +210,7 @@ async def get_dashboard(
                 "change_type": c.change_type,
                 "day": days[c.original_day] if c.original_day is not None and c.original_day < 7 else "",
                 "time_slot": slots.get(c.original_time_slot, c.original_time_slot or ""),
-                "detected_at": c.detected_at.isoformat() if c.detected_at else None,
+                "detected_at": iso_utc(c.detected_at),
             }
             for c in change_result.scalars().all()
         ]
@@ -338,8 +339,8 @@ async def my_visits(
                 "ai_summary": _parse_ai(m.ai_summary),
                 "is_root": idx == 0,
                 "is_mine": mine,
-                "created_at": m.created_at.isoformat() if m.created_at else None,
-                "updated_at": m.updated_at.isoformat() if m.updated_at else None,
+                "created_at": iso_utc(m.created_at),
+                "updated_at": iso_utc(m.updated_at),
             })
         return out
 
@@ -379,10 +380,10 @@ async def my_visits(
             "is_mine": is_mine,
             "notes_author_id": v.notes_author_id,
             "notes_author_name": author_map.get(v.notes_author_id) if v.notes_author_id else None,
-            "notes_updated_at": v.notes_updated_at.isoformat() if v.notes_updated_at else None,
+            "notes_updated_at": iso_utc(v.notes_updated_at),
             "post_notes_author_id": v.post_notes_author_id,
             "post_notes_author_name": author_map.get(v.post_notes_author_id) if v.post_notes_author_id else None,
-            "post_notes_updated_at": v.post_notes_updated_at.isoformat() if v.post_notes_updated_at else None,
+            "post_notes_updated_at": iso_utc(v.post_notes_updated_at),
             "announce_start_date": v.announce_start_date,
             "announce_end_date": v.announce_end_date,
         })

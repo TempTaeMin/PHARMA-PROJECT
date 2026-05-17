@@ -25,6 +25,7 @@ from app.models.database import (
     Team, TeamInvitation, TeamMember, User, VisitLog, visit_log_recipients,
 )
 from app.notifications.manager import notification_manager
+from app.utils.timeutil import iso_utc
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/teams", tags=["팀"])
@@ -126,7 +127,7 @@ async def get_my_team(
             "id": team.id,
             "name": team.name,
             "owner_user_id": team.owner_user_id,
-            "created_at": team.created_at.isoformat() if team.created_at else None,
+            "created_at": iso_utc(team.created_at),
         },
         "role": my_role,
         "members": members,
@@ -157,7 +158,7 @@ async def create_team(
             "id": team.id,
             "name": team.name,
             "owner_user_id": team.owner_user_id,
-            "created_at": team.created_at.isoformat() if team.created_at else None,
+            "created_at": iso_utc(team.created_at),
         },
         "role": "owner",
     }
@@ -342,7 +343,7 @@ async def list_my_invitations(
             "team_name": team.name,
             "inviter_name": inviter.name,
             "inviter_email": inviter.email,
-            "created_at": inv.created_at.isoformat() if inv.created_at else None,
+            "created_at": iso_utc(inv.created_at),
         }
         for inv, team, inviter in rows
     ]
@@ -374,7 +375,7 @@ async def list_sent_invitations(
             "invitee_user_id": invitee.id,
             "invitee_email": invitee.email,
             "invitee_name": invitee.name,
-            "created_at": inv.created_at.isoformat() if inv.created_at else None,
+            "created_at": iso_utc(inv.created_at),
         }
         for inv, invitee in rows
     ]

@@ -14,6 +14,7 @@ from typing import Optional
 from app.tasks.celery_app import celery_app
 from app.crawlers.factory import get_crawler, CRAWLER_REGISTRY
 from app.config import get_settings
+from app.utils.timeutil import iso_utc
 
 logger = logging.getLogger(__name__)
 settings = get_settings()
@@ -86,7 +87,7 @@ def crawl_single_hospital(self, hospital_code: str, department: str = None):
             "hospital_name": result.hospital_name,
             "status": result.status,
             "doctors_count": len(result.doctors),
-            "crawled_at": result.crawled_at.isoformat(),
+            "crawled_at": iso_utc(result.crawled_at),
         }
 
         if result.status == "success" or result.status == "partial":
