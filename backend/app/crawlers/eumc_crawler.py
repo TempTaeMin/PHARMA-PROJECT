@@ -312,28 +312,43 @@ class EumcBaseCrawler:
                     return {k: d.get(k, "" if k not in ("schedules", "date_schedules") else []) for k in _keys}
             return empty
 
-        # 개별 조회: 진료과 순회하며 해당 교수 찾으면 월별 스케줄도 수집
+        # 개별 조회: 진료과를 병렬로 훑어 해당 교수 매칭. 첫 매칭 즉시 나머지 cancel.
+        # 직렬이면 진료과 목록 끝쪽 교수가 dept 수×요청 시간으로 ~150s 걸려 proxy timeout.
+        import asyncio
         prefix = f"{self.hospital_code}-"
         dr_sid = staff_id.replace(prefix, "") if staff_id.startswith(prefix) else staff_id
         depts = await self._fetch_departments()
 
         async with httpx.AsyncClient(headers=self.headers, timeout=60, follow_redirects=True) as client:
-            for dept in depts:
+            sem = asyncio.Semaphore(8)
+
+            async def try_dept(dept):
                 dept_cd = dept.get("dept_cd", "")
-                dept_nm = dept.get("dept_nm", "")
-                grp_yn = dept.get("grp_yn", "N")
                 if not dept_cd:
-                    continue
-                docs = await self._fetch_dept_schedule(client, dept_cd, dept_nm, grp_yn)
+                    return None
+                async with sem:
+                    docs = await self._fetch_dept_schedule(
+                        client, dept_cd, dept.get("dept_nm", ""), dept.get("grp_yn", "N"),
+                    )
                 for doc in docs:
-                    matched = (doc.get("external_id") == staff_id or
-                               doc.get("staff_id") == staff_id or
-                               f"{prefix}{dr_sid}" == doc.get("external_id"))
-                    if matched:
-                        # 날짜별 스케줄 추가 수집
+                    if (doc.get("external_id") == staff_id or
+                        doc.get("staff_id") == staff_id or
+                        f"{prefix}{dr_sid}" == doc.get("external_id")):
+                        return doc
+                return None
+
+            tasks = [asyncio.create_task(try_dept(d)) for d in depts]
+            try:
+                for coro in asyncio.as_completed(tasks):
+                    found = await coro
+                    if found is not None:
                         date_scheds = await self._fetch_monthly_schedule(client, dr_sid)
-                        doc["date_schedules"] = date_scheds
-                        return {k: doc.get(k, "" if k not in ("schedules", "date_schedules") else []) for k in _keys}
+                        found["date_schedules"] = date_scheds
+                        return {k: found.get(k, "" if k not in ("schedules", "date_schedules") else []) for k in _keys}
+            finally:
+                for t in tasks:
+                    if not t.done():
+                        t.cancel()
 
         return empty
 
