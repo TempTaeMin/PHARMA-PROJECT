@@ -7,7 +7,7 @@
 DB 스키마 변경 없이 기존 모델만으로 집계.
 """
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -42,7 +42,13 @@ router = APIRouter(prefix="/api/admin", tags=["관리자"])
 
 
 def _iso(dt: Optional[datetime]) -> Optional[str]:
-    return dt.isoformat() if dt else None
+    """DB 의 timezone-naive UTC datetime 을 UTC 명시 ISO 로 직렬화.
+    'Z' suffix 가 없으면 JS new Date() 가 로컬 timezone 으로 해석해 9시간 어긋남."""
+    if not dt:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.isoformat()
 
 
 @router.get("/stats", summary="전체 현황 (admin)")
