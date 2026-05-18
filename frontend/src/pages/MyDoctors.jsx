@@ -9,6 +9,7 @@ import ScheduleCalendar from '../components/ScheduleCalendar';
 import SelectVisitDate from '../components/SelectVisitDate';
 import DoctorScheduleHintPopup from '../components/DoctorScheduleHintPopup';
 import SelectMeetingTime from '../components/SelectMeetingTime';
+import VisitDetailModal from '../components/VisitDetailModal';
 
 const REASON_LABELS = {
   transferred: { text: '이직', color: 'var(--am)' },
@@ -48,6 +49,34 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
   const [showManual, setShowManual] = useState(false);
   // 이직/퇴직 처리 모달: { doctor, reason } | null
   const [deactivateFor, setDeactivateFor] = useState(null);
+  // 방문 결과 모달 — visit 카드 클릭 시 form 입력
+  const [visitForDetail, setVisitForDetail] = useState(null);
+
+  const refreshVisitsAndMemos = async (doctorId) => {
+    try {
+      const [v, ms] = await Promise.all([
+        visitApi.list(doctorId),
+        memoApi.listByDoctor(doctorId).catch(() => []),
+      ]);
+      setVisits(v || []);
+      setDoctorMemos(ms || []);
+    } catch (_) {}
+  };
+
+  const handleVisitSave = async (visit, patch) => {
+    await visitApi.updateFlat(visit.id, patch);
+    if (detail) await refreshVisitsAndMemos(detail.id);
+    invalidate('my-visits');
+    invalidate('dashboard');
+  };
+
+  const handleVisitCancel = async (visit) => {
+    await visitApi.removeFlat(visit.id);
+    setVisitForDetail(null);
+    if (detail) await refreshVisitsAndMemos(detail.id);
+    invalidate('my-visits');
+    invalidate('dashboard');
+  };
 
   // ─ 방문 일정 등록 플로우 (detail 에서 열림) ─
   // null | 'select-date' | 'hint-popup' | 'select-time'
@@ -305,6 +334,16 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
         teamMembers={teamMembers}
         currentUserId={currentUser?.id}
       />
+      {/* 방문 결과 form 모달 — 방문기록 카드 클릭 시 */}
+      <VisitDetailModal
+        open={!!visitForDetail}
+        visit={visitForDetail}
+        onClose={() => setVisitForDetail(null)}
+        onSave={handleVisitSave}
+        onCancelPlanned={handleVisitCancel}
+        onComplete={() => setVisitForDetail(null)}
+        hasTeam={hasTeam}
+      />
     </>
   );
 
@@ -442,7 +481,24 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
                 const first = Object.values(s).find(v => v && String(v).trim());
                 if (first) return String(first);
               }
-              return (m.raw_memo || '').slice(0, 80);
+              // form 메모 sniff — raw_memo 가 form JSON 이면 fields 의 첫 비-empty value
+              const raw = m.raw_memo || '';
+              if (raw) {
+                try {
+                  const parsed = JSON.parse(raw);
+                  if (parsed && parsed.kind === 'form' && Array.isArray(parsed.fields)) {
+                    const prefKeys = ['결과', '논의내용', '요약'];
+                    for (const k of prefKeys) {
+                      const f = parsed.fields.find(x => x.key === k && (x.value || '').trim());
+                      if (f) return String(f.value);
+                    }
+                    const first = parsed.fields.find(x => (x.value || '').trim());
+                    if (first) return String(first.value);
+                    return '';
+                  }
+                } catch (_) {}
+              }
+              return raw.slice(0, 80);
             })();
             return { aiOk, oneLine };
           };
@@ -491,15 +547,28 @@ export default function MyDoctors({ onNavigate, initialDoctorId, currentUser, te
                     const memo = memoByVisitId.get(v.id);
                     const sc = statusColor(v.status);
                     const { aiOk, oneLine } = memo ? aiSummaryLine(memo) : { aiOk: false, oneLine: '' };
-                    const clickable = !!memo;
+                    // visit 카드는 항상 클릭 가능 — form 모달 열기
                     return (
                       <div
                         key={`v-${v.id}`}
-                        onClick={clickable ? () => onNavigate?.('memos', { filters: { doctor_id: detail.id } }) : undefined}
+                        onClick={() => {
+                          // VisitDetailModal 이 기대하는 visit shape — memo 정보 합치고 doctor 컨텍스트 보강
+                          const enriched = {
+                            ...v,
+                            doctor_id: detail.id,
+                            doctor_name: detail.name,
+                            hospital_name: detail.hospital_name,
+                            department: detail.department,
+                            // memo 가 있으면 memos 배열로 (모달의 prefill 로직 호환)
+                            memos: memo ? [{ ...memo, is_mine: true }] : [],
+                            is_mine: v.is_mine !== false,
+                          };
+                          setVisitForDetail(enriched);
+                        }}
                         style={{
                           padding: '12px 14px', borderRadius: 9,
                           background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
-                          cursor: clickable ? 'pointer' : 'default',
+                          cursor: 'pointer',
                         }}
                       >
                         <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6, flexWrap: 'wrap' }}>
