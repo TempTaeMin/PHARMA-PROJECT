@@ -238,7 +238,31 @@ class MemoTemplateBase(BaseModel):
     default_report_type: Optional[str] = None  # "daily" | "weekly" | None
 
 class MemoTemplateCreate(MemoTemplateBase):
-    pass
+    team_id: Optional[int] = None  # 지정 시 팀 템플릿 (팀 owner 만 가능)
+
+
+class VisitFormFieldValue(BaseModel):
+    key: str
+    value: str = ""
+
+
+class VisitFormMemoCreate(BaseModel):
+    """방문 결과 모달의 form 입력 payload.
+
+    fields: 사용자가 입력한 각 필드 값 (작성 시점 키 순서 보존)
+    share_with_recipients: true 면 ai_summary 컬럼에 mirror 해서 visit recipient 들이 본다
+    """
+    template_id: Optional[int] = None
+    fields: list[VisitFormFieldValue]
+    share_with_recipients: bool = False
+
+
+class RefineFieldRequest(BaseModel):
+    """단일 필드 AI 다듬기 요청. value 는 사용자가 거칠게 작성한 텍스트."""
+    value: str
+    field_key: str
+    template_id: Optional[int] = None
+    visit_id: Optional[int] = None  # 컨텍스트(교수명·병원명·진료과) 보강용
 
 class MemoTemplateUpdate(BaseModel):
     name: Optional[str] = None

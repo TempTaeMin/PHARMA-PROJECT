@@ -7,6 +7,15 @@ import { showConfirm } from '../utils/dialog';
 
 const MEMO_TYPE_LABEL = { visit: '방문', meeting: '회의록', note: '노트' };
 
+function tryParseFormMemo(raw) {
+  if (!raw) return null;
+  try {
+    const v = JSON.parse(raw);
+    if (v && typeof v === 'object' && v.kind === 'form') return v;
+  } catch (_) {}
+  return null;
+}
+
 function formatDate(iso) {
   if (!iso) return '';
   const d = new Date(iso);
@@ -273,18 +282,54 @@ export default function MemoDetail({
           </div>
         )
       ) : (
-        <div style={{
-          padding: '16px 18px', borderRadius: 12,
-          background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
-        }}>
-          <pre style={{
-            whiteSpace: 'pre-wrap', wordBreak: 'break-word',
-            fontFamily: 'inherit', fontSize: 13, color: 'var(--t1)',
-            lineHeight: 1.6, margin: 0,
-          }}>
-            {memo.raw_memo || '(원본 메모 없음)'}
-          </pre>
-        </div>
+        (() => {
+          const formData = tryParseFormMemo(memo.raw_memo);
+          if (formData) {
+            const filled = (formData.fields || []).filter(f => f && (f.value || '').trim());
+            return (
+              <div style={{
+                padding: '16px 18px', borderRadius: 12,
+                background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+              }}>
+                {filled.length === 0 ? (
+                  <div style={{ fontSize: 12, color: 'var(--t3)', fontStyle: 'italic' }}>
+                    입력된 필드가 없습니다.
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                    {filled.map(f => (
+                      <div key={f.key} style={{
+                        display: 'flex', gap: 12, fontSize: 13,
+                        paddingBottom: 10, borderBottom: '1px dashed var(--bd-s)',
+                      }}>
+                        <span style={{
+                          minWidth: 100, color: 'var(--t3)', fontWeight: 700, fontSize: 12,
+                        }}>{f.key}</span>
+                        <span style={{ color: 'var(--t1)', flex: 1, lineHeight: 1.55, whiteSpace: 'pre-wrap' }}>
+                          {f.value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          }
+          return (
+            <div style={{
+              padding: '16px 18px', borderRadius: 12,
+              background: 'var(--bg-1)', border: '1px solid var(--bd-s)',
+            }}>
+              <pre style={{
+                whiteSpace: 'pre-wrap', wordBreak: 'break-word',
+                fontFamily: 'inherit', fontSize: 13, color: 'var(--t1)',
+                lineHeight: 1.6, margin: 0,
+              }}>
+                {memo.raw_memo || '(원본 메모 없음)'}
+              </pre>
+            </div>
+          );
+        })()
       )}
 
       <div style={{ fontSize: 11, color: 'var(--t3)', marginTop: 10, textAlign: 'right' }}>

@@ -17,7 +17,12 @@ from app.models.database import (
     Doctor, MemoTemplate, User, VisitLog, VisitMemo, visit_log_recipients,
 )
 from app.notifications.manager import notification_manager
-from app.schemas.schemas import AnnouncementCreate, PersonalEventCreate, SummarizeRequest
+from app.schemas.schemas import (
+    AnnouncementCreate,
+    PersonalEventCreate,
+    SummarizeRequest,
+    VisitFormMemoCreate,
+)
 from app.services.ai_memo import organize_memo, summarize_freeform
 from app.utils.timeutil import iso_utc
 
@@ -500,12 +505,20 @@ def _parse_ai(raw: Optional[str]):
 
 
 async def _load_default_template(db: AsyncSession, user_id: int) -> Optional[MemoTemplate]:
-    query = (
-        select(MemoTemplate)
-        .where(MemoTemplate.user_id == user_id, MemoTemplate.is_default == True)
-        .limit(1)
-    )
-    return (await db.execute(query)).scalar_one_or_none()
+    """본인 default 메모 템플릿. memos.py 의 _load_template 와 동일 우선순위."""
+    from app.api.memos import _load_template
+    return await _load_template(db, None, user_id)
+
+
+def _sniff_form_memo(raw: Optional[str]) -> bool:
+    """raw_memo 가 form 입력 JSON 이면 True."""
+    if not raw:
+        return False
+    try:
+        parsed = json.loads(raw)
+        return isinstance(parsed, dict) and parsed.get("kind") == "form"
+    except (TypeError, ValueError):
+        return False
 
 
 @router.post("/{visit_id}/ai-summarize", summary="방문 메모 AI 정리 (Claude Haiku)")
@@ -561,6 +574,13 @@ async def ai_summarize_visit(
     if not raw_source:
         label = "결과 메모" if is_professor else "메모"
         raise HTTPException(400, f"{label}가 비어 있어 AI 정리할 내용이 없습니다.")
+
+    # 교수 방문의 form 메모는 전체 AI 정리 대상이 아니다 — 필드별 다듬기 사용.
+    if is_professor and _sniff_form_memo(raw_source):
+        raise HTTPException(
+            400,
+            "form 메모는 전체 AI 정리하지 않습니다. 필드별 다듬기를 사용하세요.",
+        )
 
     # 교수 방문: 템플릿 기반 구조화 요약
     # 개인/공지: 템플릿 없이 자유 문장 정리
@@ -648,4 +668,123 @@ async def ai_summarize_visit(
         "ai_summary": result,
         "title": memo.title,
         "template_id": memo.template_id,
+    }
+
+
+# ─────────── form 입력 메모 ───────────
+
+def _fields_to_mirror_ai_summary(
+    fields: list, *, doctor_name: Optional[str] = None,
+) -> dict:
+    """form fields → ai_summary 호환 JSON 으로 mirror.
+
+    공유 토글 ON 시 visit recipient 가 기존 팀 노출 경로(ai_summary)로 결과를 보게 한다.
+    AI 거치지 않은 사실이라 왜곡 위험 zero.
+    """
+    summary = {f.key: (f.value or "") for f in fields if f.key}
+    if doctor_name:
+        title = f"{doctor_name} 방문 결과"
+    else:
+        title = "방문 결과"
+    return {"title": title, "summary": summary}
+
+
+@router.post("/{visit_id}/form-memo", summary="방문 결과 form 메모 저장")
+async def save_form_memo(
+    visit_id: int,
+    payload: VisitFormMemoCreate,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    """템플릿 form 으로 입력한 방문 결과 메모 저장.
+
+    - raw_memo: form JSON 으로 직렬화 (`{kind: "form", template_id, share_with_recipients, fields: [...]}`)
+    - share_with_recipients=true 면 fields → mirror JSON 으로 ai_summary 컬럼에도 저장
+      → 기존 팀 공유 경로(MemoThread, dashboard) 그대로 노출
+    - 빈 fields 는 거부
+    - 권한: visit owner 또는 recipient (`_visit_user_filter` 재사용)
+    """
+    from app.api.memos import _load_template
+    from app.api.dashboard import _visit_user_filter
+
+    if not payload.fields:
+        raise HTTPException(400, "필드가 비어있습니다.")
+    if not any((f.value or "").strip() for f in payload.fields):
+        raise HTTPException(400, "최소 한 필드 이상 입력해주세요.")
+
+    user_filter = await _visit_user_filter(db, user.id)
+    visit = (await db.execute(
+        select(VisitLog)
+        .options(selectinload(VisitLog.doctor).selectinload(Doctor.hospital))
+        .where(VisitLog.id == visit_id, user_filter)
+    )).scalar_one_or_none()
+    if not visit:
+        raise HTTPException(404, "방문 기록을 찾을 수 없습니다.")
+
+    # 템플릿 read 권한 검증 (지정된 경우)
+    template = None
+    if payload.template_id is not None:
+        template = await _load_template(db, payload.template_id, user.id)
+        if template is None:
+            raise HTTPException(404, "템플릿을 찾을 수 없습니다.")
+
+    raw_payload = {
+        "version": 1,
+        "kind": "form",
+        "template_id": template.id if template else None,
+        "share_with_recipients": bool(payload.share_with_recipients),
+        "fields": [{"key": f.key, "value": f.value or ""} for f in payload.fields],
+    }
+    raw_str = json.dumps(raw_payload, ensure_ascii=False)
+
+    # 공유 mirror — share=true 면 ai_summary 갱신, 아니면 보존
+    if payload.share_with_recipients:
+        doctor_name = visit.doctor.name if visit.doctor else None
+        mirror = _fields_to_mirror_ai_summary(payload.fields, doctor_name=doctor_name)
+        ai_summary_str = json.dumps(mirror, ensure_ascii=False)
+    else:
+        ai_summary_str = None
+
+    existing = (await db.execute(
+        select(VisitMemo).where(
+            VisitMemo.visit_log_id == visit.id,
+            VisitMemo.user_id == user.id,
+        )
+    )).scalar_one_or_none()
+
+    if existing is None:
+        doctor_obj = visit.doctor
+        hospital_obj = doctor_obj.hospital if doctor_obj else None
+        memo = VisitMemo(
+            user_id=user.id,
+            doctor_id=visit.doctor_id,
+            visit_log_id=visit.id,
+            template_id=template.id if template else None,
+            visit_date=visit.visit_date,
+            memo_type="visit" if visit.doctor_id else "note",
+            title=visit.title,
+            raw_memo=raw_str,
+            ai_summary=ai_summary_str,
+            doctor_name_snapshot=doctor_obj.name if doctor_obj else None,
+            doctor_dept_snapshot=doctor_obj.department if doctor_obj else None,
+            hospital_name_snapshot=hospital_obj.name if hospital_obj else None,
+        )
+        db.add(memo)
+    else:
+        memo = existing
+        memo.raw_memo = raw_str
+        memo.template_id = template.id if template else memo.template_id
+        # share=false 면 ai_summary 손대지 않음 (legacy 보존). true 면 fields 로 mirror.
+        if payload.share_with_recipients:
+            memo.ai_summary = ai_summary_str
+
+    await db.commit()
+    await db.refresh(memo)
+
+    return {
+        "memo_id": memo.id,
+        "visit_id": visit.id,
+        "template_id": memo.template_id,
+        "share_with_recipients": bool(payload.share_with_recipients),
+        "saved_at": iso_utc(memo.updated_at),
     }

@@ -105,6 +105,7 @@ async def google_callback(request: Request, db: AsyncSession = Depends(get_db)):
     user = (await db.execute(
         select(User).where(User.google_sub == google_sub)
     )).scalar_one_or_none()
+    is_new_user = False
     if user:
         user.email = email
         # name 은 사용자가 직접 변경 가능하므로 매 로그인마다 Google name 으로 덮어쓰지 않음.
@@ -120,11 +121,21 @@ async def google_callback(request: Request, db: AsyncSession = Depends(get_db)):
             last_login_at=datetime.utcnow(),
         )
         db.add(user)
+        is_new_user = True
     await db.commit()
     await db.refresh(user)
 
     # 팀 자동 생성 안 함 — 사용자가 명시적으로 "팀 만들기" 액션을 해야 팀 생성됨
     # (1.0 팀 공유 정책: 팀 소속은 선택적)
+
+    # 신규 가입자에게 개인 default 메모 템플릿 시드 — 첫 방문 결과 모달에서
+    # form 이 바로 렌더링되도록 보장.
+    if is_new_user:
+        from app.models.seed import seed_default_memo_template_for_user
+        try:
+            await seed_default_memo_template_for_user(db, user.id)
+        except Exception:
+            logger.exception("default memo template seed 실패 (무시)")
 
     request.session["user_id"] = user.id
     return RedirectResponse(url=_frontend_url())

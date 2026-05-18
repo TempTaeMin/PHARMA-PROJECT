@@ -4,9 +4,21 @@ import {
   Sparkles, FileText, RefreshCw, Users, UserCircle2,
   ChevronDown, ChevronUp,
 } from 'lucide-react';
-import { visitApi } from '../api/client';
+import { visitApi, aiApi, memoTemplateApi } from '../api/client';
 import { invalidate } from '../api/cache';
 import { showError, showConfirm } from '../utils/dialog';
+import TemplateFormFields from './TemplateFormFields';
+
+const AUTO_LABELS = new Set(['방문일시', '교수명', '병원명', '면담시간']);
+
+function tryParseFormMemo(raw) {
+  if (!raw) return null;
+  try {
+    const v = JSON.parse(raw);
+    if (v && typeof v === 'object' && v.kind === 'form') return v;
+  } catch (_) {}
+  return null;
+}
 
 function _relativeKo(iso) {
   if (!iso) return '';
@@ -74,6 +86,19 @@ export default function VisitDetailModal({
   // AI 정리가 있을 때 raw 메모 박스 접기 상태 — 사용자가 펼쳐서 보면 expanded
   const [rawExpanded, setRawExpanded] = useState(false);
 
+  // ── form 메모 (교수 완료 분기 한정) ────────────────────────────
+  const [templates, setTemplates] = useState([]);
+  const [templatesLoaded, setTemplatesLoaded] = useState(false);
+  const [formTemplateId, setFormTemplateId] = useState(null);
+  const [formValues, setFormValues] = useState({});
+  const [shareWithRecipients, setShareWithRecipients] = useState(false);
+  const [legacyFreeform, setLegacyFreeform] = useState(null); // 옛 자유 텍스트 raw_memo
+  const [legacyAiSummary, setLegacyAiSummary] = useState(null);
+  const [legacyExpanded, setLegacyExpanded] = useState(false);
+  const [formSaving, setFormSaving] = useState(false);
+  const [formSavedAt, setFormSavedAt] = useState(null);
+  const [formError, setFormError] = useState(null);
+
   const initialAiSummary = useMemo(() => {
     const raw = visit?.ai_summary;
     if (!raw) return null;
@@ -107,7 +132,48 @@ export default function VisitDetailModal({
     // 정리된 AI 메모(본인이든 공유받은 거든)가 하나라도 있으면 raw 접기 — 정보량 줄이기
     const anyAi = (visit.memos || []).some(m => m.ai_summary);
     setRawExpanded(!anyAi);
+
+    // form 메모 prefill — 본인 메모의 raw_memo 가 form JSON 이면 form 으로,
+    // 자유 텍스트면 legacy 박스로.
+    const myMemo = (visit.memos || []).find(m => m.is_mine);
+    const formData = tryParseFormMemo(myMemo?.raw_memo);
+    if (formData) {
+      setFormTemplateId(formData.template_id ?? null);
+      const next = {};
+      (formData.fields || []).forEach(f => {
+        if (f && typeof f.key === 'string') next[f.key] = f.value || '';
+      });
+      setFormValues(next);
+      setShareWithRecipients(!!formData.share_with_recipients);
+      setLegacyFreeform(null);
+    } else {
+      setFormTemplateId(null);
+      setFormValues({});
+      setShareWithRecipients(false);
+      const rawText = (myMemo?.raw_memo || '').trim();
+      setLegacyFreeform(rawText || null);
+    }
+    setLegacyAiSummary(myMemo?.ai_summary || null);
+    setLegacyExpanded(false);
+    setFormSavedAt(null);
+    setFormError(null);
   }, [visit?.id]);
+
+  // 모달 open 시 templates 한 번만 fetch (재오픈/다른 visit 으로 이동해도 캐시)
+  useEffect(() => {
+    if (!open || templatesLoaded) return;
+    (async () => {
+      try {
+        const list = await memoTemplateApi.list({ scope: 'memo' });
+        setTemplates(Array.isArray(list) ? list : []);
+      } catch (e) {
+        // 템플릿 로드 실패해도 모달은 동작 — fallback fields 사용
+        setTemplates([]);
+      } finally {
+        setTemplatesLoaded(true);
+      }
+    })();
+  }, [open, templatesLoaded]);
 
   if (!open || !visit) return null;
 
@@ -135,10 +201,43 @@ export default function VisitDetailModal({
   const handleSave = async () => {
     setSaving(true);
     try {
+      // 교수 완료 방문 — form 메모 endpoint 로 저장 (raw_memo/post_notes 흐름 우회)
+      if (isProfessor && !isPlanned) {
+        if (!Object.values(formValues).some(v => (v || '').trim())) {
+          throw new Error('결과를 한 필드 이상 입력해주세요.');
+        }
+        const activeTpl = templates.find(t => t.id === formTemplateId) || null;
+        const fieldKeys = (activeTpl?.fields && activeTpl.fields.length > 0)
+          ? activeTpl.fields
+          : Object.keys(formValues);
+        const payload = {
+          template_id: formTemplateId ?? null,
+          fields: fieldKeys.map(k => ({ key: k, value: (formValues[k] || '').trim() })),
+          share_with_recipients: shareWithRecipients,
+        };
+        await visitApi.saveFormMemo(visit.id, payload);
+        setFormSavedAt(new Date().toISOString());
+        invalidate('my-visits');
+        invalidate('dashboard');
+        // 본인 owner 면 시간 변경도 같이 (recipient 는 시간 못 바꿈)
+        if (visit.is_mine !== false) {
+          const time = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}:00`;
+          const datePatch = { visit_date: `${dateStr}T${time}` };
+          // visit_date 가 실제 변경됐을 때만 PATCH (단순 비교)
+          const origDate = visit.visit_date ? new Date(visit.visit_date) : null;
+          const nextDate = new Date(`${dateStr}T${time}`);
+          if (!origDate || origDate.getTime() !== nextDate.getTime()) {
+            await onSave(visit, datePatch);
+          }
+        }
+        onClose();
+        return;
+      }
+
       const isMineLocal = visit.is_mine !== false;
       let patch;
       if (!isMineLocal) {
-        // recipient — 결과 메모만 저장 가능 (완료된 교수 visit 한정)
+        // recipient — 결과 메모만 저장 가능 (완료된 교수 visit 한정 — 이미 위에서 처리됨)
         patch = { post_notes: postNotes.trim() || null };
       } else {
         const time = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}:00`;
@@ -160,6 +259,16 @@ export default function VisitDetailModal({
     } finally {
       setSaving(false);
     }
+  };
+
+  const handleRefineField = async (fieldKey, value) => {
+    const res = await aiApi.refineField({
+      value,
+      field_key: fieldKey,
+      template_id: formTemplateId ?? null,
+      visit_id: visit?.id ?? null,
+    });
+    return res?.refined_value || '';
   };
 
   const handleCancelPlanned = async () => {
@@ -394,118 +503,161 @@ export default function VisitDetailModal({
 
         {/* 메모 본문 */}
         {isProfessor && !isPlanned ? (
-          /* 교수 방문 완료 — 본인 raw 메모 + AI 정리 스레드 (댓글 모델) */
+          /* 교수 방문 완료 — 템플릿 form 직접 입력 (결정론적) + 필드별 AI 다듬기 */
           (() => {
-            const memos = localMemos || visit.memos || [];
-            const myMemoHasAi = memos.some(m => m.is_mine && m.ai_summary);
-            // 본인 거든 공유받은 거든 AI 카드가 하나라도 있으면 raw 자동 접힘 (정보량 줄이기)
-            const anyAi = memos.some(m => m.ai_summary);
-            const showRaw = rawExpanded || !anyAi;
+            const activeTpl = templates.find(t => t.id === formTemplateId) || null;
+            const fallbackFields = ['논의내용', '결과', '다음 액션', '논의 제품'];
+            const fields = (activeTpl?.fields && activeTpl.fields.length > 0)
+              ? activeTpl.fields
+              : fallbackFields;
             return (
               <>
-                {/* 본인 raw 결과 메모 — 본인만 보임. AI 정리되면 접힘. */}
-                <div style={{ marginTop: 14 }}>
-                  <div style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    marginBottom: 6, gap: 8,
-                  }}>
+                {/* 템플릿 선택 */}
+                {templates.length > 0 && (
+                  <div style={{ marginTop: 14 }}>
                     <SectionLabel>
-                      결과 메모 <span style={{ fontWeight: 500, opacity: .7 }}>· 본인만 보여요</span>
+                      입력 양식 <span style={{ fontWeight: 500, opacity: .7 }}>· 템플릿</span>
                     </SectionLabel>
-                    {anyAi && (
-                      <button
-                        onClick={() => setRawExpanded(v => !v)}
-                        style={{
-                          padding: '4px 9px', borderRadius: 6,
-                          background: 'var(--bg-2)', color: 'var(--t3)',
-                          border: '1px solid var(--bd-s)',
-                          fontSize: 10, fontWeight: 700, fontFamily: 'inherit',
-                          cursor: 'pointer',
-                          display: 'inline-flex', alignItems: 'center', gap: 3,
-                        }}
-                        title={showRaw ? '원본 메모 접기' : '원본 메모 펼치기'}
-                      >
-                        {showRaw ? <ChevronUp size={11} /> : <ChevronDown size={11} />}
-                        {showRaw ? '접기' : '원본 보기'}
-                      </button>
-                    )}
+                    <select
+                      value={formTemplateId ?? ''}
+                      onChange={e => setFormTemplateId(e.target.value ? parseInt(e.target.value) : null)}
+                      style={{
+                        width: '100%', padding: '9px 11px', borderRadius: 8,
+                        border: '1px solid var(--bd-s)',
+                        background: 'var(--bg-1)', color: 'var(--t1)',
+                        fontSize: 13, fontFamily: 'inherit', boxSizing: 'border-box',
+                      }}
+                    >
+                      <option value="">자동 (기본 템플릿)</option>
+                      {templates.map(t => (
+                        <option key={t.id} value={t.id}>
+                          {t.is_team ? '[팀] ' : '[개인] '}{t.name}{t.is_default ? ' · 기본' : ''}
+                        </option>
+                      ))}
+                    </select>
                   </div>
-                  {showRaw ? (
-                    <>
-                      <MemoTextarea
-                        visit={visit}
-                        isProfessor={isProfessor}
-                        isPlanned={isPlanned}
-                        isAnnouncement={isAnnouncement}
-                        isMine={isMine}
-                        preNotes={preNotes}
-                        setPreNotes={setPreNotes}
-                        postNotes={postNotes}
-                        setPostNotes={setPostNotes}
-                        singleNotes={singleNotes}
-                        setSingleNotes={setSingleNotes}
-                      />
-                      <MemoAuthorLine
-                        name={visit.post_notes_author_name}
-                        updatedAt={visit.post_notes_updated_at}
-                      />
-                    </>
-                  ) : (
-                    <div style={{
-                      padding: '8px 12px', borderRadius: 8,
-                      background: 'var(--bg-2)', border: '1px dashed var(--bd-s)',
-                      fontSize: 11, color: 'var(--t3)',
-                      display: 'flex', alignItems: 'center', gap: 6,
-                    }}>
-                      <FileText size={11} />
-                      {postNotes.length > 0
-                        ? `내 원본 ${postNotes.length}자 · ${myMemoHasAi ? 'AI 로 정리됨' : '미정리'}`
-                        : '내 원본 메모는 아직 비어있어요'}
-                    </div>
-                  )}
+                )}
+
+                {/* form 필드 */}
+                <div style={{ marginTop: 14 }}>
+                  <SectionLabel>
+                    방문 결과 <span style={{ fontWeight: 500, opacity: .7 }}>· 직접 입력</span>
+                  </SectionLabel>
+                  <TemplateFormFields
+                    fields={fields}
+                    values={formValues}
+                    onChange={setFormValues}
+                    hiddenKeys={fields.filter(k => AUTO_LABELS.has(k))}
+                    onRefineField={handleRefineField}
+                  />
                 </div>
 
-                {/* AI 정리 스레드 */}
-                <div style={{ marginTop: 18 }}>
-                  <div style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    marginBottom: 8, gap: 8,
+                {/* 공유 토글 */}
+                <div style={{ marginTop: 14 }}>
+                  <label style={{
+                    display: 'flex', alignItems: 'center', gap: 8,
+                    fontSize: 12, color: 'var(--t2)', cursor: 'pointer',
+                    padding: '9px 11px', borderRadius: 8,
+                    background: shareWithRecipients ? 'var(--ac-d)' : 'var(--bg-2)',
+                    border: '1px solid ' + (shareWithRecipients ? 'var(--ac)' : 'var(--bd-s)'),
                   }}>
-                    <SectionLabel icon={<Sparkles size={12} />}>
-                      AI 정리 <span style={{ fontWeight: 500, opacity: .7 }}>· 팀에 공유돼요</span>
-                    </SectionLabel>
-                    {canAiSummarize && (
-                      <button
-                        onClick={handleAiSummarize}
-                        disabled={aiLoading}
-                        style={{
-                          padding: '5px 10px', borderRadius: 7,
-                          background: 'var(--ac-d)', color: 'var(--ac)',
-                          border: '1px solid var(--ac)',
-                          fontSize: 11, fontWeight: 700, fontFamily: 'inherit',
-                          cursor: aiLoading ? 'not-allowed' : 'pointer',
-                          display: 'inline-flex', alignItems: 'center', gap: 4,
-                          opacity: aiLoading ? .6 : 1,
-                        }}
-                        title="Claude Haiku 로 구조화된 정리"
-                      >
-                        {aiLoading ? <RefreshCw size={12} /> : <Sparkles size={12} />}
-                        {aiLoading
-                          ? '정리 중…'
-                          : (myMemoHasAi ? '내 정리 다시' : 'MR AI로 정리')}
-                      </button>
-                    )}
-                  </div>
-
-                  <MemoThread memos={memos} />
+                    <input
+                      type="checkbox"
+                      checked={shareWithRecipients}
+                      onChange={e => setShareWithRecipients(e.target.checked)}
+                      style={{ cursor: 'pointer' }}
+                    />
+                    <span>
+                      <strong style={{ fontWeight: 700 }}>이 결과를 같이 만나는 분들과 공유</strong>
+                      <span style={{ marginLeft: 6, color: 'var(--t3)' }}>
+                        · 끄면 본인만 봅니다
+                      </span>
+                    </span>
+                  </label>
                 </div>
 
-                {aiError && (
+                {/* legacy — 이전 자유 메모 / 이전 AI 정리 (있을 때만) */}
+                {(legacyFreeform || legacyAiSummary) && (
+                  <div style={{ marginTop: 14 }}>
+                    <button
+                      type="button"
+                      onClick={() => setLegacyExpanded(v => !v)}
+                      style={{
+                        width: '100%', textAlign: 'left',
+                        padding: '7px 10px', borderRadius: 7,
+                        background: 'var(--bg-2)', color: 'var(--t3)',
+                        border: '1px solid var(--bd-s)',
+                        fontSize: 11, fontWeight: 700, fontFamily: 'inherit',
+                        cursor: 'pointer',
+                        display: 'inline-flex', alignItems: 'center', gap: 4,
+                      }}
+                    >
+                      {legacyExpanded ? <ChevronUp size={11} /> : <ChevronDown size={11} />}
+                      이전 메모 보기 (참고용)
+                    </button>
+                    {legacyExpanded && (
+                      <div style={{ marginTop: 8 }}>
+                        {legacyFreeform && (
+                          <div style={{
+                            padding: '10px 12px', borderRadius: 8, marginBottom: 8,
+                            background: 'var(--bg-2)', border: '1px dashed var(--bd-s)',
+                            fontSize: 12, color: 'var(--t2)', lineHeight: 1.5,
+                            whiteSpace: 'pre-wrap',
+                          }}>
+                            <div style={{
+                              fontSize: 10, fontWeight: 700, color: 'var(--t3)',
+                              marginBottom: 6, letterSpacing: '.04em',
+                            }}>이전 자유 메모</div>
+                            {legacyFreeform}
+                          </div>
+                        )}
+                        {legacyAiSummary && (() => {
+                          const parsed = typeof legacyAiSummary === 'string'
+                            ? (() => { try { return JSON.parse(legacyAiSummary); } catch { return null; } })()
+                            : legacyAiSummary;
+                          if (!parsed || !parsed.summary) return null;
+                          return (
+                            <div style={{
+                              padding: '10px 12px', borderRadius: 8,
+                              background: 'var(--bg-2)', border: '1px dashed var(--bd-s)',
+                              fontSize: 12, color: 'var(--t2)', lineHeight: 1.5,
+                            }}>
+                              <div style={{
+                                fontSize: 10, fontWeight: 700, color: 'var(--t3)',
+                                marginBottom: 6, letterSpacing: '.04em',
+                              }}>이전 AI 정리 (참고)</div>
+                              {Object.entries(parsed.summary)
+                                .filter(([, v]) => v && String(v).trim())
+                                .map(([k, v]) => (
+                                  <div key={k} style={{ marginBottom: 4 }}>
+                                    <strong style={{ fontWeight: 700, color: 'var(--t1)' }}>{k}</strong>
+                                    {': '}{String(v)}
+                                  </div>
+                                ))}
+                            </div>
+                          );
+                        })()}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* 저장 시각 */}
+                {formSavedAt && (
+                  <div style={{
+                    marginTop: 8, fontSize: 11, color: 'var(--t3)',
+                    display: 'flex', alignItems: 'center', gap: 4,
+                  }}>
+                    <CheckCircle size={11} /> 저장됨 · {_relativeKo(formSavedAt)}
+                  </div>
+                )}
+
+                {formError && (
                   <div style={{
                     marginTop: 8, fontSize: 11, color: '#b91c1c',
                     background: '#fee2e2', padding: '7px 10px', borderRadius: 6,
                   }}>
-                    {aiError}
+                    {formError}
                   </div>
                 )}
               </>

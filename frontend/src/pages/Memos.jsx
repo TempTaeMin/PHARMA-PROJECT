@@ -43,7 +43,21 @@ function summaryOneLine(memo) {
     const first = Object.values(raw.summary).find(v => v && String(v).trim());
     if (first) return String(first);
   }
+  // raw_memo 가 form JSON 이면 fields 중 첫 비-empty value 사용
   if (memo.raw_memo) {
+    try {
+      const parsed = JSON.parse(memo.raw_memo);
+      if (parsed && parsed.kind === 'form' && Array.isArray(parsed.fields)) {
+        const prefKeys = ['결과', '논의내용', '요약'];
+        for (const k of prefKeys) {
+          const f = parsed.fields.find(x => x.key === k && (x.value || '').trim());
+          if (f) return String(f.value);
+        }
+        const first = parsed.fields.find(x => (x.value || '').trim());
+        if (first) return String(first.value);
+        return '';
+      }
+    } catch (_) {}
     return memo.raw_memo.slice(0, 100).replace(/\s+/g, ' ');
   }
   return '';

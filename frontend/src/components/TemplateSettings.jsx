@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { X, Plus, Trash2, Edit3, Star, Save, Sparkles, FileText, MessageSquare } from 'lucide-react';
-import { memoTemplateApi } from '../api/client';
+import { memoTemplateApi, teamApi } from '../api/client';
 import { showConfirm } from '../utils/dialog';
 
 const MEMO_FIELD_PRESETS = [
@@ -88,6 +88,7 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
   const [loading, setLoading] = useState(false);
   const [editing, setEditing] = useState(null);
   const [err, setErr] = useState(null);
+  const [ownedTeams, setOwnedTeams] = useState([]); // 본인이 owner 인 팀 {id, name}
 
   const load = async () => {
     setLoading(true);
@@ -98,6 +99,16 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
       setErr(e.message);
     } finally {
       setLoading(false);
+    }
+    // owner 인 팀 fetch — 새 팀 템플릿 만들 때 선택지 결정용
+    try {
+      const ts = await teamApi.myTeams();
+      const owned = (Array.isArray(ts) ? ts : [])
+        .filter(t => t.role === 'owner')
+        .map(t => ({ id: t.id, name: t.name }));
+      setOwnedTeams(owned);
+    } catch (_) {
+      setOwnedTeams([]);
     }
   };
 
@@ -119,6 +130,9 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
     is_default: false,
     scope: 'memo',
     default_report_type: '',
+    team_id: null,           // null=개인, 숫자=팀 owner 인 팀
+    is_team: false,
+    is_owner: true,          // 신규는 본인 생성이라 항상 owner
   });
 
   const startEdit = (t) => setEditing({
@@ -129,6 +143,9 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
     is_default: !!t.is_default,
     scope: t.scope || 'memo',
     default_report_type: t.default_report_type || '',
+    team_id: t.team_id ?? null,
+    is_team: !!t.is_team,
+    is_owner: t.is_owner !== false,
   });
 
   const remove = async (t) => {
@@ -176,8 +193,10 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
         default_report_type: editing.default_report_type || null,
       };
       if (editing.id) {
+        // 수정 시 team_id 변경 불가 (백엔드 PUT 도 무시) — payload 에 안 넣음
         await memoTemplateApi.update(editing.id, payload);
       } else {
+        payload.team_id = editing.team_id ?? null;
         await memoTemplateApi.create(payload);
       }
       setEditing(null);
@@ -221,6 +240,7 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
               onChange={setEditing}
               onSave={save}
               onCancel={() => setEditing(null)}
+              ownedTeams={ownedTeams}
             />
           ) : (
             <>
@@ -232,7 +252,7 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
               }}>
                 <Sparkles size={12} style={{ flexShrink: 0 }} />
                 <span>
-                  기본 템플릿을 지정하면, <b>내 일정 / 메모 페이지 / 의료진 상세</b> 의 모든 AI 메모 정리가 이 템플릿 구조로 적용됩니다.
+                  기본 템플릿을 지정하면 <b>방문 결과 메모의 입력 form</b> 이 이 필드 구조로 표시됩니다. 팀 템플릿(팀 리더만 생성) 이 있으면 팀 전체가 같은 양식으로 결과를 정리합니다.
                 </span>
               </div>
               <div style={{
@@ -266,6 +286,15 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
                         <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)' }}>
                           {t.name}
                         </span>
+                        {t.is_team ? (
+                          <span style={badgeStyle('#dbeafe', '#1e40af', '#93c5fd')}>
+                            팀 공유
+                          </span>
+                        ) : (
+                          <span style={badgeStyle('#f3f4f6', '#374151', '#d1d5db')}>
+                            개인
+                          </span>
+                        )}
                         <ScopeBadge scope={t.scope} />
                         {t.default_report_type && (
                           <span style={badgeStyle('#fef3c7', '#92400e', '#fcd34d')}>
@@ -285,6 +314,11 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
                       <div style={{ fontSize: 11, color: 'var(--t3)' }}>
                         필드 {(t.fields || []).length}개: {(t.fields || []).slice(0, 5).join(', ')}
                         {(t.fields || []).length > 5 && ' ...'}
+                        {t.is_team && !t.is_owner && (
+                          <span style={{ marginLeft: 6, color: '#6b7280' }}>
+                            · 팀 리더만 수정 가능
+                          </span>
+                        )}
                       </div>
                     </div>
                     <div style={{ display: 'flex', gap: 4 }}>
@@ -293,10 +327,12 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
                           <Star size={12} />
                         </button>
                       )}
-                      <button onClick={() => startEdit(t)} style={iconBtnStyle()} title="편집">
-                        <Edit3 size={12} />
-                      </button>
-                      {!t.is_default && (
+                      {t.is_owner ? (
+                        <button onClick={() => startEdit(t)} style={iconBtnStyle()} title="편집">
+                          <Edit3 size={12} />
+                        </button>
+                      ) : null}
+                      {t.is_owner && !t.is_default && (
                         <button onClick={() => remove(t)} style={iconBtnStyle(true)} title="삭제">
                           <Trash2 size={12} />
                         </button>
@@ -347,11 +383,13 @@ export default function TemplateSettings({ open, onClose, onChanged, inline = fa
   );
 }
 
-function TemplateForm({ value, onChange, onSave, onCancel }) {
+function TemplateForm({ value, onChange, onSave, onCancel, ownedTeams = [] }) {
   const [customField, setCustomField] = useState('');
   const scope = value.scope || 'memo';
   const presets = presetsForScope(scope);
   const groupOrder = scope === 'report' ? ['필수', '주간', '선택'] : ['필수', '선택'];
+  const isEdit = !!value.id;
+  const canChooseTeam = !isEdit && ownedTeams.length > 0;
 
   const toggleField = (key) => {
     const has = value.fields.includes(key);
@@ -404,6 +442,67 @@ function TemplateForm({ value, onChange, onSave, onCancel }) {
           placeholder="예: 학회 미팅 템플릿"
           style={inputStyle()}
         />
+      </div>
+
+      {/* 공유 범위 — 신규 생성 시에만 선택, 수정은 불가 */}
+      <div>
+        <Label>공유 범위</Label>
+        {isEdit ? (
+          <div style={{
+            padding: '9px 11px', borderRadius: 8,
+            background: 'var(--bg-2)', border: '1px solid var(--bd-s)',
+            fontSize: 12, color: 'var(--t3)',
+          }}>
+            {value.is_team
+              ? `팀 공유 템플릿 (생성 후 범위 변경 불가)`
+              : '개인 템플릿 (생성 후 범위 변경 불가)'}
+          </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <label style={{
+              display: 'flex', alignItems: 'center', gap: 8,
+              padding: '9px 11px', borderRadius: 8,
+              background: (value.team_id == null) ? 'var(--ac-d)' : 'var(--bg-2)',
+              border: '1px solid ' + ((value.team_id == null) ? 'var(--ac)' : 'var(--bd-s)'),
+              cursor: 'pointer', fontSize: 12,
+            }}>
+              <input
+                type="radio"
+                name="template-scope-team"
+                checked={value.team_id == null}
+                onChange={() => onChange({ ...value, team_id: null })}
+              />
+              <span><strong style={{ fontWeight: 700 }}>개인</strong>
+                <span style={{ marginLeft: 6, color: 'var(--t3)' }}>· 나만 사용</span>
+              </span>
+            </label>
+            {canChooseTeam && ownedTeams.map(team => (
+              <label key={team.id} style={{
+                display: 'flex', alignItems: 'center', gap: 8,
+                padding: '9px 11px', borderRadius: 8,
+                background: (value.team_id === team.id) ? 'var(--ac-d)' : 'var(--bg-2)',
+                border: '1px solid ' + ((value.team_id === team.id) ? 'var(--ac)' : 'var(--bd-s)'),
+                cursor: 'pointer', fontSize: 12,
+              }}>
+                <input
+                  type="radio"
+                  name="template-scope-team"
+                  checked={value.team_id === team.id}
+                  onChange={() => onChange({ ...value, team_id: team.id })}
+                />
+                <span>
+                  <strong style={{ fontWeight: 700 }}>{team.name}</strong>
+                  <span style={{ marginLeft: 6, color: 'var(--t3)' }}>· 팀 멤버 모두 사용</span>
+                </span>
+              </label>
+            ))}
+            {!canChooseTeam && (
+              <div style={{ fontSize: 11, color: 'var(--t3)', padding: '0 2px' }}>
+                팀 리더인 팀이 있어야 팀 공유 템플릿을 만들 수 있습니다.
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       <div>
@@ -577,20 +676,33 @@ function TemplateForm({ value, onChange, onSave, onCancel }) {
           fontSize: 11, color: 'var(--t3)', fontWeight: 700, marginBottom: 6,
           display: 'flex', alignItems: 'center', gap: 4,
         }}>
-          <Sparkles size={11} /> AI 응답 JSON 미리보기
+          <Sparkles size={11} /> 입력 form 미리보기
         </div>
-        <pre style={{
-          margin: 0, fontSize: 11, color: 'var(--t2)',
-          fontFamily: "'JetBrains Mono', monospace", lineHeight: 1.5,
-          whiteSpace: 'pre-wrap',
+        <div style={{
+          display: 'flex', flexDirection: 'column', gap: 6,
+          fontSize: 11, color: 'var(--t2)', lineHeight: 1.5,
         }}>
-{`{
-  "title": "...",
-  "summary": {
-${value.fields.map(f => `    "${f}": "..."`).join(',\n')}
-  }
-}`}
-        </pre>
+          {value.fields.length === 0 ? (
+            <div style={{ color: 'var(--t3)', fontStyle: 'italic' }}>
+              필드를 1개 이상 선택하면 입력 form 이 여기에 표시됩니다.
+            </div>
+          ) : (
+            value.fields.map(f => (
+              <div key={f} style={{ display: 'flex', gap: 6, alignItems: 'baseline' }}>
+                <span style={{
+                  minWidth: 80, color: 'var(--t3)', fontWeight: 700,
+                  fontFamily: "'JetBrains Mono', monospace", fontSize: 10,
+                  textTransform: 'uppercase', letterSpacing: '.04em',
+                }}>{f}</span>
+                <span style={{
+                  flex: 1, padding: '4px 8px', borderRadius: 5,
+                  background: 'var(--bg-2)', border: '1px dashed var(--bd-s)',
+                  color: 'var(--t3)', fontSize: 11,
+                }}>(입력 칸)</span>
+              </div>
+            ))
+          )}
+        </div>
       </div>
 
       <div style={{

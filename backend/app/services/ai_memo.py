@@ -179,6 +179,75 @@ def _build_freeform_prompt(raw_memo: str, kind: str) -> str:
 원문에 없는 내용을 추측하지 마세요. 필드가 해당 없으면 빈 문자열로 두세요."""
 
 
+def _gemini_text_call(system_prompt: str, user_prompt: str, *, max_tokens: int = 400) -> str:
+    """Gemini 평문 응답 헬퍼 — 필드별 다듬기처럼 JSON 강제 없는 짧은 응답용."""
+    from google.genai import types as gemini_types
+    client = _get_gemini_client()
+    try:
+        response = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=user_prompt,
+            config=gemini_types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                max_output_tokens=max_tokens,
+            ),
+        )
+    except Exception as e:
+        logger.exception("Gemini API 호출 실패")
+        raise HTTPException(status_code=502, detail=f"Gemini API 호출 실패: {e}") from e
+    text = (response.text or "").strip()
+    if text.startswith("```"):
+        lines = text.splitlines()
+        lines = [ln for ln in lines if not ln.strip().startswith("```")]
+        text = "\n".join(lines).strip()
+    if not text:
+        raise HTTPException(status_code=502, detail="Gemini 응답이 비어 있습니다.")
+    return text
+
+
+async def refine_field(
+    value: str,
+    field_key: str,
+    context: Optional[dict] = None,
+) -> str:
+    """한 필드의 거친 텍스트를 정돈해서 같은 의미의 다듬어진 한 단락으로 반환.
+
+    제약:
+    - 원문에 없는 사실 추가 금지
+    - 항목 추출/구조화 금지 (단일 string 반환)
+    - 단순 정리 (오타·문법·문장 정렬)
+    """
+    if not value or not value.strip():
+        raise HTTPException(status_code=400, detail="value 가 비어 있습니다.")
+
+    ctx_lines = []
+    if context:
+        if context.get("doctor_name"):
+            ctx_lines.append(f"교수명: {context['doctor_name']}")
+        if context.get("hospital_name"):
+            ctx_lines.append(f"병원명: {context['hospital_name']}")
+        if context.get("department"):
+            ctx_lines.append(f"진료과: {context['department']}")
+    ctx_block = "\n".join(ctx_lines) if ctx_lines else "(없음)"
+
+    system_prompt = (
+        "당신은 영업사원(MR)이 방문 결과의 한 필드에 거칠게 작성한 텍스트를 "
+        "정돈하는 보조입니다. 원문의 의미와 사실을 보존하면서 오타·문법·문장 "
+        "순서만 정돈합니다. 원문에 없는 사실을 추가하거나 추측하지 마세요. "
+        "응답은 정돈된 텍스트 한 단락만 반환하며 JSON·코드블록·머리말·꼬리말을 "
+        "포함하지 않습니다."
+    )
+    user_prompt = (
+        f"[필드명] {field_key}\n"
+        f"[참고 컨텍스트]\n{ctx_block}\n\n"
+        f"[원문]\n{value.strip()}\n\n"
+        f"위 원문을 같은 의미를 유지한 채 자연스럽게 한 단락으로 다듬어 주세요. "
+        f"리스트·번호 매기기·표 사용 금지. 사실 추가 금지. "
+        f"길이는 원문과 비슷하거나 조금 짧게."
+    )
+    return _gemini_text_call(system_prompt, user_prompt, max_tokens=400)
+
+
 async def summarize_freeform(
     raw_memo: str,
     kind: str = "personal",

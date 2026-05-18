@@ -73,19 +73,28 @@ DEFAULT_MEMO_TEMPLATE_FIELDS = [
 
 async def seed_memo_templates(db: AsyncSession):
     """기본 메모 템플릿(user_id=1)이 없으면 생성. user 가 아직 없으면 skip
-    (OAuth 첫 로그인 후 user 생성됨 — 그 후 부팅 때 시드되거나 OAuth 콜백에서 별도 생성)."""
+    (OAuth 첫 로그인 후 user 생성됨 — 그 후 부팅 때 시드되거나 OAuth 콜백에서 별도 생성).
+
+    레거시 호환용. 신규 가입자는 `seed_default_memo_template_for_user` 로 별도 시드.
+    """
     user = (await db.execute(select(User).where(User.id == 1))).scalar_one_or_none()
     if user is None:
         logger.info("user_id=1 없음 — 메모 템플릿 시드 건너뜀 (첫 OAuth 로그인 대기)")
         return
     existing = (
-        await db.execute(select(MemoTemplate).where(MemoTemplate.user_id == 1))
+        await db.execute(
+            select(MemoTemplate).where(
+                MemoTemplate.user_id == 1,
+                MemoTemplate.team_id.is_(None),
+            )
+        )
     ).scalars().first()
     if existing:
         return
     db.add(
         MemoTemplate(
             user_id=1,
+            team_id=None,
             name="기본 방문일지",
             fields=json.dumps(DEFAULT_MEMO_TEMPLATE_FIELDS, ensure_ascii=False),
             prompt_addon=None,
@@ -94,6 +103,38 @@ async def seed_memo_templates(db: AsyncSession):
     )
     await db.commit()
     logger.info("기본 메모 템플릿 시드 완료")
+
+
+async def seed_default_memo_template_for_user(db: AsyncSession, user_id: int) -> None:
+    """신규 가입자의 개인 default 메모 템플릿을 시드. 이미 있으면 skip.
+
+    OAuth 콜백에서 신규 user 생성 직후 호출 — 첫 방문 결과 모달에서 form 이
+    바로 렌더링되도록 보장. 팀 템플릿은 사용자가 팀 만들고 따로 시드해야 함.
+    """
+    existing = (
+        await db.execute(
+            select(MemoTemplate).where(
+                MemoTemplate.user_id == user_id,
+                MemoTemplate.team_id.is_(None),
+                MemoTemplate.scope.in_(["memo", "both"]),
+            ).limit(1)
+        )
+    ).scalar_one_or_none()
+    if existing:
+        return
+    db.add(
+        MemoTemplate(
+            user_id=user_id,
+            team_id=None,
+            name="기본 방문일지",
+            fields=json.dumps(DEFAULT_MEMO_TEMPLATE_FIELDS, ensure_ascii=False),
+            prompt_addon=None,
+            is_default=True,
+            scope="memo",
+        )
+    )
+    await db.commit()
+    logger.info(f"user_id={user_id} 개인 default 메모 템플릿 시드")
 
 
 async def seed_database(db: AsyncSession):

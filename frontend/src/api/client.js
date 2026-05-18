@@ -103,6 +103,14 @@ export const visitApi = {
     request(`/api/visits/${visitId}`, { method: 'PATCH', body: JSON.stringify(data) }),
   aiSummarize: (visitId, payload = {}) =>
     request(`/api/visits/${visitId}/ai-summarize`, { method: 'POST', body: JSON.stringify(payload) }),
+  saveFormMemo: (visitId, payload) =>
+    request(`/api/visits/${visitId}/form-memo`, { method: 'POST', body: JSON.stringify(payload) }),
+};
+
+// ─── AI 보조 ───
+export const aiApi = {
+  refineField: (payload) =>
+    request('/api/ai/refine-field', { method: 'POST', body: JSON.stringify(payload) }),
 };
 
 // ─── Crawling ───

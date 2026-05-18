@@ -352,15 +352,20 @@ class AcademicEventDepartment(Base):
 
 
 class MemoTemplate(Base):
-    """메모/회의록/보고서 정리용 템플릿 (AI 프롬프트 구성).
+    """메모/회의록/보고서 정리용 템플릿.
 
-    scope 로 메모용/보고서용을 구분. is_default 는 메모(scope in memo/both) 안에서만
+    team_id NULL → 개인 템플릿 (user_id 본인만 read/write).
+    team_id NOT NULL → 팀 템플릿 (같은 팀 멤버 read, 팀 owner 만 write).
+    user_id 는 두 경우 모두 생성자 기록용으로 유지.
+
+    scope 로 메모용/보고서용 구분. is_default 는 메모(scope in memo/both) 안에서만
     의미있는 플래그 — 보고서는 매번 생성 시 명시 선택하는 워크플로우.
     """
     __tablename__ = "memo_templates"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    team_id = Column(Integer, ForeignKey("teams.id", ondelete="CASCADE"), nullable=True, index=True)
     name = Column(String(200), nullable=False)
     fields = Column(Text, nullable=False)  # JSON array of field names
     prompt_addon = Column(Text)
